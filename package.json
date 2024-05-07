@@ -1,18 +1,24 @@
 {
   "name": "figmug-ui",
-  "private": true,
   "version": "0.1.0",
   "type": "module",
+  "main": "dist/figmug-ui.umd.js",
+  "module": "dist/figmug-ui.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_c48bb3c3237a2d6"
   },
   "dependencies": {
     "figma-plugin-ds": "^1.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -39,6 +45,8 @@
     "sass": "^1.77.0",
     "storybook": "^8.0.10",
     "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.1",
+    "vite-tsconfig-paths": "^4.3.2"
   }
 }
