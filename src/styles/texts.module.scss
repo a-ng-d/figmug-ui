@@ -1,0 +1,37 @@
+.type {
+  color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+
+  &--truncated {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &--secondary {
+    color: var(--figma-color-text-tertiary, rgba(0, 0, 0, 0.3));
+  }
+
+  a {
+    color: var(--figma-color-text-brand, #007be5);
+    text-decoration: none;
+  }
+
+  a:focus-visible {
+    outline: none;
+    text-decoration: underline;
+  }
+}
+
+.onboarding-tip__msg,
+.section-title,
+.select-menu__label {
+  color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+}
+
+.onboarding-tip__msg {
+  line-height: var(--font-line-height);
+}
+
+.label {
+  color: var(--figma-color-text-tertiary, rgba(0, 0, 0, 0.3));
+  gap: var(--size-xxxsmall);
+}
