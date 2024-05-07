@@ -19,7 +19,7 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "react-component-library": ["src/index.ts"],
+      "figmug-ui": ["src/index.ts"],
     },
     "typeRoots": ["node_modules/@types", "src/index.d.ts"]
   },
