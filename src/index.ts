@@ -1,1 +1,1 @@
-export { Chip } from './stories/tags/chip/Chip'
+export { Chip } from './components/tags/chip/Chip'
