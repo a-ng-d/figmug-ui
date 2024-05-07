@@ -2,7 +2,7 @@ import React from 'react';
 import texts from '../../../styles/texts.module.scss';
 import './chip.scss';
 
-export type ChipProps = {
+export interface ChipProps {
   children: React.ReactNode;
 }
 

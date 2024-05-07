@@ -1,0 +1,186 @@
+.button,
+.icon-button {
+  justify-content: center;
+  gap: var(--size-xxxsmall);
+  position: relative;
+  cursor: default;
+  user-select: none;
+}
+
+.button__caret {
+  background: var(
+    --figma-color-icon-onbrand,
+    rgba(255, 255, 255, 1)
+  ) !important;
+  width: 12px;
+  height: 30px;
+}
+
+.button__loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.button--loading {
+  pointer-events: none;
+}
+
+.button--loading > .button__label,
+.button--loading > .button__caret {
+  opacity: 0;
+}
+
+.button--primary {
+  --blue: var(--figma-color-bg-brand, #0d99ff);
+  --white: var(--figma-color-text-onbrand, rgba(255, 255, 255, 1));
+
+  &:enabled:hover {
+    background-color: var(--figma-color-bg-brand-hover, #007be5);
+  }
+
+  &:enabled:focus {
+    --blue: var(--figma-color-bg-brand-pressed, #007be5);
+    --black3: var(--figma-color-border-brand-strong, #007be5);
+  }
+
+  &:enabled:active {
+    --blue: var(--figma-color-bg-brand-pressed, #007be5);
+    --black3: var(--figma-color-bg-brand-pressed, #007be5);
+  }
+
+  &:disabled {
+    --black3: var(--figma-color-bg-disabled, #d9d9d9);
+    --white: var(--figma-color-text-ondisabled, rgba(255, 255, 255, 1));
+    pointer-events: none;
+  }
+
+
+
+}
+
+.button--secondary {
+  --white: var(--figma-color-bg, rgba(255, 255, 255, 1));
+  --black8: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+
+  &:hover {
+    --white: var(--figma-color-bg-hover, #f5f5f5);
+  }
+  
+  &:enabled:focus {
+    --blue: var(--figma-color-border-selected, #0d99ff);
+  }
+  
+  &:enabled:active {
+    --white: var(--figma-color-bg-hover, #f5f5f5);
+    --blue: var(--figma-color-border-selected, #0d99ff);
+  }
+  
+  &:disabled {
+    pointer-events: none;
+  }
+}
+
+.button--tertiary,
+.button--tertiary a {
+  color: var(--figma-color-text-brand, #007be5);
+  text-decoration: none;
+}
+
+.button--tertiary a:focus-visible {
+  outline: none;
+  text-decoration: underline;
+}
+
+.button--tertiary:disabled {
+  pointer-events: none;
+}
+
+.icon-button {
+  background-clip: padding-box !important;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  background-color: transparent;
+
+  & * {
+    filter: none;
+  }
+  
+  &:hover {
+    background: transparent;
+    background-color: var(--figma-color-bg-hover, #f5f5f5);
+  }
+  
+  &:focus {
+    border: 2px solid var(--figma-color-border-selected, #0d99ff);
+  }
+  
+  &:active {
+    border: 1px solid transparent;
+    background-color: var(--figma-color-bg-hover, #f5f5f5);
+  }
+  
+  &:disabled {
+    background-color: transparent;
+    opacity: 1;
+    pointer-events: none;
+
+    & .icon-box {
+      background-color: var(--figma-color-icon-disabled, rgba(0, 0, 0, 0.3));
+    }
+  }
+  
+  &:disabled:focus {
+    border: 2px solid transparent;
+  }
+  
+  &--selected {
+    background-color: var(--figma-color-bg-brand, #0d99ff);
+  }
+  
+  &--selected .icon {
+    background-color: var(--figma-color-icon-onbrand, rgba(255, 255, 255, 1));
+  }
+  
+  &--selected:hover {
+    background-color: var(--figma-color-bg-brand, #0d99ff);
+  }
+}
+
+.compact-button {
+  height: var(--size-small);
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-small);
+  background-color: var(--figma-color-bg-component, #9747ff);
+  border: 2px solid var(--figma-color-bg-component, #9747ff);
+  padding: 0 var(--size-xxsmall) 0 0;
+
+  &:hover {
+    background-color: var(--figma-color-bg-component-hover, #8638e5);
+    border: 2px solid var(--figma-color-bg-component-hover, #8638e5);
+  }
+  
+  &:active {
+    background-color: var(--figma-color-bg-component-pressed, #8638e5);
+    border: 2px solid var(--figma-color-bg-component-pressed, #8638e5);
+  }
+  
+  &:focus,
+  &:focus-visible {
+    background-color: var(--figma-color-bg-component-pressed, #8638e5);
+    border: 2px solid var(--figma-color-border-component-strong, #8638e5);
+    outline: none;
+  }
+  
+  & .type {
+    color: var(--figma-color-text-oncomponent, rgba(255, 255, 255, 1));
+    white-space: nowrap;
+  }
+  
+  & .icon {
+    background: var(--figma-color-icon-oncomponent, rgba(255, 255, 255, 1));
+  }
+}

@@ -26,6 +26,7 @@
     "chromatic": "npx chromatic --project-token=chpt_c48bb3c3237a2d6"
   },
   "dependencies": {
+    "@storybook/client-api": "^7.6.17",
     "figma-plugin-ds": "^1.0.1"
   },
   "peerDependencies": {
