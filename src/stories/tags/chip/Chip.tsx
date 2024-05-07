@@ -1,11 +1,12 @@
+import React from 'react';
 import texts from '../../../styles/texts.module.scss';
 import './chip.scss';
 
-export interface Props {
+export type ChipProps = {
   children: React.ReactNode;
 }
 
-export const Chip = (props: Props) => {
+export const Chip = (props: ChipProps) => {
   const { children } = props;
 
   return (

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from './actions/button/Button';
 import './header.css';
 
