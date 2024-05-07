@@ -10,7 +10,7 @@ export default defineConfig(() => ({
     react(),
     tsConfigPaths(),
     dts({
-      include: ["src"],
+      include: ["src/components", "src/styles"],
     }),
   ],
   build: {
