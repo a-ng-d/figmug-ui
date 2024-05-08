@@ -1,5 +1,5 @@
 import React from 'react';
-import type { IconList } from 'src/types/icon.types';
+import type { IconList } from '../../../types/icon.types';
 import { Chip } from '../../../components/tags/chip/Chip';
 import { Icon } from '../../../components/icon/Icon';
 import texts from '../../../styles/texts.module.scss';
