@@ -12,10 +12,7 @@
     "esModuleInterop": true,
     "declarationMap": true,
     "baseUrl": ".",
-    "paths": {
-      "figmug-ui": ["src/index.ts"],
-    },
-    "typeRoots": ["node_modules/@types", "src/index.d.ts"],
+    "typeRoots": ["./node_modules/@types"],
 
      /* Bundler mode */
     "moduleResolution": "Node",
