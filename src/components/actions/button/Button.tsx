@@ -75,6 +75,7 @@ export class Button extends React.Component<ButtonProps> {
         {isLoading ? (
           <div className={['button__loader'].filter((n) => n).join(' ')}>
             <Icon
+              type="PICTO"
               iconName="spinner"
               iconColor={
                 type === 'primary'
@@ -86,6 +87,7 @@ export class Button extends React.Component<ButtonProps> {
         ) : null}
         {hasMultipleActions ? (
           <Icon
+            type="PICTO"
             iconName="caret"
             iconColor={
               type === 'primary'
@@ -141,6 +143,7 @@ export class Button extends React.Component<ButtonProps> {
         onMouseDown={action}
       >
         <Icon
+          type="PICTO"
           iconName={isLoading ? 'spinner' : icon}
           iconColor={
             isDisabled
@@ -166,6 +169,7 @@ export class Button extends React.Component<ButtonProps> {
         onMouseDown={action}
       >
         <Icon
+          type="PICTO"
           iconName={icon}
           iconColor="var(--figma-color-icon-oncomponent, rgba(255, 255, 255, 1))"
         />

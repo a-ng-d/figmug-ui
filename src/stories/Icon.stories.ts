@@ -15,9 +15,28 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Monochromatic: Story = {
+export const Pictogram: Story = {
   args: {
+    type: 'PICTO',
     iconName: 'adjust',
+    iconLetter: undefined,
     iconColor: '#000000',
   },
+  argTypes : {
+    type: { control: false },
+    iconLetter: { control: false }
+  }
+}
+
+export const Letter: Story = {
+  args: {
+    type: 'LETTER',
+    iconName: undefined,
+    iconLetter: 'L',
+    iconColor: '#000000',
+  },
+  argTypes : {
+    type: { control: false },
+    iconName: { control: false }
+  }
 }
