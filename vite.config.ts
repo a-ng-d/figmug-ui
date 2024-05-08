@@ -14,11 +14,7 @@ export default defineConfig({
       exclude: [
         './src/stories',
         './src/test',
-        './src/components/**/*.test.tsx',
-        './src/App.css',
-        './src/App.tsx',
-        './src/index.css',
-        './src/main.tsx',
+        './src/components/**/*.test.tsx'
       ]
     })
   ],
