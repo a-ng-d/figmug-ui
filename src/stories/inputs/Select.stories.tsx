@@ -1,4 +1,4 @@
-import { SyntheticEvent } from 'react'
+import { ChangeEvent } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import { useArgs } from '@storybook/preview-api'
@@ -37,11 +37,11 @@ export const CheckBox: Story = {
       isChecked: boolean
     }>()
 
-    const onChange = () => {
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
       updateArgs({
         isChecked: !argsState.isChecked,
       })
-      fn()
+      args.onChange(e)
     }
 
     return (
@@ -75,11 +75,11 @@ export const RadioButton: Story = {
       isChecked: boolean
     }>()
 
-    const onChange = () => {
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
       updateArgs({
         isChecked: !argsState.isChecked,
       })
-      fn()
+      args.onChange(e)
     }
 
     return (
@@ -113,11 +113,11 @@ export const SwitchButton: Story = {
       isChecked: boolean
     }>()
 
-    const onChange = () => {
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
       updateArgs({
         isChecked: !argsState.isChecked,
       })
-      fn()
+      args.onChange(e)
     }
 
     return (
@@ -161,7 +161,7 @@ export const MultipleChoices: Story = {
       optionC: boolean
     }>()
 
-    const onChange = (e: SyntheticEvent) => {
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
       const target = e.target as HTMLInputElement
       if (target.name === 'option-1')
         updateArgs({
@@ -176,7 +176,7 @@ export const MultipleChoices: Story = {
           optionC: !argsState.optionC,
         })
 
-      fn()
+      args.onChange(e)
     }
 
     return (
@@ -240,11 +240,11 @@ export const SingleChoice: Story = {
       value: string
     }>()
 
-    const onChange = (e: SyntheticEvent) => {
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
       updateArgs({
         value: (e.target as HTMLInputElement).value,
       })
-      fn()
+      args.onChange(e)
     }
 
     return (

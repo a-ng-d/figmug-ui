@@ -2,13 +2,11 @@ import { SyntheticEvent } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import { useArgs } from '@storybook/preview-api'
-import { Input, InputProps } from '../../components/inputs/input/Input'
-
-const InputStory = (args: InputProps) => <Input {...args} />
+import { Input } from '../../components/inputs/input/Input'
 
 const meta = {
   title: 'Example/Inputs/Input',
-  component: InputStory,
+  component: Input,
   parameters: {
     layout: 'centered',
   },
@@ -58,7 +56,7 @@ export const ColorPicker: Story = {
     }
 
     return (
-      <InputStory
+      <Input
         {...args}
         value={argsState.value}
         onChange={onChange}
@@ -108,7 +106,7 @@ export const NumericStepper: Story = {
     }
 
     return (
-      <InputStory
+      <Input
         {...args}
         value={argsState.value}
         onChange={onChange}
@@ -149,7 +147,7 @@ export const ShortText: Story = {
     }
 
     return (
-      <InputStory
+      <Input
         {...args}
         value={argsState.value}
         onChange={onChange}
@@ -188,7 +186,7 @@ export const LongText: Story = {
     }
 
     return (
-      <InputStory
+      <Input
         {...args}
         value={argsState.value}
         onChange={onChange}
@@ -225,7 +223,7 @@ export const CodeSnippet: Story = {
     }
 
     return (
-      <InputStory
+      <Input
         {...args}
         value={argsState.value}
         onChange={onChange}
