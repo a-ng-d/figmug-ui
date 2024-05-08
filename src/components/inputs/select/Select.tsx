@@ -13,16 +13,11 @@ export interface SelectProps {
   isDisabled: boolean
   isBlocked: boolean
   isNew: boolean
-  onChange: React.ChangeEventHandler
+  onChange: React.ChangeEventHandler<HTMLInputElement>
 }
 
-export interface SelectStates {
-  cachedCheckState: boolean
-  checkState: boolean
-}
-
-export class Select extends React.Component<SelectProps, SelectStates> {
-  static defaultProps = {
+export class Select extends React.Component<SelectProps> {
+  static defaultProps: Partial<SelectProps> = {
     isChecked: false,
     isDisabled: false,
     isBlocked: false,

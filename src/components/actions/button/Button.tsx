@@ -22,7 +22,7 @@ export interface ButtonProps {
 }
 
 export class Button extends React.Component<ButtonProps> {
-  static defaultProps = {
+  static defaultProps: Partial<ButtonProps> = {
     isLink: false,
     hasMultipleActions: false,
     isLoading: false,

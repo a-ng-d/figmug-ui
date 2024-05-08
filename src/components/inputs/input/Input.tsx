@@ -31,10 +31,10 @@ export interface InputStates {
 }
 
 export class Input extends React.Component<InputProps, InputStates> {
-  static defaultProps = {
+  static defaultProps: Partial<InputProps> = {
     icon: {
-      type: 'NONE',
-      value: null,
+      type: 'PICTO',
+      value: undefined,
     },
     state: 'DEFAULT',
     step: '1',
