@@ -1,0 +1,202 @@
+.input {
+  display: flex;
+  align-items: baseline;
+
+  .icon-box {
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+input {
+  &[type='color' i] {
+    width: var(--size-xsmall);
+    height: var(--size-xsmall);
+    position: absolute;
+    top: 8px;
+    left: var(--size-xxsmall);
+    z-index: 1;
+    background-color: transparent;
+    padding: 0;
+    appearance: none;
+    background-color: transparent;
+    appearance: none;
+    border: none;
+  }
+  
+  &[type='color' i]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  
+  &[type='color' i]::-webkit-color-swatch {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px inset;
+  }
+  
+  &[type='color' i]:focus {
+    outline: 1px solid var(--figma-color-border-selected, #0d99ff);
+    outline-offset: -1px;
+  }
+  
+  &[type='color' i]:focus ~ input {
+    border: 1px solid var(--figma-color-border-selected, #0d99ff);
+    outline: 1px solid var(--figma-color-border-selected, #0d99ff);
+    outline-offset: -2px;
+  }
+  
+  &[type='color'] ~ input,
+  &[type='number'] {
+    max-width: 112px;
+  }
+
+  &[type='number']::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+.input__color {
+  &:hover ~ .input__field {
+    --black8: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+    --black1: var(--figma-color-border, #e6e6e6);
+    background-image: none;
+  }
+  &:disabled[type='color' i] {
+    opacity: 0.25;
+  }
+}
+
+.input__field {
+  &:disabled {
+    --black1: var(--figma-color-border-disabled, #e6e6e6);
+    --black3: var(--figma-color-text-disabled, rgba(0, 0, 0, 0.3));
+    --black8: var(--figma-color-text-disabled, rgba(0, 0, 0, 0.3));
+  }
+
+  &:disabled::placeholder {
+    color: var(--figma-color-text-tertiary, rgba(0, 0, 0, 0.3));
+  }
+
+  &:disabled:placeholder-shown {
+    --black1: transparent;
+  }
+}
+
+/* Input */
+.input__field {
+  --black8: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+  --white: var(--figma-color-bg, rgba(255, 255, 255, 1));
+  cursor: default;
+
+  &:hover,
+  &:placeholder-shown:hover {
+    --black8: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+    --black1: var(--figma-color-border, #e6e6e6);
+  }
+
+  &:active,
+  &:focus {
+    --blue: var(--figma-color-border-selected, #0d99ff);
+    --black: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+  }
+
+  &:placeholder-shown {
+    --black1: var(--figma-color-border, #e6e6e6);
+  }
+
+  &--error {
+    border: 1px solid var(--figma-color-border-danger, #ffc7c2);
+  }
+
+  &--error:hover,
+  &--error:placeholder-shown:hover {
+    --black1: var(--figma-color-border-danger, #ffc7c2);
+  }
+
+  &--error:active,
+  &--error:focus,
+  &--error.textarea:active,
+  &--error.textarea:focus {
+    --blue: var(--figma-color-border-danger, #ffc7c2);
+  }
+
+  &::placeholder {
+    color: var(--figma-color-text-secondary, rgba(0, 0, 0, 0.5));
+  }
+}
+
+/* Inputs bar */
+.inputs {
+  display: flex;
+  gap: var(--size-xxsmall);
+  align-items: center;
+}
+
+.inputs .label {
+  flex: 0;
+}
+
+.inputs__bar {
+  display: flex;
+  padding: 0 1px;
+  position: relative;
+
+  & .input {
+    width: var(--size-xlarge);
+    margin: 0 -0.5px;
+  }
+  
+  & input {
+    background-color: transparent;
+  }
+  
+  & input:focus {
+    border: 1px solid var(--figma-color-border, #e6e6e6);
+  }
+  
+  &:hover input {
+    border: 1px solid var(--figma-color-border, #e6e6e6);
+  }
+  
+  &:focus-within:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-shadow: inset 0 0 0 2px var(--figma-color-border-selected, #0d99ff);
+    z-index: 2;
+    pointer-events: none;
+    border-radius: var(--border-radius-small);
+  }
+  
+  &:focus-within input {
+    border: 1px solid var(--figma-color-border, #e6e6e6);
+    outline: 1px solid transparent;
+    outline-offset: -2px;
+  }
+}
+
+/* Text area */
+.textarea {
+  --black8: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+  --white: var(--figma-color-bg, rgba(255, 255, 255, 1));
+  --black1: var(--figma-color-border, #e6e6e6);
+  cursor: default;
+  font-family: var(--font-stack);
+
+  &:active,
+  &:focus {
+    --black: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+    --blue: var(--figma-color-border-selected, #0d99ff);
+  }
+
+  &--monospace {
+    font-family: monospace;
+  }
+}
