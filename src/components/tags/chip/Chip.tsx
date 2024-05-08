@@ -1,13 +1,13 @@
-import React from 'react';
-import texts from '../../../styles/texts.module.scss';
-import './chip.scss';
+import React from 'react'
+import texts from '../../../styles/texts.module.scss'
+import './chip.scss'
 
 export interface ChipProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export const Chip = (props: ChipProps) => {
-  const { children } = props;
+  const { children } = props
 
   return (
     <div className="chip">
@@ -15,5 +15,5 @@ export const Chip = (props: ChipProps) => {
         {children}
       </div>
     </div>
-  );
-};
+  )
+}

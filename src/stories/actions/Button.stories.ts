@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
-import { Button } from '../../components/actions/button/Button';
+import type { Meta, StoryObj } from '@storybook/react'
+import { fn } from '@storybook/test'
+import { Button } from '../../components/actions/button/Button'
 
-const mock = fn();
+const mock = fn()
 
 const meta = {
   title: 'Example/Actions/Button',
@@ -11,10 +11,10 @@ const meta = {
     layout: 'centered',
   },
   args: { action: mock },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
@@ -27,14 +27,14 @@ export const Primary: Story = {
     isDisabled: false,
     isNew: false,
   },
-  argTypes : {
+  argTypes: {
     type: { control: false },
     icon: { control: false },
     state: { control: false },
     isLink: { control: false },
     url: { control: false },
-  }
-};
+  },
+}
 
 export const Secondary: Story = {
   args: {
@@ -47,14 +47,14 @@ export const Secondary: Story = {
     isDisabled: false,
     isNew: false,
   },
-  argTypes : {
+  argTypes: {
     type: { control: false },
     icon: { control: false },
     state: { control: false },
     isLink: { control: false },
     url: { control: false },
-  }
-};
+  },
+}
 
 export const Tertiary: Story = {
   args: {
@@ -68,13 +68,13 @@ export const Tertiary: Story = {
     isDisabled: false,
     isNew: false,
   },
-  argTypes : {
+  argTypes: {
     type: { control: false },
     icon: { control: false },
     state: { control: false },
     hasMultipleActions: { control: false },
-  }
-};
+  },
+}
 
 export const Icon: Story = {
   args: {
@@ -84,7 +84,7 @@ export const Icon: Story = {
     isLoading: false,
     isDisabled: false,
   },
-  argTypes : {
+  argTypes: {
     type: { control: false },
     label: { control: false },
     state: { control: false },
@@ -93,8 +93,8 @@ export const Icon: Story = {
     isNew: { control: false },
     isLink: { control: false },
     url: { control: false },
-  }
-};
+  },
+}
 
 export const Compact: Story = {
   args: {
@@ -104,7 +104,7 @@ export const Compact: Story = {
     feature: 'ACTION',
     isDisabled: false,
   },
-  argTypes : {
+  argTypes: {
     type: { control: false },
     state: { control: false },
     hasMultipleActions: { control: false },
@@ -114,5 +114,5 @@ export const Compact: Story = {
     isNew: { control: false },
     isLink: { control: false },
     url: { control: false },
-  }
-};
+  },
+}

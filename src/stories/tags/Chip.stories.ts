@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Chip } from '../../components/tags/chip/Chip';
+import type { Meta, StoryObj } from '@storybook/react'
+import { Chip } from '../../components/tags/chip/Chip'
 
 const meta = {
   title: 'Example/Tags/Chip',
@@ -7,19 +7,19 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof Chip>;
+} satisfies Meta<typeof Chip>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const New: Story = {
   args: {
-    children: 'New'
+    children: 'New',
   },
-};
+}
 
 export const Pro: Story = {
   args: {
-    children: 'Pro'
+    children: 'Pro',
   },
-};
+}

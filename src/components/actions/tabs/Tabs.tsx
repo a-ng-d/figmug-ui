@@ -1,19 +1,19 @@
-import React from 'react';
-import texts from '../../../styles/texts.module.scss';
-import './tabs.scss';
+import React from 'react'
+import texts from '../../../styles/texts.module.scss'
+import './tabs.scss'
 
 export interface TabsProps {
   tabs: Array<{
-    label: string;
-    id: string;
-    isUpdated: boolean;
-  }>;
-  active: string;
-  action: React.MouseEventHandler;
+    label: string
+    id: string
+    isUpdated: boolean
+  }>
+  active: string
+  action: React.MouseEventHandler
 }
 
 export const Tabs = (props: TabsProps) => {
-  const { tabs, active, action } = props;
+  const { tabs, active, action } = props
 
   return (
     <div className="tabs">
@@ -38,5 +38,5 @@ export const Tabs = (props: TabsProps) => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}

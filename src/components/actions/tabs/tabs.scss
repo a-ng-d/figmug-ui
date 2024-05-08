@@ -12,16 +12,16 @@
     cursor: default;
     position: relative;
   }
-  
+
   & .tabs__tab:hover {
     color: var(--figma-color-text-hover, rgba(0, 0, 0, 0.9));
   }
-  
+
   & .tabs__tab--active {
     font-weight: var(--font-weight-bold);
     color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
   }
-  
+
   & .tabs__tab--new:after {
     content: '';
     position: absolute;
