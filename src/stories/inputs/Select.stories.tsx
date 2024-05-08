@@ -4,15 +4,13 @@ import { fn } from '@storybook/test'
 import { useArgs } from '@storybook/preview-api'
 import { Select } from '../../components/inputs/select/Select'
 
-const mock = fn()
-
 const meta = {
   title: 'Example/Inputs/Select',
   component: Select,
   parameters: {
     layout: 'centered',
   },
-  args: { onChange: mock },
+  args: { onChange: fn() },
 } satisfies Meta<typeof Select>
 
 export default meta
@@ -35,17 +33,21 @@ export const CheckBox: Story = {
     value: { control: false },
   },
   render: function Render(args) {
-    const [{ isChecked }, updateArgs] = useArgs()
+    const [argsState, updateArgs] = useArgs<{
+      isChecked: boolean,
+    }>();
 
     const onChange = () => {
-      updateArgs({ isChecked: !isChecked })
-      mock
+      updateArgs({
+        isChecked: !argsState.isChecked
+      })
+      fn()
     }
 
     return (
       <Select
         {...args}
-        isChecked={isChecked}
+        isChecked={argsState.isChecked}
         onChange={onChange}
       />
     )
@@ -69,17 +71,21 @@ export const RadioButton: Story = {
     value: { control: false },
   },
   render: function Render(args) {
-    const [{ isChecked }, updateArgs] = useArgs()
+    const [argsState, updateArgs] = useArgs<{
+      isChecked: boolean,
+    }>();
 
     const onChange = () => {
-      updateArgs({ isChecked: !isChecked })
-      mock
+      updateArgs({
+        isChecked: !argsState.isChecked
+      })
+      fn()
     }
 
     return (
       <Select
         {...args}
-        isChecked={isChecked}
+        isChecked={argsState.isChecked}
         onChange={onChange}
       />
     )
@@ -103,17 +109,21 @@ export const SwitchButton: Story = {
     value: { control: false },
   },
   render: function Render(args) {
-    const [{ isChecked }, updateArgs] = useArgs()
+    const [argsState, updateArgs] = useArgs<{
+      isChecked: boolean,
+    }>();
 
     const onChange = () => {
-      updateArgs({ isChecked: !isChecked })
-      mock
+      updateArgs({
+        isChecked: !argsState.isChecked
+      })
+      fn()
     }
 
     return (
       <Select
         {...args}
-        isChecked={isChecked}
+        isChecked={argsState.isChecked}
         onChange={onChange}
       />
     )
@@ -145,21 +155,28 @@ export const MultipleChoices: Story = {
     onChange: { control: false },
   },
   render: function Render(args) {
-    const [{ isCheckedA }, updateArgsA] = useArgs()
-    const [{ isCheckedB }, updateArgsB] = useArgs()
-    const [{ isCheckedC }, updateArgsC] = useArgs()
+    const [argsState, updateArgs] = useArgs<{
+      optionA: boolean,
+      optionB: boolean,
+      optionC: boolean,
+    }>();
 
-    const onChangeA = () => {
-      updateArgsA({ isCheckedA: !isCheckedA })
-      mock
-    }
-    const onChangeB = () => {
-      updateArgsB({ isCheckedB: !isCheckedB })
-      mock
-    }
-    const onChangeC = () => {
-      updateArgsC({ isCheckedC: !isCheckedC })
-      mock
+    const onChange = (e: SyntheticEvent) => {
+      const target = e.target as HTMLInputElement
+      if (target.name === 'option-1')
+        updateArgs({
+          optionA: !argsState.optionA
+        })
+      if (target.name === 'option-2')
+        updateArgs({
+          optionB: !argsState.optionB
+        })
+      if (target.name === 'option-3')
+        updateArgs({
+          optionC: !argsState.optionC
+        })
+      
+      fn()
     }
 
     return (
@@ -169,24 +186,24 @@ export const MultipleChoices: Story = {
           id="option-1"
           label="Option 1"
           name="option-1"
-          isChecked={isCheckedA}
-          onChange={onChangeA}
+          isChecked={argsState.optionA}
+          onChange={onChange}
         />
         <Select
           {...args}
           id="option-2"
           label="Option 2"
           name="option-2"
-          isChecked={isCheckedB}
-          onChange={onChangeB}
+          isChecked={argsState.optionB}
+          onChange={onChange}
         />
         <Select
           {...args}
           id="option-3"
           label="Option 3"
           name="option-3"
-          isChecked={isCheckedC}
-          onChange={onChangeC}
+          isChecked={argsState.optionC}
+          onChange={onChange}
         />
       </>
     )
@@ -219,11 +236,15 @@ export const SingleChoice: Story = {
     onChange: { control: false },
   },
   render: function Render(args) {
-    const [{ value }, updateArgs] = useArgs()
+    const [argsState, updateArgs] = useArgs<{
+      value: string,
+    }>();
 
     const onChange = (e: SyntheticEvent) => {
-      updateArgs({ value: (e.target as HTMLInputElement).value })
-      mock
+      updateArgs({
+        value: (e.target as HTMLInputElement).value
+      })
+      fn()
     }
 
     return (
@@ -234,7 +255,7 @@ export const SingleChoice: Story = {
           label="Option 1"
           name="option-1"
           value="option-1"
-          isChecked={value === 'option-1'}
+          isChecked={argsState.value === 'option-1'}
           onChange={onChange}
         />
         <Select
@@ -243,7 +264,7 @@ export const SingleChoice: Story = {
           label="Option 2"
           name="option-2"
           value="option-2"
-          isChecked={value === 'option-2'}
+          isChecked={argsState.value === 'option-2'}
           onChange={onChange}
         />
         <Select
@@ -252,7 +273,7 @@ export const SingleChoice: Story = {
           label="Option 3"
           name="option-3"
           value="option-3"
-          isChecked={value === 'option-3'}
+          isChecked={argsState.value === 'option-3'}
           onChange={onChange}
         />
       </>
