@@ -4,11 +4,11 @@
   "type": "module",
   "main": "./dist/figmug-ui.umd.js",
   "module": "./dist/figmug-ui.es.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/figmug-ui.es.js",
-      "require": "./dist/figmug-ui.umd.js"
+      "require": "./dist/figmug-ui.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [
