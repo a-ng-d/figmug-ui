@@ -3,6 +3,8 @@
   "version": "0.11.0",
   "type": "module",
   "types": "dist/index.d.ts",
+  "main": "./dist/figmug-ui.cjs.js",
+  "module": "./dist/figmug-ui.es.js",
   "exports": {
     ".": {
       "require": "./dist/figmug-ui.cjs",
