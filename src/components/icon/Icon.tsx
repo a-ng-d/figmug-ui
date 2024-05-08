@@ -1,4 +1,3 @@
-import React from 'react';
 import type { IconList } from '../../types/icon.types';
 import icons from '../../styles/icons.module.scss';
 import './icon.scss';
