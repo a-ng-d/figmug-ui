@@ -1,7 +1,7 @@
 import React from 'react';
 import type { IconList } from 'src/types/icon.types';
 import { Chip } from '../../../components/tags/chip/Chip';
-import { Icon } from 'src/components/icon/Icon';
+import { Icon } from '../../../components/icon/Icon';
 import texts from '../../../styles/texts.module.scss';
 import './button.scss';
 
@@ -52,7 +52,7 @@ export class Button extends React.Component<ButtonProps> {
 
     return (
       <button
-        type="button"
+        role="action-button"
         className={[
           'button',
           `button--${type}`,
@@ -102,7 +102,7 @@ export class Button extends React.Component<ButtonProps> {
 
     return (
       <button
-        type="button"
+        role="link-button"
         className={['button', `button--${type}`].filter((n) => n).join(' ')}
         data-feature={feature}
       >
@@ -118,7 +118,7 @@ export class Button extends React.Component<ButtonProps> {
 
     return (
       <button
-        type="button"
+        role="icon-button"
         data-feature={feature}
         className={[
           'icon-button',
@@ -150,7 +150,7 @@ export class Button extends React.Component<ButtonProps> {
 
     return (
       <button
-        type="button"
+        role="compact-button"
         className="compact-button"
         onKeyDown={(e) => {
           if (e.key === ' ' || e.key === 'Enter') action?.(e);
