@@ -18,7 +18,7 @@ export default defineConfig(() => ({
       entry: resolve(__dirname, 'src/index.ts'),
       name: "figmug-ui",
       formats: ["es", "umd"],
-      fileName: (format) => `my-lib.${format}.js`,
+      fileName: (format) => `figmug-ui.${format}.js`,
     },
     optimizeDeps: {
       exclude: Object.keys(packageJson.peerDependencies),
