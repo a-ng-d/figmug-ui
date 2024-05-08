@@ -26,27 +26,27 @@ input {
     appearance: none;
     border: none;
   }
-  
+
   &[type='color' i]::-webkit-color-swatch-wrapper {
     padding: 0;
   }
-  
+
   &[type='color' i]::-webkit-color-swatch {
     border: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px inset;
   }
-  
+
   &[type='color' i]:focus {
     outline: 1px solid var(--figma-color-border-selected, #0d99ff);
     outline-offset: -1px;
   }
-  
+
   &[type='color' i]:focus ~ input {
     border: 1px solid var(--figma-color-border-selected, #0d99ff);
     outline: 1px solid var(--figma-color-border-selected, #0d99ff);
     outline-offset: -2px;
   }
-  
+
   &[type='color'] ~ input,
   &[type='number'] {
     max-width: 112px;
@@ -55,7 +55,7 @@ input {
   &[type='number']::-webkit-inner-spin-button {
     display: none;
   }
-  
+
   &[type='number'] {
     -moz-appearance: textfield;
   }
@@ -151,19 +151,19 @@ input {
     width: var(--size-xlarge);
     margin: 0 -0.5px;
   }
-  
+
   & input {
     background-color: transparent;
   }
-  
+
   & input:focus {
     border: 1px solid var(--figma-color-border, #e6e6e6);
   }
-  
+
   &:hover input {
     border: 1px solid var(--figma-color-border, #e6e6e6);
   }
-  
+
   &:focus-within:before {
     content: '';
     width: 100%;
@@ -174,7 +174,7 @@ input {
     pointer-events: none;
     border-radius: var(--border-radius-small);
   }
-  
+
   &:focus-within input {
     border: 1px solid var(--figma-color-border, #e6e6e6);
     outline: 1px solid transparent;

@@ -22,10 +22,10 @@ export const Pictogram: Story = {
     iconLetter: undefined,
     iconColor: '#000000',
   },
-  argTypes : {
+  argTypes: {
     type: { control: false },
-    iconLetter: { control: false }
-  }
+    iconLetter: { control: false },
+  },
 }
 
 export const Letter: Story = {
@@ -35,8 +35,8 @@ export const Letter: Story = {
     iconLetter: 'L',
     iconColor: '#000000',
   },
-  argTypes : {
+  argTypes: {
     type: { control: false },
-    iconName: { control: false }
-  }
+    iconName: { control: false },
+  },
 }

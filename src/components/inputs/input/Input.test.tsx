@@ -3,11 +3,11 @@ import { afterEach, describe, it, expect } from 'vitest'
 import { Input, InputProps } from './Input'
 
 const NumericStepperProps: InputProps = {
-    type: 'NUMBER',
-    value: '10',
-    min: '10',
-    max: '100',
-    step: '1'
+  type: 'NUMBER',
+  value: '10',
+  min: '10',
+  max: '100',
+  step: '1',
 }
 
 const ColorPickerProps: InputProps = {
@@ -39,7 +39,9 @@ describe('Numeric stepper test:', () => {
 
   it('should type 20', () => {
     render(<Input {...NumericStepperProps} />)
-    fireEvent.change(screen.getByRole('numeric-stepper'), {target: {value: '20'}})
+    fireEvent.change(screen.getByRole('numeric-stepper'), {
+      target: { value: '20' },
+    })
     screen.getByDisplayValue('20')
   })
 })

@@ -4,7 +4,7 @@ import { fn } from '@storybook/test'
 import { useArgs } from '@storybook/preview-api'
 import { Input, InputProps } from '../../components/inputs/input/Input'
 
-const InputStory = (args: InputProps) => <Input {...args} />;
+const InputStory = (args: InputProps) => <Input {...args} />
 
 const meta = {
   title: 'Example/Inputs/Input',
@@ -47,12 +47,12 @@ export const ColorPicker: Story = {
   },
   render: function Render(args) {
     const [argsState, updateArgs] = useArgs<{
-      value: string,
-    }>();
+      value: string
+    }>()
 
     const onChange = (e: SyntheticEvent) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).value
+        value: (e.target as HTMLInputElement).value,
       })
       fn()
     }
@@ -97,12 +97,12 @@ export const NumericStepper: Story = {
   },
   render: function Render(args) {
     const [argsState, updateArgs] = useArgs<{
-      value: string,
-    }>();
+      value: string
+    }>()
 
     const onChange = (e: SyntheticEvent) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).value
+        value: (e.target as HTMLInputElement).value,
       })
       fn()
     }
@@ -134,16 +134,16 @@ export const ShortText: Story = {
   argTypes: {
     type: { control: false },
     charactersLimit: { control: 'number' },
-    state: { control: 'select', options: ['DEFAULT', 'ERROR']}
+    state: { control: 'select', options: ['DEFAULT', 'ERROR'] },
   },
   render: function Render(args) {
     const [argsState, updateArgs] = useArgs<{
-      value: string,
-    }>();
+      value: string
+    }>()
 
     const onChange = (e: SyntheticEvent) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).value
+        value: (e.target as HTMLInputElement).value,
       })
       fn()
     }
@@ -173,16 +173,16 @@ export const LongText: Story = {
   },
   argTypes: {
     type: { control: false },
-    state: { control: 'select', options: ['DEFAULT', 'ERROR']}
+    state: { control: 'select', options: ['DEFAULT', 'ERROR'] },
   },
   render: function Render(args) {
     const [argsState, updateArgs] = useArgs<{
-      value: string,
-    }>();
+      value: string
+    }>()
 
     const onChange = (e: SyntheticEvent) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).value
+        value: (e.target as HTMLInputElement).value,
       })
       fn()
     }
@@ -210,16 +210,16 @@ export const CodeSnippet: Story = {
   argTypes: {
     type: { control: false },
     placeholder: { control: false },
-    state: { control: false }
+    state: { control: false },
   },
   render: function Render(args) {
     const [argsState, updateArgs] = useArgs<{
-      value: string,
-    }>();
+      value: string
+    }>()
 
     const onChange = (e: SyntheticEvent) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).value
+        value: (e.target as HTMLInputElement).value,
       })
       fn()
     }

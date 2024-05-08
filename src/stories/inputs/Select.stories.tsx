@@ -34,12 +34,12 @@ export const CheckBox: Story = {
   },
   render: function Render(args) {
     const [argsState, updateArgs] = useArgs<{
-      isChecked: boolean,
-    }>();
+      isChecked: boolean
+    }>()
 
     const onChange = () => {
       updateArgs({
-        isChecked: !argsState.isChecked
+        isChecked: !argsState.isChecked,
       })
       fn()
     }
@@ -72,12 +72,12 @@ export const RadioButton: Story = {
   },
   render: function Render(args) {
     const [argsState, updateArgs] = useArgs<{
-      isChecked: boolean,
-    }>();
+      isChecked: boolean
+    }>()
 
     const onChange = () => {
       updateArgs({
-        isChecked: !argsState.isChecked
+        isChecked: !argsState.isChecked,
       })
       fn()
     }
@@ -110,12 +110,12 @@ export const SwitchButton: Story = {
   },
   render: function Render(args) {
     const [argsState, updateArgs] = useArgs<{
-      isChecked: boolean,
-    }>();
+      isChecked: boolean
+    }>()
 
     const onChange = () => {
       updateArgs({
-        isChecked: !argsState.isChecked
+        isChecked: !argsState.isChecked,
       })
       fn()
     }
@@ -156,26 +156,26 @@ export const MultipleChoices: Story = {
   },
   render: function Render(args) {
     const [argsState, updateArgs] = useArgs<{
-      optionA: boolean,
-      optionB: boolean,
-      optionC: boolean,
-    }>();
+      optionA: boolean
+      optionB: boolean
+      optionC: boolean
+    }>()
 
     const onChange = (e: SyntheticEvent) => {
       const target = e.target as HTMLInputElement
       if (target.name === 'option-1')
         updateArgs({
-          optionA: !argsState.optionA
+          optionA: !argsState.optionA,
         })
       if (target.name === 'option-2')
         updateArgs({
-          optionB: !argsState.optionB
+          optionB: !argsState.optionB,
         })
       if (target.name === 'option-3')
         updateArgs({
-          optionC: !argsState.optionC
+          optionC: !argsState.optionC,
         })
-      
+
       fn()
     }
 
@@ -237,12 +237,12 @@ export const SingleChoice: Story = {
   },
   render: function Render(args) {
     const [argsState, updateArgs] = useArgs<{
-      value: string,
-    }>();
+      value: string
+    }>()
 
     const onChange = (e: SyntheticEvent) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).value
+        value: (e.target as HTMLInputElement).value,
       })
       fn()
     }
