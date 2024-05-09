@@ -43,7 +43,7 @@ export const ColorPicker: Story = {
     max: { control: false },
     step: { control: false },
   },
-  render: function Render(args) {
+  render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()
@@ -93,7 +93,7 @@ export const NumericStepper: Story = {
     placeholder: { control: false },
     charactersLimit: { control: false },
   },
-  render: function Render(args) {
+  render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()
@@ -134,7 +134,7 @@ export const ShortText: Story = {
     charactersLimit: { control: 'number' },
     state: { control: 'select', options: ['DEFAULT', 'ERROR'] },
   },
-  render: function Render(args) {
+  render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()
@@ -173,7 +173,7 @@ export const LongText: Story = {
     type: { control: false },
     state: { control: 'select', options: ['DEFAULT', 'ERROR'] },
   },
-  render: function Render(args) {
+  render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()
@@ -210,7 +210,7 @@ export const CodeSnippet: Story = {
     placeholder: { control: false },
     state: { control: false },
   },
-  render: function Render(args) {
+  render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()

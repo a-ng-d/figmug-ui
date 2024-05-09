@@ -32,7 +32,7 @@ export const CheckBox: Story = {
     type: { control: false },
     value: { control: false },
   },
-  render: function Render(args) {
+  render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       isChecked: boolean
     }>()
@@ -70,7 +70,7 @@ export const RadioButton: Story = {
     type: { control: false },
     value: { control: false },
   },
-  render: function Render(args) {
+  render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       isChecked: boolean
     }>()
@@ -108,7 +108,7 @@ export const SwitchButton: Story = {
     type: { control: false },
     value: { control: false },
   },
-  render: function Render(args) {
+  render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       isChecked: boolean
     }>()
@@ -154,7 +154,7 @@ export const MultipleChoices: Story = {
     isNew: { control: false },
     onChange: { control: false },
   },
-  render: function Render(args) {
+  render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       optionA: boolean
       optionB: boolean
@@ -235,7 +235,7 @@ export const SingleChoice: Story = {
     isNew: { control: false },
     onChange: { control: false },
   },
-  render: function Render(args) {
+  render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()

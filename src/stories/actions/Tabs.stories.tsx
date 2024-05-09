@@ -44,7 +44,7 @@ export const ThreeTabs: Story = {
     active: 'SECTION_1',
     action: () => {},
   },
-  render: function Render(args) {
+  render: (args) => {
     const [{ active }, updateArgs] = useArgs()
 
     const onChange = (e: SyntheticEvent) => {
@@ -94,7 +94,7 @@ export const FiveTabs: Story = {
     active: 'SECTION_1',
     action: () => {},
   },
-  render: function Render(args) {
+  render: (args) => {
     const [{ active }, updateArgs] = useArgs()
 
     const onChange = (e: SyntheticEvent) => {
