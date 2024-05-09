@@ -1,10 +1,7 @@
-import { SyntheticEvent } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import { useArgs } from '@storybook/preview-api'
 import { Tabs } from '../../components/actions/tabs/Tabs'
-
-const mock = fn()
 
 const meta = {
   title: 'Example/Actions/Tabs',
@@ -42,20 +39,24 @@ export const ThreeTabs: Story = {
       },
     ],
     active: 'SECTION_1',
-    action: () => {},
+    action: fn(),
   },
   render: (args) => {
-    const [{ active }, updateArgs] = useArgs()
+    const [argsState, updateArgs] = useArgs<{
+      active: string
+    }>()
 
-    const onChange = (e: SyntheticEvent) => {
-      updateArgs({ active: (e.target as HTMLElement).dataset.feature })
-      mock
+    const onChange = (e: React.MouseEvent<Element, MouseEvent>) => {
+      updateArgs({
+        active: (e.target as HTMLElement).dataset.feature
+      })
+      args.action(e)
     }
 
     return (
       <Tabs
         {...args}
-        active={active}
+        active={argsState.active}
         action={onChange}
       />
     )
@@ -95,17 +96,21 @@ export const FiveTabs: Story = {
     action: () => {},
   },
   render: (args) => {
-    const [{ active }, updateArgs] = useArgs()
+    const [argsState, updateArgs] = useArgs<{
+      active: string
+    }>()
 
-    const onChange = (e: SyntheticEvent) => {
-      updateArgs({ active: (e.target as HTMLElement).dataset.feature })
-      mock
+    const onChange = (e: React.MouseEvent<Element, MouseEvent>) => {
+      updateArgs({
+        active: (e.target as HTMLElement).dataset.feature
+      })
+      args.action(e)
     }
 
     return (
       <Tabs
         {...args}
-        active={active}
+        active={argsState.active}
         action={onChange}
       />
     )

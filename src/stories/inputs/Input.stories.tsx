@@ -1,4 +1,3 @@
-import { SyntheticEvent } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import { useArgs } from '@storybook/preview-api'
@@ -48,11 +47,11 @@ export const ColorPicker: Story = {
       value: string
     }>()
 
-    const onChange = (e: SyntheticEvent) => {
+    const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).value,
+        value: e?.target.value,
       })
-      fn()
+      args.onChange?.(e)
     }
 
     return (
@@ -85,24 +84,24 @@ export const NumericStepper: Story = {
   },
   argTypes: {
     type: { control: false },
+    placeholder: { control: false },
     value: { control: 'number' },
+    state: { control: false },
+    charactersLimit: { control: false },
     min: { control: 'number' },
     max: { control: 'number' },
     step: { control: 'number' },
-    state: { control: false },
-    placeholder: { control: false },
-    charactersLimit: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()
 
-    const onChange = (e: SyntheticEvent) => {
+    const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).value,
+        value: e?.target.value,
       })
-      fn()
+      args.onChange?.(e)
     }
 
     return (
@@ -131,19 +130,23 @@ export const ShortText: Story = {
   },
   argTypes: {
     type: { control: false },
-    charactersLimit: { control: 'number' },
+    icon: { control: false },
     state: { control: 'select', options: ['DEFAULT', 'ERROR'] },
+    charactersLimit: { control: 'number' },
+    min: { control: false },
+    max: { control: false },
+    step: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()
 
-    const onChange = (e: SyntheticEvent) => {
+    const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).value,
+        value: e?.target.value,
       })
-      fn()
+      args.onChange?.(e)
     }
 
     return (
@@ -171,18 +174,23 @@ export const LongText: Story = {
   },
   argTypes: {
     type: { control: false },
+    icon: { control: false },
     state: { control: 'select', options: ['DEFAULT', 'ERROR'] },
+    charactersLimit: { control: false },
+    min: { control: false },
+    max: { control: false },
+    step: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()
 
-    const onChange = (e: SyntheticEvent) => {
+    const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).value,
+        value: e?.target.value,
       })
-      fn()
+      args.onChange?.(e)
     }
 
     return (
@@ -200,6 +208,7 @@ export const CodeSnippet: Story = {
     id: 'code-snippet-dragging',
     type: 'CODE',
     value: `:root {\n  /* Rectangle 1 */\n  --rectangle-1-source: rgb(217,217,217);\n  --rectangle-1-900: rgb(57,57,57);\n}`,
+    feature: 'SELECT_CODE_SNIPPET',
     isAutoFocus: false,
     isBlocked: false,
     isDisabled: false,
@@ -207,19 +216,24 @@ export const CodeSnippet: Story = {
   },
   argTypes: {
     type: { control: false },
+    icon: { control: false },
     placeholder: { control: false },
     state: { control: false },
+    charactersLimit: { control: false },
+    min: { control: false },
+    max: { control: false },
+    step: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()
 
-    const onChange = (e: SyntheticEvent) => {
+    const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).value,
+        value: e?.target.value,
       })
-      fn()
+      args.onChange?.(e)
     }
 
     return (
