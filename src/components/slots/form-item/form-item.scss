@@ -1,0 +1,29 @@
+& {
+  display: flex;
+  align-items: baseline;
+  gap: var(--size-xxsmall);
+  padding: 0 0 0 var(--size-xxsmall);
+  position: relative;
+
+  &--fill label {
+    flex: 0 1 96px;
+  }
+  
+  & .input,
+  & .textarea,
+  & .select-menu {
+    flex: 1;
+  }
+  
+  &__helper .onboarding-tip {
+    padding: 0;
+  }
+  
+  &--blocked {
+    pointer-events: none;
+  }
+  
+  &--blocked label {
+    color: var(--figma-color-text-disabled, rgba(0, 0, 0, 0.3));
+  }
+}
