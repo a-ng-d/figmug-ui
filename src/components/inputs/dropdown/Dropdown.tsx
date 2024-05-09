@@ -19,6 +19,10 @@ export interface DropdownStates {
 }
 
 export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
+  selectMenuRef: React.RefObject<HTMLDivElement>
+  buttonRef: React.RefObject<HTMLButtonElement>
+  listRef: React.RefObject<HTMLDivElement>
+
   static defaultProps: Partial<DropdownProps> = {
     alignment: 'LEFT',
     isNew: false,
@@ -116,12 +120,6 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
     })
     return label
   }
-
-  selectMenuRef: React.RefObject<HTMLDivElement>
-
-  buttonRef: React.RefObject<HTMLButtonElement>
-
-  listRef: React.RefObject<HTMLDivElement>
 
   render() {
     const { id, alignment, options, selected, isNew } = this.props

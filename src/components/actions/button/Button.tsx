@@ -22,6 +22,8 @@ export interface ButtonProps {
 }
 
 export class Button extends React.Component<ButtonProps> {
+  buttonRef: React.RefObject<HTMLButtonElement>;
+
   static defaultProps: Partial<ButtonProps> = {
     isLink: false,
     hasMultipleActions: false,
@@ -33,7 +35,8 @@ export class Button extends React.Component<ButtonProps> {
   }
 
   constructor(props: ButtonProps) {
-    super(props)
+    super(props),
+    this.buttonRef = React.createRef();
   }
 
   // Templates
@@ -68,6 +71,7 @@ export class Button extends React.Component<ButtonProps> {
           if (e.key === 'Escape') (e.target as HTMLElement).blur()
         }}
         onMouseDown={action}
+        ref={this.buttonRef}
       >
         <span className={['button__label'].filter((n) => n).join(' ')}>
           {label}
@@ -109,6 +113,7 @@ export class Button extends React.Component<ButtonProps> {
         role="link-button"
         className={['button', `button--${type}`].filter((n) => n).join(' ')}
         data-feature={feature}
+        ref={this.buttonRef}
       >
         <a
           href={url}
@@ -141,6 +146,7 @@ export class Button extends React.Component<ButtonProps> {
           if (e.key === 'Escape') (e.target as HTMLElement).blur()
         }}
         onMouseDown={action}
+        ref={this.buttonRef}
       >
         <Icon
           type="PICTO"
@@ -167,6 +173,7 @@ export class Button extends React.Component<ButtonProps> {
           if (e.key === 'Escape') (e.target as HTMLElement).blur()
         }}
         onMouseDown={action}
+        ref={this.buttonRef}
       >
         <Icon
           type="PICTO"

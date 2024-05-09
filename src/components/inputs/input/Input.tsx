@@ -31,11 +31,11 @@ export interface InputStates {
 }
 
 export class Input extends React.Component<InputProps, InputStates> {
+  inputRef: React.RefObject<HTMLInputElement>;
+  textareaRef: React.RefObject<HTMLTextAreaElement>;
+
   static defaultProps: Partial<InputProps> = {
-    icon: {
-      type: 'PICTO',
-      value: undefined,
-    },
+    icon: undefined,
     state: 'DEFAULT',
     step: '1',
     isBlocked: false,
@@ -48,7 +48,9 @@ export class Input extends React.Component<InputProps, InputStates> {
     super(props)
     this.state = {
       inputValue: props.value,
-    }
+    },
+    this.inputRef = React.createRef();
+    this.textareaRef = React.createRef();
   }
 
   componentDidUpdate(prevProps: InputProps) {
@@ -220,6 +222,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           disabled={isDisabled || isBlocked}
           onChange={this.onPickColorValue}
           onBlur={onBlur}
+          ref={this.inputRef}
         />
         <input
           role="color-display"
@@ -237,6 +240,7 @@ export class Input extends React.Component<InputProps, InputStates> {
             if (typeof onFocus === 'function') onFocus(e)
           }}
           onBlur={onBlur}
+          ref={this.inputRef}
         />
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
       </div>
@@ -298,6 +302,7 @@ export class Input extends React.Component<InputProps, InputStates> {
             if (typeof onFocus === 'function') onFocus(e)
           }}
           onBlur={onBlur}
+          ref={this.inputRef}
         />
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
       </div>
@@ -326,20 +331,20 @@ export class Input extends React.Component<InputProps, InputStates> {
       <div
         className={[
           'input',
-          icon !== undefined ? null : 'input--with-icon',
+          icon === undefined ? null : 'input--with-icon',
           isBlocked ? 'input--blocked' : null,
         ]
           .filter((n) => n)
           .join(' ')}
       >
-        {icon !== undefined ? (
+        {icon !== undefined && (
           <Icon
             type={icon?.type}
             iconName={icon.value}
             iconLetter={icon.value}
             iconColor="var(--figma-color-text-disabled)"
           />
-        ) : null}
+        )}
         <input
           role="short-text"
           id={id}
@@ -360,6 +365,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onChange={this.onChangeText}
           onFocus={onFocus}
           onBlur={onBlur}
+          ref={this.inputRef}
         />
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
       </div>
@@ -407,6 +413,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onChange={this.onChangeText}
           onFocus={onFocus}
           onBlur={onBlur}
+          ref={this.textareaRef}
         />
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
       </div>
@@ -437,6 +444,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onFocus={(e) => e.target.select()}
           onBlur={() => window.getSelection()?.removeAllRanges()}
           readOnly
+          ref={this.textareaRef}
         />
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
       </div>

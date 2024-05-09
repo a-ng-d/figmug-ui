@@ -17,6 +17,8 @@ export interface SelectProps {
 }
 
 export class Select extends React.Component<SelectProps> {
+  inputRef: React.RefObject<HTMLInputElement>;
+
   static defaultProps: Partial<SelectProps> = {
     isChecked: false,
     isDisabled: false,
@@ -25,7 +27,8 @@ export class Select extends React.Component<SelectProps> {
   }
 
   constructor(props: SelectProps) {
-    super(props)
+    super(props),
+    this.inputRef = React.createRef();
   }
 
   CheckBox = () => {
@@ -56,6 +59,7 @@ export class Select extends React.Component<SelectProps> {
           checked={isChecked}
           disabled={isDisabled || isBlocked}
           onChange={onChange}
+          ref={this.inputRef}
         />
         <label
           className="checkbox__label"
@@ -98,6 +102,7 @@ export class Select extends React.Component<SelectProps> {
           checked={isChecked}
           disabled={isDisabled || isBlocked}
           onChange={onChange}
+          ref={this.inputRef}
         />
         <label
           className="radio__label"
@@ -138,6 +143,7 @@ export class Select extends React.Component<SelectProps> {
           checked={isChecked}
           disabled={isDisabled || isBlocked}
           onChange={onChange}
+          ref={this.inputRef}
         />
         <label
           className="switch__label"
