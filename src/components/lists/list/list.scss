@@ -31,10 +31,7 @@
 
   &__item--selected &__item-icon,
   &__item-carret {
-    background: var(
-      --figma-color-icon-onselected-strong,
-      rgba(255, 255, 255, 1)
-    );
+    background: var(--figma-color-icon-onselected-strong,);
   }
 
   &__item--disabled {
@@ -43,7 +40,7 @@
   }
 
   &__item--disabled span {
-    color: var(--figma-color-text-onbrand-tertiary, rgba(255, 255, 255, 0.4));
+    color: var(--figma-color-text-onbrand-tertiary);
   }
 
   &__menu {
@@ -82,7 +79,7 @@
   &--highlight,
   &__item:hover,
   &__item:focus {
-    --blue: var(--figma-color-bg-brand, #0d99ff);
+    --blue: var(--figma-color-bg-brand);
   }
 
   &__item--blocked {
@@ -90,14 +87,11 @@
   }
 
   &__item--blocked &__item-label {
-    color: var(--figma-color-text-onbrand-tertiary, rgba(255, 255, 255, 0.4));
+    color: var(--figma-color-text-onbrand-tertiary);
   }
 
   &__item--blocked &__item-icon,
   &__item--blocked &__item-carret {
-    background: var(
-      --figma-color-text-onbrand-tertiary,
-      rgba(255, 255, 255, 0.4)
-    );
+    background: var(--figma-color-text-onbrand-tertiary);
   }
 }

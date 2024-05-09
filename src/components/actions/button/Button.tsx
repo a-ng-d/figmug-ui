@@ -79,8 +79,8 @@ export class Button extends React.Component<ButtonProps> {
               iconName="spinner"
               iconColor={
                 type === 'primary'
-                  ? 'var(--figma-color-icon-onbrand, rgba(255, 255, 255, 1)'
-                  : 'var(--figma-color-icon, rgba(0, 0, 0, 0.9))'
+                  ? 'var(--figma-color-icon-onbrand)'
+                  : 'var(--figma-color-icon)'
               }
             />
           </div>
@@ -91,8 +91,8 @@ export class Button extends React.Component<ButtonProps> {
             iconName="caret"
             iconColor={
               type === 'primary'
-                ? 'var(--figma-color-icon-onbrand, rgba(255, 255, 255, 1)'
-                : 'var(--figma-color-icon, rgba(0, 0, 0, 0.9))'
+                ? 'var(--figma-color-icon-onbrand)'
+                : 'var(--figma-color-icon)'
             }
           />
         ) : null}
@@ -147,7 +147,7 @@ export class Button extends React.Component<ButtonProps> {
           iconName={isLoading ? 'spinner' : icon}
           iconColor={
             isDisabled
-              ? 'var(--figma-color-icon-disabled, rgba(0, 0, 0, 0.3))'
+              ? 'var(--figma-color-icon-disabled)'
               : undefined
           }
         />
@@ -171,7 +171,7 @@ export class Button extends React.Component<ButtonProps> {
         <Icon
           type="PICTO"
           iconName={icon}
-          iconColor="var(--figma-color-icon-oncomponent, rgba(255, 255, 255, 1))"
+          iconColor="var(--figma-color-icon-oncomponent)"
         />
         <div className={`type ${texts.type}`}>{label}</div>
       </button>

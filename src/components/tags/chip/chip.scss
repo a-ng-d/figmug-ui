@@ -2,7 +2,7 @@
   height: var(--size-xsmall);
   margin: 0 0 0 var(--size-xxsmall);
   padding: 0 5px;
-  background-color: var(--figma-color-bg-selected-secondary, #f2f9ff);
+  background-color: var(--figma-color-bg-selected-secondary);
   border-radius: var(--border-radius-small);
   cursor: default;
   user-select: none;
@@ -12,7 +12,7 @@
     letter-spacing: var(--font-letter-spacing-neg-xsmall);
     line-height: var(--font-line-height);
     font-weight: 500;
-    color: var(--figma-color-text-brand, #007be5);
+    color: var(--figma-color-text-brand);
     user-select: none;
   }
 }

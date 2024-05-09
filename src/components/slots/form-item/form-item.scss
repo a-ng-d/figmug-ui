@@ -26,6 +26,6 @@
   }
 
   &--blocked label {
-    color: var(--figma-color-text-disabled, rgba(0, 0, 0, 0.3));
+    color: var(--figma-color-text-disabled);
   }
 }

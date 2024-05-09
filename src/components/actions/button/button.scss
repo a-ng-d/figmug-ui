@@ -8,10 +8,7 @@
 }
 
 .button__caret {
-  background: var(
-    --figma-color-icon-onbrand,
-    rgba(255, 255, 255, 1)
-  ) !important;
+  background: var(--figma-color-icon-onbrand) !important;
   width: 12px;
   height: 30px;
 }
@@ -34,45 +31,45 @@
 }
 
 .button--primary {
-  --blue: var(--figma-color-bg-brand, #0d99ff);
-  --white: var(--figma-color-text-onbrand, rgba(255, 255, 255, 1));
+  --blue: var(--figma-color-bg-brand);
+  --white: var(--figma-color-text-onbrand);
 
   &:enabled:hover {
-    background-color: var(--figma-color-bg-brand-hover, #007be5);
+    background-color: var(--figma-color-bg-brand-hover);
   }
 
   &:enabled:focus {
-    --blue: var(--figma-color-bg-brand-pressed, #007be5);
-    --black3: var(--figma-color-border-brand-strong, #007be5);
+    --blue: var(--figma-color-bg-brand-pressed);
+    --black3: var(--figma-color-border-brand-strong);
   }
 
   &:enabled:active {
-    --blue: var(--figma-color-bg-brand-pressed, #007be5);
-    --black3: var(--figma-color-bg-brand-pressed, #007be5);
+    --blue: var(--figma-color-bg-brand-pressed);
+    --black3: var(--figma-color-bg-brand-pressed);
   }
 
   &:disabled {
-    --black3: var(--figma-color-bg-disabled, #d9d9d9);
-    --white: var(--figma-color-text-ondisabled, rgba(255, 255, 255, 1));
+    --black3: var(--figma-color-bg-disabled);
+    --white: var(--figma-color-text-ondisabled);
     pointer-events: none;
   }
 }
 
 .button--secondary {
-  --white: var(--figma-color-bg, rgba(255, 255, 255, 1));
-  --black8: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+  --white: var(--figma-color-bg);
+  --black8: var(--figma-color-text);
 
   &:hover {
-    --white: var(--figma-color-bg-hover, #f5f5f5);
+    --white: var(--figma-color-bg-hover);
   }
 
   &:enabled:focus {
-    --blue: var(--figma-color-border-selected, #0d99ff);
+    --blue: var(--figma-color-border-selected);
   }
 
   &:enabled:active {
-    --white: var(--figma-color-bg-hover, #f5f5f5);
-    --blue: var(--figma-color-border-selected, #0d99ff);
+    --white: var(--figma-color-bg-hover);
+    --blue: var(--figma-color-border-selected);
   }
 
   &:disabled {
@@ -82,7 +79,7 @@
 
 .button--tertiary,
 .button--tertiary a {
-  color: var(--figma-color-text-brand, #007be5);
+  color: var(--figma-color-text-brand);
   text-decoration: none;
 }
 
@@ -107,16 +104,16 @@
 
   &:hover {
     background: transparent;
-    background-color: var(--figma-color-bg-hover, #f5f5f5);
+    background-color: var(--figma-color-bg-hover);
   }
 
   &:focus {
-    border: 2px solid var(--figma-color-border-selected, #0d99ff);
+    border: 2px solid var(--figma-color-border-selected);
   }
 
   &:active {
     border: 1px solid transparent;
-    background-color: var(--figma-color-bg-hover, #f5f5f5);
+    background-color: var(--figma-color-bg-hover);
   }
 
   &:disabled {
@@ -125,7 +122,7 @@
     pointer-events: none;
 
     & .icon-box {
-      background-color: var(--figma-color-icon-disabled, rgba(0, 0, 0, 0.3));
+      background-color: var(--figma-color-icon-disabled);
     }
   }
 
@@ -134,15 +131,15 @@
   }
 
   &--selected {
-    background-color: var(--figma-color-bg-brand, #0d99ff);
+    background-color: var(--figma-color-bg-brand);
   }
 
   &--selected .icon {
-    background-color: var(--figma-color-icon-onbrand, rgba(255, 255, 255, 1));
+    background-color: var(--figma-color-icon-onbrand);
   }
 
   &--selected:hover {
-    background-color: var(--figma-color-bg-brand, #0d99ff);
+    background-color: var(--figma-color-bg-brand);
   }
 }
 
@@ -151,33 +148,33 @@
   display: flex;
   align-items: center;
   border-radius: var(--border-radius-small);
-  background-color: var(--figma-color-bg-component, #9747ff);
-  border: 2px solid var(--figma-color-bg-component, #9747ff);
+  background-color: var(--figma-color-bg-component);
+  border: 2px solid var(--figma-color-bg-component);
   padding: 0 var(--size-xxsmall) 0 0;
 
   &:hover {
-    background-color: var(--figma-color-bg-component-hover, #8638e5);
-    border: 2px solid var(--figma-color-bg-component-hover, #8638e5);
+    background-color: var(--figma-color-bg-component-hover);
+    border: 2px solid var(--figma-color-bg-component-hover);
   }
 
   &:active {
-    background-color: var(--figma-color-bg-component-pressed, #8638e5);
-    border: 2px solid var(--figma-color-bg-component-pressed, #8638e5);
+    background-color: var(--figma-color-bg-component-pressed);
+    border: 2px solid var(--figma-color-bg-component-pressed);
   }
 
   &:focus,
   &:focus-visible {
-    background-color: var(--figma-color-bg-component-pressed, #8638e5);
-    border: 2px solid var(--figma-color-border-component-strong, #8638e5);
+    background-color: var(--figma-color-bg-component-pressed);
+    border: 2px solid var(--figma-color-border-component-strong);
     outline: none;
   }
 
   & .type {
-    color: var(--figma-color-text-oncomponent, rgba(255, 255, 255, 1));
+    color: var(--figma-color-text-oncomponent);
     white-space: nowrap;
   }
 
   & .icon {
-    background: var(--figma-color-icon-oncomponent, rgba(255, 255, 255, 1));
+    background: var(--figma-color-icon-oncomponent);
   }
 }

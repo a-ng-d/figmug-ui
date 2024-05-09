@@ -276,7 +276,7 @@ export class Input extends React.Component<InputProps, InputStates> {
             type={icon?.type}
             iconName={icon?.value}
             iconLetter={icon?.value}
-            iconColor="var(--figma-color-text-disabled, rgba(0, 0, 0, 0.3))"
+            iconColor="var(--figma-color-text-disabled)"
           />
         ) : null}
         <input
@@ -337,7 +337,7 @@ export class Input extends React.Component<InputProps, InputStates> {
             type={icon?.type}
             iconName={icon.value}
             iconLetter={icon.value}
-            iconColor="var(--figma-color-text-disabled, rgba(0, 0, 0, 0.3))"
+            iconColor="var(--figma-color-text-disabled)"
           />
         ) : null}
         <input

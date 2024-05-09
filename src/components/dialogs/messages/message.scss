@@ -5,15 +5,15 @@
 
   &__msg {
     line-height: var(--font-line-height);
-    color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+    color: var(--figma-color-text);
   }
   
   &--blocked &__msg {
-    color: var(--figma-color-text-disabled, rgba(0, 0, 0, 0.3));
+    color: var(--figma-color-text-disabled);
   }
   
   &--blocked .icon {
-    background: var(--figma-color-icon-disabled, rgba(0, 0, 0, 0.3));
+    background: var(--figma-color-icon-disabled);
   }
   
   /* Tips ticker */
@@ -37,7 +37,7 @@
     left: 0;
     background: linear-gradient(
       90deg,
-      var(--figma-color-bg, rgba(255, 255, 255, 1)) 0%,
+      var(--figma-color-bg) 0%,
       transparent 100%
     );
   }
@@ -47,7 +47,7 @@
     background: linear-gradient(
       90deg,
       transparent 0%,
-      var(--figma-color-bg, rgba(255, 255, 255, 1)) 100%
+      var(--figma-color-bg) 100%
     );
   }
   

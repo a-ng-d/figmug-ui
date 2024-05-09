@@ -14,7 +14,7 @@ export const Icon = (props: IconProps) => {
     type = 'PICTO',
     iconName,
     iconLetter,
-    iconColor = 'var(--figma-color-icon, rgba(0, 0, 0, 0.9))',
+    iconColor = 'var(--figma-color-icon)',
   } = props
 
   const Letter = () => {

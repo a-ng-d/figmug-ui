@@ -7,19 +7,19 @@
   & .tabs__tab {
     padding: 0 var(--size-xxsmall);
     font-weight: var(--font-weight-medium);
-    color: var(--figma-color-text-secondary, rgba(0, 0, 0, 0.5));
+    color: var(--figma-color-text-secondary);
     line-height: var(--size-large);
     cursor: default;
     position: relative;
   }
 
   & .tabs__tab:hover {
-    color: var(--figma-color-text-hover, rgba(0, 0, 0, 0.9));
+    color: var(--figma-color-text-hover);
   }
 
   & .tabs__tab--active {
     font-weight: var(--font-weight-bold);
-    color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+    color: var(--figma-color-text);
   }
 
   & .tabs__tab--new:after {
@@ -28,7 +28,7 @@
     width: var(--size-xxxsmall);
     height: var(--size-xxxsmall);
     border-radius: var(--border-radius-small);
-    background-color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+    background-color: var(--figma-color-text);
     top: 12px;
     right: 2px;
   }

@@ -5,7 +5,7 @@
   user-select: none;
 
   &__label {
-    color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+    color: var(--figma-color-text);
   }
 
   &--right {
@@ -21,17 +21,17 @@
   }
 
   &__button {
-    --white: var(--figma-color-bg, rgba(255, 255, 255, 1));
+    --white: var(--figma-color-bg);
     padding: 0 0 0 var(--size-xxsmall);
     width: auto;
   }
 
   &__button:hover {
-    --black1: var(--figma-color-border, #e6e6e6);
+    --black1: var(--figma-color-border);
   }
 
   &__button:focus {
-    --blue: var(--figma-color-border-selected, #0d99ff);
+    --blue: var(--figma-color-border-selected);
   }
 
   &__label {
@@ -46,10 +46,14 @@
     opacity: 1;
   }
 
+  & .icon-box {
+    margin-left: -8px;
+  }
+
   &__button:hover .icon-box,
   &__button:focus .icon-box {
-    background: var(--figma-color-icon, rgba(0, 0, 0, 0.9)) !important;
-    margin-left: -12px;
+    background: var(--figma-color-icon) !important;
+    margin-left: -8px;
   }
 
   .floating-menu &__menu {
