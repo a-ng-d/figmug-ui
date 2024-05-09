@@ -1,0 +1,56 @@
+.select-menu {
+  display: flex;
+  align-items: baseline;
+
+  &__label {
+    color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+  }
+  
+  &--right {
+    justify-content: flex-end;
+  }
+  
+  &--left {
+    justify-content: flex-start;
+  }
+  
+  &--fill {
+    justify-content: stretch;
+  }
+  
+  &__button {
+    --white: var(--figma-color-bg, rgba(255, 255, 255, 1));
+    padding: 0 0 0 var(--size-xxsmall);
+    width: auto;
+  }
+  
+  &__button:hover {
+    --black1: var(--figma-color-border, #e6e6e6);
+  }
+  
+  &__button:focus {
+    --blue: var(--figma-color-border-selected, #0d99ff);
+  }
+  
+  &__label {
+    margin-top: 0;
+  }
+  
+  &__item-label {
+    flex: 1;
+  }
+  
+  &__caret {
+    opacity: 1;
+  }
+  
+  &__button:hover .icon-box,
+  &__button:focus .icon-box {
+    background: var(--figma-color-icon, rgba(0, 0, 0, 0.9)) !important;
+    margin-left: -12px;
+  }
+  
+  .floating-menu &__menu {
+    position: relative;
+  }
+}

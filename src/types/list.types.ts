@@ -1,4 +1,4 @@
-import { SyntheticEvent } from "react";
+import { ChangeEvent } from "react";
 
 export interface DropdownOption {
   label: string | null;
@@ -10,5 +10,5 @@ export interface DropdownOption {
   isBlocked?: boolean;
   isNew?: boolean;
   children?: Array<DropdownOption> | [];
-  action: (event: SyntheticEvent) => void;
+  action: (event: ChangeEvent) => void;
 }
