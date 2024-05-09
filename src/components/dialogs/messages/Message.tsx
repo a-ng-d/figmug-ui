@@ -1,6 +1,6 @@
 import React from 'react'
 import type { IconList } from '../../../types/icon.types'
-import { Icon } from 'src/components/icon/Icon'
+import { Icon } from '../../../components/icon/Icon'
 import texts from '../../../styles/texts.module.scss'
 import './message.scss'
 
