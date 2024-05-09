@@ -22,7 +22,7 @@ export interface ButtonProps {
 }
 
 export class Button extends React.Component<ButtonProps> {
-  buttonRef: React.RefObject<HTMLButtonElement>;
+  buttonRef: React.RefObject<HTMLButtonElement>
 
   static defaultProps: Partial<ButtonProps> = {
     isLink: false,
@@ -35,8 +35,7 @@ export class Button extends React.Component<ButtonProps> {
   }
 
   constructor(props: ButtonProps) {
-    super(props),
-    this.buttonRef = React.createRef();
+    super(props), (this.buttonRef = React.createRef())
   }
 
   // Templates
@@ -152,9 +151,7 @@ export class Button extends React.Component<ButtonProps> {
           type="PICTO"
           iconName={isLoading ? 'spinner' : icon}
           iconColor={
-            isDisabled
-              ? 'var(--figma-color-icon-disabled)'
-              : undefined
+            isDisabled ? 'var(--figma-color-icon-disabled)' : undefined
           }
         />
       </button>

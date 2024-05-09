@@ -7,15 +7,15 @@
     line-height: var(--font-line-height);
     color: var(--figma-color-text);
   }
-  
+
   &--blocked &__msg {
     color: var(--figma-color-text-disabled);
   }
-  
+
   &--blocked .icon {
     background: var(--figma-color-icon-disabled);
   }
-  
+
   /* Tips ticker */
   &__ticker {
     flex: 1;
@@ -23,7 +23,7 @@
     position: relative;
     overflow: hidden;
   }
-  
+
   &__ticker:before,
   &__ticker:after {
     content: '';
@@ -32,7 +32,7 @@
     height: 100%;
     z-index: 2;
   }
-  
+
   &__ticker:before {
     left: 0;
     background: linear-gradient(
@@ -41,7 +41,7 @@
       transparent 100%
     );
   }
-  
+
   &__ticker:after {
     right: 0;
     background: linear-gradient(
@@ -50,7 +50,7 @@
       var(--figma-color-bg) 100%
     );
   }
-  
+
   &__tips {
     display: inline-flex;
     align-items: center;
@@ -59,7 +59,7 @@
     position: relative;
     width: max-content;
   }
-  
+
   &__ticker:hover &__tips {
     animation-play-state: paused !important;
   }

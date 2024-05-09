@@ -31,8 +31,8 @@ export interface InputStates {
 }
 
 export class Input extends React.Component<InputProps, InputStates> {
-  inputRef: React.RefObject<HTMLInputElement>;
-  textareaRef: React.RefObject<HTMLTextAreaElement>;
+  inputRef: React.RefObject<HTMLInputElement>
+  textareaRef: React.RefObject<HTMLTextAreaElement>
 
   static defaultProps: Partial<InputProps> = {
     icon: undefined,
@@ -46,11 +46,11 @@ export class Input extends React.Component<InputProps, InputStates> {
 
   constructor(props: InputProps) {
     super(props)
-    this.state = {
+    ;(this.state = {
       inputValue: props.value,
-    },
-    this.inputRef = React.createRef();
-    this.textareaRef = React.createRef();
+    }),
+      (this.inputRef = React.createRef())
+    this.textareaRef = React.createRef()
   }
 
   componentDidUpdate(prevProps: InputProps) {

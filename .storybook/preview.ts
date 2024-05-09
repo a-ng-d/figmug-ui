@@ -14,17 +14,17 @@ export const globalTypes = {
         {
           name: 'Figma Light',
           dataTheme: 'figma-light',
-          color: '#ffffff'
+          color: '#ffffff',
         },
         {
           name: 'Figma Dark',
           dataTheme: 'figma-dark',
-          color: '#2c2c2c'
+          color: '#2c2c2c',
         },
         {
           name: 'FigJam',
           dataTheme: 'figjam',
-          color: '#ffffff'
+          color: '#ffffff',
         },
       ],
       dataAttribute: 'data-theme',
@@ -62,7 +62,7 @@ const preview: Preview = {
         },
       ],
     },
-  }
+  },
 }
 
 export default preview

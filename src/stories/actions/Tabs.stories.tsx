@@ -48,7 +48,7 @@ export const ThreeTabs: Story = {
 
     const onChange = (e: React.MouseEvent<Element, MouseEvent>) => {
       updateArgs({
-        active: (e.target as HTMLElement).dataset.feature
+        active: (e.target as HTMLElement).dataset.feature,
       })
       args.action(e)
     }
@@ -102,7 +102,7 @@ export const FiveTabs: Story = {
 
     const onChange = (e: React.MouseEvent<Element, MouseEvent>) => {
       updateArgs({
-        active: (e.target as HTMLElement).dataset.feature
+        active: (e.target as HTMLElement).dataset.feature,
       })
       args.action(e)
     }

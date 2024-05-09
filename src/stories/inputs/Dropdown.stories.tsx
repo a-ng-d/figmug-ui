@@ -17,15 +17,19 @@ type Story = StoryObj<typeof meta>
 export const Button: Story = {
   args: {
     id: 'dropdown-button',
-    options: {...ListStories.FourOptionsList.args.options},
-    selected: 'OPTION_1'
+    options: { ...ListStories.FourOptionsList.args.options },
+    selected: 'OPTION_1',
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()
 
-    const onChange = (e: React.MouseEvent<HTMLLIElement, MouseEvent> | React.KeyboardEvent<HTMLLIElement>) => {
+    const onChange = (
+      e:
+        | React.MouseEvent<HTMLLIElement, MouseEvent>
+        | React.KeyboardEvent<HTMLLIElement>
+    ) => {
       updateArgs({
         value: (e.target as HTMLInputElement).dataset.value,
       })
@@ -86,8 +90,10 @@ export const Button: Story = {
             action: onChange,
           },
         ]}
-        selected={argsState.value === undefined ? args.selected : argsState.value}
+        selected={
+          argsState.value === undefined ? args.selected : argsState.value
+        }
       />
     )
-  }
+  },
 }

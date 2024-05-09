@@ -47,7 +47,9 @@ export const ColorPicker: Story = {
       value: string
     }>()
 
-    const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const onChange = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
       updateArgs({
         value: e?.target.value,
       })
@@ -97,7 +99,9 @@ export const NumericStepper: Story = {
       value: string
     }>()
 
-    const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const onChange = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
       updateArgs({
         value: e?.target.value,
       })
@@ -142,7 +146,9 @@ export const ShortText: Story = {
       value: string
     }>()
 
-    const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const onChange = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
       updateArgs({
         value: e?.target.value,
       })
@@ -186,7 +192,9 @@ export const LongText: Story = {
       value: string
     }>()
 
-    const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const onChange = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
       updateArgs({
         value: e?.target.value,
       })
@@ -229,7 +237,9 @@ export const CodeSnippet: Story = {
       value: string
     }>()
 
-    const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const onChange = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
       updateArgs({
         value: e?.target.value,
       })
