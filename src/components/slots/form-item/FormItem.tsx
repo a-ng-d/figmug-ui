@@ -1,23 +1,23 @@
-import { Chip } from '../../tags/chip/Chip';
-import { Message } from '../../dialogs/messages/Message';
-import texts from '../../../styles/texts.module.scss';
-import './form-item.scss';
+import { Chip } from '../../tags/chip/Chip'
+import { Message } from '../../dialogs/messages/Message'
+import texts from '../../../styles/texts.module.scss'
+import './form-item.scss'
 
 export interface FormItemProps {
-  id: string;
-  label?: string;
+  id: string
+  label?: string
   helper?: {
-    type: 'INFO' | 'ERROR';
-    message: string;
-  };
-  shouldFill: boolean;
-  isBlocked: boolean;
-  isNew: boolean;
-  children: React.ReactNode;
+    type: 'INFO' | 'ERROR'
+    message: string
+  }
+  shouldFill: boolean
+  isBlocked: boolean
+  isNew: boolean
+  children: React.ReactNode
 }
 
 export const FormItem = (props: FormItemProps) => {
-  const { id, label, helper, shouldFill, isBlocked, isNew, children } = props;
+  const { id, label, helper, shouldFill, isBlocked, isNew, children } = props
 
   return (
     <>
@@ -31,7 +31,10 @@ export const FormItem = (props: FormItemProps) => {
           .join(' ')}
       >
         {label !== undefined ? (
-          <label className={`type ${texts.type}`} htmlFor={id}>
+          <label
+            className={`type ${texts.type}`}
+            htmlFor={id}
+          >
             {label}
           </label>
         ) : null}
@@ -47,11 +50,11 @@ export const FormItem = (props: FormItemProps) => {
         </div>
       ) : null}
     </>
-  );
-};
+  )
+}
 
 FormItem.defaultProps = {
   shouldFill: true,
   isBlocked: false,
   isNew: false,
-};
+}

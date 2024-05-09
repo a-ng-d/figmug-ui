@@ -28,7 +28,10 @@
 
   &__item--selected &__item-icon,
   &__item-carret {
-    background: var(--figma-color-icon-onselected-strong, rgba(255, 255, 255, 1));
+    background: var(
+      --figma-color-icon-onselected-strong,
+      rgba(255, 255, 255, 1)
+    );
   }
 
   &__item--disabled {

@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>
 
 export const FourOptionsList: Story = {
   args: {
-    options : [
+    options: [
       {
         label: 'Option 1',
         value: null,
@@ -64,10 +64,10 @@ export const FourOptionsList: Story = {
         children: [],
         action: fn(),
       },
-    ]
+    ],
   },
   argTypes: {
     direction: { control: false },
-    selected: { control: false }
-  }
+    selected: { control: false },
+  },
 }

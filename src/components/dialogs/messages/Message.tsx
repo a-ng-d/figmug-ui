@@ -1,23 +1,23 @@
-import React from 'react';
-import type { IconList } from '../../../types/icon.types';
-import { Icon } from 'src/components/icon/Icon';
-import texts from '../../../styles/texts.module.scss';
-import './message.scss';
+import React from 'react'
+import type { IconList } from '../../../types/icon.types'
+import { Icon } from 'src/components/icon/Icon'
+import texts from '../../../styles/texts.module.scss'
+import './message.scss'
 
 export interface MessageProps {
-  icon: IconList;
-  messages: Array<string>;
-  isBlocked?: boolean;
+  icon: IconList
+  messages: Array<string>
+  isBlocked?: boolean
 }
 
 export class Message extends React.Component<MessageProps> {
   static defaultProps = {
     isBlocked: false,
-  };
+  }
 
   // Templates
   SingleMessage = () => {
-    const { icon, messages, isBlocked } = this.props;
+    const { icon, messages, isBlocked } = this.props
 
     return (
       <div
@@ -34,11 +34,11 @@ export class Message extends React.Component<MessageProps> {
         />
         <div className="onboarding-tip__msg">{messages[0]}</div>
       </div>
-    );
-  };
+    )
+  }
 
   MultipleMessages = () => {
-    const { icon, messages } = this.props;
+    const { icon, messages } = this.props
 
     return (
       <div className="callout">
@@ -63,7 +63,7 @@ export class Message extends React.Component<MessageProps> {
                       <div className="onboarding-tip__msg">{message}</div>
                       <div className={`type ${texts.type}`}>﹒</div>
                     </React.Fragment>
-                  );
+                  )
                 })}
               </div>
               <div
@@ -80,21 +80,21 @@ export class Message extends React.Component<MessageProps> {
                       <div className="onboarding-tip__msg">{message}</div>
                       <div className={`type ${texts.type}`}>﹒</div>
                     </React.Fragment>
-                  );
+                  )
                 })}
               </div>
             </div>
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   // Render
   render() {
-    const { messages } = this.props;
+    const { messages } = this.props
 
-    if (messages.length > 1) return this.MultipleMessages();
-    return this.SingleMessage();
+    if (messages.length > 1) return this.MultipleMessages()
+    return this.SingleMessage()
   }
 }

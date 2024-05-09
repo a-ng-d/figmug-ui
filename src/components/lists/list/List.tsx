@@ -1,31 +1,31 @@
-import React from 'react';
-import { DropdownOption } from '../../../types/list.types';
-import { Chip } from '../../tags/chip/Chip';
-import 'figma-plugin-ds/dist/figma-plugin-ds.css';
-import './list.scss';
+import React from 'react'
+import { DropdownOption } from '../../../types/list.types'
+import { Chip } from '../../tags/chip/Chip'
+import 'figma-plugin-ds/dist/figma-plugin-ds.css'
+import './list.scss'
 
 export interface ListProps {
-  options: Array<DropdownOption>;
-  selected?: string;
-  direction?: 'LEFT' | 'RIGHT' | 'FILL';
-  onCancellation?: () => void;
+  options: Array<DropdownOption>
+  selected?: string
+  direction?: 'LEFT' | 'RIGHT' | 'FILL'
+  onCancellation?: () => void
 }
 
 export interface ListStates {
-  openedGroup: string;
+  openedGroup: string
 }
 
 export class List extends React.Component<ListProps, ListStates> {
   static defaultProps: Partial<ListProps> = {
     direction: 'RIGHT',
     onCancellation: () => null,
-  };
+  }
 
   constructor(props: ListProps) {
-    super(props);
+    super(props)
     this.state = {
       openedGroup: 'EMPTY',
-    };
+    }
   }
 
   // Template
@@ -36,15 +36,15 @@ export class List extends React.Component<ListProps, ListStates> {
           {options?.map((option, index) => {
             if (option.children !== undefined) {
               if (option.isActive && option.children.length > 0)
-                return this.MenuGroup(option, index);
-              return this.MenuSubOption(option, index);
+                return this.MenuGroup(option, index)
+              return this.MenuSubOption(option, index)
             }
-            return null;
+            return null
           })}
         </ul>
       </div>
-    );
-  };
+    )
+  }
 
   MenuTitle = (option: DropdownOption, index: number) => {
     return (
@@ -57,15 +57,15 @@ export class List extends React.Component<ListProps, ListStates> {
       >
         <span className="select-menu__item-label">{option.label}</span>
       </li>
-    );
-  };
+    )
+  }
 
   MenuSeparator = (index: number) => {
-    return <hr key={`menu-option-${index}`} />;
-  };
+    return <hr key={`menu-option-${index}`} />
+  }
 
   MenuOption = (option: DropdownOption, index: number) => {
-    const { selected, onCancellation } = this.props;
+    const { selected, onCancellation } = this.props
 
     return (
       <li
@@ -85,17 +85,17 @@ export class List extends React.Component<ListProps, ListStates> {
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
           if (e.key === ' ' || e.key === 'Enter') {
-            option.action(e);
-            if (typeof onCancellation === 'function') onCancellation();
+            option.action(e)
+            if (typeof onCancellation === 'function') onCancellation()
           }
           if (e.key === 'Escape') {
-            if (typeof onCancellation === 'function') onCancellation();
+            if (typeof onCancellation === 'function') onCancellation()
           }
-          return null;
+          return null
         }}
         onMouseDown={(e) => {
-          option.action(e);
-          if (typeof onCancellation === 'function') onCancellation();
+          option.action(e)
+          if (typeof onCancellation === 'function') onCancellation()
         }}
         onFocus={() => null}
         onBlur={() => null}
@@ -106,11 +106,11 @@ export class List extends React.Component<ListProps, ListStates> {
           <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
         ) : null}
       </li>
-    );
-  };
+    )
+  }
 
   MenuGroup = (option: DropdownOption, index: number) => {
-    const { openedGroup } = this.state;
+    const { openedGroup } = this.state
 
     return (
       <li
@@ -127,10 +127,9 @@ export class List extends React.Component<ListProps, ListStates> {
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
           if (e.key === ' ' || e.key === 'Enter')
-            return this.setState({ openedGroup: option.value ?? '' });
-          if (e.key === 'Escape')
-            return this.setState({ openedGroup: 'EMPTY' });
-          return null;
+            return this.setState({ openedGroup: option.value ?? '' })
+          if (e.key === 'Escape') return this.setState({ openedGroup: 'EMPTY' })
+          return null
         }}
         onMouseOver={() => this.setState({ openedGroup: option.value ?? '' })}
         onMouseOut={() => this.setState({ openedGroup: 'EMPTY' })}
@@ -144,16 +143,15 @@ export class List extends React.Component<ListProps, ListStates> {
         ) : null}
         <span className="select-menu__item-carret" />
         {(() => {
-          if (openedGroup === option.value)
-            return this.SubMenu(option.children);
-          return null;
+          if (openedGroup === option.value) return this.SubMenu(option.children)
+          return null
         })()}
       </li>
-    );
-  };
+    )
+  }
 
   MenuSubOption = (option: DropdownOption, index: number) => {
-    const { selected } = this.props;
+    const { selected } = this.props
 
     return (
       <li
@@ -172,10 +170,9 @@ export class List extends React.Component<ListProps, ListStates> {
         data-feature={option.feature}
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
-          if (e.key === ' ' || e.key === 'Enter') return option.action(e);
-          if (e.key === 'Escape')
-            return this.setState({ openedGroup: 'EMPTY' });
-          return null;
+          if (e.key === ' ' || e.key === 'Enter') return option.action(e)
+          if (e.key === 'Escape') return this.setState({ openedGroup: 'EMPTY' })
+          return null
         }}
         onMouseDown={option.action}
       >
@@ -185,11 +182,11 @@ export class List extends React.Component<ListProps, ListStates> {
           <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
         ) : null}
       </li>
-    );
-  };
+    )
+  }
 
   render() {
-    const { options, direction } = this.props;
+    const { options, direction } = this.props
 
     return (
       <ul
@@ -205,16 +202,16 @@ export class List extends React.Component<ListProps, ListStates> {
       >
         {options?.map((option, index) => {
           if (option.isActive && option.type === 'SEPARATOR')
-            return this.MenuSeparator(index);
+            return this.MenuSeparator(index)
           if (option.isActive && option.type === 'TITLE')
-            return this.MenuTitle(option, index);
+            return this.MenuTitle(option, index)
           if (option.isActive && option.type === 'OPTION' && option.children)
             return option.children.length > 0
               ? this.MenuGroup(option, index)
-              : this.MenuOption(option, index);
-          return null;
+              : this.MenuOption(option, index)
+          return null
         })}
       </ul>
-    );
+    )
   }
 }
