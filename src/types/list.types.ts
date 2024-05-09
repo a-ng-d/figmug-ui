@@ -1,4 +1,4 @@
-import { ChangeEvent } from 'react'
+import React from "react"
 
 export interface DropdownOption {
   label: string | null
@@ -10,5 +10,8 @@ export interface DropdownOption {
   isBlocked?: boolean
   isNew?: boolean
   children?: Array<DropdownOption> | []
-  action: (event: ChangeEvent) => void
+  action: (event:
+    React.MouseEvent<HTMLLIElement, MouseEvent>
+    | React.KeyboardEvent<HTMLLIElement>
+  ) => void
 }
