@@ -4,6 +4,8 @@
   gap: var(--size-xxsmall);
   padding: 0 0 0 var(--size-xxsmall);
   position: relative;
+  cursor: default;
+  user-select: none;
 
   &--fill label {
     flex: 0 1 96px;

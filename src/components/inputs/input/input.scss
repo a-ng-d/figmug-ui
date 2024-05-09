@@ -1,6 +1,8 @@
 .input {
   display: flex;
   align-items: baseline;
+  cursor: default;
+  user-select: none;
 
   .icon-box {
     opacity: 1;
