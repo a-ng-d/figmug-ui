@@ -7,6 +7,7 @@ export interface IconProps {
   iconName?: IconList
   iconLetter?: string
   iconColor?: string
+  customClassName?: string
 }
 
 export const Icon = (props: IconProps) => {
@@ -15,6 +16,7 @@ export const Icon = (props: IconProps) => {
     iconName,
     iconLetter,
     iconColor = 'var(--figma-color-icon)',
+    customClassName,
   } = props
 
   const Letter = () => {
@@ -24,7 +26,9 @@ export const Icon = (props: IconProps) => {
           style={{
             color: iconColor,
           }}
-          className="type"
+          className={['type', customClassName]
+            .filter((n) => n)
+            .join(' ')}
         >
           {iconLetter}
         </span>
@@ -38,7 +42,7 @@ export const Icon = (props: IconProps) => {
         style={{
           backgroundColor: iconColor,
         }}
-        className={['icon-box', icons.icon, icons[`icon--${iconName}`]]
+        className={['icon-box', icons.icon, icons[`icon--${iconName}`], customClassName]
           .filter((n) => n)
           .join(' ')}
       />
