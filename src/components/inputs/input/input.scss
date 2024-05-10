@@ -14,6 +14,9 @@
 }
 
 input {
+  cursor: default;
+  user-select: none;
+
   &[type='color' i] {
     width: var(--size-xsmall);
     height: var(--size-xsmall);

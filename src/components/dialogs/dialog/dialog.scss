@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   &__text {
     padding: var(--size-xsmall);
     margin: 0;
@@ -28,10 +28,10 @@
     gap: var(--size-xxsmall);
 
     p {
-      margin: 0
+      margin: 0;
     }
   }
-  
+
   &__cover--padding {
     padding: var(--size-xsmall);
   }
@@ -39,7 +39,7 @@
 
 @media (max-width: 460px) {
   .dialog {
-    & &__cover {
+    &__cover {
       width: 100%;
       flex: auto;
     }

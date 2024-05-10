@@ -1,19 +1,19 @@
-import { Button } from '../button/Button';
+import { Button } from '../button/Button'
 import { Chip } from '../../tags/chip/Chip'
-import { SectionTitle } from '../../assets/section-title/SectionTitle';
-import './accordion.scss';
+import { SectionTitle } from '../../assets/section-title/SectionTitle'
+import './accordion.scss'
 
 export interface AccordionProps {
-  label: string;
-  indicator?: string | number;
-  helper?: string;
-  isExpanded: boolean;
-  isBlocked?: boolean;
-  isNew?: boolean;
-  children?: React.ReactNode;
-  onAdd: React.MouseEventHandler<Element> & React.KeyboardEventHandler<Element>;
+  label: string
+  indicator?: string | number
+  helper?: string
+  isExpanded: boolean
+  isBlocked?: boolean
+  isNew?: boolean
+  children?: React.ReactNode
+  onAdd: React.MouseEventHandler<Element> & React.KeyboardEventHandler<Element>
   onEmpty: React.MouseEventHandler<Element> &
-    React.KeyboardEventHandler<Element>;
+    React.KeyboardEventHandler<Element>
 }
 
 export const Accordion = (props: AccordionProps) => {
@@ -27,7 +27,7 @@ export const Accordion = (props: AccordionProps) => {
     children,
     onAdd,
     onEmpty,
-  } = props;
+  } = props
 
   return (
     <div
@@ -46,12 +46,16 @@ export const Accordion = (props: AccordionProps) => {
           !isExpanded &&
           !isBlocked
         )
-          onAdd(e as React.MouseEvent<HTMLDivElement, MouseEvent>);
+          onAdd(e as React.MouseEvent<HTMLDivElement, MouseEvent>)
       }}
     >
       <div className="accordion__row">
         <div className="accordion__row__left-part">
-          <SectionTitle label={label} indicator={indicator} helper={helper} />
+          <SectionTitle
+            label={label}
+            indicator={indicator}
+            helper={helper}
+          />
         </div>
         <div className="accordion__row__right-part">
           {isExpanded ? (
@@ -76,5 +80,5 @@ export const Accordion = (props: AccordionProps) => {
       </div>
       {isExpanded ? <div>{children}</div> : null}
     </div>
-  );
-};
+  )
+}

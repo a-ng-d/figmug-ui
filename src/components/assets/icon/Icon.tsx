@@ -26,9 +26,7 @@ export const Icon = (props: IconProps) => {
           style={{
             color: iconColor,
           }}
-          className={['type', customClassName]
-            .filter((n) => n)
-            .join(' ')}
+          className={['type', customClassName].filter((n) => n).join(' ')}
         >
           {iconLetter}
         </span>
@@ -42,7 +40,12 @@ export const Icon = (props: IconProps) => {
         style={{
           backgroundColor: iconColor,
         }}
-        className={['icon-box', icons.icon, icons[`icon--${iconName}`], customClassName]
+        className={[
+          'icon-box',
+          icons.icon,
+          icons[`icon--${iconName}`],
+          customClassName,
+        ]
           .filter((n) => n)
           .join(' ')}
       />

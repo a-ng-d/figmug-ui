@@ -108,7 +108,7 @@ export const MultipleActionsIconButton: Story = {
     type: 'ICON',
     icon: 'ellipsis',
     state: 'DEFAULT',
-    options: [ ...ListStories.FourOptionsList.args.options ],
+    options: [...ListStories.FourOptionsList.args.options],
     alignment: 'BOTTOM_LEFT',
   },
   argTypes: {
@@ -124,7 +124,7 @@ export const MultipleActionsButton: Story = {
     type: 'PRIMARY',
     label: 'Run',
     state: 'DEFAULT',
-    options: [ ...ListStories.FourOptionsList.args.options ],
+    options: [...ListStories.FourOptionsList.args.options],
     alignment: 'BOTTOM_LEFT',
   },
   argTypes: {

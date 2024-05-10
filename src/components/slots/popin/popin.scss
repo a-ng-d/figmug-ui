@@ -22,14 +22,14 @@
     border-bottom: 1px solid var(--figma-color-border);
     gap: 0 var(--size-xxsmall);
   }
-  
+
   &__content {
     flex: 1;
     display: flex;
     overflow-y: auto;
     padding: 0;
   }
-  
+
   &__footer {
     display: flex;
     justify-content: space-between;

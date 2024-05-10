@@ -1,34 +1,34 @@
-import { Button } from '../../actions/button/Button';
-import { Select } from '../../inputs/select/Select';
-import texts from '../../../styles/texts.module.scss';
-import './popin.scss';
+import { Button } from '../../actions/button/Button'
+import { Select } from '../../inputs/select/Select'
+import texts from '../../../styles/texts.module.scss'
+import './popin.scss'
 
 export interface Props {
-  title: string;
+  title: string
   actions: {
     primary?: {
-      label: string;
-      state?: 'DEFAULT' | 'DISABLED' | 'LOADING';
-      action: React.MouseEventHandler & React.KeyboardEventHandler;
-    };
+      label: string
+      state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+      action: React.MouseEventHandler & React.KeyboardEventHandler
+    }
     secondary?: {
-      label: string;
-      state?: 'DEFAULT' | 'DISABLED' | 'LOADING';
-      action: React.MouseEventHandler & React.KeyboardEventHandler;
-    };
-  };
+      label: string
+      state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+      action: React.MouseEventHandler & React.KeyboardEventHandler
+    }
+  }
   select?: {
-    label: string;
-    state: boolean;
-    action: React.MouseEventHandler & React.KeyboardEventHandler;
-  };
-  indicator?: string;
-  children?: React.ReactNode;
-  onClose: React.MouseEventHandler & React.KeyboardEventHandler;
+    label: string
+    state: boolean
+    action: React.MouseEventHandler & React.KeyboardEventHandler
+  }
+  indicator?: string
+  children?: React.ReactNode
+  onClose: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export const PopIn = (props: Props) => {
-  const { title, actions, select, indicator, children, onClose } = props;
+  const { title, actions, select, indicator, children, onClose } = props
 
   return (
     <div className="popin">
@@ -84,5 +84,5 @@ export const PopIn = (props: Props) => {
         </div>
       ) : null}
     </div>
-  );
-};
+  )
+}

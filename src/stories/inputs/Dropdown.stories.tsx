@@ -93,9 +93,7 @@ export const Button: Story = {
             action: onChange,
           },
         ]}
-        selected={
-          argsState.selected
-        }
+        selected={argsState.selected}
       />
     )
   },

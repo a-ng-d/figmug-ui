@@ -27,7 +27,7 @@ export const ExpandCollapseInput: Story = {
     isNew: false,
     children: <Input {...InputStory.ShortText.args} />,
     onAdd: mock,
-    onEmpty: mock
+    onEmpty: mock,
   },
   argTypes: {
     ...TitleStory.TitleWithHelper.argTypes,

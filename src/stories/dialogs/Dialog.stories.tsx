@@ -6,21 +6,21 @@ import texts from '../../styles/texts.module.scss'
 const onBoarding = () => {
   return (
     <>
-      <div
-        className="dialog__cover"
-      >
+      <div className="dialog__cover">
         <img
           className="dialog__cover"
           src="https://images.unsplash.com/photo-1543332164-6e82f355badc?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Hello"
           style={{
-            width: '100%'
+            width: '100%',
           }}
         />
       </div>
       <div className="dialog__text">
         <p className={`type ${texts.type}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus nullam eget felis eget nunc lobortis mattis.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus
+          nullam eget felis eget nunc lobortis mattis.
         </p>
       </div>
     </>
@@ -54,11 +54,11 @@ export const ExternalImage: Story = {
     indicator: '3 of 3',
     children: onBoarding(),
     isForward: false,
-    onClose: fn
+    onClose: fn,
   },
   argTypes: {
     select: { control: false },
     isForward: { controls: false },
     onClose: { control: false },
-  }
+  },
 }

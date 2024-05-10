@@ -16,7 +16,8 @@ export const TitleWithHelper: Story = {
   args: {
     label: 'Section title',
     indicator: 7,
-    helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    helper:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   argTypes: {
     indicator: { control: 'number' },
