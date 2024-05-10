@@ -22,7 +22,7 @@ export const Button: Story = {
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
-      value: string
+      selected: string
     }>()
 
     const onChange = (
@@ -31,11 +31,9 @@ export const Button: Story = {
         | React.KeyboardEvent<HTMLLIElement>
     ) => {
       updateArgs({
-        value: (e.target as HTMLInputElement).dataset.value,
+        selected: (e.target as HTMLInputElement).dataset.value,
       })
     }
-
-    console.log(argsState.value)
 
     return (
       <Dropdown
@@ -91,7 +89,7 @@ export const Button: Story = {
           },
         ]}
         selected={
-          argsState.value === undefined ? args.selected : argsState.value
+          argsState.selected
         }
       />
     )
