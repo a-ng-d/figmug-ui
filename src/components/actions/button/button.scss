@@ -12,7 +12,7 @@
 }
 
 .button__caret {
-  background: var(--figma-color-icon-onbrand) !important;
+  background: var(--figma-color-icon-onbrand);
   width: 12px;
   height: 30px;
 }
@@ -86,6 +86,10 @@
       background-color: var(--figma-color-icon-disabled) !important;
     }
   }
+
+  & .button__caret {
+    background: var(--figma-color-icon) !important;
+  }
 }
 
 .button--tertiary {
@@ -153,8 +157,8 @@
     background-color: var(--figma-color-bg-brand);
   }
 
-  &--selected .icon {
-    background-color: var(--figma-color-icon-onbrand);
+  &--selected .icon-box {
+    background-color: var(--figma-color-icon-onbrand) !important;
   }
 
   &--selected:hover {
