@@ -1,7 +1,7 @@
 import React from 'react'
 import type { IconList } from 'src/types/icon.types'
 import { Chip } from '../../tags/chip/Chip'
-import { Icon } from '../../icon/Icon'
+import { Icon } from '../../assets/icon/Icon'
 import './input.scss'
 
 export interface InputProps {

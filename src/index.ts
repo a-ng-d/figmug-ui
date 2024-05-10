@@ -3,7 +3,7 @@ import icons from './styles/icons.module.scss'
 
 export { Button } from './components/actions/button/Button'
 export { Tabs } from './components/actions/tabs/Tabs'
-export { Icon } from './components/icon/Icon'
+export { Icon } from './components/assets/icon/Icon'
 export { Select } from './components/inputs/select/Select'
 export { Input } from './components/inputs/input/Input'
 export { Dropdown } from './components/inputs/dropdown/Dropdown'

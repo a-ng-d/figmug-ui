@@ -1,7 +1,7 @@
 import React from 'react'
 import type { IconList } from '../../../types/icon.types'
 import { Chip } from '../../../components/tags/chip/Chip'
-import { Icon } from '../../../components/icon/Icon'
+import { Icon } from '../../assets/icon/Icon'
 import texts from '../../../styles/texts.module.scss'
 import './button.scss'
 
