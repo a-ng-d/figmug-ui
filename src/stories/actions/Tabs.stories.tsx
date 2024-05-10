@@ -41,6 +41,13 @@ export const ThreeTabs: Story = {
     active: 'SECTION_1',
     action: fn(),
   },
+  argTypes: {
+    active: { control: 'select', options: [
+      'SECTION_1',
+      'SECTION_2',
+      'SECTION_3'
+    ]}
+  },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       active: string
@@ -74,7 +81,7 @@ export const FiveTabs: Story = {
       {
         label: 'Section 2',
         id: 'SECTION_2',
-        isUpdated: false,
+        isUpdated: true,
       },
       {
         label: 'Section 3',
@@ -93,7 +100,16 @@ export const FiveTabs: Story = {
       },
     ],
     active: 'SECTION_1',
-    action: () => {},
+    action: fn(),
+  },
+  argTypes: {
+    active: { control: 'select', options: [
+      'SECTION_1',
+      'SECTION_2',
+      'SECTION_3',
+      'SECTION_4',
+      'SECTION_5',
+    ]}
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{

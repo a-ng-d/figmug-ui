@@ -19,6 +19,11 @@ export const Button: Story = {
     id: 'dropdown-button',
     options: { ...ListStories.FourOptionsList.args.options },
     selected: 'OPTION_1',
+    alignment: 'LEFT',
+    isNew: false,
+  },
+  argTypes: {
+    parentClassName: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
