@@ -85,6 +85,7 @@ export class Button extends React.Component<ButtonProps> {
                   ? 'var(--figma-color-icon-onbrand)'
                   : 'var(--figma-color-icon)'
               }
+              customClassName="button__spinner"
             />
           </div>
         ) : null}
@@ -97,6 +98,7 @@ export class Button extends React.Component<ButtonProps> {
                 ? 'var(--figma-color-icon-onbrand)'
                 : 'var(--figma-color-icon)'
             }
+            customClassName="button__caret"
           />
         ) : null}
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
@@ -153,18 +155,20 @@ export class Button extends React.Component<ButtonProps> {
           iconColor={
             isDisabled ? 'var(--figma-color-icon-disabled)' : undefined
           }
+          customClassName="button__spinner"
         />
       </button>
     )
   }
 
   Compact = () => {
-    const { icon, label, action } = this.props
+    const { icon, label, isDisabled, isBlocked, isNew, action } = this.props
 
     return (
       <button
         role="compact-button"
         className="compact-button"
+        disabled={isDisabled || isBlocked}
         onKeyDown={(e) => {
           if (e.key === ' ' || e.key === 'Enter') action?.(e)
           if (e.key === 'Escape') (e.target as HTMLElement).blur()
@@ -178,6 +182,7 @@ export class Button extends React.Component<ButtonProps> {
           iconColor="var(--figma-color-icon-oncomponent)"
         />
         <div className={`type ${texts.type}`}>{label}</div>
+        {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
       </button>
     )
   }

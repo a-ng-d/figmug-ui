@@ -5,6 +5,10 @@
   position: relative;
   cursor: default;
   user-select: none;
+
+  &:disabled {
+    pointer-events: none;
+  }
 }
 
 .button__caret {
@@ -51,7 +55,10 @@
   &:disabled {
     --black3: var(--figma-color-bg-disabled);
     --white: var(--figma-color-text-ondisabled);
-    pointer-events: none;
+
+    & .button__caret {
+      background-color: var(--figma-color-text-ondisabled) !important;
+    }
   }
 }
 
@@ -73,23 +80,35 @@
   }
 
   &:disabled {
-    pointer-events: none;
+    --black3: var(--figma-color-text-disabled);
+
+    & .button__caret {
+      background-color: var(--figma-color-icon-disabled) !important;
+    }
   }
 }
 
+.button--tertiary {
+  &, & a {
+    color: var(--figma-color-text-brand);
+    text-decoration: none;
+  }
+
+
+}
 .button--tertiary,
 .button--tertiary a {
   color: var(--figma-color-text-brand);
   text-decoration: none;
-}
 
-.button--tertiary a:focus-visible {
-  outline: none;
-  text-decoration: underline;
-}
-
-.button--tertiary:disabled {
-  pointer-events: none;
+  & a:focus-visible {
+    outline: none;
+    text-decoration: underline;
+  }
+  
+  &:disabled {
+    --black3: var(--figma-color-text-disabled);
+  }
 }
 
 .icon-button {
@@ -151,6 +170,8 @@
   background-color: var(--figma-color-bg-component);
   border: 2px solid var(--figma-color-bg-component);
   padding: 0 var(--size-xxsmall) 0 0;
+  cursor: default;
+  user-select: none;
 
   &:hover {
     background-color: var(--figma-color-bg-component-hover);
@@ -169,12 +190,26 @@
     outline: none;
   }
 
+  &:disabled {
+    background-color: var(--figma-color-bg-disabled);
+    border: 2px solid var(--figma-color-bg-disabled);
+    pointer-events: none;
+
+    & .type {
+      color: var(--figma-color-text-ondisabled);
+    }
+
+    & .icon-box {
+      background-color: var(--figma-color-icon-ondisabled) !important;
+    }
+  }
+
   & .type {
     color: var(--figma-color-text-oncomponent);
     white-space: nowrap;
   }
 
-  & .icon {
-    background: var(--figma-color-icon-oncomponent);
+  & .icon-box {
+    background-color: var(--figma-color-icon-oncomponent);
   }
 }
