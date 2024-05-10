@@ -3,7 +3,7 @@ import { Select } from '../../inputs/select/Select'
 import texts from '../../../styles/texts.module.scss'
 import './popin.scss'
 
-export interface Props {
+export interface PopInProps {
   title: string
   actions: {
     primary?: {
@@ -27,7 +27,7 @@ export interface Props {
   onClose: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
-export const PopIn = (props: Props) => {
+export const PopIn = (props: PopInProps) => {
   const { title, actions, select, indicator, children, onClose } = props
 
   return (
