@@ -1,0 +1,18 @@
+.thumbnail {
+  background: var(--figma-color-bg-secondary, #f5f5f5);
+  border: 1px solid var(--figma-color-border-disabled, #e6e6e6);
+  border-radius: var(--border-radius-med);
+  height: 100%;
+  display: flex;
+
+  &__image {
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  &__error,
+  &__loading {
+    margin: auto;
+  }
+}
