@@ -1,0 +1,35 @@
+.menu {
+  position: relative;
+
+  &--top-right > .floating-menu {
+    right: 0;
+    left: unset;
+    top: calc(var(--size-xxsmall) * -1);
+    transform: translateY(-100%);
+  }
+  
+  &--top-left > .floating-menu {
+    left: 0;
+    top: calc(var(--size-xxsmall) * -1);
+    transform: translateY(-100%);
+  }
+  
+  &--bottom-right > .floating-menu {
+    right: 0;
+    left: unset;
+    top: calc(var(--size-medium) + var(--size-xxsmall));
+  }
+  
+  &--bottom-left > .floating-menu {
+    left: 0;
+    top: calc(var(--size-medium) + var(--size-xxsmall));
+  }
+}
+
+.floating-menu .select-menu__menu {
+  position: relative;
+}
+
+.floating-menu .select-menu__submenu {
+  position: absolute;
+}
