@@ -1,0 +1,77 @@
+.accordion {
+  padding: var(--size-xxsmall) 0;
+  border-bottom: 1px solid var(--figma-color-border-disabled, #e6e6e6);
+  cursor: default;
+  user-select: none;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--size-xsmall);
+    height: var(--size-medium);
+  }
+  
+  &__row__left-part {
+    display: flex;
+    align-items: baseline;
+    flex: 1;
+  }
+  &__row__right-part {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__row .section-title,
+  &__row .label {
+    width: auto;
+  }
+  
+  &__row .section-title {
+    display: flex;
+    gap: var(--size-xxxsmall);
+  }
+  
+  & &__row .section-title__title,
+  & &__row .section-title__indicator {
+    color: var(--figma-color-text-secondary, rgba(0, 0, 0, 0.5));
+  }
+  
+  & &__row .tooltip__icon {
+    background: var(--figma-color-text-secondary, rgba(0, 0, 0, 0.5));
+  }
+  
+  &:hover &__row .section-title__title,
+  &:hover &__row .section-title__indicator,
+  &--expanded &__row .section-title__title,
+  &--expanded &__row .section-title__indicator {
+    color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+  }
+  
+  & &__row .icon {
+    background: var(--figma-color-icon-secondary, rgba(0, 0, 0, 0.5));
+  }
+  
+  &:hover &__row .icon,
+  &--expanded &__row .icon,
+  &:hover &__row .tooltip__icon,
+  &--expanded &__row .tooltip__icon {
+    background: var(--figma-color-icon, rgba(0, 0, 0, 0.9));
+  }
+  
+  &--blocked &__row .section-title__title,
+  &--blocked &__row .section-title__indicator,
+  &--blocked:hover &__row .section-title__title,
+  &--blocked:hover &__row .section-title__indicator {
+    color: var(--figma-color-text-disabled, rgba(0, 0, 0, 0.3));
+  }
+  
+  &--blocked &__row .tooltip__icon {
+    color: var(--figma-color-icon, rgba(0, 0, 0, 0.9));
+  }
+  
+  &--blocked &__row .icon,
+  &--blocked:hover &__row .icon {
+    background: var(--figma-color-icon-disabled, rgba(0, 0, 0, 0.3));
+  }
+}
