@@ -19,3 +19,8 @@ export { PopIn } from './components/slots/popin/Popin'
 export { Chip } from './components/tags/chip/Chip'
 export { texts }
 export { icons }
+export { doMap } from './modules/do-map/do-map'
+export { doCamelCase } from './modules/do-camel-case/do-camel-case'
+export { doKebabCase } from './modules/do-kebab-case/do-kebab-case'
+export { doPascalCase } from './modules/do-pascal-case/do-pascal-case'
+export { doSnakeCase } from './modules/do-snake-case/do-snake-case'
