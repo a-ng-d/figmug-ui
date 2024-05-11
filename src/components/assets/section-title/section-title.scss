@@ -14,7 +14,7 @@
     width: var(--size-medium);
     height: var(--size-medium);
   }
-  
+
   .tooltip__block {
     min-width: 168px;
     background-color: var(--hud);
@@ -32,7 +32,7 @@
     text-align: center;
     user-select: none;
     display: none;
-  
+
     &:after {
       content: '';
       width: 0;

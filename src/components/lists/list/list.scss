@@ -17,7 +17,7 @@
   }
 
   .select-menu__item-label {
-    flex: 1
+    flex: 1;
   }
 
   .select-menu__item-carret {
@@ -54,7 +54,7 @@
   }
 
   .select-menu__submenu {
-   position: absolute;
+    position: absolute;
   }
 
   &.select-menu__menu--left .select-menu__submenu {

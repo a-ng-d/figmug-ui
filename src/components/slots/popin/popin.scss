@@ -56,17 +56,17 @@
     .popin__footer {
       flex-direction: column;
     }
-  
+
     .popin__actions,
     .popin__footer {
       flex-direction: column-reverse;
     }
-  
+
     .popin__footer {
       height: auto;
       padding: var(--size-xsmall) var(--size-xsmall) 0 var(--size-xsmall);
     }
-  
+
     .popin__actions {
       width: 100%;
     }

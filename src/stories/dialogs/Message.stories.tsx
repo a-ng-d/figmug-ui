@@ -16,9 +16,9 @@ export const SimpleMessage: Story = {
   args: {
     icon: 'info',
     messages: [
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     ],
-    isBlocked: false
+    isBlocked: false,
   },
 }
 
@@ -28,11 +28,11 @@ export const MessageTicker: Story = {
     messages: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     ],
-    isBlocked: false
+    isBlocked: false,
   },
   argTypes: {
-    isBlocked: { control: false }
+    isBlocked: { control: false },
   },
 }

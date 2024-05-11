@@ -165,7 +165,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             type="PICTO"
             iconName="caret"
             iconColor="var(--figma-color-icon-disabled)"
-            customClassName='select-menu__caret'
+            customClassName="select-menu__caret"
           />
         </button>
         {isNew ? <Chip>New</Chip> : null}

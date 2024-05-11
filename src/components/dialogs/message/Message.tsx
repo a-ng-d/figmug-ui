@@ -32,11 +32,12 @@ export class Message extends React.Component<MessageProps> {
         <Icon
           type="PICTO"
           iconName={icon}
-          iconColor={isBlocked
-            ? 'var(--figma-color-icon-disabled)'
-            : 'var(--figma-color-icon)'
+          iconColor={
+            isBlocked
+              ? 'var(--figma-color-icon-disabled)'
+              : 'var(--figma-color-icon)'
           }
-          customClassName='icon'
+          customClassName="icon"
         />
         <div className="onboarding-tip__msg">{messages[0]}</div>
       </div>

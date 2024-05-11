@@ -113,7 +113,9 @@ export class Button extends React.Component<ButtonProps> {
     return (
       <button
         role="link-button"
-        className={['button', 'recharged',`button--${type}`].filter((n) => n).join(' ')}
+        className={['button', 'recharged', `button--${type}`]
+          .filter((n) => n)
+          .join(' ')}
         data-feature={feature}
         ref={this.buttonRef}
       >
