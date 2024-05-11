@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import { useArgs } from '@storybook/preview-api'
-import { Tabs } from '../../components/actions/tabs/Tabs'
+import { Tabs } from '../../components/lists/tabs/Tabs'
 
 const meta = {
-  title: 'Example/Actions/Tabs',
+  title: 'Example/Lists/Tabs',
   component: Tabs,
   parameters: {
     layout: 'centered',
