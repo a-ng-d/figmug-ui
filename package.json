@@ -11,7 +11,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "test": "vitest --ui",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --check .",
@@ -19,7 +20,10 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_c48bb3c3237a2d6"
+    "chromatic": "npx chromatic --project-token=chpt_c48bb3c3237a2d6",
+    "publish:patch": "npm run test && npm run build && npm version patch && npm publish",
+    "publish:minor": "npm run test && npm run build && npm publish",
+    "publish:major": "npm run test && npm run build && npm publish"
   },
   "dependencies": {
     "@storybook/client-api": "^7.6.17",
