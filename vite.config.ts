@@ -15,6 +15,7 @@ export default defineConfig({
         './src/stories',
         './src/test',
         './src/components/**/*.test.tsx',
+        './src/modules/**/*.test.ts',
       ],
     }),
   ],
@@ -27,7 +28,7 @@ export default defineConfig({
       external: ['react', 'react-dom', 'react/jsx-runtime'],
       input: Object.fromEntries(
         globSync(['./src/components/**/*.tsx', './src/index.ts'])
-          .filter((file) => !/\.test\.tsx$/.test(file))
+          .filter((file) => !/\.test\.tsx|ts$/.test(file))
           .map((file) => {
             const entryName = path.relative(
               'src',
