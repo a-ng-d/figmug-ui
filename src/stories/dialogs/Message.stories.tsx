@@ -32,4 +32,7 @@ export const MessageTicker: Story = {
     ],
     isBlocked: false
   },
+  argTypes: {
+    isBlocked: { control: false }
+  },
 }

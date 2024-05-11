@@ -38,7 +38,7 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const ExternalImage: Story = {
+export const OnBoardingWindow: Story = {
   args: {
     title: 'Welcome to the next version',
     actions: {
