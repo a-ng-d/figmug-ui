@@ -21,14 +21,19 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, './src/main.ts'),
+      entry: resolve(__dirname, './src/index.ts'),
       formats: ['es'],
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
       input: Object.fromEntries(
-        globSync(['./src/components/**/*.tsx', './src/index.ts'])
-          .filter((file) => !/\.test\.tsx|ts$/.test(file))
+        globSync([
+          './src/index.ts',
+          './src/components/**/*.tsx',
+          './src/modules/**/*.ts',
+          './src/styles/*.scss',
+        ])
+          .filter((file) => !/\.test\.tsx|\.test\.ts$/.test(file))
           .map((file) => {
             const entryName = path.relative(
               'src',
@@ -55,7 +60,7 @@ export default defineConfig({
     setupFiles: './src/test/setup.ts',
     css: true,
     coverage: {
-      include: ['./src/components'],
+      include: ['./src/components', './src/modules'],
       exclude: ['./src/stories'],
     },
   },
