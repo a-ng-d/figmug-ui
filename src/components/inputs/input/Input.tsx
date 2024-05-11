@@ -59,6 +59,8 @@ export class Input extends React.Component<InputProps, InputStates> {
         inputValue: this.props.value,
       })
     }
+    if (prevProps.type === 'CODE' && this.textareaRef.current !== null)
+      this.textareaRef.current.scrollTop = 0
   }
 
   // Handlers
