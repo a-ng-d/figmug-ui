@@ -33,7 +33,7 @@ export default defineConfig({
           './src/modules/**/*.ts',
           './src/styles/*.scss',
         ])
-          .filter((file) => !/\.test\.tsx|\.test\.ts$/.test(file))
+          .filter((file) => !/\.test\.tsx|\.test\.ts|colors.module.scss$/.test(file))
           .map((file) => {
             const entryName = path.relative(
               'src',
