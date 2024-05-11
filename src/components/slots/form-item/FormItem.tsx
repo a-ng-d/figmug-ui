@@ -1,5 +1,5 @@
 import { Chip } from '../../tags/chip/Chip'
-import { Message } from '../../dialogs/messages/Message'
+import { Message } from '../../dialogs/message/Message'
 import texts from '../../../styles/texts.module.scss'
 import './form-item.scss'
 
