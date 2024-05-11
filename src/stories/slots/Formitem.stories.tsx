@@ -24,13 +24,12 @@ export const TextInputItem: Story = {
     shouldFill: false,
     isBlocked: false,
     isNew: false,
-    children:
+    children: (
       <Input
         type="TEXT"
         value="Jean-Michel Avous"
       />
+    ),
   },
-  argTypes: {
-   
-  },
+  argTypes: {},
 }

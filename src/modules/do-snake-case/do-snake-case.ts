@@ -3,4 +3,4 @@ export const doSnakeCase = (string: string) =>
     .toLowerCase()
     .split(' ')
     .join('_')
-    .replace(/[@/$^%#&!?,;:+=<>(){}"«»]/g, '');
+    .replace(/[@/$^%#&!?,;:+=<>(){}"«»]/g, '')

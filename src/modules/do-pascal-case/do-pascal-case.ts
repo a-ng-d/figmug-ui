@@ -4,4 +4,4 @@ export const doPascalCase = (string: string) =>
     .toLowerCase()
     .replace(/[^a-zA-Z0-9]+(.)/g, (chr) => chr.toUpperCase())
     .replace(/[@/$^%#&!?,;:+=<>(){}"«» ]/g, '')
-    .slice(1);
+    .slice(1)

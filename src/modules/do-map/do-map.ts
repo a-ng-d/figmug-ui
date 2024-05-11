@@ -5,8 +5,8 @@ export const doMap = (
   newMin: number,
   newMax: number
 ): number => {
-  const oldRange = oldMax - oldMin;
-  const newRange = newMax - newMin;
+  const oldRange = oldMax - oldMin
+  const newRange = newMax - newMin
 
-  return ((value - oldMin) * newRange) / oldRange + newMin;
-};
+  return ((value - oldMin) * newRange) / oldRange + newMin
+}

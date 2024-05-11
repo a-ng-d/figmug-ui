@@ -17,7 +17,15 @@ export interface FormItemProps {
 }
 
 export const FormItem = (props: FormItemProps) => {
-  const { id, label, helper, shouldFill = true, isBlocked = false, isNew = false, children } = props
+  const {
+    id,
+    label,
+    helper,
+    shouldFill = true,
+    isBlocked = false,
+    isNew = false,
+    children,
+  } = props
 
   return (
     <>

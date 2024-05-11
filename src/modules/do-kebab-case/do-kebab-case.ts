@@ -3,4 +3,4 @@ export const doKebabCase = (string: string) =>
     .toLowerCase()
     .split(' ')
     .join('-')
-    .replace(/[@/$^%#&!?,;:+=<>(){}"«»]/g, '');
+    .replace(/[@/$^%#&!?,;:+=<>(){}"«»]/g, '')
