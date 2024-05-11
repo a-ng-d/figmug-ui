@@ -1,4 +1,3 @@
-import React from 'react'
 import texts from '../../../styles/texts.module.scss'
 import './tabs.scss'
 
@@ -16,10 +15,10 @@ export const Tabs = (props: TabsProps) => {
   const { tabs, active, action } = props
 
   return (
-    <div className="tabs">
+    <div className="tabs recharged">
       {tabs.map((tab) => (
         <div
-          role="menuitem"
+          role="navigation"
           key={tab.label.toLowerCase()}
           className={[
             'tabs__tab',

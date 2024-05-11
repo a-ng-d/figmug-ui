@@ -10,7 +10,7 @@ export const Chip = (props: ChipProps) => {
   const { children } = props
 
   return (
-    <div className="chip">
+    <div className="chip recharged">
       <div className={['chip__text', texts.type].filter((n) => n).join(' ')}>
         {children}
       </div>

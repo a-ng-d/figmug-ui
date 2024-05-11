@@ -23,6 +23,7 @@ export class Message extends React.Component<MessageProps> {
       <div
         className={[
           'onboarding-tip',
+          'recharged',
           isBlocked ? 'onboarding-tip--blocked' : null,
         ]
           .filter((n) => n)
@@ -48,10 +49,11 @@ export class Message extends React.Component<MessageProps> {
     return (
       <div className="callout">
         <div>
-          <div className="onboarding-tip">
+          <div className="onboarding-tip recharged">
             <Icon
               type="PICTO"
               iconName={icon}
+              customClassName="icon"
             />
             <div className="onboarding-tip__ticker">
               <div

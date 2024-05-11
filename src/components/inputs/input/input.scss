@@ -116,7 +116,7 @@ input {
   }
 
   &::placeholder {
-    color: var(--figma-color-text-secondary);
+    color: var(--figma-color-text-secondary) !important;
   }
 
   &:disabled {
@@ -126,7 +126,7 @@ input {
   }
 
   &:disabled::placeholder {
-    color: var(--figma-color-text-tertiary);
+    color: var(--figma-color-text-tertiary) !important;
   }
 
   &:disabled:placeholder-shown {

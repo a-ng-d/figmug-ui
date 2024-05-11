@@ -34,6 +34,7 @@ export const Accordion = (props: AccordionProps) => {
       role="row"
       className={[
         'accordion',
+        'recharged',
         isExpanded ? 'accordion--expanded' : null,
         isBlocked ? 'accordion--blocked' : null,
       ]

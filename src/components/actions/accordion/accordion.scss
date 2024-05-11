@@ -1,10 +1,10 @@
-.accordion {
+.accordion.recharged {
   padding: var(--size-xxsmall) 0;
   border-bottom: 1px solid var(--figma-color-border-disabled);
   cursor: default;
   user-select: none;
 
-  &__row {
+  .accordion__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,66 +12,62 @@
     height: var(--size-medium);
   }
 
-  &__row__left-part {
+  .accordion__row__left-part {
     display: flex;
     align-items: baseline;
     flex: 1;
   }
-  &__row__right-part {
+  .accordion__row__right-part {
     display: flex;
     align-items: center;
   }
 
-  &__row .section-title,
-  &__row .label {
+  .accordion__row .section-title,
+  .accordion__row .label {
     width: auto;
   }
 
-  &__row .section-title {
+  .accordion__row .section-title {
     display: flex;
     gap: var(--size-xxxsmall);
   }
 
-  &__row .section-title__title,
-  &__row .section-title__indicator {
+  .accordion__row .section-title__title,
+  .accordion__row .section-title__indicator {
     color: var(--figma-color-text-secondary);
   }
 
-  &__row .tooltip__icon {
-    background: var(--figma-color-text-secondary);
+  .accordion__row .tooltip__icon {
+    background: var(--figma-color-text-secondary) !important;
   }
 
-  &:hover &__row .section-title__title,
-  &:hover &__row .section-title__indicator,
-  &--expanded &__row .section-title__title,
-  &--expanded &__row .section-title__indicator {
+  &:hover .accordion__row .section-title__title,
+  &:hover .accordion__row .section-title__indicator,
+  &.accordion--expanded .accordion__row .section-title__title,
+  &.accordion--expanded .accordion__row .section-title__indicator {
     color: var(--figma-color-text);
   }
 
-  &__row .icon {
-    background: var(--figma-color-icon-secondary);
+  &:hover .accordion__row .icon,
+  &:hover .accordion__row .tooltip__icon,
+  &.accordion--expanded .accordion__row .icon,
+  &.accordion--expanded .accordion__row .tooltip__icon {
+    background: var(--figma-color-icon) !important;
   }
 
-  &:hover &__row .icon,
-  &--expanded &__row .icon,
-  &:hover &__row .tooltip__icon,
-  &--expanded &__row .tooltip__icon {
-    background: var(--figma-color-icon);
-  }
-
-  &--blocked &__row .section-title__title,
-  &--blocked &__row .section-title__indicator,
-  &--blocked:hover &__row .section-title__title,
-  &--blocked:hover &__row .section-title__indicator {
+  &.accordion--blocked .accordion__row .section-title__title,
+  &.accordion--blocked .accordion__row .section-title__indicator,
+  &.accordion--blocked:hover .accordion__row .section-title__title,
+  &.accordion--blocked:hover .accordion__row .section-title__indicator {
     color: var(--figma-color-text-disabled);
   }
 
-  &--blocked &__row .tooltip__icon {
+  &.accordion--blocked .accordion__row .tooltip__icon {
     color: var(--figma-color-icon);
   }
 
-  &--blocked &__row .icon,
-  &--blocked:hover &__row .icon {
+  &.accordion--blocked .accordion__row .icon,
+  &.accordion--blocked:hover .accordion__row .icon {
     background: var(--figma-color-icon-disabled);
   }
 }

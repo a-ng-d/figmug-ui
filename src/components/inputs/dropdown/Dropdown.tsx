@@ -130,6 +130,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
         id={id}
         className={[
           'select-menu',
+          'recharged',
           (() => {
             if (alignment === 'LEFT') return 'select-menu--left'
             if (alignment === 'RIGHT') return 'select-menu--right'
@@ -164,6 +165,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             type="PICTO"
             iconName="caret"
             iconColor="var(--figma-color-icon-disabled)"
+            customClassName='select-menu__caret'
           />
         </button>
         {isNew ? <Chip>New</Chip> : null}

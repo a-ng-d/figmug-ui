@@ -31,7 +31,7 @@ export class List extends React.Component<ListProps, ListStates> {
   SubMenu = (options: Array<DropdownOption> | undefined) => {
     return (
       <div className="select-menu__submenu">
-        <ul className="select-menu__menu  select-menu__menu--active">
+        <ul className="select-menu__menu recharged select-menu__menu--active">
           {options?.map((option, index) => {
             if (option.children !== undefined) {
               if (option.isActive && option.children.length > 0)
@@ -191,6 +191,7 @@ export class List extends React.Component<ListProps, ListStates> {
       <ul
         className={[
           'select-menu__menu',
+          'recharged',
           'select-menu__menu--active',
           direction === 'RIGHT'
             ? 'select-menu__menu--right'

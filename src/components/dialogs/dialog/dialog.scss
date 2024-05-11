@@ -1,4 +1,4 @@
-.dialog {
+.dialog.recharged {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@
   cursor: default;
   user-select: none;
 
-  &__cover {
+  & .dialog__cover {
     flex: 1 0 264px;
     overflow: hidden;
     display: flex;
@@ -20,7 +20,7 @@
     align-items: center;
   }
 
-  &__text {
+  & .dialog__text {
     padding: var(--size-xsmall);
     margin: 0;
     display: flex;
@@ -32,14 +32,14 @@
     }
   }
 
-  &__cover--padding {
+  & .dialog__cover--padding {
     padding: var(--size-xsmall);
   }
 }
 
 @media (max-width: 460px) {
-  .dialog {
-    &__cover {
+  .dialog.recharged {
+    & .dialog__cover {
       width: 100%;
       flex: auto;
     }

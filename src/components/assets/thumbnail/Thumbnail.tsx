@@ -40,7 +40,7 @@ export const Thumbnail = (props: Props) => {
 
   return (
     <div
-      className="thumbnail"
+      className="thumbnail recharged"
       style={{
         width: w,
         height: h,

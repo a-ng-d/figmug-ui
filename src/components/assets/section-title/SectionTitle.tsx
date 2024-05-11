@@ -12,7 +12,7 @@ export const SectionTitle = (props: SectionTitleProps) => {
   const { label, indicator, helper } = props
 
   return (
-    <div className="section-title">
+    <div className="section-title recharged">
       <div className={`section-title__title ${texts['section-title']}`}>
         {label}
       </div>
@@ -26,6 +26,7 @@ export const SectionTitle = (props: SectionTitleProps) => {
           <Icon
             type="PICTO"
             iconName="info"
+            customClassName="tooltip__icon"
           />
           <div className={`tooltip__block type ${texts.type}`}>{helper}</div>
         </div>

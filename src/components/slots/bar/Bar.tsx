@@ -37,6 +37,7 @@ export class Bar extends React.Component<BarProps> {
       <div
         className={[
           'bar',
+          'recharged',
           isCompact ? 'bar--compact' : null,
           isOnlyText ? 'bar--text-only' : null,
         ]

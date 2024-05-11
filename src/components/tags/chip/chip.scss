@@ -1,4 +1,4 @@
-.chip {
+.chip.recharged {
   height: var(--size-xsmall);
   margin: 0 0 0 var(--size-xxsmall);
   padding: 0 5px;
@@ -7,7 +7,7 @@
   cursor: default;
   user-select: none;
 
-  &__text {
+  .chip__text {
     font-size: var(--font-size-xsmall);
     letter-spacing: var(--font-letter-spacing-neg-xsmall);
     line-height: var(--font-line-height);

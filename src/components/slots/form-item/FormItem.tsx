@@ -32,6 +32,7 @@ export const FormItem = (props: FormItemProps) => {
       <div
         className={[
           'form-item',
+          'recharged',
           shouldFill ? 'form-item--fill' : null,
           isBlocked ? 'form-item--blocked' : null,
         ]

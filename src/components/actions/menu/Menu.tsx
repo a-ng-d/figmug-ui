@@ -67,6 +67,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
         id={id}
         className={[
           'menu',
+          'recharged',
           `menu--${alignment?.toLocaleLowerCase().replace('_', '-')}`,
         ]
           .filter((n) => n)

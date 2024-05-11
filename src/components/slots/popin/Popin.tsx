@@ -31,7 +31,7 @@ export const PopIn = (props: PopInProps) => {
   const { title, actions, select, indicator, children, onClose } = props
 
   return (
-    <div className="popin">
+    <div className="popin recharged">
       <div className="popin__header">
         <p className={`${texts.type} type type--large type--bold`}>{title}</p>
         <Button

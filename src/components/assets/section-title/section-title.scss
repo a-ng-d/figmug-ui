@@ -1,51 +1,51 @@
-.section-title {
+.section-title.recharged {
   display: flex;
   gap: var(--size-xxxsmall);
 
-  &__tooltip {
+  .section-title__tooltip {
     position: relative;
   }
 
-  &__tooltip:hover .tooltip__block {
+  .section-title__tooltip:hover .tooltip__block {
     display: block;
   }
-}
 
-.tooltip__icon {
-  width: var(--size-medium);
-  height: var(--size-medium);
-}
-
-.tooltip__block {
-  min-width: 168px;
-  background-color: var(--hud);
-  color: var(--white);
-  box-shadow: var(--shadow-hud);
-  padding: var(--size-xxsmall);
-  border-radius: var(--border-radius-small);
-  outline: 1px solid rgba(255, 255, 255, 0.1);
-  outline-offset: -1px;
-  position: absolute;
-  transform: translateX(-50%) translateY(100%);
-  left: 50%;
-  bottom: 0;
-  z-index: 99;
-  text-align: center;
-  user-select: none;
-  display: none;
-
-  &:after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: var(--size-xxsmall);
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: var(--hud);
-    border-left-color: transparent;
+  .tooltip__icon {
+    width: var(--size-medium);
+    height: var(--size-medium);
+  }
+  
+  .tooltip__block {
+    min-width: 168px;
+    background-color: var(--hud);
+    color: var(--white);
+    box-shadow: var(--shadow-hud);
+    padding: var(--size-xxsmall);
+    border-radius: var(--border-radius-small);
+    outline: 1px solid rgba(255, 255, 255, 0.1);
+    outline-offset: -1px;
     position: absolute;
-    top: -14px;
-    left: calc(50% - var(--size-xxsmall));
+    transform: translateX(-50%) translateY(100%);
+    left: 50%;
+    bottom: 0;
+    z-index: 99;
+    text-align: center;
+    user-select: none;
+    display: none;
+  
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: var(--size-xxsmall);
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: var(--hud);
+      border-left-color: transparent;
+      position: absolute;
+      top: -14px;
+      left: calc(50% - var(--size-xxsmall));
+    }
   }
 }

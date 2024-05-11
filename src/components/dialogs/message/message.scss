@@ -1,31 +1,31 @@
-.onboarding-tip {
+.onboarding-tip.recharged {
   padding: 0 calc(var(--size-xsmall) + var(--size-xxxsmall));
   cursor: default;
   user-select: none;
 
-  &__msg {
+  &.onboarding-tip--blocked .onboarding-tip__msg {
+    color: var(--figma-color-text-disabled);
+  }
+
+  &.onboarding-tip--blocked .icon {
+    background: var(--figma-color-icon-disabled);
+  }
+
+  .onboarding-tip__msg {
     line-height: var(--font-line-height);
     color: var(--figma-color-text);
   }
 
-  &--blocked &__msg {
-    color: var(--figma-color-text-disabled);
-  }
-
-  &--blocked .icon {
-    background: var(--figma-color-icon-disabled);
-  }
-
   /* Tips ticker */
-  &__ticker {
+  .onboarding-tip__ticker {
     flex: 1;
     display: flex;
     position: relative;
     overflow: hidden;
   }
 
-  &__ticker:before,
-  &__ticker:after {
+  .onboarding-tip__ticker:before,
+  .onboarding-tip__ticker:after {
     content: '';
     position: absolute;
     width: var(--size-xsmall);
@@ -33,7 +33,7 @@
     z-index: 2;
   }
 
-  &__ticker:before {
+  .onboarding-tip__ticker:before {
     left: 0;
     background: linear-gradient(
       90deg,
@@ -42,7 +42,7 @@
     );
   }
 
-  &__ticker:after {
+  .onboarding-tip__ticker:after {
     right: 0;
     background: linear-gradient(
       90deg,
@@ -51,7 +51,7 @@
     );
   }
 
-  &__tips {
+  .onboarding-tip__tips {
     display: inline-flex;
     align-items: center;
     gap: 0 var(--size-medium);
@@ -60,7 +60,7 @@
     width: max-content;
   }
 
-  &__ticker:hover &__tips {
+  .onboarding-tip__ticker:hover .onboarding-tip__tips {
     animation-play-state: paused !important;
   }
 }

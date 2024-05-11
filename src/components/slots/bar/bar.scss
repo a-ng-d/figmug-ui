@@ -1,20 +1,20 @@
-.bar {
+.bar.recharged {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: var(--size-large);
   padding: 0 var(--size-xsmall);
 
-  &--compact {
+  &.bar--compact {
     height: var(--size-medium);
   }
 
-  &--text-only {
+  &.bar--text-only {
     align-items: baseline;
   }
 
-  &__left,
-  &__right {
+  .bar__left,
+  .bar__right {
     max-width: 80%;
   }
 }

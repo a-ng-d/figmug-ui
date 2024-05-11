@@ -1,4 +1,4 @@
-.form-item {
+.form-item.recharged {
   display: flex;
   align-items: baseline;
   gap: var(--size-xxsmall);
@@ -7,25 +7,25 @@
   cursor: default;
   user-select: none;
 
-  &--fill label {
+  &.form-item--fill label {
     flex: 0 1 96px;
   }
 
-  & .input,
-  & .textarea,
-  & .select-menu {
+  .input,
+  .textarea,
+  .select-menu {
     flex: 1;
   }
 
-  &__helper .onboarding-tip {
+  .form-item__helper .onboarding-tip {
     padding: 0;
   }
 
-  &--blocked {
+  .form-item--blocked {
     pointer-events: none;
   }
 
-  &--blocked label {
+  .form-item--blocked label {
     color: var(--figma-color-text-disabled);
   }
 }

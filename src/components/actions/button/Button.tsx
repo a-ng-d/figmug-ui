@@ -57,6 +57,7 @@ export class Button extends React.Component<ButtonProps> {
         role="action-button"
         className={[
           'button',
+          'recharged',
           `button--${type}`,
           isLoading ? 'button--loading' : null,
           isBlocked ? 'button--blocked' : null,
@@ -112,7 +113,7 @@ export class Button extends React.Component<ButtonProps> {
     return (
       <button
         role="link-button"
-        className={['button', `button--${type}`].filter((n) => n).join(' ')}
+        className={['button', 'recharged',`button--${type}`].filter((n) => n).join(' ')}
         data-feature={feature}
         ref={this.buttonRef}
       >
@@ -136,6 +137,7 @@ export class Button extends React.Component<ButtonProps> {
         data-feature={feature}
         className={[
           'icon-button',
+          'recharged',
           state !== undefined && state !== '' ? `icon-button--${state}` : null,
           isLoading ? 'button--loading' : null,
         ]
@@ -167,7 +169,7 @@ export class Button extends React.Component<ButtonProps> {
     return (
       <button
         role="compact-button"
-        className="compact-button"
+        className="compact-button recharged"
         disabled={isDisabled || isBlocked}
         onKeyDown={(e) => {
           if (e.key === ' ' || e.key === 'Enter') action?.(e)

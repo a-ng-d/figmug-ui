@@ -1,5 +1,5 @@
-.button,
-.icon-button {
+.button.recharged,
+.icon-button.recharged {
   justify-content: center;
   gap: var(--size-xxxsmall);
   position: relative;
@@ -9,32 +9,32 @@
   &:disabled {
     pointer-events: none;
   }
+
+  .button__caret {
+    background: var(--figma-color-icon-onbrand);
+    width: 12px;
+    height: 30px;
+  }
+  
+  .button__loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  &.button--loading {
+    pointer-events: none;
+  }
+  
+  &.button--loading > .button__label,
+  &.button--loading > .button__caret {
+    opacity: 0;
+  }
 }
 
-.button__caret {
-  background: var(--figma-color-icon-onbrand);
-  width: 12px;
-  height: 30px;
-}
-
-.button__loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.button--loading {
-  pointer-events: none;
-}
-
-.button--loading > .button__label,
-.button--loading > .button__caret {
-  opacity: 0;
-}
-
-.button--primary {
+.button--primary.recharged {
   --blue: var(--figma-color-bg-brand);
   --white: var(--figma-color-text-onbrand);
 
@@ -62,7 +62,7 @@
   }
 }
 
-.button--secondary {
+.button--secondary.recharged {
   --white: var(--figma-color-bg);
   --black8: var(--figma-color-text);
 
@@ -92,7 +92,7 @@
   }
 }
 
-.button--tertiary {
+.button--tertiary.recharged {
   &,
   & a {
     color: var(--figma-color-text-brand);
@@ -114,7 +114,7 @@
   }
 }
 
-.icon-button {
+.icon-button.recharged {
   background-clip: padding-box !important;
   border-radius: 3px;
   border: 1px solid transparent;
@@ -152,20 +152,20 @@
     border: 2px solid transparent;
   }
 
-  &--selected {
+  &.icon-button--selected {
     background-color: var(--figma-color-bg-brand);
   }
 
-  &--selected .icon-box {
+  &.icon-button--selected .icon-box {
     background-color: var(--figma-color-icon-onbrand) !important;
   }
 
-  &--selected:hover {
+  &.icon-button--selected:hover {
     background-color: var(--figma-color-bg-brand);
   }
 }
 
-.compact-button {
+.compact-button.recharged {
   height: var(--size-small);
   display: flex;
   align-items: center;

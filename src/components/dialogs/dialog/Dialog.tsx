@@ -44,7 +44,7 @@ export const Dialog = (props: DialogProps) => {
 
   return (
     <div
-      className="dialog"
+      className="dialog recharged"
       style={{
         position: isForward ? 'absolute' : 'relative',
       }}
