@@ -1,5 +1,4 @@
 import React from 'react'
-import 'figma-plugin-ds/dist/figma-plugin-ds.css'
 import './bar.scss'
 
 export interface BarProps {

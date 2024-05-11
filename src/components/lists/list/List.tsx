@@ -1,7 +1,6 @@
 import React from 'react'
 import { DropdownOption } from '../../../types/list.types'
 import { Chip } from '../../tags/chip/Chip'
-import 'figma-plugin-ds/dist/figma-plugin-ds.css'
 import './list.scss'
 
 export interface ListProps {
