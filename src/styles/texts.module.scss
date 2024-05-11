@@ -1,5 +1,5 @@
 .type {
-  color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+  color: var(--figma-color-text);
 
   &--truncated {
     overflow: hidden;
@@ -7,11 +7,11 @@
   }
 
   &--secondary {
-    color: var(--figma-color-text-tertiary, rgba(0, 0, 0, 0.3));
+    color: var(--figma-color-text-tertiary);
   }
 
   a {
-    color: var(--figma-color-text-brand, #007be5);
+    color: var(--figma-color-text-brand);
     text-decoration: none;
   }
 
@@ -24,7 +24,7 @@
 .onboarding-tip__msg,
 .section-title,
 .select-menu__label {
-  color: var(--figma-color-text, rgba(0, 0, 0, 0.9));
+  color: var(--figma-color-text);
 }
 
 .onboarding-tip__msg {
@@ -32,6 +32,6 @@
 }
 
 .label {
-  color: var(--figma-color-text-tertiary, rgba(0, 0, 0, 0.3));
+  --black3: var(--figma-color-text-tertiary);
   gap: var(--size-xxxsmall);
 }
