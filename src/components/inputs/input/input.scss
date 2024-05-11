@@ -1,4 +1,4 @@
-.input {
+.input.recharged {
   display: flex;
   align-items: baseline;
   cursor: default;
@@ -11,196 +11,145 @@
     left: 0;
     z-index: 1;
   }
-}
 
-input {
-  cursor: default;
-  user-select: none;
-
-  &[type='color' i] {
-    width: var(--size-xsmall);
-    height: var(--size-xsmall);
-    position: absolute;
-    top: 8px;
-    left: var(--size-xxsmall);
-    z-index: 1;
-    background-color: transparent;
-    padding: 0;
-    appearance: none;
-    background-color: transparent;
-    appearance: none;
-    border: none;
+  input {
+    cursor: default;
+    user-select: none;
+  
+    &[type='color' i] {
+      width: var(--size-xsmall);
+      height: var(--size-xsmall);
+      position: absolute;
+      top: 8px;
+      left: var(--size-xxsmall);
+      z-index: 1;
+      background-color: transparent;
+      padding: 0;
+      appearance: none;
+      background-color: transparent;
+      appearance: none;
+      border: none;
+    }
+  
+    &[type='color' i]::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+  
+    &[type='color' i]::-webkit-color-swatch {
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px inset;
+    }
+  
+    &[type='color' i]:focus {
+      outline: 1px solid var(--figma-color-border-selected);
+      outline-offset: -1px;
+    }
+  
+    &[type='color' i]:focus ~ input {
+      border: 1px solid var(--figma-color-border-selected);
+      outline: 1px solid var(--figma-color-border-selected);
+      outline-offset: -2px;
+    }
+  
+    &[type='color'] ~ input,
+    &[type='number'] {
+      max-width: 112px;
+      min-width: 80px;
+    }
+  
+    &[type='number']::-webkit-inner-spin-button {
+      display: none;
+    }
+  
+    &[type='number'] {
+      -moz-appearance: textfield;
+    }
   }
 
-  &[type='color' i]::-webkit-color-swatch-wrapper {
-    padding: 0;
-  }
-
-  &[type='color' i]::-webkit-color-swatch {
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px inset;
-  }
-
-  &[type='color' i]:focus {
-    outline: 1px solid var(--figma-color-border-selected);
-    outline-offset: -1px;
-  }
-
-  &[type='color' i]:focus ~ input {
-    border: 1px solid var(--figma-color-border-selected);
-    outline: 1px solid var(--figma-color-border-selected);
-    outline-offset: -2px;
-  }
-
-  &[type='color'] ~ input,
-  &[type='number'] {
-    max-width: 112px;
-    min-width: 80px;
-  }
-
-  &[type='number']::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  &[type='number'] {
-    -moz-appearance: textfield;
-  }
-}
-
-.input__color {
-  &:hover ~ .input__field {
+  /* Input */
+  .input__field {
     --black8: var(--figma-color-text);
-    --black1: var(--figma-color-border);
-    background-image: none;
-  }
-  &:disabled[type='color' i] {
-    opacity: 0.25;
-  }
-}
+    --white: var(--figma-color-bg);
 
-/* Input */
-.input__field {
-  --black8: var(--figma-color-text);
-  --white: var(--figma-color-bg);
+    &:hover,
+    &:placeholder-shown:hover {
+      --black8: var(--figma-color-text);
+      --black1: var(--figma-color-border);
+    }
 
-  &:hover,
-  &:placeholder-shown:hover {
+    &:active,
+    &:focus {
+      --blue: var(--figma-color-border-selected);
+      --black: var(--figma-color-text);
+    }
+
+    &:placeholder-shown {
+      --black1: var(--figma-color-border);
+    }
+
+    &--error {
+      border: 1px solid var(--figma-color-border-danger);
+    }
+
+    &--error:hover,
+    &--error:placeholder-shown:hover {
+      --black1: var(--figma-color-border-danger);
+    }
+
+    &--error:active,
+    &--error:focus,
+    &--error.textarea:active,
+    &--error.textarea:focus {
+      --blue: var(--figma-color-border-danger);
+    }
+
+    &::placeholder {
+      color: var(--figma-color-text-secondary) !important;
+    }
+
+    &:disabled {
+      --black1: var(--figma-color-border-disabled);
+      --black3: var(--figma-color-text-disabled);
+      --black8: var(--figma-color-text-disabled);
+    }
+
+    &:disabled::placeholder {
+      color: var(--figma-color-text-tertiary) !important;
+    }
+
+    &:disabled:placeholder-shown {
+      --black1: transparent;
+    }
+  }
+
+  .input__color {
+    &:hover ~ .input__field {
+      --black8: var(--figma-color-text);
+      --black1: var(--figma-color-border);
+      background-image: none;
+    }
+    &:disabled[type='color' i] {
+      opacity: 0.25;
+    }
+  }
+
+  /* Text area */
+  .textarea {
     --black8: var(--figma-color-text);
+    --white: var(--figma-color-bg);
     --black1: var(--figma-color-border);
-  }
+    font-family: var(--font-stack);
+    cursor: default;
+    user-select: none;
 
-  &:active,
-  &:focus {
-    --blue: var(--figma-color-border-selected);
-    --black: var(--figma-color-text);
-  }
+    &:active,
+    &:focus {
+      --black: var(--figma-color-text);
+      --blue: var(--figma-color-border-selected);
+    }
 
-  &:placeholder-shown {
-    --black1: var(--figma-color-border);
-  }
-
-  &--error {
-    border: 1px solid var(--figma-color-border-danger);
-  }
-
-  &--error:hover,
-  &--error:placeholder-shown:hover {
-    --black1: var(--figma-color-border-danger);
-  }
-
-  &--error:active,
-  &--error:focus,
-  &--error.textarea:active,
-  &--error.textarea:focus {
-    --blue: var(--figma-color-border-danger);
-  }
-
-  &::placeholder {
-    color: var(--figma-color-text-secondary) !important;
-  }
-
-  &:disabled {
-    --black1: var(--figma-color-border-disabled);
-    --black3: var(--figma-color-text-disabled);
-    --black8: var(--figma-color-text-disabled);
-  }
-
-  &:disabled::placeholder {
-    color: var(--figma-color-text-tertiary) !important;
-  }
-
-  &:disabled:placeholder-shown {
-    --black1: transparent;
-  }
-}
-
-/* Inputs bar */
-.inputs {
-  display: flex;
-  gap: var(--size-xxsmall);
-  align-items: center;
-}
-
-.inputs .label {
-  flex: 0;
-}
-
-.inputs__bar {
-  display: flex;
-  padding: 0 1px;
-  position: relative;
-
-  & .input {
-    width: var(--size-xlarge);
-    margin: 0 -0.5px;
-  }
-
-  & input {
-    background-color: transparent;
-  }
-
-  & input:focus {
-    border: 1px solid var(--figma-color-border);
-  }
-
-  &:hover input {
-    border: 1px solid var(--figma-color-border);
-  }
-
-  &:focus-within:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    box-shadow: inset 0 0 0 2px var(--figma-color-border-selected);
-    z-index: 2;
-    pointer-events: none;
-    border-radius: var(--border-radius-small);
-  }
-
-  &:focus-within input {
-    border: 1px solid var(--figma-color-border);
-    outline: 1px solid transparent;
-    outline-offset: -2px;
-  }
-}
-
-/* Text area */
-.textarea {
-  --black8: var(--figma-color-text);
-  --white: var(--figma-color-bg);
-  --black1: var(--figma-color-border);
-  font-family: var(--font-stack);
-  cursor: default;
-  user-select: none;
-
-  &:active,
-  &:focus {
-    --black: var(--figma-color-text);
-    --blue: var(--figma-color-border-selected);
-  }
-
-  &--monospace {
-    font-family: monospace;
+    &--monospace {
+      font-family: monospace;
+    }
   }
 }
