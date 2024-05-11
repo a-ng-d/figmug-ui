@@ -22,8 +22,8 @@
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_c48bb3c3237a2d6",
     "publish:patch": "npm run test && npm run build && npm version patch && npm publish",
-    "publish:minor": "npm run test && npm run build && npm publish",
-    "publish:major": "npm run test && npm run build && npm publish"
+    "publish:minor": "npm run test && npm run build && npm version minor && npm publish",
+    "publish:major": "npm run test && npm run build && npm version major && npm publish"
   },
   "dependencies": {
     "@storybook/client-api": "^7.6.17",
