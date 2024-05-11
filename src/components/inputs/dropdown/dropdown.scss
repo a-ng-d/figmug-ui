@@ -48,6 +48,7 @@
   .select-menu__button:hover .select-menu__caret,
   .select-menu__button:focus .select-menu__caret {
     background: var(--figma-color-icon) !important;
+    margin-left: -8px;
   }
 
   .floating-menu &__menu {
