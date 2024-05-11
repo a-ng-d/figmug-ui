@@ -393,7 +393,7 @@ export class Input extends React.Component<InputProps, InputStates> {
 
     return (
       <div
-        className={['input', 'recharged',isBlocked ? 'input--blocked' : null]
+        className={['input', 'recharged', isBlocked ? 'input--blocked' : null]
           .filter((n) => n)
           .join(' ')}
       >
@@ -429,7 +429,7 @@ export class Input extends React.Component<InputProps, InputStates> {
 
     return (
       <div
-        className={['input', 'recharged',isBlocked ? 'input--blocked' : null]
+        className={['input', 'recharged', isBlocked ? 'input--blocked' : null]
           .filter((n) => n)
           .join(' ')}
       >

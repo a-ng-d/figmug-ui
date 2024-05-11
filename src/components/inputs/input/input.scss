@@ -15,7 +15,7 @@
   input {
     cursor: default;
     user-select: none;
-  
+
     &[type='color' i] {
       width: var(--size-xsmall);
       height: var(--size-xsmall);
@@ -30,37 +30,37 @@
       appearance: none;
       border: none;
     }
-  
+
     &[type='color' i]::-webkit-color-swatch-wrapper {
       padding: 0;
     }
-  
+
     &[type='color' i]::-webkit-color-swatch {
       border: none;
       box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px inset;
     }
-  
+
     &[type='color' i]:focus {
       outline: 1px solid var(--figma-color-border-selected);
       outline-offset: -1px;
     }
-  
+
     &[type='color' i]:focus ~ input {
       border: 1px solid var(--figma-color-border-selected);
       outline: 1px solid var(--figma-color-border-selected);
       outline-offset: -2px;
     }
-  
+
     &[type='color'] ~ input,
     &[type='number'] {
       max-width: 112px;
       min-width: 80px;
     }
-  
+
     &[type='number']::-webkit-inner-spin-button {
       display: none;
     }
-  
+
     &[type='number'] {
       -moz-appearance: textfield;
     }

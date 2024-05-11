@@ -6,36 +6,35 @@
   .label {
     flex: 0;
   }
-  
+
   .inputs__bar {
     display: flex;
     padding: 0 1px;
     position: relative;
-  
+
     & .input.recharged {
       width: var(--size-xlarge);
       margin: 0 -0.5px;
 
-      input[type=color] ~ input,
-      input[type=number] {
+      input[type='color'] ~ input,
+      input[type='number'] {
         max-width: unset;
         min-width: unset;
       }
-
     }
-  
+
     & input {
       background-color: transparent;
     }
-  
+
     & input:focus {
       border: 1px solid var(--figma-color-border);
     }
-  
+
     &:hover input {
       border: 1px solid var(--figma-color-border);
     }
-  
+
     &:focus-within:before {
       content: '';
       width: 100%;
@@ -46,7 +45,7 @@
       pointer-events: none;
       border-radius: var(--border-radius-small);
     }
-  
+
     &:focus-within input {
       border: 1px solid var(--figma-color-border);
       outline: 1px solid transparent;

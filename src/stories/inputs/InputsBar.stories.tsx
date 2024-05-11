@@ -52,6 +52,6 @@ type Story = StoryObj<typeof meta>
 export const ColorParameters: Story = {
   args: {
     label: 'HSL',
-    children: Inputs()
-  }
+    children: Inputs(),
+  },
 }

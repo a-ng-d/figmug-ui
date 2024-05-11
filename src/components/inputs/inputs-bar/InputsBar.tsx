@@ -8,28 +8,16 @@ export interface InputsBarProps {
 }
 
 export const InputsBar = (props: InputsBarProps) => {
-  const {
-    label,
-    customClassName,
-    children,
-  } = props
+  const { label, customClassName, children } = props
 
   return (
     <div
-      className={[
-        'inputs',
-        'recharged',
-        customClassName
-      ]
+      className={['inputs', 'recharged', customClassName]
         .filter((n) => n)
         .join(' ')}
     >
-      <div className={`label ${texts.label}`}>
-        {label}
-      </div>
-      <div className="inputs__bar">
-        {children}
-      </div>
+      <div className={`label ${texts.label}`}>{label}</div>
+      <div className="inputs__bar">{children}</div>
     </div>
   )
 }
