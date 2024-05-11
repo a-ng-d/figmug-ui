@@ -10,14 +10,14 @@ export interface FormItemProps {
     type: 'INFO' | 'ERROR'
     message: string
   }
-  shouldFill: boolean
-  isBlocked: boolean
-  isNew: boolean
+  shouldFill?: boolean
+  isBlocked?: boolean
+  isNew?: boolean
   children: React.ReactNode
 }
 
 export const FormItem = (props: FormItemProps) => {
-  const { id, label, helper, shouldFill, isBlocked, isNew, children } = props
+  const { id, label, helper, shouldFill = true, isBlocked = false, isNew = false, children } = props
 
   return (
     <>
@@ -51,10 +51,4 @@ export const FormItem = (props: FormItemProps) => {
       ) : null}
     </>
   )
-}
-
-FormItem.defaultProps = {
-  shouldFill: true,
-  isBlocked: false,
-  isNew: false,
 }
