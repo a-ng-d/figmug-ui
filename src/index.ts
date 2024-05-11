@@ -3,6 +3,7 @@ import icons from './styles/icons.module.scss'
 
 export type { DropdownOption } from './types/list.types'
 export type { HexModel } from './types/color.types'
+export { Accordion } from './components/actions/accordion/Accordion'
 export { Button } from './components/actions/button/Button'
 export { Tabs } from './components/actions/tabs/Tabs'
 export { Menu } from './components/actions/menu/Menu'
