@@ -1,0 +1,31 @@
+.keyboard-shortcut-item.recharged {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--size-xxsmall);
+  min-height: var(--size-large);
+  padding: 0 var(--size-small);
+  user-select: none;
+
+  .keyboard-shortcut-item__keys {
+    display: flex;
+    align-items: center;
+    gap: var(--size-xxxsmall);
+  }
+
+  .keyboard-shortcut-item__key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: var(--size-small);
+    height: var(--size-small);
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--figma-color-border);
+    padding: 0 var(--size-xxxsmall);
+    white-space: nowrap;
+  }
+
+  .keyboard-shortcut-item__separator {
+    padding: 0 var(--size-xxxsmall);
+  }
+}

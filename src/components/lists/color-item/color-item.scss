@@ -1,0 +1,36 @@
+.color-item.recharged {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--size-xsmall);
+  height: var(--size-medium);
+  align-items: center;
+
+  .color-item__left-part,
+  .color-item__right-part {
+    max-width: 100%;
+  }
+
+  .color-item__info {
+    display: flex;
+    align-items: center;
+    gap: 0 var(--size-xxsmall);
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  .color-item__color {
+    padding: 0 0 0 var(--size-xxsmall);
+  }
+
+  .color-item__chip {
+    flex: 0 0 var(--size-xsmall);
+    width: var(--size-xsmall);
+    height: var(--size-xsmall);
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px inset;
+  }
+
+  .color-item__chip--circle {
+    border-radius: var(--size-xxsmall);
+  }
+}
