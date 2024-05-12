@@ -4,7 +4,7 @@ import './keyboard-shortcut-item.scss'
 export type KeyboardShortcutItemProps = {
   label: string
   shortcuts: Array<Array<string>>
-  separator: string
+  separator?: string
 }
 
 export const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
