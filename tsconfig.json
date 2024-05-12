@@ -12,7 +12,7 @@
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "module": "ES2015",
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
