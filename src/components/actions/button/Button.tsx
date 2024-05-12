@@ -22,7 +22,7 @@ export interface ButtonProps {
 }
 
 export class Button extends React.Component<ButtonProps> {
-  buttonRef: React.RefObject<HTMLButtonElement>
+  buttonRef: React.RefObject<HTMLButtonElement> = React.createRef()
 
   static defaultProps: Partial<ButtonProps> = {
     isLink: false,
@@ -32,10 +32,6 @@ export class Button extends React.Component<ButtonProps> {
     isDisabled: false,
     isNew: false,
     action: () => null,
-  }
-
-  constructor(props: ButtonProps) {
-    super(props), (this.buttonRef = React.createRef())
   }
 
   // Templates

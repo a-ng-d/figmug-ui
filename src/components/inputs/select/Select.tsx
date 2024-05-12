@@ -17,17 +17,13 @@ export interface SelectProps {
 }
 
 export class Select extends React.Component<SelectProps> {
-  inputRef: React.RefObject<HTMLInputElement>
+  inputRef: React.RefObject<HTMLInputElement> = React.createRef()
 
   static defaultProps: Partial<SelectProps> = {
     isChecked: false,
     isDisabled: false,
     isBlocked: false,
     isNew: false,
-  }
-
-  constructor(props: SelectProps) {
-    super(props), (this.inputRef = React.createRef())
   }
 
   CheckBox = () => {

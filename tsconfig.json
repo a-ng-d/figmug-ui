@@ -1,8 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2015",
+    "lib": [
+      "ES2019",
+      "DOM",
+      "ES6",
+      "DOM.Iterable",
+      "ScriptHost"
+    ],
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
