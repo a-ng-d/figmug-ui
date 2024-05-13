@@ -92,14 +92,7 @@
   }
 }
 
-.button--tertiary.recharged {
-  &,
-  & a {
-    color: var(--figma-color-text-brand);
-    text-decoration: none;
-  }
-}
-.button--tertiary,
+.button--tertiary.recharged,
 .button--tertiary a {
   color: var(--figma-color-text-brand);
   text-decoration: none;
@@ -110,7 +103,7 @@
   }
 
   &:disabled {
-    --black3: var(--figma-color-text-disabled);
+    color: var(--figma-color-text-disabled);
   }
 }
 
