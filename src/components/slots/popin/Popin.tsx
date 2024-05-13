@@ -20,7 +20,7 @@ export interface PopInProps {
   select?: {
     label: string
     state: boolean
-    action: React.MouseEventHandler & React.KeyboardEventHandler
+    action: React.ChangeEventHandler<HTMLInputElement> | undefined
   }
   indicator?: string
   children?: React.ReactNode
@@ -55,7 +55,7 @@ export const PopIn = (props: PopInProps) => {
                 name="abstract-action-name"
                 label={select.label}
                 isChecked={select.state}
-                onChange={() => select.action}
+                onChange={select.action}
               />
             ) : null}
           </div>

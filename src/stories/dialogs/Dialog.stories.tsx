@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
+import { useArgs } from '@storybook/preview-api'
 import { Dialog } from '../../components/dialogs/dialog/Dialog'
 import texts from '../../styles/texts.module.scss'
 
@@ -38,12 +39,67 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const OnBoardingWindow: Story = {
+export const SingleMessage: Story = {
+  args: {
+    title: 'Do you want to say hello?',
+    actions: {
+      primary: {
+        label: 'Continue',
+        action: fn(),
+      },
+      secondary: {
+        label: 'Learn more',
+        action: fn(),
+      },
+    },
+    select: {
+      label: 'I want to say hello',
+      state: false,
+      action: fn(),
+    },
+    children: onBoarding(),
+    isForward: false,
+    onClose: fn(),
+  },
+  argTypes: {
+    select: { control: false },
+    isForward: { controls: false },
+    onClose: { control: false },
+  },
+  render: (args) => {
+    const [argsState, updateArgs] = useArgs<{
+      state: boolean
+    }>()
+
+    const onSelect = () => {
+      updateArgs({
+        state: !argsState.state,
+      })
+
+      args.select?.action
+    }
+
+    return (
+      <Dialog
+        {...args}
+        select={{
+          label: 'I want to say hello',
+          state: argsState.state,
+          action: () => onSelect(),
+        }}
+      >
+        {onBoarding()}
+      </Dialog>
+    )
+  }
+}
+
+export const MultipleMessage: Story = {
   args: {
     title: 'Welcome to the next version',
     actions: {
       primary: {
-        label: 'Got it',
+        label: 'Next',
         action: fn(),
       },
       secondary: {
@@ -54,7 +110,7 @@ export const OnBoardingWindow: Story = {
     indicator: '3 of 3',
     children: onBoarding(),
     isForward: false,
-    onClose: fn,
+    onClose: fn(),
   },
   argTypes: {
     select: { control: false },
