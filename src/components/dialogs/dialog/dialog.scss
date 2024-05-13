@@ -14,6 +14,7 @@
 
   & .dialog__cover {
     flex: 1 0 248px;
+    max-width: 248px;
     overflow: hidden;
     display: flex;
     justify-content: center;
