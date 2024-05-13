@@ -15,4 +15,12 @@
     color: var(--figma-color-text-brand);
     user-select: none;
   }
+
+  &.chip--inactive {
+    background-color: var(--figma-color-bg-tertiary);
+
+    .chip__text {
+      color: var(--figma-color-text);
+    }
+  }
 }

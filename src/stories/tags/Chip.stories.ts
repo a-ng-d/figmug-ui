@@ -14,12 +14,14 @@ type Story = StoryObj<typeof meta>
 
 export const New: Story = {
   args: {
+    state: 'ACTIVE',
     children: 'New',
   },
 }
 
 export const Pro: Story = {
   args: {
+    state: 'ACTIVE',
     children: 'Pro',
   },
 }
