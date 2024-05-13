@@ -7,6 +7,10 @@
   }
 
   &--secondary {
+    color: var(--figma-color-text-secondary);
+  }
+
+  &--tertiary {
     color: var(--figma-color-text-tertiary);
   }
 
