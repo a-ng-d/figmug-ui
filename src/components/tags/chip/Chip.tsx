@@ -11,14 +11,15 @@ export const Chip = (props: ChipProps) => {
   const { children, state = 'ACTIVE' } = props
 
   return (
-    <div className={[
-      'chip',
-      'recharged',
-      state === 'INACTIVE' ? 'chip--inactive' : null
-    ]
-      .filter((n) => n)
-      .join(' ')
-    }>
+    <div
+      className={[
+        'chip',
+        'recharged',
+        state === 'INACTIVE' ? 'chip--inactive' : null,
+      ]
+        .filter((n) => n)
+        .join(' ')}
+    >
       <div className={['chip__text', texts.type].filter((n) => n).join(' ')}>
         {children}
       </div>

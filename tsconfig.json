@@ -1,13 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2015",
-    "lib": [
-      "ES2019",
-      "DOM",
-      "ES6",
-      "DOM.Iterable",
-      "ScriptHost"
-    ],
+    "lib": ["ES2019", "DOM", "ES6", "DOM.Iterable", "ScriptHost"],
     "useDefineForClassFields": true,
     "allowJs": false,
     "allowSyntheticDefaultImports": true,

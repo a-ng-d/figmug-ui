@@ -91,7 +91,7 @@ export const SingleMessage: Story = {
         {onBoarding()}
       </Dialog>
     )
-  }
+  },
 }
 
 export const MultipleMessage: Story = {
