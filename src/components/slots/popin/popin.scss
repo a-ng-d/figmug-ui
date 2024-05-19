@@ -64,7 +64,11 @@
 
     .popin__footer {
       height: auto;
-      padding: var(--size-xsmall) var(--size-xsmall) 0 var(--size-xsmall);
+      gap: var(--size-xxsmall) 0;
+
+      .label {
+        margin: 0;
+      }
     }
 
     .popin__actions {
