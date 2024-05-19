@@ -19,7 +19,7 @@ export interface DialogProps {
   select?: {
     label: string
     state: boolean
-    action: React.ChangeEventHandler<HTMLInputElement> | undefined
+    action: React.ChangeEventHandler<HTMLInputElement>
   }
   indicator?: string
   isForward?: boolean
