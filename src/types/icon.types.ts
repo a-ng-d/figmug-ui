@@ -90,6 +90,7 @@ export type IconList =
   | 'caret'
   | 'spinner'
   | 'user'
+  | 'target'
   | 'A'
   | 'B'
   | 'C'
