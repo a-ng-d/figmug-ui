@@ -46,7 +46,7 @@ export const PopIn = (props: PopInProps) => {
         <div className="popin__footer">
           <div className="popin__extra">
             {indicator !== undefined ? (
-              <p className={`${texts.label} label`}>{indicator}</p>
+              <div className={`${texts.label} label`}>{indicator}</div>
             ) : null}
             {select !== undefined ? (
               <Select
