@@ -73,7 +73,7 @@
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/inVoltag/figmug-ui.git"
+    "url": "git+https://github.com/a-ng-d/figmug-ui.git"
   },
   "keywords": [
     "library",
@@ -83,7 +83,7 @@
   "author": "Aurélien Grimaud",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/inVoltag/figmug-ui/issues"
+    "url": "https://github.com/a-ng-d/figmug-ui/issues"
   },
-  "homepage": "https://github.com/inVoltag/figmug-ui#readme"
+  "homepage": "https://github.com/a-ng-d/figmug-ui#readme"
 }
