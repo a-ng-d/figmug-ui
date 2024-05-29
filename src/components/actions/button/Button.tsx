@@ -8,6 +8,7 @@ import './button.scss'
 export interface ButtonProps {
   type: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'compact'
   icon?: IconList
+  iconClassName?: string
   label?: string
   state?: 'default' | 'disabled' | 'blocked' | 'selected' | ''
   url?: string
@@ -127,7 +128,7 @@ export class Button extends React.Component<ButtonProps> {
   }
 
   Icon = () => {
-    const { feature, state, isLoading, isDisabled, action, icon } = this.props
+    const { iconClassName, feature, state, isLoading, isDisabled, action, icon } = this.props
 
     return (
       <button
@@ -155,7 +156,9 @@ export class Button extends React.Component<ButtonProps> {
           iconColor={
             isDisabled ? 'var(--figma-color-icon-disabled)' : undefined
           }
-          customClassName="button__spinner"
+          customClassName={
+            iconClassName !== undefined ? iconClassName : undefined
+          }
         />
       </button>
     )
