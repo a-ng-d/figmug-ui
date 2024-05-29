@@ -63,6 +63,7 @@ export const Accordion = (props: AccordionProps) => {
             <Button
               type="icon"
               icon="minus"
+              iconClassName='accordion__row__icon'
               isDisabled={isBlocked}
               isBlocked={isBlocked}
               action={onEmpty}
@@ -71,6 +72,7 @@ export const Accordion = (props: AccordionProps) => {
             <Button
               type="icon"
               icon="plus"
+              iconClassName='accordion__row__icon'
               isDisabled={isBlocked}
               isBlocked={isBlocked}
               action={onAdd}

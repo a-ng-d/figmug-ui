@@ -37,7 +37,8 @@
     color: var(--figma-color-text-secondary);
   }
 
-  .accordion__row .tooltip__icon {
+  .accordion__row .tooltip__icon,
+  .accordion__row .accordion__row__icon {
     background: var(--figma-color-text-secondary) !important;
   }
 
@@ -48,9 +49,9 @@
     color: var(--figma-color-text);
   }
 
-  &:hover .accordion__row .icon,
+  &:hover .accordion__row .accordion__row__icon,
   &:hover .accordion__row .tooltip__icon,
-  &.accordion--expanded .accordion__row .icon,
+  &.accordion--expanded .accordion__row .accordion__row__icon,
   &.accordion--expanded .accordion__row .tooltip__icon {
     background: var(--figma-color-icon) !important;
   }
@@ -66,8 +67,8 @@
     color: var(--figma-color-icon);
   }
 
-  &.accordion--blocked .accordion__row .icon,
-  &.accordion--blocked:hover .accordion__row .icon {
-    background: var(--figma-color-icon-disabled);
+  &.accordion--blocked .accordion__row .accordion__row__icon,
+  &.accordion--blocked:hover .accordion__row .accordion__row__icon {
+    background: var(--figma-color-icon-disabled) !important;
   }
 }
