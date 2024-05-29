@@ -42,6 +42,7 @@
   .dialog.recharged {
     & .dialog__cover {
       width: 100%;
+      max-width: none;
       flex: auto;
     }
   }
