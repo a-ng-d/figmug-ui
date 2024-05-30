@@ -2,10 +2,12 @@ import { Button } from '../button/Button'
 import { Chip } from '../../tags/chip/Chip'
 import { SectionTitle } from '../../assets/section-title/SectionTitle'
 import './accordion.scss'
+import { IconList } from 'src/types/icon.types'
 
 export interface AccordionProps {
   label: string
   indicator?: string | number
+  icon?: IconList
   helper?: string
   isExpanded: boolean
   isBlocked?: boolean
@@ -20,6 +22,7 @@ export const Accordion = (props: AccordionProps) => {
   const {
     label,
     indicator,
+    icon = 'info',
     helper,
     isExpanded,
     isBlocked = false,
@@ -71,7 +74,7 @@ export const Accordion = (props: AccordionProps) => {
           ) : (
             <Button
               type="icon"
-              icon="plus"
+              icon={icon}
               iconClassName='accordion__row__icon'
               isDisabled={isBlocked}
               isBlocked={isBlocked}
