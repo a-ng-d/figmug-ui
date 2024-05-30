@@ -22,7 +22,7 @@ export const Accordion = (props: AccordionProps) => {
   const {
     label,
     indicator,
-    icon = 'info',
+    icon = 'plus',
     helper,
     isExpanded,
     isBlocked = false,
