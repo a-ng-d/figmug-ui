@@ -14,15 +14,16 @@ export class Bar extends React.Component<BarProps> {
   static defaultProps = {
     isCompact: false,
     isOnlyText: false,
-    padding: '0 var(--size-xsmall)'
+    padding: '0 var(--size-xsmall)',
   }
 
   setBorder = (
     orientation: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'> | undefined
   ) => {
-    const property = '1px solid var(--figma-color-border)' as React.CSSProperties
+    const property =
+      '1px solid var(--figma-color-border)' as React.CSSProperties
     const styles: { [key: string]: React.CSSProperties } = {}
-    
+
     if (!orientation) return styles
     orientation.forEach((entry) => {
       if (entry === 'TOP') styles.borderTop = property
@@ -34,7 +35,8 @@ export class Bar extends React.Component<BarProps> {
   }
 
   render() {
-    const { isCompact, isOnlyText, border, padding, leftPart, rightPart } = this.props
+    const { isCompact, isOnlyText, border, padding, leftPart, rightPart } =
+      this.props
 
     return (
       <div
@@ -48,7 +50,7 @@ export class Bar extends React.Component<BarProps> {
           .join(' ')}
         style={{
           ...this.setBorder(border),
-          padding: padding
+          padding: padding,
         }}
       >
         <div className="bar__left">{leftPart}</div>

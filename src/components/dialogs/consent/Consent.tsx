@@ -25,7 +25,7 @@ export interface ConsentProps {
     save: {
       label: string
       action: (vendorsConsent: Array<ConsentConfiguration>) => void
-    },
+    }
     close: {
       action: React.MouseEventHandler & React.KeyboardEventHandler
     }
@@ -39,12 +39,11 @@ export interface ConsentStates {
 }
 
 export class Consent extends React.Component<ConsentProps, ConsentStates> {
-
   constructor(props: ConsentProps) {
     super(props)
     this.state = {
       isVendorsOpen: false,
-      vendorsConsent: props.vendorsList
+      vendorsConsent: props.vendorsList,
     }
   }
 
@@ -53,7 +52,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
     this.props.consentActions.consent.action(
       this.props.vendorsList.map((vendor) => ({
         ...vendor,
-        isConsented: true
+        isConsented: true,
       }))
     )
   }
@@ -62,7 +61,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
     this.props.consentActions.deny.action(
       this.props.vendorsList.map((vendor) => ({
         ...vendor,
-        isConsented: false
+        isConsented: false,
       }))
     )
   }
@@ -75,28 +74,23 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
     console.log('consentVendorsHandler', index)
     this.setState({
       vendorsConsent: this.state.vendorsConsent.map((consent, i) => {
-        if (i === index) return {
-          ...consent,
-          isConsented: !consent.isConsented
-        }
+        if (i === index)
+          return {
+            ...consent,
+            isConsented: !consent.isConsented,
+          }
         return {
-          ...consent
+          ...consent,
         }
-      })
+      }),
     })
   }
 
   // Templates
   WelcomeScreen = () => {
-    const {
-      welcomeMessage,
-      moreDetailsLabel,
-      consentActions
-    } = this.props
+    const { welcomeMessage, moreDetailsLabel, consentActions } = this.props
 
-    const {
-      isVendorsOpen
-    } = this.state
+    const { isVendorsOpen } = this.state
 
     return (
       <div className="consent-banner">
@@ -106,23 +100,26 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
           </div>
         </div>
         <Bar
-          leftPart={(
+          leftPart={
             <Button
               type="tertiary"
               label={moreDetailsLabel}
-              action={() => this.setState({
-                isVendorsOpen: !isVendorsOpen
-              })}
+              action={() =>
+                this.setState({
+                  isVendorsOpen: !isVendorsOpen,
+                })
+              }
             />
-          )}
-          rightPart={(
-            <div className={[
-              'consent-banner__actions',
-              layouts['snackbar--medium']
-            ]
-              .filter((n) => n)
-              .join(' ')
-            }>
+          }
+          rightPart={
+            <div
+              className={[
+                'consent-banner__actions',
+                layouts['snackbar--medium'],
+              ]
+                .filter((n) => n)
+                .join(' ')}
+            >
               <Button
                 type="secondary"
                 label={consentActions.deny.label}
@@ -139,50 +136,44 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
                 action={consentActions.close.action}
               />
             </div>
-          )}
-          padding='0'
+          }
+          padding="0"
         />
       </div>
     )
   }
 
   DetailedVendorsList = () => {
-    const {
-      vendorsMessage,
-      lessDetailsLabel,
-      vendorsList,
-      consentActions,
-    } = this.props
+    const { vendorsMessage, lessDetailsLabel, vendorsList, consentActions } =
+      this.props
 
-    const {
-      isVendorsOpen,
-      vendorsConsent
-    } = this.state
+    const { isVendorsOpen, vendorsConsent } = this.state
 
     return (
       <div className="consent-banner">
-        <div className={[
-          'consent-banner__message',
-          'type',
-          texts.type
-        ]
-          .filter((n) => n)
-          .join(' ')
-        }>
+        <div
+          className={['consent-banner__message', 'type', texts.type]
+            .filter((n) => n)
+            .join(' ')}
+        >
           {vendorsMessage}
         </div>
         <ul className="consent-banner__list">
           {vendorsList.map((vendor, index) => (
-            <li key={index} className="consent-banner__item">
+            <li
+              key={index}
+              className="consent-banner__item"
+            >
               <Bar
-                leftPart={(
-                  <div className={[
-                    'consent-banner__item__info',
-                    layouts['snackbar--large']
-                  ]
-                    .filter((n) => n)
-                    .join(' ')
-                  }>
+                leftPart={
+                  <div
+                    className={[
+                      'consent-banner__item__info',
+                      layouts['snackbar--large'],
+                    ]
+                      .filter((n) => n)
+                      .join(' ')}
+                  >
                     <div className="consent-banner__item__icon">
                       <Thumbnail
                         src={vendor.icon}
@@ -191,31 +182,33 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
                       />
                     </div>
                     <div>
-                      <div className={[
-                        'consent-banner__item__title',
-                        'type',
-                        'type--large',
-                        texts.type
-                      ]
-                        .filter((n) => n)
-                        .join(' ')
-                      }>
+                      <div
+                        className={[
+                          'consent-banner__item__title',
+                          'type',
+                          'type--large',
+                          texts.type,
+                        ]
+                          .filter((n) => n)
+                          .join(' ')}
+                      >
                         {vendor.name}
                       </div>
-                      <div className={[
-                        'consent-banner__item__description',
-                        'type',
-                        texts.type
-                      ]
-                        .filter((n) => n)
-                        .join(' ')
-                      }>
+                      <div
+                        className={[
+                          'consent-banner__item__description',
+                          'type',
+                          texts.type,
+                        ]
+                          .filter((n) => n)
+                          .join(' ')}
+                      >
                         {vendor.description}
                       </div>
                     </div>
                   </div>
-                )}
-                rightPart={(
+                }
+                rightPart={
                   <div className="consent-banner__item__action">
                     <Select
                       id={`change-${vendor.id}-user-consent`}
@@ -224,31 +217,34 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
                       onChange={() => this.consentVendorsHandler(index)}
                     />
                   </div>
-                )}
-                border={["BOTTOM"]}
-                padding='var(--size-xxxsmall) 0 var(--size-xxsmall) 0'
+                }
+                border={['BOTTOM']}
+                padding="var(--size-xxxsmall) 0 var(--size-xxsmall) 0"
               />
             </li>
           ))}
         </ul>
         <Bar
-          leftPart={(
+          leftPart={
             <Button
               type="tertiary"
               label={lessDetailsLabel}
-              action={() => this.setState({
-                isVendorsOpen: !isVendorsOpen
-              })}
+              action={() =>
+                this.setState({
+                  isVendorsOpen: !isVendorsOpen,
+                })
+              }
             />
-          )}
-          rightPart={(
-            <div className={[
-              'consent-banner__actions',
-              layouts['snackbar--medium']
-            ]
-              .filter((n) => n)
-              .join(' ')
-            }>
+          }
+          rightPart={
+            <div
+              className={[
+                'consent-banner__actions',
+                layouts['snackbar--medium'],
+              ]
+                .filter((n) => n)
+                .join(' ')}
+            >
               <Button
                 type="secondary"
                 label={consentActions.deny.label}
@@ -265,8 +261,8 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
                 action={consentActions.close.action}
               />
             </div>
-          )}
-          padding='0'
+          }
+          padding="0"
         />
       </div>
     )
@@ -274,15 +270,14 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
 
   // Render
   render() {
-    const {
-      isVendorsOpen
-    } = this.state
+    const { isVendorsOpen } = this.state
 
-    if (isVendorsOpen) return (
-      <div className="consent-overlay recharged">
-        <this.DetailedVendorsList />
-      </div>
-    )
+    if (isVendorsOpen)
+      return (
+        <div className="consent-overlay recharged">
+          <this.DetailedVendorsList />
+        </div>
+      )
     return (
       <div className="consent-overlay recharged">
         <this.WelcomeScreen />

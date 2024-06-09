@@ -128,7 +128,15 @@ export class Button extends React.Component<ButtonProps> {
   }
 
   Icon = () => {
-    const { iconClassName, feature, state, isLoading, isDisabled, action, icon } = this.props
+    const {
+      iconClassName,
+      feature,
+      state,
+      isLoading,
+      isDisabled,
+      action,
+      icon,
+    } = this.props
 
     return (
       <button
