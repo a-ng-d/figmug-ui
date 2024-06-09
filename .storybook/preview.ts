@@ -6,7 +6,7 @@ import '../src/styles/colors.module.scss'
 
 export const globalTypes = {
   dataTheme: {
-    defaultValue: 'Figma Dark',
+    defaultValue: 'figma-dark',
   },
   dataThemes: {
     defaultValue: {
@@ -46,7 +46,7 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      default: globalTypes.dataTheme.defaultValue,
+      default: 'Figma Dark',
       values: [
         {
           name: 'Figma Light',
