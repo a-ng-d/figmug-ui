@@ -8,9 +8,9 @@
   width: 100%;
   height: 100%;
   z-index: 5;
-  background-color: rgba(0, 0, 0, 0.5);
   cursor: default;
   user-select: none;
+  pointer-events: none;
 }
 
 .consent-banner {
@@ -22,6 +22,7 @@
   background-color: var(--figma-color-bg);
   border-top: 1px solid var(--figma-color-border);
   padding: var(--size-xxsmall) var(--size-xsmall);
+  pointer-events: all;
 
   &__message {
     max-width: 400px;
