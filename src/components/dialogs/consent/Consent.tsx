@@ -70,8 +70,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
     this.props.consentActions.save.action(this.state.vendorsConsent)
 
   // Handlers
-  consentVendorsHandler = (index: number) => {
-    console.log('consentVendorsHandler', index)
+  consentVendorsHandler = (index: number) =>
     this.setState({
       vendorsConsent: this.state.vendorsConsent.map((consent, i) => {
         if (i === index)
@@ -84,7 +83,6 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
         }
       }),
     })
-  }
 
   // Templates
   WelcomeScreen = () => {

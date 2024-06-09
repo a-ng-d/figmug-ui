@@ -48,7 +48,6 @@ export const SingleVendor: Story = {
         description:
           'A top analytics platform for tracking and understanding user interactions',
         isConsented: false,
-        action: mock,
       },
     ],
   },
