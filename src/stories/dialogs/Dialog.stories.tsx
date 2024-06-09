@@ -58,12 +58,10 @@ export const SingleMessage: Story = {
       action: fn(),
     },
     children: onBoarding(),
-    isForward: false,
     onClose: fn(),
   },
   argTypes: {
     select: { control: false },
-    isForward: { controls: false },
     onClose: { control: false },
   },
   render: (args) => {
@@ -109,12 +107,10 @@ export const MultipleMessage: Story = {
     },
     indicator: '3 of 3',
     children: onBoarding(),
-    isForward: false,
     onClose: fn(),
   },
   argTypes: {
     select: { control: false },
-    isForward: { controls: false },
     onClose: { control: false },
   },
 }

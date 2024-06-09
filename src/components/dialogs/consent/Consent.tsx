@@ -149,79 +149,80 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
 
     return (
       <div className="consent-banner">
-        <div
-          className={['consent-banner__message', 'type', texts.type]
-            .filter((n) => n)
-            .join(' ')}
-        >
-          {vendorsMessage}
-        </div>
-        <ul className="consent-banner__list">
-          {vendorsList.map((vendor, index) => (
-            <li
-              key={index}
-              className="consent-banner__item"
-            >
-              <Bar
-                leftPart={
-                  <div
-                    className={[
-                      'consent-banner__item__info',
-                      layouts['snackbar--large'],
-                    ]
-                      .filter((n) => n)
-                      .join(' ')}
-                  >
-                    <div className="consent-banner__item__icon">
-                      <Thumbnail
-                        src={vendor.icon}
-                        w="32px"
-                        h="32px"
+        <div className="consent-banner__content">
+          <div
+            className={['consent-banner__message', 'type', texts.type]
+              .filter((n) => n)
+              .join(' ')}
+          >
+            {vendorsMessage}
+          </div>
+          <ul className="consent-banner__list">
+            {vendorsList.map((vendor, index) => (
+              <li
+                key={index}
+                className="consent-banner__item"
+              >
+                <Bar
+                  leftPart={
+                    <div
+                      className={[
+                        layouts['snackbar--large'],
+                      ]
+                        .filter((n) => n)
+                        .join(' ')}
+                    >
+                      <div className="consent-banner__item__icon">
+                        <Thumbnail
+                          src={vendor.icon}
+                          w="32px"
+                          h="32px"
+                        />
+                      </div>
+                      <div>
+                        <div
+                          className={[
+                            'consent-banner__item__title',
+                            'type',
+                            'type--large',
+                            texts.type,
+                          ]
+                            .filter((n) => n)
+                            .join(' ')}
+                        >
+                          {vendor.name}
+                        </div>
+                        <div
+                          className={[
+                            'consent-banner__item__description',
+                            'type',
+                            texts.type,
+                          ]
+                            .filter((n) => n)
+                            .join(' ')}
+                        >
+                          {vendor.description}
+                        </div>
+                      </div>
+                    </div>
+                  }
+                  rightPart={
+                    <div className="consent-banner__item__action">
+                      <Select
+                        id={`change-${vendor.id}-user-consent`}
+                        type="SWITCH_BUTTON"
+                        isChecked={vendorsConsent[index].isConsented}
+                        onChange={() => this.consentVendorsHandler(index)}
                       />
                     </div>
-                    <div>
-                      <div
-                        className={[
-                          'consent-banner__item__title',
-                          'type',
-                          'type--large',
-                          texts.type,
-                        ]
-                          .filter((n) => n)
-                          .join(' ')}
-                      >
-                        {vendor.name}
-                      </div>
-                      <div
-                        className={[
-                          'consent-banner__item__description',
-                          'type',
-                          texts.type,
-                        ]
-                          .filter((n) => n)
-                          .join(' ')}
-                      >
-                        {vendor.description}
-                      </div>
-                    </div>
-                  </div>
-                }
-                rightPart={
-                  <div className="consent-banner__item__action">
-                    <Select
-                      id={`change-${vendor.id}-user-consent`}
-                      type="SWITCH_BUTTON"
-                      isChecked={vendorsConsent[index].isConsented}
-                      onChange={() => this.consentVendorsHandler(index)}
-                    />
-                  </div>
-                }
-                border={['BOTTOM']}
-                padding="var(--size-xxxsmall) 0 var(--size-xxsmall) 0"
-              />
-            </li>
-          ))}
-        </ul>
+                  }
+                  border={['BOTTOM']}
+                  padding="var(--size-xxxsmall) 0 var(--size-xxsmall) 0"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
         <Bar
           leftPart={
             <Button

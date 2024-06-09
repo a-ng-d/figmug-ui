@@ -22,7 +22,6 @@ export interface DialogProps {
     action: React.ChangeEventHandler<HTMLInputElement>
   }
   indicator?: string
-  isForward?: boolean
   children: React.ReactNode
   onClose: React.ReactEventHandler
 }
@@ -33,7 +32,6 @@ export const Dialog = (props: DialogProps) => {
     actions,
     select,
     indicator,
-    isForward = true,
     children,
     onClose,
   } = props
@@ -45,9 +43,6 @@ export const Dialog = (props: DialogProps) => {
   return (
     <div
       className="dialog recharged"
-      style={{
-        position: isForward ? 'absolute' : 'relative',
-      }}
       role="button"
       tabIndex={-1}
       onMouseDown={closeHandler}
