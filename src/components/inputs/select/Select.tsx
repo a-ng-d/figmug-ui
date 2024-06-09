@@ -9,10 +9,10 @@ export interface SelectProps {
   name?: string
   value?: string
   feature?: string
-  isChecked: boolean
-  isDisabled: boolean
-  isBlocked: boolean
-  isNew: boolean
+  isChecked?: boolean
+  isDisabled?: boolean
+  isBlocked?: boolean
+  isNew?: boolean
   onChange: React.ChangeEventHandler<HTMLInputElement>
 }
 
