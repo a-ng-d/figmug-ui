@@ -2,8 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: var(--size-large);
-  padding: 0 var(--size-xsmall);
+  min-height: var(--size-large);
 
   &.bar--compact {
     height: var(--size-medium);

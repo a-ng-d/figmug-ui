@@ -1,0 +1,41 @@
+.consent-overlay.recharged {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  padding: var(--size-medium);
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: default;
+  user-select: none;
+}
+
+.consent-banner {
+  min-width: 600px;
+  max-height: calc(100% - var(--size-large));
+  background-color: var(--figma-color-bg);
+  border-top: 1px solid var(--figma-color-border);
+  padding: var(--size-xxsmall) var(--size-xsmall);
+
+  &__message {
+    max-width: 400px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 var(--size-xsmall);
+    list-style-type: none;
+  }
+
+  &__item__icon {
+    flex: none;
+  }
+
+  &__item__description {
+    max-width: 400px;
+  }
+}
