@@ -166,9 +166,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
                 <Bar
                   leftPart={
                     <div
-                      className={[
-                        layouts['snackbar--large'],
-                      ]
+                      className={[layouts['snackbar--large']]
                         .filter((n) => n)
                         .join(' ')}
                     >

@@ -27,14 +27,7 @@ export interface DialogProps {
 }
 
 export const Dialog = (props: DialogProps) => {
-  const {
-    title,
-    actions,
-    select,
-    indicator,
-    children,
-    onClose,
-  } = props
+  const { title, actions, select, indicator, children, onClose } = props
 
   const closeHandler = (e: SyntheticEvent) => {
     if (e.currentTarget === e.target) onClose(e)
