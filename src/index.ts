@@ -1,5 +1,6 @@
 import texts from './styles/texts.module.scss'
 import icons from './styles/icons.module.scss'
+import layouts from './styles/layouts.module.scss'
 
 export type { DropdownOption } from './types/list.types'
 export type { HexModel } from './types/color.types'
@@ -11,6 +12,7 @@ export { Icon } from './components/assets/icon/Icon'
 export { SectionTitle } from './components/assets/section-title/SectionTitle'
 export { Thumbnail } from './components/assets/thumbnail/Thumbnail'
 export { Dialog } from './components/dialogs/dialog/Dialog'
+export { Consent } from './components/dialogs/consent/Consent'
 export { Message } from './components/dialogs/message/Message'
 export { Dropdown } from './components/inputs/dropdown/Dropdown'
 export { Input } from './components/inputs/input/Input'
@@ -25,6 +27,7 @@ export { PopIn } from './components/slots/popin/Popin'
 export { Chip } from './components/tags/chip/Chip'
 export { texts }
 export { icons }
+export { layouts }
 export { doMap } from './modules/do-map/do-map'
 export { doCamelCase } from './modules/do-camel-case/do-camel-case'
 export { doKebabCase } from './modules/do-kebab-case/do-kebab-case'
