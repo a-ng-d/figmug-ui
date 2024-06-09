@@ -4,5 +4,5 @@ export interface ConsentConfiguration {
   icon: string
   description: string
   isConsented: boolean
-  action: React.MouseEventHandler & React.KeyboardEventHandler
+  action?: React.MouseEventHandler & React.KeyboardEventHandler
 }
