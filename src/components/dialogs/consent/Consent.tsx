@@ -11,6 +11,10 @@ import './consent.scss'
 export interface ConsentProps {
   welcomeMessage: string
   vendorsMessage: string
+  privacyPolicy: {
+    label: string
+    action: React.MouseEventHandler & React.KeyboardEventHandler
+  }
   moreDetailsLabel: string
   lessDetailsLabel: string
   consentActions: {
@@ -30,6 +34,7 @@ export interface ConsentProps {
       action: React.MouseEventHandler & React.KeyboardEventHandler
     }
   }
+  validVendor: ConsentConfiguration
   vendorsList: Array<ConsentConfiguration>
 }
 
@@ -86,7 +91,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
 
   // Templates
   WelcomeScreen = () => {
-    const { welcomeMessage, moreDetailsLabel, consentActions } = this.props
+    const { welcomeMessage, privacyPolicy, moreDetailsLabel, consentActions } = this.props
 
     const { isVendorsOpen } = this.state
 
@@ -96,6 +101,11 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
           <div className={['type', texts.type].filter((n) => n).join(' ')}>
             {welcomeMessage}
           </div>
+          <Button
+              type="tertiary"
+              label={privacyPolicy.label}
+              action={privacyPolicy.action}
+            />
         </div>
         <Bar
           leftPart={
@@ -142,7 +152,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
   }
 
   DetailedVendorsList = () => {
-    const { vendorsMessage, lessDetailsLabel, vendorsList, consentActions } =
+    const { vendorsMessage, lessDetailsLabel, validVendor, vendorsList, consentActions } =
       this.props
 
     const { isVendorsOpen, vendorsConsent } = this.state
@@ -158,6 +168,57 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
             {vendorsMessage}
           </div>
           <ul className="consent-banner__list">
+            <li
+              className="consent-banner__item"
+            >
+              <Bar
+                leftPart={
+                  <div
+                    className={[layouts['snackbar--large']]
+                      .filter((n) => n)
+                      .join(' ')}
+                  >
+                    <div>
+                      <div
+                        className={[
+                          'consent-banner__item__title',
+                          'type',
+                          'type--large',
+                          texts.type,
+                        ]
+                          .filter((n) => n)
+                          .join(' ')}
+                      >
+                        {validVendor.name}
+                      </div>
+                      <div
+                        className={[
+                          'consent-banner__item__description',
+                          'type',
+                          texts.type,
+                        ]
+                          .filter((n) => n)
+                          .join(' ')}
+                      >
+                        {validVendor.description}
+                      </div>
+                    </div>
+                  </div>
+                }
+                rightPart={
+                  <div className="consent-banner__item__action">
+                    <Select
+                      id={`legit-user-consent`}
+                      type="SWITCH_BUTTON"
+                      isChecked={validVendor.isConsented}
+                      isDisabled={true}
+                    />
+                  </div>
+                }
+                border={['BOTTOM']}
+                padding="var(--size-xxxsmall) 0 var(--size-xxsmall) 0"
+              />
+            </li>
             {vendorsList.map((vendor, index) => (
               <li
                 key={index}
@@ -214,7 +275,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
                       />
                     </div>
                   }
-                  border={['BOTTOM']}
+                  border={index === vendorsConsent.length - 1 ? undefined : ['BOTTOM']}
                   padding="var(--size-xxxsmall) 0 var(--size-xxsmall) 0"
                 />
               </li>

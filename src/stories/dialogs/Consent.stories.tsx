@@ -21,6 +21,10 @@ export const SingleVendor: Story = {
     welcomeMessage: 'Acme Inc. uses cookies to improve your experience',
     vendorsMessage:
       'We use these vendors to provide you with the best experience. You can change your preferences at any time.',
+    privacyPolicy: {
+      label: 'Read our Privacy Policy',
+      action: action('privacyPolicy.action'),
+    },
     moreDetailsLabel: 'More details',
     lessDetailsLabel: 'Less details',
     consentActions: {
@@ -40,6 +44,15 @@ export const SingleVendor: Story = {
         action: action('consent.close'),
       },
     },
+    validVendor: {
+      name: 'Functional Cookies',
+      id: 'functional',
+      icon: '',
+      description:
+        'These cookies are necessary for the plugin to function and cannot be switched off in our systems.',
+      isConsented: true,
+      action: mock,
+    },
     vendorsList: [
       {
         name: 'Mixpanel',
@@ -58,6 +71,10 @@ export const SeveralVendors: Story = {
     welcomeMessage: 'Acme Inc. uses cookies to improve your experience',
     vendorsMessage:
       'We use these vendors to provide you with the best experience. You can change your preferences at any time.',
+    privacyPolicy: {
+      label: 'Read our Privacy Policy',
+      action: action('privacyPolicy.action'),
+    },
     moreDetailsLabel: 'More details',
     lessDetailsLabel: 'Less details',
     consentActions: {
@@ -76,6 +93,15 @@ export const SeveralVendors: Story = {
       close: {
         action: action('consent.close'),
       },
+    },
+    validVendor: {
+      name: 'Functional Cookies',
+      id: 'functional',
+      icon: '',
+      description:
+        'These cookies are necessary for the plugin to function and cannot be switched off in our systems.',
+      isConsented: true,
+      action: mock,
     },
     vendorsList: [
       {
