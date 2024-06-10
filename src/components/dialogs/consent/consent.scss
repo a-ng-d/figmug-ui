@@ -25,6 +25,11 @@
 
     &__message {
       max-width: 400px;
+      overflow-y: auto;
+    }
+
+    &__content {
+      overflow-y: auto;
     }
 
     &__list {
@@ -40,6 +45,10 @@
 
     &__item__description {
       max-width: 400px;
+    }
+
+    & > .bar {
+      flex: none;
     }
   }
 }
