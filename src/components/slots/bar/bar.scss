@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: var(--size-large);
+  gap: var(--size-xxxsmall) 0;
 
   &.bar--compact {
     height: var(--size-medium);

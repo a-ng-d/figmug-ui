@@ -11,35 +11,44 @@
   cursor: default;
   user-select: none;
   pointer-events: none;
-}
 
-.consent-banner {
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-xxsmall) 0;
-  width: 100%;
-  max-height: calc(100% - var(--size-large));
-  background-color: var(--figma-color-bg);
-  border-top: 1px solid var(--figma-color-border);
-  padding: var(--size-xxsmall) var(--size-xsmall);
-  pointer-events: all;
-
-  &__message {
-    max-width: 400px;
-  }
-
-  &__list {
+  .consent-banner {
     display: flex;
     flex-direction: column;
-    padding: 0 0 0 var(--size-xsmall);
-    list-style-type: none;
+    gap: var(--size-xxsmall) 0;
+    width: 100%;
+    max-height: calc(100% - var(--size-large));
+    background-color: var(--figma-color-bg);
+    border-top: 1px solid var(--figma-color-border);
+    padding: var(--size-xxsmall) var(--size-xsmall);
+    pointer-events: all;
+  
+    &__message {
+      max-width: 400px;
+    }
+  
+    &__list {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 0 var(--size-xsmall);
+      list-style-type: none;
+    }
+  
+    &__item__icon {
+      flex: none;
+    }
+  
+    &__item__description {
+      max-width: 400px;
+    }
   }
+}
 
-  &__item__icon {
-    flex: none;
-  }
-
-  &__item__description {
-    max-width: 400px;
+@media (max-width: 460px) {
+  .consent-overlay.recharged {
+    & .consent-banner__actions {
+      flex-direction: column;
+      align-items: flex-end;
+    }
   }
 }
