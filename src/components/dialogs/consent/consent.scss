@@ -22,22 +22,22 @@
     border-top: 1px solid var(--figma-color-border);
     padding: var(--size-xxsmall) var(--size-xsmall);
     pointer-events: all;
-  
+
     &__message {
       max-width: 400px;
     }
-  
+
     &__list {
       display: flex;
       flex-direction: column;
       padding: 0 0 0 var(--size-xsmall);
       list-style-type: none;
     }
-  
+
     &__item__icon {
       flex: none;
     }
-  
+
     &__item__description {
       max-width: 400px;
     }

@@ -91,7 +91,8 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
 
   // Templates
   WelcomeScreen = () => {
-    const { welcomeMessage, privacyPolicy, moreDetailsLabel, consentActions } = this.props
+    const { welcomeMessage, privacyPolicy, moreDetailsLabel, consentActions } =
+      this.props
 
     const { isVendorsOpen } = this.state
 
@@ -102,10 +103,10 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
             {welcomeMessage}
           </div>
           <Button
-              type="tertiary"
-              label={privacyPolicy.label}
-              action={privacyPolicy.action}
-            />
+            type="tertiary"
+            label={privacyPolicy.label}
+            action={privacyPolicy.action}
+          />
         </div>
         <Bar
           leftPart={
@@ -152,8 +153,13 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
   }
 
   DetailedVendorsList = () => {
-    const { vendorsMessage, lessDetailsLabel, validVendor, vendorsList, consentActions } =
-      this.props
+    const {
+      vendorsMessage,
+      lessDetailsLabel,
+      validVendor,
+      vendorsList,
+      consentActions,
+    } = this.props
 
     const { isVendorsOpen, vendorsConsent } = this.state
 
@@ -168,9 +174,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
             {vendorsMessage}
           </div>
           <ul className="consent-banner__list">
-            <li
-              className="consent-banner__item"
-            >
+            <li className="consent-banner__item">
               <Bar
                 leftPart={
                   <div
@@ -275,7 +279,9 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
                       />
                     </div>
                   }
-                  border={index === vendorsConsent.length - 1 ? undefined : ['BOTTOM']}
+                  border={
+                    index === vendorsConsent.length - 1 ? undefined : ['BOTTOM']
+                  }
                   padding="var(--size-xxxsmall) 0 var(--size-xxsmall) 0"
                 />
               </li>
