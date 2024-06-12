@@ -39,9 +39,7 @@ const FormSample = () => {
           id="type-fullname"
           shouldFill
         >
-          <Input
-            type="TEXT"
-          />
+          <Input type="TEXT" />
         </FormItem>
       </div>
       <div className="dialog__form__item">
@@ -50,9 +48,7 @@ const FormSample = () => {
           id="type-email"
           shouldFill
         >
-          <Input
-            type="TEXT"
-          />
+          <Input type="TEXT" />
         </FormItem>
       </div>
       <div className="dialog__form__item">
