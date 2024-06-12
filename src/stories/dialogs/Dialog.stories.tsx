@@ -2,9 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import { useArgs } from '@storybook/preview-api'
 import { Dialog } from '../../components/dialogs/dialog/Dialog'
+import { FormItem } from '../../components/slots/form-item/FormItem'
+import { Input } from '../../components/inputs/input/Input'
 import texts from '../../styles/texts.module.scss'
 
-const onBoarding = () => {
+const onBoardingSample = () => {
   return (
     <>
       <div className="dialog__cover">
@@ -25,6 +27,47 @@ const onBoarding = () => {
         </p>
       </div>
     </>
+  )
+}
+
+const FormSample = () => {
+  return (
+    <div className="dialog__form">
+      <div className="dialog__form__item">
+        <FormItem
+          label="Full Name"
+          id="type-fullname"
+          shouldFill
+        >
+          <Input
+            type="TEXT"
+          />
+        </FormItem>
+      </div>
+      <div className="dialog__form__item">
+        <FormItem
+          label="Email"
+          id="type-email"
+          shouldFill
+        >
+          <Input
+            type="TEXT"
+          />
+        </FormItem>
+      </div>
+      <div className="dialog__form__item">
+        <FormItem
+          label="Message"
+          id="type-message"
+          shouldFill
+        >
+          <Input
+            type="LONG_TEXT"
+            placeholder="Type your message here"
+          />
+        </FormItem>
+      </div>
+    </div>
   )
 }
 
@@ -57,7 +100,7 @@ export const SingleMessage: Story = {
       state: false,
       action: fn(),
     },
-    children: onBoarding(),
+    children: onBoardingSample(),
     onClose: fn(),
   },
   argTypes: {
@@ -86,7 +129,7 @@ export const SingleMessage: Story = {
           action: () => onSelect(),
         }}
       >
-        {onBoarding()}
+        {onBoardingSample()}
       </Dialog>
     )
   },
@@ -106,7 +149,25 @@ export const MultipleMessage: Story = {
       },
     },
     indicator: '3 of 3',
-    children: onBoarding(),
+    children: onBoardingSample(),
+    onClose: fn(),
+  },
+  argTypes: {
+    select: { control: false },
+    onClose: { control: false },
+  },
+}
+
+export const Form: Story = {
+  args: {
+    title: 'What do you want to say?',
+    actions: {
+      primary: {
+        label: 'Submit',
+        action: fn(),
+      },
+    },
+    children: FormSample(),
     onClose: fn(),
   },
   argTypes: {

@@ -37,6 +37,19 @@
   & .dialog__cover--padding {
     padding: var(--size-xsmall);
   }
+
+  & .dialog__form {
+    padding: var(--size-xxsmall) 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--size-xxxsmall);
+
+    & > .dialog__form__item {
+      padding: 0 var(--size-xsmall);
+    }
+  }
 }
 
 @media (max-width: 460px) {
