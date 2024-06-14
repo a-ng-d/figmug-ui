@@ -107,18 +107,20 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
 
   findSelectedOption = (options: Array<DropdownOption>): string => {
     const { selected } = this.props
-    let label = ''
+    const label: Array<string> = []
 
-    options.forEach((option) => {
-      if (option.value === selected) label = option.label ?? ''
-      if (
-        option.children?.find((child) => child.value === selected) !== undefined
-      )
-        label =
-          option.children?.find((child) => child.value === selected)?.label ??
-          ''
+    selected.split(', ').forEach((value) => {
+      options.forEach((option) => {
+        if (option.value === value) label.push(option.label ?? '')
+        if (
+          option.children?.find((child) => child.value === value) !== undefined
+        )
+          label.push(
+            option.children?.find((child) => child.value === value)?.label ?? ''
+          )
+      })
     })
-    return label
+    return label.join(', ')
   }
 
   render() {

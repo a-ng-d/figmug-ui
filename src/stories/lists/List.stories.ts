@@ -65,10 +65,10 @@ export const FourOptionsList: Story = {
         action: fn(),
       },
     ],
+    selected: 'OPTION_1',
   },
   argTypes: {
     direction: { control: false },
-    selected: { control: false },
   },
 }
 
