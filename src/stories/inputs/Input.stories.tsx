@@ -128,6 +128,7 @@ export const ShortText: Story = {
     feature: 'TYPE_SHORT_TEXT',
     state: 'DEFAULT',
     isAutoFocus: false,
+    isClearable: false,
     isBlocked: false,
     isDisabled: false,
     isNew: false,

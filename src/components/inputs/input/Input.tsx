@@ -1,6 +1,7 @@
 import React from 'react'
 import type { IconList } from 'src/types/icon.types'
 import { Chip } from '../../tags/chip/Chip'
+import { Button } from '../../actions/button/Button'
 import { Icon } from '../../assets/icon/Icon'
 import './input.scss'
 
@@ -17,6 +18,7 @@ export interface InputProps {
   step?: string
   feature?: string
   isAutoFocus?: boolean
+  isClearable?: boolean
   isBlocked?: boolean
   isDisabled?: boolean
   isNew?: boolean
@@ -38,6 +40,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     icon: undefined,
     state: 'DEFAULT',
     step: '1',
+    isClearable: false,
     isBlocked: false,
     isDisabled: false,
     isNew: false,
@@ -322,6 +325,7 @@ export class Input extends React.Component<InputProps, InputStates> {
       charactersLimit,
       feature,
       isAutoFocus,
+      isClearable,
       isBlocked,
       isDisabled,
       isNew,
@@ -371,8 +375,16 @@ export class Input extends React.Component<InputProps, InputStates> {
           onFocus={onFocus}
           onBlur={onBlur}
           ref={this.inputRef}
-        />
+        >
+        </input>
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+        {isClearable && inputValue.length > 0 ? (
+          <Button
+            type="icon"
+            icon="close"
+            action={() => this.setState({ inputValue: '' })}
+          />
+        ) : null}
       </div>
     )
   }

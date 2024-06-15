@@ -11,6 +11,7 @@ export interface DropdownProps {
   selected: string
   parentClassName?: string
   alignment?: 'RIGHT' | 'LEFT' | 'FILL'
+  isDisabled?: boolean
   isNew?: boolean
 }
 
@@ -26,6 +27,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   static defaultProps: Partial<DropdownProps> = {
     alignment: 'LEFT',
     isNew: false,
+    isDisabled: false,
   }
 
   constructor(props: DropdownProps) {
@@ -124,7 +126,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   }
 
   render() {
-    const { id, alignment, options, selected, isNew } = this.props
+    const { id, alignment, options, selected, isNew, isDisabled } = this.props
     const { isMenuOpen } = this.state
 
     return (
@@ -138,6 +140,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             if (alignment === 'RIGHT') return 'select-menu--right'
             return 'select-menu--fill'
           })(),
+          isDisabled ? 'select-menu--disabled' : null,
         ]
           .filter((n) => n)
           .join(' ')}
@@ -152,6 +155,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             .filter((n) => n)
             .join(' ')}
           tabIndex={0}
+          disabled={isDisabled}
           onKeyDown={(e) => {
             if (e.key === ' ' || e.key === 'Enter') return this.onOpenMenu?.()
             if (e.key === 'Escape') return (e.target as HTMLElement).blur()

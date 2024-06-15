@@ -23,6 +23,7 @@ export const SingleSelection: Story = {
     selected: 'OPTION_1',
     alignment: 'LEFT',
     isNew: false,
+    isDisabled: false,
   },
   argTypes: {
     parentClassName: { control: false },
@@ -133,6 +134,7 @@ export const MultipleSelection: Story = {
     selected: 'ANY',
     alignment: 'LEFT',
     isNew: false,
+    isDisabled: false,
   },
   argTypes: {
     parentClassName: { control: false },
