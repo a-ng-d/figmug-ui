@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    name: Test,  Build and Publish
+    name: Test, Build and Publish
     runs-on: ubuntu-latest
 
     steps:
