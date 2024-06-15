@@ -72,7 +72,7 @@ export class List extends React.Component<ListProps, ListStates> {
         key={`menu-option-${index}`}
         className={[
           'select-menu__item',
-          selected?.includes(option.value ?? '')
+          selected?.split(', ').filter((value) => value === option.value).length === 1
             ? 'select-menu__item--selected'
             : null,
           option.isBlocked ? 'select-menu__item--blocked' : null,
@@ -160,7 +160,7 @@ export class List extends React.Component<ListProps, ListStates> {
         key={`menu-suboption-${index}`}
         className={[
           'select-menu__item',
-          selected?.includes(option.value ?? '')
+          selected?.split(', ').filter((value) => value === option.value).length === 1
             ? 'select-menu__item--selected'
             : null,
           option.isBlocked ? 'select-menu__item--blocked' : null,

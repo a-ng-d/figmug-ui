@@ -12,4 +12,9 @@
   &.bar--text-only {
     align-items: baseline;
   }
+
+  &.bar__left,
+  &.bar__right {
+    flex: 1;
+  }
 }
