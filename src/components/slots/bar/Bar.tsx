@@ -3,6 +3,7 @@ import './bar.scss'
 
 export interface BarProps {
   rightPart?: React.ReactElement
+  soloPart?: React.ReactElement
   leftPart?: React.ReactElement
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
   padding?: string
@@ -35,7 +36,7 @@ export class Bar extends React.Component<BarProps> {
   }
 
   render() {
-    const { isCompact, isOnlyText, border, padding, leftPart, rightPart } =
+    const { isCompact, isOnlyText, border, padding, leftPart, soloPart, rightPart } =
       this.props
 
     return (
@@ -54,6 +55,7 @@ export class Bar extends React.Component<BarProps> {
         }}
       >
         <div className="bar__left">{leftPart}</div>
+        {soloPart !== undefined && <div className="bar__solo">{soloPart}</div>}
         <div className="bar__right">{rightPart}</div>
       </div>
     )

@@ -12,4 +12,8 @@
   &.bar--text-only {
     align-items: baseline;
   }
+
+  & .bar__solo {
+    flex: 1;
+  }
 }
