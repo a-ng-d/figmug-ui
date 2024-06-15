@@ -13,8 +13,8 @@
     align-items: baseline;
   }
 
-  &.bar__left,
-  &.bar__right {
+  & .bar__left,
+  & .bar__right {
     flex: 1;
   }
 }
