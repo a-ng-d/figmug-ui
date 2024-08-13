@@ -174,6 +174,7 @@ export const LongText: Story = {
     value: '',
     feature: 'TYPE_SHORT_TEXT',
     state: 'DEFAULT',
+    isGrowing: false,
     isAutoFocus: false,
     isBlocked: false,
     isDisabled: false,
