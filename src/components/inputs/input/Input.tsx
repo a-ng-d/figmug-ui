@@ -46,7 +46,6 @@ export class Input extends React.Component<InputProps, InputStates> {
     isDisabled: false,
     isNew: false,
     isAutoFocus: false,
-    isFlex: false,
   }
 
   constructor(props: InputProps) {
