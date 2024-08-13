@@ -83,6 +83,7 @@ export const NumericStepper: Story = {
     isBlocked: false,
     isDisabled: false,
     isNew: false,
+    isFlex: false,
   },
   argTypes: {
     type: { control: false },

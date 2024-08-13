@@ -22,6 +22,7 @@ export interface InputProps {
   isBlocked?: boolean
   isDisabled?: boolean
   isNew?: boolean
+  isFlex?: boolean
   onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onFocus?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onBlur?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
@@ -45,6 +46,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     isDisabled: false,
     isNew: false,
     isAutoFocus: false,
+    isFlex: false,
   }
 
   constructor(props: InputProps) {
@@ -265,6 +267,7 @@ export class Input extends React.Component<InputProps, InputStates> {
       isBlocked,
       isDisabled,
       isNew,
+      isFlex,
       onFocus,
       onBlur,
     } = this.props
@@ -277,6 +280,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           'input',
           'recharged',
           icon !== undefined ? 'input--with-icon' : null,
+          isFlex ? 'input--flex' : null,
           isBlocked ? 'input--blocked' : null,
         ]
           .filter((n) => n)
@@ -295,7 +299,9 @@ export class Input extends React.Component<InputProps, InputStates> {
           id={id}
           data-feature={feature}
           type="number"
-          className="input__field"
+          className={['input__field', isFlex ? 'input__field--flex' : null]
+            .filter((n) => n)
+            .join(' ')}
           value={inputValue}
           min={min}
           max={max}
@@ -375,8 +381,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onFocus={onFocus}
           onBlur={onBlur}
           ref={this.inputRef}
-        >
-        </input>
+        ></input>
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
         {isClearable && inputValue.length > 0 ? (
           <Button
