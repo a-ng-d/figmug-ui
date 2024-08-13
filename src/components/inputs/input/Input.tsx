@@ -19,11 +19,11 @@ export interface InputProps {
   feature?: string
   isAutoFocus?: boolean
   isGrowing?: boolean
+  isFlex?: boolean
   isClearable?: boolean
   isBlocked?: boolean
   isDisabled?: boolean
   isNew?: boolean
-  isFlex?: boolean
   onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onFocus?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onBlur?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
@@ -49,6 +49,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     isNew: false,
     isAutoFocus: false,
     isGrowing: false,
+    isFlex: false,
   }
 
   constructor(props: InputProps) {
