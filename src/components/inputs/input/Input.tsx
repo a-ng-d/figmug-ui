@@ -18,6 +18,7 @@ export interface InputProps {
   step?: string
   feature?: string
   isAutoFocus?: boolean
+  isGrowing?: boolean
   isClearable?: boolean
   isBlocked?: boolean
   isDisabled?: boolean
@@ -30,6 +31,7 @@ export interface InputProps {
 
 export interface InputStates {
   inputValue: string
+  inputHeight?: string
 }
 
 export class Input extends React.Component<InputProps, InputStates> {
@@ -45,6 +47,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     isDisabled: false,
     isNew: false,
     isAutoFocus: false,
+    isGrowing: false,
   }
 
   constructor(props: InputProps) {
@@ -54,6 +57,15 @@ export class Input extends React.Component<InputProps, InputStates> {
     }),
       (this.inputRef = React.createRef())
     this.textareaRef = React.createRef()
+  }
+
+  componentDidMount(): void {
+    const { isGrowing } = this.props
+    if (isGrowing && this.textareaRef.current) {
+      this.setState({
+        inputHeight: `${this.textareaRef.current.scrollHeight + 1}px`,
+      })
+    }
   }
 
   componentDidUpdate(prevProps: InputProps) {
@@ -109,6 +121,7 @@ export class Input extends React.Component<InputProps, InputStates> {
 
     this.setState({
       inputValue: e.target.value,
+      inputHeight: `${e.target.scrollHeight + 1}px`,
     })
     if (onChange !== undefined) onChange(e)
   }
@@ -375,8 +388,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onFocus={onFocus}
           onBlur={onBlur}
           ref={this.inputRef}
-        >
-        </input>
+        ></input>
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
         {isClearable && inputValue.length > 0 ? (
           <Button
@@ -396,6 +408,7 @@ export class Input extends React.Component<InputProps, InputStates> {
       placeholder,
       feature,
       isAutoFocus,
+      isGrowing,
       isBlocked,
       isDisabled,
       isNew,
@@ -422,6 +435,9 @@ export class Input extends React.Component<InputProps, InputStates> {
           ]
             .filter((n) => n)
             .join(' ')}
+          style={{
+            height: isGrowing ? this.state.inputHeight : 'auto',
+          }}
           placeholder={placeholder}
           value={inputValue}
           disabled={isDisabled || isBlocked}
