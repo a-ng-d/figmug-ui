@@ -32,7 +32,6 @@ export interface InputProps {
 
 export interface InputStates {
   inputValue: string
-  inputHeight?: string
 }
 
 export class Input extends React.Component<InputProps, InputStates> {
@@ -62,11 +61,10 @@ export class Input extends React.Component<InputProps, InputStates> {
   }
 
   componentDidMount(): void {
-    const { isGrowing } = this.props
-    if (isGrowing && this.textareaRef.current) {
-      this.setState({
-        inputHeight: `${this.textareaRef.current.scrollHeight + 1}px`,
-      })
+    if (this.textareaRef.current) {
+      this.textareaRef.current.style.height = 'auto'
+      if (this.props.isGrowing)
+        this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight}px`
     }
   }
 
@@ -78,6 +76,11 @@ export class Input extends React.Component<InputProps, InputStates> {
     }
     if (prevProps.type === 'CODE' && this.textareaRef.current !== null)
       this.textareaRef.current.scrollTop = 0
+    if (this.textareaRef.current) {
+      this.textareaRef.current.style.height = 'auto'
+      if (this.props.isGrowing)
+        this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight}px`
+    }
   }
 
   // Handlers
@@ -123,7 +126,6 @@ export class Input extends React.Component<InputProps, InputStates> {
 
     this.setState({
       inputValue: e.target.value,
-      inputHeight: `${e.target.scrollHeight + 1}px`,
     })
     if (onChange !== undefined) onChange(e)
   }
@@ -414,7 +416,6 @@ export class Input extends React.Component<InputProps, InputStates> {
       placeholder,
       feature,
       isAutoFocus,
-      isGrowing,
       isBlocked,
       isDisabled,
       isNew,
@@ -441,9 +442,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           ]
             .filter((n) => n)
             .join(' ')}
-          style={{
-            height: isGrowing ? this.state.inputHeight : 'auto',
-          }}
+          rows={1}
           placeholder={placeholder}
           value={inputValue}
           disabled={isDisabled || isBlocked}
