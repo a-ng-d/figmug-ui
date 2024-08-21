@@ -13,7 +13,7 @@ export type IconList =
   | 'caret-down'
   | 'caret-left'
   | 'caret-right'
-  | 'aret-up'
+  | 'caret-up'
   | 'check'
   | 'close'
   | 'component'

@@ -51,9 +51,12 @@
       outline-offset: -2px;
     }
 
-    &[type='color'] ~ input,
     &[type='number'] {
       width: 80px;
+    }
+
+    &[type='color'] ~ input {
+      width: 96px;
     }
 
     &[type='number']::-webkit-inner-spin-button {
