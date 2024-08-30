@@ -7,25 +7,31 @@
   cursor: default;
   user-select: none;
 
-  &.form-item--fill label {
-    flex: 0 1 96px;
-  }
+  &.form-item--fill {
+    label {
+      flex: 0 1 96px;
+    }
 
-  .input,
-  .textarea,
-  .select-menu {
-    flex: 1;
+    .form-item__input {
+      flex: 1;
+    }
+
+    .input,
+    .textarea,
+    .select-menu {
+      flex: 1;
+    }
   }
 
   .form-item__helper .onboarding-tip {
     padding: 0;
   }
 
-  .form-item--blocked {
+  &.form-item--blocked {
     pointer-events: none;
   }
 
-  .form-item--blocked label {
+  &.form-item--blocked label {
     color: var(--figma-color-text-disabled);
   }
 }

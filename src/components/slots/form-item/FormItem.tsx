@@ -47,7 +47,7 @@ export const FormItem = (props: FormItemProps) => {
             {label}
           </label>
         ) : null}
-        {children}
+        <div className="form-item__input">{children}</div>
         {isNew ? <Chip>New</Chip> : null}
       </div>
       {helper !== undefined ? (
