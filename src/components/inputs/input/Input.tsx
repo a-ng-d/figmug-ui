@@ -30,6 +30,7 @@ export interface InputProps {
   onFocus?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onBlur?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onConfirm?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  onCleared?: (value: string) => void
 }
 
 export interface InputStates {
@@ -362,6 +363,7 @@ export class Input extends React.Component<InputProps, InputStates> {
       isNew,
       onFocus,
       onBlur,
+      onCleared,
     } = this.props
 
     const { inputValue } = this.state
@@ -414,7 +416,10 @@ export class Input extends React.Component<InputProps, InputStates> {
           <Button
             type="icon"
             icon="close"
-            action={() => this.setState({ inputValue: '' })}
+            action={() => {
+              this.setState({ inputValue: '' })
+              if (onCleared !== undefined) onCleared('')
+            }}
           />
         ) : null}
       </div>
