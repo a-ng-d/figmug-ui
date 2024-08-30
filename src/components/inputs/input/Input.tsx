@@ -9,6 +9,7 @@ export interface InputProps {
   id?: string
   type: 'NUMBER' | 'COLOR' | 'TEXT' | 'LONG_TEXT' | 'CODE'
   icon?: { type: 'LETTER' | 'PICTO'; value: IconList }
+  unit?: '%' | '°'
   state?: 'DEFAULT' | 'ERROR'
   placeholder?: string
   value: string
@@ -274,6 +275,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     const {
       id,
       icon,
+      unit,
       min,
       max,
       step,
@@ -332,6 +334,9 @@ export class Input extends React.Component<InputProps, InputStates> {
           onBlur={onBlur}
           ref={this.inputRef}
         />
+        {unit !== undefined ? (
+          <span className="type input__unit">{unit}</span>
+        ) : null}
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
       </div>
     )

@@ -139,6 +139,13 @@
     }
   }
 
+  .input__unit {
+    position: absolute;
+    right: 0;
+    color: var(--figma-color-text-disabled);
+    padding: 0 var(--size-xxsmall);
+  }
+
   /* Text area */
   .textarea {
     --black8: var(--figma-color-text);
