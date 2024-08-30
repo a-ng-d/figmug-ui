@@ -16,8 +16,9 @@
       flex: 1;
     }
 
-    .input,
-    .textarea,
+    &.input--short-text,
+    &.input--long-text,
+    &.input--code,
     .select-menu {
       flex: 1;
     }

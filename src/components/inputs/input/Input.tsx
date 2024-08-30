@@ -230,6 +230,7 @@ export class Input extends React.Component<InputProps, InputStates> {
         className={[
           'input',
           'recharged',
+          'input--color',
           'input--with-icon',
           isBlocked ? 'input--blocked' : null,
         ]
@@ -296,6 +297,7 @@ export class Input extends React.Component<InputProps, InputStates> {
         className={[
           'input',
           'recharged',
+          'input--number',
           icon !== undefined ? 'input--with-icon' : null,
           isFlex ? 'input--flex' : null,
           isBlocked ? 'input--blocked' : null,
@@ -366,6 +368,7 @@ export class Input extends React.Component<InputProps, InputStates> {
         className={[
           'input',
           'recharged',
+          'input--short-text',
           icon === undefined ? null : 'input--with-icon',
           isBlocked ? 'input--blocked' : null,
         ]
@@ -432,7 +435,12 @@ export class Input extends React.Component<InputProps, InputStates> {
 
     return (
       <div
-        className={['input', 'recharged', isBlocked ? 'input--blocked' : null]
+        className={[
+          'input',
+          'recharged',
+          'input--long-text',
+          isBlocked ? 'input--blocked' : null,
+        ]
           .filter((n) => n)
           .join(' ')}
       >
@@ -469,7 +477,12 @@ export class Input extends React.Component<InputProps, InputStates> {
 
     return (
       <div
-        className={['input', 'recharged', isBlocked ? 'input--blocked' : null]
+        className={[
+          'input',
+          'recharged',
+          'input--code',
+          isBlocked ? 'input--blocked' : null,
+        ]
           .filter((n) => n)
           .join(' ')}
       >
