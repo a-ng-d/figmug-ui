@@ -108,6 +108,11 @@
     &--flex {
       width: 100% !important;
     }
+
+    &--no-frame, &--no-frame:focus {
+      --black1: transparent !important;
+      --blue: transparent !important;
+    }
     
     &::placeholder {
       color: var(--figma-color-text-secondary) !important;

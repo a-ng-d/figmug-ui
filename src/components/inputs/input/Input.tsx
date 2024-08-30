@@ -22,6 +22,7 @@ export interface InputProps {
   isGrowing?: boolean
   isFlex?: boolean
   isClearable?: boolean
+  isFramed?: boolean
   isBlocked?: boolean
   isDisabled?: boolean
   isNew?: boolean
@@ -44,6 +45,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     state: 'DEFAULT',
     step: '1',
     isClearable: false,
+    isFramed: true,
     isBlocked: false,
     isDisabled: false,
     isNew: false,
@@ -354,6 +356,7 @@ export class Input extends React.Component<InputProps, InputStates> {
       feature,
       isAutoFocus,
       isClearable,
+      isFramed,
       isBlocked,
       isDisabled,
       isNew,
@@ -390,6 +393,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           type="text"
           className={[
             'input__field',
+            !isFramed ? 'input__field--no-frame' : null,
             state === 'ERROR' ? 'input__field--error' : null,
           ]
             .filter((n) => n)

@@ -126,6 +126,7 @@ export const ShortText: Story = {
     state: 'DEFAULT',
     isAutoFocus: false,
     isClearable: false,
+    isFramed: true,
     isBlocked: false,
     isDisabled: false,
     isNew: false,
