@@ -16,11 +16,16 @@
       flex: 1;
     }
 
-    &.input--short-text,
-    &.input--long-text,
-    &.input--code,
+    .input--short-text,
+    .input--long-text,
+    .input--code,
     .select-menu {
       flex: 1;
+    }
+
+    .input--number,
+    .input--color {
+      width: fit-content;
     }
   }
 
