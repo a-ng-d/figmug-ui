@@ -113,6 +113,14 @@
       --black1: transparent !important;
       --blue: transparent !important;
     }
+
+    &--clearable {
+      padding-right: var(--size-medium);
+    }
+
+    &--unit {
+      padding-right: var(--size-xsmall);
+    }
     
     &::placeholder {
       color: var(--figma-color-text-secondary) !important;
@@ -149,6 +157,11 @@
     right: 0;
     color: var(--figma-color-text-disabled);
     padding: 0 var(--size-xxsmall);
+  }
+
+  .input__clear {
+    position: absolute;
+    right: -1px;
   }
 
   /* Text area */

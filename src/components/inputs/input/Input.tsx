@@ -68,7 +68,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     if (this.textareaRef.current) {
       this.textareaRef.current.style.height = 'auto'
       if (this.props.isGrowing)
-        this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight}px`
+        this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight + 2}px`
     }
   }
 
@@ -83,7 +83,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     if (this.textareaRef.current) {
       this.textareaRef.current.style.height = 'auto'
       if (this.props.isGrowing)
-        this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight}px`
+        this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight + 2}px`
     }
   }
 
@@ -321,7 +321,11 @@ export class Input extends React.Component<InputProps, InputStates> {
           id={id}
           data-feature={feature}
           type="number"
-          className={['input__field', isFlex ? 'input__field--flex' : null]
+          className={[
+            'input__field',
+            isFlex ? 'input__field--flex' : null,
+            unit !== undefined ? 'input__field--unit' : null,
+          ]
             .filter((n) => n)
             .join(' ')}
           value={inputValue}
@@ -396,6 +400,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           className={[
             'input__field',
             !isFramed ? 'input__field--no-frame' : null,
+            isClearable ? 'input__field--clearable' : null,
             state === 'ERROR' ? 'input__field--error' : null,
           ]
             .filter((n) => n)
@@ -413,14 +418,16 @@ export class Input extends React.Component<InputProps, InputStates> {
         ></input>
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
         {isClearable && inputValue.length > 0 ? (
-          <Button
-            type="icon"
-            icon="close"
-            action={() => {
-              this.setState({ inputValue: '' })
-              if (onCleared !== undefined) onCleared('')
-            }}
-          />
+          <div className="input__clear">
+            <Button
+              type="icon"
+              icon="close"
+              action={() => {
+                this.setState({ inputValue: '' })
+                if (onCleared !== undefined) onCleared('')
+              }}
+            />
+          </div>
         ) : null}
       </div>
     )
