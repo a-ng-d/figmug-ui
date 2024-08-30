@@ -88,12 +88,8 @@ export const NumericStepper: Story = {
   argTypes: {
     type: { control: false },
     placeholder: { control: false },
-    value: { control: 'number' },
     state: { control: false },
     charactersLimit: { control: false },
-    min: { control: 'number' },
-    max: { control: 'number' },
-    step: { control: 'number' },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
