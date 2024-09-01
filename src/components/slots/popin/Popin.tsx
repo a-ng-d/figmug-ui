@@ -2,9 +2,11 @@ import { Button } from '../../actions/button/Button'
 import { Select } from '../../inputs/select/Select'
 import texts from '../../../styles/texts.module.scss'
 import './popin.scss'
+import { Chip } from '../../tags/chip/Chip'
 
 export interface PopInProps {
   title: string
+  tag?: string
   actions: {
     primary?: {
       label: string
@@ -28,12 +30,15 @@ export interface PopInProps {
 }
 
 export const PopIn = (props: PopInProps) => {
-  const { title, actions, select, indicator, children, onClose } = props
+  const { title, actions, select, indicator, tag, children, onClose } = props
 
   return (
     <div className="popin recharged">
       <div className="popin__header">
-        <p className={`${texts.type} type type--large type--bold`}>{title}</p>
+        <p className={`${texts.type} type type--large type--bold`}>
+          {title}
+          {tag != undefined && <Chip>{tag}</Chip>}
+        </p>
         <Button
           type="icon"
           icon="close"
