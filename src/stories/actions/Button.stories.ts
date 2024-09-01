@@ -179,6 +179,7 @@ export const Icon: Story = {
     feature: 'ACTION',
     isLoading: false,
     isDisabled: false,
+    isNew: false,
   },
   argTypes: {
     type: { control: false },
@@ -187,7 +188,6 @@ export const Icon: Story = {
     state: { control: false },
     hasMultipleActions: { control: false },
     isBlocked: { control: false },
-    isNew: { control: false },
     isLink: { control: false },
     url: { control: false },
   },

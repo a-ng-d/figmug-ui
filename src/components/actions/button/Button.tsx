@@ -134,6 +134,7 @@ export class Button extends React.Component<ButtonProps> {
       state,
       isLoading,
       isDisabled,
+      isNew,
       action,
       icon,
     } = this.props
@@ -146,6 +147,7 @@ export class Button extends React.Component<ButtonProps> {
           'icon-button',
           'recharged',
           state !== undefined && state !== '' ? `icon-button--${state}` : null,
+          isNew ? 'icon-button--new' : null,
           isLoading ? 'button--loading' : null,
         ]
           .filter((n) => n)

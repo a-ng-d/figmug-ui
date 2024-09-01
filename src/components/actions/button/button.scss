@@ -156,6 +156,17 @@
   &.icon-button--selected:hover {
     background-color: var(--figma-color-bg-brand);
   }
+
+  &.icon-button--new:after {
+    content: '';
+    position: absolute;
+    width: var(--size-xxxsmall);
+    height: var(--size-xxxsmall);
+    border-radius: var(--border-radius-small);
+    background-color: var(--figma-color-text);
+    top: 2px;
+    right: 2px;
+  }
 }
 
 .compact-button.recharged {
