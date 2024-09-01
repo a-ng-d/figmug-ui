@@ -14,6 +14,7 @@ export interface MenuProps {
   selected?: string
   state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
   alignment?: 'TOP_RIGHT' | 'TOP_LEFT' | 'BOTTOM_RIGHT' | 'BOTTOM_LEFT'
+  isNew?: boolean
 }
 
 export interface MenuStates {
@@ -26,6 +27,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
     options: [],
     state: 'DEFAULT',
     alignment: 'BOTTOM_LEFT',
+    isNew: false,
   }
 
   constructor(props: MenuProps) {
@@ -58,8 +60,17 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
   }
 
   render() {
-    const { id, type, label, state, alignment, icon, options, selected } =
-      this.props
+    const {
+      id,
+      type,
+      label,
+      state,
+      alignment,
+      icon,
+      options,
+      selected,
+      isNew,
+    } = this.props
     const { isMenuOpen } = this.state
 
     return (
@@ -80,6 +91,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
             state={isMenuOpen ? 'selected' : ''}
             isLoading={state === 'LOADING'}
             isDisabled={state === 'DISABLED'}
+            isNew={isNew}
             action={() => {
               this.setState({
                 isMenuOpen: !isMenuOpen,
