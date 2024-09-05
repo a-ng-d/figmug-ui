@@ -23,6 +23,11 @@
     gap: 0 var(--size-xxsmall);
   }
 
+  .popin__title {
+    display: flex;
+    align-items: center;
+  }
+
   .popin__content {
     flex: 1;
     display: flex;

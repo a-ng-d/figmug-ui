@@ -35,10 +35,10 @@ export const PopIn = (props: PopInProps) => {
   return (
     <div className="popin recharged">
       <div className="popin__header">
-        <p className={`${texts.type} type type--large type--bold`}>
-          {title}
+        <div className="popin__title">
+          <p className={`${texts.type} type type--large type--bold`}>{title}</p>
           {tag != undefined && <Chip>{tag}</Chip>}
-        </p>
+        </div>
         <Button
           type="icon"
           icon="close"
