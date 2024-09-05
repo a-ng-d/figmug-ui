@@ -52,7 +52,7 @@
     }
 
     &[type='number'] {
-      width: 80px;
+      width: 96px;
     }
 
     &[type='color'] ~ input {
@@ -119,7 +119,7 @@
     }
 
     &--unit {
-      padding-right: var(--size-xsmall);
+      padding-right: var(--size-small);
     }
     
     &::placeholder {
@@ -150,13 +150,6 @@
     &:disabled[type='color' i] {
       opacity: 0.25;
     }
-  }
-
-  .input__unit {
-    position: absolute;
-    right: 0;
-    color: var(--figma-color-text-disabled);
-    padding: 0 var(--size-xxsmall);
   }
 
   .input__clear {

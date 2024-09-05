@@ -308,44 +308,72 @@ export class Input extends React.Component<InputProps, InputStates> {
           .filter((n) => n)
           .join(' ')}
       >
-        {icon !== undefined ? (
-          <Icon
-            type={icon?.type}
-            iconName={icon?.value}
-            iconLetter={icon?.value}
-            iconColor="var(--figma-color-text-disabled)"
-          />
-        ) : null}
-        <input
-          role="numeric-stepper"
-          id={id}
-          data-feature={feature}
-          type="number"
-          className={[
-            'input__field',
-            isFlex ? 'input__field--flex' : null,
-            unit !== undefined ? 'input__field--unit' : null,
-          ]
-            .filter((n) => n)
-            .join(' ')}
-          value={inputValue}
-          min={min}
-          max={max}
-          step={step}
-          disabled={isDisabled || isBlocked}
-          autoFocus={isAutoFocus}
-          onKeyDown={this.onValidNumber}
-          onChange={this.onChangeNumber}
-          onFocus={(e) => {
-            e.target.select()
-            if (typeof onFocus === 'function') onFocus(e)
+        <div
+          style={{
+            position: 'relative',
           }}
-          onBlur={onBlur}
-          ref={this.inputRef}
-        />
-        {unit !== undefined ? (
-          <span className="type input__unit">{unit}</span>
-        ) : null}
+        >
+          {icon !== undefined ? (
+            <div
+              style={{
+                position: 'absolute',
+                left: '0',
+                top: '0',
+                pointerEvents: 'none',
+              }}
+            >
+              <Icon
+                type={icon?.type}
+                iconName={icon?.value}
+                iconLetter={icon?.value}
+                iconColor="var(--figma-color-text-disabled)"
+              />
+            </div>
+          ) : null}
+          <input
+            role="numeric-stepper"
+            id={id}
+            data-feature={feature}
+            type="number"
+            className={[
+              'input__field',
+              isFlex ? 'input__field--flex' : null,
+              unit !== undefined ? 'input__field--unit' : null,
+            ]
+              .filter((n) => n)
+              .join(' ')}
+            value={inputValue}
+            min={min}
+            max={max}
+            step={step}
+            disabled={isDisabled || isBlocked}
+            autoFocus={isAutoFocus}
+            onKeyDown={this.onValidNumber}
+            onChange={this.onChangeNumber}
+            onFocus={(e) => {
+              e.target.select()
+              if (typeof onFocus === 'function') onFocus(e)
+            }}
+            onBlur={onBlur}
+            ref={this.inputRef}
+          />
+          {unit !== undefined ? (
+            <div
+              style={{
+                position: 'absolute',
+                right: '30px',
+                top: '0',
+                pointerEvents: 'none',
+              }}
+            >
+              <Icon
+                type={'LETTER'}
+                iconLetter={unit}
+                iconColor="var(--figma-color-text-disabled)"
+              />
+            </div>
+          ) : null}
+        </div>
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
       </div>
     )
