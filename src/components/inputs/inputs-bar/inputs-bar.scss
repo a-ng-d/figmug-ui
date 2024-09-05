@@ -16,10 +16,8 @@
       width: var(--size-xlarge);
       margin: 0 -0.5px;
 
-      input[type='color'] ~ input,
-      input[type='number'] {
-        max-width: unset;
-        min-width: unset;
+      .input__field, .input__wrapper {
+        width: 100%;
       }
     }
 

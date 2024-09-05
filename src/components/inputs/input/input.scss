@@ -69,6 +69,10 @@
   }
 
   /* Input */
+  .input__wrapper {
+    position: relative;
+  }
+
   .input__field {
     --black8: var(--figma-color-text);
     --white: var(--figma-color-bg);
@@ -146,6 +150,7 @@
       --black8: var(--figma-color-text);
       --black1: var(--figma-color-border);
       background-image: none;
+      border-color: var(--figma-color-border);
     }
     &:disabled[type='color' i] {
       opacity: 0.25;

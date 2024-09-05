@@ -308,11 +308,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           .filter((n) => n)
           .join(' ')}
       >
-        <div
-          style={{
-            position: 'relative',
-          }}
-        >
+        <div className="input__wrapper">
           {icon !== undefined ? (
             <div
               style={{
