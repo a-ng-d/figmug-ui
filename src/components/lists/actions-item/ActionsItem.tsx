@@ -4,7 +4,7 @@ import Thumbnail from '../../assets/thumbnail/Thumbnail'
 import { Chip } from '../../tags/chip/Chip'
 import './actions-item.scss'
 
-interface ActionsItemProps {
+export interface ActionsItemProps {
   id: string
   src?: string
   name: string
@@ -25,78 +25,81 @@ interface ActionsItemProps {
     React.KeyboardEventHandler<HTMLLIElement>
 }
 
-interface ActionsItemStates {
-  backgroundStyle: string
-}
-
-export default class ActionsItem extends React.Component<
-  ActionsItemProps,
-  ActionsItemStates
-> {
+export class ActionsItem extends React.Component<ActionsItemProps> {
   static defaultProps: Partial<ActionsItemProps> = {
     isInteractive: false,
   }
 
   render() {
+    const {
+      id,
+      src,
+      name,
+      indicator,
+      description,
+      subdescription,
+      complement,
+      user,
+      actions,
+      isInteractive,
+      action,
+    } = this.props
     return (
       <li
         className={[
           'actions-item',
-          this.props.isInteractive ? 'actions-item--interactive' : null,
+          isInteractive ? 'actions-item--interactive' : null,
         ]
           .filter((n) => n)
           .join(' ')}
-        data-id={this.props.id}
-        tabIndex={this.props.isInteractive ? 0 : -1}
-        onMouseDown={this.props.isInteractive ? this.props.action : undefined}
+        data-id={id}
+        tabIndex={isInteractive ? 0 : -1}
+        onMouseDown={isInteractive ? action : undefined}
         onKeyDown={(e) => {
-          if ((e.key === ' ' || e.key === 'Enter') && this.props.isInteractive)
-            this.props.action?.(e)
-          if (e.key === 'Escape' && this.props.isInteractive)
+          if ((e.key === ' ' || e.key === 'Enter') && isInteractive) action?.(e)
+          if (e.key === 'Escape' && isInteractive)
             (e.target as HTMLElement).blur()
         }}
       >
-        {this.props.src !== undefined && (
+        {src !== undefined && (
           <div className="actions-item__asset">
-            <Thumbnail src={this.props.src} />
+            <Thumbnail src={src} />
           </div>
         )}
         <div className="actions-item__content">
           <div>
             <div className={`${texts.type} type--large`}>
-              {this.props.name}
-              {this.props.indicator !== undefined && (
-                <Chip state={this.props.indicator.status}>
-                  {this.props.indicator.label}
-                </Chip>
+              {name}
+              {indicator !== undefined && (
+                <Chip state={indicator.status}>{indicator.label}</Chip>
               )}
             </div>
-            <div className={`${texts.type} type`}>{this.props.description}</div>
+            <div className={`${texts.type} type`}>{description}</div>
             <div
               className={`${texts.type} ${texts['type--secondary']} type`}
               style={{
                 marginTop: '2px',
               }}
             >
-              {this.props.subdescription}
+              {subdescription}
             </div>
           </div>
-          {this.props.complement !== undefined && this.props.complement}
-          {this.props.user !== undefined && (
+          {complement !== undefined && complement}
+          {user !== undefined && (
             <div className="actions-item__user">
-              {this.props.user.avatar !== undefined && (
+              {user.avatar !== undefined && (
                 <div className="actions-item__user__avatar">
-                  <img src={this.props.user.avatar} />
+                  <img src={user.avatar} />
                 </div>
               )}
               <div className={`${texts.type} ${texts['type--secondary']} type`}>
-                {this.props.user.name}
+                {user.name}
               </div>
             </div>
           )}
         </div>
         <div className="actions-item__actions">
-          {this.props.actions !== undefined && this.props.actions}
+          {actions !== undefined && actions}
         </div>
       </li>
     )
