@@ -53,5 +53,6 @@ li.actions-item {
   .actions-item__actions {
     display: flex;
     gap: var(--size-xxsmall);
+    align-items: center;
   }
 }
