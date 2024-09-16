@@ -84,7 +84,9 @@ export class ActionsItem extends React.Component<ActionsItemProps> {
               {subdescription}
             </div>
           </div>
-          {complement !== undefined && complement}
+          {complement !== undefined && (
+            <div className="actions-item__complement">{complement}</div>
+          )}
           {user !== undefined && (
             <div className="actions-item__user">
               {user.avatar !== undefined && (
