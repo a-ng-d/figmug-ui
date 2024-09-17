@@ -1,7 +1,7 @@
 li.actions-item {
   display: flex;
   gap: 0 var(--size-xsmall);
-  padding: var(--size-xsmall) var(--size-small);
+  padding: var(--size-xsmall) var(--size-xsmall) var(--size-xsmall) var(--size-small);
   border-bottom: 1px solid var(--figma-color-border-disabled);
   align-items: center;
   user-select: none;
