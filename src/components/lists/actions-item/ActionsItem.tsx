@@ -1,5 +1,6 @@
 import React from 'react'
 import texts from '../../../styles/texts.module.scss'
+import layouts from '../../../styles/layouts.module.scss'
 import Thumbnail from '../../assets/thumbnail/Thumbnail'
 import { Chip } from '../../tags/chip/Chip'
 import './actions-item.scss'
@@ -100,7 +101,7 @@ export class ActionsItem extends React.Component<ActionsItemProps> {
             </div>
           )}
         </div>
-        <div className="actions-item__actions">
+        <div className={layouts['snackbar--tight']}>
           {actions !== undefined && actions}
         </div>
       </li>
