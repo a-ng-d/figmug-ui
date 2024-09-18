@@ -4,6 +4,7 @@
   align-items: center;
   min-height: var(--size-large);
   gap: var(--size-xxxsmall) 0;
+  position: relative;
 
   &.bar--compact {
     height: var(--size-medium);
