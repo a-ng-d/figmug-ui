@@ -17,7 +17,7 @@ export const ColorSample: Story = {
   args: {
     name: 'Primary',
     hex: '#87ebe7',
-    uuid: '29f6b9bd-d6c7-4c1f-87fa-ea5bcf7a074c',
+    id: '29f6b9bd-d6c7-4c1f-87fa-ea5bcf7a074c',
     canBeRemoved: false,
     onRemoveColor: fn(),
   },

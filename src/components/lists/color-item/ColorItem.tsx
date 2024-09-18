@@ -7,18 +7,18 @@ import './color-item.scss'
 export type ColorItemProps = {
   name: string
   hex: HexModel
-  uuid: string
+  id: string
   canBeRemoved?: boolean
   onRemoveColor?: React.ReactEventHandler
 }
 
 export const ColorItem = (props: ColorItemProps) => {
-  const { name, hex, uuid, canBeRemoved = false, onRemoveColor } = props
+  const { name, hex, id, canBeRemoved = false, onRemoveColor } = props
 
   return (
     <li
       className="color-item recharged"
-      data-id={uuid}
+      data-id={id}
     >
       <div className="color-item__left-part">
         <div className="color-item__info">
