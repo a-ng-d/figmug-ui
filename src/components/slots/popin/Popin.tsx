@@ -47,13 +47,13 @@ export const PopIn = (props: PopInProps) => {
         />
       </div>
       <div className="popin__content">{children}</div>
-      {Object.keys(actions).length > 0 || indicator !== undefined ? (
+      {(Object.keys(actions).length > 0 || indicator !== undefined) && (
         <div className="popin__footer">
           <div className="popin__extra">
-            {indicator !== undefined ? (
+            {indicator !== undefined && (
               <div className={`${texts.label} label`}>{indicator}</div>
-            ) : null}
-            {select !== undefined ? (
+            )}
+            {select !== undefined && (
               <Select
                 id="tertiary-action"
                 type="CHECK_BOX"
@@ -62,10 +62,10 @@ export const PopIn = (props: PopInProps) => {
                 isChecked={select.state}
                 onChange={select.action}
               />
-            ) : null}
+            )}
           </div>
           <div className="popin__actions">
-            {actions.secondary !== undefined ? (
+            {actions.secondary !== undefined && (
               <Button
                 type="secondary"
                 label={actions.secondary.label}
@@ -74,8 +74,8 @@ export const PopIn = (props: PopInProps) => {
                 feature="SECONDARY_ACTION"
                 action={actions.secondary.action}
               />
-            ) : null}
-            {actions.primary !== undefined ? (
+            )}
+            {actions.primary !== undefined && (
               <Button
                 type="primary"
                 label={actions.primary.label}
@@ -84,10 +84,10 @@ export const PopIn = (props: PopInProps) => {
                 feature="PRIMARY_ACTION"
                 action={actions.primary.action}
               />
-            ) : null}
+            )}
           </div>
         </div>
-      ) : null}
+      )}
     </div>
   )
 }

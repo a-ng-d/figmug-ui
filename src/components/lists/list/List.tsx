@@ -104,9 +104,9 @@ export class List extends React.Component<ListProps, ListStates> {
       >
         <span className="select-menu__item-icon" />
         <span className="select-menu__item-label">{option.label}</span>
-        {option.isBlocked || option.isNew ? (
+        {(option.isBlocked || option.isNew) && (
           <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
-        ) : null}
+        )}
       </li>
     )
   }
@@ -140,9 +140,9 @@ export class List extends React.Component<ListProps, ListStates> {
       >
         <span className="select-menu__item-icon" />
         <span className="select-menu__item-label">{option.label}</span>
-        {option.isBlocked || option.isNew ? (
+        {(option.isBlocked || option.isNew) && (
           <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
-        ) : null}
+        )}
         <span className="select-menu__item-carret" />
         {(() => {
           if (openedGroup === option.value) return this.SubMenu(option.children)
@@ -183,9 +183,9 @@ export class List extends React.Component<ListProps, ListStates> {
       >
         <span className="select-menu__item-icon" />
         <span className="select-menu__item-label">{option.label}</span>
-        {option.isBlocked || option.isNew ? (
+        {(option.isBlocked || option.isNew) && (
           <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
-        ) : null}
+        )}
       </li>
     )
   }

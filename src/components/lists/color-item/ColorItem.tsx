@@ -39,14 +39,14 @@ export const ColorItem = (props: ColorItemProps) => {
         </div>
       </div>
       <div className="color-item__right-part">
-        {canBeRemoved ? (
+        {canBeRemoved && (
           <Button
             type="icon"
             icon="minus"
             feature="REMOVE_COLOR"
             action={onRemoveColor}
           />
-        ) : null}
+        )}
       </div>
     </li>
   )

@@ -25,7 +25,7 @@ export const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
               {shortcut}
             </span>
           ))}
-          {shortcuts[1] !== undefined ? (
+          {shortcuts[1] !== undefined && (
             <>
               <span
                 className={`type keyboard-shortcut-item__separator ${texts.type}`}
@@ -41,7 +41,7 @@ export const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
                 </span>
               ))}
             </>
-          ) : null}
+          )}
         </>
       </div>
     </li>

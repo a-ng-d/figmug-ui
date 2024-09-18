@@ -39,25 +39,25 @@ export const FormItem = (props: FormItemProps) => {
           .filter((n) => n)
           .join(' ')}
       >
-        {label !== undefined ? (
+        {label !== undefined && (
           <label
             className={`type ${texts.type}`}
             htmlFor={id}
           >
             {label}
           </label>
-        ) : null}
+        )}
         <div className="form-item__input">{children}</div>
         {isNew ? <Chip>New</Chip> : null}
       </div>
-      {helper !== undefined ? (
+      {helper !== undefined && (
         <div className="form-item__helper">
           <Message
             icon={helper.type === 'INFO' ? 'info' : 'warning'}
             messages={[helper.message]}
           />
         </div>
-      ) : null}
+      )}
     </>
   )
 }

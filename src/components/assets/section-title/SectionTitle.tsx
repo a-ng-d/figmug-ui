@@ -16,12 +16,12 @@ export const SectionTitle = (props: SectionTitleProps) => {
       <div className={`section-title__title ${texts['section-title']}`}>
         {label}
       </div>
-      {indicator !== undefined ? (
+      {indicator !== undefined && (
         <div
           className={`section-title__indicator type ${texts.type}`}
         >{`(${indicator})`}</div>
-      ) : null}
-      {helper !== undefined ? (
+      )}
+      {helper !== undefined && (
         <div className="section-title__tooltip">
           <Icon
             type="PICTO"
@@ -30,7 +30,7 @@ export const SectionTitle = (props: SectionTitleProps) => {
           />
           <div className={`tooltip__block type ${texts.type}`}>{helper}</div>
         </div>
-      ) : null}
+      )}
     </div>
   )
 }
