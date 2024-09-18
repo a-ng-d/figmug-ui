@@ -309,7 +309,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           .join(' ')}
       >
         <div className="input__wrapper">
-          {icon !== undefined ? (
+          {icon !== undefined && (
             <div
               style={{
                 position: 'absolute',
@@ -325,7 +325,7 @@ export class Input extends React.Component<InputProps, InputStates> {
                 iconColor="var(--figma-color-text-disabled)"
               />
             </div>
-          ) : null}
+          )}
           <input
             role="numeric-stepper"
             id={id}
@@ -353,7 +353,7 @@ export class Input extends React.Component<InputProps, InputStates> {
             onBlur={onBlur}
             ref={this.inputRef}
           />
-          {unit !== undefined ? (
+          {unit !== undefined && (
             <div
               style={{
                 position: 'absolute',
@@ -368,7 +368,7 @@ export class Input extends React.Component<InputProps, InputStates> {
                 iconColor="var(--figma-color-text-disabled)"
               />
             </div>
-          ) : null}
+          )}
         </div>
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
       </div>
@@ -441,7 +441,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           ref={this.inputRef}
         ></input>
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
-        {isClearable && inputValue.length > 0 ? (
+        {isClearable && inputValue.length > 0 && (
           <div className="input__clear">
             <Button
               type="icon"
@@ -452,7 +452,7 @@ export class Input extends React.Component<InputProps, InputStates> {
               }}
             />
           </div>
-        ) : null}
+        )}
       </div>
     )
   }

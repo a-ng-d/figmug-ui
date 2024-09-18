@@ -73,7 +73,7 @@ export class Button extends React.Component<ButtonProps> {
         <span className={['button__label'].filter((n) => n).join(' ')}>
           {label}
         </span>
-        {isLoading ? (
+        {isLoading && (
           <div className={['button__loader'].filter((n) => n).join(' ')}>
             <Icon
               type="PICTO"
@@ -86,8 +86,8 @@ export class Button extends React.Component<ButtonProps> {
               customClassName="button__spinner"
             />
           </div>
-        ) : null}
-        {hasMultipleActions ? (
+        )}
+        {hasMultipleActions && (
           <Icon
             type="PICTO"
             iconName="caret"
@@ -98,7 +98,7 @@ export class Button extends React.Component<ButtonProps> {
             }
             customClassName="button__caret"
           />
-        ) : null}
+        )}
         {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
       </button>
     )
