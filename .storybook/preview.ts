@@ -2,7 +2,7 @@ import type { Preview } from '@storybook/react'
 import type { ThemeConfig } from 'storybook-addon-data-theme-switcher'
 
 import 'figma-plugin-ds/dist/figma-plugin-ds.css'
-import '../src/styles/colors.module.scss'
+import '../src/styles/colors.scss'
 
 export const globalTypes = {
   dataTheme: {
