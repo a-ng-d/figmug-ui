@@ -6,7 +6,12 @@ const config: StorybookConfig = {
     '@storybook/addon-onboarding',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@chromatic-com/storybook',
+    {
+      name: '@chromatic-com/storybook',
+      options: {
+        configFile: 'chromatic.config.json',
+      },
+    },
     '@storybook/addon-interactions',
     'storybook-addon-data-theme-switcher',
   ],
