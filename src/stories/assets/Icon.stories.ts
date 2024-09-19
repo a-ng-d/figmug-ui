@@ -116,7 +116,7 @@ export const Pictogram: Story = {
     type: 'PICTO',
     iconName: 'adjust',
     iconLetter: undefined,
-    iconColor: '#000000',
+    iconColor: 'var(--figma-color-icon)',
   },
   argTypes: {
     type: { control: false },
@@ -130,7 +130,7 @@ export const Letter: Story = {
     type: 'LETTER',
     iconName: undefined,
     iconLetter: 'L',
-    iconColor: '#000000',
+    iconColor: 'var(--figma-color-icon)',
   },
   argTypes: {
     type: { control: false },
