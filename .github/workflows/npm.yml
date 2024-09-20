@@ -32,7 +32,7 @@ jobs:
         create_tag: "false"
         commit_pattern: "^Release (\\S+)"
         workspace: "."
-        publish_command: "npm publish"
+        publish_command: "npm"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
