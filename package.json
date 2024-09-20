@@ -39,6 +39,7 @@
     "@storybook/addon-interactions": "^8.0.10",
     "@storybook/addon-links": "^8.0.10",
     "@storybook/addon-onboarding": "^8.0.10",
+    "@storybook/addon-viewport": "^8.3.2",
     "@storybook/blocks": "^8.0.10",
     "@storybook/react": "^8.0.10",
     "@storybook/react-vite": "^8.0.10",

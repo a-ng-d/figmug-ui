@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     },
     '@storybook/addon-interactions',
     'storybook-addon-data-theme-switcher',
+    '@storybook/addon-viewport',
   ],
   framework: {
     name: '@storybook/react-vite',
