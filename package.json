@@ -20,7 +20,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_c48bb3c3237a2d6",
+    "chromatic": "dotenv -e .env.local npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
     "publish:patch": "npm run test && npm run build && npm version patch && npm publish",
     "publish:minor": "npm run test && npm run build && npm version minor && npm publish",
     "publish:major": "npm run test && npm run build && npm version major && npm publish"
@@ -52,6 +52,7 @@
     "@vitest/coverage-v8": "^1.6.0",
     "@vitest/ui": "^1.6.0",
     "chromatic": "^11.3.1",
+    "dotenv-cli": "^7.4.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-hooks": "^4.6.0",
