@@ -15,12 +15,12 @@ export interface ActionsItemProps {
   }
   description: string
   subdescription: string
-  complement?: React.ReactNode
+  complementSlot?: React.ReactNode
   user?: {
     avatar?: string
     name: string
   }
-  actions?: React.ReactNode
+  actionsSlot?: React.ReactNode
   isInteractive?: boolean
   action?: React.MouseEventHandler<HTMLLIElement> &
     React.KeyboardEventHandler<HTMLLIElement>
@@ -39,9 +39,9 @@ export class ActionsItem extends React.Component<ActionsItemProps> {
       indicator,
       description,
       subdescription,
-      complement,
+      complementSlot,
       user,
-      actions,
+      actionsSlot,
       isInteractive,
       action,
     } = this.props
@@ -85,8 +85,8 @@ export class ActionsItem extends React.Component<ActionsItemProps> {
               {subdescription}
             </div>
           </div>
-          {complement !== undefined && (
-            <div className="actions-item__complement">{complement}</div>
+          {complementSlot !== undefined && (
+            <div className="actions-item__complement">{complementSlot}</div>
           )}
           {user !== undefined && (
             <div className="actions-item__user">
@@ -102,7 +102,7 @@ export class ActionsItem extends React.Component<ActionsItemProps> {
           )}
         </div>
         <div className={layouts['snackbar--tight']}>
-          {actions !== undefined && actions}
+          {actionsSlot !== undefined && actionsSlot}
         </div>
       </li>
     )

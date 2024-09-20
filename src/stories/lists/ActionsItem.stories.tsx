@@ -33,7 +33,7 @@ export const SingleAction: Story = {
       avatar: 'https://www.gravatar.com/avatar',
       name: 'John Doe',
     },
-    actions: (() => {
+    actionsSlot: (() => {
       return (
         <Button
           type="icon"
@@ -66,7 +66,7 @@ export const SeveralActions: Story = {
       avatar: 'https://www.gravatar.com/avatar',
       name: 'John Doe',
     },
-    actions: (() => {
+    actionsSlot: (() => {
       return (
         <>
           <Button
@@ -100,7 +100,7 @@ export const WithoutActionNorThumbnail: Story = {
       'Lorem ipsum odor amet, consectetuer adipiscing elit. Justo aenean aptent nostra arcu sit sagittis ipsum gravida.',
     subdescription:
       'Justo aenean aptent nostra arcu sit sagittis ipsum gravida.',
-    complement: (() => {
+    complementSlot: (() => {
       return (
         <div
           style={{
@@ -136,6 +136,6 @@ export const WithoutActionNorThumbnail: Story = {
   },
   argTypes: {
     src: { control: false },
-    actions: { control: false },
+    actionsSlot: { control: false },
   },
 }

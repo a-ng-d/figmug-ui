@@ -2,9 +2,9 @@ import React from 'react'
 import './bar.scss'
 
 export interface BarProps {
-  rightPart?: React.ReactElement
-  soloPart?: React.ReactElement
-  leftPart?: React.ReactElement
+  rightPartSlot?: React.ReactElement
+  soloPartSlot?: React.ReactElement
+  leftPartSlot?: React.ReactElement
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
   padding?: string
   isCompact: boolean
@@ -36,8 +36,15 @@ export class Bar extends React.Component<BarProps> {
   }
 
   render() {
-    const { isCompact, isOnlyText, border, padding, leftPart, soloPart, rightPart } =
-      this.props
+    const {
+      isCompact,
+      isOnlyText,
+      border,
+      padding,
+      leftPartSlot,
+      soloPartSlot,
+      rightPartSlot,
+    } = this.props
 
     return (
       <div
@@ -54,9 +61,11 @@ export class Bar extends React.Component<BarProps> {
           padding: padding,
         }}
       >
-        <div className="bar__left">{leftPart}</div>
-        {soloPart !== undefined && <div className="bar__solo">{soloPart}</div>}
-        <div className="bar__right">{rightPart}</div>
+        <div className="bar__left">{leftPartSlot}</div>
+        {soloPartSlot !== undefined && (
+          <div className="bar__solo">{soloPartSlot}</div>
+        )}
+        <div className="bar__right">{rightPartSlot}</div>
       </div>
     )
   }
