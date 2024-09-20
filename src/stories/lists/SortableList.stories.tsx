@@ -8,7 +8,13 @@ import { FormItem } from '../../components/slots/form-item/FormItem'
 
 const mock = fn()
 
-const meta = {
+interface ListItem {
+  id: string
+  color: string
+  description?: string
+}
+
+const meta: Meta<typeof SortableList> = {
   title: 'Example/Lists/SortableList',
   component: SortableList,
   decorators: [
@@ -49,7 +55,7 @@ export const SimpleColors: Story = {
         id: '444444',
         color: '#FFFFFF',
       },
-    ],
+    ] as Array<ListItem>,
     primarySlot: [<div></div>],
     actionsSlot: [<div></div>],
     isScrollable: false,
@@ -63,10 +69,10 @@ export const SimpleColors: Story = {
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
-      data: Array<{ [key: string]: string }>
+      data: Array<ListItem>
     }>()
 
-    const onChange = (e: Array<{ [key: string]: string }>) => {
+    const onChange = (e: Array<ListItem>) => {
       updateArgs({
         data: e,
       })
@@ -74,8 +80,9 @@ export const SimpleColors: Story = {
     }
 
     return (
-      <SortableList
+      <SortableList<ListItem>
         {...args}
+        data={argsState.data}
         primarySlot={argsState.data.map((item) => (
           <Input
             type="COLOR"
@@ -133,7 +140,7 @@ export const RichColors: Story = {
         color: '#654321',
         description: 'Some description',
       },
-    ],
+    ] as Array<ListItem>,
     primarySlot: [<div></div>],
     isScrollable: false,
     onChangeSortableList: mock,
@@ -146,10 +153,10 @@ export const RichColors: Story = {
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
-      data: Array<{ [key: string]: string }>
+      data: Array<ListItem>
     }>()
 
-    const onChange = (e: Array<{ [key: string]: string }>) => {
+    const onChange = (e: Array<ListItem>) => {
       updateArgs({
         data: e,
       })
@@ -157,8 +164,9 @@ export const RichColors: Story = {
     }
 
     return (
-      <SortableList
+      <SortableList<ListItem>
         {...args}
+        data={argsState.data}
         primarySlot={argsState.data.map((item) => (
           <Input
             type="COLOR"

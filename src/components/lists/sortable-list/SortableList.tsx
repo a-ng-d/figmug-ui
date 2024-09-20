@@ -7,18 +7,22 @@ interface SelectedColor {
   position: number
 }
 
+interface DefaultData {
+  id: string
+}
+
 interface HoveredColor extends SelectedColor {
   hasGuideAbove: boolean
   hasGuideBelow: boolean
 }
 
-export interface SortableListProps {
-  data: Array<{ [key: string]: string }>
+export interface SortableListProps<T = DefaultData> {
+  data: Array<T>
   primarySlot: Array<React.ReactNode>
   secondarySlot?: Array<React.ReactNode>
   actionsSlot?: Array<React.ReactNode>
   isScrollable?: boolean
-  onChangeSortableList: (data: Array<{ [key: string]: string }>) => void
+  onChangeSortableList: (data: Array<T>) => void
 }
 
 interface SortableListStates {
@@ -26,8 +30,8 @@ interface SortableListStates {
   hoveredElement: HoveredColor
 }
 
-export class SortableList extends React.Component<
-  SortableListProps,
+export class SortableList<T extends DefaultData> extends React.Component<
+  SortableListProps<T>,
   SortableListStates
 > {
   listRef: React.RefObject<HTMLUListElement>
@@ -36,7 +40,7 @@ export class SortableList extends React.Component<
     isScrollable: false,
   }
 
-  constructor(props: SortableListProps) {
+  constructor(props: SortableListProps<T>) {
     super(props)
     this.state = {
       selectedElement: {
@@ -119,9 +123,14 @@ export class SortableList extends React.Component<
       target.tagName === 'BUTTON' ||
       target.tagName === 'TEXTAREA'
     )
-      return
+      return this.setState({
+        selectedElement: {
+          id: undefined,
+          position: 0,
+        },
+      })
 
-    this.setState({
+    return this.setState({
       selectedElement: {
         id: item.dataset.id,
         position: parseFloat(item.dataset.position ?? '0'),
