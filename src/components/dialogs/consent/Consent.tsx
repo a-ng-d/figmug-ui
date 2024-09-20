@@ -109,7 +109,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
           />
         </div>
         <Bar
-          leftPart={
+          leftPartSlot={
             <Button
               type="tertiary"
               label={moreDetailsLabel}
@@ -120,7 +120,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
               }
             />
           }
-          rightPart={
+          rightPartSlot={
             <div
               className={[
                 'consent-banner__actions',
@@ -176,7 +176,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
           <ul className="consent-banner__list">
             <li className="consent-banner__item">
               <Bar
-                leftPart={
+                leftPartSlot={
                   <div
                     className={[layouts['snackbar--large']]
                       .filter((n) => n)
@@ -209,7 +209,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
                     </div>
                   </div>
                 }
-                rightPart={
+                rightPartSlot={
                   <div className="consent-banner__item__action">
                     <Select
                       id={`legit-user-consent`}
@@ -229,7 +229,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
                 className="consent-banner__item"
               >
                 <Bar
-                  leftPart={
+                  leftPartSlot={
                     <div
                       className={[layouts['snackbar--large']]
                         .filter((n) => n)
@@ -269,7 +269,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
                       </div>
                     </div>
                   }
-                  rightPart={
+                  rightPartSlot={
                     <div className="consent-banner__item__action">
                       <Select
                         id={`change-${vendor.id}-user-consent`}
@@ -289,7 +289,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
           </ul>
         </div>
         <Bar
-          leftPart={
+          leftPartSlot={
             <Button
               type="tertiary"
               label={lessDetailsLabel}
@@ -300,7 +300,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
               }
             />
           }
-          rightPart={
+          rightPartSlot={
             <div
               className={[
                 'consent-banner__actions',
