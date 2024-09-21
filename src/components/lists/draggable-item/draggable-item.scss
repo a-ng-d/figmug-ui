@@ -10,12 +10,12 @@
     grid-template-columns: repeat(36, 1fr);
   }
 
-  &[draggable='true'], &[draggable='true'] .input__field {
+  &[draggable='true'], &[draggable='true'] .input__field, &[draggable='true'] .select-menu__button {
     background-color: var(--figma-color-bg-selected);
     --white: var(--figma-color-bg-selected) !important;
   }
 
-  &--emphasis, &--emphasis .input__field {
+  &--emphasis, &--emphasis .input__field, &--emphasis .select-menu__button {
     background-color: var(--figma-color-bg-pressed);
     --white: var(--figma-color-bg-pressed) !important;
   }
