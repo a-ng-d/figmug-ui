@@ -79,6 +79,19 @@ export const SimpleColors: Story = {
       args.onChangeSortableList?.(e)
     }
 
+    const onRemove = (
+      e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+    ) => {
+      let id: string | null
+      const element: HTMLElement | null = (
+        e.currentTarget as HTMLElement
+      ).closest('.draggable-item')
+
+      element !== null ? (id = element.getAttribute('data-id')) : (id = null)
+
+      onChange(argsState.data.filter((item) => item.id !== id))
+    }
+
     return (
       <SortableList<ListItem>
         {...args}
@@ -97,6 +110,7 @@ export const SimpleColors: Story = {
           />
         ))}
         onChangeSortableList={onChange}
+        onRemoveItem={onRemove}
       />
     )
   },
@@ -163,6 +177,19 @@ export const RichColors: Story = {
       args.onChangeSortableList?.(e)
     }
 
+    const onRemove = (
+      e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+    ) => {
+      let id: string | null
+      const element: HTMLElement | null = (
+        e.currentTarget as HTMLElement
+      ).closest('.draggable-item')
+
+      element !== null ? (id = element.getAttribute('data-id')) : (id = null)
+
+      onChange(argsState.data.filter((item) => item.id !== id))
+    }
+
     return (
       <SortableList<ListItem>
         {...args}
@@ -187,6 +214,7 @@ export const RichColors: Story = {
           </FormItem>
         ))}
         onChangeSortableList={onChange}
+        onRemoveItem={onRemove}
       />
     )
   },
