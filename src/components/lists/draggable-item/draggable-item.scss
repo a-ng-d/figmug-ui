@@ -78,6 +78,14 @@
       width: 112px;
       min-width: 112px;
     }
+
+    &--square {
+      width: var(--size-medium);
+      min-width: var(--size-medium);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   
   .draggable-item__buttons--compact {
