@@ -10,6 +10,7 @@ export interface MenuProps {
   type: 'ICON' | 'PRIMARY'
   label?: string
   icon?: IconList
+  customIcon?: React.ReactNode
   options: Array<DropdownOption>
   selected?: string
   state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
@@ -67,6 +68,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
       state,
       alignment,
       icon,
+      customIcon,
       options,
       selected,
       isNew,
@@ -88,6 +90,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
           <Button
             type="icon"
             icon={icon}
+            customIcon={customIcon}
             state={isMenuOpen ? 'selected' : ''}
             isLoading={state === 'LOADING'}
             isDisabled={state === 'DISABLED'}

@@ -9,6 +9,7 @@ export interface ButtonProps {
   type: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'compact'
   icon?: IconList
   iconClassName?: string
+  customIcon?: React.ReactNode
   label?: string
   state?: 'default' | 'disabled' | 'blocked' | 'selected' | ''
   url?: string
@@ -130,6 +131,7 @@ export class Button extends React.Component<ButtonProps> {
   Icon = () => {
     const {
       iconClassName,
+      customIcon,
       feature,
       state,
       isLoading,
@@ -160,16 +162,20 @@ export class Button extends React.Component<ButtonProps> {
         onMouseDown={action}
         ref={this.buttonRef}
       >
-        <Icon
-          type="PICTO"
-          iconName={isLoading ? 'spinner' : icon}
-          iconColor={
-            isDisabled ? 'var(--figma-color-icon-disabled)' : undefined
-          }
-          customClassName={
-            iconClassName !== undefined ? iconClassName : undefined
-          }
-        />
+        {customIcon === undefined ? (
+          <Icon
+            type="PICTO"
+            iconName={isLoading ? 'spinner' : icon}
+            iconColor={
+              isDisabled ? 'var(--figma-color-icon-disabled)' : undefined
+            }
+            customClassName={
+              iconClassName !== undefined ? iconClassName : undefined
+            }
+          />
+        ) : (
+          customIcon
+        )}
       </button>
     )
   }
