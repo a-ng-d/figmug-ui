@@ -213,9 +213,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     }
   }
 
-  doClear = () => {
-    this.setState({ inputValue: '' })
-  }
+  doClear = () => this.setState({ inputValue: '' })
 
   // Templates
   Color = () => {
