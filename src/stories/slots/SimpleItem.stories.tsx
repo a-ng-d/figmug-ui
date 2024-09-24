@@ -27,7 +27,6 @@ type Story = StoryObj<typeof meta>
 export const ColorItem: Story = {
   args: {
     id: '000000',
-    index: 0,
     leftPartSlot: (() => (
       <div className="draggable-item__param">
         <Input
@@ -46,6 +45,5 @@ export const ColorItem: Story = {
   },
   argTypes: {
     id: { control: false },
-    index: { control: false },
   },
 }

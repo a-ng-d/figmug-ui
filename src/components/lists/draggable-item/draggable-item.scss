@@ -6,10 +6,6 @@
   position: relative;
   background-color: var(--figma-color-bg);
 
-  &--compact {
-    grid-template-columns: repeat(36, 1fr);
-  }
-
   &[draggable='true'], &[draggable='true'] .input__field, &[draggable='true'] .select-menu__button {
     background-color: var(--figma-color-bg-selected);
     --white: var(--figma-color-bg-selected) !important;

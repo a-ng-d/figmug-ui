@@ -6,10 +6,6 @@
   min-height: var(--size-medium);
   background-color: var(--figma-color-bg);
 
-  &--compact {
-    grid-template-columns: repeat(36, 1fr);
-  }
-
   .simple-item__left-part,
   .simple-item__right-part {
     display: flex;
