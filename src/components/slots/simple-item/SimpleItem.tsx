@@ -3,7 +3,6 @@ import './simple-item.scss'
 
 export interface SimpleItemProps {
   id: string
-  index: number
   leftPartSlot: React.ReactNode
   rightPartSlot?: React.ReactNode
   isCompact?: boolean
@@ -16,12 +15,11 @@ export class SimpleItem extends React.Component<SimpleItemProps> {
 
   // Render
   render() {
-    const { id, index, leftPartSlot, rightPartSlot, isCompact } = this.props
+    const { id, leftPartSlot, rightPartSlot, isCompact } = this.props
 
     return (
       <li
         data-id={id}
-        data-position={index}
         className={['simple-item', isCompact && 'simple-item__compact']
           .filter((n) => n)
           .join(' ')}
