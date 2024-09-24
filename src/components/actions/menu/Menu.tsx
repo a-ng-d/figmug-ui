@@ -6,7 +6,7 @@ import { List } from '../../lists/list/List'
 import './menu.scss'
 
 export interface MenuProps {
-  id?: string
+  id: string
   type: 'ICON' | 'PRIMARY'
   label?: string
   icon?: IconList
