@@ -32,5 +32,9 @@
       justify-content: center;
       align-items: center;
     }
+
+    &--fill {
+      flex: 1;
+    }
   }
 }
