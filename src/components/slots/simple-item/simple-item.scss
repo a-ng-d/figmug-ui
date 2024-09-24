@@ -1,0 +1,38 @@
+.simple-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px var(--size-xsmall);
+  background-color: var(--figma-color-bg);
+
+  &--compact {
+    grid-template-columns: repeat(36, 1fr);
+  }
+
+  .simple-item__left-part,
+  .simple-item__right-part {
+    display: flex;
+    max-width: 100%;
+  }
+
+  .simple-item__left-part {
+    flex: 1;
+  }
+
+  .simple-item__param {
+    white-space: nowrap;
+    max-width: 100%;
+
+    &--compact {
+      width: 112px;
+      min-width: 112px;
+    }
+
+    &--square {
+      width: var(--size-medium);
+      min-width: var(--size-medium);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
