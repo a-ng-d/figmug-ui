@@ -9,7 +9,7 @@ export interface ButtonProps {
   type: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'compact'
   icon?: IconList
   iconClassName?: string
-  customIcon?: React.ReactNode
+  customIcon?: React.ReactElement
   label?: string
   state?: 'default' | 'disabled' | 'blocked' | 'selected' | ''
   url?: string
@@ -174,7 +174,13 @@ export class Button extends React.Component<ButtonProps> {
             }
           />
         ) : (
-          customIcon
+          <div
+            style={{
+              opacity: isDisabled ? 0.5 : 1,
+            }}
+          >
+            {customIcon}
+          </div>
         )}
       </button>
     )
