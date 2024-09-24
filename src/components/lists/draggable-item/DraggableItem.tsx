@@ -27,12 +27,15 @@ export interface DraggableItemProps {
     React.KeyboardEventHandler<Element>
 }
 
-interface States {
+interface DraggableItemStates {
   isDragged: boolean
   hasMoreOptions: boolean
 }
 
-export class DraggableItem extends React.Component<DraggableItemProps, States> {
+export class DraggableItem extends React.Component<
+  DraggableItemProps,
+  DraggableItemStates
+> {
   static defaultProps: Partial<DraggableItemProps> = {
     selected: false,
     guideAbove: false,
