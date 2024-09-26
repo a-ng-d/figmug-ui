@@ -215,10 +215,6 @@ export class Input extends React.Component<InputProps, InputStates> {
 
   doClear = () => this.setState({ inputValue: '' })
 
-  doInputFocus = () => this.inputRef.current?.focus()
-
-  doTextareaFocus = () => this.textareaRef.current?.focus()
-
   // Templates
   Color = () => {
     const {
