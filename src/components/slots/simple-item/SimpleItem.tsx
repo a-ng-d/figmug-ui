@@ -34,8 +34,8 @@ export class SimpleItem extends React.Component<SimpleItemProps> {
           data-id={id}
           className={[
             'simple-item',
-            isCompact && 'simple-item__compact',
-            `${alignment?.toLowerCase()}`,
+            isCompact && 'simple-item--compact',
+            `simple-item--${alignment?.toLowerCase()}`,
           ]
             .filter((n) => n)
             .join(' ')}
