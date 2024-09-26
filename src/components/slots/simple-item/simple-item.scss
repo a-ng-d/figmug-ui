@@ -1,10 +1,19 @@
 .simple-item {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 2px var(--size-xsmall);
   min-height: var(--size-medium);
   background-color: var(--figma-color-bg);
+  gap: var(--size-xxsmall);
+
+  &--center {
+    align-items: center;
+  }
+
+  &--baseline {
+    align-items: baseline;
+  }
 
   .simple-item__left-part,
   .simple-item__right-part {
