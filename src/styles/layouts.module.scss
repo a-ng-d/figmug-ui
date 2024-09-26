@@ -28,6 +28,10 @@
   &--baseline {
     align-items: baseline;
   }
+
+  &--fill {
+    flex: 1 1 auto;
+  }
 }
 
 .stackbar {
@@ -60,5 +64,9 @@
 
   &--baseline {
     align-items: baseline;
+  }
+
+  &--fill {
+    flex: 1 1 auto;
   }
 }
