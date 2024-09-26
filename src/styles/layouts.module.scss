@@ -16,11 +16,24 @@
     @extend .snackbar;
     gap: var(--size-xsmall);
   }
+
+  &--start {
+    align-items: start;
+  }
+
+  &--end {
+    align-items: end;
+  }
+
+  &--baseline {
+    align-items: baseline;
+  }
 }
 
 .stackbar {
   display: flex;
   flex-direction: column;
+  align-items: start;
 
   &--tight {
     @extend .stackbar;
@@ -35,5 +48,17 @@
   &--large {
     @extend .stackbar;
     gap: var(--size-xsmall);
+  }
+
+  &--center {
+    align-items: center;
+  }
+
+  &--end {
+    align-items: end;
+  }
+
+  &--baseline {
+    align-items: baseline;
   }
 }
