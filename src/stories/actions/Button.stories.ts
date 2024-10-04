@@ -30,6 +30,7 @@ const icons: Array<IconList> = [
   'effects',
   'ellipses',
   'eyedropper',
+  'filter',
   'forward',
   'frame',
   'group',
