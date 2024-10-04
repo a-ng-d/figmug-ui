@@ -73,10 +73,8 @@ export class List extends React.Component<ListProps, ListStates> {
         className={[
           'select-menu__item',
           selected?.split(', ').filter((value) => value === option.value)
-            .length === 1
-            ? 'select-menu__item--selected'
-            : null,
-          option.isBlocked ? 'select-menu__item--blocked' : null,
+            .length === 1 && 'select-menu__item--selected',
+          option.isBlocked && 'select-menu__item--blocked',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -120,7 +118,7 @@ export class List extends React.Component<ListProps, ListStates> {
         key={`menu-group-${index}`}
         className={[
           'select-menu__item',
-          option.isBlocked ? ' select-menu__item--blocked' : null,
+          option.isBlocked && ' select-menu__item--blocked',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -162,10 +160,8 @@ export class List extends React.Component<ListProps, ListStates> {
         className={[
           'select-menu__item',
           selected?.split(', ').filter((value) => value === option.value)
-            .length === 1
-            ? 'select-menu__item--selected'
-            : null,
-          option.isBlocked ? 'select-menu__item--blocked' : null,
+            .length === 1 && 'select-menu__item--selected',
+          option.isBlocked && 'select-menu__item--blocked',
         ]
           .filter((n) => n)
           .join(' ')}

@@ -33,8 +33,8 @@ export const FormItem = (props: FormItemProps) => {
         className={[
           'form-item',
           'recharged',
-          shouldFill ? 'form-item--fill' : null,
-          isBlocked ? 'form-item--blocked' : null,
+          shouldFill && 'form-item--fill',
+          isBlocked && 'form-item--blocked',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -48,7 +48,7 @@ export const FormItem = (props: FormItemProps) => {
           </label>
         )}
         <div className="form-item__input">{children}</div>
-        {isNew ? <Chip>New</Chip> : null}
+        {isNew && <Chip>New</Chip>}
       </div>
       {helper !== undefined && (
         <div className="form-item__helper">

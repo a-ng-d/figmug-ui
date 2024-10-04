@@ -12,11 +12,7 @@ export const Chip = (props: ChipProps) => {
 
   return (
     <div
-      className={[
-        'chip',
-        'recharged',
-        state === 'INACTIVE' ? 'chip--inactive' : null,
-      ]
+      className={['chip', 'recharged', state === 'INACTIVE' && 'chip--inactive']
         .filter((n) => n)
         .join(' ')}
     >

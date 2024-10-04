@@ -57,8 +57,8 @@ export class Button extends React.Component<ButtonProps> {
           'button',
           'recharged',
           `button--${type}`,
-          isLoading ? 'button--loading' : null,
-          isBlocked ? 'button--blocked' : null,
+          isLoading && 'button--loading',
+          isBlocked && 'button--blocked',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -100,7 +100,7 @@ export class Button extends React.Component<ButtonProps> {
             customClassName="button__caret"
           />
         )}
-        {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </button>
     )
   }
@@ -148,9 +148,9 @@ export class Button extends React.Component<ButtonProps> {
         className={[
           'icon-button',
           'recharged',
-          state !== undefined && state !== '' ? `icon-button--${state}` : null,
-          isNew ? 'icon-button--new' : null,
-          isLoading ? 'button--loading' : null,
+          state !== undefined && state !== '' && `icon-button--${state}`,
+          isNew && 'icon-button--new',
+          isLoading && 'button--loading',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -207,7 +207,7 @@ export class Button extends React.Component<ButtonProps> {
           iconColor="var(--figma-color-icon-oncomponent)"
         />
         <div className={`type ${texts.type}`}>{label}</div>
-        {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </button>
     )
   }

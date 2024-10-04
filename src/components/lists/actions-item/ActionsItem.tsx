@@ -49,7 +49,7 @@ export class ActionsItem extends React.Component<ActionsItemProps> {
       <li
         className={[
           'actions-item',
-          isInteractive ? 'actions-item--interactive' : null,
+          isInteractive && 'actions-item--interactive',
         ]
           .filter((n) => n)
           .join(' ')}

@@ -237,7 +237,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           'recharged',
           'input--color',
           'input--with-icon',
-          isBlocked ? 'input--blocked' : null,
+          isBlocked && 'input--blocked',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -272,7 +272,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onBlur={onBlur}
           ref={this.inputRef}
         />
-        {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }
@@ -303,9 +303,9 @@ export class Input extends React.Component<InputProps, InputStates> {
           'input',
           'recharged',
           'input--number',
-          icon !== undefined ? 'input--with-icon' : null,
-          isFlex ? 'input--flex' : null,
-          isBlocked ? 'input--blocked' : null,
+          icon !== undefined && 'input--with-icon',
+          isFlex && 'input--flex',
+          isBlocked && 'input--blocked',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -335,8 +335,8 @@ export class Input extends React.Component<InputProps, InputStates> {
             type="number"
             className={[
               'input__field',
-              isFlex ? 'input__field--flex' : null,
-              unit !== undefined ? 'input__field--unit' : null,
+              isFlex && 'input__field--flex',
+              unit !== undefined && 'input__field--unit',
             ]
               .filter((n) => n)
               .join(' ')}
@@ -372,7 +372,7 @@ export class Input extends React.Component<InputProps, InputStates> {
             </div>
           )}
         </div>
-        {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }
@@ -404,8 +404,8 @@ export class Input extends React.Component<InputProps, InputStates> {
           'input',
           'recharged',
           'input--short-text',
-          icon === undefined ? null : 'input--with-icon',
-          isBlocked ? 'input--blocked' : null,
+          icon !== undefined && 'input--with-icon',
+          isBlocked && 'input--blocked',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -425,9 +425,9 @@ export class Input extends React.Component<InputProps, InputStates> {
           type="text"
           className={[
             'input__field',
-            !isFramed ? 'input__field--no-frame' : null,
-            isClearable ? 'input__field--clearable' : null,
-            state === 'ERROR' ? 'input__field--error' : null,
+            !isFramed && 'input__field--no-frame',
+            isClearable && 'input__field--clearable',
+            state === 'ERROR' && 'input__field--error',
           ]
             .filter((n) => n)
             .join(' ')}
@@ -442,7 +442,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onBlur={onBlur}
           ref={this.inputRef}
         ></input>
-        {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         {isClearable && inputValue.length > 0 && (
           <div className="input__clear">
             <Button
@@ -481,7 +481,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           'input',
           'recharged',
           'input--long-text',
-          isBlocked ? 'input--blocked' : null,
+          isBlocked && 'input--blocked',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -493,7 +493,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           className={[
             'textarea',
             'input__field',
-            state === 'ERROR' ? 'input__field--error' : null,
+            state === 'ERROR' && 'input__field--error',
           ]
             .filter((n) => n)
             .join(' ')}
@@ -508,7 +508,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onBlur={onBlur}
           ref={this.textareaRef}
         />
-        {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }
@@ -523,7 +523,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           'input',
           'recharged',
           'input--code',
-          isBlocked ? 'input--blocked' : null,
+          isBlocked && 'input--blocked',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -544,7 +544,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           readOnly
           ref={this.textareaRef}
         />
-        {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }

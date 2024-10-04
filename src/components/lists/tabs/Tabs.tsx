@@ -24,8 +24,8 @@ export const Tabs = (props: TabsProps) => {
             'tabs__tab',
             'type',
             texts.type,
-            active === tab.id ? 'tabs__tab--active' : null,
-            tab.isUpdated ? 'tabs__tab--new' : null,
+            active === tab.id && 'tabs__tab--active',
+            tab.isUpdated && 'tabs__tab--new',
           ]
             .filter((n) => n)
             .join(' ')}

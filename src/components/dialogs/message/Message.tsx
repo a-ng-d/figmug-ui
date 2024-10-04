@@ -24,7 +24,7 @@ export class Message extends React.Component<MessageProps> {
         className={[
           'onboarding-tip',
           'recharged',
-          isBlocked ? 'onboarding-tip--blocked' : null,
+          isBlocked && 'onboarding-tip--blocked',
         ]
           .filter((n) => n)
           .join(' ')}

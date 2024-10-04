@@ -38,8 +38,8 @@ export const Accordion = (props: AccordionProps) => {
       className={[
         'accordion',
         'recharged',
-        isExpanded ? 'accordion--expanded' : null,
-        isBlocked ? 'accordion--blocked' : null,
+        isExpanded && 'accordion--expanded',
+        isBlocked && 'accordion--blocked',
       ]
         .filter((n) => n)
         .join(' ')}
@@ -81,10 +81,10 @@ export const Accordion = (props: AccordionProps) => {
               action={onAdd}
             />
           )}
-          {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+          {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>
       </div>
-      {isExpanded ? <div>{children}</div> : null}
+      {isExpanded && <div>{children}</div>}
     </div>
   )
 }

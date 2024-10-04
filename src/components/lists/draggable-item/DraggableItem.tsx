@@ -130,10 +130,10 @@ export class DraggableItem extends React.Component<
         data-position={index}
         className={[
           'draggable-item',
-          isDragged ? 'draggable-item--dragged' : null,
-          guideAbove ? 'draggable-item--above' : null,
-          guideBelow ? 'draggable-item--below' : null,
-          hasMoreOptions ? 'draggable-item--emphasis' : null,
+          isDragged && 'draggable-item--dragged',
+          guideAbove && 'draggable-item--above',
+          guideBelow && 'draggable-item--below',
+          hasMoreOptions && 'draggable-item--emphasis',
         ]
           .filter((n) => n)
           .join(' ')}

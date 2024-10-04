@@ -140,7 +140,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             if (alignment === 'RIGHT') return 'select-menu--right'
             return 'select-menu--fill'
           })(),
-          isDisabled ? 'select-menu--disabled' : null,
+          isDisabled && 'select-menu--disabled',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -150,7 +150,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
           role="dropdown-button"
           className={[
             'select-menu__button',
-            isMenuOpen ? 'select-menu__button--active' : null,
+            isMenuOpen && 'select-menu__button--active',
           ]
             .filter((n) => n)
             .join(' ')}
@@ -174,7 +174,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             customClassName="select-menu__caret"
           />
         </button>
-        {isNew ? <Chip>New</Chip> : null}
+        {isNew && <Chip>New</Chip>}
         {(() => {
           if (isMenuOpen)
             return (

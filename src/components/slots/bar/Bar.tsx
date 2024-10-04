@@ -51,8 +51,8 @@ export class Bar extends React.Component<BarProps> {
         className={[
           'bar',
           'recharged',
-          isCompact ? 'bar--compact' : null,
-          isOnlyText ? 'bar--text-only' : null,
+          isCompact && 'bar--compact',
+          isOnlyText && 'bar--text-only',
         ]
           .filter((n) => n)
           .join(' ')}

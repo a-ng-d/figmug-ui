@@ -41,11 +41,7 @@ export class Select extends React.Component<SelectProps> {
 
     return (
       <div
-        className={[
-          'checkbox',
-          'recharged',
-          isBlocked ? 'checkbox--blocked' : null,
-        ]
+        className={['checkbox', 'recharged', isBlocked && 'checkbox--blocked']
           .filter((n) => n)
           .join(' ')}
       >
@@ -66,7 +62,7 @@ export class Select extends React.Component<SelectProps> {
         >
           {label}
         </label>
-        {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }
@@ -87,7 +83,7 @@ export class Select extends React.Component<SelectProps> {
 
     return (
       <div
-        className={['radio', 'recharged', isBlocked ? 'radio--blocked' : null]
+        className={['radio', 'recharged', isBlocked && 'radio--blocked']
           .filter((n) => n)
           .join(' ')}
       >
@@ -109,7 +105,7 @@ export class Select extends React.Component<SelectProps> {
         >
           {label}
         </label>
-        {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }
@@ -129,7 +125,7 @@ export class Select extends React.Component<SelectProps> {
 
     return (
       <div
-        className={['switch', 'recharged', isBlocked ? 'switch--blocked' : null]
+        className={['switch', 'recharged', isBlocked && 'switch--blocked']
           .filter((n) => n)
           .join(' ')}
       >
@@ -150,7 +146,7 @@ export class Select extends React.Component<SelectProps> {
         >
           {label}
         </label>
-        {isBlocked || isNew ? <Chip>{isNew ? 'New' : 'Pro'}</Chip> : null}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }
