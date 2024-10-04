@@ -162,9 +162,13 @@
     width: var(--size-xxxsmall);
     height: var(--size-xxxsmall);
     border-radius: var(--border-radius-small);
-    background-color: var(--figma-color-text);
+    background-color: var(--figma-color-icon);
     top: 2px;
     right: 2px;
+  }
+
+  &.icon-button--selected.icon-button--new:after {
+    background-color: var(--figma-color-icon-onbrand);
   }
 }
 
