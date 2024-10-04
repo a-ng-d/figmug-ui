@@ -5,15 +5,17 @@ export interface SimpleItemProps {
   id: string
   leftPartSlot: React.ReactNode
   rightPartSlot?: React.ReactNode
-  isCompact?: boolean
   isListItem?: boolean
+  isInteractive?: boolean
   alignment?: 'DEFAULT' | 'CENTER' | 'BASELINE'
+  action?: React.MouseEventHandler<HTMLLIElement | HTMLElement> &
+    React.KeyboardEventHandler<HTMLLIElement | HTMLElement>
 }
 
 export class SimpleItem extends React.Component<SimpleItemProps> {
   static defaultProps: Partial<SimpleItemProps> = {
-    isCompact: false,
     isListItem: true,
+    isInteractive: false,
     alignment: 'DEFAULT',
   }
 
@@ -23,9 +25,10 @@ export class SimpleItem extends React.Component<SimpleItemProps> {
       id,
       leftPartSlot,
       rightPartSlot,
-      isCompact,
       isListItem,
+      isInteractive,
       alignment,
+      action,
     } = this.props
 
     if (isListItem)
@@ -34,11 +37,19 @@ export class SimpleItem extends React.Component<SimpleItemProps> {
           data-id={id}
           className={[
             'simple-item',
-            isCompact && 'simple-item--compact',
             `simple-item--${alignment?.toLowerCase()}`,
+            isInteractive && 'simple-item--interactive',
           ]
             .filter((n) => n)
             .join(' ')}
+          tabIndex={isInteractive ? 0 : -1}
+          onMouseDown={isInteractive ? action : undefined}
+          onKeyDown={(e) => {
+            if ((e.key === ' ' || e.key === 'Enter') && isInteractive)
+              action?.(e)
+            if (e.key === 'Escape' && isInteractive)
+              (e.target as HTMLElement).blur()
+          }}
         >
           <div className="simple-item__left-part">{leftPartSlot}</div>
           <div className="simple-item__right-part">{rightPartSlot}</div>
@@ -49,11 +60,18 @@ export class SimpleItem extends React.Component<SimpleItemProps> {
         data-id={id}
         className={[
           'simple-item',
-          isCompact && 'simple-item__compact',
           `${alignment?.toLowerCase()}`,
+          isInteractive && 'simple-item--interactive',
         ]
           .filter((n) => n)
           .join(' ')}
+        tabIndex={isInteractive ? 0 : -1}
+        onMouseDown={isInteractive ? action : undefined}
+        onKeyDown={(e) => {
+          if ((e.key === ' ' || e.key === 'Enter') && isInteractive) action?.(e)
+          if (e.key === 'Escape' && isInteractive)
+            (e.target as HTMLElement).blur()
+        }}
       >
         <div className="simple-item__left-part">{leftPartSlot}</div>
         <div className="simple-item__right-part">{rightPartSlot}</div>

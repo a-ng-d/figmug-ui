@@ -15,6 +15,15 @@
     align-items: baseline;
   }
 
+  &--interactive:hover {
+    background-color: var(--figma-color-bg-hover);
+  }
+
+  &-interactive:focus {
+    outline: 2px solid var(--figma-color-border-selected);
+    outline-offset: -2px;
+  }
+
   .simple-item__left-part,
   .simple-item__right-part {
     display: flex;
