@@ -1,30 +1,58 @@
-# React + TypeScript + Vite
+![GitHub package.json version](https://img.shields.io/github/package-json/v/a-ng-d/figmug-ui?color=informational) ![GitHub last commit](https://img.shields.io/github/last-commit/a-ng-d/figmug-ui?color=informational) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/figmug-ui/npm.yml?label=npm) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/figmug-ui/chromatic.yml?label=Chromatic) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/figmug-ui/deploy.yml?label=Deployment)
+ ![GitHub](https://img.shields.io/github/license/a-ng-d/figmug-ui?color=informational)
+# Figmug UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Figmug UI is a comprehensive library of UI components designed specifically for building Figma plugins. It leverages modern tools and frameworks to ensure a seamless development experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Build with React**: A popular JavaScript library for building user interfaces
+- **Bundled with Vite**: Fast and optimized build tool for modern web projects.
+- **Tested with Jest and Vitest**: Ensures reliability and robustness of components.
+- **Exposed with Storybook**: Interactive UI component explorer for easy development and testing.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To install Figmug UI, use npm or yarn:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm install figmug-ui
+# or
+yarn add figmug-ui
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage
+
+Here's an example of how to use a button component from Figmug UI:
+
+```tsx
+import { Button } from 'figmug-ui';
+
+function App() {
+  return (
+    <div>
+      <Button
+        type="primary"
+        label="Primary action button"
+        action={() => console.log('I have been clicked')}
+      />
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Testing
+
+To run tests, use the following commands:
+
+```bash
+npm test
+# or
+yarn test
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
