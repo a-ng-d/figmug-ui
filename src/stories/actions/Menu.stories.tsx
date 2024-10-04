@@ -23,6 +23,7 @@ export const DropdownIcon: Story = {
     options: { ...ListStories.FourOptionsList.args.options },
     selected: 'OPTION_1',
     alignment: 'BOTTOM_LEFT',
+    isNew: false,
   },
   argTypes: {
     type: { control: false },
