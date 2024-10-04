@@ -470,6 +470,11 @@
     mask-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.5 14V11.025C13.138 11.259 11.26 13.138 11.025 15.5H14V16.5H11.025C11.259 18.862 13.138 20.74 15.5 20.975V18H16.5V20.975C18.862 20.741 20.74 18.862 20.975 16.5H18V15.5H20.975C20.741 13.138 18.862 11.26 16.5 11.025V14H15.5ZM21.98 15.5C21.739 12.585 19.415 10.261 16.5 10.02V8H15.5V10.02C12.585 10.261 10.261 12.585 10.02 15.5H8V16.5H10.02C10.261 19.415 12.585 21.739 15.5 21.98V24H16.5V21.98C19.415 21.739 21.739 19.415 21.98 16.5H24V15.5H21.98Z' fill='black'/%3E%3C/svg%3E%0A");
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.5 14V11.025C13.138 11.259 11.26 13.138 11.025 15.5H14V16.5H11.025C11.259 18.862 13.138 20.74 15.5 20.975V18H16.5V20.975C18.862 20.741 20.74 18.862 20.975 16.5H18V15.5H20.975C20.741 13.138 18.862 11.26 16.5 11.025V14H15.5ZM21.98 15.5C21.739 12.585 19.415 10.261 16.5 10.02V8H15.5V10.02C12.585 10.261 10.261 12.585 10.02 15.5H8V16.5H10.02C10.261 19.415 12.585 21.739 15.5 21.98V24H16.5V21.98C19.415 21.739 21.739 19.415 21.98 16.5H24V15.5H21.98Z' fill='black'/%3E%3C/svg%3E%0A");
   }
+
+  &--filter {
+    mask-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 15C4.134 15 1 11.866 1 8C1 4.134 4.134 1 8 1C11.866 1 15 4.134 15 8C15 11.866 11.866 15 8 15ZM0 8C0 3.582 3.582 0 8 0C12.418 0 16 3.582 16 8C16 12.418 12.418 16 8 16C3.582 16 0 12.418 0 8ZM6 11V10H10V11H6ZM4 5V6H12V5H4ZM5 8.5H11V7.5H5V8.5Z' fill='black'/%3E%3C/svg%3E%0A");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 15C4.134 15 1 11.866 1 8C1 4.134 4.134 1 8 1C11.866 1 15 4.134 15 8C15 11.866 11.866 15 8 15ZM0 8C0 3.582 3.582 0 8 0C12.418 0 16 3.582 16 8C16 12.418 12.418 16 8 16C3.582 16 0 12.418 0 8ZM6 11V10H10V11H6ZM4 5V6H12V5H4ZM5 8.5H11V7.5H5V8.5Z' fill='black'/%3E%3C/svg%3E%0A");
+  }
 }
 
 @keyframes rotating {
