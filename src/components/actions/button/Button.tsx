@@ -6,7 +6,13 @@ import texts from '../../../styles/texts.module.scss'
 import './button.scss'
 
 export interface ButtonProps {
-  type: 'primary' | 'secondary' | 'tertiary' | 'icon' | 'compact'
+  type:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'destructive'
+    | 'icon'
+    | 'compact'
   icon?: IconList
   iconClassName?: string
   customIcon?: React.ReactElement

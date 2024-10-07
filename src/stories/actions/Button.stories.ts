@@ -173,6 +173,26 @@ export const Tertiary: Story = {
   },
 }
 
+export const Destructive: Story = {
+  args: {
+    type: 'destructive',
+    label: 'Destructive action button',
+    feature: 'DESTRUCTIVE_ACTION',
+    hasMultipleActions: false,
+    isLoading: false,
+    isBlocked: false,
+    isDisabled: false,
+    isNew: false,
+  },
+  argTypes: {
+    type: { control: false },
+    icon: { control: false },
+    state: { control: false },
+    isLink: { control: false },
+    url: { control: false },
+  },
+}
+
 export const Icon: Story = {
   args: {
     type: 'icon',

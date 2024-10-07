@@ -62,6 +62,37 @@
   }
 }
 
+.button--destructive.recharged {
+  --blue: var(--figma-color-bg-danger);
+  --white: var(--figma-color-text-ondanger);
+  --black3: transparent;
+  background-color: var(--blue);
+  border-color: var(--black3);
+
+  &:enabled:hover {
+    background-color: var(--figma-color-bg-danger-hover);
+  }
+
+  &:enabled:focus {
+    --blue: var(--figma-color-bg-danger-pressed);
+    --black3: var(--figma-color-border-danger-strong);
+  }
+
+  &:enabled:active {
+    --blue: var(--figma-color-bg-danger-pressed);
+    --black3: var(--figma-color-bg-danger-pressed);
+  }
+
+  &:disabled {
+    --black3: var(--figma-color-bg-disabled);
+    --white: var(--figma-color-text-ondisabled);
+
+    & .button__caret {
+      background-color: var(--figma-color-text-ondisabled) !important;
+    }
+  }
+}
+
 .button--secondary.recharged {
   --white: var(--figma-color-bg);
   --black8: var(--figma-color-text);
