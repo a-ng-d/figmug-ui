@@ -11,16 +11,19 @@ export interface PopInProps {
     primary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+      feature?: string
       action: React.MouseEventHandler & React.KeyboardEventHandler
     }
     destructive?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+      feature?: string
       action: React.ReactEventHandler | (() => void)
     }
     secondary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+      feature?: string
       action: React.MouseEventHandler & React.KeyboardEventHandler
     }
   }
@@ -76,7 +79,11 @@ export const PopIn = (props: PopInProps) => {
                 label={actions.secondary.label}
                 isLoading={actions.secondary.state === 'LOADING'}
                 isDisabled={actions.secondary.state === 'DISABLED'}
-                feature="SECONDARY_ACTION"
+                feature={
+                  actions.secondary.feature === undefined
+                    ? 'SECONDARY_ACTION'
+                    : actions.secondary.feature
+                }
                 action={actions.secondary.action}
               />
             )}
@@ -86,7 +93,11 @@ export const PopIn = (props: PopInProps) => {
                 label={actions.destructive.label}
                 isLoading={actions.destructive.state === 'LOADING'}
                 isDisabled={actions.destructive.state === 'DISABLED'}
-                feature="DESTRUCTIVE_ACTION"
+                feature={
+                  actions.destructive.feature === undefined
+                    ? 'DESTRUCTIVE_ACTION'
+                    : actions.destructive.feature
+                }
                 action={actions.destructive.action}
               />
             )}
@@ -96,7 +107,11 @@ export const PopIn = (props: PopInProps) => {
                 label={actions.primary.label}
                 isLoading={actions.primary.state === 'LOADING'}
                 isDisabled={actions.primary.state === 'DISABLED'}
-                feature="PRIMARY_ACTION"
+                feature={
+                  actions.primary.feature === undefined
+                    ? 'PRIMARY_ACTION'
+                    : actions.primary.feature
+                }
                 action={actions.primary.action}
               />
             )}

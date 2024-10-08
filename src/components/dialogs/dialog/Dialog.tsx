@@ -9,16 +9,19 @@ export interface DialogProps {
     primary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+      feature?: string
       action: React.ReactEventHandler | (() => void)
     }
     destructive?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+      feature?: string
       action: React.ReactEventHandler | (() => void)
     }
     secondary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+      feature?: string
       action: React.ReactEventHandler | (() => void)
     }
   }
