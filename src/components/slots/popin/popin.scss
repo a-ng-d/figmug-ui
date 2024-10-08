@@ -5,7 +5,7 @@
   max-width: 576px;
   min-width: 460px;
   width: 100%;
-  height: 272px;
+  max-height: max-content;
   border-radius: var(--border-radius-small);
   background-color: var(--figma-color-bg);
   border: 1px solid var(--figma-color-border);
@@ -55,6 +55,7 @@
     max-width: unset;
     min-width: unset;
     height: auto;
+    min-height: max-content;
 
     .popin__content,
     .popin__actions,
