@@ -11,6 +11,11 @@ export interface DialogProps {
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
       action: React.ReactEventHandler | (() => void)
     }
+    destructive?: {
+      label: string
+      state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+      action: React.ReactEventHandler | (() => void)
+    }
     secondary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'

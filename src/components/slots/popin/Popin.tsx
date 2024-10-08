@@ -13,6 +13,11 @@ export interface PopInProps {
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
       action: React.MouseEventHandler & React.KeyboardEventHandler
     }
+    destructive?: {
+      label: string
+      state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+      action: React.ReactEventHandler | (() => void)
+    }
     secondary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
@@ -73,6 +78,16 @@ export const PopIn = (props: PopInProps) => {
                 isDisabled={actions.secondary.state === 'DISABLED'}
                 feature="SECONDARY_ACTION"
                 action={actions.secondary.action}
+              />
+            )}
+            {actions.destructive !== undefined && (
+              <Button
+                type="destructive"
+                label={actions.destructive.label}
+                isLoading={actions.destructive.state === 'LOADING'}
+                isDisabled={actions.destructive.state === 'DISABLED'}
+                feature="DESTRUCTIVE_ACTION"
+                action={actions.destructive.action}
               />
             )}
             {actions.primary !== undefined && (

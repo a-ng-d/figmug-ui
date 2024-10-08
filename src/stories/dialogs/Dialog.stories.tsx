@@ -171,3 +171,31 @@ export const Form: Story = {
     onClose: { control: false },
   },
 }
+
+export const SimpleDialog: Story = {
+  args: {
+    title: 'Are you sure to delete?',
+    actions: {
+      destructive: {
+        label: 'Delete',
+        action: fn(),
+      },
+      secondary: {
+        label: 'Cancel',
+        action: fn(),
+      },
+    },
+    children: (() => (
+      <div className="dialog__text">
+        <p className={`type ${texts.type}`}>
+          Deleting this item will remove it permanently.
+        </p>
+      </div>
+    ))(),
+    onClose: fn(),
+  },
+  argTypes: {
+    select: { control: false },
+    onClose: { control: false },
+  },
+}
