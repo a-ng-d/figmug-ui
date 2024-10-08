@@ -21,7 +21,9 @@ export interface SortableListProps<T = DefaultData> {
   primarySlot: Array<React.ReactNode>
   secondarySlot?: Array<React.ReactNode>
   actionsSlot?: Array<React.ReactNode>
+  emptySlot?: React.ReactNode
   isScrollable?: boolean
+  canBeEmpty?: boolean
   onChangeSortableList: (data: Array<T>) => void
   onRemoveItem: React.MouseEventHandler<Element> &
     React.KeyboardEventHandler<Element>
@@ -40,6 +42,7 @@ export class SortableList<T extends DefaultData> extends React.Component<
 
   static defaultProps: Partial<SortableListProps> = {
     isScrollable: false,
+    canBeEmpty: true,
   }
 
   constructor(props: SortableListProps<T>) {
@@ -189,6 +192,7 @@ export class SortableList<T extends DefaultData> extends React.Component<
   render() {
     const {
       data,
+      canBeEmpty,
       primarySlot,
       secondarySlot,
       actionsSlot,
@@ -197,6 +201,8 @@ export class SortableList<T extends DefaultData> extends React.Component<
     } = this.props
     const { selectedElement, hoveredElement } = this.state
 
+    if (data.length === 0 && canBeEmpty)
+      return <div className="sortable-list">{this.props.emptySlot}</div>
     return (
       <ul
         className={[
@@ -212,6 +218,7 @@ export class SortableList<T extends DefaultData> extends React.Component<
             key={item.id}
             id={item.id}
             index={index}
+            canBeRemoved={data.length > 1 || canBeEmpty}
             primarySlot={primarySlot[index]}
             secondarySlot={secondarySlot ? secondarySlot[index] : undefined}
             actionsSlot={actionsSlot ? actionsSlot[index] : undefined}

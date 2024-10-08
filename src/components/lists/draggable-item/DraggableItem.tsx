@@ -6,6 +6,7 @@ import './draggable-item.scss'
 export interface DraggableItemProps {
   id: string
   index: number
+  canBeRemoved?: boolean
   primarySlot: React.ReactNode
   secondarySlot?: React.ReactNode
   actionsSlot?: React.ReactNode
@@ -37,6 +38,7 @@ export class DraggableItem extends React.Component<
   DraggableItemStates
 > {
   static defaultProps: Partial<DraggableItemProps> = {
+    canBeRemoved: true,
     selected: false,
     guideAbove: false,
     guideBelow: false,
@@ -111,6 +113,7 @@ export class DraggableItem extends React.Component<
     const {
       id,
       index,
+      canBeRemoved,
       primarySlot,
       secondarySlot,
       actionsSlot,
@@ -162,8 +165,9 @@ export class DraggableItem extends React.Component<
             <Button
               type="icon"
               icon="minus"
+              isDisabled={!canBeRemoved}
               feature="REMOVE_ITEM"
-              action={onRemove}
+              action={canBeRemoved ? onRemove : () => null}
             />
           </div>
         </div>
