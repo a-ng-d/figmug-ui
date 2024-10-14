@@ -1,5 +1,6 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/a-ng-d/figmug-ui?color=informational) ![GitHub last commit](https://img.shields.io/github/last-commit/a-ng-d/figmug-ui?color=informational) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/figmug-ui/npm.yml?label=npm) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/figmug-ui/chromatic.yml?label=Chromatic) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/figmug-ui/deploy.yml?label=Deployment)
- ![GitHub](https://img.shields.io/github/license/a-ng-d/figmug-ui?color=informational)
+![GitHub](https://img.shields.io/github/license/a-ng-d/figmug-ui?color=informational)
+
 # Figmug UI
 
 Figmug UI is a comprehensive library of UI components designed specifically for building Figma plugins. It leverages modern tools and frameworks to ensure a seamless development experience.
@@ -26,7 +27,7 @@ yarn add figmug-ui
 Here's an example of how to use a button component from Figmug UI:
 
 ```tsx
-import { Button } from 'figmug-ui';
+import { Button } from 'figmug-ui'
 
 function App() {
   return (
@@ -37,10 +38,10 @@ function App() {
         action={() => console.log('I have been clicked')}
       />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 ## Testing

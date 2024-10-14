@@ -113,7 +113,8 @@
       width: 100% !important;
     }
 
-    &--no-frame, &--no-frame:focus {
+    &--no-frame,
+    &--no-frame:focus {
       --black1: transparent !important;
       --blue: transparent !important;
     }
@@ -125,7 +126,7 @@
     &--unit {
       padding-right: var(--size-small);
     }
-    
+
     &::placeholder {
       color: var(--figma-color-text-secondary) !important;
     }

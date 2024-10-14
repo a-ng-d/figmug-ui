@@ -6,16 +6,20 @@
   position: relative;
   background-color: var(--figma-color-bg);
 
-  &[draggable='true'], &[draggable='true'] .input__field, &[draggable='true'] .select-menu__button {
+  &[draggable='true'],
+  &[draggable='true'] .input__field,
+  &[draggable='true'] .select-menu__button {
     background-color: var(--figma-color-bg-selected);
     --white: var(--figma-color-bg-selected) !important;
   }
 
-  &--emphasis, &--emphasis .input__field, &--emphasis .select-menu__button {
+  &--emphasis,
+  &--emphasis .input__field,
+  &--emphasis .select-menu__button {
     background-color: var(--figma-color-bg-pressed);
     --white: var(--figma-color-bg-pressed) !important;
   }
-  
+
   &[draggable='true']:active {
     cursor: grabbing;
   }
@@ -23,7 +27,7 @@
   &--dragged:active > div {
     pointer-events: none;
   }
-  
+
   &--above::before {
     content: '';
     position: absolute;
@@ -83,7 +87,7 @@
       align-items: center;
     }
   }
-  
+
   .draggable-item__buttons--compact {
     grid-column: span 4 / 37;
   }
