@@ -75,7 +75,6 @@ export const SingleSelection: Story = {
                 action: onChange,
               },
             ],
-            action: onChange,
           },
           {
             label: 'Option 3',
