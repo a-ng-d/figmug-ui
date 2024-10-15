@@ -183,6 +183,7 @@ export class Button extends React.Component<ButtonProps> {
           <div
             style={{
               opacity: isDisabled ? 0.5 : 1,
+              pointerEvents: 'none',
             }}
           >
             {customIcon}
