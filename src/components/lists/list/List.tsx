@@ -33,12 +33,22 @@ export class List extends React.Component<ListProps, ListStates> {
       <div className="select-menu__submenu">
         <ul className="select-menu__menu recharged select-menu__menu--active">
           {options?.map((option, index) => {
-            if (option.children !== undefined) {
-              if (option.isActive && option.children.length > 0)
-                return this.MenuGroup(option, index)
-              return this.MenuSubOption(option, index)
-            }
-            return null
+            const isActive =
+                option.isActive !== undefined ? option.isActive : true,
+              isBlocked =
+                option.isBlocked !== undefined ? option.isBlocked : false,
+              isNew = option.isNew !== undefined ? option.isNew : false,
+              children = option.children !== undefined ? option.children : []
+
+            if (isActive && children.length > 0)
+              return this.MenuGroup(
+                { ...option, isActive, isBlocked, isNew, children },
+                index
+              )
+            return this.MenuSubOption(
+              { ...option, isActive, isBlocked, isNew, children },
+              index
+            )
           })}
         </ul>
       </div>
@@ -85,7 +95,7 @@ export class List extends React.Component<ListProps, ListStates> {
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
           if (e.key === ' ' || e.key === 'Enter') {
-            option.action(e)
+            option.action && option.action(e)
             if (typeof onCancellation === 'function') onCancellation()
           }
           if (e.key === 'Escape') {
@@ -94,7 +104,7 @@ export class List extends React.Component<ListProps, ListStates> {
           return null
         }}
         onMouseDown={(e) => {
-          option.action(e)
+          option.action?.(e)
           if (typeof onCancellation === 'function') onCancellation()
         }}
         onFocus={() => null}
@@ -171,7 +181,8 @@ export class List extends React.Component<ListProps, ListStates> {
         data-feature={option.feature}
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
-          if (e.key === ' ' || e.key === 'Enter') return option.action(e)
+          if ((e.key === ' ' || e.key === 'Enter') && option.action)
+            return option.action(e)
           if (e.key === 'Escape') return this.setState({ openedGroup: 'EMPTY' })
           return null
         }}
@@ -203,14 +214,27 @@ export class List extends React.Component<ListProps, ListStates> {
           .join(' ')}
       >
         {options?.map((option, index) => {
-          if (option.isActive && option.type === 'SEPARATOR')
+          const isActive =
+              option.isActive !== undefined ? option.isActive : true,
+            isBlocked =
+              option.isBlocked !== undefined ? option.isBlocked : false,
+            isNew = option.isNew !== undefined ? option.isNew : false,
+            children = option.children !== undefined ? option.children : []
+
+          if (isActive && option.type === 'SEPARATOR')
             return this.MenuSeparator(index)
-          if (option.isActive && option.type === 'TITLE')
+          if (isActive && option.type === 'TITLE')
             return this.MenuTitle(option, index)
-          if (option.isActive && option.type === 'OPTION' && option.children)
-            return option.children.length > 0
-              ? this.MenuGroup(option, index)
-              : this.MenuOption(option, index)
+          if (isActive && option.type === 'OPTION' && children)
+            return children.length > 0
+              ? this.MenuGroup(
+                  { ...option, isActive, isBlocked, isNew, children },
+                  index
+                )
+              : this.MenuOption(
+                  { ...option, isActive, isBlocked, isNew, children },
+                  index
+                )
           return null
         })}
       </ul>

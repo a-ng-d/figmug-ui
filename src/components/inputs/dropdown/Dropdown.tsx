@@ -85,7 +85,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
     let position = 0
 
     options.forEach((option) => {
-      if (option.value === selected) position = option.position
+      if (option.value === selected) position = option.position ?? 0
       if (
         option.children?.find((child) => child.value === selected) !== undefined
       )

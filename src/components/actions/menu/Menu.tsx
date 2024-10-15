@@ -23,6 +23,10 @@ export interface MenuStates {
 }
 
 export class Menu extends React.Component<MenuProps, MenuStates> {
+  selectMenuRef: React.RefObject<HTMLDivElement>
+  buttonRef: React.RefObject<Button>
+  listRef: React.RefObject<HTMLDivElement>
+
   static defaultProps: Partial<MenuProps> = {
     type: 'ICON',
     options: [],
@@ -36,6 +40,9 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
     this.state = {
       isMenuOpen: false,
     }
+    this.selectMenuRef = React.createRef()
+    this.buttonRef = React.createRef()
+    this.listRef = React.createRef()
     this.handleClickOutside = this.handleClickOutside.bind(this)
   }
 
@@ -46,9 +53,12 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
     document.removeEventListener('mousedown', this.handleClickOutside)
 
   handleClickOutside = (e: Event) => {
-    const { id } = this.props
-
-    if (!(e.target as HTMLElement).closest(`#${id}`))
+    console.log(this.buttonRef.current?.buttonRef.current, e.target)
+    if (e.target === this.buttonRef.current?.buttonRef.current)
+      this.setState({
+        isMenuOpen: true,
+      })
+    else if (e.target !== this.listRef.current)
       this.setState({
         isMenuOpen: false,
       })
@@ -85,6 +95,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
         ]
           .filter((n) => n)
           .join(' ')}
+        ref={this.selectMenuRef}
       >
         {type === 'ICON' ? (
           <Button
@@ -95,6 +106,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
             isLoading={state === 'LOADING'}
             isDisabled={state === 'DISABLED'}
             isNew={isNew}
+            ref={this.buttonRef}
             action={() => {
               this.setState({
                 isMenuOpen: !isMenuOpen,
@@ -108,6 +120,8 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
             hasMultipleActions
             isLoading={state === 'LOADING'}
             isDisabled={state === 'DISABLED'}
+            isNew={isNew}
+            ref={this.buttonRef}
             action={() =>
               this.setState({
                 isMenuOpen: !isMenuOpen,
@@ -124,6 +138,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
                   position: 'absolute',
                   zIndex: 99,
                 }}
+                ref={this.listRef}
               >
                 <List
                   options={options}
