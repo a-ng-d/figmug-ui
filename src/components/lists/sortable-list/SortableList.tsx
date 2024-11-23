@@ -27,6 +27,7 @@ export interface SortableListProps<T = DefaultData> {
   onChangeSortableList: (data: Array<T>) => void
   onRemoveItem: React.MouseEventHandler<Element> &
     React.KeyboardEventHandler<Element>
+  onRefoldOptions: () => void
 }
 
 interface SortableListStates {
@@ -198,6 +199,7 @@ export class SortableList<T extends DefaultData> extends React.Component<
       actionsSlot,
       isScrollable,
       onRemoveItem,
+      onRefoldOptions,
     } = this.props
     const { selectedElement, hoveredElement } = this.state
 
@@ -233,7 +235,8 @@ export class SortableList<T extends DefaultData> extends React.Component<
                 ? hoveredElement.hasGuideBelow
                 : false
             }
-            onCancellationSelection={this.selectionHandler}
+            onCancelSelection={this.selectionHandler}
+            onRefoldOptions={onRefoldOptions}
             onChangeOrder={this.orderHandler}
             onRemove={onRemoveItem}
             onChangeSelection={this.selectionHandler}

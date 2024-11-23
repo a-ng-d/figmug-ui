@@ -14,8 +14,9 @@ export interface DraggableItemProps {
   guideAbove?: boolean
   guideBelow?: boolean
   onChangeSelection: React.MouseEventHandler<HTMLLIElement>
-  onCancellationSelection: React.MouseEventHandler<Element> &
+  onCancelSelection: React.MouseEventHandler<Element> &
     React.FocusEventHandler<HTMLInputElement>
+  onRefoldOptions?: () => void
   onDragChange: (
     id: string | undefined,
     hasGuideAbove: boolean,
@@ -122,7 +123,8 @@ export class DraggableItem extends React.Component<
       guideBelow,
       onRemove,
       onChangeSelection,
-      onCancellationSelection,
+      onCancelSelection,
+      onRefoldOptions,
     } = this.props
 
     const { isDragged, hasMoreOptions } = this.state
@@ -156,7 +158,8 @@ export class DraggableItem extends React.Component<
                 icon="ellipsis"
                 state={hasMoreOptions ? 'selected' : ''}
                 action={() => {
-                  onCancellationSelection
+                  onCancelSelection
+                  onRefoldOptions
                   this.setState({ hasMoreOptions: !hasMoreOptions })
                 }}
               />
