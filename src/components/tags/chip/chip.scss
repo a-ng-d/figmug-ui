@@ -15,6 +15,7 @@
     font-weight: 500;
     color: var(--figma-color-text-brand);
     user-select: none;
+    text-wrap: nowrap;
   }
 
   &.chip--inactive {
