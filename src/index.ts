@@ -30,6 +30,7 @@ export { FormItem } from './components/slots/form-item/FormItem'
 export { SimpleItem } from './components/slots/simple-item/SimpleItem'
 export { PopIn } from './components/slots/popin/Popin'
 export { Chip } from './components/tags/chip/Chip'
+export { Tooltip } from './components/tags/tooltip/Tooltip'
 export { texts }
 export { icons }
 export { layouts }
