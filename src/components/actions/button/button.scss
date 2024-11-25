@@ -84,7 +84,7 @@
   }
 
   &:disabled {
-    --black3: var(--figma-color-bg-disabled);
+    --blue: var(--figma-color-bg-disabled);
     --white: var(--figma-color-text-ondisabled);
 
     & .button__caret {
