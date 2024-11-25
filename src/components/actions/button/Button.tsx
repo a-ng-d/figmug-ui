@@ -2,6 +2,7 @@ import React from 'react'
 import type { IconList } from '../../../types/icon.types'
 import { Chip } from '../../../components/tags/chip/Chip'
 import { Icon } from '../../assets/icon/Icon'
+import { Tooltip } from '../../../components/tags/tooltip/Tooltip'
 import texts from '../../../styles/texts.module.scss'
 import './button.scss'
 
@@ -19,6 +20,7 @@ export interface ButtonProps {
   label?: string
   state?: 'default' | 'disabled' | 'blocked' | 'selected' | ''
   url?: string
+  helper?: string
   feature?: string
   hasMultipleActions?: boolean
   isLink?: boolean
@@ -29,7 +31,11 @@ export interface ButtonProps {
   action: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
-export class Button extends React.Component<ButtonProps> {
+export interface ButtonStates {
+  isTooltipVisible: boolean
+}
+
+export class Button extends React.Component<ButtonProps, ButtonStates> {
   buttonRef: React.RefObject<HTMLButtonElement> = React.createRef()
 
   static defaultProps: Partial<ButtonProps> = {
@@ -40,6 +46,13 @@ export class Button extends React.Component<ButtonProps> {
     isDisabled: false,
     isNew: false,
     action: () => null,
+  }
+
+  constructor(props: ButtonProps) {
+    super(props)
+    this.state = {
+      isTooltipVisible: false,
+    }
   }
 
   // Templates
@@ -136,15 +149,16 @@ export class Button extends React.Component<ButtonProps> {
 
   Icon = () => {
     const {
+      icon,
       iconClassName,
       customIcon,
       feature,
       state,
+      helper,
       isLoading,
       isDisabled,
       isNew,
       action,
-      icon,
     } = this.props
 
     return (
@@ -160,12 +174,19 @@ export class Button extends React.Component<ButtonProps> {
         ]
           .filter((n) => n)
           .join(' ')}
+        style={{
+          position: helper !== undefined ? 'relative' : 'static',
+        }}
         disabled={isDisabled}
         onKeyDown={(e) => {
           if (e.key === ' ' || e.key === 'Enter') action?.(e)
           if (e.key === 'Escape') (e.target as HTMLElement).blur()
         }}
         onMouseDown={action}
+        onMouseOver={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onMouseOut={() => this.setState({ isTooltipVisible: false })}
         ref={this.buttonRef}
       >
         {customIcon === undefined ? (
@@ -189,6 +210,7 @@ export class Button extends React.Component<ButtonProps> {
             {customIcon}
           </div>
         )}
+        {this.state.isTooltipVisible && <Tooltip>{helper}</Tooltip>}
       </button>
     )
   }

@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { Icon } from '../icon/Icon'
 import texts from '../../../styles/texts.module.scss'
+import { Tooltip } from '../../../components/tags/tooltip/Tooltip'
 import './section-title.scss'
 
 export type SectionTitleProps = {
@@ -9,6 +11,8 @@ export type SectionTitleProps = {
 }
 
 export const SectionTitle = (props: SectionTitleProps) => {
+  const [isTooltipVisible, setTooltipState] = useState(false)
+
   const { label, indicator, helper } = props
 
   return (
@@ -22,13 +26,17 @@ export const SectionTitle = (props: SectionTitleProps) => {
         >{`(${indicator})`}</div>
       )}
       {helper !== undefined && (
-        <div className="section-title__tooltip">
+        <div
+          className="section-title__tooltip"
+          onMouseOver={() => setTooltipState(true)}
+          onMouseOut={() => setTooltipState(false)}
+        >
           <Icon
             type="PICTO"
             iconName="info"
             customClassName="tooltip__icon"
           />
-          <div className={`tooltip__block type ${texts.type}`}>{helper}</div>
+          {isTooltipVisible && <Tooltip>{helper}</Tooltip>}
         </div>
       )}
     </div>
