@@ -35,6 +35,7 @@ export const ColorPicker: Story = {
     type: { control: false },
     value: { control: 'color' },
     icon: { control: false },
+    unit: { control: false },
     state: { control: false },
     placeholder: { control: false },
     charactersLimit: { control: false },
@@ -134,6 +135,7 @@ export const ShortText: Story = {
   argTypes: {
     type: { control: false },
     icon: { control: false },
+    unit: { control: false },
     state: { control: 'select', options: ['DEFAULT', 'ERROR'] },
     charactersLimit: { control: 'number' },
     min: { control: false },
@@ -181,6 +183,7 @@ export const LongText: Story = {
   argTypes: {
     type: { control: false },
     icon: { control: false },
+    unit: { control: false },
     state: { control: 'select', options: ['DEFAULT', 'ERROR'] },
     charactersLimit: { control: false },
     min: { control: false },
@@ -225,6 +228,7 @@ export const CodeSnippet: Story = {
   argTypes: {
     type: { control: false },
     icon: { control: false },
+    unit: { control: false },
     placeholder: { control: false },
     state: { control: false },
     charactersLimit: { control: false },
