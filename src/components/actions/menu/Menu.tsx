@@ -53,11 +53,18 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
     document.removeEventListener('mousedown', this.handleClickOutside)
 
   handleClickOutside = (e: Event) => {
-    if (e.target === this.buttonRef.current?.buttonRef.current)
+    if (
+      this.buttonRef.current?.buttonRef.current?.contains(e.target as Node) &&
+      this.state.isMenuOpen
+    )
       this.setState({
         isMenuOpen: true,
       })
-    else if (e.target !== this.listRef.current)
+    else if (!this.listRef.current?.contains(e.target as Node))
+      this.setState({
+        isMenuOpen: false,
+      })
+    else
       this.setState({
         isMenuOpen: false,
       })
