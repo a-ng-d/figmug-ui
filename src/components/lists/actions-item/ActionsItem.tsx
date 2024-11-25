@@ -96,7 +96,7 @@ export class ActionsItem extends React.Component<ActionsItemProps> {
                 </div>
               )}
               <div
-                className={`${texts.type} ${texts['type--secondary']} type actions-item__user__avatar`}
+                className={`${texts.type} ${texts['type--secondary']} type actions-item__user__name`}
               >
                 {user.name}
               </div>
