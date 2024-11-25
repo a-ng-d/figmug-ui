@@ -55,6 +55,25 @@ describe('Primary Button test:', () => {
     expect(mockFn).toHaveBeenCalledTimes(3)
   })
 
+  it('action does not trigger properly when blocked', async () => {
+    const mockFn = vi.fn()
+    render(
+      <Button
+        type="primary"
+        label="Testing"
+        isBlocked={true}
+        action={mockFn}
+      />
+    )
+    expect(mockFn).toHaveBeenCalledTimes(0)
+    fireEvent.mouseDown(screen.getByRole('action-button'))
+    expect(mockFn).toHaveBeenCalledTimes(0)
+    const button = screen.getByRole('action-button')
+    button.removeAttribute('disabled')
+    fireEvent.mouseDown(button)
+    expect(mockFn).toHaveBeenCalledTimes(0)
+  })
+
   it('disabled prevents action', async () => {
     const mockFn = vi.fn()
     render(
