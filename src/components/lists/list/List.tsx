@@ -94,7 +94,7 @@ export class List extends React.Component<ListProps, ListStates> {
         data-feature={option.feature}
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
-          if (e.key === ' ' || e.key === 'Enter') {
+          if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
             option.action && option.action(e)
             if (typeof onCancellation === 'function') onCancellation()
           }
@@ -104,7 +104,7 @@ export class List extends React.Component<ListProps, ListStates> {
           return null
         }}
         onMouseDown={(e) => {
-          option.action?.(e)
+          !option.isBlocked ? option.action?.(e) : undefined
           if (typeof onCancellation === 'function') onCancellation()
         }}
         onFocus={() => null}
@@ -136,7 +136,7 @@ export class List extends React.Component<ListProps, ListStates> {
         data-is-blocked={option.isBlocked}
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
-          if (e.key === ' ' || e.key === 'Enter')
+          if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked)
             return this.setState({ openedGroup: option.value ?? '' })
           if (e.key === 'Escape') return this.setState({ openedGroup: 'EMPTY' })
           return null
@@ -181,12 +181,16 @@ export class List extends React.Component<ListProps, ListStates> {
         data-feature={option.feature}
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
-          if ((e.key === ' ' || e.key === 'Enter') && option.action)
+          if (
+            (e.key === ' ' || e.key === 'Enter') &&
+            option.action &&
+            !option.isBlocked
+          )
             return option.action(e)
           if (e.key === 'Escape') return this.setState({ openedGroup: 'EMPTY' })
           return null
         }}
-        onMouseDown={option.action}
+        onMouseDown={!option.isBlocked ? option.action : undefined}
       >
         <span className="select-menu__item-icon" />
         <span className="select-menu__item-label">{option.label}</span>

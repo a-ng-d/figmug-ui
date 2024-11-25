@@ -250,8 +250,10 @@ export class Input extends React.Component<InputProps, InputStates> {
           className="input__color"
           value={inputValue}
           disabled={isDisabled || isBlocked}
-          onChange={this.onPickColorValue}
-          onBlur={onBlur}
+          onChange={
+            !(isDisabled || isBlocked) ? this.onPickColorValue : undefined
+          }
+          onBlur={!(isDisabled || !isBlocked) ? onBlur : undefined}
           ref={this.inputRef}
         />
         <input
@@ -264,12 +266,15 @@ export class Input extends React.Component<InputProps, InputStates> {
           maxLength={6}
           disabled={isDisabled || isBlocked}
           autoFocus={isAutoFocus}
-          onChange={this.onChangeColorValue}
+          onChange={
+            !(isDisabled || isBlocked) ? this.onChangeColorValue : undefined
+          }
           onFocus={(e) => {
             e.target.select()
-            if (typeof onFocus === 'function') onFocus(e)
+            if (typeof onFocus === 'function' && !(isDisabled || isBlocked))
+              onFocus(e)
           }}
-          onBlur={onBlur}
+          onBlur={!(isDisabled || isBlocked) ? onBlur : undefined}
           ref={this.inputRef}
         />
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
@@ -346,13 +351,18 @@ export class Input extends React.Component<InputProps, InputStates> {
             step={step}
             disabled={isDisabled || isBlocked}
             autoFocus={isAutoFocus}
-            onKeyDown={this.onValidNumber}
-            onChange={this.onChangeNumber}
+            onKeyDown={
+              !(isDisabled || isBlocked) ? this.onValidNumber : undefined
+            }
+            onChange={
+              !(isDisabled || isBlocked) ? this.onChangeNumber : undefined
+            }
             onFocus={(e) => {
               e.target.select()
-              if (typeof onFocus === 'function') onFocus(e)
+              if (typeof onFocus === 'function' && !(isDisabled || isBlocked))
+                onFocus(e)
             }}
-            onBlur={onBlur}
+            onBlur={!(isDisabled || isBlocked) ? onBlur : undefined}
             ref={this.inputRef}
           />
           {unit !== undefined && (
@@ -436,10 +446,10 @@ export class Input extends React.Component<InputProps, InputStates> {
           maxLength={charactersLimit}
           disabled={isDisabled || isBlocked}
           autoFocus={isAutoFocus}
-          onKeyDown={this.onValidText}
-          onChange={this.onChangeText}
-          onFocus={onFocus}
-          onBlur={onBlur}
+          onKeyDown={!(isDisabled || isBlocked) ? this.onValidText : undefined}
+          onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
+          onFocus={!(isDisabled || isBlocked) ? onFocus : undefined}
+          onBlur={!(isDisabled || isBlocked) ? onBlur : undefined}
           ref={this.inputRef}
         ></input>
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
@@ -502,10 +512,12 @@ export class Input extends React.Component<InputProps, InputStates> {
           value={inputValue}
           disabled={isDisabled || isBlocked}
           autoFocus={isAutoFocus}
-          onKeyDown={this.onValidLongText}
-          onChange={this.onChangeText}
-          onFocus={onFocus}
-          onBlur={onBlur}
+          onKeyDown={
+            !(isDisabled || isBlocked) ? this.onValidLongText : undefined
+          }
+          onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
+          onFocus={!(isDisabled || isBlocked) ? onFocus : undefined}
+          onBlur={!(isDisabled || isBlocked) ? onBlur : undefined}
           ref={this.textareaRef}
         />
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
@@ -538,7 +550,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           value={value}
           disabled={isDisabled || isBlocked}
           autoFocus={isAutoFocus}
-          onChange={this.onChangeText}
+          onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
           onFocus={(e) => e.target.select()}
           onBlur={() => window.getSelection()?.removeAllRanges()}
           readOnly

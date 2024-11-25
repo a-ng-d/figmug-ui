@@ -28,7 +28,7 @@ export interface ButtonProps {
   isBlocked?: boolean
   isDisabled?: boolean
   isNew?: boolean
-  action: React.MouseEventHandler & React.KeyboardEventHandler
+  action?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface ButtonStates {
@@ -45,7 +45,6 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
     isBlocked: false,
     isDisabled: false,
     isNew: false,
-    action: () => null,
   }
 
   constructor(props: ButtonProps) {
@@ -84,10 +83,14 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
         data-feature={feature}
         disabled={isDisabled || isBlocked}
         onKeyDown={(e) => {
-          if (e.key === ' ' || e.key === 'Enter') action?.(e)
+          if (
+            ((e.key === ' ' || e.key === 'Enter') && !isDisabled) ||
+            !isBlocked
+          )
+            action?.(e)
           if (e.key === 'Escape') (e.target as HTMLElement).blur()
         }}
-        onMouseDown={action}
+        onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
         ref={this.buttonRef}
       >
         <span className={['button__label'].filter((n) => n).join(' ')}>
@@ -157,6 +160,7 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
       helper,
       isLoading,
       isDisabled,
+      isBlocked,
       isNew,
       action,
     } = this.props
@@ -179,10 +183,14 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
         }}
         disabled={isDisabled}
         onKeyDown={(e) => {
-          if (e.key === ' ' || e.key === 'Enter') action?.(e)
+          if (
+            (e.key === ' ' || e.key === 'Enter') &&
+            !(isDisabled || isBlocked)
+          )
+            action?.(e)
           if (e.key === 'Escape') (e.target as HTMLElement).blur()
         }}
-        onMouseDown={action}
+        onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
         onMouseOver={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
@@ -224,10 +232,14 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
         className="compact-button recharged"
         disabled={isDisabled || isBlocked}
         onKeyDown={(e) => {
-          if (e.key === ' ' || e.key === 'Enter') action?.(e)
+          if (
+            (e.key === ' ' || e.key === 'Enter') &&
+            !(isDisabled || isBlocked)
+          )
+            action?.(e)
           if (e.key === 'Escape') (e.target as HTMLElement).blur()
         }}
-        onMouseDown={action}
+        onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
         ref={this.buttonRef}
       >
         <Icon
