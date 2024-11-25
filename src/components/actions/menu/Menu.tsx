@@ -84,6 +84,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
     } = this.props
     const { isMenuOpen } = this.state
 
+    if (options.length === 0) return null
     return (
       <div
         id={id}
