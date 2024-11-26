@@ -6,7 +6,7 @@ import { fn } from '@storybook/test'
 const mock = fn()
 
 const meta = {
-  title: 'Example/Dialogs/SemanticMessage',
+  title: 'Example/Dialogs/Semantic Message',
   component: SemanticMessage,
   parameters: {
     layout: 'centered',
@@ -21,6 +21,7 @@ export const TypedMessage: Story = {
     type: 'INFO',
     message:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    isAnchored: false,
     action: (() => (
       <Button
         type="secondary"

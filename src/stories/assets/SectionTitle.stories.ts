@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { SectionTitle } from '../../components/assets/section-title/SectionTitle'
 
 const meta = {
-  title: 'Example/Assets/Section title',
+  title: 'Example/Assets/Section Title',
   component: SectionTitle,
   parameters: {
     layout: 'centered',

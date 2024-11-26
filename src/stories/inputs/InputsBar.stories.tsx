@@ -39,7 +39,7 @@ const Inputs = () => (
 )
 
 const meta = {
-  title: 'Example/Inputs/InputsBar',
+  title: 'Example/Inputs/Inputs Bar',
   component: InputsBar,
   parameters: {
     layout: 'centered',

@@ -3,7 +3,7 @@ import { FormItem } from '../../components/slots/form-item/FormItem'
 import { Input } from '../../components/inputs/input/Input'
 
 const meta = {
-  title: 'Example/Slots/Form item',
+  title: 'Example/Slots/Form Item',
   component: FormItem,
   parameters: {
     layout: 'centered',

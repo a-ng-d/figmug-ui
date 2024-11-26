@@ -16,7 +16,7 @@ interface ListItem {
 }
 
 const meta: Meta<typeof SortableList> = {
-  title: 'Example/Lists/SortableList',
+  title: 'Example/Lists/Sortable List',
   component: SortableList,
   decorators: [
     (Story) => (

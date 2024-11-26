@@ -6,7 +6,7 @@ import { Button } from '../../components/actions/button/Button'
 const mock = fn()
 
 const meta = {
-  title: 'Example/Lists/ActionsItem',
+  title: 'Example/Lists/Actions Item',
   component: ActionsItem,
   parameters: {
     layout: 'centered',
