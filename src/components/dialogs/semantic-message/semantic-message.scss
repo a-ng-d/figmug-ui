@@ -17,4 +17,8 @@
   &--warning {
     background-color: var(--figma-color-bg-warning-tertiary);
   }
+
+  &--anchored {
+    border-radius: var(--size-xxsmall);
+  }
 }

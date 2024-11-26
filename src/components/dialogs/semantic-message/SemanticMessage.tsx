@@ -6,10 +6,15 @@ import { IconList } from 'src/types/icon.types'
 export interface SemanticMessageProps {
   type: 'INFO' | 'SUCCESS' | 'WARNING' | 'ERROR'
   message: string
+  isAnchored?: boolean
   action?: React.ReactNode
 }
 
 export class SemanticMessage extends React.Component<SemanticMessageProps> {
+  static defaultProps: Partial<SemanticMessageProps> = {
+    isAnchored: false,
+  }
+
   setIcon = (type: string): IconList => {
     if (type === 'SUCCESS') {
       return 'check'
@@ -23,11 +28,17 @@ export class SemanticMessage extends React.Component<SemanticMessageProps> {
 
   // Render
   render() {
-    const { type, message, action } = this.props
+    const { type, message, isAnchored, action } = this.props
 
     return (
       <div
-        className={`semantic-message semantic-message--${type.toLowerCase()}`}
+        className={[
+          'semantic-message',
+          `semantic-message--${type.toLowerCase()}`,
+          isAnchored && 'semantic-message--anchored',
+        ]
+          .filter((n) => n)
+          .join(' ')}
       >
         <Message
           icon={this.setIcon(type)}
