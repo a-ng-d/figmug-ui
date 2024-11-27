@@ -181,7 +181,7 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
         style={{
           position: helper !== undefined ? 'relative' : 'static',
         }}
-        disabled={isDisabled}
+        disabled={isDisabled || isBlocked}
         onKeyDown={(e) => {
           if (
             (e.key === ' ' || e.key === 'Enter') &&
