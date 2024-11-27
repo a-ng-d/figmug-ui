@@ -57,7 +57,8 @@ export class FeatureStatus<T> {
       else if (current < match.limit && this.planStatus === 'UNPAID')
         return false
       else return true
-    } else return true
+    } else if (match !== undefined && match.limit === undefined) return false
+    else return true
   }
 
   isAvailableAndBlocked(): string | null | undefined {
