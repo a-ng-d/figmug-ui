@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { SimpleItem } from '../../components/slots/simple-item/SimpleItem'
 import { ColorItem } from './SimpleItem.stories'
 import { Section } from '../../components/slots/section/Section'
+import { SectionTitle } from '../../components/assets/section-title/SectionTitle'
 
 const meta = {
   title: 'Example/Slots/Section',
@@ -23,9 +24,18 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    label: 'Selected colors',
-    indicator: '5',
-    childrens: [
+    title: (
+      <SimpleItem
+        leftPartSlot={
+          <SectionTitle
+            label="Selected colors"
+            indicator="5"
+          />
+        }
+        isListItem={false}
+      />
+    ),
+    body: [
       {
         node: <SimpleItem {...ColorItem.args} />,
         spacingModifier: 'TIGHT',
