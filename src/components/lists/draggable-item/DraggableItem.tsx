@@ -1,6 +1,6 @@
 import React from 'react'
 import { doMap } from '../../../modules/do-map/do-map'
-import { Button } from '../../../components/actions/button/Button'
+import { Button } from '../../actions/button/Button'
 import './draggable-item.scss'
 
 export interface DraggableItemProps {
