@@ -38,23 +38,23 @@ export const Default: Story = {
     body: [
       {
         node: <SimpleItem {...ColorItem.args} />,
-        spacingModifier: 'TIGHT',
+        spacingModifier: 'NONE',
       },
       {
         node: <SimpleItem {...ColorItem.args} />,
-        spacingModifier: 'TIGHT',
+        spacingModifier: 'NONE',
       },
       {
         node: <SimpleItem {...ColorItem.args} />,
-        spacingModifier: 'TIGHT',
+        spacingModifier: 'NONE',
       },
       {
         node: <SimpleItem {...ColorItem.args} />,
-        spacingModifier: 'TIGHT',
+        spacingModifier: 'NONE',
       },
       {
         node: <SimpleItem {...ColorItem.args} />,
-        spacingModifier: 'TIGHT',
+        spacingModifier: 'NONE',
       },
     ],
   },

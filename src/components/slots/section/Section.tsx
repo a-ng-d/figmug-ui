@@ -11,10 +11,6 @@ export interface SectionProps {
 }
 
 export class Section extends React.Component<SectionProps> {
-  static defaultProps = {
-    border: ['BOTTOM'] as Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>,
-  }
-
   setBorder = (
     orientation: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'> | undefined
   ) => {
