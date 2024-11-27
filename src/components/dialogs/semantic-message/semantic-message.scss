@@ -3,6 +3,7 @@
   padding: var(--size-xxsmall) 0;
   gap: var(--size-xxxsmall);
   display: flex;
+  justify-content: space-between;
 
   &--info {
     background-color: var(--figma-color-bg-brand-tertiary);
