@@ -35,7 +35,7 @@ export class SemanticMessage extends React.Component<SemanticMessageProps> {
         className={[
           'semantic-message',
           `semantic-message--${type.toLowerCase()}`,
-          !isAnchored && 'semantic-message--anchored',
+          isAnchored && 'semantic-message--anchored',
         ]
           .filter((n) => n)
           .join(' ')}
