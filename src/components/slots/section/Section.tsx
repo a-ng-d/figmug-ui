@@ -4,7 +4,7 @@ import './section.scss'
 export interface SectionProps {
   title: React.ReactNode
   body: Array<{
-    node: React.ReactNode
+    node?: React.ReactNode
     spacingModifier?: 'LARGE' | 'TIGHT' | 'NONE'
   }>
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
@@ -39,21 +39,24 @@ export class Section extends React.Component<SectionProps> {
         }}
       >
         {title}
-        {body.map((item, index) => (
-          <div
-            key={index}
-            className={[
-              'section__child',
-              item.spacingModifier === 'LARGE' && 'section__child--large',
-              item.spacingModifier === 'TIGHT' && 'section__child--tight',
-              item.spacingModifier === 'NONE' && 'section__child--none',
-            ]
-              .filter((n) => n)
-              .join(' ')}
-          >
-            {item.node}
-          </div>
-        ))}
+        {body.map(
+          (item, index) =>
+            item.node !== undefined && (
+              <div
+                key={index}
+                className={[
+                  'section__child',
+                  item.spacingModifier === 'LARGE' && 'section__child--large',
+                  item.spacingModifier === 'TIGHT' && 'section__child--tight',
+                  item.spacingModifier === 'NONE' && 'section__child--none',
+                ]
+                  .filter((n) => n)
+                  .join(' ')}
+              >
+                {item.node}
+              </div>
+            )
+        )}
       </div>
     )
   }
