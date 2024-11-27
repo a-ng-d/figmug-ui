@@ -202,7 +202,9 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
             type="PICTO"
             iconName={isLoading ? 'spinner' : icon}
             iconColor={
-              isDisabled ? 'var(--figma-color-icon-disabled)' : undefined
+              isDisabled || isBlocked
+                ? 'var(--figma-color-icon-disabled)'
+                : undefined
             }
             customClassName={
               iconClassName !== undefined ? iconClassName : undefined
@@ -211,7 +213,7 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
         ) : (
           <div
             style={{
-              opacity: isDisabled ? 0.5 : 1,
+              opacity: isDisabled || isBlocked ? 0.5 : 1,
               pointerEvents: 'none',
             }}
           >
