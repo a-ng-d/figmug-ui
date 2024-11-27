@@ -34,6 +34,12 @@ export class SemanticMessage extends React.Component<SemanticMessageProps> {
 
     return (
       <div
+        style={{
+          paddingRight:
+            orientation === 'HORIZONTAL' && action !== undefined
+              ? 'var(--size-xsmall)'
+              : '0',
+        }}
         className={[
           'semantic-message',
           `semantic-message--${type.toLowerCase()}`,
