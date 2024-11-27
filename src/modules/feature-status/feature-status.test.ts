@@ -22,6 +22,16 @@ const features: Array<Feature<'BROWSE' | 'PARTICIPATE'>> = [
     service: ['PARTICIPATE'],
   },
   {
+    name: 'ADD',
+    description: '',
+    isActive: true,
+    isPro: false,
+    isNew: false,
+    limit: 10,
+    type: 'SERVICE',
+    service: ['PARTICIPATE'],
+  },
+  {
     name: 'EXPLORE',
     description: '',
     isActive: true,
@@ -76,4 +86,22 @@ it('EXPLORE is new when paid or unpaid', () => {
       planStatus: 'UNPAID',
     }).isNew()
   ).toBe(true)
+})
+
+it('ADD is blocked when limit is reached and unblocked when paid', () => {
+  expect(
+    new FeatureStatus({
+      features: features,
+      featureName: 'ADD',
+      planStatus: 'UNPAID',
+    }).isReached(10)
+  ).toBe(true)
+
+  expect(
+    new FeatureStatus({
+      features: features,
+      featureName: 'ADD',
+      planStatus: 'PAID',
+    }).isReached(12)
+  ).toBe(false)
 })

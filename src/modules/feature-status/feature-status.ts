@@ -41,10 +41,23 @@ export class FeatureStatus<T> {
 
     if (match !== undefined)
       if (match.isPro && this.planStatus === 'PAID') return false
-      else if (!match.isPro && this.planStatus === 'UNPAID') return false
       else if (!match.isPro && this.planStatus === 'PAID') return false
+      else if (!match.isPro && this.planStatus === 'UNPAID') return false
       else return true
     else return true
+  }
+
+  isReached(current: number): boolean {
+    const match = this.result
+
+    if (match !== undefined && match.limit !== undefined) {
+      if (current > match.limit && this.planStatus === 'PAID') return false
+      else if (current <= match.limit && this.planStatus === 'PAID')
+        return false
+      else if (current < match.limit && this.planStatus === 'UNPAID')
+        return false
+      else return true
+    } else return true
   }
 
   isAvailableAndBlocked(): string | null | undefined {

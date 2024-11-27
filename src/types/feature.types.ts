@@ -4,6 +4,7 @@ export interface Feature<T> {
   isActive: boolean
   isPro: boolean
   isNew: boolean
+  limit?: number
   type: 'SERVICE' | 'DIVISION' | 'ACTION' | 'CONTEXT'
   service: Array<T>
 }
