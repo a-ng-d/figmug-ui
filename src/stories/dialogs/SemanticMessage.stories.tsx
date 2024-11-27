@@ -22,6 +22,7 @@ export const TypedMessage: Story = {
     message:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     isAnchored: false,
+    orientation: 'HORIZONTAL',
     action: (() => (
       <Button
         type="secondary"

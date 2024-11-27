@@ -4,14 +4,16 @@ import { Message } from '../message/Message'
 import { IconList } from 'src/types/icon.types'
 
 export interface SemanticMessageProps {
-  type: 'INFO' | 'SUCCESS' | 'WARNING' | 'ERROR'
+  type: 'NEUTRAL' | 'INFO' | 'SUCCESS' | 'WARNING' | 'ERROR'
   message: string
   isAnchored?: boolean
+  orientation?: 'HORIZONTAL' | 'VERTICAL'
   action?: React.ReactNode
 }
 
 export class SemanticMessage extends React.Component<SemanticMessageProps> {
   static defaultProps: Partial<SemanticMessageProps> = {
+    orientation: 'HORIZONTAL',
     isAnchored: false,
   }
 
@@ -28,13 +30,14 @@ export class SemanticMessage extends React.Component<SemanticMessageProps> {
 
   // Render
   render() {
-    const { type, message, isAnchored, action } = this.props
+    const { type, message, isAnchored, orientation, action } = this.props
 
     return (
       <div
         className={[
           'semantic-message',
           `semantic-message--${type.toLowerCase()}`,
+          orientation === 'VERTICAL' && 'semantic-message--vertical',
           isAnchored && 'semantic-message--anchored',
         ]
           .filter((n) => n)
