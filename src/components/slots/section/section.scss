@@ -7,6 +7,10 @@
   &__child {
     padding: 0 var(--size-xsmall);
 
+    &--large {
+      padding: 0 var(--size-small);
+    }
+
     &--tight {
       padding: 0 var(--size-xxsmall);
     }

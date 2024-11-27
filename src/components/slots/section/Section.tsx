@@ -8,7 +8,7 @@ export interface SectionProps {
   indicator?: string
   childrens: Array<{
     node: React.ReactNode
-    spacingModifier?: 'TIGHT' | 'NONE'
+    spacingModifier?: 'LARGE' | 'TIGHT' | 'NONE'
   }>
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
 }
@@ -59,6 +59,7 @@ export class Section extends React.Component<SectionProps> {
             key={index}
             className={[
               'section__child',
+              child.spacingModifier === 'LARGE' && 'section__child--large',
               child.spacingModifier === 'TIGHT' && 'section__child--tight',
               child.spacingModifier === 'NONE' && 'section__child--none',
             ]
