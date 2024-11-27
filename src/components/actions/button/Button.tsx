@@ -84,8 +84,8 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
         disabled={isDisabled || isBlocked}
         onKeyDown={(e) => {
           if (
-            ((e.key === ' ' || e.key === 'Enter') && !isDisabled) ||
-            !isBlocked
+            (e.key === ' ' || e.key === 'Enter') &&
+            (!isDisabled || !isBlocked)
           )
             action?.(e)
           if (e.key === 'Escape') (e.target as HTMLElement).blur()
