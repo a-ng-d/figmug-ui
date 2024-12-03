@@ -23,7 +23,7 @@ export const TypedMessage: Story = {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     isAnchored: false,
     orientation: 'HORIZONTAL',
-    action: (() => (
+    actionsSlot: (() => (
       <Button
         type="secondary"
         label="Action"
@@ -38,6 +38,6 @@ export const TypedMessage: Story = {
         options: ['INFO', 'SUCCESS', 'WARNING', 'ERROR'],
       },
     },
-    action: { control: { disable: true } },
+    actionsSlot: { control: { disable: true } },
   },
 }

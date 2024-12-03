@@ -2,13 +2,14 @@ import React from 'react'
 import './semantic-message.scss'
 import { Message } from '../message/Message'
 import { IconList } from 'src/types/icon.types'
+import { layouts } from 'src'
 
 export interface SemanticMessageProps {
   type: 'NEUTRAL' | 'INFO' | 'SUCCESS' | 'WARNING' | 'ERROR'
   message: string
   isAnchored?: boolean
   orientation?: 'HORIZONTAL' | 'VERTICAL'
-  action?: React.ReactNode
+  actionsSlot?: React.ReactNode
 }
 
 export class SemanticMessage extends React.Component<SemanticMessageProps> {
@@ -30,13 +31,13 @@ export class SemanticMessage extends React.Component<SemanticMessageProps> {
 
   // Render
   render() {
-    const { type, message, isAnchored, orientation, action } = this.props
+    const { type, message, isAnchored, orientation, actionsSlot } = this.props
 
     return (
       <div
         style={{
           paddingRight:
-            orientation === 'HORIZONTAL' && action !== undefined
+            orientation === 'HORIZONTAL' && actionsSlot !== undefined
               ? 'var(--size-xxsmall)'
               : '0',
         }}
@@ -49,11 +50,19 @@ export class SemanticMessage extends React.Component<SemanticMessageProps> {
           .filter((n) => n)
           .join(' ')}
       >
-        <Message
-          icon={this.setIcon(type)}
-          messages={[message]}
-        />
-        {action}
+        <div className="semantic-message__body">
+          <Message
+            icon={this.setIcon(type)}
+            messages={[message]}
+          />
+        </div>
+        {actionsSlot !== undefined && (
+          <div
+            className={`${layouts['snackbar']} ${layouts['snackbar']} semantic-message__actions`}
+          >
+            {actionsSlot}
+          </div>
+        )}
       </div>
     )
   }

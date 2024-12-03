@@ -30,4 +30,10 @@
     flex-direction: column;
     align-items: center;
   }
+
+  &__body {
+    display: flex;
+    gap: var(--size-xxxsmall);
+    align-items: center;
+  }
 }
