@@ -1,8 +1,8 @@
 import React from 'react'
-import './semantic-message.scss'
 import { Message } from '../message/Message'
-import { IconList } from 'src/types/icon.types'
+import { IconList } from '../../../types/icon.types'
 import { layouts } from 'src'
+import './semantic-message.scss'
 
 export interface SemanticMessageProps {
   type: 'NEUTRAL' | 'INFO' | 'SUCCESS' | 'WARNING' | 'ERROR'
