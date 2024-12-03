@@ -1,7 +1,7 @@
 import React from 'react'
+import layouts from '../../../styles/layouts.module.scss'
 import { Message } from '../message/Message'
 import { IconList } from '../../../types/icon.types'
-import { layouts } from 'src'
 import './semantic-message.scss'
 
 export interface SemanticMessageProps {
