@@ -32,8 +32,6 @@
   }
 
   &__body {
-    display: flex;
-    gap: var(--size-xxxsmall);
-    align-items: center;
+    flex: 1;
   }
 }

@@ -57,9 +57,7 @@ export class SemanticMessage extends React.Component<SemanticMessageProps> {
           />
         </div>
         {actionsSlot !== undefined && (
-          <div
-            className={`${layouts['snackbar']} ${layouts['snackbar']} semantic-message__actions`}
-          >
+          <div className={`${layouts['snackbar']} semantic-message__actions`}>
             {actionsSlot}
           </div>
         )}
