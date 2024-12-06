@@ -1,7 +1,7 @@
 import path, { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { globSync } from 'glob'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import { libInjectCss } from 'vite-plugin-lib-inject-css'
 import dts from 'vite-plugin-dts'
@@ -15,7 +15,6 @@ export default defineConfig({
         './src/stories',
         './src/test',
         './src/components/**/*.test.tsx',
-        './src/modules/**/*.test.ts',
       ],
     }),
   ],
@@ -25,13 +24,13 @@ export default defineConfig({
       formats: ['es'],
     },
     emptyOutDir: true,
+    sourcemap: true,
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
       input: Object.fromEntries(
         globSync([
           './src/index.ts',
           './src/components/**/*.tsx',
-          './src/modules/**/*.ts',
           './src/styles/*.scss',
         ])
           .filter(
@@ -59,12 +58,17 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    environment: 'jsdom',
-    setupFiles: './src/test/setup.ts',
-    css: true,
+    environment: 'node',
     coverage: {
-      include: ['./src/components', './src/modules'],
-      exclude: ['./src/stories'],
+      provider: 'v8',
+      reporter: ['text', 'json', 'html'],
+      exclude: [
+        'src/stories',
+        'src/test/*.ts',
+        '.eslintrc.cjs',
+        'src/index.ts',
+        'src/**/*.d.ts',
+      ],
     },
   },
 })
