@@ -1,5 +1,5 @@
 import React from 'react'
-import { doMap } from '../../../modules/do-map/do-map'
+import { doMap } from '@a_ng_d/figmug-utils'
 import { Button } from '../../actions/button/Button'
 import './draggable-item.scss'
 
