@@ -13,9 +13,12 @@ export interface AccordionProps {
   isBlocked?: boolean
   isNew?: boolean
   children?: React.ReactNode
-  onAdd: React.MouseEventHandler<Element> & React.KeyboardEventHandler<Element>
-  onEmpty: React.MouseEventHandler<Element> &
-    React.KeyboardEventHandler<Element>
+  onAdd: (
+    event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+  ) => void
+  onEmpty: (
+    event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+  ) => void
 }
 
 export const Accordion = (props: AccordionProps) => {
@@ -31,6 +34,20 @@ export const Accordion = (props: AccordionProps) => {
     onAdd,
     onEmpty,
   } = props
+
+  const handleAdd = (
+    event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+  ) => {
+    event.stopPropagation() // Empêcher la propagation de l'événement
+    onAdd(event)
+  }
+
+  const handleEmpty = (
+    event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+  ) => {
+    event.stopPropagation() // Empêcher la propagation de l'événement
+    onEmpty(event)
+  }
 
   return (
     <div
@@ -69,7 +86,7 @@ export const Accordion = (props: AccordionProps) => {
               iconClassName="accordion__row__icon"
               isDisabled={isBlocked}
               isBlocked={isBlocked}
-              action={onEmpty}
+              action={(e) => handleEmpty(e)}
             />
           ) : (
             <Button
@@ -78,7 +95,7 @@ export const Accordion = (props: AccordionProps) => {
               iconClassName="accordion__row__icon"
               isDisabled={isBlocked}
               isBlocked={isBlocked}
-              action={onAdd}
+              action={(e) => handleAdd(e)}
             />
           )}
           {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
