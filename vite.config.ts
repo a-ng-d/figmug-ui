@@ -65,6 +65,8 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
       exclude: [
+        '.storybook',
+        'src/styles',
         'src/stories',
         'src/test/*.ts',
         '.eslintrc.cjs',
