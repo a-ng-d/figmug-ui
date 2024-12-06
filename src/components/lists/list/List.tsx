@@ -144,12 +144,14 @@ export class List extends React.Component<ListProps, ListStates> {
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
           if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked)
-            return this.setState({ openedGroup: option.value ?? '' })
+            return this.setState({ openedGroup: option.value ?? 'EMPTY' })
           if (e.key === 'Escape') return this.setState({ openedGroup: 'EMPTY' })
           return null
         }}
-        onMouseOver={() => this.setState({ openedGroup: option.value ?? '' })}
-        onMouseOut={() => this.setState({ openedGroup: 'EMPTY' })}
+        onMouseEnter={() =>
+          this.setState({ openedGroup: option.value ?? 'EMPTY' })
+        }
+        onMouseLeave={() => this.setState({ openedGroup: 'EMPTY' })}
         onFocus={() => null}
         onBlur={() => null}
       >
@@ -186,6 +188,7 @@ export class List extends React.Component<ListProps, ListStates> {
         data-position={option.position}
         data-is-blocked={option.isBlocked}
         data-feature={option.feature}
+        data-role={'OPTION'}
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
           if (
