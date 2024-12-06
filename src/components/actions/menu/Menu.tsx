@@ -66,7 +66,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
     const target = e.target as HTMLElement
 
     if (
-      (target === this.buttonRef.current?.buttonRef.current &&
+      (this.buttonRef.current?.buttonRef.current?.contains(target) &&
         this.state.isMenuOpen) ||
       target === this.menuRef.current ||
       target === this.subMenuRef.current ||
