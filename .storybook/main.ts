@@ -20,8 +20,6 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
-  docs: {
-    autodocs: 'tag',
-  },
+  docs: {},
 }
 export default config
