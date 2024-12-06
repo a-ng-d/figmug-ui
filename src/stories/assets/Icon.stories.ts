@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Icon } from '../../components/assets/icon/Icon'
-import { IconList } from 'src/types/icon.types'
+import { IconList } from '../../types/icon.types'
 
 const icons: Array<IconList> = [
   'adjust',

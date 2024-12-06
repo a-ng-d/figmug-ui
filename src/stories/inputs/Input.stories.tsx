@@ -3,7 +3,7 @@ import { fn } from '@storybook/test'
 import { useArgs } from '@storybook/preview-api'
 import { Input } from '../../components/inputs/input/Input'
 
-const meta = {
+const meta: Meta<typeof Input> = {
   title: 'Example/Inputs/Input',
   component: Input,
   parameters: {

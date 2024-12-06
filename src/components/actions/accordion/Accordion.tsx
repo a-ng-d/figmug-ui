@@ -2,7 +2,7 @@ import { Button } from '../button/Button'
 import { Chip } from '../../tags/chip/Chip'
 import { SectionTitle } from '../../assets/section-title/SectionTitle'
 import './accordion.scss'
-import { IconList } from 'src/types/icon.types'
+import { IconList } from '../../../types/icon.types'
 
 export interface AccordionProps {
   label: string

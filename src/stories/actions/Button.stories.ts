@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import { Button } from '../../components/actions/button/Button'
-import { IconList } from 'src/types/icon.types'
+import { IconList } from '../../types/icon.types'
 
 const icons: Array<IconList> = [
   'adjust',
@@ -101,7 +101,7 @@ const icons: Array<IconList> = [
 
 const mock = fn()
 
-const meta = {
+const meta: Meta<typeof Button> = {
   title: 'Example/Actions/Button',
   component: Button,
   parameters: {

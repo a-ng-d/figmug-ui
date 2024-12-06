@@ -4,7 +4,7 @@ import { fn } from '@storybook/test'
 import { useArgs } from '@storybook/preview-api'
 import { Select } from '../../components/inputs/select/Select'
 
-const meta = {
+const meta: Meta<typeof Select> = {
   title: 'Example/Inputs/Select',
   component: Select,
   parameters: {
