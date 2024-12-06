@@ -23,6 +23,7 @@ export const SingleSelection: Story = {
     selected: 'OPTION_1',
     alignment: 'LEFT',
     isNew: false,
+    isBlocked: false,
     isDisabled: false,
   },
   argTypes: {

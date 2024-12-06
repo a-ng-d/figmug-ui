@@ -12,6 +12,7 @@ export interface DropdownProps {
   parentClassName?: string
   alignment?: 'RIGHT' | 'LEFT' | 'FILL'
   isDisabled?: boolean
+  isBlocked?: boolean
   isNew?: boolean
 }
 
@@ -27,6 +28,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   static defaultProps: Partial<DropdownProps> = {
     alignment: 'LEFT',
     isNew: false,
+    isBlocked: false,
     isDisabled: false,
   }
 
@@ -126,7 +128,8 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   }
 
   render() {
-    const { id, alignment, options, selected, isNew, isDisabled } = this.props
+    const { id, alignment, options, selected, isNew, isDisabled, isBlocked } =
+      this.props
     const { isMenuOpen } = this.state
 
     return (
@@ -140,7 +143,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             if (alignment === 'RIGHT') return 'select-menu--right'
             return 'select-menu--fill'
           })(),
-          isDisabled && 'select-menu--disabled',
+          (isDisabled || isBlocked) && 'select-menu--disabled',
         ]
           .filter((n) => n)
           .join(' ')}
@@ -155,7 +158,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             .filter((n) => n)
             .join(' ')}
           tabIndex={0}
-          disabled={isDisabled}
+          disabled={isDisabled || isBlocked}
           onKeyDown={(e) => {
             if (e.key === ' ' || (e.key === 'Enter' && !isDisabled))
               return this.onOpenMenu?.()
@@ -175,7 +178,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             customClassName="select-menu__caret"
           />
         </button>
-        {isNew && <Chip>New</Chip>}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         {(() => {
           if (isMenuOpen)
             return (
