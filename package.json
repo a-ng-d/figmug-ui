@@ -9,7 +9,7 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "vite",
+    "start": "npm run storybook",
     "build": "tsc && vite build",
     "test": "vitest",
     "test:ui": "vitest --ui",
@@ -19,11 +19,7 @@
     "format:fix": "prettier --write .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "chromatic": "dotenv -e .env.local npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
-    "publish:patch": "npm run test && npm run build && npm version patch && npm publish",
-    "publish:minor": "npm run test && npm run build && npm version minor && npm publish",
-    "publish:major": "npm run test && npm run build && npm version major && npm publish"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@a_ng_d/figmug-utils": "^0.1.2",
