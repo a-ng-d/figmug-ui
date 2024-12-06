@@ -24,6 +24,8 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   selectMenuRef: React.RefObject<HTMLDivElement>
   buttonRef: React.RefObject<HTMLButtonElement>
   listRef: React.RefObject<HTMLDivElement>
+  menuRef: React.RefObject<HTMLUListElement>
+  subMenuRef: React.RefObject<HTMLUListElement>
 
   static defaultProps: Partial<DropdownProps> = {
     alignment: 'LEFT',
@@ -40,6 +42,8 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
     this.selectMenuRef = React.createRef()
     this.buttonRef = React.createRef()
     this.listRef = React.createRef()
+    this.menuRef = React.createRef()
+    this.subMenuRef = React.createRef()
     this.handleClickOutside = this.handleClickOutside.bind(this)
   }
 
@@ -99,11 +103,19 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   }
 
   handleClickOutside = (e: Event) => {
-    if (e.target === this.buttonRef.current)
+    const target = e.target as HTMLElement
+
+    if (
+      target === this.buttonRef.current ||
+      target === this.menuRef.current ||
+      target === this.subMenuRef.current ||
+      target.tagName === 'HR' ||
+      target.dataset.role === 'GROUP'
+    )
       this.setState({
         isMenuOpen: true,
       })
-    else if (e.target !== this.listRef.current)
+    else
       this.setState({
         isMenuOpen: false,
       })
@@ -198,6 +210,8 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
                   selected={selected}
                   direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
                   onCancellation={() => this.setState({ isMenuOpen: false })}
+                  menuRef={this.menuRef}
+                  subMenuRef={this.subMenuRef}
                 />
               </div>
             )

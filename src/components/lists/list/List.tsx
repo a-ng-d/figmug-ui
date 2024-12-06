@@ -8,6 +8,8 @@ export interface ListProps {
   selected?: string
   direction?: 'LEFT' | 'RIGHT' | 'FILL'
   onCancellation?: () => void
+  menuRef?: React.RefObject<HTMLUListElement>
+  subMenuRef?: React.RefObject<HTMLUListElement>
 }
 
 export interface ListStates {
@@ -31,7 +33,10 @@ export class List extends React.Component<ListProps, ListStates> {
   SubMenu = (options: Array<DropdownOption> | undefined) => {
     return (
       <div className="select-menu__submenu">
-        <ul className="select-menu__menu recharged select-menu__menu--active">
+        <ul
+          className="select-menu__menu recharged select-menu__menu--active"
+          ref={this.props.subMenuRef}
+        >
           {options?.map((option, index) => {
             const isActive =
                 option.isActive !== undefined ? option.isActive : true,
@@ -92,6 +97,7 @@ export class List extends React.Component<ListProps, ListStates> {
         data-position={option.position}
         data-is-blocked={option.isBlocked}
         data-feature={option.feature}
+        data-role={'OPTION'}
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
           if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
@@ -134,6 +140,7 @@ export class List extends React.Component<ListProps, ListStates> {
           .join(' ')}
         data-position={option.position}
         data-is-blocked={option.isBlocked}
+        data-role={'GROUP'}
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
           if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked)
@@ -216,6 +223,7 @@ export class List extends React.Component<ListProps, ListStates> {
         ]
           .filter((n) => n)
           .join(' ')}
+        ref={this.props.menuRef}
       >
         {options?.map((option, index) => {
           const isActive =

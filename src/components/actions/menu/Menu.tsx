@@ -26,6 +26,8 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
   selectMenuRef: React.RefObject<HTMLDivElement>
   buttonRef: React.RefObject<Button>
   listRef: React.RefObject<HTMLDivElement>
+  menuRef: React.RefObject<HTMLUListElement>
+  subMenuRef: React.RefObject<HTMLUListElement>
 
   static defaultProps: Partial<MenuProps> = {
     type: 'ICON',
@@ -43,6 +45,8 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
     this.selectMenuRef = React.createRef()
     this.buttonRef = React.createRef()
     this.listRef = React.createRef()
+    this.menuRef = React.createRef()
+    this.subMenuRef = React.createRef()
     this.handleClickOutside = this.handleClickOutside.bind(this)
   }
 
@@ -52,28 +56,30 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
   componentWillUnmount = () =>
     document.removeEventListener('mousedown', this.handleClickOutside)
 
+  // Direct actions
+  closeMenu = (action: void) => {
+    this.setState({ isMenuOpen: false })
+    return action
+  }
+
   handleClickOutside = (e: Event) => {
+    const target = e.target as HTMLElement
+
     if (
-      this.buttonRef.current?.buttonRef.current?.contains(e.target as Node) &&
-      this.state.isMenuOpen
+      (target === this.buttonRef.current?.buttonRef.current &&
+        this.state.isMenuOpen) ||
+      target === this.menuRef.current ||
+      target === this.subMenuRef.current ||
+      target.tagName === 'HR' ||
+      target.dataset.role === 'GROUP'
     )
       this.setState({
         isMenuOpen: true,
-      })
-    else if (!this.listRef.current?.contains(e.target as Node))
-      this.setState({
-        isMenuOpen: false,
       })
     else
       this.setState({
         isMenuOpen: false,
       })
-  }
-
-  // Direct actions
-  closeMenu = (action: void) => {
-    this.setState({ isMenuOpen: false })
-    return action
   }
 
   render() {
@@ -152,6 +158,8 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
                   selected={selected}
                   direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
                   onCancellation={() => this.setState({ isMenuOpen: false })}
+                  menuRef={this.menuRef}
+                  subMenuRef={this.subMenuRef}
                 />
               </div>
             )

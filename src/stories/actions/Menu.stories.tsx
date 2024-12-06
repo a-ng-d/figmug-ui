@@ -85,6 +85,13 @@ export const DropdownIcon: Story = {
             action: onChange,
           },
           {
+            type: 'SEPARATOR',
+          },
+          {
+            label: 'Title',
+            type: 'TITLE',
+          },
+          {
             label: 'Option 4',
             value: 'OPTION_4',
             position: 3,
