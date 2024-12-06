@@ -37,6 +37,3 @@ export { Tooltip } from './components/tags/tooltip/Tooltip'
 export { texts }
 export { icons }
 export { layouts }
-export { doMap } from './modules/do-map/do-map'
-export { Case } from './modules/case/case'
-export { FeatureStatus } from './modules/feature-status/feature-status'
