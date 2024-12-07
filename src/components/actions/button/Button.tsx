@@ -178,9 +178,6 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
         ]
           .filter((n) => n)
           .join(' ')}
-        style={{
-          position: helper !== undefined ? 'relative' : 'static',
-        }}
         disabled={isDisabled || isBlocked}
         onKeyDown={(e) => {
           if (
