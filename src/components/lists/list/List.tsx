@@ -94,7 +94,6 @@ export class List extends React.Component<ListProps, ListStates> {
           .filter((n) => n)
           .join(' ')}
         data-value={option.value}
-        data-position={option.position}
         data-is-blocked={option.isBlocked}
         data-feature={option.feature}
         data-role={'OPTION'}
@@ -138,7 +137,6 @@ export class List extends React.Component<ListProps, ListStates> {
         ]
           .filter((n) => n)
           .join(' ')}
-        data-position={option.position}
         data-is-blocked={option.isBlocked}
         data-role={'GROUP'}
         tabIndex={option.isBlocked ? -1 : 0}
@@ -185,7 +183,6 @@ export class List extends React.Component<ListProps, ListStates> {
           .filter((n) => n)
           .join(' ')}
         data-value={option.value}
-        data-position={option.position}
         data-is-blocked={option.isBlocked}
         data-feature={option.feature}
         data-role={'OPTION'}
