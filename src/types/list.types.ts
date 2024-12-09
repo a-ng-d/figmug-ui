@@ -4,7 +4,6 @@ export interface DropdownOption {
   label?: string
   value?: string
   feature?: string
-  position?: number
   type: 'OPTION' | 'TITLE' | 'SEPARATOR'
   isActive?: boolean
   isBlocked?: boolean

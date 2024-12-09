@@ -22,6 +22,7 @@ export const SingleSelection: Story = {
     options: { ...ListStories.FourOptionsList.args.options },
     selected: 'OPTION_1',
     alignment: 'LEFT',
+    pin: 'NONE',
     isNew: false,
     isBlocked: false,
     isDisabled: false,
@@ -51,27 +52,23 @@ export const SingleSelection: Story = {
           {
             label: 'Option 1',
             value: 'OPTION_1',
-            position: 0,
             type: 'OPTION',
             action: onChange,
           },
           {
             label: 'Option 2',
             value: 'OPTION_2',
-            position: 1,
             type: 'OPTION',
             children: [
               {
                 label: 'Option 2.1',
                 value: 'OPTION_2.1',
-                position: 1,
                 type: 'OPTION',
                 action: onChange,
               },
               {
                 label: 'Option 2.2',
                 value: 'OPTION_2.2',
-                position: 1,
                 type: 'OPTION',
                 action: onChange,
               },
@@ -80,7 +77,6 @@ export const SingleSelection: Story = {
           {
             label: 'Option 3',
             value: 'OPTION_3',
-            position: 2,
             type: 'OPTION',
             action: onChange,
           },
@@ -94,7 +90,6 @@ export const SingleSelection: Story = {
           {
             label: 'Option 4',
             value: 'OPTION_4',
-            position: 3,
             type: 'OPTION',
             action: onChange,
           },
@@ -155,35 +150,30 @@ export const MultipleSelection: Story = {
           {
             label: 'Any',
             value: 'ANY',
-            position: 0,
             type: 'OPTION',
             action: onChange,
           },
           {
             label: 'Option 1',
             value: 'OPTION_1',
-            position: 1,
             type: 'OPTION',
             action: onChange,
           },
           {
             label: 'Option 2',
             value: 'OPTION_2',
-            position: 2,
             type: 'OPTION',
             action: onChange,
           },
           {
             label: 'Option 3',
             value: 'OPTION_3',
-            position: 3,
             type: 'OPTION',
             action: onChange,
           },
           {
             label: 'Option 4',
             value: 'OPTION_4',
-            position: 4,
             type: 'OPTION',
             action: onChange,
           },

@@ -11,6 +11,7 @@ export interface DropdownProps {
   selected: string
   parentClassName?: string
   alignment?: 'RIGHT' | 'LEFT' | 'FILL'
+  pin?: 'NONE' | 'TOP' | 'BOTTOM'
   isDisabled?: boolean
   isBlocked?: boolean
   isNew?: boolean
@@ -29,6 +30,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
 
   static defaultProps: Partial<DropdownProps> = {
     alignment: 'LEFT',
+    pin: 'NONE',
     isNew: false,
     isBlocked: false,
     isDisabled: false,
@@ -90,14 +92,12 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
     const { options, selected } = this.props
     let position = 0
 
-    options.forEach((option) => {
-      if (option.value === selected) position = option.position ?? 0
+    options.forEach((option, index) => {
+      if (option.value === selected) position = index ?? 0
       if (
         option.children?.find((child) => child.value === selected) !== undefined
       )
-        position =
-          option.children.find((child) => child.value === selected)?.position ??
-          0
+        position = index ?? 0
     })
     return `${position * -24 - 6}px`
   }
@@ -199,7 +199,13 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
                 style={{
                   position: 'absolute',
                   zIndex: 99,
-                  top: this.setPosition(),
+                  top:
+                    this.props.pin === 'TOP'
+                      ? '-4px'
+                      : this.props.pin === 'BOTTOM'
+                        ? 'auto'
+                        : this.setPosition(),
+                  bottom: this.props.pin === 'BOTTOM' ? '-4px' : 'auto',
                   right: alignment === 'RIGHT' ? 0 : 'auto',
                   left: alignment === 'LEFT' ? 0 : 'auto',
                 }}
