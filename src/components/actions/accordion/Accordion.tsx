@@ -38,14 +38,14 @@ export const Accordion = (props: AccordionProps) => {
   const handleAdd = (
     event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
   ) => {
-    event.stopPropagation() // Empêcher la propagation de l'événement
+    event.stopPropagation()
     onAdd(event)
   }
 
   const handleEmpty = (
     event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
   ) => {
-    event.stopPropagation() // Empêcher la propagation de l'événement
+    event.stopPropagation()
     onEmpty(event)
   }
 
