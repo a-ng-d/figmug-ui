@@ -70,9 +70,19 @@ export class Input extends React.Component<InputProps, InputStates> {
       if (this.props.isGrowing)
         this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight + 2}px`
     }
+    const { isAutoFocus } = this.props
+    if (isAutoFocus) {
+      if (this.inputRef.current) {
+        this.inputRef.current.focus()
+      } else if (this.textareaRef.current) {
+        this.textareaRef.current.focus()
+      }
+    }
   }
 
   componentDidUpdate(prevProps: InputProps) {
+    const { isAutoFocus } = this.props
+
     if (prevProps.value !== this.props.value) {
       this.setState({
         inputValue: this.props.value,
@@ -84,6 +94,13 @@ export class Input extends React.Component<InputProps, InputStates> {
       this.textareaRef.current.style.height = 'auto'
       if (this.props.isGrowing)
         this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight + 2}px`
+    }
+    if (isAutoFocus) {
+      if (this.inputRef.current) {
+        this.inputRef.current.focus()
+      } else if (this.textareaRef.current) {
+        this.textareaRef.current.focus()
+      }
     }
   }
 
@@ -217,16 +234,8 @@ export class Input extends React.Component<InputProps, InputStates> {
 
   // Templates
   Color = () => {
-    const {
-      id,
-      feature,
-      isAutoFocus,
-      isBlocked,
-      isDisabled,
-      isNew,
-      onFocus,
-      onBlur,
-    } = this.props
+    const { id, feature, isBlocked, isDisabled, isNew, onFocus, onBlur } =
+      this.props
 
     const { inputValue } = this.state
 
@@ -265,7 +274,6 @@ export class Input extends React.Component<InputProps, InputStates> {
           value={inputValue.toUpperCase().replace('#', '')}
           maxLength={6}
           disabled={isDisabled || isBlocked}
-          autoFocus={isAutoFocus}
           onChange={
             !(isDisabled || isBlocked) ? this.onChangeColorValue : undefined
           }
@@ -291,7 +299,6 @@ export class Input extends React.Component<InputProps, InputStates> {
       max,
       step,
       feature,
-      isAutoFocus,
       isBlocked,
       isDisabled,
       isNew,
@@ -350,7 +357,6 @@ export class Input extends React.Component<InputProps, InputStates> {
             max={max}
             step={step}
             disabled={isDisabled || isBlocked}
-            autoFocus={isAutoFocus}
             onKeyDown={
               !(isDisabled || isBlocked) ? this.onValidNumber : undefined
             }
@@ -395,7 +401,6 @@ export class Input extends React.Component<InputProps, InputStates> {
       placeholder,
       charactersLimit,
       feature,
-      isAutoFocus,
       isClearable,
       isFramed,
       isBlocked,
@@ -445,7 +450,6 @@ export class Input extends React.Component<InputProps, InputStates> {
           value={inputValue}
           maxLength={charactersLimit}
           disabled={isDisabled || isBlocked}
-          autoFocus={isAutoFocus}
           onKeyDown={!(isDisabled || isBlocked) ? this.onValidText : undefined}
           onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
           onFocus={!(isDisabled || isBlocked) ? onFocus : undefined}
@@ -475,7 +479,6 @@ export class Input extends React.Component<InputProps, InputStates> {
       state,
       placeholder,
       feature,
-      isAutoFocus,
       isBlocked,
       isDisabled,
       isNew,
@@ -511,7 +514,6 @@ export class Input extends React.Component<InputProps, InputStates> {
           placeholder={placeholder}
           value={inputValue}
           disabled={isDisabled || isBlocked}
-          autoFocus={isAutoFocus}
           onKeyDown={
             !(isDisabled || isBlocked) ? this.onValidLongText : undefined
           }
@@ -526,8 +528,7 @@ export class Input extends React.Component<InputProps, InputStates> {
   }
 
   CodeSnippet = () => {
-    const { id, value, feature, isAutoFocus, isBlocked, isDisabled, isNew } =
-      this.props
+    const { id, value, feature, isBlocked, isDisabled, isNew } = this.props
 
     return (
       <div
@@ -549,7 +550,6 @@ export class Input extends React.Component<InputProps, InputStates> {
             .join(' ')}
           value={value}
           disabled={isDisabled || isBlocked}
-          autoFocus={isAutoFocus}
           onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
           onFocus={(e) => e.target.select()}
           onBlur={() => window.getSelection()?.removeAllRanges()}
