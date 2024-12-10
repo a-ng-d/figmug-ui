@@ -26,7 +26,12 @@ export const ExpandCollapseInput: Story = {
     isExpanded: false,
     isBlocked: false,
     isNew: false,
-    children: <Input {...InputStory.ShortText.args} />,
+    children: (
+      <Input
+        {...InputStory.ShortText.args}
+        isAutoFocus
+      />
+    ),
     onAdd: mock,
     onEmpty: mock,
   },
