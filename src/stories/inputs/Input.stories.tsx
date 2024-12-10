@@ -106,11 +106,19 @@ export const NumericStepper: Story = {
       args.onChange?.(e)
     }
 
+    const onSlide = (e: string) => {
+      updateArgs({
+        value: e,
+      })
+      args.onSlide?.(e)
+    }
+
     return (
       <Input
         {...args}
         value={argsState.value}
         onChange={onChange}
+        onSlide={onSlide}
       />
     )
   },

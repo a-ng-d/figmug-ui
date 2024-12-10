@@ -30,7 +30,8 @@ export interface InputProps {
   onFocus?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onBlur?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onConfirm?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
-  onCleared?: (value: string) => void
+  onClear?: (value: string) => void
+  onSlide?: (value: string) => void
 }
 
 export interface InputStates {
@@ -104,7 +105,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     }
   }
 
-  // Handlers
+  // Direct actions
   onPickColorValue = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -232,6 +233,35 @@ export class Input extends React.Component<InputProps, InputStates> {
 
   doClear = () => this.setState({ inputValue: '' })
 
+  onGrab = () => {
+    if (this.inputRef.current) this.inputRef.current.focus()
+    document.addEventListener('mousemove', this.onDrag)
+  }
+
+  onDrag = (e: MouseEvent) => {
+    if (this.inputRef.current) this.inputRef.current.focus()
+    const { min, max, onSlide } = this.props
+    const { inputValue } = this.state
+
+    const nMin = parseFloat(min ?? '0')
+    const nMax = parseFloat(max ?? '100')
+    const nValue = parseFloat(inputValue)
+    const delta = nValue + e.movementX
+
+    if (delta >= nMin && delta <= nMax) {
+      this.setState({
+        inputValue: delta.toString(),
+      })
+      onSlide?.(delta.toString())
+    }
+
+    document.body.style.cursor = 'ew-resize'
+    document.addEventListener('mouseup', () => {
+      document.removeEventListener('mousemove', this.onDrag)
+      document.body.style.cursor = 'default'
+    })
+  }
+
   // Templates
   Color = () => {
     const { id, feature, isBlocked, isDisabled, isNew, onFocus, onBlur } =
@@ -325,12 +355,11 @@ export class Input extends React.Component<InputProps, InputStates> {
         <div className="input__wrapper">
           {icon !== undefined && (
             <div
+              className="input__icon"
               style={{
-                position: 'absolute',
-                left: '0',
-                top: '0',
-                pointerEvents: 'none',
+                cursor: isDisabled || isBlocked ? 'default' : 'ew-resize',
               }}
+              onMouseDown={!(isDisabled || isBlocked) ? this.onGrab : undefined}
             >
               <Icon
                 type={icon?.type}
@@ -375,7 +404,7 @@ export class Input extends React.Component<InputProps, InputStates> {
             <div
               style={{
                 position: 'absolute',
-                right: '30px',
+                right: '0',
                 top: '0',
                 pointerEvents: 'none',
               }}
@@ -408,7 +437,7 @@ export class Input extends React.Component<InputProps, InputStates> {
       isNew,
       onFocus,
       onBlur,
-      onCleared,
+      onClear,
     } = this.props
 
     const { inputValue } = this.state
@@ -464,7 +493,7 @@ export class Input extends React.Component<InputProps, InputStates> {
               icon="close"
               action={() => {
                 this.setState({ inputValue: '' })
-                if (onCleared !== undefined) onCleared('')
+                if (onClear !== undefined) onClear('')
               }}
             />
           </div>
