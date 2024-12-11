@@ -258,6 +258,10 @@ export class Input extends React.Component<InputProps, InputStates> {
           value: this.inputRef.current,
           enumerable: true,
         })
+        Object.defineProperty(event, 'currentTarget', {
+          value: this.inputRef.current,
+          enumerable: true,
+        })
         onSlide?.(event as unknown as React.ChangeEvent<HTMLInputElement>)
       }
     }
