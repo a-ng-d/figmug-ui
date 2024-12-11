@@ -103,7 +103,15 @@ export const NumericStepper: Story = {
       updateArgs({
         value: e?.target.value,
       })
-      console.log(e)
+      args.onChange?.(e)
+    }
+
+    const onSlide = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+      updateArgs({
+        value: e?.target.value,
+      })
       args.onChange?.(e)
     }
 
@@ -112,6 +120,7 @@ export const NumericStepper: Story = {
         {...args}
         value={argsState.value}
         onChange={onChange}
+        onSlide={onSlide}
       />
     )
   },

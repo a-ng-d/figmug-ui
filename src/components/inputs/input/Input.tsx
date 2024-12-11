@@ -31,6 +31,7 @@ export interface InputProps {
   onBlur?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onConfirm?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onClear?: (value: string) => void
+  onSlide?: React.ChangeEventHandler<HTMLInputElement>
 }
 
 export interface InputStates {
@@ -239,7 +240,7 @@ export class Input extends React.Component<InputProps, InputStates> {
 
   onDrag = (e: MouseEvent) => {
     if (this.inputRef.current) this.inputRef.current.focus()
-    const { min, max, onChange } = this.props
+    const { min, max, onSlide } = this.props
     const { inputValue } = this.state
 
     const nMin = parseFloat(min ?? '0')
@@ -257,7 +258,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           value: this.inputRef.current,
           enumerable: true,
         })
-        onChange?.(event as unknown as React.ChangeEvent<HTMLInputElement>)
+        onSlide?.(event as unknown as React.ChangeEvent<HTMLInputElement>)
       }
     }
 
