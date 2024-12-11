@@ -31,7 +31,6 @@ export interface InputProps {
   onBlur?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onConfirm?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onClear?: (value: string) => void
-  onSlide?: (value: string) => void
 }
 
 export interface InputStates {
@@ -240,7 +239,7 @@ export class Input extends React.Component<InputProps, InputStates> {
 
   onDrag = (e: MouseEvent) => {
     if (this.inputRef.current) this.inputRef.current.focus()
-    const { min, max, onSlide } = this.props
+    const { min, max, onChange } = this.props
     const { inputValue } = this.state
 
     const nMin = parseFloat(min ?? '0')
@@ -252,7 +251,14 @@ export class Input extends React.Component<InputProps, InputStates> {
       this.setState({
         inputValue: delta.toString(),
       })
-      onSlide?.(delta.toString())
+      if (this.inputRef.current) {
+        const event = new Event('input', { bubbles: true })
+        Object.defineProperty(event, 'target', {
+          value: this.inputRef.current,
+          enumerable: true,
+        })
+        onChange?.(event as unknown as React.ChangeEvent<HTMLInputElement>)
+      }
     }
 
     document.body.style.cursor = 'ew-resize'
