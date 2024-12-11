@@ -31,7 +31,7 @@ export interface InputProps {
   onBlur?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onConfirm?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onClear?: (value: string) => void
-  onSlide?: React.ChangeEventHandler<HTMLInputElement>
+  onSlide?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
 }
 
 export interface InputStates {
@@ -340,6 +340,7 @@ export class Input extends React.Component<InputProps, InputStates> {
       isDisabled,
       isNew,
       isFlex,
+      onSlide,
       onFocus,
       onBlur,
     } = this.props
@@ -364,9 +365,15 @@ export class Input extends React.Component<InputProps, InputStates> {
             <div
               className="input__icon"
               style={{
-                cursor: isDisabled || isBlocked ? 'default' : 'ew-resize',
+                cursor:
+                  typeof onSlide === 'function' && !(isDisabled || isBlocked)
+                    ? 'ew-resize'
+                    : 'default',
               }}
-              onMouseDown={!(isDisabled || isBlocked) ? this.onGrab : undefined}
+              onMouseDown={() => {
+                if (typeof onSlide === 'function' && !(isDisabled || isBlocked))
+                  this.onGrab()
+              }}
             >
               <Icon
                 type={icon?.type}
