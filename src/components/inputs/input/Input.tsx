@@ -303,7 +303,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onChange={
             !(isDisabled || isBlocked) ? this.onPickColorValue : undefined
           }
-          onBlur={!(isDisabled || !isBlocked) ? onBlur : undefined}
+          onBlur={!(isDisabled || isBlocked) ? onBlur : undefined}
           ref={this.inputRef}
         />
         <input
