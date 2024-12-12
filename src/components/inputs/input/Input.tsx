@@ -269,7 +269,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     document.body.style.cursor = 'ew-resize'
     document.addEventListener('mouseup', () => {
       document.removeEventListener('mousemove', this.onDrag)
-      document.body.style.cursor = 'default'
+      document.body.style.cursor = ''
     })
   }
 
