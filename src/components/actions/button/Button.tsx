@@ -192,6 +192,12 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
         onMouseOut={() => this.setState({ isTooltipVisible: false })}
+        onFocus={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onBlur={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
         ref={this.buttonRef}
       >
         {customIcon === undefined ? (
