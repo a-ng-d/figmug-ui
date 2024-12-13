@@ -59,6 +59,7 @@
     "glob": "^10.3.12",
     "jsdom": "^24.0.0",
     "prettier": "^3.2.5",
+    "prettier-plugin-css-order": "^2.1.2",
     "sass": "^1.77.0",
     "storybook": "^8.4.7",
     "storybook-addon-data-theme-switcher": "^0.4.2",
