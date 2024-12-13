@@ -78,8 +78,8 @@
     }
 
     &:disabled + .switch__label {
-      color: var(--figma-color-text-disabled);
       opacity: 1;
+      color: var(--figma-color-text-disabled);
     }
 
     &:disabled + .switch__label:before {
@@ -128,14 +128,14 @@
     }
 
     &:checked + .radio__label:after {
-      content: '';
-      width: 6px;
-      height: 6px;
-      background-color: var(--figma-color-icon);
       position: absolute;
+      top: 13px;
       left: 13px;
       border-radius: 50%;
-      top: 13px;
+      background-color: var(--figma-color-icon);
+      width: 6px;
+      height: 6px;
+      content: '';
     }
 
     &:focus + .radio__label:before {

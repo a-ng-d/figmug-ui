@@ -1,9 +1,9 @@
 .semantic-message {
-  border-radius: var(--size-xxsmall);
-  padding: var(--size-xxsmall) 0;
-  gap: var(--size-xxxsmall);
   display: flex;
   justify-content: space-between;
+  gap: var(--size-xxxsmall);
+  border-radius: var(--size-xxsmall);
+  padding: var(--size-xxsmall) 0;
 
   &--info {
     background-color: var(--figma-color-bg-brand-tertiary);
@@ -22,8 +22,8 @@
   }
 
   &--anchored {
-    padding: var(--size-small) 0;
     border-radius: 0;
+    padding: var(--size-small) 0;
   }
 
   &--vertical {

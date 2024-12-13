@@ -1,17 +1,17 @@
 .select-menu__menu.recharged {
   position: relative;
+  cursor: default;
   outline: 1px solid rgba(255, 255, 255, 0.1);
   outline-offset: -1px;
   width: fit-content;
   min-width: 224px;
   overflow: visible;
-  cursor: default;
   user-select: none;
 
   .select-menu__item-icon {
     mask-image: url('data:image/svg+xml;charset=utf8,%3Csvg fill=%27none%27 height=%2732%27 width=%2732%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath clip-rule=%27evenodd%27 d=%27m21.2071 13.7071-6.2071 6.2071-3.7071-3.7071 1.4142-1.4142 2.2929 2.2929 4.7929-4.7929z%27 fill=%27%23000%27 fill-rule=%27evenodd%27/%3E%3C/svg%3E');
-    mask-position: center;
     -webkit-mask-image: url('data:image/svg+xml;charset=utf8,%3Csvg fill=%27none%27 height=%2732%27 width=%2732%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath clip-rule=%27evenodd%27 d=%27m21.2071 13.7071-6.2071 6.2071-3.7071-3.7071 1.4142-1.4142 2.2929 2.2929 4.7929-4.7929z%27 fill=%27%23000%27 fill-rule=%27evenodd%27/%3E%3C/svg%3E');
+    mask-position: center;
     -webkit-mask-position: center;
     background: transparent;
   }
@@ -21,16 +21,16 @@
   }
 
   .select-menu__item-carret {
+    margin-left: var(--size-xxsmall);
     width: var(--size-xsmall);
     height: var(--size-xsmall);
-    margin-left: var(--size-xxsmall);
     pointer-events: none;
   }
 
   .select-menu__item-carret {
     mask-image: url('data:image/svg+xml;charset=utf8,%3Csvg fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="m19 16-4-3v6z" fill="%23000"/%3E%3C/svg%3E');
-    mask-position: center;
     -webkit-mask-image: url('data:image/svg+xml;charset=utf8,%3Csvg fill="none" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="m19 16-4-3v6z" fill="%23000"/%3E%3C/svg%3E');
+    mask-position: center;
     -webkit-mask-position: center;
     background: transparent;
   }
@@ -45,8 +45,8 @@
   }
 
   .select-menu__item--disabled {
-    pointer-events: none;
     padding: 0 var(--size-xxsmall) 0 var(--size-xsmall);
+    pointer-events: none;
   }
 
   .select-menu__item--disabled span {
@@ -71,10 +71,10 @@
   }
 
   hr {
-    height: 1px;
-    background-color: var(--black8-opaque);
-    border: none;
     margin: 11px 0 12px 0;
+    border: none;
+    background-color: var(--black8-opaque);
+    height: 1px;
   }
 
   &.select-menu--highlight,

@@ -1,21 +1,21 @@
 .accordion.recharged {
-  padding: var(--size-xxsmall) 0;
-  border-bottom: 1px solid var(--figma-color-border-disabled);
   cursor: default;
+  border-bottom: 1px solid var(--figma-color-border-disabled);
+  padding: var(--size-xxsmall) 0;
   user-select: none;
 
   .accordion__row {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 0 var(--size-xsmall);
     height: var(--size-medium);
   }
 
   .accordion__row__left-part {
     display: flex;
-    align-items: baseline;
     flex: 1;
+    align-items: baseline;
   }
   .accordion__row__right-part {
     display: flex;

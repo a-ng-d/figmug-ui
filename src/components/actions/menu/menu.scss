@@ -2,27 +2,27 @@
   position: relative;
 
   &.menu--top-right > .floating-menu {
+    top: calc(var(--size-xxsmall) * -1);
     right: 0;
     left: unset;
-    top: calc(var(--size-xxsmall) * -1);
     transform: translateY(-100%);
   }
 
   &.menu--top-left > .floating-menu {
-    left: 0;
     top: calc(var(--size-xxsmall) * -1);
+    left: 0;
     transform: translateY(-100%);
   }
 
   &.menu--bottom-right > .floating-menu {
+    top: calc(var(--size-medium) + var(--size-xxsmall));
     right: 0;
     left: unset;
-    top: calc(var(--size-medium) + var(--size-xxsmall));
   }
 
   &.menu--bottom-left > .floating-menu {
-    left: 0;
     top: calc(var(--size-medium) + var(--size-xxsmall));
+    left: 0;
   }
 }
 

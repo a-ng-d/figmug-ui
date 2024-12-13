@@ -5,12 +5,12 @@
   user-select: none;
 
   & .tabs__tab {
-    padding: 0 var(--size-xxsmall);
-    font-weight: var(--font-weight-medium);
-    color: var(--figma-color-text-secondary);
-    line-height: var(--size-large);
-    cursor: default;
     position: relative;
+    cursor: default;
+    padding: 0 var(--size-xxsmall);
+    color: var(--figma-color-text-secondary);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--size-large);
   }
 
   & .tabs__tab:hover {
@@ -18,18 +18,18 @@
   }
 
   & .tabs__tab--active {
-    font-weight: var(--font-weight-bold);
     color: var(--figma-color-text);
+    font-weight: var(--font-weight-bold);
   }
 
   & .tabs__tab--new:after {
-    content: '';
     position: absolute;
-    width: var(--size-xxxsmall);
-    height: var(--size-xxxsmall);
-    border-radius: var(--border-radius-small);
-    background-color: var(--figma-color-text);
     top: 12px;
     right: 2px;
+    border-radius: var(--border-radius-small);
+    background-color: var(--figma-color-text);
+    width: var(--size-xxxsmall);
+    height: var(--size-xxxsmall);
+    content: '';
   }
 }

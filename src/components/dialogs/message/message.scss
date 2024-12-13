@@ -1,6 +1,6 @@
 .onboarding-tip.recharged {
-  padding: 0 calc(var(--size-xsmall) + var(--size-xxxsmall));
   cursor: default;
+  padding: 0 calc(var(--size-xsmall) + var(--size-xxxsmall));
   user-select: none;
 
   &.onboarding-tip--blocked .onboarding-tip__msg {
@@ -12,25 +12,25 @@
   }
 
   .onboarding-tip__msg {
-    line-height: var(--font-line-height);
     color: var(--figma-color-text);
+    line-height: var(--font-line-height);
   }
 
   /* Tips ticker */
   .onboarding-tip__ticker {
-    flex: 1;
     display: flex;
     position: relative;
+    flex: 1;
     overflow: hidden;
   }
 
   .onboarding-tip__ticker:before,
   .onboarding-tip__ticker:after {
-    content: '';
     position: absolute;
+    z-index: 2;
     width: var(--size-xsmall);
     height: 100%;
-    z-index: 2;
+    content: '';
   }
 
   .onboarding-tip__ticker:before {
@@ -53,10 +53,10 @@
 
   .onboarding-tip__tips {
     display: inline-flex;
+    position: relative;
     align-items: center;
     gap: 0 var(--size-medium);
     padding: 0 var(--size-xsmall);
-    position: relative;
     width: max-content;
   }
 

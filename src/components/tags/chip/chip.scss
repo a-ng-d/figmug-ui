@@ -1,19 +1,19 @@
 .chip.recharged {
-  min-height: var(--size-xsmall);
-  margin: 0 0 0 var(--size-xxsmall);
-  padding: 0 5px;
-  background-color: var(--figma-color-bg-selected-secondary);
-  border-radius: var(--border-radius-small);
   display: inline-block;
   cursor: default;
+  margin: 0 0 0 var(--size-xxsmall);
+  border-radius: var(--border-radius-small);
+  background-color: var(--figma-color-bg-selected-secondary);
+  padding: 0 5px;
+  min-height: var(--size-xsmall);
   user-select: none;
 
   .chip__text {
-    font-size: var(--font-size-xsmall);
-    letter-spacing: var(--font-letter-spacing-neg-xsmall);
-    line-height: var(--font-line-height);
-    font-weight: 500;
     color: var(--figma-color-text-brand);
+    font-weight: 500;
+    font-size: var(--font-size-xsmall);
+    line-height: var(--font-line-height);
+    letter-spacing: var(--font-letter-spacing-neg-xsmall);
     user-select: none;
     text-wrap: nowrap;
   }

@@ -1,10 +1,10 @@
 .form-item.recharged {
   display: flex;
+  position: relative;
   align-items: baseline;
   gap: var(--size-xxsmall);
-  padding: 0 0 0 var(--size-xxsmall);
-  position: relative;
   cursor: default;
+  padding: 0 0 0 var(--size-xxsmall);
   user-select: none;
 
   &.form-item--fill {

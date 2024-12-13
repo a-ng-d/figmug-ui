@@ -1,26 +1,26 @@
 .consent-overlay.recharged {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
   z-index: 5;
   cursor: default;
-  user-select: none;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+  user-select: none;
 
   .consent-banner {
     display: flex;
     flex-direction: column;
     gap: var(--size-xxsmall) 0;
+    border-top: 1px solid var(--figma-color-border);
+    background-color: var(--figma-color-bg);
+    padding: var(--size-xxsmall) var(--size-xsmall);
     width: 100%;
     max-height: calc(100% - var(--size-large));
-    background-color: var(--figma-color-bg);
-    border-top: 1px solid var(--figma-color-border);
-    padding: var(--size-xxsmall) var(--size-xsmall);
     pointer-events: all;
 
     &__message {

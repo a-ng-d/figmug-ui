@@ -1,10 +1,10 @@
 .bar.recharged {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
-  min-height: var(--size-large);
   gap: var(--size-xxxsmall) 0;
-  position: relative;
+  min-height: var(--size-large);
 
   &.bar--compact {
     height: var(--size-medium);

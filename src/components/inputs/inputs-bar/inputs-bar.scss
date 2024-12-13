@@ -1,7 +1,7 @@
 .inputs.recharged {
   display: flex;
-  gap: var(--size-xxsmall);
   align-items: center;
+  gap: var(--size-xxsmall);
 
   .label {
     flex: 0;
@@ -9,12 +9,12 @@
 
   .inputs__bar {
     display: flex;
-    padding: 0 1px;
     position: relative;
+    padding: 0 1px;
 
     & .input.recharged {
-      width: var(--size-xlarge);
       margin: 0 -0.5px;
+      width: var(--size-xlarge);
 
       .input__field,
       .input__wrapper {
@@ -35,20 +35,20 @@
     }
 
     &:focus-within:before {
-      content: '';
+      position: absolute;
+      z-index: 2;
+      box-shadow: inset 0 0 0 2px var(--figma-color-border-selected);
+      border-radius: var(--border-radius-small);
       width: 100%;
       height: 100%;
-      position: absolute;
-      box-shadow: inset 0 0 0 2px var(--figma-color-border-selected);
-      z-index: 2;
       pointer-events: none;
-      border-radius: var(--border-radius-small);
+      content: '';
     }
 
     &:focus-within input {
-      border: 1px solid var(--figma-color-border);
       outline: 1px solid transparent;
       outline-offset: -2px;
+      border: 1px solid var(--figma-color-border);
     }
   }
 }

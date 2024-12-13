@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: var(--size-xxsmall);
+  background-color: var(--figma-color-bg);
   padding: 2px var(--size-xsmall);
   min-height: var(--size-medium);
-  background-color: var(--figma-color-bg);
-  gap: var(--size-xxsmall);
 
   &--center {
     align-items: center;
@@ -43,11 +43,11 @@
     }
 
     &--square {
-      width: var(--size-medium);
-      min-width: var(--size-medium);
       display: flex;
       justify-content: center;
       align-items: center;
+      width: var(--size-medium);
+      min-width: var(--size-medium);
     }
 
     &--fill {

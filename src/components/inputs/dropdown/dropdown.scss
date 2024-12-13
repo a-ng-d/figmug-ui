@@ -18,9 +18,9 @@
 
   .select-menu__button {
     --white: var(--figma-color-bg);
+    background-color: transparent;
     padding: 0 0 0 var(--size-xxsmall);
     width: auto;
-    background-color: transparent;
   }
 
   .select-menu__button:hover {
@@ -37,8 +37,8 @@
   }
 
   .select-menu__label {
-    color: var(--figma-color-text);
     margin-top: 0;
+    color: var(--figma-color-text);
   }
 
   .select-menu__item-label {
@@ -53,9 +53,9 @@
 
   .select-menu__button:hover .select-menu__caret,
   .select-menu__button:focus .select-menu__caret {
-    background: var(--figma-color-icon) !important;
-    margin-left: -8px;
     opacity: 1;
+    margin-left: -8px;
+    background: var(--figma-color-icon) !important;
   }
 
   .floating-menu &__menu {
@@ -72,8 +72,8 @@
     }
 
     .select-menu__button:hover .select-menu__caret {
-      background: var(--figma-color-icon-disabled) !important;
       opacity: 1;
+      background: var(--figma-color-icon-disabled) !important;
     }
   }
 }

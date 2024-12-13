@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   gap: var(--size-xxsmall);
-  min-height: var(--size-large);
   padding: 0 var(--size-small);
+  min-height: var(--size-large);
   user-select: none;
 
   .keyboard-shortcut-item__keys {
@@ -17,11 +17,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid var(--figma-color-border);
+    border-radius: var(--border-radius-small);
+    padding: 0 var(--size-xxxsmall);
     min-width: var(--size-small);
     height: var(--size-small);
-    border-radius: var(--border-radius-small);
-    border: 1px solid var(--figma-color-border);
-    padding: 0 var(--size-xxxsmall);
     white-space: nowrap;
   }
 
