@@ -16,5 +16,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    curly: ['off', 'multi'],
+    'prefer-const': 'warn',
   },
 }
