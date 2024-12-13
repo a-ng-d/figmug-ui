@@ -1,8 +1,8 @@
-import { Button } from '../button/Button'
-import { Chip } from '../../tags/chip/Chip'
-import { SectionTitle } from '../../assets/section-title/SectionTitle'
-import './accordion.scss'
 import { IconList } from '../../../types/icon.types'
+import { SectionTitle } from '../../assets/section-title/SectionTitle'
+import { Chip } from '../../tags/chip/Chip'
+import { Button } from '../button/Button'
+import './accordion.scss'
 
 export interface AccordionProps {
   label: string

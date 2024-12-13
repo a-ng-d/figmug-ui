@@ -1,6 +1,6 @@
+import { useArgs } from '@storybook/preview-api'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { useArgs } from '@storybook/preview-api'
 import { Input } from '../../components/inputs/input/Input'
 
 const meta: Meta<typeof Input> = {

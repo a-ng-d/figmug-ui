@@ -1,6 +1,6 @@
 import React from 'react'
-import './sortable-list.scss'
 import { DraggableItem } from '../draggable-item/DraggableItem'
+import './sortable-list.scss'
 
 interface SelectedColor {
   id: string | undefined

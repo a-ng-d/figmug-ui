@@ -1,6 +1,6 @@
+import { useArgs } from '@storybook/client-api'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { useArgs } from '@storybook/client-api'
 import { Accordion } from '../../components/actions/accordion/Accordion'
 import { Input } from '../../components/inputs/input/Input'
 import * as TitleStory from '../assets/SectionTitle.stories'

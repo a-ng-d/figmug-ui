@@ -1,7 +1,7 @@
+import 'figma-plugin-ds/dist/figma-plugin-ds.css'
+import texts from '../../../styles/texts.module.scss'
 import type { HexModel } from '../../../types/color.types'
 import { Button } from '../../actions/button/Button'
-import texts from '../../../styles/texts.module.scss'
-import 'figma-plugin-ds/dist/figma-plugin-ds.css'
 import './color-item.scss'
 
 export type ColorItemProps = {

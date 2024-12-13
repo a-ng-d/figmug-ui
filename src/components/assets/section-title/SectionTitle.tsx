@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Icon } from '../icon/Icon'
 import texts from '../../../styles/texts.module.scss'
 import { Tooltip } from '../../tags/tooltip/Tooltip'
+import { Icon } from '../icon/Icon'
 import './section-title.scss'
 
 export type SectionTitleProps = {

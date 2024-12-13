@@ -1,6 +1,6 @@
-import { Chip } from '../../tags/chip/Chip'
-import { Message } from '../../dialogs/message/Message'
 import texts from '../../../styles/texts.module.scss'
+import { Message } from '../../dialogs/message/Message'
+import { Chip } from '../../tags/chip/Chip'
 import './form-item.scss'
 
 export interface FormItemProps {

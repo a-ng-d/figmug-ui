@@ -1,5 +1,5 @@
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
-import { afterEach, describe, it, expect } from 'vitest'
+import { afterEach, describe, expect, it } from 'vitest'
 import { Input, InputProps } from './Input'
 
 const NumericStepperProps: InputProps = {

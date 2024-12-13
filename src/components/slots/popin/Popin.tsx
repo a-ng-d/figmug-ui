@@ -1,8 +1,8 @@
+import texts from '../../../styles/texts.module.scss'
 import { Button } from '../../actions/button/Button'
 import { Select } from '../../inputs/select/Select'
-import texts from '../../../styles/texts.module.scss'
-import './popin.scss'
 import { Chip } from '../../tags/chip/Chip'
+import './popin.scss'
 
 export interface PopInProps {
   title: string

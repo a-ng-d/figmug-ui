@@ -1,10 +1,10 @@
+import react from '@vitejs/plugin-react'
+import { globSync } from 'glob'
 import path, { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { globSync } from 'glob'
-import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
-import { libInjectCss } from 'vite-plugin-lib-inject-css'
 import dts from 'vite-plugin-dts'
+import { libInjectCss } from 'vite-plugin-lib-inject-css'
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   plugins: [

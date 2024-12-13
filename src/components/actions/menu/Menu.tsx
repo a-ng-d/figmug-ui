@@ -1,8 +1,8 @@
 import React from 'react'
-import type { DropdownOption } from '../../../types/list.types'
 import type { IconList } from '../../../types/icon.types'
-import { Button } from '../button/Button'
+import type { DropdownOption } from '../../../types/list.types'
 import { List } from '../../lists/list/List'
+import { Button } from '../button/Button'
 import './menu.scss'
 
 export interface MenuProps {

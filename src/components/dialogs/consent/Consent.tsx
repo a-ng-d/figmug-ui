@@ -1,11 +1,11 @@
 import React from 'react'
+import layouts from '../../../styles/layouts.module.scss'
+import texts from '../../../styles/texts.module.scss'
 import type { ConsentConfiguration } from '../../../types/consent.types'
-import { Bar } from '../../slots/bar/Bar'
-import { Select } from '../../inputs/select/Select'
 import { Button } from '../../actions/button/Button'
 import Thumbnail from '../../assets/thumbnail/Thumbnail'
-import texts from '../../../styles/texts.module.scss'
-import layouts from '../../../styles/layouts.module.scss'
+import { Select } from '../../inputs/select/Select'
+import { Bar } from '../../slots/bar/Bar'
 import './consent.scss'
 
 export interface ConsentProps {

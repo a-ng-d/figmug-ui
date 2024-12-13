@@ -1,8 +1,8 @@
 import React from 'react'
 import type { DropdownOption } from '../../../types/list.types'
-import { Chip } from '../../tags/chip/Chip'
-import { List } from '../../lists/list/List'
 import { Icon } from '../../assets/icon/Icon'
+import { List } from '../../lists/list/List'
+import { Chip } from '../../tags/chip/Chip'
 import './dropdown.scss'
 
 export interface DropdownProps {

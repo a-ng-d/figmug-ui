@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { SemanticMessage } from '../../components/dialogs/semantic-message/SemanticMessage'
 import { Button } from '../../components/actions/button/Button'
+import { SemanticMessage } from '../../components/dialogs/semantic-message/SemanticMessage'
 
 const mock = fn()
 

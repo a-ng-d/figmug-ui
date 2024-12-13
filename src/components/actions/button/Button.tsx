@@ -1,9 +1,9 @@
 import React from 'react'
-import type { IconList } from '../../../types/icon.types'
-import { Chip } from '../../tags/chip/Chip'
-import { Icon } from '../../assets/icon/Icon'
-import { Tooltip } from '../../tags/tooltip/Tooltip'
 import texts from '../../../styles/texts.module.scss'
+import type { IconList } from '../../../types/icon.types'
+import { Icon } from '../../assets/icon/Icon'
+import { Chip } from '../../tags/chip/Chip'
+import { Tooltip } from '../../tags/tooltip/Tooltip'
 import './button.scss'
 
 export interface ButtonProps {

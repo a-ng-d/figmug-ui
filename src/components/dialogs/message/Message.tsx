@@ -1,7 +1,7 @@
 import React from 'react'
+import texts from '../../../styles/texts.module.scss'
 import type { IconList } from '../../../types/icon.types'
 import { Icon } from '../../assets/icon/Icon'
-import texts from '../../../styles/texts.module.scss'
 import './message.scss'
 
 export interface MessageProps {

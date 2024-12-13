@@ -1,6 +1,6 @@
 import React from 'react'
-import texts from '../../../styles/texts.module.scss'
 import layouts from '../../../styles/layouts.module.scss'
+import texts from '../../../styles/texts.module.scss'
 import Thumbnail from '../../assets/thumbnail/Thumbnail'
 import { Chip } from '../../tags/chip/Chip'
 import './actions-item.scss'
