@@ -70,8 +70,9 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
         this.state.isMenuOpen) ||
       target === this.menuRef.current ||
       target === this.subMenuRef.current ||
-      target.tagName === 'HR' ||
-      target.dataset.role === 'GROUP'
+      (target.tagName === 'HR' && this.menuRef.current?.contains(target)) ||
+      (target.dataset.role === 'GROUP' &&
+        this.menuRef.current?.contains(target))
     )
       this.setState({
         isMenuOpen: true,

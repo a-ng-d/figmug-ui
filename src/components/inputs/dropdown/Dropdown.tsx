@@ -104,21 +104,21 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
 
   handleClickOutside = (e: Event) => {
     const target = e.target as HTMLElement
-
-    if (
-      target === this.buttonRef.current ||
-      target === this.menuRef.current ||
-      target === this.subMenuRef.current ||
-      target.tagName === 'HR' ||
-      target.dataset.role === 'GROUP'
-    )
-      this.setState({
-        isMenuOpen: true,
-      })
-    else
-      this.setState({
-        isMenuOpen: false,
-      })
+console.log(target)
+if (
+  target === this.buttonRef.current ||
+  target === this.menuRef.current ||
+  target === this.subMenuRef.current ||
+  (target.tagName === 'HR' && this.menuRef.current?.contains(target)) ||
+  (target.dataset.role === 'GROUP' && this.menuRef.current?.contains(target))
+)
+  this.setState({
+    isMenuOpen: true,
+  })
+else
+  this.setState({
+    isMenuOpen: false,
+  })
   }
 
   findSelectedOption = (options: Array<DropdownOption>): string => {
