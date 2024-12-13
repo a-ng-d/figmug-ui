@@ -24,8 +24,7 @@
   "dependencies": {
     "@a_ng_d/figmug-utils": "^0.1.2",
     "@storybook/client-api": "^7.6.17",
-    "figma-plugin-ds": "^1.0.1",
-    "prettier-plugin-organize-imports": "^4.1.0"
+    "figma-plugin-ds": "^1.0.1"
   },
   "peerDependencies": {
     "react": "^18.2.0",
