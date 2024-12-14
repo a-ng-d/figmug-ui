@@ -473,12 +473,14 @@ export class Input extends React.Component<InputProps, InputStates> {
           .join(' ')}
       >
         {icon !== undefined && (
-          <Icon
-            type={icon?.type}
-            iconName={icon.value}
-            iconLetter={icon.value}
-            iconColor="var(--figma-color-text-disabled)"
-          />
+          <div className="input__icon">
+            <Icon
+              type={icon?.type}
+              iconName={icon?.value}
+              iconLetter={icon?.value}
+              iconColor="var(--figma-color-text-disabled)"
+            />
+          </div>
         )}
         <input
           role="short-text"
