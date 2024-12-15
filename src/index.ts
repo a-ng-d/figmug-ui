@@ -31,6 +31,7 @@ export { SimpleItem } from './components/slots/simple-item/SimpleItem'
 export { Chip } from './components/tags/chip/Chip'
 export { Tooltip } from './components/tags/tooltip/Tooltip'
 export type { HexModel } from './types/color.types'
+export type { RgbModel } from './types/color.types'
 export type { ConsentConfiguration } from './types/consent.types'
 export type { DropdownOption } from './types/list.types'
 export { icons, layouts, texts }
