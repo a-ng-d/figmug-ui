@@ -58,6 +58,8 @@ export type IconList =
   | 'plus'
   | 'random'
   | 'recent'
+  | 'refresh'
+  | 'reset'
   | 'resize-to-fit'
   | 'resolve-filled'
   | 'reverse'
