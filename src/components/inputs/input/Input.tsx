@@ -115,7 +115,19 @@ export class Input extends React.Component<InputProps, InputStates> {
     this.setState({
       startValue: inputValue,
     })
-    onFocus?.(e)
+
+    if (onFocus) {
+      onFocus(e)
+    }
+  }
+
+  onBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { onBlur } = this.props
+    const { inputValue, startValue } = this.state
+
+    if (inputValue !== startValue && onBlur) {
+      onBlur(e)
+    }
   }
 
   // Direct actions
@@ -282,10 +294,9 @@ export class Input extends React.Component<InputProps, InputStates> {
 
   // Templates
   Color = () => {
-    const { id, feature, isBlocked, isDisabled, isNew, onFocus, onBlur } =
-      this.props
+    const { id, feature, isBlocked, isDisabled, isNew, onFocus } = this.props
 
-    const { inputValue, startValue } = this.state
+    const { inputValue } = this.state
 
     return (
       <div
@@ -310,11 +321,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onChange={
             !(isDisabled || isBlocked) ? this.onPickColorValue : undefined
           }
-          onBlur={
-            !(isDisabled || isBlocked) && inputValue !== startValue
-              ? onBlur
-              : undefined
-          }
+          onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
           ref={this.inputRef}
         />
         <input
@@ -334,11 +341,7 @@ export class Input extends React.Component<InputProps, InputStates> {
             if (typeof onFocus === 'function' && !(isDisabled || isBlocked))
               this.onFocus(e)
           }}
-          onBlur={
-            !(isDisabled || isBlocked) && inputValue !== startValue
-              ? onBlur
-              : undefined
-          }
+          onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
           ref={this.inputRef}
         />
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
@@ -361,10 +364,9 @@ export class Input extends React.Component<InputProps, InputStates> {
       isFlex,
       onSlide,
       onFocus,
-      onBlur,
     } = this.props
 
-    const { inputValue, startValue } = this.state
+    const { inputValue } = this.state
 
     return (
       <div
@@ -430,11 +432,7 @@ export class Input extends React.Component<InputProps, InputStates> {
               if (typeof onFocus === 'function' && !(isDisabled || isBlocked))
                 this.onFocus(e)
             }}
-            onBlur={
-              !(isDisabled || isBlocked) && inputValue !== startValue
-                ? onBlur
-                : undefined
-            }
+            onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
             ref={this.inputRef}
           />
           {unit !== undefined && (
@@ -472,11 +470,10 @@ export class Input extends React.Component<InputProps, InputStates> {
       isBlocked,
       isDisabled,
       isNew,
-      onBlur,
       onClear,
     } = this.props
 
-    const { inputValue, startValue } = this.state
+    const { inputValue } = this.state
 
     return (
       <div
@@ -520,11 +517,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onKeyDown={!(isDisabled || isBlocked) ? this.onValidText : undefined}
           onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
           onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
-          onBlur={
-            !(isDisabled || isBlocked) && inputValue !== startValue
-              ? onBlur
-              : undefined
-          }
+          onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
           ref={this.inputRef}
         ></input>
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
@@ -545,18 +538,10 @@ export class Input extends React.Component<InputProps, InputStates> {
   }
 
   LongText = () => {
-    const {
-      id,
-      state,
-      placeholder,
-      feature,
-      isBlocked,
-      isDisabled,
-      isNew,
-      onBlur,
-    } = this.props
+    const { id, state, placeholder, feature, isBlocked, isDisabled, isNew } =
+      this.props
 
-    const { inputValue, startValue } = this.state
+    const { inputValue } = this.state
 
     return (
       <div
@@ -589,11 +574,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           }
           onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
           onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
-          onBlur={
-            !(isDisabled || isBlocked) && inputValue !== startValue
-              ? onBlur
-              : undefined
-          }
+          onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
           ref={this.textareaRef}
         />
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
