@@ -13,7 +13,7 @@ const meta: Meta<typeof Input> = {
     onChange: fn(),
     onFocus: fn(),
     onBlur: fn(),
-    onConfirm: fn(),
+    onShift: fn(),
   },
 } satisfies Meta<typeof Input>
 

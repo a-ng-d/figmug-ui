@@ -29,13 +29,14 @@ export interface InputProps {
   onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onFocus?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onBlur?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
-  onConfirm?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  onShift?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onClear?: (value: string) => void
   onSlide?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
 }
 
 export interface InputStates {
   inputValue: string
+  startValue: string
 }
 
 export class Input extends React.Component<InputProps, InputStates> {
@@ -58,10 +59,11 @@ export class Input extends React.Component<InputProps, InputStates> {
 
   constructor(props: InputProps) {
     super(props)
-    ;(this.state = {
+    this.state = {
       inputValue: props.value,
-    }),
-      (this.inputRef = React.createRef())
+      startValue: props.value,
+    }
+    this.inputRef = React.createRef()
     this.textareaRef = React.createRef()
   }
 
@@ -103,6 +105,17 @@ export class Input extends React.Component<InputProps, InputStates> {
         this.textareaRef.current.focus()
       }
     }
+  }
+
+  // Handlers
+  onFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { onFocus } = this.props
+    const { inputValue } = this.state
+
+    this.setState({
+      startValue: inputValue,
+    })
+    onFocus?.(e)
   }
 
   // Direct actions
@@ -156,78 +169,73 @@ export class Input extends React.Component<InputProps, InputStates> {
   onValidText = (
     e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { onConfirm } = this.props
+    const target = e.target as HTMLInputElement
 
-    if (e.key === 'Enter') {
-      onConfirm?.(e)
-      ;(e.target as HTMLElement).blur()
-    } else if (e.key === 'Escape') (e.target as HTMLElement).blur()
+    if (e.key === 'Enter') target.blur()
+    else if (e.key === 'Escape') target.blur()
   }
 
   onValidLongText = (
     e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { onConfirm } = this.props
+    const target = e.target as HTMLInputElement
 
     if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-      onConfirm?.(e)
-      ;(e.target as HTMLElement).blur()
-    } else if (e.key === 'Escape') (e.target as HTMLElement).blur()
+      target.blur()
+    } else if (e.key === 'Escape') target.blur()
   }
 
   onValidNumber = (
     e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { min, max, step, onConfirm } = this.props
-    const { inputValue } = this.state
-
-    const value = parseFloat((e.target as HTMLInputElement).value)
+    const { min, max, step, onShift } = this.props
+    const { inputValue, startValue } = this.state
+    const target = e.target as HTMLInputElement
 
     let nudge = 0
+    console.log(inputValue, startValue)
 
     if (e.key === 'ArrowUp') {
       if (e.shiftKey) nudge = 9
+      const v =
+        parseFloat(inputValue) + nudge < parseFloat(max ?? '100')
+          ? (
+              parseFloat(inputValue) +
+              nudge * parseFloat(step === undefined ? '1' : step)
+            ).toString()
+          : max ?? '100'
+
       this.setState({
-        inputValue:
-          value + nudge < parseFloat(max ?? '100')
-            ? (
-                value +
-                nudge * parseFloat(step === undefined ? '1' : step)
-              ).toString()
-            : max ?? '100',
+        inputValue: v,
+        startValue: v,
       })
-      if (value + nudge < parseFloat(max ?? '100')) {
-        ;(e.target as HTMLInputElement).value = inputValue
-        onConfirm?.(e)
-      }
+      if (parseFloat(inputValue) + nudge < parseFloat(max ?? '100'))
+        onShift?.(e)
     } else if (e.key === 'ArrowDown') {
       if (e.shiftKey) nudge = 9
+      const v =
+        parseFloat(inputValue) - nudge > parseFloat(min ?? '0')
+          ? (
+              parseFloat(inputValue) -
+              nudge * parseFloat(step === undefined ? '1' : step)
+            ).toString()
+          : min ?? '0'
       this.setState({
-        inputValue:
-          value - nudge > parseFloat(min ?? '0')
-            ? (
-                value -
-                nudge * parseFloat(step === undefined ? '1' : step)
-              ).toString()
-            : min ?? '0',
+        inputValue: v,
+        startValue: v,
       })
-      if (value - nudge > parseFloat(min ?? '0')) {
-        ;(e.target as HTMLInputElement).value = inputValue
-        onConfirm?.(e)
-      }
+      if (parseFloat(inputValue) - nudge > parseFloat(min ?? '0')) onShift?.(e)
     } else if (e.key === 'Enter' || e.key === 'Escape') {
-      if (value < parseFloat(min ?? '0')) {
+      if (parseFloat(inputValue) < parseFloat(min ?? '0')) {
         this.setState({
           inputValue: min ?? '0',
         })
-      } else if (value > parseFloat(max ?? '100')) {
+      } else if (parseFloat(inputValue) > parseFloat(max ?? '100')) {
         this.setState({
           inputValue: max ?? '100',
         })
       }
-      ;(e.target as HTMLInputElement).value = inputValue
-      onConfirm?.(e)
-      ;(e.target as HTMLElement).blur()
+      target.blur()
     }
   }
 
@@ -278,7 +286,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     const { id, feature, isBlocked, isDisabled, isNew, onFocus, onBlur } =
       this.props
 
-    const { inputValue } = this.state
+    const { inputValue, startValue } = this.state
 
     return (
       <div
@@ -303,7 +311,11 @@ export class Input extends React.Component<InputProps, InputStates> {
           onChange={
             !(isDisabled || isBlocked) ? this.onPickColorValue : undefined
           }
-          onBlur={!(isDisabled || isBlocked) ? onBlur : undefined}
+          onBlur={
+            !(isDisabled || isBlocked) && inputValue !== startValue
+              ? onBlur
+              : undefined
+          }
           ref={this.inputRef}
         />
         <input
@@ -321,9 +333,13 @@ export class Input extends React.Component<InputProps, InputStates> {
           onFocus={(e) => {
             e.target.select()
             if (typeof onFocus === 'function' && !(isDisabled || isBlocked))
-              onFocus(e)
+              this.onFocus(e)
           }}
-          onBlur={!(isDisabled || isBlocked) ? onBlur : undefined}
+          onBlur={
+            !(isDisabled || isBlocked) && inputValue !== startValue
+              ? onBlur
+              : undefined
+          }
           ref={this.inputRef}
         />
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
@@ -349,7 +365,7 @@ export class Input extends React.Component<InputProps, InputStates> {
       onBlur,
     } = this.props
 
-    const { inputValue } = this.state
+    const { inputValue, startValue } = this.state
 
     return (
       <div
@@ -413,9 +429,13 @@ export class Input extends React.Component<InputProps, InputStates> {
             onFocus={(e) => {
               e.target.select()
               if (typeof onFocus === 'function' && !(isDisabled || isBlocked))
-                onFocus(e)
+                this.onFocus(e)
             }}
-            onBlur={!(isDisabled || isBlocked) ? onBlur : undefined}
+            onBlur={
+              !(isDisabled || isBlocked) && inputValue !== startValue
+                ? onBlur
+                : undefined
+            }
             ref={this.inputRef}
           />
           {unit !== undefined && (
@@ -453,12 +473,11 @@ export class Input extends React.Component<InputProps, InputStates> {
       isBlocked,
       isDisabled,
       isNew,
-      onFocus,
       onBlur,
       onClear,
     } = this.props
 
-    const { inputValue } = this.state
+    const { inputValue, startValue } = this.state
 
     return (
       <div
@@ -501,8 +520,12 @@ export class Input extends React.Component<InputProps, InputStates> {
           disabled={isDisabled || isBlocked}
           onKeyDown={!(isDisabled || isBlocked) ? this.onValidText : undefined}
           onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
-          onFocus={!(isDisabled || isBlocked) ? onFocus : undefined}
-          onBlur={!(isDisabled || isBlocked) ? onBlur : undefined}
+          onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
+          onBlur={
+            !(isDisabled || isBlocked) && inputValue !== startValue
+              ? onBlur
+              : undefined
+          }
           ref={this.inputRef}
         ></input>
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
@@ -531,11 +554,10 @@ export class Input extends React.Component<InputProps, InputStates> {
       isBlocked,
       isDisabled,
       isNew,
-      onFocus,
       onBlur,
     } = this.props
 
-    const { inputValue } = this.state
+    const { inputValue, startValue } = this.state
 
     return (
       <div
@@ -567,8 +589,12 @@ export class Input extends React.Component<InputProps, InputStates> {
             !(isDisabled || isBlocked) ? this.onValidLongText : undefined
           }
           onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
-          onFocus={!(isDisabled || isBlocked) ? onFocus : undefined}
-          onBlur={!(isDisabled || isBlocked) ? onBlur : undefined}
+          onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
+          onBlur={
+            !(isDisabled || isBlocked) && inputValue !== startValue
+              ? onBlur
+              : undefined
+          }
           ref={this.textareaRef}
         />
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
