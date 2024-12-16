@@ -1,6 +1,6 @@
 {
   "name": "@a_ng_d/figmug-ui",
-  "version": "0.115.7",
+  "version": "0.115.8",
   "type": "module",
   "files": [
     "dist"
