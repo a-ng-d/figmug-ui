@@ -13,7 +13,7 @@ const Inputs = () => (
       feature="UPDATE_HUE"
       onFocus={fn}
       onBlur={fn}
-      onConfirm={fn}
+      onShift={fn}
     />
     <Input
       type="NUMBER"
@@ -23,7 +23,7 @@ const Inputs = () => (
       feature="UPDATE_LIGHTNESS"
       onFocus={fn}
       onBlur={fn}
-      onConfirm={fn}
+      onShift={fn}
     />
     <Input
       type="NUMBER"
@@ -33,7 +33,7 @@ const Inputs = () => (
       feature="UPDATE_CHROMA"
       onFocus={fn}
       onBlur={fn}
-      onConfirm={fn}
+      onShift={fn}
     />
   </>
 )
