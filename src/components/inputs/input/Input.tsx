@@ -36,12 +36,12 @@ export interface InputProps {
 
 export interface InputStates {
   inputValue: string
-  startValue: string
 }
 
 export class Input extends React.Component<InputProps, InputStates> {
   inputRef: React.RefObject<HTMLInputElement>
   textareaRef: React.RefObject<HTMLTextAreaElement>
+  startValue: string
 
   static defaultProps: Partial<InputProps> = {
     icon: undefined,
@@ -61,8 +61,8 @@ export class Input extends React.Component<InputProps, InputStates> {
     super(props)
     this.state = {
       inputValue: props.value,
-      startValue: props.value,
     }
+    this.startValue = props.value
     this.inputRef = React.createRef()
     this.textareaRef = React.createRef()
   }
@@ -158,9 +158,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     const { onFocus } = this.props
     const { inputValue } = this.state
 
-    this.setState({
-      startValue: inputValue,
-    })
+    this.startValue = inputValue
 
     if (onFocus) {
       onFocus(e)
@@ -169,9 +167,9 @@ export class Input extends React.Component<InputProps, InputStates> {
 
   onBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { onBlur } = this.props
-    const { inputValue, startValue } = this.state
+    const { inputValue } = this.state
 
-    if (inputValue !== startValue && onBlur) {
+    if (inputValue !== this.startValue && onBlur) {
       onBlur(e)
     }
   }
@@ -217,8 +215,8 @@ export class Input extends React.Component<InputProps, InputStates> {
 
       this.setState({
         inputValue: v,
-        startValue: v,
       })
+      this.startValue = v
       if (parseFloat(inputValue) + nudge < parseFloat(max ?? '100'))
         onShift?.(e)
     } else if (e.key === 'ArrowDown') {
@@ -232,8 +230,8 @@ export class Input extends React.Component<InputProps, InputStates> {
           : min ?? '0'
       this.setState({
         inputValue: v,
-        startValue: v,
       })
+      this.startValue = v
       if (parseFloat(inputValue) - nudge > parseFloat(min ?? '0')) onShift?.(e)
     } else if (e.key === 'Enter' || e.key === 'Escape') {
       if (parseFloat(inputValue) < parseFloat(min ?? '0')) {
