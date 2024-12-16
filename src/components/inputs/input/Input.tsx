@@ -108,6 +108,52 @@ export class Input extends React.Component<InputProps, InputStates> {
   }
 
   // Handlers
+  onPickColorValue = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { onChange } = this.props
+
+    this.setState({
+      inputValue: e.target.value,
+    })
+    if (onChange) onChange(e)
+  }
+
+  onChangeColorValue = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { onChange } = this.props
+
+    if (/^[0-9a-fA-F]{6}$/i.test(e.target.value)) {
+      this.setState({
+        inputValue: `#${e.target.value}`,
+      })
+      if (onChange) onChange(e)
+    }
+  }
+
+  onChangeNumber = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { onChange } = this.props
+
+    this.setState({
+      inputValue: e.target.value,
+    })
+    if (onChange) onChange(e)
+  }
+
+  onChangeText = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { onChange } = this.props
+
+    this.setState({
+      inputValue: e.target.value,
+    })
+    if (onChange) onChange(e)
+  }
+
   onFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { onFocus } = this.props
     const { inputValue } = this.state
@@ -128,53 +174,6 @@ export class Input extends React.Component<InputProps, InputStates> {
     if (inputValue !== startValue && onBlur) {
       onBlur(e)
     }
-  }
-
-  // Direct actions
-  onPickColorValue = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { onChange } = this.props
-
-    this.setState({
-      inputValue: e.target.value,
-    })
-    if (onChange !== undefined) onChange(e)
-  }
-
-  onChangeColorValue = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { onChange } = this.props
-
-    if (/^[0-9a-fA-F]{6}$/i.test(e.target.value)) {
-      this.setState({
-        inputValue: `#${e.target.value}`,
-      })
-      if (onChange !== undefined) onChange(e)
-    }
-  }
-
-  onChangeNumber = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { onChange } = this.props
-
-    this.setState({
-      inputValue: e.target.value,
-    })
-    if (onChange !== undefined) onChange(e)
-  }
-
-  onChangeText = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { onChange } = this.props
-
-    this.setState({
-      inputValue: e.target.value,
-    })
-    if (onChange !== undefined) onChange(e)
   }
 
   // Direct actions
