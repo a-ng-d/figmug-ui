@@ -157,6 +157,7 @@ export class Input extends React.Component<InputProps, InputStates> {
   onFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { value, onFocus } = this.props
 
+    console.log('onFocus', value)
     this.startValue = value
 
     if (onFocus) {
