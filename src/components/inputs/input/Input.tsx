@@ -189,11 +189,10 @@ export class Input extends React.Component<InputProps, InputStates> {
     e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { min, max, step, onShift } = this.props
-    const { inputValue, startValue } = this.state
+    const { inputValue } = this.state
     const target = e.target as HTMLInputElement
 
     let nudge = 0
-    console.log(inputValue, startValue)
 
     if (e.key === 'ArrowUp') {
       if (e.shiftKey) nudge = 9
