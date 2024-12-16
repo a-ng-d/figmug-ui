@@ -157,7 +157,6 @@ export class Input extends React.Component<InputProps, InputStates> {
   onFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { value, onFocus } = this.props
 
-    console.log('onFocus', value)
     this.startValue = value
 
     if (onFocus) {
@@ -168,8 +167,6 @@ export class Input extends React.Component<InputProps, InputStates> {
   onBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { onBlur } = this.props
     const { inputValue } = this.state
-
-    console.log('onBlur', inputValue, this.startValue)
 
     if (inputValue !== this.startValue && onBlur) {
       onBlur(e)
