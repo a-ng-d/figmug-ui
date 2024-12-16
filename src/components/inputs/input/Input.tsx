@@ -169,6 +169,8 @@ export class Input extends React.Component<InputProps, InputStates> {
     const { onBlur } = this.props
     const { inputValue } = this.state
 
+    console.log('onBlur', inputValue, this.startValue)
+
     if (inputValue !== this.startValue && onBlur) {
       onBlur(e)
     }
