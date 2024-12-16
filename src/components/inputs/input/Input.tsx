@@ -293,7 +293,7 @@ export class Input extends React.Component<InputProps, InputStates> {
 
   // Templates
   Color = () => {
-    const { id, feature, isBlocked, isDisabled, isNew, onFocus } = this.props
+    const { id, feature, isBlocked, isDisabled, isNew } = this.props
 
     const { inputValue } = this.state
 
@@ -320,6 +320,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           onChange={
             !(isDisabled || isBlocked) ? this.onPickColorValue : undefined
           }
+          onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
           onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
           ref={this.inputRef}
         />
@@ -337,8 +338,7 @@ export class Input extends React.Component<InputProps, InputStates> {
           }
           onFocus={(e) => {
             e.target.select()
-            if (typeof onFocus === 'function' && !(isDisabled || isBlocked))
-              this.onFocus(e)
+            this.onFocus(e)
           }}
           onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
           ref={this.inputRef}
@@ -362,7 +362,6 @@ export class Input extends React.Component<InputProps, InputStates> {
       isNew,
       isFlex,
       onSlide,
-      onFocus,
     } = this.props
 
     const { inputValue } = this.state
@@ -428,8 +427,7 @@ export class Input extends React.Component<InputProps, InputStates> {
             }
             onFocus={(e) => {
               e.target.select()
-              if (typeof onFocus === 'function' && !(isDisabled || isBlocked))
-                this.onFocus(e)
+              if (!(isDisabled || isBlocked)) this.onFocus(e)
             }}
             onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
             ref={this.inputRef}
