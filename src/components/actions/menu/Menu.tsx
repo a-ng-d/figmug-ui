@@ -13,13 +13,16 @@ export interface MenuProps {
   customIcon?: React.ReactElement
   options: Array<DropdownOption>
   selected?: string
+  parentClassName?: string
   state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
   alignment?: 'TOP_RIGHT' | 'TOP_LEFT' | 'BOTTOM_RIGHT' | 'BOTTOM_LEFT'
+  isBlocked?: boolean
   isNew?: boolean
 }
 
 export interface MenuStates {
   isMenuOpen: boolean
+  alignment: 'TOP_RIGHT' | 'TOP_LEFT' | 'BOTTOM_RIGHT' | 'BOTTOM_LEFT'
 }
 
 export class Menu extends React.Component<MenuProps, MenuStates> {
@@ -34,6 +37,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
     options: [],
     state: 'DEFAULT',
     alignment: 'BOTTOM_LEFT',
+    isBlocked: false,
     isNew: false,
   }
 
@@ -41,6 +45,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
     super(props)
     this.state = {
       isMenuOpen: false,
+      alignment: props.alignment ?? 'BOTTOM_LEFT',
     }
     this.selectMenuRef = React.createRef()
     this.buttonRef = React.createRef()
@@ -57,11 +62,6 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
     document.removeEventListener('mousedown', this.handleClickOutside)
 
   // Direct actions
-  closeMenu = (action: void) => {
-    this.setState({ isMenuOpen: false })
-    return action
-  }
-
   handleClickOutside = (e: Event) => {
     const target = e.target as HTMLElement
 
@@ -83,6 +83,44 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
       })
   }
 
+  onOpenMenu = () => {
+    const { parentClassName } = this.props
+
+    this.setState({
+      isMenuOpen: true,
+    })
+    if (parentClassName !== undefined)
+      setTimeout(() => {
+        if (this.listRef.current != null) {
+          const diffTop: number =
+            this.listRef.current.getBoundingClientRect().top -
+            document
+              .getElementsByClassName(parentClassName as string)[0]
+              .getBoundingClientRect().top
+          const diffBottom: number =
+            this.listRef.current.getBoundingClientRect().bottom -
+            document
+              .getElementsByClassName(parentClassName as string)[0]
+              .getBoundingClientRect().bottom
+
+          if (diffTop < -16) {
+            this.setState({
+              alignment: `TOP_${this.props.alignment?.split('_')[1]}` as
+                | 'TOP_RIGHT'
+                | 'TOP_LEFT',
+            })
+          }
+          if (diffBottom > -16) {
+            this.setState({
+              alignment: `BOTTOM_${this.props.alignment?.split('_')[1]}` as
+                | 'BOTTOM_RIGHT'
+                | 'BOTTOM_LEFT',
+            })
+          }
+        }
+      }, 1)
+  }
+
   render() {
     const {
       id,
@@ -94,6 +132,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
       customIcon,
       options,
       selected,
+      isBlocked,
       isNew,
     } = this.props
     const { isMenuOpen } = this.state
@@ -118,14 +157,12 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
             customIcon={customIcon === undefined ? undefined : customIcon}
             state={isMenuOpen ? 'selected' : ''}
             isLoading={state === 'LOADING'}
-            isDisabled={state === 'DISABLED'}
+            isDisabled={state === 'DISABLED' || isBlocked}
             isNew={isNew}
             ref={this.buttonRef}
-            action={() => {
-              this.setState({
-                isMenuOpen: !isMenuOpen,
-              })
-            }}
+            action={
+              !(state === 'DISABLED' || isBlocked) ? this.onOpenMenu : undefined
+            }
           />
         ) : (
           <Button
@@ -133,13 +170,11 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
             label={label}
             hasMultipleActions
             isLoading={state === 'LOADING'}
-            isDisabled={state === 'DISABLED'}
+            isDisabled={state === 'DISABLED' || isBlocked}
             isNew={isNew}
             ref={this.buttonRef}
-            action={() =>
-              this.setState({
-                isMenuOpen: !isMenuOpen,
-              })
+            action={
+              !(state === 'DISABLED' || isBlocked) ? this.onOpenMenu : undefined
             }
           />
         )}
