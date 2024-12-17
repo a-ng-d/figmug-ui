@@ -58,9 +58,10 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   // Direct actions
   onOpenMenu = () => {
     const { parentClassName } = this.props
+    const { isMenuOpen } = this.state
 
     this.setState({
-      isMenuOpen: true,
+      isMenuOpen: !isMenuOpen,
     })
     if (parentClassName !== undefined)
       setTimeout(() => {
@@ -85,7 +86,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             this.listRef.current.style.bottom = '-6px'
           }
         }
-      }, 1)
+      }, 10)
   }
 
   setPosition = () => {
@@ -104,6 +105,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
 
   handleClickOutside = (e: Event) => {
     const target = e.target as HTMLElement
+
     if (
       target === this.buttonRef.current ||
       target === this.menuRef.current ||

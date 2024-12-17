@@ -58,16 +58,18 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
   componentDidMount = () =>
     document.addEventListener('mousedown', this.handleClickOutside)
 
-  componentWillUnmount = () =>
+  componentWillUnmount = () => {
     document.removeEventListener('mousedown', this.handleClickOutside)
+  }
 
   // Direct actions
   handleClickOutside = (e: Event) => {
     const target = e.target as HTMLElement
+    const { isMenuOpen } = this.state
 
     if (
       (this.buttonRef.current?.buttonRef.current?.contains(target) &&
-        this.state.isMenuOpen) ||
+        isMenuOpen) ||
       target === this.menuRef.current ||
       target === this.subMenuRef.current ||
       (target.tagName === 'HR' && this.menuRef.current?.contains(target)) ||
@@ -85,9 +87,10 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
 
   onOpenMenu = () => {
     const { parentClassName } = this.props
+    const { isMenuOpen } = this.state
 
     this.setState({
-      isMenuOpen: true,
+      isMenuOpen: !isMenuOpen,
     })
     if (parentClassName !== undefined)
       setTimeout(() => {
@@ -103,19 +106,14 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
               .getElementsByClassName(parentClassName as string)[0]
               .getBoundingClientRect().bottom
 
-          if (diffTop < -16) {
-            this.setState({
-              alignment: `TOP_${this.props.alignment?.split('_')[1]}` as
-                | 'TOP_RIGHT'
-                | 'TOP_LEFT',
-            })
+          if (diffTop < 16) {
+            this.listRef.current.style.top =
+              'calc(var(--size-medium) + var(--size-xxsmall))'
+            this.listRef.current.style.transform = 'none'
           }
           if (diffBottom > -16) {
-            this.setState({
-              alignment: `BOTTOM_${this.props.alignment?.split('_')[1]}` as
-                | 'BOTTOM_RIGHT'
-                | 'BOTTOM_LEFT',
-            })
+            this.listRef.current.style.top = 'calc(var(--size-xxsmall) * -1)'
+            this.listRef.current.style.transform = 'translateY(-100%)'
           }
         }
       }, 1)
@@ -127,11 +125,11 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
       type,
       label,
       state,
-      alignment,
       icon,
       customIcon,
       options,
       selected,
+      alignment,
       isBlocked,
       isNew,
     } = this.props
