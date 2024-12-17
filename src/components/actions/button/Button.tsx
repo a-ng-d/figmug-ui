@@ -164,6 +164,7 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
       isNew,
       action,
     } = this.props
+    const { isTooltipVisible } = this.state
 
     return (
       <button
@@ -223,7 +224,7 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
             {customIcon}
           </div>
         )}
-        {this.state.isTooltipVisible && <Tooltip>{helper}</Tooltip>}
+        {isTooltipVisible && <Tooltip>{helper}</Tooltip>}
       </button>
     )
   }

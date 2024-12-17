@@ -197,6 +197,8 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
         </button>
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         {(() => {
+          const { pin } = this.props
+
           if (isMenuOpen)
             return (
               <div
@@ -205,12 +207,12 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
                   position: 'absolute',
                   zIndex: 99,
                   top:
-                    this.props.pin === 'TOP'
+                    pin === 'TOP'
                       ? '-4px'
-                      : this.props.pin === 'BOTTOM'
+                      : pin === 'BOTTOM'
                         ? 'auto'
                         : this.setPosition(),
-                  bottom: this.props.pin === 'BOTTOM' ? '-4px' : 'auto',
+                  bottom: pin === 'BOTTOM' ? '-4px' : 'auto',
                   right: alignment === 'RIGHT' ? 0 : 'auto',
                   left: alignment === 'LEFT' ? 0 : 'auto',
                 }}

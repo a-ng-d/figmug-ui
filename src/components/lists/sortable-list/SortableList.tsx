@@ -197,6 +197,7 @@ export class SortableList<T extends DefaultData> extends React.Component<
       primarySlot,
       secondarySlot,
       actionsSlot,
+      emptySlot,
       isScrollable,
       onRemoveItem,
       onRefoldOptions,
@@ -204,7 +205,7 @@ export class SortableList<T extends DefaultData> extends React.Component<
     const { selectedElement, hoveredElement } = this.state
 
     if (data.length === 0 && canBeEmpty)
-      return <div className="sortable-list">{this.props.emptySlot}</div>
+      return <div className="sortable-list">{emptySlot}</div>
     return (
       <ul
         className={[

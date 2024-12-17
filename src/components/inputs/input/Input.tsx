@@ -68,9 +68,11 @@ export class Input extends React.Component<InputProps, InputStates> {
   }
 
   componentDidMount(): void {
+    const { isGrowing } = this.props
+
     if (this.textareaRef.current) {
       this.textareaRef.current.style.height = 'auto'
-      if (this.props.isGrowing)
+      if (isGrowing)
         this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight + 2}px`
     }
     const { isAutoFocus } = this.props
@@ -84,18 +86,18 @@ export class Input extends React.Component<InputProps, InputStates> {
   }
 
   componentDidUpdate(prevProps: InputProps) {
-    const { isAutoFocus } = this.props
+    const { value, isGrowing, isAutoFocus } = this.props
 
-    if (prevProps.value !== this.props.value) {
+    if (prevProps.value !== value) {
       this.setState({
-        inputValue: this.props.value,
+        inputValue: value,
       })
     }
     if (prevProps.type === 'CODE' && this.textareaRef.current !== null)
       this.textareaRef.current.scrollTop = 0
     if (this.textareaRef.current) {
       this.textareaRef.current.style.height = 'auto'
-      if (this.props.isGrowing)
+      if (isGrowing)
         this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight + 2}px`
     }
     if (isAutoFocus) {

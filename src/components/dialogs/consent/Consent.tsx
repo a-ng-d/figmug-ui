@@ -54,8 +54,10 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
 
   // Direct actions
   onConsentAll = () => {
-    this.props.consentActions.consent.action(
-      this.props.vendorsList.map((vendor) => ({
+    const { vendorsList, consentActions } = this.props
+
+    consentActions.consent.action(
+      vendorsList.map((vendor) => ({
         ...vendor,
         isConsented: true,
       }))
@@ -63,21 +65,29 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
   }
 
   onDenyAll = () => {
-    this.props.consentActions.deny.action(
-      this.props.vendorsList.map((vendor) => ({
+    const { vendorsList, consentActions } = this.props
+
+    consentActions.deny.action(
+      vendorsList.map((vendor) => ({
         ...vendor,
         isConsented: false,
       }))
     )
   }
 
-  onPartialConsent = () =>
-    this.props.consentActions.save.action(this.state.vendorsConsent)
+  onPartialConsent = () => {
+    const { consentActions } = this.props
+    const { vendorsConsent } = this.state
+
+    consentActions.save.action(vendorsConsent)
+  }
 
   // Handlers
-  consentVendorsHandler = (index: number) =>
+  consentVendorsHandler = (index: number) => {
+    const { vendorsConsent } = this.state
+
     this.setState({
-      vendorsConsent: this.state.vendorsConsent.map((consent, i) => {
+      vendorsConsent: vendorsConsent.map((consent, i) => {
         if (i === index)
           return {
             ...consent,
@@ -88,6 +98,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
         }
       }),
     })
+  }
 
   // Templates
   WelcomeScreen = () => {

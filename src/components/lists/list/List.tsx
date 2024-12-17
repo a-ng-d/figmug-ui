@@ -31,11 +31,13 @@ export class List extends React.Component<ListProps, ListStates> {
 
   // Template
   SubMenu = (options: Array<DropdownOption> | undefined) => {
+    const { subMenuRef } = this.props
+
     return (
       <div className="select-menu__submenu">
         <ul
           className="select-menu__menu recharged select-menu__menu--active"
-          ref={this.props.subMenuRef}
+          ref={subMenuRef}
         >
           {options?.map((option, index) => {
             const isActive =
@@ -209,7 +211,7 @@ export class List extends React.Component<ListProps, ListStates> {
   }
 
   render() {
-    const { options, direction } = this.props
+    const { options, direction, menuRef } = this.props
 
     return (
       <ul
@@ -223,7 +225,7 @@ export class List extends React.Component<ListProps, ListStates> {
         ]
           .filter((n) => n)
           .join(' ')}
-        ref={this.props.menuRef}
+        ref={menuRef}
       >
         {options?.map((option, index) => {
           const isActive =
