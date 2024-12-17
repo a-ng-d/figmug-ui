@@ -172,12 +172,15 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
           tabIndex={0}
           disabled={isDisabled || isBlocked}
           onKeyDown={(e) => {
-            if (e.key === ' ' || (e.key === 'Enter' && !isDisabled))
+            if (
+              e.key === ' ' ||
+              (e.key === 'Enter' && !(isDisabled || isBlocked))
+            )
               return this.onOpenMenu?.()
             if (e.key === 'Escape') return (e.target as HTMLElement).blur()
             return null
           }}
-          onMouseDown={!isDisabled ? this.onOpenMenu : undefined}
+          onMouseDown={!(isDisabled || isBlocked) ? this.onOpenMenu : undefined}
           ref={this.buttonRef}
         >
           <span className="select-menu__label">
