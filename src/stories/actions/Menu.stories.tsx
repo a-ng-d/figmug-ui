@@ -23,6 +23,7 @@ export const DropdownIcon: Story = {
     options: { ...ListStories.FourOptionsList.args.options },
     selected: 'OPTION_1',
     alignment: 'BOTTOM_LEFT',
+    isBlocked: false,
     isNew: false,
   },
   argTypes: {
@@ -107,6 +108,8 @@ export const MultipleActionsIconButton: Story = {
     state: 'DEFAULT',
     options: [...ListStories.FourOptionsList.args.options],
     alignment: 'BOTTOM_LEFT',
+    isBlocked: false,
+    isNew: false,
   },
   argTypes: {
     type: { control: false },
@@ -123,6 +126,8 @@ export const MultipleActionsButton: Story = {
     state: 'DEFAULT',
     options: [...ListStories.FourOptionsList.args.options],
     alignment: 'BOTTOM_LEFT',
+    isNew: false,
+    isBlocked: false,
   },
   argTypes: {
     type: { control: false },
