@@ -18,6 +18,7 @@ export interface InputProps {
   max?: string
   step?: string
   feature?: string
+  shouldBlur?: boolean
   isAutoFocus?: boolean
   isGrowing?: boolean
   isFlex?: boolean
@@ -47,6 +48,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     icon: undefined,
     state: 'DEFAULT',
     step: '1',
+    shouldBlur: false,
     isClearable: false,
     isFramed: true,
     isBlocked: false,
@@ -167,10 +169,10 @@ export class Input extends React.Component<InputProps, InputStates> {
   }
 
   onBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { onBlur } = this.props
+    const { shouldBlur, onBlur } = this.props
     const { inputValue } = this.state
 
-    if (inputValue !== this.startValue && onBlur) {
+    if (inputValue !== this.startValue && onBlur && shouldBlur) {
       onBlur(e)
     }
   }
