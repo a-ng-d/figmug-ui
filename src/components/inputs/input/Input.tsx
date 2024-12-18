@@ -172,7 +172,7 @@ export class Input extends React.Component<InputProps, InputStates> {
     const { shouldBlur, onBlur } = this.props
     const { inputValue } = this.state
 
-    if (inputValue !== this.startValue && onBlur && shouldBlur) {
+    if ((inputValue !== this.startValue && onBlur) || (onBlur && shouldBlur)) {
       onBlur(e)
     }
   }
