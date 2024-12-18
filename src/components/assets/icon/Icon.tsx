@@ -21,7 +21,10 @@ export const Icon = (props: IconProps) => {
 
   const Letter = () => {
     return (
-      <div className="icon-box">
+      <div
+        className="icon-box"
+        role="icon"
+      >
         <span
           style={{
             color: iconColor,
@@ -48,6 +51,7 @@ export const Icon = (props: IconProps) => {
         ]
           .filter((n) => n)
           .join(' ')}
+        role="icon"
       />
     )
   }

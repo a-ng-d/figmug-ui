@@ -24,6 +24,7 @@ export const Tooltip = (props: TooltipProps) => {
   return (
     <div
       className={['tooltip', 'recharged'].filter((n) => n).join(' ')}
+      role="tooltip"
       ref={tooltipRef}
     >
       <div

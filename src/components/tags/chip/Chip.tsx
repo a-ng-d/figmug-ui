@@ -15,6 +15,7 @@ export const Chip = (props: ChipProps) => {
       className={['chip', 'recharged', state === 'INACTIVE' && 'chip--inactive']
         .filter((n) => n)
         .join(' ')}
+      role="chip"
     >
       <div className={['chip__text', texts.type].filter((n) => n).join(' ')}>
         {children}
