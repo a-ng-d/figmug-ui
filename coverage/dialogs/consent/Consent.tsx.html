@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/351</span>
+                <span class='fraction'>0/362</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/351</span>
+                <span class='fraction'>0/362</span>
             </div>
         
             
@@ -414,7 +414,29 @@
 <a name='L349'></a><a href='#L349'>349</a>
 <a name='L350'></a><a href='#L350'>350</a>
 <a name='L351'></a><a href='#L351'>351</a>
-<a name='L352'></a><a href='#L352'>352</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a>
+<a name='L359'></a><a href='#L359'>359</a>
+<a name='L360'></a><a href='#L360'>360</a>
+<a name='L361'></a><a href='#L361'>361</a>
+<a name='L362'></a><a href='#L362'>362</a>
+<a name='L363'></a><a href='#L363'>363</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -766,13 +788,13 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import React from 'react'</span></span></span>
+<span class="cstat-no" title="statement not covered" >import layouts from '../../../styles/layouts.module.scss'</span>
+<span class="cstat-no" title="statement not covered" >import texts from '../../../styles/texts.module.scss'</span>
 <span class="cstat-no" title="statement not covered" >import type { ConsentConfiguration } from '../../../types/consent.types'</span>
-<span class="cstat-no" title="statement not covered" >import { Bar } from '../../slots/bar/Bar'</span>
-<span class="cstat-no" title="statement not covered" >import { Select } from '../../inputs/select/Select'</span>
 <span class="cstat-no" title="statement not covered" >import { Button } from '../../actions/button/Button'</span>
 <span class="cstat-no" title="statement not covered" >import Thumbnail from '../../assets/thumbnail/Thumbnail'</span>
-<span class="cstat-no" title="statement not covered" >import texts from '../../../styles/texts.module.scss'</span>
-<span class="cstat-no" title="statement not covered" >import layouts from '../../../styles/layouts.module.scss'</span>
+<span class="cstat-no" title="statement not covered" >import { Select } from '../../inputs/select/Select'</span>
+<span class="cstat-no" title="statement not covered" >import { Bar } from '../../slots/bar/Bar'</span>
 <span class="cstat-no" title="statement not covered" >import './consent.scss'</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >export interface ConsentProps {</span>
@@ -821,8 +843,10 @@
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  // Direct actions</span>
 <span class="cstat-no" title="statement not covered" >  onConsentAll = () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    this.props.consentActions.consent.action(</span>
-<span class="cstat-no" title="statement not covered" >      this.props.vendorsList.map((vendor) =&gt; ({</span>
+<span class="cstat-no" title="statement not covered" >    const { vendorsList, consentActions } = this.props</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    consentActions.consent.action(</span>
+<span class="cstat-no" title="statement not covered" >      vendorsList.map((vendor) =&gt; ({</span>
 <span class="cstat-no" title="statement not covered" >        ...vendor,</span>
 <span class="cstat-no" title="statement not covered" >        isConsented: true,</span>
 <span class="cstat-no" title="statement not covered" >      }))</span>
@@ -830,21 +854,29 @@
 <span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  onDenyAll = () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    this.props.consentActions.deny.action(</span>
-<span class="cstat-no" title="statement not covered" >      this.props.vendorsList.map((vendor) =&gt; ({</span>
+<span class="cstat-no" title="statement not covered" >    const { vendorsList, consentActions } = this.props</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    consentActions.deny.action(</span>
+<span class="cstat-no" title="statement not covered" >      vendorsList.map((vendor) =&gt; ({</span>
 <span class="cstat-no" title="statement not covered" >        ...vendor,</span>
 <span class="cstat-no" title="statement not covered" >        isConsented: false,</span>
 <span class="cstat-no" title="statement not covered" >      }))</span>
 <span class="cstat-no" title="statement not covered" >    )</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  onPartialConsent = () =&gt;</span>
-<span class="cstat-no" title="statement not covered" >    this.props.consentActions.save.action(this.state.vendorsConsent)</span>
+<span class="cstat-no" title="statement not covered" >  onPartialConsent = () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    const { consentActions } = this.props</span>
+<span class="cstat-no" title="statement not covered" >    const { vendorsConsent } = this.state</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    consentActions.save.action(vendorsConsent)</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  // Handlers</span>
-<span class="cstat-no" title="statement not covered" >  consentVendorsHandler = (index: number) =&gt;</span>
+<span class="cstat-no" title="statement not covered" >  consentVendorsHandler = (index: number) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    const { vendorsConsent } = this.state</span>
+<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >    this.setState({</span>
-<span class="cstat-no" title="statement not covered" >      vendorsConsent: this.state.vendorsConsent.map((consent, i) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      vendorsConsent: vendorsConsent.map((consent, i) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        if (i === index)</span>
 <span class="cstat-no" title="statement not covered" >          return {</span>
 <span class="cstat-no" title="statement not covered" >            ...consent,</span>
@@ -855,6 +887,7 @@
 <span class="cstat-no" title="statement not covered" >        }</span>
 <span class="cstat-no" title="statement not covered" >      }),</span>
 <span class="cstat-no" title="statement not covered" >    })</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  // Templates</span>
 <span class="cstat-no" title="statement not covered" >  WelcomeScreen = () =&gt; {</span>
@@ -1123,7 +1156,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-06T14:47:15.345Z
+                at 2024-12-18T23:10:33.701Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

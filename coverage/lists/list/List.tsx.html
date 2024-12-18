@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/247</span>
+                <span class='fraction'>0/257</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/247</span>
+                <span class='fraction'>0/257</span>
             </div>
         
             
@@ -310,7 +310,27 @@
 <a name='L245'></a><a href='#L245'>245</a>
 <a name='L246'></a><a href='#L246'>246</a>
 <a name='L247'></a><a href='#L247'>247</a>
-<a name='L248'></a><a href='#L248'>248</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -567,6 +587,8 @@
 <span class="cstat-no" title="statement not covered" >  selected?: string</span>
 <span class="cstat-no" title="statement not covered" >  direction?: 'LEFT' | 'RIGHT' | 'FILL'</span>
 <span class="cstat-no" title="statement not covered" >  onCancellation?: () =&gt; void</span>
+<span class="cstat-no" title="statement not covered" >  menuRef?: React.RefObject&lt;HTMLUListElement&gt;</span>
+<span class="cstat-no" title="statement not covered" >  subMenuRef?: React.RefObject&lt;HTMLUListElement&gt;</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >export interface ListStates {</span>
@@ -588,9 +610,14 @@
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  // Template</span>
 <span class="cstat-no" title="statement not covered" >  SubMenu = (options: Array&lt;DropdownOption&gt; | undefined) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    const { subMenuRef } = this.props</span>
+<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >    return (</span>
 <span class="cstat-no" title="statement not covered" >      &lt;div className="select-menu__submenu"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;ul className="select-menu__menu recharged select-menu__menu--active"&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;ul</span>
+<span class="cstat-no" title="statement not covered" >          className="select-menu__menu recharged select-menu__menu--active"</span>
+<span class="cstat-no" title="statement not covered" >          ref={subMenuRef}</span>
+<span class="cstat-no" title="statement not covered" >        &gt;</span>
 <span class="cstat-no" title="statement not covered" >          {options?.map((option, index) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >            const isActive =</span>
 <span class="cstat-no" title="statement not covered" >                option.isActive !== undefined ? option.isActive : true,</span>
@@ -648,9 +675,9 @@
 <span class="cstat-no" title="statement not covered" >          .filter((n) =&gt; n)</span>
 <span class="cstat-no" title="statement not covered" >          .join(' ')}</span>
 <span class="cstat-no" title="statement not covered" >        data-value={option.value}</span>
-<span class="cstat-no" title="statement not covered" >        data-position={option.position}</span>
 <span class="cstat-no" title="statement not covered" >        data-is-blocked={option.isBlocked}</span>
 <span class="cstat-no" title="statement not covered" >        data-feature={option.feature}</span>
+<span class="cstat-no" title="statement not covered" >        data-role={'OPTION'}</span>
 <span class="cstat-no" title="statement not covered" >        tabIndex={option.isBlocked ? -1 : 0}</span>
 <span class="cstat-no" title="statement not covered" >        onKeyDown={(e) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >          if ((e.key === ' ' || e.key === 'Enter') &amp;&amp; !option.isBlocked) {</span>
@@ -691,17 +718,19 @@
 <span class="cstat-no" title="statement not covered" >        ]</span>
 <span class="cstat-no" title="statement not covered" >          .filter((n) =&gt; n)</span>
 <span class="cstat-no" title="statement not covered" >          .join(' ')}</span>
-<span class="cstat-no" title="statement not covered" >        data-position={option.position}</span>
 <span class="cstat-no" title="statement not covered" >        data-is-blocked={option.isBlocked}</span>
+<span class="cstat-no" title="statement not covered" >        data-role={'GROUP'}</span>
 <span class="cstat-no" title="statement not covered" >        tabIndex={option.isBlocked ? -1 : 0}</span>
 <span class="cstat-no" title="statement not covered" >        onKeyDown={(e) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >          if ((e.key === ' ' || e.key === 'Enter') &amp;&amp; !option.isBlocked)</span>
-<span class="cstat-no" title="statement not covered" >            return this.setState({ openedGroup: option.value ?? '' })</span>
+<span class="cstat-no" title="statement not covered" >            return this.setState({ openedGroup: option.value ?? 'EMPTY' })</span>
 <span class="cstat-no" title="statement not covered" >          if (e.key === 'Escape') return this.setState({ openedGroup: 'EMPTY' })</span>
 <span class="cstat-no" title="statement not covered" >          return null</span>
 <span class="cstat-no" title="statement not covered" >        }}</span>
-<span class="cstat-no" title="statement not covered" >        onMouseOver={() =&gt; this.setState({ openedGroup: option.value ?? '' })}</span>
-<span class="cstat-no" title="statement not covered" >        onMouseOut={() =&gt; this.setState({ openedGroup: 'EMPTY' })}</span>
+<span class="cstat-no" title="statement not covered" >        onMouseEnter={() =&gt;</span>
+<span class="cstat-no" title="statement not covered" >          this.setState({ openedGroup: option.value ?? 'EMPTY' })</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        onMouseLeave={() =&gt; this.setState({ openedGroup: 'EMPTY' })}</span>
 <span class="cstat-no" title="statement not covered" >        onFocus={() =&gt; null}</span>
 <span class="cstat-no" title="statement not covered" >        onBlur={() =&gt; null}</span>
 <span class="cstat-no" title="statement not covered" >      &gt;</span>
@@ -735,9 +764,9 @@
 <span class="cstat-no" title="statement not covered" >          .filter((n) =&gt; n)</span>
 <span class="cstat-no" title="statement not covered" >          .join(' ')}</span>
 <span class="cstat-no" title="statement not covered" >        data-value={option.value}</span>
-<span class="cstat-no" title="statement not covered" >        data-position={option.position}</span>
 <span class="cstat-no" title="statement not covered" >        data-is-blocked={option.isBlocked}</span>
 <span class="cstat-no" title="statement not covered" >        data-feature={option.feature}</span>
+<span class="cstat-no" title="statement not covered" >        data-role={'OPTION'}</span>
 <span class="cstat-no" title="statement not covered" >        tabIndex={option.isBlocked ? -1 : 0}</span>
 <span class="cstat-no" title="statement not covered" >        onKeyDown={(e) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >          if (</span>
@@ -761,7 +790,7 @@
 <span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  render() {</span>
-<span class="cstat-no" title="statement not covered" >    const { options, direction } = this.props</span>
+<span class="cstat-no" title="statement not covered" >    const { options, direction, menuRef } = this.props</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >    return (</span>
 <span class="cstat-no" title="statement not covered" >      &lt;ul</span>
@@ -775,6 +804,7 @@
 <span class="cstat-no" title="statement not covered" >        ]</span>
 <span class="cstat-no" title="statement not covered" >          .filter((n) =&gt; n)</span>
 <span class="cstat-no" title="statement not covered" >          .join(' ')}</span>
+<span class="cstat-no" title="statement not covered" >        ref={menuRef}</span>
 <span class="cstat-no" title="statement not covered" >      &gt;</span>
 <span class="cstat-no" title="statement not covered" >        {options?.map((option, index) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >          const isActive =</span>
@@ -811,7 +841,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-06T14:47:15.345Z
+                at 2024-12-18T23:10:33.701Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
