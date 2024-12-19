@@ -13,7 +13,7 @@ export interface SelectProps {
   isDisabled?: boolean
   isBlocked?: boolean
   isNew?: boolean
-  onChange: React.ChangeEventHandler<HTMLInputElement>
+  action: React.ChangeEventHandler<HTMLInputElement>
 }
 
 export class Select extends React.Component<SelectProps> {
@@ -36,7 +36,7 @@ export class Select extends React.Component<SelectProps> {
       isDisabled,
       isBlocked,
       isNew,
-      onChange,
+      action,
     } = this.props
 
     return (
@@ -53,7 +53,7 @@ export class Select extends React.Component<SelectProps> {
           name={name}
           checked={isChecked}
           disabled={isDisabled || isBlocked}
-          onChange={onChange}
+          onChange={action}
           ref={this.inputRef}
         />
         <label
@@ -78,7 +78,7 @@ export class Select extends React.Component<SelectProps> {
       isDisabled,
       isBlocked,
       isNew,
-      onChange,
+      action,
     } = this.props
 
     return (
@@ -96,7 +96,7 @@ export class Select extends React.Component<SelectProps> {
           value={value}
           checked={isChecked}
           disabled={isDisabled || isBlocked}
-          onChange={onChange}
+          onChange={action}
           ref={this.inputRef}
         />
         <label
@@ -120,7 +120,7 @@ export class Select extends React.Component<SelectProps> {
       isDisabled,
       isBlocked,
       isNew,
-      onChange,
+      action,
     } = this.props
 
     return (
@@ -137,7 +137,7 @@ export class Select extends React.Component<SelectProps> {
           name={name}
           checked={isChecked}
           disabled={isDisabled || isBlocked}
-          onChange={onChange}
+          onChange={action}
           ref={this.inputRef}
         />
         <label
