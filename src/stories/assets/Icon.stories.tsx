@@ -113,6 +113,7 @@ const meta = {
           maxWidth: `${width}px`,
           flexWrap: 'wrap',
           gap: `${width / 80}px`,
+          alignItems: 'baseline',
         }}
       >
         <Story />
