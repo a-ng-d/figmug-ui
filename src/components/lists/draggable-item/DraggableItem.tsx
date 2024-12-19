@@ -155,7 +155,7 @@ export class DraggableItem extends React.Component<
             {secondarySlot !== undefined && (
               <Button
                 type="icon"
-                icon="ellipsis"
+                icon="ellipses"
                 state={hasMoreOptions ? 'selected' : ''}
                 action={() => {
                   onCancelSelection

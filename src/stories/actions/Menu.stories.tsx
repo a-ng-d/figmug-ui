@@ -104,7 +104,7 @@ export const MultipleActionsIconButton: Story = {
   args: {
     id: 'dropdown-icon',
     type: 'ICON',
-    icon: 'ellipsis',
+    icon: 'ellipses',
     state: 'DEFAULT',
     options: [...ListStories.FourOptionsList.args.options],
     alignment: 'BOTTOM_LEFT',
