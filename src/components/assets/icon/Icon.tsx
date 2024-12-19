@@ -8,6 +8,7 @@ export interface IconProps {
   iconLetter?: string
   iconColor?: string
   customClassName?: string
+  customSize?: number
 }
 
 export const Icon = (props: IconProps) => {
@@ -17,12 +18,16 @@ export const Icon = (props: IconProps) => {
     iconLetter,
     iconColor = 'var(--figma-color-icon)',
     customClassName,
+    customSize = 30,
   } = props
 
   const Letter = () => {
     return (
       <div
         className="icon-box"
+        style={{
+          width: `${customSize}px`,
+        }}
         role="icon"
       >
         <span
