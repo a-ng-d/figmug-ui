@@ -40,9 +40,9 @@ export interface InputStates {
 }
 
 export class Input extends React.Component<InputProps, InputStates> {
-  inputRef: React.RefObject<HTMLInputElement>
-  textareaRef: React.RefObject<HTMLTextAreaElement>
-  startValue: string
+  private inputRef: React.RefObject<HTMLInputElement>
+  private textareaRef: React.RefObject<HTMLTextAreaElement>
+  private startValue: string
 
   static defaultProps: Partial<InputProps> = {
     icon: undefined,

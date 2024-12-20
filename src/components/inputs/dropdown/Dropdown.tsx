@@ -22,11 +22,11 @@ export interface DropdownStates {
 }
 
 export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
-  selectMenuRef: React.RefObject<HTMLDivElement>
-  buttonRef: React.RefObject<HTMLButtonElement>
-  listRef: React.RefObject<HTMLDivElement>
-  menuRef: React.RefObject<HTMLUListElement>
-  subMenuRef: React.RefObject<HTMLUListElement>
+  private selectMenuRef: React.RefObject<HTMLDivElement>
+  private buttonRef: React.RefObject<HTMLButtonElement>
+  private listRef: React.RefObject<HTMLDivElement>
+  private menuRef: React.RefObject<HTMLUListElement>
+  private subMenuRef: React.RefObject<HTMLUListElement>
 
   static defaultProps: Partial<DropdownProps> = {
     alignment: 'LEFT',

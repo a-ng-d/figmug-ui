@@ -39,7 +39,7 @@ export class SortableList<T extends DefaultData> extends React.Component<
   SortableListProps<T>,
   SortableListStates
 > {
-  listRef: React.RefObject<HTMLUListElement>
+  private listRef: React.RefObject<HTMLUListElement>
 
   static defaultProps: Partial<SortableListProps> = {
     isScrollable: false,

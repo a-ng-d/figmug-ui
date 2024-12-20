@@ -10,7 +10,7 @@ const meta: Meta<typeof Select> = {
   parameters: {
     layout: 'centered',
   },
-  args: { onChange: fn() },
+  args: { action: fn() },
 } satisfies Meta<typeof Select>
 
 export default meta
@@ -37,18 +37,18 @@ export const CheckBox: Story = {
       isChecked: boolean
     }>()
 
-    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const action = (e: ChangeEvent<HTMLInputElement>) => {
       updateArgs({
         isChecked: !argsState.isChecked,
       })
-      args.onChange(e)
+      args.action(e)
     }
 
     return (
       <Select
         {...args}
         isChecked={argsState.isChecked}
-        onChange={onChange}
+        action={action}
       />
     )
   },
@@ -75,18 +75,18 @@ export const RadioButton: Story = {
       isChecked: boolean
     }>()
 
-    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const action = (e: ChangeEvent<HTMLInputElement>) => {
       updateArgs({
         isChecked: !argsState.isChecked,
       })
-      args.onChange(e)
+      args.action(e)
     }
 
     return (
       <Select
         {...args}
         isChecked={argsState.isChecked}
-        onChange={onChange}
+        action={action}
       />
     )
   },
@@ -113,18 +113,18 @@ export const SwitchButton: Story = {
       isChecked: boolean
     }>()
 
-    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const action = (e: ChangeEvent<HTMLInputElement>) => {
       updateArgs({
         isChecked: !argsState.isChecked,
       })
-      args.onChange(e)
+      args.action(e)
     }
 
     return (
       <Select
         {...args}
         isChecked={argsState.isChecked}
-        onChange={onChange}
+        action={action}
       />
     )
   },
@@ -152,7 +152,7 @@ export const MultipleChoices: Story = {
     isBlocked: { control: false },
     isDisabled: { control: false },
     isNew: { control: false },
-    onChange: { control: false },
+    action: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
@@ -161,7 +161,7 @@ export const MultipleChoices: Story = {
       optionC: boolean
     }>()
 
-    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const action = (e: ChangeEvent<HTMLInputElement>) => {
       const target = e.target as HTMLInputElement
       if (target.name === 'option-1')
         updateArgs({
@@ -176,7 +176,7 @@ export const MultipleChoices: Story = {
           optionC: !argsState.optionC,
         })
 
-      args.onChange(e)
+      args.action(e)
     }
 
     return (
@@ -187,7 +187,7 @@ export const MultipleChoices: Story = {
           label="Option 1"
           name="option-1"
           isChecked={argsState.optionA}
-          onChange={onChange}
+          action={action}
         />
         <Select
           {...args}
@@ -195,7 +195,7 @@ export const MultipleChoices: Story = {
           label="Option 2"
           name="option-2"
           isChecked={argsState.optionB}
-          onChange={onChange}
+          action={action}
         />
         <Select
           {...args}
@@ -203,7 +203,7 @@ export const MultipleChoices: Story = {
           label="Option 3"
           name="option-3"
           isChecked={argsState.optionC}
-          onChange={onChange}
+          action={action}
         />
       </>
     )
@@ -233,18 +233,18 @@ export const SingleChoice: Story = {
     isBlocked: { control: false },
     isDisabled: { control: false },
     isNew: { control: false },
-    onChange: { control: false },
+    action: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
       value: string
     }>()
 
-    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const action = (e: ChangeEvent<HTMLInputElement>) => {
       updateArgs({
         value: (e.target as HTMLInputElement).value,
       })
-      args.onChange(e)
+      args.action(e)
     }
 
     return (
@@ -256,7 +256,7 @@ export const SingleChoice: Story = {
           name="option-1"
           value="option-1"
           isChecked={argsState.value === 'option-1'}
-          onChange={onChange}
+          action={action}
         />
         <Select
           {...args}
@@ -265,7 +265,7 @@ export const SingleChoice: Story = {
           name="option-2"
           value="option-2"
           isChecked={argsState.value === 'option-2'}
-          onChange={onChange}
+          action={action}
         />
         <Select
           {...args}
@@ -274,7 +274,7 @@ export const SingleChoice: Story = {
           name="option-3"
           value="option-3"
           isChecked={argsState.value === 'option-3'}
-          onChange={onChange}
+          action={action}
         />
       </>
     )

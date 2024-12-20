@@ -68,7 +68,7 @@ export const PopIn = (props: PopInProps) => {
                 name="abstract-action-name"
                 label={select.label}
                 isChecked={select.state}
-                onChange={select.action}
+                action={select.action}
               />
             )}
           </div>

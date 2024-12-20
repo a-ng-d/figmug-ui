@@ -26,11 +26,11 @@ export interface MenuStates {
 }
 
 export class Menu extends React.Component<MenuProps, MenuStates> {
-  selectMenuRef: React.RefObject<HTMLDivElement>
+  private selectMenuRef: React.RefObject<HTMLDivElement>
   buttonRef: React.RefObject<Button>
-  listRef: React.RefObject<HTMLDivElement>
-  menuRef: React.RefObject<HTMLUListElement>
-  subMenuRef: React.RefObject<HTMLUListElement>
+  private listRef: React.RefObject<HTMLDivElement>
+  private menuRef: React.RefObject<HTMLUListElement>
+  private subMenuRef: React.RefObject<HTMLUListElement>
 
   static defaultProps: Partial<MenuProps> = {
     type: 'ICON',

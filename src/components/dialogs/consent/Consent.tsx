@@ -286,7 +286,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
                         id={`change-${vendor.id}-user-consent`}
                         type="SWITCH_BUTTON"
                         isChecked={vendorsConsent[index].isConsented}
-                        onChange={() => this.consentVendorsHandler(index)}
+                        action={() => this.consentVendorsHandler(index)}
                       />
                     </div>
                   }

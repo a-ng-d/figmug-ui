@@ -17,7 +17,7 @@ export interface SelectProps {
 }
 
 export class Select extends React.Component<SelectProps> {
-  inputRef: React.RefObject<HTMLInputElement> = React.createRef()
+  private inputRef: React.RefObject<HTMLInputElement> = React.createRef()
 
   static defaultProps: Partial<SelectProps> = {
     isChecked: false,
