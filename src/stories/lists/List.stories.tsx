@@ -167,3 +167,104 @@ export const FourOptionsListInGroups: Story = {
     selected: { control: false },
   },
 }
+
+export const LongListWithScroll: Story = {
+  decorators: [
+    (Story) => (
+      <div
+        id="list-container"
+        style={{
+          width: '224px',
+          height: '224px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
+  args: {
+    options: [
+      {
+        label: 'Option 1',
+        value: 'OPTION_1',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 2',
+        value: 'OPTION_2',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 3',
+        value: 'OPTION_3',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 4',
+        value: 'OPTION_4',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 5',
+        value: 'OPTION_5',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 6',
+        value: 'OPTION_6',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 7',
+        value: 'OPTION_7',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 8',
+        value: 'OPTION_8',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 9',
+        value: 'OPTION_9',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 10',
+        value: 'OPTION_10',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 11',
+        value: 'OPTION_11',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 12',
+        value: 'OPTION_12',
+        type: 'OPTION',
+        action: fn(),
+      },
+    ],
+    selected: 'OPTION_1',
+    shouldScroll: true,
+    containerId: 'list-container',
+  },
+  argTypes: {
+    direction: { control: false },
+  },
+}

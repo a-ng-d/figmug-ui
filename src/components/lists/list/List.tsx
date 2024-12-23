@@ -2,11 +2,14 @@ import React from 'react'
 import { DropdownOption } from '../../../types/list.types'
 import { Chip } from '../../tags/chip/Chip'
 import './list.scss'
+import { Icon } from '../../../components/assets/icon/Icon.tsx'
 
 export interface ListProps {
   options: Array<DropdownOption>
   selected?: string
-  direction?: 'LEFT' | 'RIGHT' | 'FILL'
+  direction?: 'LEFT' | 'RIGHT'
+  shouldScroll?: boolean
+  containerId?: string
   onCancellation?: () => void
   menuRef?: React.RefObject<HTMLUListElement>
   subMenuRef?: React.RefObject<HTMLUListElement>
@@ -14,11 +17,16 @@ export interface ListProps {
 
 export interface ListStates {
   openedGroup: string
+  listScrollOffset: number
+  listScrollHeight: number
 }
 
 export class List extends React.Component<ListProps, ListStates> {
+  private scrollInterval: number | null
+
   static defaultProps: Partial<ListProps> = {
     direction: 'RIGHT',
+    shouldScroll: false,
     onCancellation: () => null,
   }
 
@@ -26,7 +34,44 @@ export class List extends React.Component<ListProps, ListStates> {
     super(props)
     this.state = {
       openedGroup: 'EMPTY',
+      listScrollOffset: 0,
+      listScrollHeight: 1,
     }
+    this.scrollInterval = null
+  }
+
+  // Direct actions
+  onScroll = (e: React.UIEvent<HTMLUListElement>) => {
+    const target = e.target as HTMLElement
+    this.setState({
+      listScrollOffset: target.scrollTop,
+      listScrollHeight: target.scrollHeight - target.clientHeight,
+    })
+  }
+
+  onScrollTop = () => {
+    const list = document.getElementsByClassName('select-menu__menu')[0]
+    this.scrollInterval = window.setInterval(() => {
+      if (list.scrollTop > 0) {
+        list.scrollTop -= 1
+        this.setState({ listScrollOffset: list.scrollTop })
+      } else if (this.scrollInterval !== null) {
+        clearInterval(this.scrollInterval)
+      }
+    }, 4)
+  }
+
+  onScrollBottom = () => {
+    const { listScrollHeight } = this.state
+    const list = document.getElementsByClassName('select-menu__menu')[0]
+    this.scrollInterval = window.setInterval(() => {
+      if (list.scrollTop < listScrollHeight) {
+        list.scrollTop += 1
+        this.setState({ listScrollOffset: list.scrollTop })
+      } else if (this.scrollInterval !== null) {
+        clearInterval(this.scrollInterval)
+      }
+    }, 4)
   }
 
   // Template
@@ -211,47 +256,91 @@ export class List extends React.Component<ListProps, ListStates> {
   }
 
   render() {
-    const { options, direction, menuRef } = this.props
+    const { options, direction, shouldScroll, menuRef } = this.props
+    const { listScrollOffset, listScrollHeight } = this.state
 
     return (
-      <ul
-        className={[
-          'select-menu__menu',
-          'recharged',
-          'select-menu__menu--active',
-          direction === 'RIGHT'
-            ? 'select-menu__menu--right'
-            : 'select-menu__menu--left',
-        ]
-          .filter((n) => n)
-          .join(' ')}
-        ref={menuRef}
+      <div
+        className="select-menu"
+        style={{
+          height: shouldScroll ? '100%' : 'auto',
+        }}
       >
-        {options?.map((option, index) => {
-          const isActive =
-              option.isActive !== undefined ? option.isActive : true,
-            isBlocked =
-              option.isBlocked !== undefined ? option.isBlocked : false,
-            isNew = option.isNew !== undefined ? option.isNew : false,
-            children = option.children !== undefined ? option.children : []
+        {shouldScroll && listScrollOffset !== 0 && (
+          <div
+            className="select-menu__spot select-menu__spot--top"
+            onMouseEnter={this.onScrollTop}
+            onMouseLeave={() => {
+              if (this.scrollInterval !== null) {
+                clearInterval(this.scrollInterval)
+              }
+            }}
+          >
+            <Icon
+              type="PICTO"
+              iconName="upward"
+              iconColor="var(--white)"
+            />
+          </div>
+        )}
+        <ul
+          className={[
+            'select-menu__menu',
+            'recharged',
+            'select-menu__menu--active',
+            direction === 'RIGHT'
+              ? 'select-menu__menu--right'
+              : 'select-menu__menu--left',
+            shouldScroll && 'select-menu__menu--scrolling',
+          ]
+            .filter((n) => n)
+            .join(' ')}
+          onScroll={this.onScroll}
+          ref={menuRef}
+        >
+          {options?.map((option, index) => {
+            const isActive =
+                option.isActive !== undefined ? option.isActive : true,
+              isBlocked =
+                option.isBlocked !== undefined ? option.isBlocked : false,
+              isNew = option.isNew !== undefined ? option.isNew : false,
+              children = option.children !== undefined ? option.children : []
 
-          if (isActive && option.type === 'SEPARATOR')
-            return this.MenuSeparator(index)
-          if (isActive && option.type === 'TITLE')
-            return this.MenuTitle(option, index)
-          if (isActive && option.type === 'OPTION' && children)
-            return children.length > 0
-              ? this.MenuGroup(
-                  { ...option, isActive, isBlocked, isNew, children },
-                  index
-                )
-              : this.MenuOption(
-                  { ...option, isActive, isBlocked, isNew, children },
-                  index
-                )
-          return null
-        })}
-      </ul>
+            if (isActive && option.type === 'SEPARATOR')
+              return this.MenuSeparator(index)
+            if (isActive && option.type === 'TITLE')
+              return this.MenuTitle(option, index)
+            if (isActive && option.type === 'OPTION' && children)
+              return children.length > 0
+                ? this.MenuGroup(
+                    { ...option, isActive, isBlocked, isNew, children },
+                    index
+                  )
+                : this.MenuOption(
+                    { ...option, isActive, isBlocked, isNew, children },
+                    index
+                  )
+            return null
+          })}
+        </ul>
+        {shouldScroll && listScrollHeight !== listScrollOffset && (
+          <div
+            className="select-menu__spot select-menu__spot--bottom"
+            onMouseEnter={this.onScrollBottom}
+            onMouseLeave={() => {
+              if (this.scrollInterval !== null) {
+                clearInterval(this.scrollInterval)
+              }
+            }}
+          >
+            <Icon
+              type="PICTO"
+              iconName="downward"
+              iconColor="var(--white)"
+            />
+          </div>
+        )}
+      </div>
     )
   }
 }
