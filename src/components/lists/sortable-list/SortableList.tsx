@@ -74,8 +74,8 @@ export class SortableList<T extends DefaultData> extends React.Component<
   handleClickOutside = (e: Event) => {
     if (this.listRef.current !== null)
       if (
-        this.listRef &&
-        !this.listRef.current.contains(e.target as HTMLElement)
+        !this.listRef.current.contains(e.target as HTMLElement) ||
+        e.target === this.listRef.current
       )
         this.setState({
           selectedElement: {
