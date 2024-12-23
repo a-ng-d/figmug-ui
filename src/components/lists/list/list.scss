@@ -3,23 +3,23 @@
 
   .select-menu__spot {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: var(--size-xsmall);
     position: absolute;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
     background-color: var(--hud);
+    height: var(--size-xsmall);
 
     &--top {
       top: 0;
-      left: 0;
       right: 0;
+      left: 0;
     }
 
     &--bottom {
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
     }
   }
 }
@@ -35,9 +35,9 @@
   user-select: none;
 
   &.select-menu__menu--scrolling {
-    overflow-y: auto;
     z-index: 1;
     height: 100%;
+    overflow-y: auto;
   }
 
   .select-menu__item-icon {
