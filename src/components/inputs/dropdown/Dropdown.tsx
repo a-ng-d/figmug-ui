@@ -9,7 +9,7 @@ export interface DropdownProps {
   id: string
   options: Array<DropdownOption>
   selected: string
-  parentClassName?: string
+  containerId?: string
   alignment?: 'RIGHT' | 'LEFT' | 'FILL'
   pin?: 'NONE' | 'TOP' | 'BOTTOM'
   isDisabled?: boolean
@@ -19,6 +19,7 @@ export interface DropdownProps {
 
 export interface DropdownStates {
   isMenuOpen: boolean
+  listShouldScroll: boolean
 }
 
 export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
@@ -40,6 +41,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
     super(props)
     this.state = {
       isMenuOpen: false,
+      listShouldScroll: false,
     }
     this.selectMenuRef = React.createRef()
     this.buttonRef = React.createRef()
@@ -57,33 +59,60 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
 
   // Direct actions
   onOpenMenu = () => {
-    const { parentClassName } = this.props
+    const { containerId } = this.props
     const { isMenuOpen } = this.state
 
     this.setState({
       isMenuOpen: !isMenuOpen,
     })
-    if (parentClassName !== undefined)
+    if (containerId !== undefined)
       setTimeout(() => {
         if (this.listRef.current != null) {
-          const diffTop: number =
-            this.listRef.current.getBoundingClientRect().top -
-            document
-              .getElementsByClassName(parentClassName as string)[0]
-              .getBoundingClientRect().top
-          const diffBottom: number =
-            this.listRef.current.getBoundingClientRect().bottom -
-            document
-              .getElementsByClassName(parentClassName as string)[0]
-              .getBoundingClientRect().bottom
+          const containerElement = document.getElementById(containerId)
+          if (containerElement) {
+            const container = containerElement.getBoundingClientRect()
+            const button = this.buttonRef.current?.getBoundingClientRect()
 
-          if (diffTop < -16) {
-            this.listRef.current.style.top = '-6px'
-            this.listRef.current.style.bottom = 'auto'
-          }
-          if (diffBottom > -16) {
-            this.listRef.current.style.top = 'auto'
-            this.listRef.current.style.bottom = '-6px'
+            const diffTop =
+              this.listRef.current.getBoundingClientRect().top - container.top
+            const diffBottom =
+              this.listRef.current.getBoundingClientRect().bottom -
+              container.bottom
+            console.log(diffTop, diffBottom)
+
+            if (diffTop < -16 && button) {
+              this.listRef.current.style.top = `${container.top - button.top + 16}px`
+              this.setState({
+                listShouldScroll: true,
+              })
+
+              const diffBottomV2 =
+                this.listRef.current.getBoundingClientRect().bottom -
+                container.bottom
+
+              if (diffBottomV2 > -16) {
+                this.listRef.current.style.bottom = `${
+                  button.bottom - container.bottom + 16
+                }px`
+              }
+            }
+
+            if (diffBottom > -16 && button) {
+              this.listRef.current.style.bottom = `${
+                button.bottom - container.bottom + 16
+              }px`
+              this.setState({
+                listShouldScroll: true,
+              })
+
+              const diffTopV2 =
+                this.listRef.current.getBoundingClientRect().bottom -
+                container.bottom
+
+              if (diffTopV2 < -16) {
+                this.listRef.current.style.top = `${container.top - button.top + 16}px`
+              }
+            }
           }
         }
       }, 10)
@@ -142,9 +171,17 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   }
 
   render() {
-    const { id, alignment, options, selected, isNew, isDisabled, isBlocked } =
-      this.props
-    const { isMenuOpen } = this.state
+    const {
+      id,
+      alignment,
+      options,
+      selected,
+      containerId,
+      isNew,
+      isDisabled,
+      isBlocked,
+    } = this.props
+    const { isMenuOpen, listShouldScroll } = this.state
 
     return (
       <div
@@ -222,6 +259,8 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
                   options={options}
                   selected={selected}
                   direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
+                  shouldScroll={listShouldScroll}
+                  containerId={containerId}
                   onCancellation={() => this.setState({ isMenuOpen: false })}
                   menuRef={this.menuRef}
                   subMenuRef={this.subMenuRef}

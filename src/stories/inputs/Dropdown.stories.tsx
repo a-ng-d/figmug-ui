@@ -28,7 +28,7 @@ export const SingleSelection: Story = {
     isDisabled: false,
   },
   argTypes: {
-    parentClassName: { control: false },
+    containerId: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
@@ -100,6 +100,131 @@ export const SingleSelection: Story = {
   },
 }
 
+export const ManyOptionsSelection: Story = {
+  decorators: [
+    (Story) => (
+      <div
+        id="dropdown-container"
+        style={{
+          width: '224px',
+          height: '224px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
+  args: {
+    id: 'dropdown-button',
+    options: { ...ListStories.FourOptionsList.args.options },
+    selected: 'OPTION_1',
+    alignment: 'LEFT',
+    pin: 'NONE',
+    isNew: false,
+    isBlocked: false,
+    isDisabled: false,
+    containerId: 'dropdown-container',
+  },
+  argTypes: {
+    containerId: { control: false },
+  },
+  render: (args) => {
+    const [argsState, updateArgs] = useArgs<{
+      selected: string
+    }>()
+
+    const onChange = (
+      e:
+        | React.MouseEvent<HTMLLIElement, MouseEvent>
+        | React.KeyboardEvent<HTMLLIElement>
+    ) => {
+      updateArgs({
+        selected: (e.target as HTMLInputElement).dataset.value,
+      })
+    }
+
+    return (
+      <Dropdown
+        {...args}
+        options={[
+          {
+            label: 'Option 1',
+            value: 'OPTION_1',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            label: 'Option 2',
+            value: 'OPTION_2',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            label: 'Option 3',
+            value: 'OPTION_3',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            type: 'SEPARATOR',
+          },
+          {
+            label: 'Title',
+            type: 'TITLE',
+          },
+          {
+            label: 'Option 4',
+            value: 'OPTION_4',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            label: 'Option 5',
+            value: 'OPTION_5',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            label: 'Option 6',
+            value: 'OPTION_6',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            label: 'Option 7',
+            value: 'OPTION_7',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            type: 'SEPARATOR',
+          },
+          {
+            label: 'Title',
+            type: 'TITLE',
+          },
+          {
+            label: 'Option 8',
+            value: 'OPTION_8',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            label: 'Option 9',
+            value: 'OPTION_9',
+            type: 'OPTION',
+            action: onChange,
+          },
+        ]}
+        selected={argsState.selected}
+      />
+    )
+  },
+}
+
 export const MultipleSelection: Story = {
   args: {
     id: 'dropdown-button',
@@ -110,7 +235,7 @@ export const MultipleSelection: Story = {
     isDisabled: false,
   },
   argTypes: {
-    parentClassName: { control: false },
+    containerId: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
