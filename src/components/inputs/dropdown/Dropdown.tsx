@@ -78,7 +78,6 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             const diffBottom =
               this.listRef.current.getBoundingClientRect().bottom -
               container.bottom
-            console.log(diffTop, diffBottom)
 
             if (diffTop < -16 && button) {
               this.listRef.current.style.top = `${container.top - button.top + 16}px`
@@ -90,7 +89,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
                 this.listRef.current.getBoundingClientRect().bottom -
                 container.bottom
 
-              if (diffBottomV2 > -16) {
+              if (diffBottomV2 < -16) {
                 this.listRef.current.style.bottom = `${
                   button.bottom - container.bottom + 16
                 }px`
@@ -106,10 +105,9 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
               })
 
               const diffTopV2 =
-                this.listRef.current.getBoundingClientRect().bottom -
-                container.bottom
+                this.listRef.current.getBoundingClientRect().top - container.top
 
-              if (diffTopV2 < -16) {
+              if (diffTopV2 > -16) {
                 this.listRef.current.style.top = `${container.top - button.top + 16}px`
               }
             }
@@ -149,6 +147,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
     else
       this.setState({
         isMenuOpen: false,
+        listShouldScroll: false,
       })
   }
 

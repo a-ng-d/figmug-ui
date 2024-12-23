@@ -18,7 +18,8 @@ export interface ListProps {
 export interface ListStates {
   openedGroup: string
   listScrollOffset: number
-  listScrollHeight: number
+  listScrollAmount: number
+  listClientHeight?: number
 }
 
 export class List extends React.Component<ListProps, ListStates> {
@@ -35,9 +36,24 @@ export class List extends React.Component<ListProps, ListStates> {
     this.state = {
       openedGroup: 'EMPTY',
       listScrollOffset: 0,
-      listScrollHeight: 1,
+      listScrollAmount: 1,
+      listClientHeight: 1,
     }
     this.scrollInterval = null
+  }
+
+  componentDidUpdate(prevProps: Readonly<ListProps>) {
+    const { shouldScroll } = this.props
+    const list = document.getElementsByClassName(
+      'select-menu__menu'
+    )[0] as HTMLElement
+
+    if (prevProps.shouldScroll !== shouldScroll)
+      this.setState({
+        listScrollOffset: list.scrollTop,
+        listScrollAmount: list.scrollHeight - list.clientHeight,
+        listClientHeight: list.clientHeight,
+      })
   }
 
   // Direct actions
@@ -45,7 +61,7 @@ export class List extends React.Component<ListProps, ListStates> {
     const target = e.target as HTMLElement
     this.setState({
       listScrollOffset: target.scrollTop,
-      listScrollHeight: target.scrollHeight - target.clientHeight,
+      listScrollAmount: target.scrollHeight - target.clientHeight,
     })
   }
 
@@ -62,10 +78,10 @@ export class List extends React.Component<ListProps, ListStates> {
   }
 
   onScrollBottom = () => {
-    const { listScrollHeight } = this.state
+    const { listScrollAmount } = this.state
     const list = document.getElementsByClassName('select-menu__menu')[0]
     this.scrollInterval = window.setInterval(() => {
-      if (list.scrollTop < listScrollHeight) {
+      if (list.scrollTop < listScrollAmount) {
         list.scrollTop += 1
         this.setState({ listScrollOffset: list.scrollTop })
       } else if (this.scrollInterval !== null) {
@@ -257,7 +273,7 @@ export class List extends React.Component<ListProps, ListStates> {
 
   render() {
     const { options, direction, shouldScroll, menuRef } = this.props
-    const { listScrollOffset, listScrollHeight } = this.state
+    const { listScrollOffset, listScrollAmount } = this.state
 
     return (
       <div
@@ -266,7 +282,7 @@ export class List extends React.Component<ListProps, ListStates> {
           height: shouldScroll ? '100%' : 'auto',
         }}
       >
-        {shouldScroll && listScrollOffset !== 0 && (
+        {shouldScroll && listScrollOffset !== 0 && listScrollAmount !== 0 && (
           <div
             className="select-menu__spot select-menu__spot--top"
             onMouseEnter={this.onScrollTop}
@@ -323,23 +339,25 @@ export class List extends React.Component<ListProps, ListStates> {
             return null
           })}
         </ul>
-        {shouldScroll && listScrollHeight !== listScrollOffset && (
-          <div
-            className="select-menu__spot select-menu__spot--bottom"
-            onMouseEnter={this.onScrollBottom}
-            onMouseLeave={() => {
-              if (this.scrollInterval !== null) {
-                clearInterval(this.scrollInterval)
-              }
-            }}
-          >
-            <Icon
-              type="PICTO"
-              iconName="downward"
-              iconColor="var(--white)"
-            />
-          </div>
-        )}
+        {shouldScroll &&
+          listScrollAmount !== listScrollOffset &&
+          listScrollAmount !== 0 && (
+            <div
+              className="select-menu__spot select-menu__spot--bottom"
+              onMouseEnter={this.onScrollBottom}
+              onMouseLeave={() => {
+                if (this.scrollInterval !== null) {
+                  clearInterval(this.scrollInterval)
+                }
+              }}
+            >
+              <Icon
+                type="PICTO"
+                iconName="downward"
+                iconColor="var(--white)"
+              />
+            </div>
+          )}
       </div>
     )
   }
