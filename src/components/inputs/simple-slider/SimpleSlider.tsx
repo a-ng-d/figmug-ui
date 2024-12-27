@@ -1,7 +1,7 @@
 import { doMap } from '@a_ng_d/figmug-utils'
 import React from 'react'
 
-import Knob from '../../actions/knob/Knob'
+import { Knob } from '../../actions/knob/Knob'
 import './simple-slider.scss'
 
 interface SimpleSliderProps {

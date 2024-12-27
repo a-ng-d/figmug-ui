@@ -37,7 +37,7 @@ interface KnobStates {
   stopInputValue: string | number
 }
 
-export default class Knob extends React.Component<KnobProps, KnobStates> {
+export class Knob extends React.Component<KnobProps, KnobStates> {
   static defaultProps = {
     isBlocked: false,
     isDisabled: false,
