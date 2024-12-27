@@ -52,17 +52,15 @@
       background: var(--figma-color-bg-disabled);
       color: var(--figma-color-text-ondisabled);
     }
-    
+
     .knob__label:before {
       border-top-color: var(--figma-color-border-disabled);
     }
-    
+
     .knob__label:after {
       border-top-color: var(--figma-color-bg-disabled);
     }
   }
-
-
 }
 
 .knob__label {
