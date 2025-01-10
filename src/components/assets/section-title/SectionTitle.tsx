@@ -28,8 +28,8 @@ export const SectionTitle = (props: SectionTitleProps) => {
       {helper !== undefined && (
         <div
           className="section-title__tooltip"
-          onMouseOver={() => setTooltipState(true)}
-          onMouseOut={() => setTooltipState(false)}
+          onMouseEnter={() => setTooltipState(true)}
+          onMouseLeave={() => setTooltipState(false)}
         >
           <Icon
             type="PICTO"
