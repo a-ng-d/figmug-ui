@@ -115,12 +115,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
             this.listRef.current.style.visibility = 'visible'
           }
         }
-      }, 10)
-    else
-      setTimeout(() => {
-        if (this.listRef.current != null)
-          this.listRef.current.style.visibility = 'visible'
-      }, 10)
+      }, 1)
   }
 
   setPosition = () => {
@@ -258,7 +253,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
                   bottom: pin === 'BOTTOM' ? '-4px' : 'auto',
                   right: alignment === 'RIGHT' ? 0 : 'auto',
                   left: alignment === 'LEFT' ? 0 : 'auto',
-                  visibility: 'hidden',
+                  visibility: containerId === undefined ? 'visible' : 'hidden',
                 }}
                 ref={this.listRef}
               >
