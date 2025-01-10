@@ -111,6 +111,8 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
                 this.listRef.current.style.top = `${container.top - button.top + 16}px`
               }
             }
+            
+            this.listRef.current.style.visibility = 'visible'
           }
         }
       }, 10)
@@ -251,6 +253,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
                   bottom: pin === 'BOTTOM' ? '-4px' : 'auto',
                   right: alignment === 'RIGHT' ? 0 : 'auto',
                   left: alignment === 'LEFT' ? 0 : 'auto',
+                  visibility: 'hidden',
                 }}
                 ref={this.listRef}
               >

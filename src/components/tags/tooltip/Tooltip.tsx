@@ -18,6 +18,7 @@ export const Tooltip = (props: TooltipProps) => {
       if (rect.x < 0) setShift(-rect.x + 8)
       if (rect.x + rect.width > window.innerWidth)
         setShift(window.innerWidth - rect.x - rect.width - 8)
+      tooltipElement.style.visibility = 'visible'
     }
   }, [])
 
@@ -26,6 +27,9 @@ export const Tooltip = (props: TooltipProps) => {
       className={['tooltip', 'recharged'].filter((n) => n).join(' ')}
       role="tooltip"
       ref={tooltipRef}
+      style={{
+        visibility: 'hidden',
+      }}
     >
       <div
         className="tooltip__block"
