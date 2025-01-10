@@ -111,10 +111,15 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
                 this.listRef.current.style.top = `${container.top - button.top + 16}px`
               }
             }
-            
+
             this.listRef.current.style.visibility = 'visible'
           }
         }
+      }, 10)
+    else
+      setTimeout(() => {
+        if (this.listRef.current != null)
+          this.listRef.current.style.visibility = 'visible'
       }, 10)
   }
 
