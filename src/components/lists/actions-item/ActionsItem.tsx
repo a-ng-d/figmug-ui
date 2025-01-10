@@ -104,7 +104,7 @@ export class ActionsItem extends React.Component<ActionsItemProps> {
           )}
         </div>
         {actionsSlot !== undefined && (
-          <div className={layouts['snackbar--tight']}>{actionsSlot}</div>
+          <div className={layouts['snackbar--medium']}>{actionsSlot}</div>
         )}
       </li>
     )
