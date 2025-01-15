@@ -61,8 +61,8 @@ export class Select extends React.Component<SelectProps> {
           htmlFor={id}
         >
           {label}
+          {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         </label>
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }
@@ -104,8 +104,8 @@ export class Select extends React.Component<SelectProps> {
           htmlFor={id}
         >
           {label}
+          {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         </label>
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }
@@ -145,8 +145,8 @@ export class Select extends React.Component<SelectProps> {
           htmlFor={id}
         >
           {label}
+          {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         </label>
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }
