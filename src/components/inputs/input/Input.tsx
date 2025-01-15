@@ -88,7 +88,7 @@ export class Input extends React.Component<InputProps, InputStates> {
   }
 
   componentDidUpdate(prevProps: InputProps) {
-    const { value, isGrowing, isAutoFocus } = this.props
+    const { value, isGrowing } = this.props
 
     if (prevProps.value !== value) {
       this.setState({
@@ -101,13 +101,6 @@ export class Input extends React.Component<InputProps, InputStates> {
       this.textareaRef.current.style.height = 'auto'
       if (isGrowing)
         this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight + 2}px`
-    }
-    if (isAutoFocus) {
-      if (this.inputRef.current) {
-        this.inputRef.current.focus()
-      } else if (this.textareaRef.current) {
-        this.textareaRef.current.focus()
-      }
     }
   }
 
