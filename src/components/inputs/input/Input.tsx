@@ -79,11 +79,13 @@ export class Input extends React.Component<InputProps, InputStates> {
     }
     const { isAutoFocus } = this.props
     if (isAutoFocus) {
-      if (this.inputRef.current) {
-        this.inputRef.current.focus()
-      } else if (this.textareaRef.current) {
-        this.textareaRef.current.focus()
-      }
+      setTimeout(() => {
+        if (this.inputRef.current) {
+          this.inputRef.current.focus()
+        } else if (this.textareaRef.current) {
+          this.textareaRef.current.focus()
+        }
+      }, 1)
     }
   }
 
