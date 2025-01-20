@@ -181,17 +181,19 @@ export class Input extends React.Component<InputProps, InputStates> {
     const target = e.target as HTMLInputElement
 
     if (e.key === 'Enter') {
-      target.blur()
       if (onValid !== undefined) onValid(e)
+      target.blur()
     } else if (e.key === 'Escape') target.blur()
   }
 
   onValidLongText = (
     e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    const { onValid } = this.props
     const target = e.target as HTMLInputElement
 
     if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+      if (onValid !== undefined) onValid(e)
       target.blur()
     } else if (e.key === 'Escape') target.blur()
   }
