@@ -33,6 +33,7 @@ export interface InputProps {
   onShift?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onClear?: (value: string) => void
   onSlide?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  onValid?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
 }
 
 export interface InputStates {
@@ -176,10 +177,13 @@ export class Input extends React.Component<InputProps, InputStates> {
   onValidText = (
     e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    const { onValid } = this.props
     const target = e.target as HTMLInputElement
 
-    if (e.key === 'Enter') target.blur()
-    else if (e.key === 'Escape') target.blur()
+    if (e.key === 'Enter') {
+      target.blur()
+      if (onValid !== undefined) onValid(e)
+    } else if (e.key === 'Escape') target.blur()
   }
 
   onValidLongText = (
