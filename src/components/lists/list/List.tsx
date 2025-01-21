@@ -63,33 +63,37 @@ export class List extends React.Component<ListProps, ListStates> {
       listScrollOffset: target.scrollTop,
       listScrollAmount: target.scrollHeight - target.clientHeight,
     })
+
+    if (target.scrollTop === 0) this.stopScrolling()
+    if (target.scrollTop === target.scrollHeight - target.clientHeight)
+      this.stopScrolling()
   }
 
-  onScrollTop = () => {
+  startScrolling = (direction: 'UP' | 'DOWN') => {
     const list = document.getElementsByClassName('select-menu__menu')[0]
-    this.scrollInterval = window.setInterval(() => {
-      if (list.scrollTop > 0) {
-        console.log('top')
-        list.scrollTop -= 1
-        this.setState({ listScrollOffset: list.scrollTop })
-      } else if (this.scrollInterval !== null) {
-        clearInterval(this.scrollInterval)
+
+    const scroll = () => {
+      if (list) {
+        if (direction === 'UP' && list.scrollTop > 0) {
+          list.scrollTop -= 4
+        } else if (
+          direction === 'DOWN' &&
+          list.scrollTop < list.scrollHeight - list.clientHeight
+        ) {
+          list.scrollTop += 4
+        }
+        this.scrollInterval = requestAnimationFrame(scroll)
       }
-    })
+    }
+
+    this.scrollInterval = requestAnimationFrame(scroll)
   }
 
-  onScrollBottom = () => {
-    const { listScrollAmount } = this.state
-    const list = document.getElementsByClassName('select-menu__menu')[0]
-    this.scrollInterval = window.setInterval(() => {
-      if (list.scrollTop < listScrollAmount) {
-        console.log('bottom')
-        list.scrollTop += 1
-        this.setState({ listScrollOffset: list.scrollTop })
-      } else if (this.scrollInterval !== null) {
-        clearInterval(this.scrollInterval)
-      }
-    }, 4)
+  stopScrolling = () => {
+    if (this.scrollInterval) {
+      cancelAnimationFrame(this.scrollInterval)
+      this.scrollInterval = null
+    }
   }
 
   // Template
@@ -287,12 +291,8 @@ export class List extends React.Component<ListProps, ListStates> {
         {shouldScroll && listScrollOffset !== 0 && listScrollAmount !== 0 && (
           <div
             className="select-menu__spot select-menu__spot--top"
-            onMouseEnter={this.onScrollTop}
-            onMouseLeave={() => {
-              if (this.scrollInterval !== null) {
-                clearInterval(this.scrollInterval)
-              }
-            }}
+            onMouseEnter={() => this.startScrolling('UP')}
+            onMouseLeave={this.stopScrolling}
           >
             <Icon
               type="PICTO"
@@ -346,12 +346,8 @@ export class List extends React.Component<ListProps, ListStates> {
           listScrollAmount !== 0 && (
             <div
               className="select-menu__spot select-menu__spot--bottom"
-              onMouseEnter={this.onScrollBottom}
-              onMouseLeave={() => {
-                if (this.scrollInterval !== null) {
-                  clearInterval(this.scrollInterval)
-                }
-              }}
+              onMouseEnter={() => this.startScrolling('DOWN')}
+              onMouseLeave={this.stopScrolling}
             >
               <Icon
                 type="PICTO"
