@@ -24,6 +24,7 @@ export interface SortableListProps<T = DefaultData> {
   emptySlot?: React.ReactNode
   isScrollable?: boolean
   canBeEmpty?: boolean
+  isBlocked?: boolean
   onChangeSortableList: (data: Array<T>) => void
   onRemoveItem: React.MouseEventHandler<Element> &
     React.KeyboardEventHandler<Element>
@@ -44,6 +45,7 @@ export class SortableList<T extends DefaultData> extends React.Component<
   static defaultProps: Partial<SortableListProps> = {
     isScrollable: false,
     canBeEmpty: true,
+    isBlocked: false,
   }
 
   constructor(props: SortableListProps<T>) {
@@ -194,6 +196,7 @@ export class SortableList<T extends DefaultData> extends React.Component<
     const {
       data,
       canBeEmpty,
+      isBlocked,
       primarySlot,
       secondarySlot,
       actionsSlot,
@@ -221,7 +224,9 @@ export class SortableList<T extends DefaultData> extends React.Component<
             key={item.id}
             id={item.id}
             index={index}
-            canBeRemoved={data.length > 1 || canBeEmpty}
+            canBeRemoved={
+              (data.length > 1 && !isBlocked) || (canBeEmpty && !isBlocked)
+            }
             primarySlot={primarySlot[index]}
             secondarySlot={secondarySlot ? secondarySlot[index] : undefined}
             actionsSlot={actionsSlot ? actionsSlot[index] : undefined}
