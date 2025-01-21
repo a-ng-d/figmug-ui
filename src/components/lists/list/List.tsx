@@ -69,12 +69,13 @@ export class List extends React.Component<ListProps, ListStates> {
     const list = document.getElementsByClassName('select-menu__menu')[0]
     this.scrollInterval = window.setInterval(() => {
       if (list.scrollTop > 0) {
+        console.log('top')
         list.scrollTop -= 1
         this.setState({ listScrollOffset: list.scrollTop })
       } else if (this.scrollInterval !== null) {
         clearInterval(this.scrollInterval)
       }
-    }, 4)
+    })
   }
 
   onScrollBottom = () => {
@@ -82,6 +83,7 @@ export class List extends React.Component<ListProps, ListStates> {
     const list = document.getElementsByClassName('select-menu__menu')[0]
     this.scrollInterval = window.setInterval(() => {
       if (list.scrollTop < listScrollAmount) {
+        console.log('bottom')
         list.scrollTop += 1
         this.setState({ listScrollOffset: list.scrollTop })
       } else if (this.scrollInterval !== null) {
