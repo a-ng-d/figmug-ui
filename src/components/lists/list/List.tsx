@@ -237,7 +237,7 @@ export class List extends React.Component<ListProps, ListStates> {
   }
 
   MenuSubOption = (option: DropdownOption, index: number) => {
-    const { selected } = this.props
+    const { selected, onCancellation } = this.props
 
     return (
       <li
@@ -257,13 +257,13 @@ export class List extends React.Component<ListProps, ListStates> {
         data-role={'OPTION'}
         tabIndex={option.isBlocked ? -1 : 0}
         onKeyDown={(e) => {
-          if (
-            (e.key === ' ' || e.key === 'Enter') &&
-            option.action &&
-            !option.isBlocked
-          )
-            return option.action(e)
-          if (e.key === 'Escape') return this.setState({ openedGroup: 'EMPTY' })
+          if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
+            option.action && option.action(e)
+            if (typeof onCancellation === 'function') onCancellation()
+          }
+          if (e.key === 'Escape') {
+            this.setState({ openedGroup: 'EMPTY' })
+          }
           return null
         }}
         onMouseDown={!option.isBlocked ? option.action : undefined}
