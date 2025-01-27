@@ -1,0 +1,15 @@
+.dropzone {
+  min-width: 200px;
+  min-height: 200px;
+  outline: dashed 1px var(--figma-color-border);
+  border-radius: var(--border-radius-med);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--size-small);
+
+  &--dragged-over {
+    outline: solid 2px var(--figma-color-border-brand-strong);
+    background-color: var(--figma-color-bg-selected);
+  }
+}
