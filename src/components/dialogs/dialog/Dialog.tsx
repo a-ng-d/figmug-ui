@@ -5,7 +5,7 @@ import './dialog.scss'
 export interface DialogProps {
   title: string
   tag?: string
-  actions: {
+  actions?: {
     primary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'

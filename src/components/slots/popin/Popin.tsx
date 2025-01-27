@@ -7,7 +7,7 @@ import './popin.scss'
 export interface PopInProps {
   title: string
   tag?: string
-  actions: {
+  actions?: {
     primary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
@@ -55,7 +55,7 @@ export const PopIn = (props: PopInProps) => {
         />
       </div>
       <div className="popin__content">{children}</div>
-      {(Object.keys(actions).length > 0 || indicator !== undefined) && (
+      {(actions !== undefined || indicator !== undefined) && (
         <div className="popin__footer">
           <div className="popin__extra">
             {indicator !== undefined && (
@@ -73,7 +73,7 @@ export const PopIn = (props: PopInProps) => {
             )}
           </div>
           <div className="popin__actions">
-            {actions.secondary !== undefined && (
+            {actions?.secondary !== undefined && (
               <Button
                 type="secondary"
                 label={actions.secondary.label}
@@ -87,7 +87,7 @@ export const PopIn = (props: PopInProps) => {
                 action={actions.secondary.action}
               />
             )}
-            {actions.destructive !== undefined && (
+            {actions?.destructive !== undefined && (
               <Button
                 type="destructive"
                 label={actions.destructive.label}
@@ -101,7 +101,7 @@ export const PopIn = (props: PopInProps) => {
                 action={actions.destructive.action}
               />
             )}
-            {actions.primary !== undefined && (
+            {actions?.primary !== undefined && (
               <Button
                 type="primary"
                 label={actions.primary.label}
