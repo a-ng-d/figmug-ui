@@ -89,11 +89,11 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
                 this.listRef.current.getBoundingClientRect().bottom -
                 container.bottom
 
-              if (diffBottomV2 < -16) {
+              if (diffBottomV2 < -16) 
                 this.listRef.current.style.bottom = `${
                   button.bottom - container.bottom + 16
                 }px`
-              }
+              
             }
 
             if (diffBottom > -16 && button) {
@@ -107,9 +107,9 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
               const diffTopV2 =
                 this.listRef.current.getBoundingClientRect().top - container.top
 
-              if (diffTopV2 > -16) {
+              if (diffTopV2 > -16) 
                 this.listRef.current.style.top = `${container.top - button.top + 16}px`
-              }
+              
             }
 
             this.listRef.current.style.visibility = 'visible'

@@ -74,14 +74,14 @@ export class List extends React.Component<ListProps, ListStates> {
 
     const scroll = () => {
       if (list) {
-        if (direction === 'UP' && list.scrollTop > 0) {
+        if (direction === 'UP' && list.scrollTop > 0) 
           list.scrollTop -= 4
-        } else if (
+         else if (
           direction === 'DOWN' &&
           list.scrollTop < list.scrollHeight - list.clientHeight
-        ) {
+        ) 
           list.scrollTop += 4
-        }
+        
         this.scrollInterval = requestAnimationFrame(scroll)
       }
     }
@@ -172,9 +172,9 @@ export class List extends React.Component<ListProps, ListStates> {
             option.action && option.action(e)
             if (typeof onCancellation === 'function') onCancellation()
           }
-          if (e.key === 'Escape') {
+          if (e.key === 'Escape') 
             if (typeof onCancellation === 'function') onCancellation()
-          }
+          
           return null
         }}
         onMouseDown={(e) => {
@@ -261,9 +261,9 @@ export class List extends React.Component<ListProps, ListStates> {
             option.action && option.action(e)
             if (typeof onCancellation === 'function') onCancellation()
           }
-          if (e.key === 'Escape') {
+          if (e.key === 'Escape') 
             this.setState({ openedGroup: 'EMPTY' })
-          }
+          
           return null
         }}
         onMouseDown={!option.isBlocked ? option.action : undefined}
