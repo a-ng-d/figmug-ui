@@ -20,7 +20,7 @@ export const Thumbnail = (props: Props) => {
     img.onerror = () => setIsError(true)
   }, [src])
 
-  if (isError) 
+  if (isError)
     return (
       <div
         className="thumbnail recharged"
@@ -36,7 +36,6 @@ export const Thumbnail = (props: Props) => {
         />
       </div>
     )
-  
 
   return (
     <div

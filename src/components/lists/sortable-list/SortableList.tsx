@@ -103,17 +103,15 @@ export class SortableList<T extends DefaultData> extends React.Component<
 
     const [removedElement] = duplicatedData.splice(sourceIndex, 1)
 
-    if (target.hasGuideAbove && target.position > source.position) 
+    if (target.hasGuideAbove && target.position > source.position)
       position = target.position - 1
-     else if (target.hasGuideBelow && target.position > source.position) 
+    else if (target.hasGuideBelow && target.position > source.position)
       position = target.position
-     else if (target.hasGuideAbove && target.position < source.position) 
+    else if (target.hasGuideAbove && target.position < source.position)
       position = target.position
-     else if (target.hasGuideBelow && target.position < source.position) 
+    else if (target.hasGuideBelow && target.position < source.position)
       position = target.position + 1
-     else 
-      position = target.position
-    
+    else position = target.position
 
     duplicatedData.splice(position, 0, removedElement)
 

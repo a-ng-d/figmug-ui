@@ -79,25 +79,21 @@ export class Input extends React.Component<InputProps, InputStates> {
         this.textareaRef.current.style.height = `${this.textareaRef.current.scrollHeight + 2}px`
     }
     const { isAutoFocus } = this.props
-    if (isAutoFocus) 
+    if (isAutoFocus)
       setTimeout(() => {
-        if (this.inputRef.current) 
-          this.inputRef.current.focus()
-         else if (this.textareaRef.current) 
-          this.textareaRef.current.focus()
-        
+        if (this.inputRef.current) this.inputRef.current.focus()
+        else if (this.textareaRef.current) this.textareaRef.current.focus()
       }, 1)
-    
   }
 
   componentDidUpdate(prevProps: InputProps) {
     const { value, isGrowing } = this.props
 
-    if (prevProps.value !== value) 
+    if (prevProps.value !== value)
       this.setState({
         inputValue: value,
       })
-    
+
     if (prevProps.type === 'CODE' && this.textareaRef.current !== null)
       this.textareaRef.current.scrollTop = 0
     if (this.textareaRef.current) {
@@ -159,18 +155,15 @@ export class Input extends React.Component<InputProps, InputStates> {
 
     this.startValue = value
 
-    if (onFocus) 
-      onFocus(e)
-    
+    if (onFocus) onFocus(e)
   }
 
   onBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { shouldBlur, onBlur } = this.props
     const { inputValue } = this.state
 
-    if ((inputValue !== this.startValue && onBlur) || (onBlur && shouldBlur)) 
+    if ((inputValue !== this.startValue && onBlur) || (onBlur && shouldBlur))
       onBlur(e)
-    
   }
 
   // Direct actions
@@ -238,15 +231,15 @@ export class Input extends React.Component<InputProps, InputStates> {
       this.startValue = v
       if (parseFloat(inputValue) - nudge > parseFloat(min ?? '0')) onShift?.(e)
     } else if (e.key === 'Enter' || e.key === 'Escape') {
-      if (parseFloat(inputValue) < parseFloat(min ?? '0')) 
+      if (parseFloat(inputValue) < parseFloat(min ?? '0'))
         this.setState({
           inputValue: min ?? '0',
         })
-       else if (parseFloat(inputValue) > parseFloat(max ?? '100')) 
+      else if (parseFloat(inputValue) > parseFloat(max ?? '100'))
         this.setState({
           inputValue: max ?? '100',
         })
-      
+
       target.blur()
     }
   }

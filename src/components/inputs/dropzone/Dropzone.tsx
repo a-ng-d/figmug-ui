@@ -77,13 +77,9 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
         }
       }
 
-      if (file.type.startsWith('image/png')) 
-        reader.readAsArrayBuffer(file)
-       else if (file.type === 'application/pdf') 
-        reader.readAsArrayBuffer(file)
-       else 
-        reader.readAsText(file)
-      
+      if (file.type.startsWith('image/png')) reader.readAsArrayBuffer(file)
+      else if (file.type === 'application/pdf') reader.readAsArrayBuffer(file)
+      else reader.readAsText(file)
     })
   }
 
@@ -138,13 +134,11 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
       blackList: unValidFiles.map((file) => file.name),
     })
 
-    if (validFiles.length > 0) 
-      this.onImport(validFiles, unValidFiles)
-     else 
+    if (validFiles.length > 0) this.onImport(validFiles, unValidFiles)
+    else
       this.setState({
         status: 'ERROR',
       })
-    
   }
 
   onDragOver = (event: React.DragEvent) => {

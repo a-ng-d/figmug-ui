@@ -1,12 +1,12 @@
 .dropzone {
-  min-width: 200px;
-  min-height: 200px;
-  outline: dashed 1px var(--figma-color-border);
-  border-radius: var(--border-radius-med);
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: dashed 1px var(--figma-color-border);
+  border-radius: var(--border-radius-med);
   padding: var(--size-small);
+  min-width: 200px;
+  min-height: 200px;
 
   &--dragged-over {
     outline: solid 2px var(--figma-color-border-brand-strong);

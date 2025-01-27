@@ -19,13 +19,10 @@ export class SemanticMessage extends React.Component<SemanticMessageProps> {
   }
 
   setIcon = (type: string): IconList => {
-    if (type === 'SUCCESS') 
-      return 'check'
-     else if (type === 'WARNING') 
-      return 'warning'
-     else if (type === 'ERROR') 
-      return 'alert'
-    
+    if (type === 'SUCCESS') return 'check'
+    else if (type === 'WARNING') return 'warning'
+    else if (type === 'ERROR') return 'alert'
+
     return 'info'
   }
 
