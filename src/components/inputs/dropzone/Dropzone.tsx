@@ -88,7 +88,6 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
 
     this.setState({
       isDraggedOver: false,
-      blackList: [],
     })
 
     const fileInput = document.createElement('input')
@@ -114,7 +113,6 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
     this.setState({
       status: 'LOADING',
       isDraggedOver: false,
-      blackList: [],
     })
 
     let validFiles: File[] = Array.from(event.dataTransfer.files).filter(
