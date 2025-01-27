@@ -15,6 +15,7 @@ export interface DropzoneProps {
   errorMessage: string
   cta: string
   acceptedMimeTypes: Array<string>
+  isMultiple: boolean
   isDisabled?: boolean
   isBlocked?: boolean
   isNew?: boolean
@@ -45,8 +46,73 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
   }
 
   // Direct actions
-  onImport = (event: React.DragEvent) => {
-    const { acceptedMimeTypes, onImportFiles } = this.props
+  onImport = (validFiles: Array<File>, unValidFiles: Array<File>) => {
+    const { onImportFiles } = this.props
+    const fileContents: Array<FileContent> = []
+
+    validFiles.forEach((file: File) => {
+      const reader = new FileReader()
+
+      reader.onload = (e) => {
+        const content = e.target?.result
+
+        fileContents.push({ name: file.name, content: content })
+
+        if (
+          fileContents.length === validFiles.length &&
+          unValidFiles.length === 0
+        ) {
+          onImportFiles(fileContents)
+          this.setState({
+            status: 'READY',
+          })
+        } else if (
+          fileContents.length === validFiles.length &&
+          unValidFiles.length > 0
+        ) {
+          onImportFiles(fileContents)
+          this.setState({
+            status: 'WARNING',
+          })
+        }
+      }
+
+      if (file.type.startsWith('image/png')) {
+        reader.readAsArrayBuffer(file)
+      } else if (file.type === 'application/pdf') {
+        reader.readAsArrayBuffer(file)
+      } else {
+        reader.readAsText(file)
+      }
+    })
+  }
+
+  onValidFilesViaButton = () => {
+    const { acceptedMimeTypes, isMultiple } = this.props
+
+    this.setState({
+      isDraggedOver: false,
+      blackList: [],
+    })
+
+    const fileInput = document.createElement('input')
+    fileInput.type = 'file'
+    fileInput.accept = acceptedMimeTypes.join(',')
+    fileInput.multiple = isMultiple
+    fileInput.onchange = (event: Event) => {
+      this.setState({
+        status: 'LOADING',
+      })
+      const target = event.target as HTMLInputElement
+      const files = target.files
+      this.onImport(Array.from(files || []), [])
+    }
+    fileInput.click()
+    fileInput.remove()
+  }
+
+  onValidFilesViaDrop = (event: React.DragEvent) => {
+    const { acceptedMimeTypes, isMultiple } = this.props
 
     event.preventDefault()
     this.setState({
@@ -55,52 +121,25 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
       blackList: [],
     })
 
-    const validFiles: File[] = Array.from(event.dataTransfer.files).filter(
+    let validFiles: File[] = Array.from(event.dataTransfer.files).filter(
       (file: File) => acceptedMimeTypes.includes(file.type)
     )
 
-    const unValidFiles: File[] = Array.from(event.dataTransfer.files).filter(
+    let unValidFiles: File[] = Array.from(event.dataTransfer.files).filter(
       (file: File) => !acceptedMimeTypes.includes(file.type)
     )
+
+    if (!isMultiple && validFiles.length > 1) {
+      unValidFiles = unValidFiles.concat(validFiles.slice(1))
+      validFiles = validFiles.slice(0, 1)
+    }
 
     this.setState({
       blackList: unValidFiles.map((file) => file.name),
     })
 
-    const fileContents: Array<FileContent> = []
-
     if (validFiles.length > 0) {
-      validFiles.forEach((file: File) => {
-        const reader = new FileReader()
-
-        reader.onload = (e) => {
-          const content = e.target?.result
-
-          fileContents.push({ name: file.name, content: content })
-
-          if (
-            fileContents.length === validFiles.length &&
-            unValidFiles.length === 0
-          ) {
-            onImportFiles(fileContents)
-            this.setState({
-              status: 'READY',
-            })
-          } else {
-            this.setState({
-              status: 'WARNING',
-            })
-          }
-        }
-
-        if (file.type.startsWith('image/png')) {
-          reader.readAsArrayBuffer(file)
-        } else if (file.type === 'application/pdf') {
-          reader.readAsArrayBuffer(file)
-        } else {
-          reader.readAsText(file)
-        }
-      })
+      this.onImport(validFiles, unValidFiles)
     } else {
       this.setState({
         status: 'ERROR',
@@ -155,7 +194,9 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
                 isNew={this.props.isNew}
-                action={() => !(isBlocked || isDisabled) && this.onImport}
+                action={() =>
+                  !(isBlocked || isDisabled) && this.onValidFilesViaButton()
+                }
               />
             }
           />
@@ -187,7 +228,9 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
                 isNew={this.props.isNew}
-                action={() => !(isBlocked || isDisabled) && this.onImport}
+                action={() =>
+                  !(isBlocked || isDisabled) && this.onValidFilesViaButton()
+                }
               />
             }
           />
@@ -207,7 +250,9 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
                 isNew={this.props.isNew}
-                action={() => !(isBlocked || isDisabled) && this.onImport}
+                action={() =>
+                  !(isBlocked || isDisabled) && this.onValidFilesViaButton()
+                }
               />
             }
           />
@@ -224,7 +269,7 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
         onDragOver={this.onDragOver}
         onDragEnter={this.onDragEnter}
         onDragLeave={this.onDragLeave}
-        onDrop={this.onImport}
+        onDrop={this.onValidFilesViaDrop}
       >
         {fragment}
       </div>

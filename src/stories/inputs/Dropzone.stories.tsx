@@ -20,6 +20,7 @@ export const AgeSelect: Story = {
     errorMessage: 'Invalid file type',
     cta: 'Import from computer…',
     acceptedMimeTypes: ['image/png', 'application/json', 'application/pdf'],
+    isMultiple: true,
     isBlocked: false,
     isDisabled: false,
     isNew: false,
