@@ -19,7 +19,7 @@
     background-color: var(--figma-color-bg-hover);
   }
 
-  &-interactive:focus {
+  &--interactive:focus {
     outline: 2px solid var(--figma-color-border-selected);
     outline-offset: -2px;
   }
