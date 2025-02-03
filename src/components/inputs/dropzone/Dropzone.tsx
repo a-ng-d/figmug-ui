@@ -51,9 +51,16 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
 
   // Lifecycle
   componentDidUpdate = (prevProps: Readonly<DropzoneProps>) => {
-    if (this.props.isLoading !== prevProps.isLoading && this.props.isLoading) {
+    if (this.props.isLoading !== prevProps.isLoading && !this.props.isLoading)
       this.setState({
         isLoading: true,
+      })
+    else if (
+      this.props.isLoading !== prevProps.isLoading &&
+      this.props.isLoading
+    ) {
+      this.setState({
+        isLoading: false,
       })
       setTimeout(
         () => {
@@ -63,10 +70,7 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
         },
         2 * 60 * 1000
       )
-    } else
-      this.setState({
-        isLoading: false,
-      })
+    }
   }
 
   // Direct actions
