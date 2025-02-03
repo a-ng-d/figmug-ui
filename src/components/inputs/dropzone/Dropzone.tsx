@@ -51,16 +51,9 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
 
   // Lifecycle
   componentDidUpdate = (prevProps: Readonly<DropzoneProps>) => {
-    if (this.props.isLoading !== prevProps.isLoading && !this.props.isLoading)
+    if (this.props.isLoading !== prevProps.isLoading && this.props.isLoading) {
       this.setState({
         isLoading: true,
-      })
-    else if (
-      this.props.isLoading !== prevProps.isLoading &&
-      this.props.isLoading
-    ) {
-      this.setState({
-        isLoading: false,
       })
       setTimeout(
         () => {
@@ -70,7 +63,13 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
         },
         2 * 60 * 1000
       )
-    }
+    } else if (
+      this.props.isLoading !== prevProps.isLoading &&
+      !this.props.isLoading
+    )
+      this.setState({
+        isLoading: false,
+      })
   }
 
   // Direct actions
@@ -115,8 +114,6 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
     const { acceptedMimeTypes, isMultiple } = this.props
 
     this.setState({
-      status: 'WAITING',
-      isLoading: true,
       isDraggedOver: false,
     })
 
@@ -126,6 +123,7 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
     fileInput.multiple = isMultiple
     fileInput.onchange = (event: Event) => {
       this.setState({
+        status: 'WAITING',
         isLoading: true,
       })
       const target = event.target as HTMLInputElement
