@@ -31,6 +31,8 @@ export interface DropzoneStates {
 }
 
 export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
+  stopLoading: NodeJS.Timeout | undefined
+
   static defaultProps: Partial<DropzoneProps> = {
     acceptedMimeTypes: ['image/jpeg', 'image/png', 'application/pdf'],
     isLoading: false,
@@ -47,6 +49,7 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
       isDraggedOver: false,
       blackList: [],
     }
+    this.stopLoading = undefined
   }
 
   // Lifecycle
@@ -55,7 +58,7 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
       this.setState({
         isLoading: true,
       })
-      setTimeout(
+      this.stopLoading = setTimeout(
         () => {
           this.setState({
             isLoading: false,
@@ -66,10 +69,12 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
     } else if (
       this.props.isLoading !== prevProps.isLoading &&
       !this.props.isLoading
-    )
+    ) {
+      clearTimeout(this.stopLoading)
       this.setState({
         isLoading: false,
       })
+    }
   }
 
   // Direct actions
