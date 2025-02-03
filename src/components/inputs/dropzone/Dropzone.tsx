@@ -24,7 +24,7 @@ export interface DropzoneProps {
 }
 
 export interface DropzoneStates {
-  status: 'READY' | 'WARNING' | 'ERROR'
+  status: 'READY' | 'WAITING' | 'WARNING' | 'ERROR'
   isLoading: boolean
   isDraggedOver: boolean
   blackList: Array<string>
@@ -115,6 +115,8 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
     const { acceptedMimeTypes, isMultiple } = this.props
 
     this.setState({
+      status: 'WAITING',
+      isLoading: true,
       isDraggedOver: false,
     })
 
@@ -139,6 +141,7 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
 
     event.preventDefault()
     this.setState({
+      status: 'WAITING',
       isLoading: true,
       isDraggedOver: false,
     })
@@ -164,6 +167,7 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
     else
       this.setState({
         status: 'ERROR',
+        isLoading: false,
       })
   }
 
@@ -221,6 +225,10 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
             }
           />
         )
+        break
+      }
+      case 'WAITING': {
+        fragment = null
         break
       }
       case 'WARNING': {
