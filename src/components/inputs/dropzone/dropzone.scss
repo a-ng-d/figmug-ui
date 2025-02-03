@@ -5,8 +5,11 @@
   outline: dashed 1px var(--figma-color-border);
   border-radius: var(--border-radius-med);
   padding: var(--size-small);
+  gap: var(--size-small);
   min-width: 200px;
   min-height: 200px;
+  cursor: default;
+  user-select: none;
 
   &--dragged-over {
     outline: solid 2px var(--figma-color-border-brand-strong);

@@ -21,6 +21,7 @@ export const AgeSelect: Story = {
     cta: 'Import from computer…',
     acceptedMimeTypes: ['image/png', 'application/json', 'application/pdf'],
     isMultiple: true,
+    isLoading: false,
     isBlocked: false,
     isDisabled: false,
     isNew: false,

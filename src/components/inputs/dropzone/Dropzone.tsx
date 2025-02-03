@@ -16,6 +16,7 @@ export interface DropzoneProps {
   cta: string
   acceptedMimeTypes: Array<string>
   isMultiple: boolean
+  isLoading?: boolean
   isDisabled?: boolean
   isBlocked?: boolean
   isNew?: boolean
@@ -23,7 +24,8 @@ export interface DropzoneProps {
 }
 
 export interface DropzoneStates {
-  status: 'LOADING' | 'READY' | 'WARNING' | 'ERROR'
+  status: 'READY' | 'WARNING' | 'ERROR'
+  isLoading: boolean
   isDraggedOver: boolean
   blackList: Array<string>
 }
@@ -31,18 +33,40 @@ export interface DropzoneStates {
 export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
   static defaultProps: Partial<DropzoneProps> = {
     acceptedMimeTypes: ['image/jpeg', 'image/png', 'application/pdf'],
+    isLoading: false,
+    isDisabled: false,
     isNew: false,
     isBlocked: false,
-    isDisabled: false,
   }
 
   constructor(props: DropzoneProps) {
     super(props)
     this.state = {
       status: 'READY',
+      isLoading: this.props.isLoading || false,
       isDraggedOver: false,
       blackList: [],
     }
+  }
+
+  // Lifecycle
+  componentDidUpdate = (prevProps: Readonly<DropzoneProps>) => {
+    if (this.props.isLoading !== prevProps.isLoading && this.props.isLoading) {
+      this.setState({
+        isLoading: true,
+      })
+      setTimeout(
+        () => {
+          this.setState({
+            isLoading: false,
+          })
+        },
+        2 * 60 * 1000
+      )
+    } else
+      this.setState({
+        isLoading: false,
+      })
   }
 
   // Direct actions
@@ -96,7 +120,7 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
     fileInput.multiple = isMultiple
     fileInput.onchange = (event: Event) => {
       this.setState({
-        status: 'LOADING',
+        isLoading: true,
       })
       const target = event.target as HTMLInputElement
       const files = target.files
@@ -111,7 +135,7 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
 
     event.preventDefault()
     this.setState({
-      status: 'LOADING',
+      isLoading: true,
       isDraggedOver: false,
     })
 
@@ -169,7 +193,7 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
       isDisabled,
       isBlocked,
     } = this.props
-    const { status, isDraggedOver, blackList } = this.state
+    const { status, isLoading, isDraggedOver, blackList } = this.state
     let fragment
 
     switch (status) {
@@ -191,15 +215,6 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
                 }
               />
             }
-          />
-        )
-        break
-      }
-      case 'LOADING': {
-        fragment = (
-          <Icon
-            type="PICTO"
-            iconName="spinner"
           />
         )
         break
@@ -263,6 +278,12 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
         onDragLeave={this.onDragLeave}
         onDrop={this.onValidFilesViaDrop}
       >
+        {isLoading && (
+          <Icon
+            type="PICTO"
+            iconName="spinner"
+          />
+        )}
         {fragment}
       </div>
     )
