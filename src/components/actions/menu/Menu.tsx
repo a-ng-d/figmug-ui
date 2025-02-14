@@ -16,6 +16,11 @@ export interface MenuProps {
   parentClassName?: string
   state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
   alignment?: 'TOP_RIGHT' | 'TOP_LEFT' | 'BOTTOM_RIGHT' | 'BOTTOM_LEFT'
+  helper?: {
+    label: string
+    pin?: 'TOP' | 'BOTTOM'
+    isSingleLine?: boolean
+  }
   isBlocked?: boolean
   isNew?: boolean
 }
@@ -154,6 +159,9 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
             icon={icon === undefined ? undefined : icon}
             customIcon={customIcon === undefined ? undefined : customIcon}
             state={isMenuOpen ? 'selected' : ''}
+            helper={
+              this.props.helper === undefined ? undefined : this.props.helper
+            }
             isLoading={state === 'LOADING'}
             isDisabled={state === 'DISABLED' || isBlocked}
             isNew={isNew}
