@@ -285,7 +285,9 @@ describe('Icon Button test:', () => {
       <Button
         type="icon"
         icon="adjust"
-        helper="Testing"
+        helper={{
+          label: 'Testing',
+        }}
       />
     )
 

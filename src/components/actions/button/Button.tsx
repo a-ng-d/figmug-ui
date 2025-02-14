@@ -20,7 +20,11 @@ export interface ButtonProps {
   label?: string
   state?: 'default' | 'disabled' | 'blocked' | 'selected' | ''
   url?: string
-  helper?: string
+  helper?: {
+    label: string
+    pin?: 'TOP' | 'BOTTOM'
+    isSingleLine?: boolean
+  }
   feature?: string
   hasMultipleActions?: boolean
   isLink?: boolean
@@ -224,7 +228,14 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
             {customIcon}
           </div>
         )}
-        {isTooltipVisible && <Tooltip>{helper}</Tooltip>}
+        {isTooltipVisible && (
+          <Tooltip
+            pin={helper?.pin}
+            isSingleLine={helper?.isSingleLine}
+          >
+            {helper?.label}
+          </Tooltip>
+        )}
       </button>
     )
   }

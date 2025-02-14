@@ -195,7 +195,11 @@ export const Icon: Story = {
   args: {
     type: 'icon',
     icon: 'adjust',
-    helper: 'Adjust the parameters',
+    helper: {
+      label: 'Adjust the parameters',
+      pin: 'BOTTOM',
+      isSingleLine: true,
+    },
     feature: 'ACTION',
     isLoading: false,
     isDisabled: false,

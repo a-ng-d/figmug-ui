@@ -1,8 +1,7 @@
 .tooltip.recharged {
   position: absolute;
-  bottom: calc(var(--size-xxsmall) * -1);
   left: 50%;
-  transform: translateX(-50%) translateY(100%);
+  transform: translateX(-50%) translateY(0);
   z-index: 3;
   width: auto;
   min-width: 148px;
@@ -11,17 +10,36 @@
 
   &:after {
     position: absolute;
-    top: -14px;
     left: calc(50% - var(--size-xxsmall));
     border-width: var(--size-xxsmall);
     border-style: solid;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: var(--hud);
-    border-left-color: transparent;
     width: 0;
     height: 0;
     content: '';
+  }
+
+  &.tooltip--top {
+    bottom: calc(100% + var(--size-xxsmall));
+  
+    &:after {
+      bottom: -14px;
+      border-top-color: var(--hud);
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+
+  &.tooltip--bottom {
+    top: calc(100% + var(--size-xxsmall));
+
+    &:after {
+      top: -14px;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: var(--hud);
+      border-left-color: transparent;
+    }
   }
 
   .tooltip__block {
@@ -39,5 +57,13 @@
   .tooltip__text {
     color: var(--white);
     text-align: center;
+  }
+
+  &.tooltip--singleline {
+    min-width: unset;
+
+    .tooltip__text {
+      white-space: nowrap;
+    }
   }
 }

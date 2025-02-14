@@ -4,10 +4,12 @@ import './tooltip.scss'
 
 export interface TooltipProps {
   children: React.ReactNode
+  pin?: 'TOP' | 'BOTTOM'
+  isSingleLine?: boolean
 }
 
 export const Tooltip = (props: TooltipProps) => {
-  const { children } = props
+  const { children, pin = 'BOTTOM', isSingleLine = false } = props
   const tooltipRef = useRef<HTMLDivElement>(null)
   const [shift, setShift] = React.useState(0)
 
@@ -24,7 +26,15 @@ export const Tooltip = (props: TooltipProps) => {
 
   return (
     <div
-      className={['tooltip', 'recharged'].filter((n) => n).join(' ')}
+      className={[
+        'tooltip',
+        'recharged',
+        isSingleLine && 'tooltip--singleline',
+        pin === 'TOP' && 'tooltip--top',
+        pin === 'BOTTOM' && 'tooltip--bottom',
+      ]
+        .filter((n) => n)
+        .join(' ')}
       role="tooltip"
       ref={tooltipRef}
       style={{
