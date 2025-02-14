@@ -20,7 +20,7 @@
 
   &.tooltip--top {
     bottom: calc(100% + var(--size-xxsmall));
-  
+
     &:after {
       bottom: -14px;
       border-top-color: var(--hud);
