@@ -193,10 +193,10 @@ export class Button extends React.Component<ButtonProps, ButtonStates> {
           if (e.key === 'Escape') (e.target as HTMLElement).blur()
         }}
         onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
-        onMouseOver={() => {
+        onMouseEnter={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
-        onMouseOut={() => this.setState({ isTooltipVisible: false })}
+        onMouseLeave={() => this.setState({ isTooltipVisible: false })}
         onFocus={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
