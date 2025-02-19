@@ -1,13 +1,13 @@
 import texts from '../../../styles/texts.module.scss'
 import './avatar.scss'
 
-export interface Props {
+export interface AvatarProps {
   avatar?: string
   fullName?: string
   isInverted?: boolean
 }
 
-export const Avatar = (props: Props) => {
+const Avatar = (props: AvatarProps) => {
   const {
     avatar = 'https://www.gravatar.com/avatar',
     fullName = 'John Doe',
@@ -30,4 +30,4 @@ export const Avatar = (props: Props) => {
   )
 }
 
-export default Avatar
+export default Avatar 

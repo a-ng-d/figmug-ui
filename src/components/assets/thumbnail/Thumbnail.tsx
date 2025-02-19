@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 import { Icon } from '../icon/Icon'
 import './thumbnail.scss'
 
-export interface Props {
+export interface ThumbnailProps {
   src: string
   w?: string
   h?: string
 }
 
-export const Thumbnail = (props: Props) => {
+const Thumbnail = (props: ThumbnailProps) => {
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
   const { src, w = '100%', h = '100%' } = props
