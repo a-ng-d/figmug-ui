@@ -3,8 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import Accordion from '@components/actions/accordion/Accordion'
 import Input from '@components/inputs/input/Input'
-import * as TitleStory from '../assets/SectionTitle.stories'
-import * as InputStory from '../inputs/Input.stories'
+import * as TitleStory from '@stories/assets/SectionTitle.stories'
+import * as InputStory from '@stories/inputs/Input.stories'
 
 const mock = fn()
 
