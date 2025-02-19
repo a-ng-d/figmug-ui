@@ -1,0 +1,18 @@
+.list {
+  padding: 1px 0;
+  overflow-y: auto;
+
+  &--loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &--message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
