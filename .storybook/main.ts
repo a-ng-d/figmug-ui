@@ -21,17 +21,12 @@ const config: StorybookConfig = {
     options: {},
   },
   docs: {},
-  /**
-   * A option exposed by storybook-builder-vite for customising the Vite config.
-   * @see https://github.com/eirslett/storybook-builder-vite#customize-vite-config
-   * @param {import("vite").UserConfig} config
-   * @see https://vitejs.dev/config/
-   */
   viteFinal: async (config) => {
     config.resolve = config.resolve || {}
     config.resolve.alias = {
       ...config.resolve.alias,
       '@components': path.resolve(__dirname, '../src/components'),
+      '@stories': path.resolve(__dirname, '../src/stories'),
       '@styles': path.resolve(__dirname, '../src/styles'),
       '@tps': path.resolve(__dirname, '../src/types'),
     }

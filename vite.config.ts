@@ -18,6 +18,14 @@ export default defineConfig({
       ],
     }),
   ],
+  resolve: {
+    alias: {
+      '@components': path.resolve(__dirname, './src/components'),
+      '@stories': path.resolve(__dirname, './src/stories'),
+      '@styles': path.resolve(__dirname, './src/styles'),
+      '@tps': path.resolve(__dirname, './src/types'),
+    },
+  },
   build: {
     lib: {
       entry: resolve(__dirname, './src/index.ts'),

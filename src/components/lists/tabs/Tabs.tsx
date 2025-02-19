@@ -1,4 +1,4 @@
-import texts from 'styles/texts.module.scss'
+import texts from '@styles/texts.module.scss'
 import './tabs.scss'
 
 export interface TabsProps {
