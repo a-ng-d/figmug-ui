@@ -23,9 +23,9 @@ const Avatar = (props: AvatarProps) => {
       <div className="user__avatar">
         <img src={avatar} />
       </div>
-      <div className={`${texts.type} ${texts['type--secondary']} type`}>
+      <span className={`user_name ${texts.type} ${texts['type--secondary']} type`}>
         {fullName}
-      </div>
+      </span>
     </div>
   )
 }

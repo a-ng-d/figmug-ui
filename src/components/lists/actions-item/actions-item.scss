@@ -33,28 +33,6 @@ li.actions-item {
     gap: var(--size-xxsmall) 0;
   }
 
-  .actions-item__user {
-    display: flex;
-    align-items: center;
-    gap: var(--size-xxsmall);
-  }
-
-  .actions-item__user__avatar {
-    border-radius: var(--size-small);
-    width: var(--size-small);
-    height: var(--size-small);
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .actions-item__user__name {
-    text-wrap: nowrap;
-  }
-
   .actions-item__actions {
     display: flex;
     align-items: center;

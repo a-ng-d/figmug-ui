@@ -4,6 +4,7 @@ import texts from '../../../styles/texts.module.scss'
 import Thumbnail from '../../assets/thumbnail/Thumbnail'
 import { Chip } from '../../tags/chip/Chip'
 import './actions-item.scss'
+import Avatar from '../../../components/assets/avatar/Avatar'
 
 export interface ActionsItemProps {
   id: string
@@ -89,18 +90,10 @@ export class ActionsItem extends React.Component<ActionsItemProps> {
             <div className="actions-item__complement">{complementSlot}</div>
           )}
           {user !== undefined && (
-            <div className="actions-item__user">
-              {user.avatar !== undefined && (
-                <div className="actions-item__user__avatar">
-                  <img src={user.avatar} />
-                </div>
-              )}
-              <div
-                className={`${texts.type} ${texts['type--secondary']} type actions-item__user__name`}
-              >
-                {user.name}
-              </div>
-            </div>
+            <Avatar
+              avatar={user.avatar}
+              fullName={user.name}
+            />
           )}
         </div>
         {actionsSlot !== undefined && (
