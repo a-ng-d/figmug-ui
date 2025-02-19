@@ -5,7 +5,7 @@ import SimpleItem from '@components/slots/simple-item/SimpleItem'
 import { ColorItem } from './SimpleItem.stories'
 
 const meta = {
-  title: 'Example/Slots/Section',
+  title: 'Components/Slots/Section',
   component: Section,
   decorators: [
     (Story) => (

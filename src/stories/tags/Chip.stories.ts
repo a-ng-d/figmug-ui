@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Chip from '@components/tags/chip/Chip'
 
 const meta = {
-  title: 'Example/Tags/Chip',
+  title: 'Components/Tags/Chip',
   component: Chip,
   parameters: {
     layout: 'centered',

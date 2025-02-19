@@ -4,7 +4,7 @@ import Dropdown from '@components/inputs/dropdown/Dropdown'
 import * as ListStories from '@stories/lists/List.stories'
 
 const meta = {
-  title: 'Example/Inputs/Dropdown',
+  title: 'Components/Inputs/Dropdown',
   component: Dropdown,
   parameters: {
     layout: 'centered',

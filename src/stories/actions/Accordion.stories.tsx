@@ -9,7 +9,7 @@ import * as InputStory from '@stories/inputs/Input.stories'
 const mock = fn()
 
 const meta = {
-  title: 'Example/Actions/Accordion',
+  title: 'Components/Actions/Accordion',
   component: Accordion,
   parameters: {
     layout: 'centered',

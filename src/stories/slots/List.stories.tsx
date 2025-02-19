@@ -6,7 +6,7 @@ import { fn } from '@storybook/test'
 import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
 
 const meta = {
-  title: 'Example/Slots/List',
+  title: 'Components/Slots/List',
   component: List,
   decorators: [
     (Story) => (

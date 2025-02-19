@@ -4,7 +4,7 @@ import { fn } from '@storybook/test'
 import Input from '@components/inputs/input/Input'
 
 const meta: Meta<typeof Input> = {
-  title: 'Example/Inputs/Input',
+  title: 'Components/Inputs/Input',
   component: Input,
   parameters: {
     layout: 'centered',

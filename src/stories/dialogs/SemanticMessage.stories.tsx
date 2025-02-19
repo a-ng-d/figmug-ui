@@ -6,7 +6,7 @@ import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessag
 const mock = fn()
 
 const meta = {
-  title: 'Example/Dialogs/Semantic Message',
+  title: 'Components/Dialogs/Semantic Message',
   component: SemanticMessage,
   parameters: {
     layout: 'centered',

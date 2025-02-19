@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import KeyboardShortcutItem from '@components/lists/keyboard-shortcut-item/KeyboardShortcutItem'
 
 const meta = {
-  title: 'Example/Lists/Keyboard Shortcut Item',
+  title: 'Components/Lists/Keyboard Shortcut Item',
   component: KeyboardShortcutItem,
   parameters: {
     layout: 'centered',

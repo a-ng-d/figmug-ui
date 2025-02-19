@@ -106,7 +106,7 @@ const icons: Array<IconList> = [
 ]
 
 const meta = {
-  title: 'Example/Assets/Icon',
+  title: 'Components/Assets/Icon',
   component: Icon,
   decorators: [
     (Story) => (

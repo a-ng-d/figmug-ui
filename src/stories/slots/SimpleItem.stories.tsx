@@ -7,7 +7,7 @@ import SimpleItem from '@components/slots/simple-item/SimpleItem'
 const mock = fn()
 
 const meta = {
-  title: 'Example/Slots/Simple Item',
+  title: 'Components/Slots/Simple Item',
   component: SimpleItem,
   decorators: [
     (Story) => (

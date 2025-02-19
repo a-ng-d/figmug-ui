@@ -68,7 +68,7 @@ const FormSample = () => {
 }
 
 const meta = {
-  title: 'Example/Dialogs/Dialog',
+  title: 'Components/Dialogs/Dialog',
   component: Dialog,
   parameters: {
     layout: 'centered',

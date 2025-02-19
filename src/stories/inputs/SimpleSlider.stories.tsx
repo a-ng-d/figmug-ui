@@ -4,7 +4,7 @@ import { fn } from '@storybook/test'
 import SimpleSlider from '@components/inputs/simple-slider/SimpleSlider'
 
 const meta: Meta<typeof SimpleSlider> = {
-  title: 'Example/Inputs/Simple Slider',
+  title: 'Components/Inputs/Simple Slider',
   component: SimpleSlider,
   parameters: {
     layout: 'centered',

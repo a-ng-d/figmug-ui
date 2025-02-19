@@ -4,7 +4,7 @@ import Menu from '@components/actions/menu/Menu'
 import * as ListStories from '@stories/lists/List.stories.tsx'
 
 const meta = {
-  title: 'Example/Actions/Multiple Actions',
+  title: 'Components/Actions/Multiple Actions',
   component: Menu,
   parameters: {
     layout: 'centered',

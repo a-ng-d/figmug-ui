@@ -6,7 +6,7 @@ import Consent from '@components/dialogs/consent/Consent'
 const mock = fn()
 
 const meta = {
-  title: 'Example/Dialogs/Consent',
+  title: 'Components/Dialogs/Consent',
   component: Consent,
   parameters: {
     layout: 'centered',

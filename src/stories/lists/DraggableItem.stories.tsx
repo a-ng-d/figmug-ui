@@ -8,7 +8,7 @@ import FormItem from '@components/slots/form-item/FormItem'
 const mock = fn()
 
 const meta = {
-  title: 'Example/Lists/Draggable Item',
+  title: 'Components/Lists/Draggable Item',
   component: DraggableItem,
   decorators: [
     (Story) => (

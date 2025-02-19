@@ -5,7 +5,7 @@ import { ChangeEvent } from 'react'
 import Select from '@components/inputs/select/Select'
 
 const meta: Meta<typeof Select> = {
-  title: 'Example/Inputs/Select',
+  title: 'Components/Inputs/Select',
   component: Select,
   parameters: {
     layout: 'centered',

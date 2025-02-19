@@ -3,7 +3,7 @@ import Dropzone from '@components/inputs/dropzone/Dropzone'
 import { fn } from '@storybook/test'
 
 const meta: Meta<typeof Dropzone> = {
-  title: 'Example/Inputs/Dropzone',
+  title: 'Components/Inputs/Dropzone',
   component: Dropzone,
   parameters: {
     layout: 'centered',

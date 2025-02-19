@@ -6,7 +6,7 @@ import ActionsItem from '@components/lists/actions-item/ActionsItem'
 const mock = fn()
 
 const meta = {
-  title: 'Example/Lists/Actions Item',
+  title: 'Components/Lists/Actions Item',
   component: ActionsItem,
   parameters: {
     layout: 'centered',

@@ -3,7 +3,7 @@ import { fn } from '@storybook/test'
 import ColorItem from '@components/lists/color-item/ColorItem'
 
 const meta = {
-  title: 'Example/Lists/Color Item',
+  title: 'Components/Lists/Color Item',
   component: ColorItem,
   parameters: {
     layout: 'centered',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 
 const meta = {
-  title: 'Example/Assets/Thumbnail',
+  title: 'Components/Assets/Thumbnail',
   component: Thumbnail,
   parameters: {
     layout: 'centered',
