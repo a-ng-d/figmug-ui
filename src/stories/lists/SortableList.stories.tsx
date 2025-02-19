@@ -20,7 +20,7 @@ const meta: Meta<typeof SortableList> = {
   component: SortableList,
   decorators: [
     (Story) => (
-      <div style={{ width: '296px', height: '148px' }}>
+      <div style={{ width: '296px', height: 'auto' }}>
         <Story />
       </div>
     ),
