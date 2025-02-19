@@ -1,9 +1,9 @@
 import React from 'react'
-import texts from '../../../styles/texts.module.scss'
-import type { IconList } from '../../../types/icon.types'
-import { Icon } from '../../assets/icon/Icon'
-import { Chip } from '../../tags/chip/Chip'
-import { Tooltip } from '../../tags/tooltip/Tooltip'
+import texts from '@styles/texts.module.scss'
+import type { IconList } from '@tps/icon.types'
+import Icon from '@components/assets/icon/Icon'
+import Chip from '@components/tags/chip/Chip'
+import Tooltip from '@components/tags/tooltip/Tooltip'
 import './button.scss'
 
 export interface ButtonProps {
@@ -35,11 +35,11 @@ export interface ButtonProps {
   action?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
-export interface ButtonStates {
+interface ButtonStates {
   isTooltipVisible: boolean
 }
 
-export class Button extends React.Component<ButtonProps, ButtonStates> {
+export default class Button extends React.Component<ButtonProps, ButtonStates> {
   buttonRef: React.RefObject<HTMLButtonElement> = React.createRef()
 
   static defaultProps: Partial<ButtonProps> = {

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import texts from '../../../styles/texts.module.scss'
+import texts from '@styles/texts.module.scss'
 import './tooltip.scss'
 
 export interface TooltipProps {
@@ -8,7 +8,7 @@ export interface TooltipProps {
   isSingleLine?: boolean
 }
 
-export const Tooltip = (props: TooltipProps) => {
+const Tooltip = (props: TooltipProps) => {
   const { children, pin = 'BOTTOM', isSingleLine = false } = props
   const tooltipRef = useRef<HTMLDivElement>(null)
   const [shift, setShift] = React.useState(0)
@@ -58,3 +58,5 @@ export const Tooltip = (props: TooltipProps) => {
     </div>
   )
 }
+
+export default Tooltip

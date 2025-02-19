@@ -1,7 +1,7 @@
 import { useArgs } from '@storybook/preview-api'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { Tabs } from '../../components/lists/tabs/Tabs'
+import Tabs from '@components/lists/tabs/Tabs'
 
 const meta = {
   title: 'Example/Lists/Tabs',

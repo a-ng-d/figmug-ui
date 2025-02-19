@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { Input } from '../../components/inputs/input/Input'
-import { InputsBar } from '../../components/inputs/inputs-bar/InputsBar'
+import Input from '@components/inputs/input/Input'
+import InputsBar from '@components/inputs/inputs-bar/InputsBar'
 
 const Inputs = () => (
   <>

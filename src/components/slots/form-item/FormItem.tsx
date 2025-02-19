@@ -1,6 +1,6 @@
-import texts from '../../../styles/texts.module.scss'
-import { Message } from '../../dialogs/message/Message'
-import { Chip } from '../../tags/chip/Chip'
+import texts from '@styles/texts.module.scss'
+import Message from '@components/dialogs/message/Message'
+import Chip from '@components/tags/chip/Chip'
 import './form-item.scss'
 
 export interface FormItemProps {
@@ -16,7 +16,7 @@ export interface FormItemProps {
   children: React.ReactNode
 }
 
-export const FormItem = (props: FormItemProps) => {
+const FormItem = (props: FormItemProps) => {
   const {
     id,
     label,
@@ -61,3 +61,5 @@ export const FormItem = (props: FormItemProps) => {
     </>
   )
 }
+
+export default FormItem

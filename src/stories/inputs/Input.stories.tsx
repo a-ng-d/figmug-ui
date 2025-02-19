@@ -1,7 +1,7 @@
 import { useArgs } from '@storybook/preview-api'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { Input } from '../../components/inputs/input/Input'
+import Input from '@components/inputs/input/Input'
 
 const meta: Meta<typeof Input> = {
   title: 'Example/Inputs/Input',

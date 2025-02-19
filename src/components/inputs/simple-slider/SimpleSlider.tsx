@@ -1,10 +1,9 @@
 import { doMap } from '@a_ng_d/figmug-utils'
 import React from 'react'
-
-import { Knob } from '../../actions/knob/Knob'
+import Knob from '@components/actions/knob/Knob'
 import './simple-slider.scss'
 
-interface SimpleSliderProps {
+export interface SimpleSliderProps {
   id: string
   label: string
   value: number
@@ -21,11 +20,11 @@ interface SimpleSliderProps {
   onChange: (feature: string, state: string, value: number) => void
 }
 
-interface SimpleSliderStates {
+export interface SimpleSliderStates {
   isTooltipDisplay: boolean
 }
 
-export class SimpleSlider extends React.Component<
+export default class SimpleSlider extends React.Component<
   SimpleSliderProps,
   SimpleSliderStates
 > {
@@ -65,7 +64,7 @@ export class SimpleSlider extends React.Component<
       else onChange(feature, 'TYPED', parseFloat(target.value))
   }
 
-  // Direct actions
+  // Direct Actions
   onGrab = (e: React.MouseEvent<HTMLElement>) => {
     const stop = e.currentTarget as HTMLElement,
       range = stop.parentElement as HTMLElement,

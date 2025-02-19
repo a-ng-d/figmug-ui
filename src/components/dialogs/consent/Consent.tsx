@@ -1,11 +1,11 @@
 import React from 'react'
-import layouts from '../../../styles/layouts.module.scss'
-import texts from '../../../styles/texts.module.scss'
-import type { ConsentConfiguration } from '../../../types/consent.types'
-import { Button } from '../../actions/button/Button'
-import Thumbnail from '../../assets/thumbnail/Thumbnail'
-import { Select } from '../../inputs/select/Select'
-import { Bar } from '../../slots/bar/Bar'
+import layouts from '@styles/layouts.module.scss'
+import texts from '@styles/texts.module.scss'
+import type { ConsentConfiguration } from '@tps/consent.types'
+import Button from '@components/actions/button/Button'
+import Thumbnail from '@components/assets/thumbnail/Thumbnail'
+import Select from '@components/inputs/select/Select'
+import Bar from '@components/slots/bar/Bar'
 import './consent.scss'
 
 export interface ConsentProps {
@@ -43,7 +43,7 @@ export interface ConsentStates {
   vendorsConsent: Array<ConsentConfiguration>
 }
 
-export class Consent extends React.Component<ConsentProps, ConsentStates> {
+export default class Consent extends React.Component<ConsentProps, ConsentStates> {
   constructor(props: ConsentProps) {
     super(props)
     this.state = {
@@ -52,7 +52,7 @@ export class Consent extends React.Component<ConsentProps, ConsentStates> {
     }
   }
 
-  // Direct actions
+  // Direct Actions
   onConsentAll = () => {
     const { vendorsList, consentActions } = this.props
 

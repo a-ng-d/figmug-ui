@@ -1,6 +1,6 @@
 import { useArgs } from '@storybook/client-api'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Menu } from '../../components/actions/menu/Menu'
+import Menu from '@components/actions/menu/Menu'
 import * as ListStories from '../lists/List.stories.tsx'
 
 const meta = {

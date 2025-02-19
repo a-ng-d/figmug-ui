@@ -1,5 +1,5 @@
-import icons from '../../../styles/icons.module.scss'
-import type { IconList } from '../../../types/icon.types'
+import icons from '@styles/icons.module.scss'
+import type { IconList } from '@tps/icon.types'
 import './icon.scss'
 
 export interface IconProps {
@@ -64,3 +64,5 @@ export const Icon = (props: IconProps) => {
   if (type === 'PICTO') return <Pictogram />
   else return <Letter />
 }
+
+export default Icon

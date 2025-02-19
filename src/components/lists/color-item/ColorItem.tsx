@@ -1,7 +1,6 @@
-import 'figma-plugin-ds/dist/figma-plugin-ds.css'
-import texts from '../../../styles/texts.module.scss'
-import type { HexModel } from '../../../types/color.types'
-import { Button } from '../../actions/button/Button'
+import texts from '@styles/texts.module.scss'
+import type { HexModel } from '@tps/color.types'
+import Button from '@components/actions/button/Button'
 import './color-item.scss'
 
 export type ColorItemProps = {
@@ -12,7 +11,7 @@ export type ColorItemProps = {
   onRemoveColor?: React.ReactEventHandler
 }
 
-export const ColorItem = (props: ColorItemProps) => {
+const ColorItem = (props: ColorItemProps) => {
   const { name, hex, id, canBeRemoved = false, onRemoveColor } = props
 
   return (
@@ -51,3 +50,5 @@ export const ColorItem = (props: ColorItemProps) => {
     </li>
   )
 }
+
+export default ColorItem

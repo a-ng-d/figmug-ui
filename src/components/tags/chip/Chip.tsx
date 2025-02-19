@@ -1,5 +1,4 @@
-import React from 'react'
-import texts from '../../../styles/texts.module.scss'
+import texts from '@styles/texts.module.scss'
 import './chip.scss'
 
 export interface ChipProps {
@@ -7,7 +6,7 @@ export interface ChipProps {
   children: React.ReactNode
 }
 
-export const Chip = (props: ChipProps) => {
+const Chip = (props: ChipProps) => {
   const { children, state = 'ACTIVE' } = props
 
   return (
@@ -23,3 +22,5 @@ export const Chip = (props: ChipProps) => {
     </div>
   )
 }
+
+export default Chip

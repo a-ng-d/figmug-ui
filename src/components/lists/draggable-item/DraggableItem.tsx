@@ -1,6 +1,6 @@
 import { doMap } from '@a_ng_d/figmug-utils'
 import React from 'react'
-import { Button } from '../../actions/button/Button'
+import Button from '@components/actions/button/Button'
 import './draggable-item.scss'
 
 export interface DraggableItemProps {
@@ -29,12 +29,12 @@ export interface DraggableItemProps {
     React.KeyboardEventHandler<Element>
 }
 
-interface DraggableItemStates {
+export interface DraggableItemStates {
   isDragged: boolean
   hasMoreOptions: boolean
 }
 
-export class DraggableItem extends React.Component<
+export default class DraggableItem extends React.Component<
   DraggableItemProps,
   DraggableItemStates
 > {
@@ -53,7 +53,7 @@ export class DraggableItem extends React.Component<
     }
   }
 
-  // Direct actions
+  // Direct Actions
   onDragStart = (e: React.DragEvent<HTMLLIElement>) => {
     const clone = e.currentTarget.cloneNode(true)
 

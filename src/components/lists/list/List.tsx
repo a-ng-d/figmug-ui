@@ -1,8 +1,8 @@
 import React from 'react'
-import { DropdownOption } from '../../../types/list.types'
-import { Chip } from '../../tags/chip/Chip'
+import { DropdownOption } from '@tps/list.types'
+import Chip from '@components/tags/chip/Chip'
+import Icon from '@components/assets/icon/Icon.tsx'
 import './list.scss'
-import { Icon } from '../../../components/assets/icon/Icon.tsx'
 
 export interface ListProps {
   options: Array<DropdownOption>
@@ -22,7 +22,7 @@ export interface ListStates {
   listClientHeight?: number
 }
 
-export class List extends React.Component<ListProps, ListStates> {
+export default class List extends React.Component<ListProps, ListStates> {
   private scrollInterval: number | null
 
   static defaultProps: Partial<ListProps> = {
@@ -56,7 +56,7 @@ export class List extends React.Component<ListProps, ListStates> {
       })
   }
 
-  // Direct actions
+  // Direct Actions
   onScroll = (e: React.UIEvent<HTMLUListElement>) => {
     const target = e.target as HTMLElement
     this.setState({

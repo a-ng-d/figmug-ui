@@ -1,4 +1,4 @@
-import texts from '../../../styles/texts.module.scss'
+import texts from '@styles/texts.module.scss'
 import './inputs-bar.scss'
 
 export interface InputsBarProps {
@@ -7,7 +7,7 @@ export interface InputsBarProps {
   children: React.ReactNode
 }
 
-export const InputsBar = (props: InputsBarProps) => {
+const InputsBar = (props: InputsBarProps) => {
   const { label, customClassName, children } = props
 
   return (
@@ -21,3 +21,5 @@ export const InputsBar = (props: InputsBarProps) => {
     </div>
   )
 }
+
+export default InputsBar

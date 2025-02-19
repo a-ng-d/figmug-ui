@@ -1,12 +1,11 @@
 import React from 'react'
-
-import { Chip } from '../../tags/chip/Chip'
-import { Input } from '../../inputs/input/Input'
-import { Tooltip } from '../../tags/tooltip/Tooltip'
-import texts from '../../../styles/texts.module.scss'
+import Chip from '@components/tags/chip/Chip'
+import Input from '@components/inputs/input/Input'
+import Tooltip from '@components/tags/tooltip/Tooltip'
+import texts from '@styles/texts.module.scss'
 import './knob.scss'
 
-interface KnobProps {
+export interface KnobProps {
   id: string
   shortId: string
   value: string | number
@@ -31,13 +30,13 @@ interface KnobProps {
   ) => void
 }
 
-interface KnobStates {
+export interface KnobStates {
   isStopInputOpen: boolean
   isTooltipOpen: boolean
   stopInputValue: string | number
 }
 
-export class Knob extends React.Component<KnobProps, KnobStates> {
+export default class Knob extends React.Component<KnobProps, KnobStates> {
   static defaultProps = {
     isBlocked: false,
     isDisabled: false,
@@ -108,6 +107,7 @@ export class Knob extends React.Component<KnobProps, KnobStates> {
     return newValue
   }
 
+  // Render
   render() {
     const {
       id,

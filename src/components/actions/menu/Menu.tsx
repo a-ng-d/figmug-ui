@@ -1,8 +1,8 @@
 import React from 'react'
-import type { IconList } from '../../../types/icon.types'
-import type { DropdownOption } from '../../../types/list.types'
-import { List } from '../../lists/list/List'
-import { Button } from '../button/Button'
+import type { IconList } from '@tps/icon.types'
+import type { DropdownOption } from '@tps/list.types'
+import List from '@components/lists/list/List'
+import Button from '../button/Button'
 import './menu.scss'
 
 export interface MenuProps {
@@ -30,7 +30,7 @@ export interface MenuStates {
   alignment: 'TOP_RIGHT' | 'TOP_LEFT' | 'BOTTOM_RIGHT' | 'BOTTOM_LEFT'
 }
 
-export class Menu extends React.Component<MenuProps, MenuStates> {
+export default class Menu extends React.Component<MenuProps, MenuStates> {
   private selectMenuRef: React.RefObject<HTMLDivElement>
   buttonRef: React.RefObject<Button>
   private listRef: React.RefObject<HTMLDivElement>
@@ -67,7 +67,7 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
     document.removeEventListener('mousedown', this.handleClickOutside)
   }
 
-  // Direct actions
+  // Direct Actions
   handleClickOutside = (e: Event) => {
     const target = e.target as HTMLElement
     const { isMenuOpen } = this.state

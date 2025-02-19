@@ -1,10 +1,10 @@
 import React from 'react'
-import layouts from '../../../styles/layouts.module.scss'
-import texts from '../../../styles/texts.module.scss'
-import Thumbnail from '../../assets/thumbnail/Thumbnail'
-import { Chip } from '../../tags/chip/Chip'
+import layouts from '@styles/layouts.module.scss'
+import texts from '@styles/texts.module.scss'
+import Thumbnail from '@components/assets/thumbnail/Thumbnail'
+import Chip from '@components/tags/chip/Chip'
+import Avatar from '@components/assets/avatar/Avatar'
 import './actions-item.scss'
-import Avatar from '../../../components/assets/avatar/Avatar'
 
 export interface ActionsItemProps {
   id: string
@@ -27,7 +27,7 @@ export interface ActionsItemProps {
     React.KeyboardEventHandler<HTMLLIElement>
 }
 
-export class ActionsItem extends React.Component<ActionsItemProps> {
+export default class ActionsItem extends React.Component<ActionsItemProps> {
   static defaultProps: Partial<ActionsItemProps> = {
     isInteractive: false,
   }

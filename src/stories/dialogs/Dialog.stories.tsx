@@ -1,10 +1,10 @@
 import { useArgs } from '@storybook/preview-api'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { Dialog } from '../../components/dialogs/dialog/Dialog'
-import { Input } from '../../components/inputs/input/Input'
-import { FormItem } from '../../components/slots/form-item/FormItem'
-import texts from '../../styles/texts.module.scss'
+import Dialog from '@components/dialogs/dialog/Dialog'
+import Input from '@components/inputs/input/Input'
+import FormItem from '@components/slots/form-item/FormItem'
+import texts from '@styles/texts.module.scss'
 
 const onBoardingSample = () => {
   return (

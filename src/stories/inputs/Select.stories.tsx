@@ -2,7 +2,7 @@ import { useArgs } from '@storybook/preview-api'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import { ChangeEvent } from 'react'
-import { Select } from '../../components/inputs/select/Select'
+import Select from '@components/inputs/select/Select'
 
 const meta: Meta<typeof Select> = {
   title: 'Example/Inputs/Select',

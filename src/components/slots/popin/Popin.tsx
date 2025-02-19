@@ -1,7 +1,7 @@
-import texts from '../../../styles/texts.module.scss'
-import { Button } from '../../actions/button/Button'
-import { Select } from '../../inputs/select/Select'
-import { Chip } from '../../tags/chip/Chip'
+import texts from 'styles/texts.module.scss'
+import Button from '@components/actions/button/Button'
+import Select from '@components/inputs/select/Select'
+import Chip from '@components/tags/chip/Chip'
 import './popin.scss'
 
 export interface PopInProps {
@@ -37,7 +37,7 @@ export interface PopInProps {
   onClose: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
-export const PopIn = (props: PopInProps) => {
+const PopIn = (props: PopInProps) => {
   const { title, actions, select, indicator, tag, children, onClose } = props
 
   return (
@@ -121,3 +121,5 @@ export const PopIn = (props: PopInProps) => {
     </div>
   )
 }
+
+export default PopIn

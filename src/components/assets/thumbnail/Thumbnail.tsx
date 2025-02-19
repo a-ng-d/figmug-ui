@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Icon } from '../icon/Icon'
+import Icon from '../icon/Icon'
 import './thumbnail.scss'
 
 export interface ThumbnailProps {

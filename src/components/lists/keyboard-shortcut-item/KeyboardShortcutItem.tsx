@@ -1,4 +1,4 @@
-import texts from '../../../styles/texts.module.scss'
+import texts from '@styles/texts.module.scss'
 import './keyboard-shortcut-item.scss'
 
 export type KeyboardShortcutItemProps = {
@@ -7,7 +7,7 @@ export type KeyboardShortcutItemProps = {
   separator?: string
 }
 
-export const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
+const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
   const { label, shortcuts = [], separator = '' } = props
 
   return (
@@ -47,3 +47,5 @@ export const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
     </li>
   )
 }
+
+export default KeyboardShortcutItem

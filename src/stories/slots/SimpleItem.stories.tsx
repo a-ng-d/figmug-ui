@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { Button } from '../../components/actions/button/Button'
-import { Input } from '../../components/inputs/input/Input'
-import { SimpleItem } from '../../components/slots/simple-item/SimpleItem'
+import Button from '@components/actions/button/Button'
+import Input from '@components/inputs/input/Input'
+import SimpleItem from '@components/slots/simple-item/SimpleItem'
 
 const mock = fn()
 

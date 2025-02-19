@@ -12,14 +12,13 @@ export interface SimpleItemProps {
     React.KeyboardEventHandler<HTMLLIElement | HTMLElement>
 }
 
-export class SimpleItem extends React.Component<SimpleItemProps> {
+export default class SimpleItem extends React.Component<SimpleItemProps> {
   static defaultProps: Partial<SimpleItemProps> = {
     isListItem: true,
     isInteractive: false,
     alignment: 'DEFAULT',
   }
 
-  // Render
   render() {
     const {
       id,

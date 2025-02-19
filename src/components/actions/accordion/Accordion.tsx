@@ -1,7 +1,7 @@
-import { IconList } from '../../../types/icon.types'
-import { SectionTitle } from '../../assets/section-title/SectionTitle'
-import { Chip } from '../../tags/chip/Chip'
-import { Button } from '../button/Button'
+import { IconList } from '@tps/icon.types'
+import SectionTitle from '@components/assets/section-title/SectionTitle'
+import Chip from '@components/tags/chip/Chip'
+import Button from '../button/Button'
 import './accordion.scss'
 
 export interface AccordionProps {
@@ -21,7 +21,7 @@ export interface AccordionProps {
   ) => void
 }
 
-export const Accordion = (props: AccordionProps) => {
+const Accordion = (props: AccordionProps) => {
   const {
     label,
     indicator,
@@ -105,3 +105,5 @@ export const Accordion = (props: AccordionProps) => {
     </div>
   )
 }
+
+export default Accordion

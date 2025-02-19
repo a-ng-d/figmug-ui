@@ -1,8 +1,8 @@
 import React from 'react'
-import { SemanticMessage } from '../../../components/dialogs/semantic-message/SemanticMessage'
-import { Button } from '../../../components/actions/button/Button'
+import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
+import Button from '@components/actions/button/Button'
+import Icon from '@components/assets/icon/Icon'
 import './dropzone.scss'
-import { Icon } from '../../../components/assets/icon/Icon'
 
 interface FileContent {
   name: string
@@ -30,7 +30,10 @@ export interface DropzoneStates {
   blackList: Array<string>
 }
 
-export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
+export default class Dropzone extends React.Component<
+  DropzoneProps,
+  DropzoneStates
+> {
   stopLoading: NodeJS.Timeout | undefined
 
   static defaultProps: Partial<DropzoneProps> = {
@@ -77,7 +80,7 @@ export class Dropzone extends React.Component<DropzoneProps, DropzoneStates> {
     }
   }
 
-  // Direct actions
+  // Direct Actions
   onImport = (validFiles: Array<File>, unValidFiles: Array<File>) => {
     const { onImportFiles } = this.props
     const fileContents: Array<FileContent> = []

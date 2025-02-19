@@ -11,7 +11,7 @@ export interface BarProps {
   isOnlyText: boolean
 }
 
-export class Bar extends React.Component<BarProps> {
+export default class Bar extends React.Component<BarProps> {
   static defaultProps = {
     isCompact: false,
     isOnlyText: false,

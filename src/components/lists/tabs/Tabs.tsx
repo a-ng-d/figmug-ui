@@ -1,4 +1,4 @@
-import texts from '../../../styles/texts.module.scss'
+import texts from 'styles/texts.module.scss'
 import './tabs.scss'
 
 export interface TabsProps {
@@ -11,7 +11,7 @@ export interface TabsProps {
   action: React.MouseEventHandler
 }
 
-export const Tabs = (props: TabsProps) => {
+const Tabs = (props: TabsProps) => {
   const { tabs, active, action } = props
 
   return (
@@ -39,3 +39,5 @@ export const Tabs = (props: TabsProps) => {
     </div>
   )
 }
+
+export default Tabs

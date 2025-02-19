@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import texts from '../../../styles/texts.module.scss'
-import { Tooltip } from '../../tags/tooltip/Tooltip'
-import { Icon } from '../icon/Icon'
+import texts from '@styles/texts.module.scss'
+import Tooltip from '@components/tags/tooltip/Tooltip'
+import Icon from '../icon/Icon'
 import './section-title.scss'
 
 export type SectionTitleProps = {
@@ -10,7 +10,7 @@ export type SectionTitleProps = {
   helper?: string
 }
 
-export const SectionTitle = (props: SectionTitleProps) => {
+const SectionTitle = (props: SectionTitleProps) => {
   const [isTooltipVisible, setTooltipState] = useState(false)
 
   const { label, indicator, helper } = props
@@ -42,3 +42,4 @@ export const SectionTitle = (props: SectionTitleProps) => {
     </div>
   )
 }
+export default SectionTitle

@@ -1,7 +1,7 @@
 import React from 'react'
-import layouts from '../../../styles/layouts.module.scss'
-import { IconList } from '../../../types/icon.types'
-import { Message } from '../message/Message'
+import layouts from '@styles/layouts.module.scss'
+import { IconList } from '@tps/icon.types'
+import Message from '../message/Message'
 import './semantic-message.scss'
 
 export interface SemanticMessageProps {
@@ -12,7 +12,7 @@ export interface SemanticMessageProps {
   actionsSlot?: React.ReactNode
 }
 
-export class SemanticMessage extends React.Component<SemanticMessageProps> {
+export default class SemanticMessage extends React.Component<SemanticMessageProps> {
   static defaultProps: Partial<SemanticMessageProps> = {
     orientation: 'HORIZONTAL',
     isAnchored: false,

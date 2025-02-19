@@ -1,5 +1,5 @@
 import { SyntheticEvent } from 'react'
-import { PopIn } from '../../slots/popin/Popin'
+import PopIn from '@components/slots/popin/Popin'
 import './dialog.scss'
 
 export interface DialogProps {
@@ -35,7 +35,7 @@ export interface DialogProps {
   onClose: React.ReactEventHandler
 }
 
-export const Dialog = (props: DialogProps) => {
+const Dialog = (props: DialogProps) => {
   const { title, actions, select, indicator, tag, children, onClose } = props
 
   const closeHandler = (e: SyntheticEvent) => {
@@ -62,3 +62,5 @@ export const Dialog = (props: DialogProps) => {
     </div>
   )
 }
+
+export default Dialog

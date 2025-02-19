@@ -1,5 +1,5 @@
 import React from 'react'
-import { DraggableItem } from '../draggable-item/DraggableItem'
+import DraggableItem from '../draggable-item/DraggableItem'
 import './sortable-list.scss'
 
 interface SelectedColor {
@@ -31,15 +31,14 @@ export interface SortableListProps<T = DefaultData> {
   onRefoldOptions: () => void
 }
 
-interface SortableListStates {
+export interface SortableListStates {
   selectedElement: SelectedColor
   hoveredElement: HoveredColor
 }
 
-export class SortableList<T extends DefaultData> extends React.Component<
-  SortableListProps<T>,
-  SortableListStates
-> {
+export default class SortableList<
+  T extends DefaultData,
+> extends React.Component<SortableListProps<T>, SortableListStates> {
   private listRef: React.RefObject<HTMLUListElement>
 
   static defaultProps: Partial<SortableListProps> = {

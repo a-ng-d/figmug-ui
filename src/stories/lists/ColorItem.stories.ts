@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import { ColorItem } from '../../components/lists/color-item/ColorItem'
+import ColorItem from '@components/lists/color-item/ColorItem'
 
 const meta = {
   title: 'Example/Lists/Color Item',

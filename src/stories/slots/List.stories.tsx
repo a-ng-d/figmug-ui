@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { ActionsItem } from '../../components/lists/actions-item/ActionsItem'
-import List from '../../components/slots/list/List'
-import { Button } from '../../components/actions/button/Button'
+import ActionsItem from '@components/lists/actions-item/ActionsItem'
+import List from '@components/slots/list/List'
+import Button from '@components/actions/button/Button'
 import { fn } from '@storybook/test'
-import { SemanticMessage } from '../../components/dialogs/semantic-message/SemanticMessage'
+import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
 
 const meta = {
   title: 'Example/Slots/List',

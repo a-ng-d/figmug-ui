@@ -1,8 +1,8 @@
 import React from 'react'
-import type { DropdownOption } from '../../../types/list.types'
-import { Icon } from '../../assets/icon/Icon'
-import { List } from '../../lists/list/List'
-import { Chip } from '../../tags/chip/Chip'
+import type { DropdownOption } from '@tps/list.types'
+import Icon from '@components/assets/icon/Icon'
+import List from '@components/lists/list/List'
+import Chip from '@components/tags/chip/Chip'
 import './dropdown.scss'
 
 export interface DropdownProps {
@@ -22,7 +22,7 @@ export interface DropdownStates {
   listShouldScroll: boolean
 }
 
-export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
+export default class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   private selectMenuRef: React.RefObject<HTMLDivElement>
   private buttonRef: React.RefObject<HTMLButtonElement>
   private listRef: React.RefObject<HTMLDivElement>
@@ -57,7 +57,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   componentWillUnmount = () =>
     document.removeEventListener('mousedown', this.handleClickOutside)
 
-  // Direct actions
+  // Direct Actions
   onOpenMenu = () => {
     const { containerId } = this.props
     const { isMenuOpen } = this.state
@@ -169,6 +169,7 @@ export class Dropdown extends React.Component<DropdownProps, DropdownStates> {
     return label.join(', ')
   }
 
+  // Render
   render() {
     const {
       id,

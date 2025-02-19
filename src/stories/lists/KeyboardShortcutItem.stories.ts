@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { KeyboardShortcutItem } from '../../components/lists/keyboard-shortcut-item/KeyboardShortcutItem'
+import KeyboardShortcutItem from '@components/lists/keyboard-shortcut-item/KeyboardShortcutItem'
 
 const meta = {
   title: 'Example/Lists/Keyboard Shortcut Item',

@@ -1,8 +1,8 @@
 import React from 'react'
-import type { IconList } from '../../..//types/icon.types'
-import { Button } from '../../actions/button/Button'
-import { Icon } from '../../assets/icon/Icon'
-import { Chip } from '../../tags/chip/Chip'
+import type { IconList } from '@tps/icon.types'
+import Button from '@components/actions/button/Button'
+import Icon from '@components/assets/icon/Icon'
+import Chip from '@components/tags/chip/Chip'
 import './input.scss'
 
 export interface InputProps {
@@ -40,7 +40,7 @@ export interface InputStates {
   inputValue: string
 }
 
-export class Input extends React.Component<InputProps, InputStates> {
+export default class Input extends React.Component<InputProps, InputStates> {
   inputRef: React.RefObject<HTMLInputElement>
   textareaRef: React.RefObject<HTMLTextAreaElement>
   private startValue: string
@@ -166,7 +166,7 @@ export class Input extends React.Component<InputProps, InputStates> {
       onBlur(e)
   }
 
-  // Direct actions
+  // Direct Actions
   onValidText = (
     e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {

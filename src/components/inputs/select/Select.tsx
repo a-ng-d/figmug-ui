@@ -1,5 +1,5 @@
 import React from 'react'
-import { Chip } from '../../tags/chip/Chip'
+import Chip from '@components/tags/chip/Chip'
 import './select.scss'
 
 export interface SelectProps {
@@ -16,7 +16,7 @@ export interface SelectProps {
   action: React.ChangeEventHandler<HTMLInputElement>
 }
 
-export class Select extends React.Component<SelectProps> {
+export default class Select extends React.Component<SelectProps> {
   private inputRef: React.RefObject<HTMLInputElement> = React.createRef()
 
   static defaultProps: Partial<SelectProps> = {

@@ -1,6 +1,6 @@
 import React from 'react'
+import Icon from '@components/assets/icon/Icon'
 import './list.scss'
-import { Icon } from '../../../components/assets/icon/Icon'
 
 export interface ListProps {
   children?: React.ReactNode

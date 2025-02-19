@@ -1,7 +1,7 @@
 import React from 'react'
-import texts from '../../../styles/texts.module.scss'
-import type { IconList } from '../../../types/icon.types'
-import { Icon } from '../../assets/icon/Icon'
+import texts from '@styles/texts.module.scss'
+import type { IconList } from '@tps/icon.types'
+import Icon from '@components/assets/icon/Icon'
 import './message.scss'
 
 export interface MessageProps {
@@ -10,7 +10,7 @@ export interface MessageProps {
   isBlocked?: boolean
 }
 
-export class Message extends React.Component<MessageProps> {
+export default class Message extends React.Component<MessageProps> {
   static defaultProps: Partial<MessageProps> = {
     isBlocked: false,
   }
