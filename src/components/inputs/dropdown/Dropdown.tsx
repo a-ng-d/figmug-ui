@@ -1,7 +1,7 @@
 import React from 'react'
 import type { DropdownOption } from '@tps/list.types'
 import Icon from '@components/assets/icon/Icon'
-import List from '@components/lists/list/List'
+import ActionsList from '@components/lists/actions-list/ActionsList'
 import Chip from '@components/tags/chip/Chip'
 import './dropdown.scss'
 
@@ -22,7 +22,10 @@ export interface DropdownStates {
   listShouldScroll: boolean
 }
 
-export default class Dropdown extends React.Component<DropdownProps, DropdownStates> {
+export default class Dropdown extends React.Component<
+  DropdownProps,
+  DropdownStates
+> {
   private selectMenuRef: React.RefObject<HTMLDivElement>
   private buttonRef: React.RefObject<HTMLButtonElement>
   private listRef: React.RefObject<HTMLDivElement>
@@ -256,7 +259,7 @@ export default class Dropdown extends React.Component<DropdownProps, DropdownSta
                 }}
                 ref={this.listRef}
               >
-                <List
+                <ActionsList
                   options={options}
                   selected={selected}
                   direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}

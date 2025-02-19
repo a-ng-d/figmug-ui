@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
-import List from '@components/lists/list/List'
+import ActionsList from '@components/lists/actions-list/ActionsList'
 
 const meta = {
-  title: 'Example/Lists/List',
-  component: List,
+  title: 'Example/Lists/ActionsList',
+  component: ActionsList,
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof List>
+} satisfies Meta<typeof ActionsList>
 
 export default meta
 type Story = StoryObj<typeof meta>

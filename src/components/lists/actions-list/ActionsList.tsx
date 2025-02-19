@@ -2,9 +2,9 @@ import React from 'react'
 import { DropdownOption } from '@tps/list.types'
 import Chip from '@components/tags/chip/Chip'
 import Icon from '@components/assets/icon/Icon.tsx'
-import './list.scss'
+import './actions-list.scss'
 
-export interface ListProps {
+export interface ActionsListProps {
   options: Array<DropdownOption>
   selected?: string
   direction?: 'LEFT' | 'RIGHT'
@@ -15,23 +15,26 @@ export interface ListProps {
   subMenuRef?: React.RefObject<HTMLUListElement>
 }
 
-export interface ListStates {
+export interface ActionsListStates {
   openedGroup: string
   listScrollOffset: number
   listScrollAmount: number
   listClientHeight?: number
 }
 
-export default class List extends React.Component<ListProps, ListStates> {
+export default class ActionsList extends React.Component<
+  ActionsListProps,
+  ActionsListStates
+> {
   private scrollInterval: number | null
 
-  static defaultProps: Partial<ListProps> = {
+  static defaultProps: Partial<ActionsListProps> = {
     direction: 'RIGHT',
     shouldScroll: false,
     onCancellation: () => null,
   }
 
-  constructor(props: ListProps) {
+  constructor(props: ActionsListProps) {
     super(props)
     this.state = {
       openedGroup: 'EMPTY',
@@ -42,7 +45,7 @@ export default class List extends React.Component<ListProps, ListStates> {
     this.scrollInterval = null
   }
 
-  componentDidUpdate(prevProps: Readonly<ListProps>) {
+  componentDidUpdate(prevProps: Readonly<ActionsListProps>) {
     const { shouldScroll } = this.props
     const list = document.getElementsByClassName(
       'select-menu__menu'

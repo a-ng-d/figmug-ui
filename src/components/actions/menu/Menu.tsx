@@ -1,7 +1,7 @@
 import React from 'react'
 import type { IconList } from '@tps/icon.types'
 import type { DropdownOption } from '@tps/list.types'
-import List from '@components/lists/list/List'
+import ActionsList from '@components/lists/actions-list/ActionsList'
 import Button from '../button/Button'
 import './menu.scss'
 
@@ -195,7 +195,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
                 }}
                 ref={this.listRef}
               >
-                <List
+                <ActionsList
                   options={options}
                   selected={selected}
                   direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
