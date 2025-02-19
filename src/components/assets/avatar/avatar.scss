@@ -1,0 +1,21 @@
+.user {
+  display: flex;
+  align-items: center;
+  gap: var(--size-xxsmall);
+
+  &--inverted {
+    flex-direction: row-reverse;
+  }
+
+  .user__avatar {
+    border-radius: var(--size-small);
+    width: var(--size-small);
+    height: var(--size-small);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
