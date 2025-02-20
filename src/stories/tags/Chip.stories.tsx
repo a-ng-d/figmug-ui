@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import Chip from '@components/tags/chip/Chip'
+import ColorChip from '@components/tags/color-chip/ColorChip'
 
 const meta = {
   title: 'Components/Tags/Chip',
@@ -46,14 +47,12 @@ export const Score: Story = {
   args: {
     state: 'ON_BACKGROUND',
     leftSlot: (
-      <div
-        style={{
-          width: '12px',
-          height: '12px',
-          borderRadius: '6px',
-          backgroundColor: 'blue',
-        }}
-      ></div>
+      <ColorChip
+        color="blue"
+        w="12px"
+        h="12px"
+        isRounded={true}
+      />
     ),
     children: 'AA',
     rightSlot: (

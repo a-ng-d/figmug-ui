@@ -1,6 +1,7 @@
 import texts from '@styles/texts.module.scss'
 import type { HexModel } from '@tps/color.types'
 import Button from '@components/actions/button/Button'
+import ColorChip from '@components/tags/color-chip/ColorChip'
 import './color-item.scss'
 
 export type ColorItemProps = {
@@ -21,14 +22,10 @@ const ColorItem = (props: ColorItemProps) => {
     >
       <div className="color-item__left-part">
         <div className="color-item__info">
-          <div className="color-item__color">
-            <div
-              className="color-item__chip color-item__chip--circle"
-              style={{
-                backgroundColor: hex,
-              }}
-            />
-          </div>
+          <ColorChip
+            color={hex}
+            isRounded
+          />
           <div className={`type ${texts.type} ${texts['type--truncated']}`}>
             {name}
           </div>

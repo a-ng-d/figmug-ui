@@ -21,16 +21,4 @@
   .color-item__color {
     padding: 0 0 0 var(--size-xxsmall);
   }
-
-  .color-item__chip {
-    flex: 0 0 var(--size-xsmall);
-    box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px inset;
-    border-radius: 2px;
-    width: var(--size-xsmall);
-    height: var(--size-xsmall);
-  }
-
-  .color-item__chip--circle {
-    border-radius: var(--size-xxsmall);
-  }
 }

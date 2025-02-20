@@ -1,0 +1,12 @@
+.color-chip {
+  position: relative;
+  cursor: default;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  outline-offset: -1px;
+  border-radius: 2px;
+  user-select: none;
+
+  &--rounded {
+    border-radius: 99px;
+  }
+}
