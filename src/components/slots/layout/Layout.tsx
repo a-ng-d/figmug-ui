@@ -1,3 +1,5 @@
+import './Layout.scss'
+
 export type LayoutProps = {
   id: string
   direction?: 'VERTICAL' | 'HORIZONTAL'
@@ -24,16 +26,8 @@ const Layout = (props: LayoutProps) => {
     id,
     direction = 'VERTICAL',
     singleSlot,
-    leftSlot = {
-      nodes: null,
-      type: 'NORMAL',
-      hasPadding: false,
-    },
-    rightSlot = {
-      nodes: null,
-      type: 'NORMAL',
-      hasPadding: false,
-    },
+    leftSlot,
+    rightSlot,
     isFullHeight = false,
   } = props
 
