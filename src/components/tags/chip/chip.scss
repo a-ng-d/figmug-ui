@@ -1,17 +1,17 @@
 .chip.recharged {
   display: flex;
+  align-items: center;
+  gap: var(--size-xxxsmall);
   cursor: default;
   margin: 0 0 0 var(--size-xxsmall);
   border-radius: var(--border-radius-small);
   background-color: var(--figma-color-bg-selected-secondary);
-  min-height: var(--size-xsmall);
-  user-select: none;
-  align-items: center;
-  gap: var(--size-xxxsmall);
   padding: 0 var(--size-xxxsmall);
   max-width: 100%;
+  min-height: var(--size-xsmall);
   max-height: var(--size-xsmall);
   overflow: hidden;
+  user-select: none;
 
   .chip__text {
     color: var(--figma-color-text-brand);
@@ -32,8 +32,8 @@
   }
 
   &.chip--on-background {
-    background-color: var(--white4);
     margin: 0;
+    background-color: var(--white4);
 
     .chip__text {
       color: var(--black);
