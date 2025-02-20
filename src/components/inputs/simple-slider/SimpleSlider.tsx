@@ -30,7 +30,7 @@ export default class SimpleSlider extends React.Component<
 > {
   private value: number
 
-  static defaultProps = {
+  static defaultProps: Partial<SimpleSliderProps> = {
     isBlocked: false,
     isDisabled: false,
     isNew: false,

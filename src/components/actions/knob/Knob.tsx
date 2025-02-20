@@ -37,7 +37,7 @@ export interface KnobStates {
 }
 
 export default class Knob extends React.Component<KnobProps, KnobStates> {
-  static defaultProps = {
+  static defaultProps: Partial<KnobProps> = {
     isBlocked: false,
     isDisabled: false,
     isNew: false,

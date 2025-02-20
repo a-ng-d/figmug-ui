@@ -12,7 +12,7 @@ export interface BarProps {
 }
 
 export default class Bar extends React.Component<BarProps> {
-  static defaultProps = {
+  static defaultProps: Partial<BarProps> = {
     isCompact: false,
     isOnlyText: false,
     padding: '0 var(--size-xsmall)',
