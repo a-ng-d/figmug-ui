@@ -1,23 +1,16 @@
 .layout {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
+  align-items: stretch;
   overflow: hidden;
 
   &--full-height {
     height: 100%;
   }
 
-  &--horizontal {
-    flex-direction: row;
-
-    .control__block + .control__block {
-      border-left: 1px solid var(--figma-color-border-disabled);
-    }
-
-    div.control__block {
-      align-self: stretch;
-    }
+  .control__block + .control__block:not(.control__block:first-child) {
+    border-left: 1px solid var(--figma-color-border-disabled);
   }
 
   &__block {
