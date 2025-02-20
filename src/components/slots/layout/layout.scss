@@ -1,0 +1,46 @@
+.layout {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+
+  &--horizontal {
+    flex-direction: row;
+
+    .control__block + .control__block {
+      border-left: 1px solid var(--figma-color-border-disabled);
+    }
+
+    div.control__block {
+      align-self: stretch;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: var(--size-xxsmall) 0;
+    overflow-y: auto;
+
+    &--list {
+      padding: var(--size-xxsmall) 0 0 0;
+    }
+
+    &--no-padding {
+      padding: 0;
+    }
+
+    &--distributed {
+      justify-content: space-between;
+      gap: var(--size-small);
+      overflow-y: hidden;
+    }
+
+    &--centered {
+      margin: auto;
+    }
+  }
+}
