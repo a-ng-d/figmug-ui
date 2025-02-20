@@ -31,12 +31,24 @@ export interface DialogProps {
     action: React.ChangeEventHandler<HTMLInputElement>
   }
   indicator?: string
-  children: React.ReactNode
+  isLoading?: boolean
+  isMessage?: boolean
+  children?: React.ReactNode
   onClose: React.ReactEventHandler
 }
 
 const Dialog = (props: DialogProps) => {
-  const { title, actions, select, indicator, tag, children, onClose } = props
+  const {
+    title,
+    actions,
+    select,
+    indicator,
+    tag,
+    isLoading = false,
+    isMessage = false,
+    children,
+    onClose,
+  } = props
 
   const closeHandler = (e: SyntheticEvent) => {
     if (e.currentTarget === e.target) onClose(e)
@@ -55,6 +67,8 @@ const Dialog = (props: DialogProps) => {
         select={select}
         indicator={indicator}
         tag={tag}
+        isLoading={isLoading}
+        isMessage={isMessage}
         onClose={onClose}
       >
         {children}

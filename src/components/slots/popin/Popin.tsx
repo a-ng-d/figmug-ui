@@ -2,6 +2,7 @@ import texts from '@styles/texts.module.scss'
 import Button from '@components/actions/button/Button'
 import Select from '@components/inputs/select/Select'
 import Chip from '@components/tags/chip/Chip'
+import Icon from '@components/assets/icon/Icon'
 import './popin.scss'
 
 export interface PopInProps {
@@ -33,12 +34,24 @@ export interface PopInProps {
     action: React.ChangeEventHandler<HTMLInputElement> | undefined
   }
   indicator?: string
+  isLoading?: boolean
+  isMessage?: boolean
   children?: React.ReactNode
   onClose: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 const PopIn = (props: PopInProps) => {
-  const { title, actions, select, indicator, tag, children, onClose } = props
+  const {
+    title,
+    actions,
+    select,
+    indicator,
+    tag,
+    isLoading = false,
+    isMessage = false,
+    children,
+    onClose,
+  } = props
 
   return (
     <div className="popin recharged">
@@ -54,7 +67,24 @@ const PopIn = (props: PopInProps) => {
           action={onClose}
         />
       </div>
-      <div className="popin__content">{children}</div>
+      <div
+        className={[
+          'popin__content',
+          isLoading && 'popin__content--loading',
+          isMessage && 'popin__content--message',
+        ]
+          .filter((n) => n)
+          .join(' ')}
+      >
+        {isLoading ? (
+          <Icon
+            type="PICTO"
+            iconName="spinner"
+          />
+        ) : (
+          children
+        )}
+      </div>
       {(actions !== undefined || indicator !== undefined) && (
         <div className="popin__footer">
           <div className="popin__extra">

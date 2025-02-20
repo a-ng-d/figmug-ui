@@ -5,6 +5,7 @@ import Dialog from '@components/dialogs/dialog/Dialog'
 import Input from '@components/inputs/input/Input'
 import FormItem from '@components/slots/form-item/FormItem'
 import texts from '@styles/texts.module.scss'
+import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
 
 const onBoardingSample = () => {
   return (
@@ -102,6 +103,8 @@ export const SingleMessage: Story = {
   argTypes: {
     select: { control: false },
     onClose: { control: false },
+    isLoading: { control: false },
+    isMessage: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
@@ -169,6 +172,8 @@ export const Form: Story = {
   argTypes: {
     select: { control: false },
     onClose: { control: false },
+    isLoading: { control: false },
+    isMessage: { control: false },
   },
 }
 
@@ -197,5 +202,41 @@ export const SimpleDialog: Story = {
   argTypes: {
     select: { control: false },
     onClose: { control: false },
+    isLoading: { control: false },
+    isMessage: { control: false },
+  },
+}
+
+export const LoadingDialog: Story = {
+  args: {
+    title: 'Loading…',
+    isLoading: true,
+    onClose: fn(),
+  },
+  argTypes: {
+    select: { control: false },
+    onClose: { control: false },
+    isLoading: { control: false },
+    isMessage: { control: false },
+  },
+}
+
+export const DialogOnError: Story = {
+  args: {
+    title: 'Something went wrong…',
+    isMessage: true,
+    children: (() => (
+      <SemanticMessage
+        type="WARNING"
+        message={'Something went wrong. Please try again later.'}
+      />
+    ))(),
+    onClose: fn(),
+  },
+  argTypes: {
+    select: { control: false },
+    onClose: { control: false },
+    isLoading: { control: false },
+    isMessage: { control: false },
   },
 }
