@@ -2,7 +2,8 @@
   padding: 1px 0;
   overflow-y: auto;
 
-  &--loading, &--message {
+  &--loading,
+  &--message {
     display: flex;
     justify-content: center;
     align-items: center;

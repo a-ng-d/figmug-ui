@@ -23,11 +23,13 @@ const Avatar = (props: AvatarProps) => {
       <div className="user__avatar">
         <img src={avatar} />
       </div>
-      <span className={`user_name ${texts.type} ${texts['type--secondary']} type`}>
+      <span
+        className={`user_name ${texts.type} ${texts['type--secondary']} type`}
+      >
         {fullName}
       </span>
     </div>
   )
 }
 
-export default Avatar 
+export default Avatar
