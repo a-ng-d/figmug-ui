@@ -44,10 +44,12 @@ export { default as List } from '@components/slots/list/List'
 export { default as PopIn } from '@components/slots/popin/Popin'
 export { default as Section } from '@components/slots/section/Section'
 export { default as SimpleItem } from '@components/slots/simple-item/SimpleItem'
+export { default as Layout } from '@components/slots/layout/Layout'
 
 // Tags
 export { default as Chip } from '@components/tags/chip/Chip'
 export { default as Tooltip } from '@components/tags/tooltip/Tooltip'
+export { default as ColorChip } from '@components/tags/color-chip/ColorChip'
 
 // Types
 export type { HexModel } from '@tps/color.types'
