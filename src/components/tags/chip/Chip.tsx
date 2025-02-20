@@ -26,7 +26,11 @@ const Chip = (props: ChipProps) => {
       {props.leftSlot && (
         <div className="chip__left-slot">{props.leftSlot}</div>
       )}
-      <div className={['chip__text', texts.type].filter((n) => n).join(' ')}>
+      <div
+        className={['chip__text', texts.type, texts['type--truncated'], 'type']
+          .filter((n) => n)
+          .join(' ')}
+      >
         {children}
       </div>
       {props.rightSlot && (
