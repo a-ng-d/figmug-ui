@@ -1,9 +1,12 @@
 .layout {
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: flex-start;
   overflow: hidden;
+
+  &--full {
+    height: 100%;
+  }
 
   &--horizontal {
     flex-direction: row;

@@ -34,12 +34,17 @@ const Layout = (props: LayoutProps) => {
       type: 'NORMAL',
       hasPadding: false,
     },
+    isFullHeight = false,
   } = props
 
   return (
     <div
       id={id}
-      className={['layout', direction === 'HORIZONTAL' && 'layout--horizontal']
+      className={[
+        'layout',
+        direction === 'HORIZONTAL' && 'layout--horizontal',
+        isFullHeight && 'layout--full-height',
+      ]
         .filter((n) => n)
         .join(' ')}
       role="layout"
