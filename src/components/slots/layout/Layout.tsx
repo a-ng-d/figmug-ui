@@ -3,7 +3,7 @@ import './layout.scss'
 export type LayoutProps = {
   id: string
   column: Array<{
-    node: React.ReactElement
+    node?: React.ReactElement
     typeModifier?: 'LIST' | 'DISTRIBUTED' | 'CENTERED' | 'BLANK'
   }>
   isFullHeight?: boolean
