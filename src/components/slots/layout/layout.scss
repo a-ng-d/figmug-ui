@@ -9,10 +9,6 @@
     height: 100%;
   }
 
-  &__block:not(:first-child) + &__block {
-    border-left: 1px solid var(--figma-color-border-disabled);
-  }
-
   &__block {
     display: flex;
     flex: 1;
@@ -20,6 +16,10 @@
     justify-content: flex-start;
     padding: var(--size-xxsmall) 0;
     overflow-y: auto;
+
+    & + & {
+      border-left: 1px solid var(--figma-color-border-disabled);
+    }
 
     &--list {
       padding: var(--size-xxsmall) 0 0 0;
