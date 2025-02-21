@@ -4,7 +4,7 @@ export type LayoutProps = {
   id: string
   column: Array<{
     node: React.ReactElement
-    typeModifier?: 'LIST' | 'DISTRIBUTED' | 'CENTERED'
+    typeModifier?: 'LIST' | 'DISTRIBUTED' | 'CENTERED' | 'BLANK'
   }>
   isFullHeight?: boolean
 }
@@ -31,6 +31,7 @@ const Layout = (props: LayoutProps) => {
                 item.typeModifier === 'DISTRIBUTED' &&
                   'layout__block--distributed',
                 item.typeModifier === 'CENTERED' && 'layout__block--centered',
+                item.typeModifier === 'BLANK' && 'layout__block--blank',
               ]
                 .filter((n) => n)
                 .join(' ')}
