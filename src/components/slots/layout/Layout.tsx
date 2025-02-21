@@ -4,7 +4,7 @@ export type LayoutProps = {
   id: string
   column: Array<{
     node: React.ReactElement
-    type: 'LIST' | 'DISTRIBUTED' | 'CENTERED'
+    typeModifier?: 'LIST' | 'DISTRIBUTED' | 'CENTERED'
     hasPadding?: boolean
   }>
   isFullHeight?: boolean
@@ -28,9 +28,10 @@ const Layout = (props: LayoutProps) => {
               key={index}
               className={[
                 'layout__block',
-                item.type === 'LIST' && 'layout__block--list',
-                item.type === 'DISTRIBUTED' && 'layout__block--distributed',
-                item.type === 'CENTERED' && 'layout__block--centered',
+                item.typeModifier === 'LIST' && 'layout__block--list',
+                item.typeModifier === 'DISTRIBUTED' &&
+                  'layout__block--distributed',
+                item.typeModifier === 'CENTERED' && 'layout__block--centered',
                 !item.hasPadding && 'layout__block--no-padding',
               ]
                 .filter((n) => n)
