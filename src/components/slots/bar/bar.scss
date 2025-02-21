@@ -18,3 +18,11 @@
     flex: 1;
   }
 }
+
+@media (max-width: 460px) {
+  .bar.recharged {
+    flex-direction: column;
+    padding-top: var(--size-xxxsmall) !important;
+    padding-bottom: var(--size-xxxsmall) !important;
+  }
+}
