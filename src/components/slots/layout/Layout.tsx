@@ -11,7 +11,7 @@ export type LayoutProps = {
 }
 
 const Layout = (props: LayoutProps) => {
-  const { id, column, isFullWidth, isFullHeight = false } = props
+  const { id, column, isFullWidth = false, isFullHeight = false } = props
 
   return (
     <div
