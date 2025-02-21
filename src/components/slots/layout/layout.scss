@@ -9,7 +9,7 @@
     height: 100%;
   }
 
-  .control__block:not(.control__block:first-child) + .control__block {
+  &__block:not(:first-child) + &__block {
     border-left: 1px solid var(--figma-color-border-disabled);
   }
 
