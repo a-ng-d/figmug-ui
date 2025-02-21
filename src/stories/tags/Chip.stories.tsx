@@ -49,8 +49,8 @@ export const Score: Story = {
     leftSlot: (
       <ColorChip
         color="blue"
-        w="12px"
-        h="12px"
+        w="8px"
+        h="8px"
         isRounded={true}
       />
     ),
