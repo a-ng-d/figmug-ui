@@ -1,4 +1,4 @@
-import './Layout.scss'
+import './layout.scss'
 
 export type LayoutProps = {
   id: string
