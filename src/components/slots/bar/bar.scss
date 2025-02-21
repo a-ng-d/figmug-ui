@@ -15,7 +15,9 @@
   }
 
   & .bar__solo {
-    flex: 1;
+    &--full {
+      flex: 1;
+    }  
   }
 }
 

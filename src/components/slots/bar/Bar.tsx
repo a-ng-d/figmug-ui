@@ -9,6 +9,7 @@ export interface BarProps {
   padding?: string
   isCompact: boolean
   isOnlyText: boolean
+  isFullWidth?: boolean
 }
 
 export default class Bar extends React.Component<BarProps> {
@@ -16,6 +17,7 @@ export default class Bar extends React.Component<BarProps> {
     isCompact: false,
     isOnlyText: false,
     padding: '0 var(--size-xsmall)',
+    isFullWidth: false,
   }
 
   setBorder = (
@@ -39,6 +41,7 @@ export default class Bar extends React.Component<BarProps> {
     const {
       isCompact,
       isOnlyText,
+      isFullWidth,
       border,
       padding,
       leftPartSlot,
@@ -63,7 +66,13 @@ export default class Bar extends React.Component<BarProps> {
       >
         <div className="bar__left">{leftPartSlot}</div>
         {soloPartSlot !== undefined && (
-          <div className="bar__solo">{soloPartSlot}</div>
+          <div
+            className={['bar__solo', isFullWidth && 'bar__solo--full']
+              .filter((n) => n)
+              .join(' ')}
+          >
+            {soloPartSlot}
+          </div>
         )}
         <div className="bar__right">{rightPartSlot}</div>
       </div>
