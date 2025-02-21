@@ -6,16 +6,21 @@ export type LayoutProps = {
     node?: React.ReactElement
     typeModifier?: 'LIST' | 'DISTRIBUTED' | 'CENTERED' | 'BLANK'
   }>
+  isFullWidth?: boolean
   isFullHeight?: boolean
 }
 
 const Layout = (props: LayoutProps) => {
-  const { id, column, isFullHeight = false } = props
+  const { id, column, isFullWidth, isFullHeight = false } = props
 
   return (
     <div
       id={id}
-      className={['layout', isFullHeight && 'layout--full-height']
+      className={[
+        'layout',
+        isFullWidth && 'layout--full-width',
+        isFullHeight && 'layout--full-height',
+      ]
         .filter((n) => n)
         .join(' ')}
       role="layout"
