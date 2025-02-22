@@ -5,6 +5,7 @@ export type LayoutProps = {
   column: Array<{
     node?: React.ReactElement
     typeModifier?: 'LIST' | 'DISTRIBUTED' | 'CENTERED' | 'BLANK'
+    fixedWidth?: string
   }>
   isFullWidth?: boolean
   isFullHeight?: boolean
@@ -40,6 +41,10 @@ const Layout = (props: LayoutProps) => {
               ]
                 .filter((n) => n)
                 .join(' ')}
+              style={{
+                width:
+                  item.fixedWidth !== undefined ? item.fixedWidth : undefined,
+              }}
             >
               {item.node}
             </div>
