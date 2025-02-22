@@ -1,0 +1,42 @@
+.drawer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: var(--figma-color-bg);
+
+  &__knob {
+    position: absolute;
+    z-index: 2;
+    cursor: ns-resize;
+
+    &--top,
+    &--bottom {
+      cursor: ns-resize;
+      width: 100%;
+      height: var(--size-xxsmall);
+    }
+
+    &--left,
+    &--right {
+      cursor: ew-resize;
+      width: var(--size-xxsmall);
+      height: 100%;
+    }
+
+    &--top {
+      bottom: -4px;
+    }
+
+    &--right {
+      left: -4px;
+    }
+
+    &--bottom {
+      top: -4px;
+    }
+
+    &--left {
+      right: -4px;
+    }
+  }
+}
