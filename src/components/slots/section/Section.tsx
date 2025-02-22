@@ -2,6 +2,7 @@ import React from 'react'
 import './section.scss'
 
 export interface SectionProps {
+  id?: string
   title: React.ReactNode
   body: Array<{
     node?: React.ReactNode
@@ -29,10 +30,11 @@ export default class Section extends React.Component<SectionProps> {
   }
 
   render() {
-    const { title, border, body } = this.props
+    const { id, title, border, body } = this.props
 
     return (
       <div
+        id={id}
         className="section"
         style={{
           ...this.setBorder(border),

@@ -2,7 +2,7 @@ import React from 'react'
 import './simple-item.scss'
 
 export interface SimpleItemProps {
-  id: string
+  id?: string
   leftPartSlot: React.ReactNode
   rightPartSlot?: React.ReactNode
   isListItem?: boolean

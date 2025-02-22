@@ -2,6 +2,7 @@ import React from 'react'
 import './bar.scss'
 
 export interface BarProps {
+  id?: string
   rightPartSlot?: React.ReactElement
   soloPartSlot?: React.ReactElement
   leftPartSlot?: React.ReactElement
@@ -39,6 +40,7 @@ export default class Bar extends React.Component<BarProps> {
 
   render() {
     const {
+      id,
       isCompact,
       isOnlyText,
       isFullWidth,
@@ -51,6 +53,7 @@ export default class Bar extends React.Component<BarProps> {
 
     return (
       <div
+        id={id}
         className={[
           'bar',
           'recharged',

@@ -6,6 +6,7 @@ import Icon from '@components/assets/icon/Icon'
 import './popin.scss'
 
 export interface PopInProps {
+  id?: string
   title: string
   tag?: string
   actions?: {
@@ -42,6 +43,7 @@ export interface PopInProps {
 
 const PopIn = (props: PopInProps) => {
   const {
+    id,
     title,
     actions,
     select,
@@ -54,7 +56,10 @@ const PopIn = (props: PopInProps) => {
   } = props
 
   return (
-    <div className="popin recharged">
+    <div
+      id={id}
+      className="popin recharged"
+    >
       <div className="popin__header">
         <div className="popin__title">
           <p className={`${texts.type} type type--large type--bold`}>{title}</p>

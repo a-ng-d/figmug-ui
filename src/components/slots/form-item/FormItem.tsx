@@ -4,7 +4,7 @@ import Chip from '@components/tags/chip/Chip'
 import './form-item.scss'
 
 export interface FormItemProps {
-  id: string
+  id?: string
   label?: string
   helper?: {
     type: 'INFO' | 'ERROR'

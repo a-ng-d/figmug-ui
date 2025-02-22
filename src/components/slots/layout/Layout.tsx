@@ -1,7 +1,7 @@
 import './layout.scss'
 
 export type LayoutProps = {
-  id: string
+  id?: string
   column: Array<{
     node?: React.ReactElement
     typeModifier?: 'LIST' | 'DISTRIBUTED' | 'CENTERED' | 'BLANK'
