@@ -1,11 +1,13 @@
+import Drawer, { DrawerProps } from '../drawer/Drawer'
 import './layout.scss'
 
 export type LayoutProps = {
   id?: string
   column: Array<{
     node?: React.ReactElement
-    typeModifier?: 'LIST' | 'DISTRIBUTED' | 'CENTERED' | 'BLANK'
+    typeModifier?: 'LIST' | 'DISTRIBUTED' | 'CENTERED' | 'BLANK' | 'DRAWER'
     fixedWidth?: string
+    drawerOptions?: DrawerProps
   }>
   isFullWidth?: boolean
   isFullHeight?: boolean
@@ -28,7 +30,11 @@ const Layout = (props: LayoutProps) => {
     >
       {column.map(
         (item, index) =>
-          item.node !== undefined && (
+          item.node !== undefined &&
+          (item.typeModifier === 'DRAWER' &&
+          item.drawerOptions !== undefined ? (
+            <Drawer {...item.drawerOptions} />
+          ) : (
             <div
               key={index}
               className={[
@@ -48,7 +54,7 @@ const Layout = (props: LayoutProps) => {
             >
               {item.node}
             </div>
-          )
+          ))
       )}
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import './drawer.scss'
 
 export type DrawerProps = {
-  id: string
+  id?: string
   direction: 'VERTICAL' | 'HORIZONTAL'
   pin: 'TOP' | 'BOTTOM' | 'LEFT' | 'RIGHT'
   defaultSize: {
