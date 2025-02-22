@@ -145,8 +145,6 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
 
     const offset = direction === 'VERTICAL' ? clientY : clientX
 
-    console.log(anchor, offset)
-
     const delta = Math.abs(anchor - offset)
 
     this.setState({
