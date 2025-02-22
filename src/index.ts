@@ -45,6 +45,7 @@ export { default as PopIn } from '@components/slots/popin/Popin'
 export { default as Section } from '@components/slots/section/Section'
 export { default as SimpleItem } from '@components/slots/simple-item/SimpleItem'
 export { default as Layout } from '@components/slots/layout/Layout'
+export { default as Drawer } from '@components/slots/drawer/Drawer'
 
 // Tags
 export { default as Chip } from '@components/tags/chip/Chip'
