@@ -1,22 +1,18 @@
 import React from 'react'
 import './drawer.scss'
 
+interface Unit {
+  value?: number
+  unit: 'PIXEL' | 'PERCENT' | 'AUTO'
+}
+
 export type DrawerProps = {
   id?: string
   direction: 'VERTICAL' | 'HORIZONTAL'
   pin: 'TOP' | 'BOTTOM' | 'LEFT' | 'RIGHT'
-  defaultSize: {
-    value?: number
-    unit: 'PIXEL' | 'PERCENT' | 'AUTO'
-  }
-  maxSize: {
-    value?: number
-    unit: 'PIXEL' | 'PERCENT' | 'AUTO'
-  }
-  minSize: {
-    value?: number
-    unit: 'PIXEL' | 'PERCENT' | 'AUTO'
-  }
+  defaultSize: Unit
+  maxSize: Unit
+  minSize: Unit
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
   children?: React.ReactNode
   onCollapse?: () => void
@@ -93,8 +89,9 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
     return styles
   }
 
-  setUnit = (unit: 'PIXEL' | 'PERCENT' | 'AUTO') => {
-    return unit === 'PIXEL' ? 'px' : unit === 'PERCENT' ? '%' : 'auto'
+  setUnit = (size: Unit) => {
+    if (size.unit === 'AUTO') return 'auto'
+    return size.unit === 'PIXEL' ? `${size.value}px` : `${size.value}%`
   }
 
   expandDrawer = () => {
@@ -176,14 +173,14 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
           ...this.setBorder(border),
           ...(direction === 'VERTICAL'
             ? {
-                height: `${drawerSize.value}${this.setUnit(drawerSize.unit)}`,
-                maxHeight: `${maxSize.value}${this.setUnit(maxSize.unit)}`,
-                minHeight: `${minSize.value}${this.setUnit(minSize.unit)}`,
+                height: this.setUnit(drawerSize),
+                maxHeight: this.setUnit(maxSize),
+                minHeight: this.setUnit(minSize),
               }
             : {
-                width: `${drawerSize.value}${this.setUnit(drawerSize.unit)}`,
-                maxWidth: `${maxSize.value}${this.setUnit(maxSize.unit)}`,
-                minWidth: `${minSize.value}${this.setUnit(minSize.unit)}`,
+                width: this.setUnit(drawerSize),
+                maxWidth: this.setUnit(maxSize),
+                minWidth: this.setUnit(minSize),
               }),
         }}
         className={['drawer'].filter((n) => n).join(' ')}
