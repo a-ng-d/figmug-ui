@@ -1,4 +1,4 @@
-import icons from '@styles/icons.module.scss'
+import icons from '@styles/icons/icons.module.scss'
 import layouts from '@styles/layouts.module.scss'
 import texts from '@styles/texts.module.scss'
 

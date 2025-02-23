@@ -1,4 +1,4 @@
-import icons from '@styles/icons.module.scss'
+import icons from '@styles/icons/icons.module.scss'
 import type { IconList } from '@tps/icon.types'
 import './icon.scss'
 

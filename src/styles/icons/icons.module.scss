@@ -1,0 +1,523 @@
+.icon {
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  cursor: default;
+  pointer-events: none;
+
+  &--adjust {
+    mask-image: url('./figma-ui2-icons.svg#adjust');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#adjust');
+  }
+
+  &--alert {
+    mask-image: url('./figma-ui2-icons.svg#alert');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#alert');
+  }
+
+  &--angle {
+    mask-image: url('./figma-ui2-icons.svg#angle');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#angle');
+  }
+
+  &--arrow-left-right {
+    mask-image: url('./figma-ui2-icons.svg#arrow-left-right');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#arrow-left-right');
+  }
+
+  &--arrow-up-down {
+    mask-image: url('./figma-ui2-icons.svg#arrow-up-down');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#arrow-up-down');
+  }
+
+  &--auto-layout-horizontal {
+    mask-image: url('./figma-ui2-icons.svg#auto-layout-horizontal');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#auto-layout-horizontal');
+  }
+
+  &--auto-layout-vertical {
+    mask-image: url('./figma-ui2-icons.svg#auto-layout-vertical');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#auto-layout-vertical');
+  }
+
+  &--back {
+    mask-image: url('./figma-ui2-icons.svg#back');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#back');
+  }
+
+  &--blend-empty {
+    mask-image: url('./figma-ui2-icons.svg#blend-empty');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#blend-empty');
+  }
+
+  &--blend {
+    mask-image: url('./figma-ui2-icons.svg#blend');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#blend');
+  }
+
+  &--break {
+    mask-image: url('./figma-ui2-icons.svg#break');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#break');
+  }
+
+  &--caret-down {
+    mask-image: url('./figma-ui2-icons.svg#caret-down');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#caret-down');
+  }
+
+  &--caret-left {
+    mask-image: url('./figma-ui2-icons.svg#caret-left');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#caret-left');
+  }
+
+  &--caret-right {
+    mask-image: url('./figma-ui2-icons.svg#caret-right');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#caret-right');
+  }
+
+  &--caret-up {
+    mask-image: url('./figma-ui2-icons.svg#caret-up');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#caret-up');
+  }
+
+  &--chevron-down {
+    mask-image: url('./figma-ui2-icons.svg#chevron-down');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#chevron-down');
+  }
+
+  &--chevron-left {
+    mask-image: url('./figma-ui2-icons.svg#chevron-left');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#chevron-left');
+  }
+
+  &--chevron-right {
+    mask-image: url('./figma-ui2-icons.svg#chevron-right');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#chevron-right');
+  }
+
+  &--chevron-up {
+    mask-image: url('./figma-ui2-icons.svg#chevron-up');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#chevron-up');
+  }
+
+  &--check {
+    mask-image: url('./figma-ui2-icons.svg#check');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#check');
+  }
+
+  &--close {
+    mask-image: url('./figma-ui2-icons.svg#close');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#close');
+  }
+
+  &--component {
+    mask-image: url('./figma-ui2-icons.svg#component');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#component');
+  }
+
+  &--corner-radius {
+    mask-image: url('./figma-ui2-icons.svg#corner-radius');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#corner-radius');
+  }
+
+  &--corners {
+    mask-image: url('./figma-ui2-icons.svg#corners');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#corners');
+  }
+
+  &--downward {
+    mask-image: url('./figma-ui2-icons.svg#downward');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#downward');
+  }
+
+  &--distribute-horizontal-spacing {
+    mask-image: url('./figma-ui2-icons.svg#distribute-horizontal-spacing');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#distribute-horizontal-spacing');
+  }
+
+  &--distribute-vertical-spacing {
+    mask-image: url('./figma-ui2-icons.svg#distribute-vertical-spacing');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#distribute-vertical-spacing');
+  }
+
+  &--draft {
+    mask-image: url('./figma-ui2-icons.svg#draft');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#draft');
+  }
+
+  &--effects {
+    mask-image: url('./figma-ui2-icons.svg#effects');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#effects');
+  }
+
+  &--ellipses {
+    mask-image: url('./figma-ui2-icons.svg#ellipses');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#ellipses');
+  }
+
+  &--eyedropper {
+    mask-image: url('./figma-ui2-icons.svg#eyedropper');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#eyedropper');
+  }
+
+  &--forward {
+    mask-image: url('./figma-ui2-icons.svg#forward');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#forward');
+  }
+
+  &--filter {
+    mask-image: url('./figma-ui2-icons.svg#filter');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#filter');
+  }
+
+  &--frame {
+    mask-image: url('./figma-ui2-icons.svg#frame');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#frame');
+  }
+
+  &--group {
+    mask-image: url('./figma-ui2-icons.svg#group');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#group');
+  }
+
+  &--hidden {
+    mask-image: url('./figma-ui2-icons.svg#hidden');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#hidden');
+  }
+
+  &--horizontal-padding {
+    mask-image: url('./figma-ui2-icons.svg#horizontal-padding');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#horizontal-padding');
+  }
+
+  &--hyperlink {
+    mask-image: url('./figma-ui2-icons.svg#hyperlink');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#hyperlink');
+  }
+
+  &--image {
+    mask-image: url('./figma-ui2-icons.svg#image');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#image');
+  }
+
+  &--import {
+    mask-image: url('./figma-ui2-icons.svg#import');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#import');
+  }
+
+  &--instance {
+    mask-image: url('./figma-ui2-icons.svg#instance');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#instance');
+  }
+
+  &--key {
+    mask-image: url('./figma-ui2-icons.svg#key');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#key');
+  }
+
+  &--layout-align-bottom {
+    mask-image: url('./figma-ui2-icons.svg#layout-align-bottom');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-bottom');
+  }
+
+  &--layout-align-horizontal-centers {
+    mask-image: url('./figma-ui2-icons.svg#layout-align-horizontal-centers');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-horizontal-centers');
+  }
+
+  &--layout-align-left {
+    mask-image: url('./figma-ui2-icons.svg#layout-align-left');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-left');
+  }
+
+  &--layout-align-right {
+    mask-image: url('./figma-ui2-icons.svg#layout-align-right');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-right');
+  }
+
+  &--layout-align-top {
+    mask-image: url('./figma-ui2-icons.svg#layout-align-top');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-top');
+  }
+
+  &--layout-align-vertical-centers {
+    mask-image: url('./figma-ui2-icons.svg#layout-align-vertical-centers');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-vertical-centers');
+  }
+
+  &--layout-grid-columns {
+    mask-image: url('./figma-ui2-icons.svg#layout-grid-columns');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-grid-columns');
+  }
+
+  &--layout-grid-rows {
+    mask-image: url('./figma-ui2-icons.svg#layout-grid-rows');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-grid-rows');
+  }
+
+  &--layout-grid-uniform {
+    mask-image: url('./figma-ui2-icons.svg#layout-grid-uniform');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-grid-uniform');
+  }
+
+  &--library {
+    mask-image: url('./figma-ui2-icons.svg#library');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#library');
+  }
+
+  &--link-broken {
+    mask-image: url('./figma-ui2-icons.svg#link-broken');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#link-broken');
+  }
+
+  &--link-connected {
+    mask-image: url('./figma-ui2-icons.svg#link-connected');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#link-connected');
+  }
+
+  &--list-detailed {
+    mask-image: url('./figma-ui2-icons.svg#list-detailed');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#list-detailed');
+  }
+
+  &--list-tile {
+    mask-image: url('./figma-ui2-icons.svg#list-tile');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#list-tile');
+  }
+
+  &--list {
+    mask-image: url('./figma-ui2-icons.svg#list');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#list');
+  }
+
+  &--lock-off {
+    mask-image: url('./figma-ui2-icons.svg#lock-off');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#lock-off');
+  }
+
+  &--lock-on {
+    mask-image: url('./figma-ui2-icons.svg#lock-on');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#lock-on');
+  }
+
+  &--minus {
+    mask-image: url('./figma-ui2-icons.svg#minus');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#minus');
+  }
+
+  &--play {
+    mask-image: url('./figma-ui2-icons.svg#play');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#play');
+  }
+
+  &--plus {
+    mask-image: url('./figma-ui2-icons.svg#plus');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#plus');
+  }
+
+  &--random {
+    mask-image: url('./figma-ui2-icons.svg#random');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#random');
+  }
+
+  &--recent {
+    mask-image: url('./figma-ui2-icons.svg#recent');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#recent');
+  }
+
+  &--refresh {
+    mask-image: url('./figma-ui2-icons.svg#refresh');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#refresh');
+  }
+
+  &--reset {
+    mask-image: url('./figma-ui2-icons.svg#reset');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#reset');
+  }
+
+  &--resize-to-fit {
+    mask-image: url('./figma-ui2-icons.svg#resize-to-fit');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#resize-to-fit');
+  }
+
+  &--resolve-filled {
+    mask-image: url('./figma-ui2-icons.svg#resolve-filled');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#resolve-filled');
+  }
+
+  &--resolve {
+    mask-image: url('./figma-ui2-icons.svg#resolve');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#resolve');
+  }
+
+  &--reverse {
+    mask-image: url('./figma-ui2-icons.svg#reverse');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#reverse');
+  }
+
+  &--search-large {
+    mask-image: url('./figma-ui2-icons.svg#search-large');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#search-large');
+  }
+
+  &--search {
+    mask-image: url('./figma-ui2-icons.svg#search');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#search');
+  }
+
+  &--settings {
+    mask-image: url('./figma-ui2-icons.svg#settings');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#settings');
+  }
+
+  &--share {
+    mask-image: url('./figma-ui2-icons.svg#share');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#share');
+  }
+
+  &--smiley {
+    mask-image: url('./figma-ui2-icons.svg#smiley');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#smiley');
+  }
+
+  &--sort-alpha-asc {
+    mask-image: url('./figma-ui2-icons.svg#sort-alpha-asc');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#sort-alpha-asc');
+  }
+
+  &--sort-alpha-dsc {
+    mask-image: url('./figma-ui2-icons.svg#sort-alpha-dsc');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#sort-alpha-dsc');
+  }
+
+  &--sort-top-bottom {
+    mask-image: url('./figma-ui2-icons.svg#sort-top-bottom');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#sort-top-bottom');
+  }
+
+  &--spacing {
+    mask-image: url('./figma-ui2-icons.svg#spacing');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#spacing');
+  }
+
+  &--star-off {
+    mask-image: url('./figma-ui2-icons.svg#star-off');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#star-off');
+  }
+
+  &--star-on {
+    mask-image: url('./figma-ui2-icons.svg#star-on');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#star-on');
+  }
+
+  &--stroke-weight {
+    mask-image: url('./figma-ui2-icons.svg#stroke-weight');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#stroke-weight');
+  }
+
+  &--styles {
+    mask-image: url('./figma-ui2-icons.svg#styles');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#styles');
+  }
+
+  &--swap {
+    mask-image: url('./figma-ui2-icons.svg#swap');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#swap');
+  }
+
+  &--theme {
+    mask-image: url('./figma-ui2-icons.svg#theme');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#theme');
+  }
+
+  &--tidy-up-grid {
+    mask-image: url('./figma-ui2-icons.svg#tidy-up-grid');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#tidy-up-grid');
+  }
+
+  &--tidy-up-list-horizontal {
+    mask-image: url('./figma-ui2-icons.svg#tidy-up-list-horizontal');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#tidy-up-list-horizontal');
+  }
+
+  &--tidy-up-list-vertical {
+    mask-image: url('./figma-ui2-icons.svg#tidy-up-list-vertical');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#tidy-up-list-vertical');
+  }
+
+  &--timer {
+    mask-image: url('./figma-ui2-icons.svg#timer');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#timer');
+  }
+
+  &--trash {
+    mask-image: url('./figma-ui2-icons.svg#trash');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#trash');
+  }
+
+  &--vertical-padding {
+    mask-image: url('./figma-ui2-icons.svg#vertical-padding');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#vertical-padding');
+  }
+
+  &--visible {
+    mask-image: url('./figma-ui2-icons.svg#visible');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#visible');
+  }
+
+  &--warning-large {
+    mask-image: url('./figma-ui2-icons.svg#warning-large');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#warning-large');
+  }
+
+  &--warning {
+    mask-image: url('./figma-ui2-icons.svg#warning');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#warning');
+  }
+
+  &--repository {
+    mask-image: url('./figma-ui2-icons.svg#repository');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#repository');
+  }
+
+  &--info {
+    mask-image: url('./figma-ui2-icons.svg#info');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#info');
+  }
+
+  &--resize-grip {
+    mask-image: url('./figma-ui2-icons.svg#resize-grip');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#resize-grip');
+  }
+
+  &--spinner {
+    mask-image: url('./figma-ui2-icons.svg#spinner');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#spinner');
+    animation: rotating 1s linear infinite;
+  }
+
+  &--upward {
+    mask-image: url('./figma-ui2-icons.svg#upward');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#upward');
+  }
+
+  &--user {
+    mask-image: url('./figma-ui2-icons.svg#user');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#user');
+  }
+
+  &--target {
+    mask-image: url('./figma-ui2-icons.svg#target');
+    -webkit-mask-image: url('./figma-ui2-icons.svg#target');
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
