@@ -230,7 +230,7 @@ export default class Dropdown extends React.Component<
           </span>
           <Icon
             type="PICTO"
-            iconName="caret"
+            iconName="chevron-down"
             iconColor="var(--figma-color-icon-disabled)"
             customClassName="select-menu__caret"
           />

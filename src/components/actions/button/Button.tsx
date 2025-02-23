@@ -117,7 +117,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         {hasMultipleActions && (
           <Icon
             type="PICTO"
-            iconName="caret"
+            iconName="caret-down"
             iconColor={
               type === 'primary'
                 ? 'var(--figma-color-icon-onbrand)'
