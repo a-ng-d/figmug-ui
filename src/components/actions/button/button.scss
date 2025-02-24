@@ -50,7 +50,7 @@
   --icon-button-large-width: var(--size-large);
   --icon-button-large-height: var(--size-large);
 
-  /* Types */
+  /* Primary */
   --button-background-color-primary: var(--figma-color-bg-brand);
   --button-background-color-primary-hover: var(--figma-color-bg-brand-hover);
   --button-background-color-primary-pressed: var(--figma-color-bg-brand-pressed);
@@ -87,6 +87,7 @@
   --button-icon-color-primary-focus: var(--figma-color-icon-onbrand);
   --button-icon-color-primary-disabled: var(--figma-color-icon-ondisabled);
 
+  /* Secondary */
   --button-background-color-secondary: var(--figma-color-bg);
   --button-background-color-secondary-hover: var(--figma-color-bg-hover);
   --button-background-color-secondary-pressed: var(--figma-color-bg-pressed);
@@ -123,6 +124,7 @@
   --button-icon-color-secondary-focus: var(--figma-color-icon);
   --button-icon-color-secondary-disabled: var(--figma-color-icon-disabled);
 
+  /* Tertiary */
   --button-background-color-tertiary: var(--figma-color-bg);
   --button-background-color-tertiary-hover: var(--figma-color-bg);
   --button-background-color-tertiary-pressed: var(--figma-color-bg);
@@ -159,6 +161,7 @@
   --button-icon-color-tertiary-focus: var(--figma-color-icon);
   --button-icon-color-tertiary-disabled: var(--figma-color-icon-disabled);
 
+  /* Destructive */
   --button-background-color-destructive: var(--figma-color-bg-danger);
   --button-background-color-destructive-hover: var(--figma-color-bg-danger-hover);
   --button-background-color-destructive-pressed: var(--figma-color-bg-danger-pressed);
@@ -195,6 +198,7 @@
   --button-icon-color-destructive-focus: var(--figma-color-icon-ondanger);
   --button-icon-color-destructive-disabled: var(--figma-color-icon-ondisabled);
 
+  /* Alternative */
   --button-background-color-alternative: var(--figma-color-bg-component);
   --button-background-color-alternative-hover: var(--figma-color-bg-component-hover);
   --button-background-color-alternative-pressed: var(--figma-color-bg-component-pressed);
@@ -231,6 +235,7 @@
   --button-icon-color-alternative-focus: var(--figma-color-icon-oncomponent);
   --button-icon-color-alternative-disabled: var(--figma-color-icon-ondisabled);
 
+  /* Icon Button - Default */
   --icon-button-background-color: var(--figma-color-bg);
   --icon-button-background-color-hover: var(--figma-color-bg-hover);
   --icon-button-background-color-pressed: var(--figma-color-bg-pressed);
@@ -262,6 +267,7 @@
   --icon-button-notification-background-color-focus: var(--figma-color-icon);
   --icon-button-notification-background-color-disabled: var(--figma-color-icon-disabled);
 
+  /* Icon Button - Selected */
   --icon-button-background-color-selected: var(--figma-color-bg-brand);
   --icon-button-background-color-selected-hover: var(--figma-color-bg-brand);
   --icon-button-background-color-selected-pressed: var(--figma-color-bg-brand);
