@@ -296,7 +296,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
       <div
         className={[
           'input',
-          'recharged',
           'input--color',
           'input--with-icon',
           isBlocked && 'input--blocked',
@@ -365,7 +364,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
       <div
         className={[
           'input',
-          'recharged',
           'input--number',
           icon !== undefined && 'input--with-icon',
           isFlex && 'input--flex',
@@ -393,7 +391,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
                 type={icon?.type}
                 iconName={icon?.value}
                 iconLetter={icon?.value}
-                iconColor="var(--figma-color-text-disabled)"
               />
             </div>
           )}
@@ -439,7 +436,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
               <Icon
                 type={'LETTER'}
                 iconLetter={unit}
-                iconColor="var(--figma-color-text-disabled)"
               />
             </div>
           )}
@@ -485,7 +481,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
               type={icon?.type}
               iconName={icon?.value}
               iconLetter={icon?.value}
-              iconColor="var(--figma-color-text-disabled)"
             />
           </div>
         )}
@@ -537,12 +532,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
 
     return (
       <div
-        className={[
-          'input',
-          'recharged',
-          'input--long-text',
-          isBlocked && 'input--blocked',
-        ]
+        className={['input', 'input--long-text', isBlocked && 'input--blocked']
           .filter((n) => n)
           .join(' ')}
       >
@@ -579,12 +569,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
 
     return (
       <div
-        className={[
-          'input',
-          'recharged',
-          'input--code',
-          isBlocked && 'input--blocked',
-        ]
+        className={['input', 'input--code', isBlocked && 'input--blocked']
           .filter((n) => n)
           .join(' ')}
       >

@@ -1,7 +1,8 @@
 :root {
   --icon-width: var(--size-medium);
   --icon-height: var(--size-medium);
-  --icon-color: var(--figma-color-icon);
+  --icon-picto-color: var(--figma-color-icon);
+  --icon-letter-color: var(--figma-color-text-disabled);
 }
 
 .icon-box {
@@ -13,5 +14,12 @@
   width: var(--icon-width);
   height: var(--icon-height);
   user-select: none;
-  background-color: var(--icon-color);
+
+  &--picto {
+    background-color: var(--icon-picto-color);
+  }
+
+  &--letter span {
+    color: var(--icon-letter-color);
+  }
 }

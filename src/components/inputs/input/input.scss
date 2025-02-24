@@ -1,8 +1,137 @@
-.input.recharged {
+:root {
+  /* Base */
+  --input-number-width: 96px;
+  --input-color-width: 96px;
+  --input-height: var(--size-medium);
+  --input-margin: 0;
+  --input-radius: var(--border-radius-small);
+  --input-padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall) var(--size-xxsmall);
+  --input-padding-clearable: var(--size-medium);
+  --input-padding-unit: var(--size-small);
+  --input-padding-color-picker: var(--size-medium);
+  --input-background-color: var(--figma-color-bg);
+  --input-border-width: var(--size-unit);
+  --input-border-offset: var(--size-neg-unit);
+  --input-border-color: var(--figma-color-border);
+  --input-text-font-family: var(--font-stack);
+  --input-text-font-size: var(--font-size-xsmall);
+  --input-text-font-weight: var(--font-weight-normal);
+  --input-text-letterspacing: var( --font-letter-spacing-neg-xsmall);
+  --input-text-line-height: var(--font-line-height);
+  --input-text-color: var(--figma-color-text);
+  --input-text-placeholder-color: var(--figma-color-text-secondary);
+
+  --input-color-chip-width: var(--size-xsmall);
+  --input-color-chip-height: var(--size-xsmall);
+  --input-color-chip-left: var(--size-xxsmall);
+  --input-color-chip-border: rgba(0, 0, 0, 0.1) 0 0 0 var(--size-unit) inset;
+  --input-color-chip-border-focus: var(--figma-color-border-selected) 0 0 0 var(--size-unit) inset;
+
+  --input-textarea-min-height: var(--size-xxlarge);
+  --input-textarea-padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall) var(--size-xxsmall);
+
+  --input-textarea-background-color: var(--figma-color-bg);
+  --input-textarea-border-width: var(--size-unit);
+  --input-textarea-border-offset: var(--size-neg-unit);
+  --input-textarea-border-color: var(--figma-color-border);
+  --input-textarea-text-color: var(--figma-color-text);
+  --input-text-textarea-placeholder-color: var(--figma-color-text-secondary);
+
+  /* Default */
+  --input-background-color-empty: var(--figma-color-bg);
+  --input-border-width-empty: var(--size-unit);
+  --input-border-offset-empty: var(--size-neg-unit);
+  --input-border-color-empty: var(--figma-color-border);
+  --input-text-color-empty: var(--figma-color-text);
+  --input-text-placeholder-color-empty: var(--figma-color-text-secondary);
+
+  --input-background-color-empty-hover: var(--figma-color-bg);
+  --input-border-width-empty-hover: var(--size-unit);
+  --input-border-offset-empty-hover: var(--size-neg-unit);
+  --input-border-color-empty-hover: var(--figma-color-border);
+  --input-text-color-empty-hover: var(--figma-color-text);
+  --input-text-placeholder-color-empty-hover: var(--figma-color-text-secondary);
+
+  --input-background-color-empty-focus: var(--figma-color-bg);
+  --input-border-width-empty-focus: var(--size-xunit);
+  --input-border-offset-empty-focus: var(--size-neg-xunit);
+  --input-border-color-empty-focus: var(--figma-color-border-selected);
+  --input-text-color-empty-focus: var(--figma-color-text);
+  --input-text-placeholder-color-empty-focus: var(--figma-color-text-secondary);
+
+  --input-background-color-hover: var(--figma-color-bg);
+  --input-border-width-hover: var(--size-unit);
+  --input-border-offset-hover: var(--size-neg-unit);
+  --input-border-color-hover: var(--figma-color-border);
+  --input-text-color-hover: var(--figma-color-text);
+  --input-text-placeholder-color-hover: var(--figma-color-text-secondary);
+
+  --input-background-color-focus: var(--figma-color-bg);
+  --input-border-width-focus: var(--size-xunit);
+  --input-border-offset-focus: var(--size-neg-xunit);
+  --input-border-color-focus: var(--figma-color-border-selected);
+  --input-text-color-focus: var(--figma-color-text);
+  --input-text-placeholder-color-focus: var(--figma-color-text-secondary);
+
+  /* Error */
+  --input-background-color-empty-error: var(--figma-color-bg);
+  --input-border-width-empty-error: var(--size-unit);
+  --input-border-offset-empty-error: var(--size-neg-unit);
+  --input-border-color-empty-error: var(--figma-color-border-danger);
+  --input-text-color-empty-error: var(--figma-color-text);
+  --input-text-placeholder-color-empty-error: var(--figma-color-text-secondary);
+
+  --input-background-color-empty-error-hover: var(--figma-color-bg);
+  --input-border-width-empty-error-hover: var(--size-unit);
+  --input-border-offset-empty-error-hover: var(--size-neg-unit);
+  --input-border-color-empty-error-hover: var(--figma-color-border-danger);
+  --input-text-color-empty-error-hover: var(--figma-color-text);
+  --input-text-placeholder-color-empty-error-hover: var(--figma-color-text-secondary);
+
+  --input-background-color-empty-error-focus: var(--figma-color-bg);
+  --input-border-width-empty-error-focus: var(--size-xunit);
+  --input-border-offset-empty-error-focus: var(--size-neg-xunit);
+  --input-border-color-empty-error-focus: var(--figma-color-border-danger);
+  --input-text-color-empty-error-focus: var(--figma-color-text);
+  --input-text-placeholder-color-empty-error-focus: var(--figma-color-text-secondary);
+
+  --input-background-color-error: var(--figma-color-bg);
+  --input-border-width-error: var(--size-unit);
+  --input-border-offset-error: var(--size-neg-unit);
+  --input-border-color-error: var(--figma-color-border-danger);
+  --input-text-color-error: var(--figma-color-text);
+  --input-text-placeholder-color-error: var(--figma-color-text-secondary);
+
+  --input-background-color-error-hover: var(--figma-color-bg);
+  --input-border-width-error-hover: var(--size-unit);
+  --input-border-offset-error-hover: var(--size-neg-unit);
+  --input-border-color-error-hover: var(--figma-color-border-danger);
+  --input-text-color-error-hover: var(--figma-color-text);
+  --input-text-placeholder-color-error-hover: var(--figma-color-text-secondary);
+
+  --input-background-color-error-focus: var(--figma-color-bg);
+  --input-border-width-error-focus: var(--size-xunit);
+  --input-border-offset-error-focus: var(--size-neg-xunit);
+  --input-border-color-error-focus: var(--figma-color-border-danger);
+  --input-text-color-error-focus: var(--figma-color-text);
+  --input-text-placeholder-color-error-focus: var(--figma-color-text-secondary);
+
+  /* Disabled */
+  --input-background-color-disabled: var(--figma-color-bg-tertiary);
+  --input-border-width-disabled: var(--size-unit);
+  --input-border-offset-disabled: var(--size-neg-unit);
+  --input-border-color-disabled: var(--figma-color-border-disabled);
+  --input-text-color-disabled: var(--figma-color-text-disabled);
+  --input-text-placeholder-color-disabled: var(--figma-color-text-tertiary);
+}
+
+.input {
   display: flex;
   align-items: center;
+  position: relative;
   cursor: default;
   user-select: none;
+
 
   &.input--blocked {
     pointer-events: none;
@@ -12,23 +141,29 @@
     pointer-events: none;
   }
 
+  &--with-icon &{
+    &__field {
+        padding-left: var(--input-padding-color-picker);
+    }
+}
+
   input {
     cursor: default;
     user-select: none;
 
     &[type='color' i] {
       position: absolute;
-      top: 8px;
-      left: var(--size-xxsmall);
-      appearance: none;
+      top: 50%;
+      left: var(--input-color-chip-left);
+      transform: translateY(-50%);
       appearance: none;
       z-index: 1;
       border: none;
-      background-color: transparent;
+      outline: none;
       background-color: transparent;
       padding: 0;
-      width: var(--size-xsmall);
-      height: var(--size-xsmall);
+      width: var(--input-color-chip-width);
+      height: var(--input-color-chip-height);
     }
 
     &[type='color' i]::-webkit-color-swatch-wrapper {
@@ -36,27 +171,29 @@
     }
 
     &[type='color' i]::-webkit-color-swatch {
-      box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 1px inset;
+      box-shadow: var(--input-color-chip-border);
       border: none;
     }
 
     &[type='color' i]:focus {
-      outline: 1px solid var(--figma-color-border-selected);
-      outline-offset: -1px;
+      --input-color-chip-border: var(--input-color-chip-border-focus);
     }
 
-    &[type='color' i]:focus ~ input {
-      outline: 1px solid var(--figma-color-border-selected);
-      outline-offset: -2px;
-      border: 1px solid var(--figma-color-border-selected);
+    &[type='color' i]:focus ~ .input__field {
+      --input-background-color: var(--input-background-color-focus);
+      --input-border-width: var(--input-border-width-focus);
+      --input-border-offset: var(--input-border-offset-focus);
+      --input-border-color: var(--input-border-color-focus);
+      --input-text-color: var(--input-text-color-focus);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-focus);
     }
 
     &[type='number'] {
-      width: 96px;
+      width: var(--input-number-width);
     }
 
-    &[type='color'] ~ input {
-      width: 96px;
+    &[type='color'] ~ .input__field {
+      width: var(--input-color-width);
     }
 
     &[type='number']::-webkit-inner-spin-button {
@@ -69,7 +206,7 @@
   }
 
   /* Input */
-  .input__wrapper {
+  &__wrapper {
     position: relative;
   }
 
@@ -77,122 +214,208 @@
     flex: 1;
   }
 
-  .input__icon {
+  &__icon {
     position: absolute;
-    top: 1px;
+    top: 0;
     left: 0;
     z-index: 2;
-    width: 30px;
-    height: 30px;
   }
 
-  .input__field {
-    --black8: var(--figma-color-text);
-    --white: var(--figma-color-bg);
+  &__field {
+    font-size: var(--input-text-font-size);
+    font-weight: var(--input-text-font-weight);
+    letter-spacing: var(--input-text-letterspacing);
+    line-height: var(--input-text-line-height);
+    position: relative;
+    display: flex;
+    overflow: visible;
+    align-items: center;
+    width: 100%;
+    height: var(--input-height);
+    margin: var(--input-margin);
+    padding: var(--input-padding);
+    color: var(--input-text-color);
+    outline: var(--input-border-width) solid var(--input-border-color);
+    outline-offset: var(--input-border-offset);
+    border-radius: var(--input-radius);
+    background-color: var(--input-background-color);
+    border: none;
+    box-sizing: border-box;
+    cursor: default;
+    user-select: none;
 
-    &:hover,
-    &:placeholder-shown:hover {
-      --black8: var(--figma-color-text);
-      --black1: var(--figma-color-border);
+    &::placeholder {
+      color: var(--input-text-placeholder-color);
     }
 
-    &:active,
-    &:focus {
-      --blue: var(--figma-color-border-selected);
-      --black: var(--figma-color-text);
+    &:disabled {
+      pointer-events: none;
     }
 
     &:placeholder-shown {
-      --black1: var(--figma-color-border);
+      --input-background-color: var(--input-background-color-empty);
+      --input-border-width: var(--input-border-width-empty);
+      --input-border-offset: var(--input-border-offset-empty);
+      --input-border-color: var(--input-border-color-empty);
+      --input-text-color: var(--input-text-color-empty);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-empty);
+    }
+
+    &:placeholder-shown:hover {
+      --input-background-color: var(--input-background-color-empty-hover);
+      --input-border-width: var(--input-border-width-empty-hover);
+      --input-border-offset: var(--input-border-offset-empty-hover);
+      --input-border-color: var(--input-border-color-empty-hover);
+      --input-text-color: var(--input-text-color-empty-hover);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-hover);
+    }
+
+    &:placeholder-shown:focus {
+      --input-background-color: var(--input-background-color-empty-focus);
+      --input-border-width: var(--input-border-width-empty-focus);
+      --input-border-offset: var(--input-border-offset-empty-focus);
+      --input-border-color: var(--input-border-color-empty-focus);
+      --input-text-color: var(--input-text-color-empty-focus);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-focus);
+    }
+
+    &--error:placeholder-shown {
+      --input-background-color: var(--input-background-color-empty-error);
+      --input-border-width: var(--input-border-width-empty-error);
+      --input-border-offset: var(--input-border-offset-empty-error);
+      --input-border-color: var(--input-border-color-empty-error);
+      --input-text-color: var(--input-text-color-empty-error);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-error);
+    }
+
+    &--error:placeholder-shown:hover {
+      --input-background-color: var(--input-background-color-empty-error-hover);
+      --input-border-width: var(--input-border-width-empty-error-hover);
+      --input-border-offset: var(--input-border-offset-empty-error-hover);
+      --input-border-color: var(--input-border-color-empty-error-hover);
+      --input-text-color: var(--input-text-color-empty-error-hover);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-error-hover);
+    }
+
+    &--error:placeholder-shown:focus {
+      --input-background-color: var(--input-background-color-empty-error-focus);
+      --input-border-width: var(--input-border-width-empty-error-focus);
+      --input-border-offset: var(--input-border-offset-empty-error-focus);
+      --input-border-color: var(--input-border-color-empty-error-focus);
+      --input-text-color: var(--input-text-color-empty-error-focus);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-error-focus);
+    }
+
+    &:hover {
+      --input-background-color: var(--input-background-color-hover);
+      --input-border-width: var(--input-border-width-hover);
+      --input-border-offset: var(--input-border-offset-hover);
+      --input-border-color: var(--input-border-color-hover);
+      --input-text-color: var(--input-text-color-hover);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-hover);
+    }
+
+    &:focus {
+      --input-background-color: var(--input-background-color-focus);
+      --input-border-width: var(--input-border-width-focus);
+      --input-border-offset: var(--input-border-offset-focus);
+      --input-border-color: var(--input-border-color-focus);
+      --input-text-color: var(--input-text-color-focus);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-focus);
     }
 
     &--error {
-      border: 1px solid var(--figma-color-border-danger);
+      --input-background-color: var(--input-background-color-error);
+      --input-border-width: var(--input-border-width-error);
+      --input-border-offset: var(--input-border-offset-error);
+      --input-border-color: var(--input-border-color-error);
+      --input-text-color: var(--input-text-color-error);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-error);
     }
 
-    &--error:hover,
-    &--error:placeholder-shown:hover {
-      --black1: var(--figma-color-border-danger);
+    &--error:hover {
+      --input-background-color: var(--input-background-color-error-hover);
+      --input-border-width: var(--input-border-width-error-hover);
+      --input-border-offset: var(--input-border-offset-error-hover);
+      --input-border-color: var(--input-border-color-error-hover);
+      --input-text-color: var(--input-text-color-error-hover);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-error-hover);
     }
 
-    &--error:active,
-    &--error:focus,
-    &--error.textarea:active,
-    &--error.textarea:focus {
-      --blue: var(--figma-color-border-danger);
+    &--error:focus {
+      --input-background-color: var(--input-background-color-error-focus);
+      --input-border-width: var(--input-border-width-error-focus);
+      --input-border-offset: var(--input-border-offset-error-focus);
+      --input-border-color: var(--input-border-color-error-focus);
+      --input-text-color: var(--input-text-color-error-focus);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-error-focus);
+    }
+
+    &:disabled {
+      --input-background-color: var(--input-background-color-disabled);
+      --input-border-width: var(--input-border-width-disabled);
+      --input-border-offset: var(--input-border-offset-disabled);
+      --input-border-color: var(--input-border-color-disabled);
+      --input-text-color: var(--input-text-color-disabled);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-disabled);
+    }
+
+    &--no-frame,
+    &--no-frame:focus {
+      outline: none;
     }
 
     &--flex {
       width: 100% !important;
     }
 
-    &--no-frame,
-    &--no-frame:focus {
-      --black1: transparent !important;
-      --blue: transparent !important;
-    }
-
     &--clearable {
-      padding-right: var(--size-medium);
+      padding-right: var(--input-padding-clearable);
     }
 
     &--unit {
-      padding-right: var(--size-small);
-    }
-
-    &::placeholder {
-      color: var(--figma-color-text-secondary) !important;
-    }
-
-    &:disabled {
-      --black1: var(--figma-color-border-disabled);
-      --black3: var(--figma-color-text-disabled);
-      --black8: var(--figma-color-text-disabled);
-    }
-
-    &:disabled::placeholder {
-      color: var(--figma-color-text-tertiary) !important;
-    }
-
-    &:disabled:placeholder-shown {
-      --black1: transparent;
+      padding-right: var(--input-padding-unit);
     }
   }
 
-  .input__color {
+  &__color {
     &:hover ~ .input__field {
-      --black8: var(--figma-color-text);
-      --black1: var(--figma-color-border);
-      border-color: var(--figma-color-border);
-      background-image: none;
+      --input-background-color: var(--input-background-color-hover);
+      --input-border-width: var(--input-border-width-hover);
+      --input-border-offset: var(--input-border-offset-hover);
+      --input-border-color: var(--input-border-color-hover);
+      --input-text-color: var(--input-text-color-hover);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-hover);
     }
     &:disabled[type='color' i] {
-      opacity: 0.25;
+      opacity: 0.5;
+      pointer-events: none;
     }
   }
 
-  .input__clear {
+  &__clear {
     position: absolute;
-    right: -1px;
+    right: 0;
   }
+}
 
-  /* Text area */
-  .textarea {
-    --black8: var(--figma-color-text);
-    --white: var(--figma-color-bg);
-    --black1: var(--figma-color-border);
-    cursor: default;
-    font-family: var(--font-stack);
-    user-select: none;
+.textarea {
+  font-family: var(--input-text-font-family);
+  font-size: var(--input-text-font-size);
+  font-weight: var(--input-text-font-weight);
+  letter-spacing: var(--input-text-letterspacing);
+  line-height: var(--input-text-line-height);
+  position: relative;
+  display: flex;
+  overflow: visible;
+  align-items: center;
+  width: 100%;
+  min-height: var(--input-textarea-min-height);
+  padding: var(--input-textarea-padding);
+  resize: none;
+  overflow-y: auto;
 
-    &:active,
-    &:focus {
-      --black: var(--figma-color-text);
-      --blue: var(--figma-color-border-selected);
-    }
-
-    &--monospace {
-      font-family: monospace;
-    }
+  &--monospace {
+    font-family: monospace;
   }
 }
