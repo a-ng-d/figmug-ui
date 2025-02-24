@@ -41,7 +41,7 @@ export default class Select extends React.Component<SelectProps> {
 
     return (
       <div
-        className={['checkbox', 'recharged', isBlocked && 'checkbox--blocked']
+        className={['checkbox', isBlocked && 'checkbox--blocked']
           .filter((n) => n)
           .join(' ')}
       >
@@ -83,7 +83,7 @@ export default class Select extends React.Component<SelectProps> {
 
     return (
       <div
-        className={['radio', 'recharged', isBlocked && 'radio--blocked']
+        className={['radio', isBlocked && 'radio--blocked']
           .filter((n) => n)
           .join(' ')}
       >
@@ -125,7 +125,7 @@ export default class Select extends React.Component<SelectProps> {
 
     return (
       <div
-        className={['switch', 'recharged', isBlocked && 'switch--blocked']
+        className={['switch', isBlocked && 'switch--blocked']
           .filter((n) => n)
           .join(' ')}
       >

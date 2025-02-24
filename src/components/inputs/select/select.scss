@@ -1,165 +1,366 @@
-.checkbox.recharged,
-.radio.recharged,
-.switch.recharged {
+:root {
+  /* Base */
+  --select-text-font-family: var(--font-stack);
+  --select-text-font-size: var(--font-size-xsmall);
+  --select-text-font-weight: var(--font-weight-normal);
+  --select-text-line-height: var(--font-line-height);
+  --select-text-letter-spacing: var(--font-letter-spacing-pos-xsmall);
+  --select-text-color: var(--figma-color-text);
+
+  --select-text-color-disabled: var(--figma-color-text-disabled);
+
+  /* Checkbox */
+  --select-checkbox-height: var(--size-medium);
+  --select-checkbox-padding: 0 var(--size-xsmall) 0 var(--size-small);
+  --select-checkbox-margin: -16px;
+
+  --select-box-height: 10px;
+  --select-box-width: 10px;
+  --select-box-radius: var(--border-radius-small);
+  --select-box-margin: 0 10px 0 -8px;
+  --select-box-outline: none;
+  --select-box-tick-icon: url('data:image/svg+xml;utf8,%3Csvg%20fill%3D%22none%22%20height%3D%227%22%20viewBox%3D%220%200%208%207%22%20width%3D%228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22m1.17647%201.88236%201.88235%201.88236%203.76471-3.76472%201.17647%201.17648-4.94118%204.9412-3.05882-3.05884z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
+  --select-box-tick-position: 1px 2px;
+  
+  --select-box-background: var(--figma-color-bg);
+  --select-box-background-checked: var(--figma-color-bg-selected-strong);
+  --select-box-border: 1px solid var(--figma-color-icon);
+  --select-box-border-checked: 1px solid var(--figma-color-bg-brand);
+  --select-box-border-secondary: none;
+  --select-box-border-secondary-focus: 2px solid var(--figma-color-border-selected-strong);
+
+  --select-box-background-disabled: var(--figma-color-bg);
+  --select-box-border-disabled: 1px solid var(--figma-color-icon-disabled);
+  --select-box-background-checked-disabled: var(--figma-color-bg-selected);
+  --select-box-border-checked-disabled: 1px solid var(--figma-color-border-onselected);
+
+  /* Switch */
+  --select-switch-height: var(--size-medium);
+  --select-switch-padding: 0 var(--size-xsmall) 0 var(--size-small);
+  --select-switch-margin: -16px;
+
+  --select-toggle-height: 10px;
+  --select-toggle-width: 22px;
+  --select-toggle-radius: 8px;
+  --select-toggle-margin: 0 8px 0 -8px;
+  --select-toggle-background: var(--figma-color-bg-disabled);
+  --select-toggle-border: 1px solid var(--figma-color-bg-disabled);
+
+  --select-toggle-knob-height: 10px;
+  --select-toggle-knob-width: 10px;
+  --select-toggle-knob-radius: var(--border-radius-full);
+  --select-toggle-knob-outline: none;
+  --select-toggle-knob-left: 23px;
+  --select-toggle-knob-background: var(--figma-color-icon);
+  --select-toggle-knob-transform: translateX(0) translateY(-50%);
+
+  --select-toggle-background-checked: var(--figma-color-bg-selected-strong);
+  --select-toggle-border-checked: 1px solid var(--figma-color-bg-selected-strong);
+  --select-toggle-border-secondary: none;
+  --select-toggle-border-secondary-focus: 2px solid var(--figma-color-border-selected-strong);
+  --select-toggle-knob-transform-checked: translateX(12px) translateY(-50%);
+  --select-toggle-knob-background-checked: var(--figma-color-icon-onbrand);
+
+  --select-toggle-background-disabled: var(--figma-color-bg-disabled);
+  --select-toggle-border-disabled: 1px solid var(--figma-color-bg-disabled);
+  --select-toggle-background-checked-disabled: var(--figma-color-bg-brand-secondary);
+  --select-toggle-border-checked-disabled: 1px solid var(--figma-color-bg-brand-secondary);
+  --select-toggle-knob-background-disabled: var(--figma-color-icon-ondisabled);
+  --select-toggle-knob-background-checked-disabled: var(--figma-color-icon-onbrand-secondary);
+
+  /* Radio */
+  --select-radio-height: var(--size-medium);
+  --select-radio-padding: 0 var(--size-xsmall) 0 var(--size-small);
+  --select-radio-margin: -16px;
+
+  --select-button-height: 10px;
+  --select-button-width: 10px;
+  --select-button-inner-height: 6px;
+  --select-button-inner-width: 6px;
+  --select-button-radius: var(--border-radius-full);
+  --select-button-margin: 0 10px 0 -8px;
+  --select-button-outline: none;
+  --select-button-inner-left: 13px;
+  --select-button-icon: var(--figma-color-icon);
+  
+  --select-button-background: var(--figma-color-bg);
+  --select-button-background-checked: var(--figma-color-bg);
+  --select-button-border: 1px solid var(--figma-color-icon);
+  --select-button-border-checked: 1px solid var(--figma-color-icon);
+  --select-button-border-secondary: none;
+  --select-button-border-secondary-focus: 2px solid var(--figma-color-border-selected-strong);
+
+  --select-button-background-disabled: var(--figma-color-bg);
+  --select-button-border-disabled: 1px solid var(--figma-color-icon-disabled);
+  --select-button-background-checked-disabled: var(--figma-color-bg);
+  --select-button-border-checked-disabled: 1px solid var(--figma-color-bg-disabled);
+  --select-button-icon-disabled: var(--figma-color-icon-disabled);
+}
+
+.checkbox,
+.radio,
+.switch {
   cursor: default;
   user-select: none;
 
   .checkbox__label,
   .switch__label,
   .radio__label {
-    color: var(--figma-color-text);
+    color: var(--select-text-color);
   }
 }
 
 /* Checkbox */
-.checkbox.recharged {
-  .checkbox__label:before {
-    --black8: var(--figma-color-border-strong);
-    margin: 0 10px 0 -8px;
+.checkbox {
+  align-items: center;
+	cursor: default;
+	display: flex;
+	height: var(--select-checkbox-height);
+	position: relative;
+
+  &__label {
+    align-items: center;
+		color: var(--select-text-color);
+		display: flex;
+		font-family: var(--select-text-font-family);
+		font-size: var(--select-text-font-size);
+		font-weight: var(--select-text-font-weight);
+		line-height: var(--select-text-line-height);
+		letter-spacing: var(--select-text-letter-spacing);
+		margin-left: var(--select-checkbox-margin);
+		padding: var(--select-checkbox-padding);
+		height: 100%;
+		user-select: none;
+
+    &:before {
+      border: var(--select-box-border);
+      border-radius: var(--select-box-radius);
+      content: '';
+      display: block;
+      width: var(--select-box-width);
+      height: var(--select-box-height);
+      margin: var(--select-box-margin);
+      outline: var(--select-box-border-secondary);
+      background: var(--select-box-background);
+    }
   }
 
-  .checkbox__box {
+  &__box {
+    opacity: 0;
+		width: var(--select-box-width);
+		height: var(--select-box-height);
+    margin: 0;
+    padding: 0;
+    outline: none;
+
     &:checked + .checkbox__label:before {
-      --blue: var(--figma-color-bg-brand);
+      --select-box-background: var(--select-box-background-checked);
+      --select-box-border: var(--select-box-border-checked);
+      background-image: var(--select-box-tick-icon);
+      background-repeat: no-repeat;
+      background-position: var(--select-box-tick-position);
     }
 
     &:focus + .checkbox__label:before {
-      outline: 2px solid var(--figma-color-icon-brand-secondary);
+      --select-box-border-secondary: var(--select-box-border-secondary-focus);
     }
 
     &:disabled + .checkbox__label {
-      --black: var(--figma-color-text-disabled);
-      opacity: 1;
+      --select-text-color: var(--select-text-color-disabled);
     }
 
     &:disabled:checked + .checkbox__label:before {
-      --blue: var(--figma-color-icon-brand-secondary);
-    }
-
-    &:disabled:checked + .checkbox__label:before {
-      --black8: var(--figma-color-icon-brand-secondary);
-    }
-
-    &:disabled + .checkbox__label {
-      color: var(--figma-color-text-disabled);
+      --select-box-background: var(--select-box-background-checked-disabled);
+      --select-box-border: var(--select-box-border-checked-disabled);
     }
 
     &:disabled + .checkbox__label:before {
-      --black8: var(--figma-color-border-disabled);
+      --select-box-background: var(--select-box-background-disabled);
+      --select-box-border: var(--select-box-border-disabled);
     }
   }
 }
 
-/* Switch */
-.switch.recharged {
-  .switch__label {
-    &:before {
-      --white: var(--figma-color-bg-disabled-secondary);
-    }
+.switch {
+  align-items: center;
+	cursor: default;
+	display: flex;
+	height: var(--select-radio-height);
+	position: relative;
 
-    &:before,
-    &:after {
-      --black8-opaque: var(--figma-color-bg-disabled-secondary);
-    }
+  &__label {
+    align-items: center;
+		color: var(--select-text-color);
+		display: flex;
+		font-family: var(--select-text-font-family);
+		font-size: var(--select-text-font-size);
+		font-weight: var(--select-text-font-weight);
+		line-height: var(--select-text-line-height);
+		letter-spacing: var(--select-text-letter-spacing);
+		margin-left: var(--select-radio-margin);
+		padding: var(--select-radio-padding);
+		height: 100%;
+		user-select: none;
+
+      &:before {
+        background-color: var(--select-toggle-background);
+        border: var(--select-toggle-border);
+        border-radius: var(--select-toggle-radius);
+        content: '';
+        display: block;
+        height: var(--select-toggle-height);
+        transition: background-color 0 0.2s;
+        margin: var(--select-toggle-margin);
+        width: var(--select-toggle-width);
+        outline: var(--select-toggle-border-secondary);
+      }
+      
+      &:after {
+        background-color:  var(--select-toggle-knob-background);
+        border-radius: var(--select-toggle-knob-radius);
+        content: '';
+        display: block;
+        height: var(--select-toggle-knob-height);
+        left: var(--select-toggle-knob-left);
+        position: absolute;
+        top: var(--select-toggle-knob-top);
+        transition: transform 0.2s;
+        width: var(--select-toggle-knob-width);
+        top: 50%;
+        transform: var(--select-toggle-knob-transform);
+      }
   }
 
-  .switch__toggle {
+  &__toggle {
+    opacity: 0;
+		width: var(--select-toggle-width);
+		height: var(--select-toggle-height);
+    outline: none;
+    margin: 0;
+    padding: 0;
+
     &:checked + .switch__label:before {
-      --white: var(--figma-color-bg-brand);
+      --select-toggle-background: var(--select-toggle-background-checked);
+      --select-toggle-border: var(--select-toggle-border-checked);
+    }
+
+    &:checked + .switch__label:after {
+      --select-toggle-knob-transform: var(--select-toggle-knob-transform-checked);
+      --select-toggle-knob-background: var(--select-toggle-knob-background-checked);
     }
 
     &:focus + .switch__label:before {
-      outline: 2px solid var(--figma-color-icon-brand-secondary);
-    }
-
-    &:checked + .switch__label:before,
-    &:checked + .switch__label:after {
-      --black8-opaque: var(--figma-color-bg-brand);
+      --select-toggle-border-secondary: var(--select-toggle-border-secondary-focus);
     }
 
     &:disabled + .switch__label {
-      opacity: 1;
-      color: var(--figma-color-text-disabled);
+      --select-text-color: var(--select-text-color-disabled);
     }
 
     &:disabled + .switch__label:before {
-      --white: var(--figma-color-bg-disabled);
+      --select-toggle-background: var(--select-toggle-background-disabled);
+      --select-toggle-border: var(--select-toggle-border-disabled);
+    }
+
+    &:disabled + .switch__label:after {
+      --select-toggle-knob-background: var(--select-toggle-knob-background-disabled);
     }
 
     &:disabled:checked + .switch__label:before {
-      --white: var(--figma-color-icon-brand-secondary);
-      --black: var(--figma-color-icon-brand-secondary);
-    }
-
-    &:disabled + .switch__label:after {
-      --white: var(--figma-color-bg-disabled-secondary);
+      --select-toggle-background: var(--select-toggle-background-checked-disabled);
+      --select-toggle-border: var(--select-toggle-border-checked-disabled);
     }
 
     &:disabled:checked + .switch__label:after {
-      --white: var(--figma-color-icon-onbrand-secondary);
-    }
-
-    &:disabled + .switch__label:before,
-    &:disabled + .switch__label:after {
-      --black8-opaque: var(--figma-color-bg-disabled);
-    }
-
-    &:disabled:checked + .switch__label:before,
-    &:disabled:checked + .switch__label:after {
-      --black8-opaque: var(--figma-color-icon-brand-secondary);
+      --select-toggle-knob-background: var(--select-toggle-knob-background-checked-disabled);
     }
   }
 }
 
 /* Radio */
-.radio.recharged {
-  .radio__label {
-    padding: 0 var(--size-xxxsmall) 0 var(--size-small);
+.radio {
+  align-items: center;
+	cursor: default;
+	display: flex;
+	height: var(--select-radio-height);
+	position: relative;
+
+  &__label {
+    align-items: center;
+		color: var(--select-text-color);
+		display: flex;
+		font-family: var(--select-text-font-family);
+		font-size: var(--select-text-font-size);
+		font-weight: var(--select-text-font-weight);
+		line-height: var(--select-text-line-height);
+		letter-spacing: var(--select-text-letter-spacing);
+		margin-left: var(--select-radio-margin);
+		padding: var(--select-radio-padding);
+		height: 100%;
+		user-select: none;
 
     &:before {
-      --black8: var(--figma-color-border-strong);
-      margin: 0 10px 0 -8px;
+      border: var(--select-button-border);
+      border-radius: var(--select-button-radius);
+      content: '';
+      display: block;
+      width: var(--select-button-width);
+      height: var(--select-button-height);
+      margin: var(--select-button-margin);
+      outline: var(--select-button-border-secondary);
+      background: var(--select-button-background);
+    }
+
+    &:after {
+      position: absolute;
+      border-radius: var(--select-button-radius);
+      content: '';
+      display: block;
+      width: var(--select-button-inner-width);
+      height: var(--select-button-inner-height);
+      background-color: var(--select-button-icon);
+      visibility: hidden;
+      left: var(--select-button-inner-left);
     }
   }
 
-  .radio__button {
+  &__button {
+    opacity: 0;
+		width: var(--select-button-width);
+		height: var(--select-button-height);
+    outline: none;
+    margin: 0;
+    padding: 0;
+
     &:checked + .radio__label:before {
-      background-image: none;
+      --select-button-background: var(--select-button-background-checked);
+      --select-button-border: var(--select-button-border-checked);
     }
 
     &:checked + .radio__label:after {
-      position: absolute;
-      top: 13px;
-      left: 13px;
-      border-radius: 50%;
-      background-color: var(--figma-color-icon);
-      width: 6px;
-      height: 6px;
-      content: '';
+      visibility: visible;
     }
 
     &:focus + .radio__label:before {
-      outline: 2px solid var(--figma-color-icon-brand-secondary);
+      --select-button-border-secondary: var(--select-button-border-secondary-focus);
     }
 
     &:disabled + .radio__label {
-      opacity: 1;
+      --select-text-color: var(--select-text-color-disabled);
     }
 
-    &:disabled + .radio__label {
-      color: var(--figma-color-text-disabled);
-    }
-
-    &:checked:disabled + .radio__label:before {
-      --black: var(--figma-color-icon-disabled);
-    }
-
-    &:disabled + .radio__label:before {
-      --black8: var(--figma-color-border-disabled);
+    &:disabled:checked + .radio__label:before {
+      --select-button-background: var(--select-button-background-checked-disabled);
+      --select-button-border: var(--select-button-border-checked-disabled);
     }
 
     &:disabled:checked + .radio__label:after {
-      background-color: var(--figma-color-icon-disabled);
+      --select-button-icon: var(--select-button-icon-disabled);
+    }
+
+    &:disabled + .radio__label:before {
+      --select-button-background: var(--select-button-background-disabled);
+      --select-button-border: var(--select-button-border-disabled);
     }
   }
 }
