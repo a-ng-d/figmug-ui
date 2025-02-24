@@ -1,8 +1,10 @@
 import type { Preview } from '@storybook/react'
 import type { ThemeConfig } from 'storybook-addon-data-theme-switcher'
+import React, { useEffect } from 'react'
 
-import 'figma-plugin-ds/dist/figma-plugin-ds.css'
-import '../src/styles/colors.scss'
+import '@styles/tokens/figma-colors.scss'
+import '@styles/tokens/figma-types.scss'
+import '@styles/tokens/globals.scss'
 
 export const globalTypes = {
   dataTheme: {
@@ -58,11 +60,31 @@ const preview: Preview = {
         },
         {
           name: 'FigJam',
-          value: '#ffffff',
+          value: '#fffffe',
         },
       ],
     },
   },
+  decorators: [
+    (Story, context) => {
+      useEffect(() => {
+        const background = context.globals.backgrounds?.value
+        let theme = 'figma-dark'
+
+        if (background === '#fffffe') {
+          theme = 'figjam'
+        } else if (background === '#ffffff') {
+          theme = 'figma-light'
+        } else if (background === '#2c2c2c') {
+          theme = 'figma-dark'
+        }
+
+        document.documentElement.setAttribute('data-theme', theme)
+      }, [context.globals.backgrounds])
+
+      return <Story />
+    },
+  ],
 }
 
 export default preview

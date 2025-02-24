@@ -13,6 +13,7 @@ const config: StorybookConfig = {
       },
     },
     '@storybook/addon-interactions',
+    '@storybook/addon-backgrounds',
     'storybook-addon-data-theme-switcher',
     '@storybook/addon-viewport',
   ],
