@@ -100,7 +100,7 @@
   --button-border-offset-secondary: var(--size-neg-unit);
   --button-border-offset-secondary-hover: var(--size-neg-unit);
   --button-border-offset-secondary-pressed: var(--size-neg-unit);
-  --button-border-offset-secondary-focus: var(--size-neg-unit);
+  --button-border-offset-secondary-focus: var(--size-neg-xunit);
   --button-border-offset-secondary-disabled: var(--size-neg-unit);
   --button-border-color-secondary: var(--figma-color-border-strong);
   --button-border-color-secondary-hover: var(--figma-color-border-strong);
@@ -275,12 +275,12 @@
   --icon-button-border-offset-selected: 0;
   --icon-button-border-offset-selected-hover: 0;
   --icon-button-border-offset-selected-pressed: 0;
-  --icon-button-border-offset-selected-focus: var(--size-neg-unit);
+  --icon-button-border-offset-selected-focus: var(--size-neg-xunit);
   --icon-button-border-offset-selected-disabled: 0;
   --icon-button-border-color-selected: transparent;
   --icon-button-border-color-selected-hover: transparent;
   --icon-button-border-color-selected-pressed: transparent;
-  --icon-button-border-color-selected-focus: var(--figma-color-border-selected);
+  --icon-button-border-color-selected-focus: var(--figma-color-border-brand-strong);
   --icon-button-border-color-selected-disabled: transparent;
   --icon-button-icon-color-selected: var(--figma-color-icon-onbrand);
   --icon-button-icon-color-selected-hover: var(--figma-color-icon-onbrand);
