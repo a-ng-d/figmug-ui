@@ -9,6 +9,7 @@
   --input-padding-clearable: var(--size-medium);
   --input-padding-unit: var(--size-small);
   --input-padding-color-picker: var(--size-medium);
+  --input-right-clearable: var(--size-xxxsmall);
   --input-background-color: var(--figma-color-bg);
   --input-border-width: var(--size-unit);
   --input-border-offset: var(--size-neg-unit);
@@ -395,7 +396,7 @@
 
   &__clear {
     position: absolute;
-    right: 0;
+    right: var(--input-right-clearable);
   }
 }
 

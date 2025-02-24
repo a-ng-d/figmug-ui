@@ -512,6 +512,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
           <div className="input__clear">
             <Button
               type="icon"
+              size="small"
               icon="close"
               action={() => {
                 this.setState({ inputValue: '' })
