@@ -1,10 +1,17 @@
+:root {
+  --icon-width: var(--size-medium);
+  --icon-height: var(--size-medium);
+  --icon-color: var(--figma-color-icon);
+}
+
 .icon-box {
   display: flex;
   flex: none;
   justify-content: center;
   align-items: center;
   cursor: default;
-  width: 30px;
-  height: 30px;
+  width: var(--icon-width);
+  height: var(--icon-height);
   user-select: none;
+  background-color: var(--icon-color);
 }

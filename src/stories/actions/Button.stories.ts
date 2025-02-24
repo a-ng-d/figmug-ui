@@ -8,7 +8,7 @@ const icons: Array<IconList> = [
   'angle',
   'alert',
   'arrow-left-right',
-  'up-down',
+  'arrow-up-down',
   'auto-layout-horizontal',
   'auto-layout-vertical',
   'back',
@@ -19,6 +19,10 @@ const icons: Array<IconList> = [
   'caret-left',
   'caret-right',
   'caret-up',
+  'chevron-down',
+  'chevron-left',
+  'chevron-right',
+  'chevron-up',
   'check',
   'close',
   'component',
@@ -41,11 +45,11 @@ const icons: Array<IconList> = [
   'instance',
   'key',
   'layout-align-bottom',
-  'align-horizontal-centers',
-  'align-left',
-  'align-right',
-  'align-top',
-  'align-vertical-centers',
+  'layout-align-horizontal-centers',
+  'layout-align-left',
+  'layout-align-right',
+  'layout-align-top',
+  'layout-align-vertical-centers',
   'layout-grid-columns',
   'layout-grid-rows',
   'layout-grid-uniform',
@@ -91,7 +95,6 @@ const icons: Array<IconList> = [
   'repository',
   'info',
   'resize-grip',
-  'caret',
   'spinner',
   'user',
   'target',
@@ -114,6 +117,7 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {
     type: 'primary',
+    size: 'default',
     label: 'Primary action button',
     feature: 'PRIMARY_ACTION',
     hasMultipleActions: false,
@@ -128,12 +132,16 @@ export const Primary: Story = {
     state: { control: false },
     isLink: { control: false },
     url: { control: false },
+    iconClassName: { control: false },
+    customIcon: { control: false },
+    helper: { control: false },
   },
 }
 
 export const Secondary: Story = {
   args: {
     type: 'secondary',
+    size: 'default',
     label: 'Secondary action button',
     feature: 'SECONDARY_ACTION',
     hasMultipleActions: false,
@@ -148,6 +156,9 @@ export const Secondary: Story = {
     state: { control: false },
     isLink: { control: false },
     url: { control: false },
+    iconClassName: { control: false },
+    customIcon: { control: false },
+    helper: { control: false },
   },
 }
 
@@ -168,12 +179,16 @@ export const Tertiary: Story = {
     icon: { control: false },
     state: { control: false },
     hasMultipleActions: { control: false },
+    iconClassName: { control: false },
+    customIcon: { control: false },
+    helper: { control: false },
   },
 }
 
 export const Destructive: Story = {
   args: {
     type: 'destructive',
+    size: 'default',
     label: 'Destructive action button',
     feature: 'DESTRUCTIVE_ACTION',
     hasMultipleActions: false,
@@ -188,12 +203,17 @@ export const Destructive: Story = {
     state: { control: false },
     isLink: { control: false },
     url: { control: false },
+    iconClassName: { control: false },
+    customIcon: { control: false },
+    helper: { control: false },
   },
 }
 
 export const Icon: Story = {
   args: {
     type: 'icon',
+    size: 'default',
+    state: 'default',
     icon: 'adjust',
     helper: {
       label: 'Adjust the parameters',
@@ -209,7 +229,6 @@ export const Icon: Story = {
     type: { control: false },
     icon: { control: 'select', options: icons },
     label: { control: false },
-    state: { control: false },
     hasMultipleActions: { control: false },
     isBlocked: { control: false },
     isLink: { control: false },
@@ -219,7 +238,8 @@ export const Icon: Story = {
 
 export const Compact: Story = {
   args: {
-    type: 'compact',
+    type: 'alternative',
+    size: 'default',
     icon: 'lock-on',
     label: 'Compact action button',
     feature: 'ACTION',
@@ -234,5 +254,8 @@ export const Compact: Story = {
     isLoading: { control: false },
     isLink: { control: false },
     url: { control: false },
+    helper: { control: false },
+    iconClassName: { control: false },
+    customIcon: { control: false },
   },
 }

@@ -1,0 +1,56 @@
+:root {
+  /* Basic Background */
+  --grey-100: #f0f0f0;
+  --grey-500: #e5e5e5;
+  --grey-1000: #222222;
+  --grey-900: #2c2c2c;
+
+  /* Font Sizes */
+  --font-size-xsmall: 11px;
+  --font-size-small: 12px;
+  --font-size-large: 13px;
+  --font-size-xlarge: 14px;
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+
+  /* Lineheight */
+  --font-line-height: 16px;
+  --font-line-height-large: 24px;
+
+  /* Letterspacing */
+  --font-letter-spacing-pos-xsmall: 0.005em;
+  --font-letter-spacing-neg-xsmall: 0.01em;
+  --font-letter-spacing-pos-small: 0;
+  --font-letter-spacing-neg-small: 0.005em;
+  --font-letter-spacing-pos-large: -0.0025em;
+  --font-letter-spacing-neg-large: 0.0025em;
+  --font-letter-spacing-pos-xlarge: -0.001em;
+  --font-letter-spacing-neg-xlarge: -0.001em;
+
+  /* Border Radius */
+  --border-radius-small: 2px;
+  --border-radius-med: 5px;
+  --border-radius-large: 6px;
+
+  /* Shadows */
+  --shadow-hud: 0 5px 17px rgba(0, 0, 0, 0.2), 0 2px 7px rgba(0, 0, 0, 0.15);
+  --shadow-floating-window: 0 2px 14px rgba(0, 0, 0, 0.15);
+
+  /* Sizing */
+  --size-neg-xunit: -2px;
+  --size-neg-unit: -1px;
+  --size-unit: 1px;
+  --size-xunit: 2px;
+  --size-xxxsmall: 4px;
+  --size-xxsmall: 8px;
+  --size-xsmall: 16px;
+  --size-small: 24px;
+  --size-medium: 32px;
+  --size-large: 40px;
+  --size-xlarge: 48px;
+  --size-xxlarge: 64px;
+  --size-xxxlarge: 80px;
+}

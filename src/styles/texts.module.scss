@@ -1,5 +1,65 @@
+:root {
+  --text-font-family: var(--font-stack);
+  --text-color-primary: var(--figma-color-text);
+  --text-color-secondary: var(--figma-color-text-secondary);
+  --text-color-tertiary: var(--figma-color-text-tertiary);
+  --text-font-weight-medium: var(--font-weight-medium);
+  --text-font-weight-bold: var(--font-weight-bold);
+
+  --text-default-font-size: var(--font-size-xsmall);
+  --text-default-font-weight: var(--font-weight-normal);
+  --text-default-line-height: var(--font-line-height);
+  --text-default-letter-spacing: var(--font-letter-spacing-pos-xsmall);
+
+  --text-small-font-size: var(--font-size-small);
+  --text-small-letter-spacing: var(--font-letter-spacing-pos-small);
+
+  --text-large-font-size: var(--font-size-large);
+  --text-large-line-height: var(--font-line-height-large);
+  --text-large-letter-spacing: var(--font-letter-spacing-pos-large);
+
+  --text-xlarge-font-size: var(--font-size-xlarge);
+  --text-xlarge-line-height: var(--font-line-height-large);
+  --text-xlarge-letter-spacing: var(--font-letter-spacing-pos-xlarge);
+
+  --text-link-color: var(--figma-color-text-brand);
+  --text-link-decoration: none;
+  --text-link-border-focus: none;
+  --text-link-decoration-focus: underline;
+}
+
 .type {
-  color: var(--figma-color-text);
+  font-family: var(--text-font-family);
+  font-size: var(--text-default-font-size);
+  font-weight: var(--text-default-font-weight);
+  line-height: var(--text-default-line-height);
+  letter-spacing: var(--text-default-letter-spacing);
+  color: var(--text-color-primary);
+
+  &--small {
+    font-size: var(--text-small-font-size);
+    letter-spacing: var(--text-small-letter-spacing);
+  }
+
+  &--large {
+    font-size: var(--text-large-font-size);
+    line-height: var(--text-large-line-height);
+    letter-spacing: var(--text-large-letter-spacing);
+  }
+
+  &--xlarge {
+    font-size: var(--text-xlarge-font-size);
+    line-height: var(--text-xlarge-line-height);
+    letter-spacing: var(--text-xlarge-letter-spacing);
+  }
+
+  &--medium {
+      font-weight: var(--text-font-weight-medium);
+  }
+
+  &--bold {
+      font-weight: var(--text-font-weight-bold);
+  }
 
   &--truncated {
     overflow: hidden;
@@ -8,21 +68,21 @@
   }
 
   &--secondary {
-    color: var(--figma-color-text-secondary);
+    color: var(--text-color-secondary);
   }
 
   &--tertiary {
-    color: var(--figma-color-text-tertiary);
+    color: var(--text-color-secondary);
   }
 
   a {
-    color: var(--figma-color-text-brand);
-    text-decoration: none;
+    color: var(--text-link-color);
+    text-decoration: var(--text-link-decoration);
   }
 
   a:focus-visible {
-    outline: none;
-    text-decoration: underline;
+    outline: var(--text-link-border-focus);
+    text-decoration: var(--text-link-decoration-focus);
   }
 }
 

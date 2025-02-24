@@ -12,13 +12,14 @@ export interface ButtonProps {
     | 'secondary'
     | 'tertiary'
     | 'destructive'
+    | 'alternative'
     | 'icon'
-    | 'compact'
+  size?: 'small' | 'default' | 'large'
   icon?: IconList
   iconClassName?: string
   customIcon?: React.ReactElement
   label?: string
-  state?: 'default' | 'disabled' | 'blocked' | 'selected' | ''
+  state?: 'default' | 'selected'
   url?: string
   helper?: {
     label: string
@@ -43,6 +44,8 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
   buttonRef: React.RefObject<HTMLButtonElement> = React.createRef()
 
   static defaultProps: Partial<ButtonProps> = {
+    size: 'default',
+    state: 'default',
     isLink: false,
     hasMultipleActions: false,
     isLoading: false,
@@ -62,6 +65,8 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
   Button = () => {
     const {
       type,
+      icon,
+      size,
       isBlocked,
       feature,
       hasMultipleActions,
@@ -77,8 +82,8 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         role="action-button"
         className={[
           'button',
-          'recharged',
           `button--${type}`,
+          `button--${size}`,
           isLoading && 'button--loading',
           isBlocked && 'button--blocked',
         ]
@@ -97,6 +102,13 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
         ref={this.buttonRef}
       >
+        {icon !== undefined && (
+          <Icon
+            type="PICTO"
+            iconName={icon}
+            customClassName="button__icon"
+          />
+        )}
         <span className={['button__label'].filter((n) => n).join(' ')}>
           {label}
         </span>
@@ -105,11 +117,6 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
             <Icon
               type="PICTO"
               iconName="spinner"
-              iconColor={
-                type === 'primary'
-                  ? 'var(--figma-color-icon-onbrand)'
-                  : 'var(--figma-color-icon)'
-              }
               customClassName="button__spinner"
             />
           </div>
@@ -117,12 +124,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         {hasMultipleActions && (
           <Icon
             type="PICTO"
-            iconName="caret-down"
-            iconColor={
-              type === 'primary'
-                ? 'var(--figma-color-icon-onbrand)'
-                : 'var(--figma-color-icon)'
-            }
+            iconName="chevron-down"
             customClassName="button__caret"
           />
         )}
@@ -132,12 +134,12 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
   }
 
   LinkButton = () => {
-    const { type, feature, label, url } = this.props
+    const { type, size, feature, label, url } = this.props
 
     return (
       <button
         role="link-button"
-        className={['button', 'recharged', `button--${type}`]
+        className={['button', `button--${type}`, `button--${size}`]
           .filter((n) => n)
           .join(' ')}
         data-feature={feature}
@@ -156,6 +158,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
 
   Icon = () => {
     const {
+      size,
       icon,
       iconClassName,
       customIcon,
@@ -176,8 +179,8 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         data-feature={feature}
         className={[
           'icon-button',
-          'recharged',
-          state !== undefined && state !== '' && `icon-button--${state}`,
+          `icon-button--${size}`,
+          state === 'selected' && 'icon-button--selected',
           isNew && 'icon-button--new',
           isLoading && 'button--loading',
         ]
@@ -209,11 +212,6 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           <Icon
             type="PICTO"
             iconName={isLoading ? 'spinner' : icon}
-            iconColor={
-              isDisabled || isBlocked
-                ? 'var(--figma-color-icon-disabled)'
-                : undefined
-            }
             customClassName={
               iconClassName !== undefined ? iconClassName : undefined
             }
@@ -262,7 +260,6 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         <Icon
           type="PICTO"
           iconName={icon}
-          iconColor="var(--figma-color-icon-oncomponent)"
         />
         <div className={`type ${texts.type}`}>{label}</div>
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}

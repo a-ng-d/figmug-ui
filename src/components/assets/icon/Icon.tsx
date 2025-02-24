@@ -6,7 +6,6 @@ export interface IconProps {
   type: 'PICTO' | 'LETTER'
   iconName?: IconList
   iconLetter?: string
-  iconColor?: string
   customClassName?: string
   customSize?: number
 }
@@ -16,7 +15,6 @@ export const Icon = (props: IconProps) => {
     type = 'PICTO',
     iconName,
     iconLetter,
-    iconColor = 'var(--figma-color-icon)',
     customClassName,
     customSize = 30,
   } = props
@@ -30,12 +28,7 @@ export const Icon = (props: IconProps) => {
         }}
         role="icon"
       >
-        <span
-          style={{
-            color: iconColor,
-          }}
-          className={['type', customClassName].filter((n) => n).join(' ')}
-        >
+        <span className={['type', customClassName].filter((n) => n).join(' ')}>
           {iconLetter}
         </span>
       </div>
@@ -45,9 +38,6 @@ export const Icon = (props: IconProps) => {
   const Pictogram = () => {
     return (
       <div
-        style={{
-          backgroundColor: iconColor,
-        }}
         className={[
           'icon-box',
           icons.icon,

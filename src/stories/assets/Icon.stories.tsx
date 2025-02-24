@@ -129,9 +129,6 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  argTypes: {
-    iconColor: { control: 'color' },
-  },
 } satisfies Meta<typeof Icon>
 
 export default meta
@@ -141,7 +138,6 @@ export const Pictogram: Story = {
   args: {
     type: 'PICTO',
     iconLetter: undefined,
-    iconColor: 'var(--figma-color-icon)',
   },
   argTypes: {
     type: { control: false },
@@ -165,7 +161,6 @@ export const Pictogram: Story = {
             <Icon
               type={args.type}
               iconName={icon}
-              iconColor={args.iconColor}
             />
             <span
               className={`type ${texts['type']}`}
@@ -185,7 +180,6 @@ export const Letter: Story = {
     type: 'LETTER',
     iconName: undefined,
     iconLetter: 'L',
-    iconColor: 'var(--figma-color-icon)',
   },
   argTypes: {
     type: { control: false },
@@ -196,7 +190,6 @@ export const Letter: Story = {
       <Icon
         type={args.type}
         iconLetter={args.iconLetter}
-        iconColor={args.iconColor}
       />
     )
   },
