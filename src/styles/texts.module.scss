@@ -29,12 +29,12 @@
 }
 
 .type {
-  font-family: var(--text-font-family);
-  font-size: var(--text-default-font-size);
-  font-weight: var(--text-default-font-weight);
-  line-height: var(--text-default-line-height);
-  letter-spacing: var(--text-default-letter-spacing);
   color: var(--text-color-primary);
+  font-weight: var(--text-default-font-weight);
+  font-size: var(--text-default-font-size);
+  line-height: var(--text-default-line-height);
+  font-family: var(--text-font-family);
+  letter-spacing: var(--text-default-letter-spacing);
 
   &--small {
     font-size: var(--text-small-font-size);
@@ -54,11 +54,11 @@
   }
 
   &--medium {
-      font-weight: var(--text-font-weight-medium);
+    font-weight: var(--text-font-weight-medium);
   }
 
   &--bold {
-      font-weight: var(--text-font-weight-bold);
+    font-weight: var(--text-font-weight-bold);
   }
 
   &--truncated {

@@ -5,7 +5,8 @@
   --input-height: var(--size-medium);
   --input-margin: 0;
   --input-radius: var(--border-radius-small);
-  --input-padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall) var(--size-xxsmall);
+  --input-padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall)
+    var(--size-xxsmall);
   --input-padding-clearable: var(--size-medium);
   --input-padding-unit: var(--size-small);
   --input-padding-color-picker: var(--size-medium);
@@ -17,7 +18,7 @@
   --input-text-font-family: var(--font-stack);
   --input-text-font-size: var(--font-size-xsmall);
   --input-text-font-weight: var(--font-weight-normal);
-  --input-text-letterspacing: var( --font-letter-spacing-neg-xsmall);
+  --input-text-letterspacing: var(--font-letter-spacing-neg-xsmall);
   --input-text-line-height: var(--font-line-height);
   --input-text-color: var(--figma-color-text);
   --input-text-placeholder-color: var(--figma-color-text-secondary);
@@ -26,10 +27,12 @@
   --input-color-chip-height: var(--size-xsmall);
   --input-color-chip-left: var(--size-xxsmall);
   --input-color-chip-border: rgba(0, 0, 0, 0.1) 0 0 0 var(--size-unit) inset;
-  --input-color-chip-border-focus: var(--figma-color-border-selected) 0 0 0 var(--size-unit) inset;
+  --input-color-chip-border-focus: var(--figma-color-border-selected) 0 0 0
+    var(--size-unit) inset;
 
   --input-textarea-min-height: var(--size-xxlarge);
-  --input-textarea-padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall) var(--size-xxsmall);
+  --input-textarea-padding: var(--size-xxsmall) var(--size-xxxsmall)
+    var(--size-xxsmall) var(--size-xxsmall);
 
   --input-textarea-background-color: var(--figma-color-bg);
   --input-textarea-border-width: var(--size-unit);
@@ -87,14 +90,18 @@
   --input-border-offset-empty-error-hover: var(--size-neg-unit);
   --input-border-color-empty-error-hover: var(--figma-color-border-danger);
   --input-text-color-empty-error-hover: var(--figma-color-text);
-  --input-text-placeholder-color-empty-error-hover: var(--figma-color-text-secondary);
+  --input-text-placeholder-color-empty-error-hover: var(
+    --figma-color-text-secondary
+  );
 
   --input-background-color-empty-error-focus: var(--figma-color-bg);
   --input-border-width-empty-error-focus: var(--size-xunit);
   --input-border-offset-empty-error-focus: var(--size-neg-xunit);
   --input-border-color-empty-error-focus: var(--figma-color-border-danger);
   --input-text-color-empty-error-focus: var(--figma-color-text);
-  --input-text-placeholder-color-empty-error-focus: var(--figma-color-text-secondary);
+  --input-text-placeholder-color-empty-error-focus: var(
+    --figma-color-text-secondary
+  );
 
   --input-background-color-error: var(--figma-color-bg);
   --input-border-width-error: var(--size-unit);
@@ -128,11 +135,10 @@
 
 .input {
   display: flex;
-  align-items: center;
   position: relative;
+  align-items: center;
   cursor: default;
   user-select: none;
-
 
   &.input--blocked {
     pointer-events: none;
@@ -142,11 +148,11 @@
     pointer-events: none;
   }
 
-  &--with-icon &{
+  &--with-icon & {
     &__field {
-        padding-left: var(--input-padding-color-picker);
+      padding-left: var(--input-padding-color-picker);
     }
-}
+  }
 
   input {
     cursor: default;
@@ -159,8 +165,8 @@
       transform: translateY(-50%);
       appearance: none;
       z-index: 1;
-      border: none;
       outline: none;
+      border: none;
       background-color: transparent;
       padding: 0;
       width: var(--input-color-chip-width);
@@ -223,26 +229,26 @@
   }
 
   &__field {
-    font-size: var(--input-text-font-size);
-    font-weight: var(--input-text-font-weight);
-    letter-spacing: var(--input-text-letterspacing);
-    line-height: var(--input-text-line-height);
-    position: relative;
     display: flex;
-    overflow: visible;
+    position: relative;
     align-items: center;
-    width: 100%;
-    height: var(--input-height);
+    cursor: default;
+    box-sizing: border-box;
     margin: var(--input-margin);
-    padding: var(--input-padding);
-    color: var(--input-text-color);
     outline: var(--input-border-width) solid var(--input-border-color);
     outline-offset: var(--input-border-offset);
+    border: none;
     border-radius: var(--input-radius);
     background-color: var(--input-background-color);
-    border: none;
-    box-sizing: border-box;
-    cursor: default;
+    padding: var(--input-padding);
+    width: 100%;
+    height: var(--input-height);
+    overflow: visible;
+    color: var(--input-text-color);
+    font-weight: var(--input-text-font-weight);
+    font-size: var(--input-text-font-size);
+    line-height: var(--input-text-line-height);
+    letter-spacing: var(--input-text-letterspacing);
     user-select: none;
 
     &::placeholder {
@@ -268,7 +274,9 @@
       --input-border-offset: var(--input-border-offset-empty-hover);
       --input-border-color: var(--input-border-color-empty-hover);
       --input-text-color: var(--input-text-color-empty-hover);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-hover);
+      --input-text-placeholder-color: var(
+        --input-text-placeholder-color-empty-hover
+      );
     }
 
     &:placeholder-shown:focus {
@@ -277,7 +285,9 @@
       --input-border-offset: var(--input-border-offset-empty-focus);
       --input-border-color: var(--input-border-color-empty-focus);
       --input-text-color: var(--input-text-color-empty-focus);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-focus);
+      --input-text-placeholder-color: var(
+        --input-text-placeholder-color-empty-focus
+      );
     }
 
     &--error:placeholder-shown {
@@ -286,7 +296,9 @@
       --input-border-offset: var(--input-border-offset-empty-error);
       --input-border-color: var(--input-border-color-empty-error);
       --input-text-color: var(--input-text-color-empty-error);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-error);
+      --input-text-placeholder-color: var(
+        --input-text-placeholder-color-empty-error
+      );
     }
 
     &--error:placeholder-shown:hover {
@@ -295,7 +307,9 @@
       --input-border-offset: var(--input-border-offset-empty-error-hover);
       --input-border-color: var(--input-border-color-empty-error-hover);
       --input-text-color: var(--input-text-color-empty-error-hover);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-error-hover);
+      --input-text-placeholder-color: var(
+        --input-text-placeholder-color-empty-error-hover
+      );
     }
 
     &--error:placeholder-shown:focus {
@@ -304,7 +318,9 @@
       --input-border-offset: var(--input-border-offset-empty-error-focus);
       --input-border-color: var(--input-border-color-empty-error-focus);
       --input-text-color: var(--input-text-color-empty-error-focus);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-error-focus);
+      --input-text-placeholder-color: var(
+        --input-text-placeholder-color-empty-error-focus
+      );
     }
 
     &:hover {
@@ -340,7 +356,9 @@
       --input-border-offset: var(--input-border-offset-error-hover);
       --input-border-color: var(--input-border-color-error-hover);
       --input-text-color: var(--input-text-color-error-hover);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-error-hover);
+      --input-text-placeholder-color: var(
+        --input-text-placeholder-color-error-hover
+      );
     }
 
     &--error:focus {
@@ -349,7 +367,9 @@
       --input-border-offset: var(--input-border-offset-error-focus);
       --input-border-color: var(--input-border-color-error-focus);
       --input-text-color: var(--input-text-color-error-focus);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-error-focus);
+      --input-text-placeholder-color: var(
+        --input-text-placeholder-color-error-focus
+      );
     }
 
     &:disabled {
@@ -358,7 +378,9 @@
       --input-border-offset: var(--input-border-offset-disabled);
       --input-border-color: var(--input-border-color-disabled);
       --input-text-color: var(--input-text-color-disabled);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-disabled);
+      --input-text-placeholder-color: var(
+        --input-text-placeholder-color-disabled
+      );
     }
 
     &--no-frame,
@@ -401,20 +423,20 @@
 }
 
 .textarea {
-  font-family: var(--input-text-font-family);
-  font-size: var(--input-text-font-size);
-  font-weight: var(--input-text-font-weight);
-  letter-spacing: var(--input-text-letterspacing);
-  line-height: var(--input-text-line-height);
-  position: relative;
   display: flex;
-  overflow: visible;
+  position: relative;
   align-items: center;
+  padding: var(--input-textarea-padding);
   width: 100%;
   min-height: var(--input-textarea-min-height);
-  padding: var(--input-textarea-padding);
-  resize: none;
+  overflow: visible;
   overflow-y: auto;
+  resize: none;
+  font-weight: var(--input-text-font-weight);
+  font-size: var(--input-text-font-size);
+  line-height: var(--input-text-line-height);
+  font-family: var(--input-text-font-family);
+  letter-spacing: var(--input-text-letterspacing);
 
   &--monospace {
     font-family: monospace;
