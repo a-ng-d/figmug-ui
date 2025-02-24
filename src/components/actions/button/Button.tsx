@@ -1,5 +1,4 @@
 import React from 'react'
-import texts from '@styles/texts.module.scss'
 import type { IconList } from '@tps/icon.types'
 import Icon from '@components/assets/icon/Icon'
 import Chip from '@components/tags/chip/Chip'
@@ -238,40 +237,10 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
     )
   }
 
-  Compact = () => {
-    const { icon, label, isDisabled, isBlocked, isNew, action } = this.props
-
-    return (
-      <button
-        role="compact-button"
-        className="compact-button recharged"
-        disabled={isDisabled || isBlocked}
-        onKeyDown={(e) => {
-          if (
-            (e.key === ' ' || e.key === 'Enter') &&
-            !(isDisabled || isBlocked)
-          )
-            action?.(e)
-          if (e.key === 'Escape') (e.target as HTMLElement).blur()
-        }}
-        onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
-        ref={this.buttonRef}
-      >
-        <Icon
-          type="PICTO"
-          iconName={icon}
-        />
-        <div className={`type ${texts.type}`}>{label}</div>
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
-      </button>
-    )
-  }
-
   // Render
   render() {
     const { type, isLink } = this.props
 
-    if (type === 'compact') return this.Compact()
     if (type !== 'icon') return isLink ? this.LinkButton() : this.Button()
     return this.Icon()
   }
