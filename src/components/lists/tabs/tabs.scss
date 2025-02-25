@@ -1,35 +1,56 @@
-.tabs.recharged {
+:root {
+  --tab-padding: var(--size-xxxsmall) var(--size-xxsmall);
+  --tab-gap: 0;
+  --tab-radius: 0;
+  --tab-background-color: var(--figma-color-bg);
+  --tab-text-color: var(--figma-color-text-secondary);
+  --tab-text-weight: var(--font-weight-medium);
+
+  --tab-notification-inset: var(--size-unit) var(--size-unit) auto auto;
+  --tab-notification-width: var(--size-xxxsmall);
+  --tab-notification-height: var(--size-xxxsmall);
+  --tab-notification-radius: var(--border-radius-small);
+  --tab-notification-background: var(--figma-color-icon);
+
+  --tab-text-color-hover: var(--figma-color-text);
+  --tab-text-weight-hover: var(--font-weight-medium);
+  --tab-text-color-active: var(--figma-color-text);
+  --tab-text-weight-active: var(--font-weight-bold);
+}
+
+.tabs {
   display: flex;
   align-items: stretch;
   cursor: default;
   user-select: none;
+  gap: var(--tab-gap);
 
   & .tabs__tab {
     position: relative;
-    cursor: default;
-    padding: 0 var(--size-xxsmall);
-    color: var(--figma-color-text-secondary);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--size-large);
-  }
+    padding: var(--tab-padding);
+    color: var(--tab-text-color);
+    font-weight: var(--tab-text-weight);
+    background-color: var(--tab-background-color);
+    border-radius: var(--tab-radius);
 
-  & .tabs__tab:hover {
-    color: var(--figma-color-text-hover);
-  }
+    &:hover {
+      --tab-text-color: var(--tab-text-color-hover);
+      --tab-text-weight: var(--tab-text-weight-hover);
+    }
 
-  & .tabs__tab--active {
-    color: var(--figma-color-text);
-    font-weight: var(--font-weight-bold);
+    &--active {
+      --tab-text-color: var(--tab-text-color-active);
+      --tab-text-weight: var(--tab-text-weight-active);
+    }
   }
 
   & .tabs__tab--new:after {
     position: absolute;
-    top: 12px;
-    right: 2px;
-    border-radius: var(--border-radius-small);
-    background-color: var(--figma-color-text);
-    width: var(--size-xxxsmall);
-    height: var(--size-xxxsmall);
+    inset: var(--tab-notification-inset);
+    border-radius: var(--tab-notification-radius);
+    background-color: var(--tab-notification-background);
+    width: var(--tab-notification-width);
+    height: var(--tab-notification-height);
     content: '';
   }
 }

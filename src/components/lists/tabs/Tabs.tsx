@@ -15,14 +15,13 @@ const Tabs = (props: TabsProps) => {
   const { tabs, active, action } = props
 
   return (
-    <div className="tabs recharged">
+    <div className="tabs">
       {tabs.map((tab) => (
         <div
           role="navigation"
           key={tab.label.toLowerCase()}
           className={[
             'tabs__tab',
-            'type',
             texts.type,
             active === tab.id && 'tabs__tab--active',
             tab.isUpdated && 'tabs__tab--new',
