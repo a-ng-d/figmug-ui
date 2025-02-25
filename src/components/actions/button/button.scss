@@ -21,11 +21,11 @@
   --button-text-decoration: none;
 
   --button-icon-color: var(--figma-color-icon);
-  --button-icon-width: var(--size-xsmall);
-  --button-icon-height: var(--size-medium);
+  --button-icon-width: var(--size-small);
+  --button-icon-height: var(--size-small);
 
   --button-caret-width: var(--size-xsmall);
-  --button-caret-height: var(--size-medium);
+  --button-caret-height: var(--size-small);
 
   --button-small-height: var(--size-small);
   --button-small-padding: 0 var(--size-xxsmall);
@@ -409,15 +409,21 @@
   }
 
   .button__icon {
-    background-color: var(--button-icon-color);
     width: var(--button-icon-width);
     height: var(--button-icon-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --icon-picto-icon: var(--button-icon-color);
   }
 
   .button__caret {
-    background-color: var(--button-icon-color);
     width: var(--button-caret-width);
     height: var(--button-caret-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --icon-picto-icon: var(--button-icon-color);
   }
 
   .button__loader {

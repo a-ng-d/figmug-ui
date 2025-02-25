@@ -102,11 +102,12 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         ref={this.buttonRef}
       >
         {icon !== undefined && (
-          <Icon
-            type="PICTO"
-            iconName={icon}
-            customClassName="button__icon"
-          />
+          <span className="button__icon">
+            <Icon
+              type="PICTO"
+              iconName={icon}
+            />
+          </span>
         )}
         <span className={['button__label'].filter((n) => n).join(' ')}>
           {label}
@@ -121,11 +122,12 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           </div>
         )}
         {hasMultipleActions && (
-          <Icon
-            type="PICTO"
-            iconName="chevron-down"
-            customClassName="button__caret"
-          />
+          <span className="button__caret">
+            <Icon
+              type="PICTO"
+              iconName="chevron-down"
+            />
+          </span>
         )}
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </button>
