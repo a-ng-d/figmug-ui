@@ -75,7 +75,6 @@
     outline-offset: var(--dropdown-border-offset);
     height: var(--dropdown-height);
     padding: var(--dropdown-padding);   
-    overflow-y: hidden;
     border-radius: var(--dropdown-radius);
     background-color: var(--dropdown-background-color);
     width: auto;
@@ -129,6 +128,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
     --icon-picto-color: var(--dropdown-caret-color);
   }
 

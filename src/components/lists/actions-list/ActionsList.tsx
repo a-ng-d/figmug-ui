@@ -105,7 +105,7 @@ export default class ActionsList extends React.Component<
     return (
       <div className="select-menu__submenu">
         <ul
-          className="select-menu__menu recharged select-menu__menu--active"
+          className="select-menu__menu select-menu__menu--active"
           ref={subMenuRef}
         >
           {options?.map((option, index) => {
@@ -140,7 +140,7 @@ export default class ActionsList extends React.Component<
           .filter((n) => n)
           .join(' ')}
       >
-        <span className="select-menu__item-label">{option.label}</span>
+        <span className="select-menu__item__label">{option.label}</span>
       </li>
     )
   }
@@ -186,8 +186,17 @@ export default class ActionsList extends React.Component<
         onFocus={() => null}
         onBlur={() => null}
       >
-        <span className="select-menu__item-icon" />
-        <span className="select-menu__item-label">{option.label}</span>
+        {selected?.split(', ').filter((value) => value === option.value)
+          .length === 1 && (
+          <span className="select-menu__item__tick">
+            <Icon
+              type="PICTO"
+              iconName="check"
+            />
+          </span>
+        )}
+
+        <span className="select-menu__item__label">{option.label}</span>
         {(option.isBlocked || option.isNew) && (
           <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
         )}
@@ -224,12 +233,16 @@ export default class ActionsList extends React.Component<
         onFocus={() => null}
         onBlur={() => null}
       >
-        <span className="select-menu__item-icon" />
-        <span className="select-menu__item-label">{option.label}</span>
+        <span className="select-menu__item__label">{option.label}</span>
         {(option.isBlocked || option.isNew) && (
           <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
         )}
-        <span className="select-menu__item-carret" />
+        <span className="select-menu__item__caret">
+          <Icon
+            type="PICTO"
+            iconName="caret-right"
+          />
+        </span>
         {(() => {
           if (openedGroup === option.value) return this.SubMenu(option.children)
           return null
@@ -269,8 +282,16 @@ export default class ActionsList extends React.Component<
         }}
         onMouseDown={!option.isBlocked ? option.action : undefined}
       >
-        <span className="select-menu__item-icon" />
-        <span className="select-menu__item-label">{option.label}</span>
+        {selected?.split(', ').filter((value) => value === option.value)
+          .length === 1 && (
+          <span className="select-menu__item__tick">
+            <Icon
+              type="PICTO"
+              iconName="check"
+            />
+          </span>
+        )}
+        <span className="select-menu__item__label">{option.label}</span>
         {(option.isBlocked || option.isNew) && (
           <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
         )}
@@ -298,14 +319,12 @@ export default class ActionsList extends React.Component<
             <Icon
               type="PICTO"
               iconName="upward"
-              iconColor="var(--white)"
             />
           </div>
         )}
         <ul
           className={[
             'select-menu__menu',
-            'recharged',
             'select-menu__menu--active',
             direction === 'RIGHT'
               ? 'select-menu__menu--right'
@@ -353,7 +372,6 @@ export default class ActionsList extends React.Component<
               <Icon
                 type="PICTO"
                 iconName="downward"
-                iconColor="var(--white)"
               />
             </div>
           )}
