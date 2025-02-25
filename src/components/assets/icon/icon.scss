@@ -13,6 +13,7 @@
   width: var(--icon-width);
   height: var(--icon-height);
   user-select: none;
+  pointer-events: none;
 
   &--picto {
     background-color: var(--icon-picto-color);

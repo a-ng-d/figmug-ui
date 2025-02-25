@@ -28,7 +28,6 @@ const Tooltip = (props: TooltipProps) => {
     <div
       className={[
         'tooltip',
-        'recharged',
         isSingleLine && 'tooltip--singleline',
         pin === 'TOP' && 'tooltip--top',
         pin === 'BOTTOM' && 'tooltip--bottom',
@@ -48,9 +47,7 @@ const Tooltip = (props: TooltipProps) => {
         }}
       >
         <div
-          className={['tooltip__text', texts.type, 'type']
-            .filter((n) => n)
-            .join(' ')}
+          className={['tooltip__text', texts.type].filter((n) => n).join(' ')}
         >
           {children}
         </div>

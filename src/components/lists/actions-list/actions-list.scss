@@ -6,6 +6,7 @@
   --actions-list-border-width: var(--size-unit);
   --actions-list-border-color: var(--grey-800);
   --actions-list-border-offset: var(--size-neg-unit);
+  --actions-list-shadow: var(--shadow-hud);
 
   --actions-list-item-height: var(--size-small);
   --actions-list-item-padding: 0 var(--size-xsmall) 0 var(--size-medium);
@@ -64,6 +65,7 @@
 
 .select-menu {
   position: relative;
+  box-shadow: var(--action-list-shadow);
 
   .select-menu__spot {
     display: flex;

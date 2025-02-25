@@ -200,7 +200,9 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         onMouseEnter={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
-        onMouseLeave={() => this.setState({ isTooltipVisible: false })}
+        onMouseLeave={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
         onFocus={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
