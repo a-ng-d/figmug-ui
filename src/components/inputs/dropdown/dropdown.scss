@@ -11,10 +11,6 @@
   --dropdown-border-width: 0;
   --dropdown-border-offset: 0;
 
-  --dropdown-text-font-size: var(--font-size-xsmall);
-  --dropdown-text-font-weight: var(--font-weight-normal);
-  --dropdown-text-letter-spacing: var( --font-letter-spacing-neg-xsmall);
-  --dropdown-text-line-height: var(--font-line-height);
   --dropdown-text-color: var(--figma-color-text);
 
   --dropdown-caret-width: var(--size-xsmall);
@@ -110,11 +106,7 @@
   }
 
   .select-menu__label {
-    color: var(--dropdown-text-color);
-    font-size: var(--dropdown-text-font-size);
-    font-weight: var(--dropdown-text-font-weight);
-    letter-spacing: var( --dropdown-text-letter-spacing);
-    line-height: var(--dropdown-text-line-height);
+    --text-color-primary: var(--dropdown-text-color);
     pointer-events: none;
   }
 

@@ -224,7 +224,9 @@ return (
       onMouseDown={!(isDisabled || isBlocked) ? this.onOpenMenu : undefined}
       ref={this.buttonRef}
     >
-      <span className={`${texts['type--truncated']} select-menu__label`}>
+      <span
+        className={`${texts['type--truncated']} ${texts.type} select-menu__label`}
+      >
         {this.findSelectedOption(options)}
       </span>
       <span className="select-menu__caret">

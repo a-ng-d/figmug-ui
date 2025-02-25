@@ -123,14 +123,8 @@
   &__item {
     position: relative;
     align-items: center;
-    color: var(--actions-list-item-text-color);
     cursor: default;
     display: flex;
-    font-family: var(--actions-list-item-text-font-family);
-    font-size: var(--actions-list-item-text-font-size);
-    font-weight: var(--actions-list-item-text-font-weight);
-    letter-spacing: var(--actions-list-item-text-letterspacing);
-    line-height: var(--actions-list-item-text-line-height);
     height: var(--actions-list-item-height);
     padding: var(--actions-list-item-padding);
     user-select: none;
@@ -138,6 +132,7 @@
     background-color: var(--actions-list-item-background-color);
     gap: var(--actions-list-item-gap);
     border-radius: var(--actions-list-item-radius);
+    --text-color-primary: var(--actions-list-item-text-color);
 
     &__tick {
       width: var(--actions-list-caret-width);
@@ -173,8 +168,6 @@
 
       .select-menu__submenu {
         --actions-list-item-background-color: var(--actions-list-item-background-color);
-        --actions-list-item-text-color: var(--actions-list-item-text-color);
-        --actions-list-tick-color: var(--actions-list-tick-color-hover);
       }
     }
 
@@ -186,8 +179,6 @@
 
       .select-menu__submenu {
         --actions-list-item-background-color: var(--actions-list-item-background-color);
-        --actions-list-item-text-color: var(--actions-list-item-text-color);
-        --actions-list-tick-color: var(--actions-list-tick-color-hover);
       }
     }
 

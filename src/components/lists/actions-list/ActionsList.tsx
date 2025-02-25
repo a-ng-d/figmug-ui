@@ -2,6 +2,7 @@ import React from 'react'
 import { DropdownOption } from '@tps/list.types'
 import Chip from '@components/tags/chip/Chip'
 import Icon from '@components/assets/icon/Icon.tsx'
+import texts from '@styles/texts.module.scss'
 import './actions-list.scss'
 
 export interface ActionsListProps {
@@ -140,7 +141,11 @@ export default class ActionsList extends React.Component<
           .filter((n) => n)
           .join(' ')}
       >
-        <span className="select-menu__item__label">{option.label}</span>
+        <span
+          className={`${texts['type--small']} ${texts.type} ${texts.type}} select-menu__item__label`}
+        >
+          {option.label}
+        </span>
       </li>
     )
   }
@@ -196,7 +201,11 @@ export default class ActionsList extends React.Component<
           </span>
         )}
 
-        <span className="select-menu__item__label">{option.label}</span>
+        <span
+          className={`${texts['type--small']} ${texts.type} ${texts.type}} select-menu__item__label`}
+        >
+          {option.label}
+        </span>
         {(option.isBlocked || option.isNew) && (
           <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
         )}
@@ -233,7 +242,11 @@ export default class ActionsList extends React.Component<
         onFocus={() => null}
         onBlur={() => null}
       >
-        <span className="select-menu__item__label">{option.label}</span>
+        <span
+          className={`${texts['type--small']} ${texts.type} ${texts.type}} select-menu__item__label`}
+        >
+          {option.label}
+        </span>
         {(option.isBlocked || option.isNew) && (
           <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
         )}
@@ -291,7 +304,11 @@ export default class ActionsList extends React.Component<
             />
           </span>
         )}
-        <span className="select-menu__item__label">{option.label}</span>
+        <span
+          className={`${texts['type--small']} ${texts.type} select-menu__item__label`}
+        >
+          {option.label}
+        </span>
         {(option.isBlocked || option.isNew) && (
           <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
         )}
