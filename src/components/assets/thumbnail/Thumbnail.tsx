@@ -23,7 +23,7 @@ const Thumbnail = (props: ThumbnailProps) => {
   if (isError)
     return (
       <div
-        className="thumbnail recharged"
+        className="thumbnail"
         style={{
           width: w,
           height: h,
@@ -39,7 +39,7 @@ const Thumbnail = (props: ThumbnailProps) => {
 
   return (
     <div
-      className="thumbnail recharged"
+      className="thumbnail"
       style={{
         width: w,
         height: h,

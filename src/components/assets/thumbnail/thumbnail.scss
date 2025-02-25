@@ -1,8 +1,19 @@
-.thumbnail.recharged {
+:root {
+  --thumbnail-width: var(--size-medium);
+  --thumbnail-height: var(--size-medium);
+  --thumbnail-border-radius: var(--border-radius-med);
+  --thumbnail-border-width: var(--size-unit);
+  --thumbnail-border-offset: var(--size-neg-unit);
+  --thumbnail-border-color: var(--figma-color-border-disabled);
+  --thumbnail-background-color: var(--figma-color-bg-secondary);
+}
+
+.thumbnail {
   display: flex;
-  border: 1px solid var(--figma-color-border-disabled, #e6e6e6);
-  border-radius: var(--border-radius-med);
-  background: var(--figma-color-bg-secondary, #f5f5f5);
+  outline: var(--thumbnail-border-width) solid var(--thumbnail-border-color);
+  outline-offset: var(--thumbnail-border-offset);
+  border-radius: var(--thumbnail-border-radius);
+  background: var(--thumbnail-background-color);
   height: 100%;
 
   .thumbnail__image {

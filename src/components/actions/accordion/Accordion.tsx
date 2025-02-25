@@ -54,7 +54,6 @@ const Accordion = (props: AccordionProps) => {
       role="row"
       className={[
         'accordion',
-        'recharged',
         isExpanded && 'accordion--expanded',
         isBlocked && 'accordion--blocked',
       ]

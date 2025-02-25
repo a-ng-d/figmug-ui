@@ -1,74 +1,73 @@
-.accordion.recharged {
+:root {
+  --accordion-padding: var(--size-xxsmall) 0;
+  --accordion-border: var(--size-unit) solid var(--figma-color-border-disabled);
+  
+  --accordion-row-gap: var(--size-xsmall);
+  --accordion-row-height: var(--size-medium);
+  --accordion-row-padding: var(--size-xxxsmall) 0;
+  
+  --accordion-text-color: var(--figma-color-text-secondary);
+  --accordion-icon-color: var(--figma-color-icon-secondary);
+
+  --accordion-text-color-hover: var(--figma-color-text);
+  --accordion-icon-color-hover: var(--figma-color-icon);
+
+  --accordion-icon-color-expanded: var(--figma-color-icon);
+  --accordion-text-color-expanded: var(--figma-color-text);
+
+  --accordion-icon-color-disabled: var(--figma-color-icon-disabled);
+  --accordion-text-color-disabled: var(--figma-color-text-disabled);
+}
+
+.accordion {
   cursor: default;
-  border-bottom: 1px solid var(--figma-color-border-disabled);
-  padding: var(--size-xxsmall) 0;
+  border-bottom: var(--accordion-border);
+  padding: var(--accordion-padding);
   user-select: none;
 
-  .accordion__row {
+  &__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 var(--size-xsmall);
-    height: var(--size-medium);
+    height: var(--accordion-row-height);
+    padding: var(--accordion-row-padding);
+    gap: var(--accordion-row-gap);
+
+    --section-title-text-color: var(--accordion-text-color);
+    --text-color-primary: var(--accordion-text-color);
+    --icon-picto-color: var(--accordion-icon-color);
+    --icon-button-icon-color: var(--accordion-icon-color);
+
+    &:hover {
+      --section-title-text-color: var(--accordion-text-color-hover);
+      --text-color-primary: var(--accordion-text-color-hover);
+      --icon-picto-color: var(--accordion-icon-color-hover);
+      --icon-button-icon-color: var(--accordion-icon-color-hover);
+    }
   }
 
-  .accordion__row__left-part {
+  &__row__left-part {
     display: flex;
     flex: 1;
     align-items: baseline;
   }
-  .accordion__row__right-part {
+
+  &__row__right-part {
     display: flex;
     align-items: center;
   }
 
-  .accordion__row .section-title,
-  .accordion__row .label {
-    width: auto;
+  &--expanded &__row {
+    --section-title-text-color: var(--accordion-text-color-expanded);
+    --text-color-primary: var(--accordion-text-color-expanded);
+    --icon-picto-color: var(--accordion-icon-color-expanded);
+    --icon-button-icon-color: var(--accordion-icon-color-expanded);
   }
 
-  .accordion__row .section-title {
-    display: flex;
-    gap: var(--size-xxxsmall);
-  }
-
-  .accordion__row .section-title__title,
-  .accordion__row .section-title__indicator {
-    color: var(--figma-color-text-secondary);
-  }
-
-  .accordion__row .tooltip__icon,
-  .accordion__row .accordion__row__icon {
-    background: var(--figma-color-text-secondary) !important;
-  }
-
-  &:hover .accordion__row .section-title__title,
-  &:hover .accordion__row .section-title__indicator,
-  &.accordion--expanded .accordion__row .section-title__title,
-  &.accordion--expanded .accordion__row .section-title__indicator {
-    color: var(--figma-color-text);
-  }
-
-  &:hover .accordion__row .accordion__row__icon,
-  &:hover .accordion__row .tooltip__icon,
-  &.accordion--expanded .accordion__row .accordion__row__icon,
-  &.accordion--expanded .accordion__row .tooltip__icon {
-    background: var(--figma-color-icon) !important;
-  }
-
-  &.accordion--blocked .accordion__row .section-title__title,
-  &.accordion--blocked .accordion__row .section-title__indicator,
-  &.accordion--blocked:hover .accordion__row .section-title__title,
-  &.accordion--blocked:hover .accordion__row .section-title__indicator {
-    color: var(--figma-color-text-disabled);
-  }
-
-  &.accordion--blocked .accordion__row .tooltip__icon {
-    color: var(--figma-color-icon);
-  }
-
-  &.accordion--blocked .accordion__row .accordion__row__icon,
-  &.accordion--blocked:hover .accordion__row .accordion__row__icon {
-    background: var(--figma-color-icon-disabled) !important;
+  &--blocked &__row {
+    --section-title-text-color: var(--accordion-text-color-disabled);
+    --text-color-primary: var(--accordion-text-color-disabled);
+    --icon-picto-color: var(--accordion-icon-color-disabled);
+    --icon-button-icon-color: var(--accordion-icon-color-disabled);
   }
 }

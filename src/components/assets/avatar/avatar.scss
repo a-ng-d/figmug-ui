@@ -1,3 +1,9 @@
+:root {
+  --avatar-width: var(--size-small);
+  --avatar-height: var(--size-small);
+  --avatar-radius: var(--size-small);
+}
+
 .user {
   display: flex;
   align-items: center;
@@ -8,9 +14,9 @@
   }
 
   .user__avatar {
-    border-radius: var(--size-small);
-    width: var(--size-small);
-    height: var(--size-small);
+    border-radius: var(--avatar-radius);
+    width: var(--avatar-width);
+    height: var(--avatar-height);
     overflow: hidden;
 
     img {

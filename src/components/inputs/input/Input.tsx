@@ -462,7 +462,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
       <div
         className={[
           'input',
-          'recharged',
           'input--short-text',
           icon !== undefined && 'input--with-icon',
           isBlocked && 'input--blocked',

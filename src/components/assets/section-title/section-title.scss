@@ -1,8 +1,41 @@
-.section-title.recharged {
+:root {
+  --section-title-height: var(--size-medium);
+  --section-title-gap: var(--size-xxxsmall);
+  --section-title-padding: 0 var(--size-xxxsmall) 0 var(--size-xxsmall);
+  --section-title-text-font-family: var(--font-stack);
+  --section-title-text-font-size: var(--font-size-xsmall);
+  --section-title-text-font-weight: var(--font-weight-bold);
+  --section-title-text-letter-spacing: var(--font-letter-spacing-pos-xsmall);
+  --section-title-text-line-height: var(--font-line-height);
+  --section-title-text-color: var(--figma-color-text);
+
+  --section-title-info-icon-width: var(--size-medium);
+  --section-title-info-icon-height: var(--size-medium);
+}
+
+.section-title {
   display: flex;
-  gap: var(--size-xxxsmall);
+  gap: var(--section-title-gap);
+  font-family: var(--section-title-text-font-family);
+  font-size: var(--section-title-text-font-size);
+  font-weight: var(--section-title-text-font-weight);
+  letter-spacing: var(--section-title-text-letter-spacing);
+  line-height: var(--section-title-text-line-height);
+  color: var(--section-title-text-color);
+  height: var(--section-title-height);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: default;
+  user-select: none;
+  padding: var(--section-title-padding);
 
   .section-title__tooltip {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--section-title-info-icon-width);
+    height: var(--section-title-info-icon-height);
   }
 }

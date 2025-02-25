@@ -26,6 +26,15 @@
   --text-link-decoration: none;
   --text-link-border-focus: none;
   --text-link-decoration-focus: underline;
+
+  --text-label-color: var(--figma-color-text-tertiary);
+  --text-label-font-size: var(--font-size-xsmall);
+  --text-label-font-weight: var(--font-weight-normal);
+  --text-label-letter-spacing: var(--font-letter-spacing-pos-xsmall);
+  --text-label-line-height: var(--font-line-height);
+  --text-label-height: var(--size-medium);
+  --text-label-padding: 0 var(--size-xxxsmall) 0 var(--size-xxsmall);
+  --text-label-gap: var(--size-xxxsmall);
 }
 
 .type {
@@ -86,17 +95,19 @@
   }
 }
 
-.onboarding-tip__msg,
-.section-title,
-.select-menu__label {
-  color: var(--figma-color-text);
-}
-
-.onboarding-tip__msg {
-  line-height: var(--font-line-height);
-}
-
 .label {
-  --black3: var(--figma-color-text-tertiary);
-  gap: var(--size-xxxsmall);
+  font-family: var(--text-font-family);
+  font-size: var(--text-label-font-size);
+  font-weight: var(--text-label-font-weight);
+  letter-spacing: var(--text-label-letter-spacing);
+  line-height: var(--text-label-line-height);
+  color: var(--text-label-color);
+  height: var(--text-label-height);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: default;
+  user-select: none;
+  padding: var(--text-label-padding);
+  gap: var(--text-label-gap);
 }
