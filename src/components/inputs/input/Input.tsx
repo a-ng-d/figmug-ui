@@ -279,10 +279,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
       }
     }
 
-    document.body.style.cursor = 'ew-resize'
+    document.body.style.setProperty('cursor', 'ew-resize', 'important')
+    this.inputRef.current?.style.setProperty('cursor', 'ew-resize', 'important')
     document.addEventListener('mouseup', () => {
       document.removeEventListener('mousemove', this.onDrag)
       document.body.style.cursor = ''
+      if (this.inputRef.current) this.inputRef.current.style.cursor = ''
     })
   }
 
@@ -425,14 +427,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
             ref={this.inputRef}
           />
           {unit !== undefined && (
-            <div
-              style={{
-                position: 'absolute',
-                right: '0',
-                top: '0',
-                pointerEvents: 'none',
-              }}
-            >
+            <div className="input__unit">
               <Icon
                 type={'LETTER'}
                 iconLetter={unit}

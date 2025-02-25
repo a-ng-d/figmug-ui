@@ -30,6 +30,8 @@
   --input-color-chip-border-focus: var(--figma-color-border-selected) 0 0 0
     var(--size-unit) inset;
 
+  --input-icon-color: var(--figma-color-icon-disabled);
+
   --input-textarea-min-height: var(--size-xxlarge);
   --input-textarea-padding: var(--size-xxsmall) var(--size-xxxsmall)
     var(--size-xxsmall) var(--size-xxsmall);
@@ -144,10 +146,6 @@
     pointer-events: none;
   }
 
-  .icon-box {
-    pointer-events: none;
-  }
-
   &--with-icon & {
     &__field {
       padding-left: var(--input-padding-color-picker);
@@ -155,7 +153,7 @@
   }
 
   input {
-    cursor: default;
+    cursor: inherit;
     user-select: none;
 
     &[type='color' i] {
@@ -226,13 +224,21 @@
     top: 0;
     left: 0;
     z-index: 2;
+    --icon-letter-color: var(--input-icon-color);
+  }
+
+  &__unit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+    --icon-letter-color: var(--input-icon-color);
   }
 
   &__field {
     display: flex;
     position: relative;
     align-items: center;
-    cursor: default;
     box-sizing: border-box;
     margin: var(--input-margin);
     outline: var(--input-border-width) solid var(--input-border-color);
@@ -249,7 +255,6 @@
     font-size: var(--input-text-font-size);
     line-height: var(--input-text-line-height);
     letter-spacing: var(--input-text-letterspacing);
-    user-select: none;
 
     &::placeholder {
       color: var(--input-text-placeholder-color);
@@ -423,6 +428,7 @@
 }
 
 .textarea {
+  cursor: inherit;
   display: flex;
   position: relative;
   align-items: center;

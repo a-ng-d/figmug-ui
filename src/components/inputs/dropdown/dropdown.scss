@@ -14,10 +14,11 @@
   --dropdown-text-font-size: var(--font-size-xsmall);
   --dropdown-text-font-weight: var(--font-weight-normal);
   --dropdown-text-letter-spacing: var( --font-letter-spacing-neg-xsmall);
-  --dropdown-text-line-height: var(--line-height);
+  --dropdown-text-line-height: var(--font-line-height);
   --dropdown-text-color: var(--figma-color-text);
 
   --dropdown-caret-width: var(--size-xsmall);
+  --dropdown-caret-height: var(--size-xsmall);
   --dropdown-caret-color: var(--figma-color-icon-disabled);
 
   /* States */
@@ -110,12 +111,12 @@
   }
 
   .select-menu__label {
-    margin-top: 0;
     color: var(--dropdown-text-color);
     font-size: var(--dropdown-text-font-size);
     font-weight: var(--dropdown-text-font-weight);
     letter-spacing: var( --dropdown-text-letter-spacing);
     line-height: var(--dropdown-text-line-height);
+    pointer-events: none;
   }
 
   .select-menu__item-label {
@@ -124,7 +125,11 @@
 
   .select-menu__caret {
     width: var(--dropdown-caret-width);
-    background: var(--dropdown-caret-color);
+    height: var(--dropdown-caret-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --icon-picto-color: var(--dropdown-caret-color);
   }
 
   .floating-menu &__menu {
