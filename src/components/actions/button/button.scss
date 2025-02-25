@@ -1,13 +1,17 @@
 :root {
   /* Base */
+  /* Text Button */
   --button-height: var(--size-medium);
   --button-gap: var(--size-xxxsmall);
   --button-radius: var(--border-radius-large);
   --button-padding: 0 var(--size-xsmall);
+
   --button-background-color: transparent;
+
   --button-border-color: transparent;
   --button-border-width: var(--size-xunit);
   --button-border-offset: var(--size-neg-xunit);
+
   --button-text-color: var(--figma-color-text);
   --button-text-font-family: var(--font-stack);
   --button-text-font-size: var(--font-size-small);
@@ -15,29 +19,38 @@
   --button-text-letter-spacing: var(--font-letter-spacing-neg-small);
   --button-text-line-height: var(--font-line-height);
   --button-text-decoration: none;
+
   --button-icon-color: var(--figma-color-icon);
-  --button-icon-left-width: var(--size-xsmall);
-  --button-icon-left-height: var(--size-medium);
-  --button-icon-right-width: var(--size-xsmall);
-  --button-icon-right-height: var(--size-medium);
+  --button-icon-width: var(--size-xsmall);
+  --button-icon-height: var(--size-medium);
+
+  --button-caret-width: var(--size-xsmall);
+  --button-caret-height: var(--size-medium);
 
   --button-small-height: var(--size-small);
   --button-small-padding: 0 var(--size-xxsmall);
+
   --button-large-height: var(--size-large);
   --button-large-padding: 0 var(--size-medium);
 
+  /* Icon Button */
   --icon-button-width: var(--size-medium);
   --icon-button-height: var(--size-medium);
   --icon-button-radius: var(--border-radius-med);
   --icon-button-padding: 0;
+
   --icon-button-background-color: transparent;
+
   --icon-button-border-color: transparent;
   --icon-button-border-width: var(--size-xunit);
   --icon-button-border-offset: var(--size-neg-xunit);
+
   --icon-button-text-color: var(--figma-color-text);
+
   --icon-button-icon-color: var(--figma-color-icon);
   --icon-button-icon-width: var(--size-medium);
   --icon-button-icon-height: var(--size-medium);
+
   --icon-button-notification-width: var(--size-xxxsmall);
   --icon-button-notification-height: var(--size-xxxsmall);
   --icon-button-notification-radius: var(--size-xunit);
@@ -58,31 +71,37 @@
   );
   --button-background-color-primary-focus: var(--figma-color-bg-brand-pressed);
   --button-background-color-primary-disabled: var(--figma-color-bg-disabled);
+  
   --button-border-width-primary: 0;
   --button-border-width-primary-hover: 0;
   --button-border-width-primary-pressed: 0;
   --button-border-width-primary-focus: var(--size-xunit);
   --button-border-width-primary-disabled: 0;
+  
   --button-border-offset-primary: 0;
   --button-border-offset-primary-hover: 0;
   --button-border-offset-primary-pressed: 0;
   --button-border-offset-primary-focus: var(--size-neg-xunit);
   --button-border-offset-primary-disabled: 0;
+  
   --button-border-color-primary: transparent;
   --button-border-color-primary-hover: transparent;
   --button-border-color-primary-pressed: transparent;
   --button-border-color-primary-focus: var(--figma-color-border-brand-strong);
   --button-border-primary-disabled: none;
+  
   --button-text-color-primary: var(--figma-color-text-onbrand);
   --button-text-color-primary-hover: var(--figma-color-text-onbrand);
   --button-text-color-primary-pressed: var(--figma-color-text-onbrand);
   --button-text-color-primary-focus: var(--figma-color-text-onbrand);
   --button-text-color-primary-disabled: var(--figma-color-text-ondisabled);
+  
   --button-text-decoration-primary: none;
   --button-text-decoration-primary-hover: none;
   --button-text-decoration-primary-pressed: none;
   --button-text-decoration-primary-focus: none;
   --button-text-decoration-primary-disabled: none;
+  
   --button-icon-color-primary: var(--figma-color-icon-onbrand);
   --button-icon-color-primary-hover: var(--figma-color-icon-onbrand);
   --button-icon-color-primary-pressed: var(--figma-color-icon-onbrand);
@@ -95,31 +114,37 @@
   --button-background-color-secondary-pressed: var(--figma-color-bg-pressed);
   --button-background-color-secondary-focus: var(--figma-color-bg-pressed);
   --button-background-color-secondary-disabled: var(--figma-color-bg);
+  
   --button-border-width-secondary: var(--size-unit);
   --button-border-width-secondary-hover: var(--size-unit);
   --button-border-width-secondary-pressed: var(--size-unit);
   --button-border-width-secondary-focus: var(--size-xunit);
   --button-border-width-secondary-disabled: var(--size-unit);
+  
   --button-border-offset-secondary: var(--size-neg-unit);
   --button-border-offset-secondary-hover: var(--size-neg-unit);
   --button-border-offset-secondary-pressed: var(--size-neg-unit);
   --button-border-offset-secondary-focus: var(--size-neg-xunit);
   --button-border-offset-secondary-disabled: var(--size-neg-unit);
+  
   --button-border-color-secondary: var(--figma-color-border-strong);
   --button-border-color-secondary-hover: var(--figma-color-border-strong);
   --button-border-color-secondary-pressed: var(--figma-color-border-strong);
   --button-border-color-secondary-focus: var(--figma-color-border-selected);
   --button-border-color-secondary-disabled: var(--figma-color-border-disabled);
+  
   --button-text-color-secondary: var(--figma-color-text);
   --button-text-color-secondary-hover: var(--figma-color-text);
   --button-text-color-secondary-pressed: var(--figma-color-text);
   --button-text-color-secondary-focus: var(--figma-color-text);
   --button-text-color-secondary-disabled: var(--figma-color-text-disabled);
+  
   --button-text-decoration-secondary: none;
   --button-text-decoration-secondary-hover: none;
   --button-text-decoration-secondary-pressed: none;
   --button-text-decoration-secondary-focus: none;
   --button-text-decoration-secondary-disabled: none;
+  
   --button-icon-color-secondary: var(--figma-color-icon);
   --button-icon-color-secondary-hover: var(--figma-color-icon);
   --button-icon-color-secondary-pressed: var(--figma-color-icon);
@@ -132,31 +157,37 @@
   --button-background-color-tertiary-pressed: var(--figma-color-bg);
   --button-background-color-tertiary-focus: var(--figma-color-bg);
   --button-background-color-tertiary-disabled: var(--figma-color-bg);
+  
   --button-border-width-tertiary: 0;
   --button-border-width-tertiary-hover: 0;
   --button-border-width-tertiary-pressed: 0;
   --button-border-width-tertiary-focus: 0;
   --button-border-width-tertiary-disabled: 0;
+  
   --button-border-offset-tertiary: 0;
   --button-border-offset-tertiary-hover: 0;
   --button-border-offset-tertiary-pressed: 0;
   --button-border-offset-tertiary-focus: 0;
   --button-border-offset-tertiary-disabled: 0;
+  
   --button-border-color-tertiary: transparent;
   --button-border-color-tertiary-hover: transparent;
   --button-border-color-tertiary-pressed: transparent;
   --button-border-color-tertiary-focus: transparent;
   --button-border-color-tertiary-disabled: transparent;
+  
   --button-text-color-tertiary: var(--figma-color-text-brand);
   --button-text-color-tertiary-hover: var(--figma-color-text-brand);
   --button-text-color-tertiary-pressed: var(--figma-color-text-brand);
   --button-text-color-tertiary-focus: var(--figma-color-text-brand);
   --button-text-color-tertiary-disabled: var(--figma-color-text-disabled);
+  
   --button-text-decoration-tertiary: none;
   --button-text-decoration-tertiary-hover: none;
   --button-text-decoration-tertiary-pressed: none;
   --button-text-decoration-tertiary-focus: underline;
   --button-text-decoration-tertiary-disabled: none;
+  
   --button-icon-color-tertiary: var(--figma-color-icon);
   --button-icon-color-tertiary-hover: var(--figma-color-icon);
   --button-icon-color-tertiary-pressed: var(--figma-color-icon);
@@ -177,16 +208,19 @@
   --button-background-color-destructive-disabled: var(
     --figma-color-bg-disabled
   );
+  
   --button-border-width-destructive: 0;
   --button-border-width-destructive-hover: 0;
   --button-border-width-destructive-pressed: 0;
   --button-border-width-destructive-focus: var(--size-xunit);
   --button-border-width-destructive-disabled: 0;
+  
   --button-border-offset-destructive: 0;
   --button-border-offset-destructive-hover: 0;
   --button-border-offset-destructive-pressed: 0;
   --button-border-offset-destructive-focus: var(--size-neg-xunit);
   --button-border-offset-destructive-disabled: 0;
+  
   --button-border-color-destructive: transparent;
   --button-border-color-destructive-hover: transparent;
   --button-border-color-destructive-pressed: transparent;
@@ -194,16 +228,19 @@
     --figma-color-border-danger-strong
   );
   --button-border-color-destructive-disabled: transparent;
+  
   --button-text-color-destructive: var(--figma-color-text-ondanger);
   --button-text-color-destructive-hover: var(--figma-color-text-ondanger);
   --button-text-color-destructive-pressed: var(--figma-color-text-ondanger);
   --button-text-color-destructive-focus: var(--figma-color-text-ondanger);
   --button-text-color-destructive-disabled: var(--figma-color-text-ondisabled);
+  
   --button-text-decoration-destructive: none;
   --button-text-decoration-destructive-hover: none;
   --button-text-decoration-destructive-pressed: none;
   --button-text-decoration-destructive-focus: none;
   --button-text-decoration-destructive-disabled: none;
+  
   --button-icon-color-destructive: var(--figma-color-icon-ondanger);
   --button-icon-color-destructive-hover: var(--figma-color-icon-ondanger);
   --button-icon-color-destructive-pressed: var(--figma-color-icon-ondanger);
@@ -224,33 +261,39 @@
   --button-background-color-alternative-disabled: var(
     --figma-color-bg-disabled
   );
+  
   --button-border-width-alternative: 0;
   --button-border-width-alternative-hover: 0;
   --button-border-width-alternative-pressed: 0;
   --button-border-width-alternative-focus: var(--size-xunit);
   --button-border-width-alternative-disabled: 0;
+  
   --button-border-offset-alternative: 0;
   --button-border-offset-alternative-hover: 0;
   --button-border-offset-alternative-pressed: 0;
   --button-border-offset-alternative-focus: var(--size-neg-xunit);
   --button-border-offset-alternative-disabled: 0;
+  
   --button-border-color-alternative: transparent;
   --button-border-color-alternative-hover: transparent;
   --button-border-color-alternative-pressed: transparent;
   --button-border-color-alternative-focus: var(
     --figma-color-border-component-strong
   );
+  
   --button-border-alternative-disabled: none;
   --button-text-color-alternative: var(--figma-color-text-oncomponent);
   --button-text-color-alternative-hover: var(--figma-color-text-oncomponent);
   --button-text-color-alternative-pressed: var(--figma-color-text-oncomponent);
   --button-text-color-alternative-focus: var(--figma-color-text-oncomponent);
   --button-text-color-alternative-disabled: var(--figma-color-text-ondisabled);
+  
   --button-text-decoration-alternative: none;
   --button-text-decoration-alternative-hover: none;
   --button-text-decoration-alternative-pressed: none;
   --button-text-decoration-alternative-focus: none;
   --button-text-decoration-alternative-disabled: none;
+  
   --button-icon-color-alternative: var(--figma-color-icon-oncomponent);
   --button-icon-color-alternative-hover: var(--figma-color-icon-oncomponent);
   --button-icon-color-alternative-pressed: var(--figma-color-icon-oncomponent);
@@ -263,26 +306,31 @@
   --icon-button-background-color-pressed: var(--figma-color-bg-pressed);
   --icon-button-background-color-focus: var(--figma-color-bg-pressed);
   --icon-button-background-color-disabled: var(--figma-color-bg);
+  
   --icon-button-border-width: 0;
   --icon-button-border-width-hover: 0;
   --icon-button-border-width-pressed: 0;
   --icon-button-border-width-focus: var(--size-xunit);
   --icon-button-border-width-disabled: 0;
+  
   --icon-button-border-offset: 0;
   --icon-button-border-offset-hover: 0;
   --icon-button-border-offset-pressed: 0;
   --icon-button-border-offset-focus: var(--size-neg-xunit);
   --icon-button-border-offset-disabled: 0;
+  
   --icon-button-border-color: transparent;
   --icon-button-border-color-hover: transparent;
   --icon-button-border-color-pressed: transparent;
   --icon-button-border-color-focus: var(--figma-color-border-selected);
   --icon-button-border-color-disabled: transparent;
+  
   --icon-button-icon-color: var(--figma-color-icon);
   --icon-button-icon-color-hover: var(--figma-color-icon);
   --icon-button-icon-color-pressed: var(--figma-color-icon);
   --icon-button-icon-color-focus: var(--figma-color-icon);
   --icon-button-icon-color-disabled: var(--figma-color-icon-disabled);
+  
   --icon-button-notification-background-color: var(--figma-color-icon);
   --icon-button-notification-background-color-hover: var(--figma-color-icon);
   --icon-button-notification-background-color-pressed: var(--figma-color-icon);
@@ -299,16 +347,19 @@
   --icon-button-background-color-selected-disabled: var(
     --figma-color-bg-brand-tertiary
   );
+  
   --icon-button-border-width-selected: 0;
   --icon-button-border-width-selected-hover: 0;
   --icon-button-border-width-selected-pressed: 0;
   --icon-button-border-width-selected-focus: var(--size-xunit);
   --icon-button-border-width-selected-disabled: 0;
+  
   --icon-button-border-offset-selected: 0;
   --icon-button-border-offset-selected-hover: 0;
   --icon-button-border-offset-selected-pressed: 0;
   --icon-button-border-offset-selected-focus: var(--size-neg-xunit);
   --icon-button-border-offset-selected-disabled: 0;
+  
   --icon-button-border-color-selected: transparent;
   --icon-button-border-color-selected-hover: transparent;
   --icon-button-border-color-selected-pressed: transparent;
@@ -316,6 +367,7 @@
     --figma-color-border-brand-strong
   );
   --icon-button-border-color-selected-disabled: transparent;
+  
   --icon-button-icon-color-selected: var(--figma-color-icon-onbrand);
   --icon-button-icon-color-selected-hover: var(--figma-color-icon-onbrand);
   --icon-button-icon-color-selected-pressed: var(--figma-color-icon-onbrand);
@@ -323,6 +375,7 @@
   --icon-button-icon-color-selected-disabled: var(
     --figma-color-icon-onbrand-tertiary
   );
+  
   --icon-button-notification-background-color-selected: var(
     --figma-color-icon-onbrand
   );
@@ -357,14 +410,14 @@
 
   .button__icon {
     background-color: var(--button-icon-color);
-    width: var(--button-icon-left-width);
-    height: var(--button-icon-left-height);
+    width: var(--button-icon-width);
+    height: var(--button-icon-height);
   }
 
   .button__caret {
     background-color: var(--button-icon-color);
-    width: var(--button-icon-right-width);
-    height: var(--button-icon-right-height);
+    width: var(--button-caret-width);
+    height: var(--button-caret-height);
   }
 
   .button__loader {
