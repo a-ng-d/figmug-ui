@@ -113,6 +113,9 @@
 .switch {
   cursor: default;
   user-select: none;
+  display: flex;
+  position: relative;
+  align-items: center;
 
   .checkbox__label,
   .switch__label,
@@ -123,10 +126,6 @@
 
 /* Checkbox */
 .checkbox {
-  display: flex;
-  position: relative;
-  align-items: center;
-  cursor: default;
   height: var(--select-checkbox-height);
 
   &__label {
@@ -193,10 +192,6 @@
 }
 
 .switch {
-  display: flex;
-  position: relative;
-  align-items: center;
-  cursor: default;
   height: var(--select-radio-height);
 
   &__label {
@@ -302,10 +297,6 @@
 
 /* Radio */
 .radio {
-  display: flex;
-  position: relative;
-  align-items: center;
-  cursor: default;
   height: var(--select-radio-height);
 
   &__label {
