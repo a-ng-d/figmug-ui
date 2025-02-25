@@ -1,6 +1,52 @@
-.select-menu.recharged {
+:root {
+  /* Base */
+  --dropdown-height: var(--size-medium);
+  --dropdown-padding: 0 var(--size-xxxsmall) 0 var(--size-xxsmall);
+  --dropdown-radius: var(--border-radius-small);
+  --dropdown-gap: var(--size-xxxsmall);
+  
+  --dropdown-background-color: var(--figma-color-bg);
+
+  --dropdown-border-color: transparent;
+  --dropdown-border-width: 0;
+  --dropdown-border-offset: 0;
+
+  --dropdown-text-font-size: var(--font-size-xsmall);
+  --dropdown-text-font-weight: var(--font-weight-normal);
+  --dropdown-text-letter-spacing: var( --font-letter-spacing-neg-xsmall);
+  --dropdown-text-line-height: var(--line-height);
+  --dropdown-text-color: var(--figma-color-text);
+
+  --dropdown-caret-width: var(--size-xsmall);
+  --dropdown-caret-color: var(--figma-color-icon-disabled);
+
+  /* States */
+  --dropdown-background-color-hover: var(--figma-color-bg);
+  --dropdown-border-color-hover: var(--figma-color-border);
+  --dropdown-border-width-hover: var(--size-unit);
+  --dropdown-border-offset-hover: var(--size-neg-unit);
+  --dropdown-caret-color-hover: var(--figma-color-icon);
+  --dropdown-text-color-hover: var(--figma-color-text);
+
+  --dropdown-background-color-focus: var(--figma-color-bg);
+  --dropdown-border-color-focus: var(--figma-color-border-selected);
+  --dropdown-border-width-focus: var(--size-xunit);
+  --dropdown-border-offset-focus: var(--size-neg-xunit);
+  --dropdown-caret-color-focus: var(--figma-color-icon);
+  --dropdown-text-color-focus: var(--figma-color-text);
+
+  --dropdown-background-color-disabled: var(--figma-color-bg);
+  --dropdown-border-color-disabled: transparent;
+  --dropdown-border-width-disabled: 0;
+  --dropdown-border-offset-disabled: 0;
+  --dropdown-caret-color-disabled: var(--figma-color-icon-disabled);
+  --dropdown-text-color-disabled: var(--figma-color-text-disabled);
+}
+
+.select-menu {
   display: flex;
   align-items: baseline;
+  position: relative;
   cursor: default;
   user-select: none;
 
@@ -14,31 +60,62 @@
 
   &.select-menu--fill {
     justify-content: stretch;
+
+    .select-menu__button {
+      justify-content: space-between;
+      width: 100%;
+    }
   }
 
   .select-menu__button {
-    --white: var(--figma-color-bg);
-    background-color: transparent;
-    padding: 0 0 0 var(--size-xxsmall);
+    display: flex;
+    align-items: center;
+    outline: var(--dropdown-border-width) solid var(--dropdown-border-color);
+    outline-offset: var(--dropdown-border-offset);
+    height: var(--dropdown-height);
+    padding: var(--dropdown-padding);   
+    overflow-y: hidden;
+    border-radius: var(--dropdown-radius);
+    background-color: var(--dropdown-background-color);
     width: auto;
-  }
+    border: none;
+    gap: var(--dropdown-gap);
 
-  .select-menu__button:hover {
-    --black1: var(--figma-color-border);
-  }
+    &:hover {
+      --dropdown-background-color: var(--dropdown-background-color-hover);
+      --dropdown-border-color: var(--dropdown-border-color-hover);
+      --dropdown-border-width: var(--dropdown-border-width-hover);
+      --dropdown-border-offset: var(--dropdown-border-offset-hover);
+      --dropdown-caret-color: var(--dropdown-caret-color-hover);
+      --dropdown-text-color: var(--dropdown-text-color-hover);
+    }
 
-  .select-menu__button:focus {
-    --blue: var(--figma-color-border-selected);
-  }
+    &:focus {
+      --dropdown-background-color: var(--dropdown-background-color-focus);
+      --dropdown-border-color: var(--dropdown-border-color-focus);
+      --dropdown-border-width: var(--dropdown-border-width-focus);
+      --dropdown-border-offset: var(--dropdown-border-offset-focus);
+      --dropdown-caret-color: var(--dropdown-caret-color-focus);
+      --dropdown-text-color: var(--dropdown-text-color-focus);
+    }
 
-  &.select-menu--fill .select-menu__button {
-    justify-content: space-between;
-    width: 100%;
+    &:disabled {
+      --dropdown-background-color: var(--dropdown-background-color-disabled);
+      --dropdown-border-color: var(--dropdown-border-color-disabled);
+      --dropdown-border-width: var(--dropdown-border-width-disabled);
+      --dropdown-border-offset: var(--dropdown-border-offset-disabled);
+      --dropdown-caret-color: var(--dropdown-caret-color-disabled);
+      --dropdown-text-color: var(--dropdown-text-color-disabled);
+    }
   }
 
   .select-menu__label {
     margin-top: 0;
-    color: var(--figma-color-text);
+    color: var(--dropdown-text-color);
+    font-size: var(--dropdown-text-font-size);
+    font-weight: var(--dropdown-text-font-weight);
+    letter-spacing: var( --dropdown-text-letter-spacing);
+    line-height: var(--dropdown-text-line-height);
   }
 
   .select-menu__item-label {
@@ -46,34 +123,11 @@
   }
 
   .select-menu__caret {
-    opacity: 1;
-    margin-left: -8px;
-    background-image: none;
-  }
-
-  .select-menu__button:hover .select-menu__caret,
-  .select-menu__button:focus .select-menu__caret {
-    opacity: 1;
-    margin-left: -8px;
-    background: var(--figma-color-icon) !important;
+    width: var(--dropdown-caret-width);
+    background: var(--dropdown-caret-color);
   }
 
   .floating-menu &__menu {
     position: relative;
-  }
-
-  &.select-menu--disabled {
-    .select-menu__label {
-      color: var(--figma-color-text-disabled);
-    }
-
-    .select-menu__caret {
-      background: var(--figma-color-icon-disabled) !important;
-    }
-
-    .select-menu__button:hover .select-menu__caret {
-      opacity: 1;
-      background: var(--figma-color-icon-disabled) !important;
-    }
   }
 }

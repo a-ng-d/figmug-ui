@@ -3,6 +3,7 @@ import type { DropdownOption } from '@tps/list.types'
 import Icon from '@components/assets/icon/Icon'
 import ActionsList from '@components/lists/actions-list/ActionsList'
 import Chip from '@components/tags/chip/Chip'
+import texts from '@styles/texts.module.scss'
 import './dropdown.scss'
 
 export interface DropdownProps {
@@ -191,7 +192,6 @@ export default class Dropdown extends React.Component<
         id={id}
         className={[
           'select-menu',
-          'recharged',
           (() => {
             if (alignment === 'LEFT') return 'select-menu--left'
             if (alignment === 'RIGHT') return 'select-menu--right'
@@ -225,13 +225,12 @@ export default class Dropdown extends React.Component<
           onMouseDown={!(isDisabled || isBlocked) ? this.onOpenMenu : undefined}
           ref={this.buttonRef}
         >
-          <span className="select-menu__label">
+          <span className={`${texts['type--truncated']} select-menu__label`}>
             {this.findSelectedOption(options)}
           </span>
           <Icon
             type="PICTO"
             iconName="chevron-down"
-            iconColor="var(--figma-color-icon-disabled)"
             customClassName="select-menu__caret"
           />
         </button>
