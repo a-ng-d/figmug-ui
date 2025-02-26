@@ -19,6 +19,7 @@
   /* States */
   --actions-item-background-color-hover: var(--figma-color-bg-hover);
   
+  --actions-item-background-color-focus: var(--figma-color-bg-selected);
   --actions-item-border-secondary-width-focus: var(--size-xunit);
   --actions-item-border-secondary-offset-focus: var(--size-neg-xunit);
   --actions-item-border-secondary-color-focus: var(--figma-color-border-selected);
@@ -45,6 +46,7 @@ li.actions-item {
     }
 
     &:focus {
+      --actions-item-background-color: var(--actions-item-background-color-focus) 
       --actions-item-border-secondary-width: var(--actions-item-border-secondary-width-focus);
       --actions-item-border-secondary-offset: var(--actions-item-border-secondary-offset-focus);
       --actions-item-border-secondary-color: var(--actions-item-border-secondary-color-focus);

@@ -1,11 +1,41 @@
+$id: "simple-item";
+
+:root {
+  --#{$id}-gap: var(--size-xxsmall);
+  --#{$id}-padding: var(--size-xunit) var(--size-xsmall);
+  --#{$id}-min-height: var(--size-medium);
+  --#{$id}-border-color: var(--figma-color-border-selected);
+  --#{$id}-border-width: var(--size-xunit);
+  --#{$id}-border-radius: var(--border-radius-small);
+  --#{$id}-background-color: var(--figma-color-bg);
+  --#{$id}-border-width: 0;
+  --#{$id}-border-offset: 0;
+  --#{$id}-border-color: transparent;
+
+  --#{$id}-background-color-hover: var(--figma-color-bg-hover);
+
+  --#{$id}-background-color-focus: var(--figma-color-bg-selected);
+  --#{$id}-border-width-focus: var(--size-xunit);
+  --#{$id}-border-offset-focus: var(--size-neg-xunit);
+  --#{$id}-border-color-focus: var(--figma-color-border-selected);
+
+  --#{$id}-min-width-compact: 112px;
+  --#{$id}-width-compact: 112px;
+
+  --#{$id}-min-width-square: var(--size-medium);
+  --#{$id}-width-square: var(--size-medium);
+}
+
 .simple-item {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: var(--size-xxsmall);
-  background-color: var(--figma-color-bg);
-  padding: 2px var(--size-xsmall);
-  min-height: var(--size-medium);
+  gap: var(--#{$id}-gap);
+  background-color: var(--#{$id}-background-color);
+  padding: var(--#{$id}-padding);
+  min-height: var(--#{$id}-min-height);
+  outline: var(--#{$id}-border-width) solid var(--#{$id}-border-color);
+  outline-offset: var(--#{$id}-border-offset);
 
   &--center {
     align-items: center;
@@ -16,12 +46,16 @@
   }
 
   &--interactive:hover {
-    background-color: var(--figma-color-bg-hover);
-  }
-
-  &--interactive:focus {
-    outline: 2px solid var(--figma-color-border-selected);
-    outline-offset: -2px;
+    &:hover {
+      --#{$id}-background-color: var(--#{$id}-background-color-hover);
+    }
+    
+    &:focus {
+      --#{$id}-background-color: var(--#{$id}-background-color-focus);
+      --#{$id}-border-width: var(--#{$id}-border-width-focus);
+      --#{$id}-border-offset: var(--#{$id}-border-offset-focus);
+      --#{$id}-border-color: var(--#{$id}-border-color-focus);
+    }
   }
 
   .simple-item__left-part,
@@ -38,16 +72,16 @@
     max-width: 100%;
 
     &--compact {
-      width: 112px;
-      min-width: 112px;
+      width: var(--#{$id}-width-compact);
+      min-width: var(--#{$id}-min-width-compact);
     }
 
     &--square {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: var(--size-medium);
-      min-width: var(--size-medium);
+      width: var(--#{$id}-width-square);
+      min-width: var(--#{$id}-min-width-square);
     }
 
     &--fill {
