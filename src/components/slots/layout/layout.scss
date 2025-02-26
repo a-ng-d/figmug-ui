@@ -1,3 +1,12 @@
+:root {
+  --layout-block-padding: var(--size-xxsmall) 0;
+  --layout-block-border: 1px solid var(--figma-color-border-disabled);
+
+  --layout-list-padding: padding: var(--size-xxsmall) 0 0 0;
+
+  --layout-distributed-gap: var(--size-small);
+}
+
 .layout {
   display: flex;
   flex-direction: row;
@@ -18,20 +27,20 @@
     flex: 1;
     flex-direction: column;
     justify-content: flex-start;
-    padding: var(--size-xxsmall) 0;
+    padding: var(--layout-block-padding);
     overflow-y: auto;
 
     & + & {
-      border-left: 1px solid var(--figma-color-border-disabled);
+      border-left: var(--layout-block-border);
     }
 
     &--list {
-      padding: var(--size-xxsmall) 0 0 0;
+      padding: var(--layout-list-padding);
     }
 
     &--distributed {
       justify-content: space-between;
-      gap: var(--size-small);
+      gap: var(--layout-distributed-gap);
       overflow-y: hidden;
     }
 

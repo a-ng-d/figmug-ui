@@ -1,21 +1,19 @@
-$id: "keyboard-shortcut-item";
-
 :root {
-  --#{$id}-padding: 0 var(--size-small);
-  --#{$id}-gap: var(--size-xxsmall);
-  --#{$id}-min-height: var(--size-large);
-  --#{$id}-background-color: var(--figma-color-bg);
+  --keyboard-shortcut-item-padding: 0 var(--size-small);
+  --keyboard-shortcut-item-gap: var(--size-xxsmall);
+  --keyboard-shortcut-item-min-height: var(--size-large);
+  --keyboard-shortcut-item-background-color: var(--figma-color-bg);
   
-  --#{$id}-key-radius: var(--border-radius-small);
-  --#{$id}-key-padding: 0 var(--size-xxsmall);
-  --#{$id}-key-min-width: var(--size-xxsmall);
-  --#{$id}-key-gap: var(--size-xxxsmall);
-  --#{$id}-key-height: var(--size-small);
-  --#{$id}-key-border-width: var(--size-unit);
-  --#{$id}-key-border-offset: var(--size-neg-unit);
-  --#{$id}-key-border-color: var(--figma-color-border);
+  --keyboard-shortcut-item-key-radius: var(--border-radius-small);
+  --keyboard-shortcut-item-key-padding: 0 var(--size-xxsmall);
+  --keyboard-shortcut-item-key-min-width: var(--size-xxsmall);
+  --keyboard-shortcut-item-key-gap: var(--size-xxxsmall);
+  --keyboard-shortcut-item-key-height: var(--size-small);
+  --keyboard-shortcut-item-key-border-width: var(--size-unit);
+  --keyboard-shortcut-item-key-border-offset: var(--size-neg-unit);
+  --keyboard-shortcut-item-key-border-color: var(--figma-color-border);
 
-  --#{$id}-separator-padding: 0 var(--size-xxxsmall);
+  --keyboard-shortcut-item-separator-padding: 0 var(--size-xxxsmall);
 
 }
 
@@ -23,32 +21,32 @@ $id: "keyboard-shortcut-item";
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--#{$id}-gap);
-  padding: var(--#{$id}-padding);
-  min-height: var(--#{$id}-min-height);
+  gap: var(--keyboard-shortcut-item-gap);
+  padding: var(--keyboard-shortcut-item-padding);
+  min-height: var(--keyboard-shortcut-item-min-height);
   user-select: none;
-  background-color: var(--#{$id}-background-color);
+  background-color: var(--keyboard-shortcut-item-background-color);
 
   .keyboard-shortcut-item__keys {
     display: flex;
     align-items: center;
-    gap: var(--#{$id}-key-gap);
+    gap: var(--keyboard-shortcut-item-key-gap);
   }
 
   .keyboard-shortcut-item__key {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: var(--#{$id}-key-border-width) solid var(--#{$id}-key-border-color);
-    outline-offset: var(--#{$id}-key-border-offset);
-    border-radius: var(--#{$id}-key-radius);
-    padding: var(--#{$id}-key-padding);
-    min-width: var(--#{$id}-key-min-width);
-    height: var(--#{$id}-key-height);
+    outline: var(--keyboard-shortcut-item-key-border-width) solid var(--keyboard-shortcut-item-key-border-color);
+    outline-offset: var(--keyboard-shortcut-item-key-border-offset);
+    border-radius: var(--keyboard-shortcut-item-key-radius);
+    padding: var(--keyboard-shortcut-item-key-padding);
+    min-width: var(--keyboard-shortcut-item-key-min-width);
+    height: var(--keyboard-shortcut-item-key-height);
     white-space: nowrap;
   }
 
   .keyboard-shortcut-item__separator {
-    padding: var(--#{$id}-separator-padding);
+    padding: var(--keyboard-shortcut-item-separator-padding);
   }
 }

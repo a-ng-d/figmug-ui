@@ -1,26 +1,24 @@
-$id: "simple-slider";
-
 :root {
-  --#{$id}-margin-top: var(--size-small) 0 0;
-  --#{$id}-padding: 0 var(--size-medium);
-  --#{$id}-height: var(--size-small);
-  --#{$id}-radius: var(--border-radius-large);
-  --#{$id}-border-color: var(--figma-color-border-disabled-strong);
-  --#{$id}-border-width: var(--size-unit);
+  --simple-slider-margin-top: var(--size-small) 0 0;
+  --simple-slider-padding: 0 var(--size-medium);
+  --simple-slider-height: var(--size-small);
+  --simple-slider-radius: var(--border-radius-large);
+  --simple-slider-border-color: var(--figma-color-border-disabled-strong);
+  --simple-slider-border-width: var(--size-unit);
 }
 
 .simple-slider {
   display: flex;
   position: relative;
   align-items: center;
-  margin: var(--#{$id}-margin-top);
-  padding: var(--#{$id}-padding);
+  margin: var(--simple-slider-margin-top);
+  padding: var(--simple-slider-padding);
 
   &__range {
     position: relative;
     flex: 1 1 auto;
-    box-shadow: inset 0 0 0 var(--#{$id}-border-width) var(--#{$id}-border-color);
-    border-radius: var(--#{$id}-radius);
-    height: var(--#{$id}-height);
+    box-shadow: inset 0 0 0 var(--simple-slider-border-width) var(--simple-slider-border-color);
+    border-radius: var(--simple-slider-radius);
+    height: var(--simple-slider-height);
   }
 }

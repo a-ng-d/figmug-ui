@@ -1,15 +1,13 @@
-$id: "consent";
-
 :root {
-  --#{$id}-banner-gap: var(--size-xxsmall) 0;
-  --#{$id}-banner-padding: var(--size-xxsmall) var(--size-xsmall);
-  --#{$id}-banner-max-height: calc(100% - var(--size-large));
-  --#{$id}-banner-max-width: 400px;
-  --#{$id}-banner-background-color: var(--figma-color-bg);
-  --#{$id}-banner-border: var(--size-unit) solid var(--figma-color-border);
+  --consent-banner-gap: var(--size-xxsmall) 0;
+  --consent-banner-padding: var(--size-xxsmall) var(--size-xsmall);
+  --consent-banner-max-height: calc(100% - var(--size-large));
+  --consent-banner-max-width: 400px;
+  --consent-banner-background-color: var(--figma-color-bg);
+  --consent-banner-border: var(--size-unit) solid var(--figma-color-border);
 
-  --#{$id}-list-padding: 0 0 0 var(--size-xsmall);
-  --#{$id}-list-max-width: 400px;
+  --consent-list-padding: 0 0 0 var(--size-xsmall);
+  --consent-list-max-width: 400px;
 }
 
 .consent {
@@ -26,16 +24,16 @@ $id: "consent";
   .consent__banner {
     display: flex;
     flex-direction: column;
-    gap: var(--#{$id}-banner-gap);
-    border-top: var(--#{$id}-banner-border);
-    background-color: var(--#{$id}-banner-background-color);
-    padding: var(--#{$id}-banner-padding);
+    gap: var(--consent-banner-gap);
+    border-top: var(--consent-banner-border);
+    background-color: var(--consent-banner-background-color);
+    padding: var(--consent-banner-padding);
     width: 100%;
-    max-height: var(--#{$id}-banner-max-height);
+    max-height: var(--consent-banner-max-height);
     pointer-events: all;
 
     &__message {
-      max-width: var(--#{$id}-banner-max-width);
+      max-width: var(--consent-banner-max-width);
       overflow-y: auto;
     }
 
@@ -46,7 +44,7 @@ $id: "consent";
     &__list {
       display: flex;
       flex-direction: column;
-      padding: var(--#{$id}-list-padding);
+      padding: var(--consent-list-padding);
       list-style-type: none;
     }
 
@@ -55,7 +53,7 @@ $id: "consent";
     }
 
     &__item__description {
-      max-width: var(--#{$id}-list-max-width);
+      max-width: var(--consent-list-max-width);
     }
 
     & > .bar {

@@ -1,39 +1,37 @@
-$id: "button";
-
 :root {
   /* Base */
   /* Text Button */
-  --#{$id}-height: var(--size-medium);
-  --#{$id}-gap: var(--size-xxxsmall);
-  --#{$id}-radius: var(--border-radius-large);
-  --#{$id}-padding: 0 var(--size-xsmall);
+  --button-height: var(--size-medium);
+  --button-gap: var(--size-xxxsmall);
+  --button-radius: var(--border-radius-large);
+  --button-padding: 0 var(--size-xsmall);
 
-  --#{$id}-background-color: transparent;
+  --button-background-color: transparent;
 
-  --#{$id}-border-color: transparent;
-  --#{$id}-border-width: var(--size-xunit);
-  --#{$id}-border-offset: var(--size-neg-xunit);
+  --button-border-color: transparent;
+  --button-border-width: var(--size-xunit);
+  --button-border-offset: var(--size-neg-xunit);
 
-  --#{$id}-text-color: var(--figma-color-text);
-  --#{$id}-text-font-family: var(--font-stack);
-  --#{$id}-text-font-size: var(--font-size-small);
-  --#{$id}-text-font-weight: var(--font-weight-medium);
-  --#{$id}-text-letter-spacing: var(--font-letter-spacing-neg-small);
-  --#{$id}-text-line-height: var(--font-line-height);
-  --#{$id}-text-decoration: none;
+  --button-text-color: var(--figma-color-text);
+  --button-text-font-family: var(--font-stack);
+  --button-text-font-size: var(--font-size-small);
+  --button-text-font-weight: var(--font-weight-medium);
+  --button-text-letter-spacing: var(--font-letter-spacing-neg-small);
+  --button-text-line-height: var(--font-line-height);
+  --button-text-decoration: none;
 
-  --#{$id}-icon-color: var(--figma-color-icon);
-  --#{$id}-icon-width: var(--size-small);
-  --#{$id}-icon-height: var(--size-small);
+  --button-icon-color: var(--figma-color-icon);
+  --button-icon-width: var(--size-small);
+  --button-icon-height: var(--size-small);
 
-  --#{$id}-caret-width: var(--size-xsmall);
-  --#{$id}-caret-height: var(--size-small);
+  --button-caret-width: var(--size-xsmall);
+  --button-caret-height: var(--size-small);
 
-  --#{$id}-small-height: var(--size-small);
-  --#{$id}-small-padding: 0 var(--size-xxsmall);
+  --button-small-height: var(--size-small);
+  --button-small-padding: 0 var(--size-xxsmall);
 
-  --#{$id}-large-height: var(--size-large);
-  --#{$id}-large-padding: 0 var(--size-medium);
+  --button-large-height: var(--size-large);
+  --button-large-padding: 0 var(--size-medium);
 
   /* Icon Button */
   --icon-button-width: var(--size-medium);
@@ -66,243 +64,243 @@ $id: "button";
   --icon-button-large-height: var(--size-large);
 
   /* Primary */
-  --#{$id}-background-color-primary: var(--figma-color-bg-brand);
-  --#{$id}-background-color-primary-hover: var(--figma-color-bg-brand-hover);
-  --#{$id}-background-color-primary-pressed: var(
+  --button-background-color-primary: var(--figma-color-bg-brand);
+  --button-background-color-primary-hover: var(--figma-color-bg-brand-hover);
+  --button-background-color-primary-pressed: var(
     --figma-color-bg-brand-pressed
   );
-  --#{$id}-background-color-primary-focus: var(--figma-color-bg-brand);
-  --#{$id}-background-color-primary-disabled: var(--figma-color-bg-disabled);
+  --button-background-color-primary-focus: var(--figma-color-bg-brand);
+  --button-background-color-primary-disabled: var(--figma-color-bg-disabled);
   
-  --#{$id}-border-width-primary: 0;
-  --#{$id}-border-width-primary-hover: 0;
-  --#{$id}-border-width-primary-pressed: 0;
-  --#{$id}-border-width-primary-focus: var(--size-xunit);
-  --#{$id}-border-width-primary-disabled: 0;
+  --button-border-width-primary: 0;
+  --button-border-width-primary-hover: 0;
+  --button-border-width-primary-pressed: 0;
+  --button-border-width-primary-focus: var(--size-xunit);
+  --button-border-width-primary-disabled: 0;
   
-  --#{$id}-border-offset-primary: 0;
-  --#{$id}-border-offset-primary-hover: 0;
-  --#{$id}-border-offset-primary-pressed: 0;
-  --#{$id}-border-offset-primary-focus: var(--size-neg-xunit);
-  --#{$id}-border-offset-primary-disabled: 0;
+  --button-border-offset-primary: 0;
+  --button-border-offset-primary-hover: 0;
+  --button-border-offset-primary-pressed: 0;
+  --button-border-offset-primary-focus: var(--size-neg-xunit);
+  --button-border-offset-primary-disabled: 0;
   
-  --#{$id}-border-color-primary: transparent;
-  --#{$id}-border-color-primary-hover: transparent;
-  --#{$id}-border-color-primary-pressed: transparent;
-  --#{$id}-border-color-primary-focus: var(--figma-color-border-brand-strong);
-  --#{$id}-border-primary-disabled: none;
+  --button-border-color-primary: transparent;
+  --button-border-color-primary-hover: transparent;
+  --button-border-color-primary-pressed: transparent;
+  --button-border-color-primary-focus: var(--figma-color-border-brand-strong);
+  --button-border-primary-disabled: none;
   
-  --#{$id}-text-color-primary: var(--figma-color-text-onbrand);
-  --#{$id}-text-color-primary-hover: var(--figma-color-text-onbrand);
-  --#{$id}-text-color-primary-pressed: var(--figma-color-text-onbrand);
-  --#{$id}-text-color-primary-focus: var(--figma-color-text-onbrand);
-  --#{$id}-text-color-primary-disabled: var(--figma-color-text-ondisabled);
+  --button-text-color-primary: var(--figma-color-text-onbrand);
+  --button-text-color-primary-hover: var(--figma-color-text-onbrand);
+  --button-text-color-primary-pressed: var(--figma-color-text-onbrand);
+  --button-text-color-primary-focus: var(--figma-color-text-onbrand);
+  --button-text-color-primary-disabled: var(--figma-color-text-ondisabled);
   
-  --#{$id}-text-decoration-primary: none;
-  --#{$id}-text-decoration-primary-hover: none;
-  --#{$id}-text-decoration-primary-pressed: none;
-  --#{$id}-text-decoration-primary-focus: none;
-  --#{$id}-text-decoration-primary-disabled: none;
+  --button-text-decoration-primary: none;
+  --button-text-decoration-primary-hover: none;
+  --button-text-decoration-primary-pressed: none;
+  --button-text-decoration-primary-focus: none;
+  --button-text-decoration-primary-disabled: none;
   
-  --#{$id}-icon-color-primary: var(--figma-color-icon-onbrand);
-  --#{$id}-icon-color-primary-hover: var(--figma-color-icon-onbrand);
-  --#{$id}-icon-color-primary-pressed: var(--figma-color-icon-onbrand);
-  --#{$id}-icon-color-primary-focus: var(--figma-color-icon-onbrand);
-  --#{$id}-icon-color-primary-disabled: var(--figma-color-icon-ondisabled);
+  --button-icon-color-primary: var(--figma-color-icon-onbrand);
+  --button-icon-color-primary-hover: var(--figma-color-icon-onbrand);
+  --button-icon-color-primary-pressed: var(--figma-color-icon-onbrand);
+  --button-icon-color-primary-focus: var(--figma-color-icon-onbrand);
+  --button-icon-color-primary-disabled: var(--figma-color-icon-ondisabled);
 
   /* Secondary */
-  --#{$id}-background-color-secondary: var(--figma-color-bg);
-  --#{$id}-background-color-secondary-hover: var(--figma-color-bg-hover);
-  --#{$id}-background-color-secondary-pressed: var(--figma-color-bg-pressed);
-  --#{$id}-background-color-secondary-focus: var(--figma-color-bg);
-  --#{$id}-background-color-secondary-disabled: var(--figma-color-bg);
+  --button-background-color-secondary: var(--figma-color-bg);
+  --button-background-color-secondary-hover: var(--figma-color-bg-hover);
+  --button-background-color-secondary-pressed: var(--figma-color-bg-pressed);
+  --button-background-color-secondary-focus: var(--figma-color-bg);
+  --button-background-color-secondary-disabled: var(--figma-color-bg);
   
-  --#{$id}-border-width-secondary: var(--size-unit);
-  --#{$id}-border-width-secondary-hover: var(--size-unit);
-  --#{$id}-border-width-secondary-pressed: var(--size-unit);
-  --#{$id}-border-width-secondary-focus: var(--size-xunit);
-  --#{$id}-border-width-secondary-disabled: var(--size-unit);
+  --button-border-width-secondary: var(--size-unit);
+  --button-border-width-secondary-hover: var(--size-unit);
+  --button-border-width-secondary-pressed: var(--size-unit);
+  --button-border-width-secondary-focus: var(--size-xunit);
+  --button-border-width-secondary-disabled: var(--size-unit);
   
-  --#{$id}-border-offset-secondary: var(--size-neg-unit);
-  --#{$id}-border-offset-secondary-hover: var(--size-neg-unit);
-  --#{$id}-border-offset-secondary-pressed: var(--size-neg-unit);
-  --#{$id}-border-offset-secondary-focus: var(--size-neg-xunit);
-  --#{$id}-border-offset-secondary-disabled: var(--size-neg-unit);
+  --button-border-offset-secondary: var(--size-neg-unit);
+  --button-border-offset-secondary-hover: var(--size-neg-unit);
+  --button-border-offset-secondary-pressed: var(--size-neg-unit);
+  --button-border-offset-secondary-focus: var(--size-neg-xunit);
+  --button-border-offset-secondary-disabled: var(--size-neg-unit);
   
-  --#{$id}-border-color-secondary: var(--figma-color-border-strong);
-  --#{$id}-border-color-secondary-hover: var(--figma-color-border-strong);
-  --#{$id}-border-color-secondary-pressed: var(--figma-color-border-strong);
-  --#{$id}-border-color-secondary-focus: var(--figma-color-border-selected);
-  --#{$id}-border-color-secondary-disabled: var(--figma-color-border-disabled);
+  --button-border-color-secondary: var(--figma-color-border-strong);
+  --button-border-color-secondary-hover: var(--figma-color-border-strong);
+  --button-border-color-secondary-pressed: var(--figma-color-border-strong);
+  --button-border-color-secondary-focus: var(--figma-color-border-selected);
+  --button-border-color-secondary-disabled: var(--figma-color-border-disabled);
   
-  --#{$id}-text-color-secondary: var(--figma-color-text);
-  --#{$id}-text-color-secondary-hover: var(--figma-color-text);
-  --#{$id}-text-color-secondary-pressed: var(--figma-color-text);
-  --#{$id}-text-color-secondary-focus: var(--figma-color-text);
-  --#{$id}-text-color-secondary-disabled: var(--figma-color-text-disabled);
+  --button-text-color-secondary: var(--figma-color-text);
+  --button-text-color-secondary-hover: var(--figma-color-text);
+  --button-text-color-secondary-pressed: var(--figma-color-text);
+  --button-text-color-secondary-focus: var(--figma-color-text);
+  --button-text-color-secondary-disabled: var(--figma-color-text-disabled);
   
-  --#{$id}-text-decoration-secondary: none;
-  --#{$id}-text-decoration-secondary-hover: none;
-  --#{$id}-text-decoration-secondary-pressed: none;
-  --#{$id}-text-decoration-secondary-focus: none;
-  --#{$id}-text-decoration-secondary-disabled: none;
+  --button-text-decoration-secondary: none;
+  --button-text-decoration-secondary-hover: none;
+  --button-text-decoration-secondary-pressed: none;
+  --button-text-decoration-secondary-focus: none;
+  --button-text-decoration-secondary-disabled: none;
   
-  --#{$id}-icon-color-secondary: var(--figma-color-icon);
-  --#{$id}-icon-color-secondary-hover: var(--figma-color-icon);
-  --#{$id}-icon-color-secondary-pressed: var(--figma-color-icon);
-  --#{$id}-icon-color-secondary-focus: var(--figma-color-icon);
-  --#{$id}-icon-color-secondary-disabled: var(--figma-color-icon-disabled);
+  --button-icon-color-secondary: var(--figma-color-icon);
+  --button-icon-color-secondary-hover: var(--figma-color-icon);
+  --button-icon-color-secondary-pressed: var(--figma-color-icon);
+  --button-icon-color-secondary-focus: var(--figma-color-icon);
+  --button-icon-color-secondary-disabled: var(--figma-color-icon-disabled);
 
   /* Tertiary */
-  --#{$id}-text-font-size-tertiary: var(--font-size-xsmall);
-  --#{$id}-padding-tertiary: 0;
-  --#{$id}-background-color-tertiary: var(--figma-color-bg);
-  --#{$id}-background-color-tertiary-hover: var(--figma-color-bg);
-  --#{$id}-background-color-tertiary-pressed: var(--figma-color-bg);
-  --#{$id}-background-color-tertiary-focus: var(--figma-color-bg);
-  --#{$id}-background-color-tertiary-disabled: var(--figma-color-bg);
+  --button-text-font-size-tertiary: var(--font-size-xsmall);
+  --button-padding-tertiary: 0;
+  --button-background-color-tertiary: var(--figma-color-bg);
+  --button-background-color-tertiary-hover: var(--figma-color-bg);
+  --button-background-color-tertiary-pressed: var(--figma-color-bg);
+  --button-background-color-tertiary-focus: var(--figma-color-bg);
+  --button-background-color-tertiary-disabled: var(--figma-color-bg);
   
-  --#{$id}-border-width-tertiary: 0;
-  --#{$id}-border-width-tertiary-hover: 0;
-  --#{$id}-border-width-tertiary-pressed: 0;
-  --#{$id}-border-width-tertiary-focus: 0;
-  --#{$id}-border-width-tertiary-disabled: 0;
+  --button-border-width-tertiary: 0;
+  --button-border-width-tertiary-hover: 0;
+  --button-border-width-tertiary-pressed: 0;
+  --button-border-width-tertiary-focus: 0;
+  --button-border-width-tertiary-disabled: 0;
   
-  --#{$id}-border-offset-tertiary: 0;
-  --#{$id}-border-offset-tertiary-hover: 0;
-  --#{$id}-border-offset-tertiary-pressed: 0;
-  --#{$id}-border-offset-tertiary-focus: 0;
-  --#{$id}-border-offset-tertiary-disabled: 0;
+  --button-border-offset-tertiary: 0;
+  --button-border-offset-tertiary-hover: 0;
+  --button-border-offset-tertiary-pressed: 0;
+  --button-border-offset-tertiary-focus: 0;
+  --button-border-offset-tertiary-disabled: 0;
   
-  --#{$id}-border-color-tertiary: transparent;
-  --#{$id}-border-color-tertiary-hover: transparent;
-  --#{$id}-border-color-tertiary-pressed: transparent;
-  --#{$id}-border-color-tertiary-focus: transparent;
-  --#{$id}-border-color-tertiary-disabled: transparent;
+  --button-border-color-tertiary: transparent;
+  --button-border-color-tertiary-hover: transparent;
+  --button-border-color-tertiary-pressed: transparent;
+  --button-border-color-tertiary-focus: transparent;
+  --button-border-color-tertiary-disabled: transparent;
   
-  --#{$id}-text-color-tertiary: var(--figma-color-text-brand);
-  --#{$id}-text-color-tertiary-hover: var(--figma-color-text-brand);
-  --#{$id}-text-color-tertiary-pressed: var(--figma-color-text-brand);
-  --#{$id}-text-color-tertiary-focus: var(--figma-color-text-brand);
-  --#{$id}-text-color-tertiary-disabled: var(--figma-color-text-disabled);
+  --button-text-color-tertiary: var(--figma-color-text-brand);
+  --button-text-color-tertiary-hover: var(--figma-color-text-brand);
+  --button-text-color-tertiary-pressed: var(--figma-color-text-brand);
+  --button-text-color-tertiary-focus: var(--figma-color-text-brand);
+  --button-text-color-tertiary-disabled: var(--figma-color-text-disabled);
   
-  --#{$id}-text-decoration-tertiary: none;
-  --#{$id}-text-decoration-tertiary-hover: none;
-  --#{$id}-text-decoration-tertiary-pressed: none;
-  --#{$id}-text-decoration-tertiary-focus: underline;
-  --#{$id}-text-decoration-tertiary-disabled: none;
+  --button-text-decoration-tertiary: none;
+  --button-text-decoration-tertiary-hover: none;
+  --button-text-decoration-tertiary-pressed: none;
+  --button-text-decoration-tertiary-focus: underline;
+  --button-text-decoration-tertiary-disabled: none;
   
-  --#{$id}-icon-color-tertiary: var(--figma-color-icon);
-  --#{$id}-icon-color-tertiary-hover: var(--figma-color-icon);
-  --#{$id}-icon-color-tertiary-pressed: var(--figma-color-icon);
-  --#{$id}-icon-color-tertiary-focus: var(--figma-color-icon);
-  --#{$id}-icon-color-tertiary-disabled: var(--figma-color-icon-disabled);
+  --button-icon-color-tertiary: var(--figma-color-icon);
+  --button-icon-color-tertiary-hover: var(--figma-color-icon);
+  --button-icon-color-tertiary-pressed: var(--figma-color-icon);
+  --button-icon-color-tertiary-focus: var(--figma-color-icon);
+  --button-icon-color-tertiary-disabled: var(--figma-color-icon-disabled);
 
   /* Destructive */
-  --#{$id}-background-color-destructive: var(--figma-color-bg-danger);
-  --#{$id}-background-color-destructive-hover: var(
+  --button-background-color-destructive: var(--figma-color-bg-danger);
+  --button-background-color-destructive-hover: var(
     --figma-color-bg-danger-hover
   );
-  --#{$id}-background-color-destructive-pressed: var(
+  --button-background-color-destructive-pressed: var(
     --figma-color-bg-danger-pressed
   );
-  --#{$id}-background-color-destructive-focus: var(
+  --button-background-color-destructive-focus: var(
     --figma-color-bg-danger
   );
-  --#{$id}-background-color-destructive-disabled: var(
+  --button-background-color-destructive-disabled: var(
     --figma-color-bg-disabled
   );
   
-  --#{$id}-border-width-destructive: 0;
-  --#{$id}-border-width-destructive-hover: 0;
-  --#{$id}-border-width-destructive-pressed: 0;
-  --#{$id}-border-width-destructive-focus: var(--size-xunit);
-  --#{$id}-border-width-destructive-disabled: 0;
+  --button-border-width-destructive: 0;
+  --button-border-width-destructive-hover: 0;
+  --button-border-width-destructive-pressed: 0;
+  --button-border-width-destructive-focus: var(--size-xunit);
+  --button-border-width-destructive-disabled: 0;
   
-  --#{$id}-border-offset-destructive: 0;
-  --#{$id}-border-offset-destructive-hover: 0;
-  --#{$id}-border-offset-destructive-pressed: 0;
-  --#{$id}-border-offset-destructive-focus: var(--size-neg-xunit);
-  --#{$id}-border-offset-destructive-disabled: 0;
+  --button-border-offset-destructive: 0;
+  --button-border-offset-destructive-hover: 0;
+  --button-border-offset-destructive-pressed: 0;
+  --button-border-offset-destructive-focus: var(--size-neg-xunit);
+  --button-border-offset-destructive-disabled: 0;
   
-  --#{$id}-border-color-destructive: transparent;
-  --#{$id}-border-color-destructive-hover: transparent;
-  --#{$id}-border-color-destructive-pressed: transparent;
-  --#{$id}-border-color-destructive-focus: var(
+  --button-border-color-destructive: transparent;
+  --button-border-color-destructive-hover: transparent;
+  --button-border-color-destructive-pressed: transparent;
+  --button-border-color-destructive-focus: var(
     --figma-color-border-danger-strong
   );
-  --#{$id}-border-color-destructive-disabled: transparent;
+  --button-border-color-destructive-disabled: transparent;
   
-  --#{$id}-text-color-destructive: var(--figma-color-text-ondanger);
-  --#{$id}-text-color-destructive-hover: var(--figma-color-text-ondanger);
-  --#{$id}-text-color-destructive-pressed: var(--figma-color-text-ondanger);
-  --#{$id}-text-color-destructive-focus: var(--figma-color-text-ondanger);
-  --#{$id}-text-color-destructive-disabled: var(--figma-color-text-ondisabled);
+  --button-text-color-destructive: var(--figma-color-text-ondanger);
+  --button-text-color-destructive-hover: var(--figma-color-text-ondanger);
+  --button-text-color-destructive-pressed: var(--figma-color-text-ondanger);
+  --button-text-color-destructive-focus: var(--figma-color-text-ondanger);
+  --button-text-color-destructive-disabled: var(--figma-color-text-ondisabled);
   
-  --#{$id}-text-decoration-destructive: none;
-  --#{$id}-text-decoration-destructive-hover: none;
-  --#{$id}-text-decoration-destructive-pressed: none;
-  --#{$id}-text-decoration-destructive-focus: none;
-  --#{$id}-text-decoration-destructive-disabled: none;
+  --button-text-decoration-destructive: none;
+  --button-text-decoration-destructive-hover: none;
+  --button-text-decoration-destructive-pressed: none;
+  --button-text-decoration-destructive-focus: none;
+  --button-text-decoration-destructive-disabled: none;
   
-  --#{$id}-icon-color-destructive: var(--figma-color-icon-ondanger);
-  --#{$id}-icon-color-destructive-hover: var(--figma-color-icon-ondanger);
-  --#{$id}-icon-color-destructive-pressed: var(--figma-color-icon-ondanger);
-  --#{$id}-icon-color-destructive-focus: var(--figma-color-icon-ondanger);
-  --#{$id}-icon-color-destructive-disabled: var(--figma-color-icon-ondisabled);
+  --button-icon-color-destructive: var(--figma-color-icon-ondanger);
+  --button-icon-color-destructive-hover: var(--figma-color-icon-ondanger);
+  --button-icon-color-destructive-pressed: var(--figma-color-icon-ondanger);
+  --button-icon-color-destructive-focus: var(--figma-color-icon-ondanger);
+  --button-icon-color-destructive-disabled: var(--figma-color-icon-ondisabled);
 
   /* Alternative */
-  --#{$id}-background-color-alternative: var(--figma-color-bg-component);
-  --#{$id}-background-color-alternative-hover: var(
+  --button-background-color-alternative: var(--figma-color-bg-component);
+  --button-background-color-alternative-hover: var(
     --figma-color-bg-component-hover
   );
-  --#{$id}-background-color-alternative-pressed: var(
+  --button-background-color-alternative-pressed: var(
     --figma-color-bg-component-pressed
   );
-  --#{$id}-background-color-alternative-focus: var(
+  --button-background-color-alternative-focus: var(
     --figma-color-bg-component
   );
-  --#{$id}-background-color-alternative-disabled: var(
+  --button-background-color-alternative-disabled: var(
     --figma-color-bg-disabled
   );
   
-  --#{$id}-border-width-alternative: 0;
-  --#{$id}-border-width-alternative-hover: 0;
-  --#{$id}-border-width-alternative-pressed: 0;
-  --#{$id}-border-width-alternative-focus: var(--size-xunit);
-  --#{$id}-border-width-alternative-disabled: 0;
+  --button-border-width-alternative: 0;
+  --button-border-width-alternative-hover: 0;
+  --button-border-width-alternative-pressed: 0;
+  --button-border-width-alternative-focus: var(--size-xunit);
+  --button-border-width-alternative-disabled: 0;
   
-  --#{$id}-border-offset-alternative: 0;
-  --#{$id}-border-offset-alternative-hover: 0;
-  --#{$id}-border-offset-alternative-pressed: 0;
-  --#{$id}-border-offset-alternative-focus: var(--size-neg-xunit);
-  --#{$id}-border-offset-alternative-disabled: 0;
+  --button-border-offset-alternative: 0;
+  --button-border-offset-alternative-hover: 0;
+  --button-border-offset-alternative-pressed: 0;
+  --button-border-offset-alternative-focus: var(--size-neg-xunit);
+  --button-border-offset-alternative-disabled: 0;
   
-  --#{$id}-border-color-alternative: transparent;
-  --#{$id}-border-color-alternative-hover: transparent;
-  --#{$id}-border-color-alternative-pressed: transparent;
-  --#{$id}-border-color-alternative-focus: var(
+  --button-border-color-alternative: transparent;
+  --button-border-color-alternative-hover: transparent;
+  --button-border-color-alternative-pressed: transparent;
+  --button-border-color-alternative-focus: var(
     --figma-color-border-component-strong
   );
   
-  --#{$id}-border-alternative-disabled: none;
-  --#{$id}-text-color-alternative: var(--figma-color-text-oncomponent);
-  --#{$id}-text-color-alternative-hover: var(--figma-color-text-oncomponent);
-  --#{$id}-text-color-alternative-pressed: var(--figma-color-text-oncomponent);
-  --#{$id}-text-color-alternative-focus: var(--figma-color-text-oncomponent);
-  --#{$id}-text-color-alternative-disabled: var(--figma-color-text-ondisabled);
+  --button-border-alternative-disabled: none;
+  --button-text-color-alternative: var(--figma-color-text-oncomponent);
+  --button-text-color-alternative-hover: var(--figma-color-text-oncomponent);
+  --button-text-color-alternative-pressed: var(--figma-color-text-oncomponent);
+  --button-text-color-alternative-focus: var(--figma-color-text-oncomponent);
+  --button-text-color-alternative-disabled: var(--figma-color-text-ondisabled);
   
-  --#{$id}-text-decoration-alternative: none;
-  --#{$id}-text-decoration-alternative-hover: none;
-  --#{$id}-text-decoration-alternative-pressed: none;
-  --#{$id}-text-decoration-alternative-focus: none;
-  --#{$id}-text-decoration-alternative-disabled: none;
+  --button-text-decoration-alternative: none;
+  --button-text-decoration-alternative-hover: none;
+  --button-text-decoration-alternative-pressed: none;
+  --button-text-decoration-alternative-focus: none;
+  --button-text-decoration-alternative-disabled: none;
   
-  --#{$id}-icon-color-alternative: var(--figma-color-icon-oncomponent);
-  --#{$id}-icon-color-alternative-hover: var(--figma-color-icon-oncomponent);
-  --#{$id}-icon-color-alternative-pressed: var(--figma-color-icon-oncomponent);
-  --#{$id}-icon-color-alternative-focus: var(--figma-color-icon-oncomponent);
-  --#{$id}-icon-color-alternative-disabled: var(--figma-color-icon-ondisabled);
+  --button-icon-color-alternative: var(--figma-color-icon-oncomponent);
+  --button-icon-color-alternative-hover: var(--figma-color-icon-oncomponent);
+  --button-icon-color-alternative-pressed: var(--figma-color-icon-oncomponent);
+  --button-icon-color-alternative-focus: var(--figma-color-icon-oncomponent);
+  --button-icon-color-alternative-disabled: var(--figma-color-icon-ondisabled);
 
   /* Icon Button - Default */
   --icon-button-background-color: var(--figma-color-bg);
@@ -413,21 +411,21 @@ $id: "button";
   }
 
   .button__icon {
-    width: var(--#{$id}-icon-width);
-    height: var(--#{$id}-icon-height);
+    width: var(--button-icon-width);
+    height: var(--button-icon-height);
     display: flex;
     justify-content: center;
     align-items: center;
-    --icon-picto-icon: var(--#{$id}-icon-color);
+    --icon-picto-icon: var(--button-icon-color);
   }
 
   .button__caret {
-    width: var(--#{$id}-caret-width);
-    height: var(--#{$id}-caret-height);
+    width: var(--button-caret-width);
+    height: var(--button-caret-height);
     display: flex;
     justify-content: center;
     align-items: center;
-    --icon-picto-icon: var(--#{$id}-icon-color);
+    --icon-picto-icon: var(--button-icon-color);
   }
 
   .button__loader {
@@ -449,320 +447,320 @@ $id: "button";
 }
 
 .button {
-  gap: var(--#{$id}-gap);
-  outline: var(--#{$id}-border-width) solid var(--#{$id}-border-color);
-  outline-offset: var(--#{$id}-border-offset);
-  border-radius: var(--#{$id}-radius);
-  background-color: var(--#{$id}-background-color);
-  padding: var(--#{$id}-padding);
-  height: var(--#{$id}-height);
-  color: var(--#{$id}-text-color);
-  font-weight: var(--#{$id}-text-font-weight);
-  font-size: var(--#{$id}-text-font-size);
-  line-height: var(--#{$id}-text-line-height);
-  font-family: var(--#{$id}-text-font-family);
-  letter-spacing: var(--#{$id}-text-letter-spacing);
-  text-decoration: var(--#{$id}-text-decoration);
+  gap: var(--button-gap);
+  outline: var(--button-border-width) solid var(--button-border-color);
+  outline-offset: var(--button-border-offset);
+  border-radius: var(--button-radius);
+  background-color: var(--button-background-color);
+  padding: var(--button-padding);
+  height: var(--button-height);
+  color: var(--button-text-color);
+  font-weight: var(--button-text-font-weight);
+  font-size: var(--button-text-font-size);
+  line-height: var(--button-text-line-height);
+  font-family: var(--button-text-font-family);
+  letter-spacing: var(--button-text-letter-spacing);
+  text-decoration: var(--button-text-decoration);
 
   a {
-    color: var(--#{$id}-text-color);
-    text-decoration: var(--#{$id}-text-decoration);
+    color: var(--button-text-color);
+    text-decoration: var(--button-text-decoration);
   }
 
   &--small {
-    padding: var(--#{$id}-small-padding);
-    height: var(--#{$id}-small-height);
+    padding: var(--button-small-padding);
+    height: var(--button-small-height);
   }
 
   &--large {
-    padding: var(--#{$id}-large-padding);
-    height: var(--#{$id}-large-height);
+    padding: var(--button-large-padding);
+    height: var(--button-large-height);
   }
 
   &--primary {
-    --#{$id}-background-color: var(--#{$id}-background-color-primary);
-    --#{$id}-border-color: var(--#{$id}-border-color-primary);
-    --#{$id}-border-width: var(--#{$id}-border-width-primary);
-    --#{$id}-border-offset: var(--#{$id}-border-offset-primary);
-    --#{$id}-text-color: var(--#{$id}-text-color-primary);
-    --#{$id}-icon-color: var(--#{$id}-icon-color-primary);
-    --#{$id}-text-decoration: var(--#{$id}-text-decoration-primary);
+    --button-background-color: var(--button-background-color-primary);
+    --button-border-color: var(--button-border-color-primary);
+    --button-border-width: var(--button-border-width-primary);
+    --button-border-offset: var(--button-border-offset-primary);
+    --button-text-color: var(--button-text-color-primary);
+    --button-icon-color: var(--button-icon-color-primary);
+    --button-text-decoration: var(--button-text-decoration-primary);
 
     &:enabled:hover {
-      --#{$id}-background-color: var(--#{$id}-background-color-primary-hover);
-      --#{$id}-border-color: var(--#{$id}-border-color-primary-hover);
-      --#{$id}-border-width: var(--#{$id}-border-width-primary-hover);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-primary-hover);
-      --#{$id}-text-color: var(--#{$id}-text-color-primary-hover);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-primary-hover);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-primary-hover);
+      --button-background-color: var(--button-background-color-primary-hover);
+      --button-border-color: var(--button-border-color-primary-hover);
+      --button-border-width: var(--button-border-width-primary-hover);
+      --button-border-offset: var(--button-border-offset-primary-hover);
+      --button-text-color: var(--button-text-color-primary-hover);
+      --button-icon-color: var(--button-icon-color-primary-hover);
+      --button-text-decoration: var(--button-text-decoration-primary-hover);
     }
 
     &:enabled:focus {
-      --#{$id}-background-color: var(--#{$id}-background-color-primary-focus);
-      --#{$id}-border-color: var(--#{$id}-border-color-primary-focus);
-      --#{$id}-border-width: var(--#{$id}-border-width-primary-focus);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-primary-focus);
-      --#{$id}-text-color: var(--#{$id}-text-color-primary-focus);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-primary-focus);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-primary-focus);
+      --button-background-color: var(--button-background-color-primary-focus);
+      --button-border-color: var(--button-border-color-primary-focus);
+      --button-border-width: var(--button-border-width-primary-focus);
+      --button-border-offset: var(--button-border-offset-primary-focus);
+      --button-text-color: var(--button-text-color-primary-focus);
+      --button-icon-color: var(--button-icon-color-primary-focus);
+      --button-text-decoration: var(--button-text-decoration-primary-focus);
     }
 
     &:enabled:active {
-      --#{$id}-background-color: var(--#{$id}-background-color-primary-pressed);
-      --#{$id}-border-color: var(--#{$id}-border-color-primary-pressed);
-      --#{$id}-border-width: var(--#{$id}-border-width-primary-pressed);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-primary-pressed);
-      --#{$id}-text-color: var(--#{$id}-text-color-primary-pressed);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-primary-pressed);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-primary-pressed);
+      --button-background-color: var(--button-background-color-primary-pressed);
+      --button-border-color: var(--button-border-color-primary-pressed);
+      --button-border-width: var(--button-border-width-primary-pressed);
+      --button-border-offset: var(--button-border-offset-primary-pressed);
+      --button-text-color: var(--button-text-color-primary-pressed);
+      --button-icon-color: var(--button-icon-color-primary-pressed);
+      --button-text-decoration: var(--button-text-decoration-primary-pressed);
     }
 
     &:disabled {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-primary-disabled
+      --button-background-color: var(
+        --button-background-color-primary-disabled
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-primary-disabled);
-      --#{$id}-border-width: var(--#{$id}-border-width-primary-disabled);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-primary-disabled);
-      --#{$id}-text-color: var(--#{$id}-text-color-primary-disabled);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-primary-disabled);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-primary-disabled);
+      --button-border-color: var(--button-border-color-primary-disabled);
+      --button-border-width: var(--button-border-width-primary-disabled);
+      --button-border-offset: var(--button-border-offset-primary-disabled);
+      --button-text-color: var(--button-text-color-primary-disabled);
+      --button-icon-color: var(--button-icon-color-primary-disabled);
+      --button-text-decoration: var(--button-text-decoration-primary-disabled);
     }
   }
 
   &--secondary {
-    --#{$id}-background-color: var(--#{$id}-background-color-secondary);
-    --#{$id}-border-color: var(--#{$id}-border-color-secondary);
-    --#{$id}-border-width: var(--#{$id}-border-width-secondary);
-    --#{$id}-border-offset: var(--#{$id}-border-offset-secondary);
-    --#{$id}-text-color: var(--#{$id}-text-color-secondary);
-    --#{$id}-icon-color: var(--#{$id}-icon-color-secondary);
-    --#{$id}-text-decoration: var(--#{$id}-text-decoration-secondary);
+    --button-background-color: var(--button-background-color-secondary);
+    --button-border-color: var(--button-border-color-secondary);
+    --button-border-width: var(--button-border-width-secondary);
+    --button-border-offset: var(--button-border-offset-secondary);
+    --button-text-color: var(--button-text-color-secondary);
+    --button-icon-color: var(--button-icon-color-secondary);
+    --button-text-decoration: var(--button-text-decoration-secondary);
 
     &:enabled:hover {
-      --#{$id}-background-color: var(--#{$id}-background-color-secondary-hover);
-      --#{$id}-border-color: var(--#{$id}-border-color-secondary-hover);
-      --#{$id}-border-width: var(--#{$id}-border-width-secondary-hover);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-secondary-hover);
-      --#{$id}-text-color: var(--#{$id}-text-color-secondary-hover);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-secondary-hover);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-secondary-hover);
+      --button-background-color: var(--button-background-color-secondary-hover);
+      --button-border-color: var(--button-border-color-secondary-hover);
+      --button-border-width: var(--button-border-width-secondary-hover);
+      --button-border-offset: var(--button-border-offset-secondary-hover);
+      --button-text-color: var(--button-text-color-secondary-hover);
+      --button-icon-color: var(--button-icon-color-secondary-hover);
+      --button-text-decoration: var(--button-text-decoration-secondary-hover);
     }
 
     &:enabled:focus {
-      --#{$id}-background-color: var(--#{$id}-background-color-secondary-focus);
-      --#{$id}-border-color: var(--#{$id}-border-color-secondary-focus);
-      --#{$id}-border-width: var(--#{$id}-border-width-secondary-focus);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-secondary-focus);
-      --#{$id}-text-color: var(--#{$id}-text-color-secondary-focus);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-secondary-focus);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-secondary-focus);
+      --button-background-color: var(--button-background-color-secondary-focus);
+      --button-border-color: var(--button-border-color-secondary-focus);
+      --button-border-width: var(--button-border-width-secondary-focus);
+      --button-border-offset: var(--button-border-offset-secondary-focus);
+      --button-text-color: var(--button-text-color-secondary-focus);
+      --button-icon-color: var(--button-icon-color-secondary-focus);
+      --button-text-decoration: var(--button-text-decoration-secondary-focus);
     }
 
     &:enabled:active {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-secondary-pressed
+      --button-background-color: var(
+        --button-background-color-secondary-pressed
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-secondary-pressed);
-      --#{$id}-border-width: var(--#{$id}-border-width-secondary-pressed);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-secondary-pressed);
-      --#{$id}-text-color: var(--#{$id}-text-color-secondary-pressed);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-secondary-pressed);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-secondary-pressed);
+      --button-border-color: var(--button-border-color-secondary-pressed);
+      --button-border-width: var(--button-border-width-secondary-pressed);
+      --button-border-offset: var(--button-border-offset-secondary-pressed);
+      --button-text-color: var(--button-text-color-secondary-pressed);
+      --button-icon-color: var(--button-icon-color-secondary-pressed);
+      --button-text-decoration: var(--button-text-decoration-secondary-pressed);
     }
 
     &:disabled {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-secondary-disabled
+      --button-background-color: var(
+        --button-background-color-secondary-disabled
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-secondary-disabled);
-      --#{$id}-border-width: var(--#{$id}-border-width-secondary-disabled);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-secondary-disabled);
-      --#{$id}-text-color: var(--#{$id}-text-color-secondary-disabled);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-secondary-disabled);
-      --#{$id}-text-decoration: var(
-        --#{$id}-text-decoration-secondary-disabled
+      --button-border-color: var(--button-border-color-secondary-disabled);
+      --button-border-width: var(--button-border-width-secondary-disabled);
+      --button-border-offset: var(--button-border-offset-secondary-disabled);
+      --button-text-color: var(--button-text-color-secondary-disabled);
+      --button-icon-color: var(--button-icon-color-secondary-disabled);
+      --button-text-decoration: var(
+        --button-text-decoration-secondary-disabled
       );
     }
   }
 
   &--tertiary {
-    --#{$id}-text-font-size: var(--#{$id}-text-font-size-tertiary);
-    --#{$id}-padding: var(--#{$id}-padding-tertiary);
-    --#{$id}-background-color: var(--#{$id}-background-color-tertiary);
-    --#{$id}-border-color: var(--#{$id}-border-color-tertiary);
-    --#{$id}-border-width: var(--#{$id}-border-width-tertiary);
-    --#{$id}-border-offset: var(--#{$id}-border-offset-tertiary);
-    --#{$id}-text-color: var(--#{$id}-text-color-tertiary);
-    --#{$id}-icon-color: var(--#{$id}-icon-color-tertiary);
-    --#{$id}-text-decoration: var(--#{$id}-text-decoration-tertiary);
+    --button-text-font-size: var(--button-text-font-size-tertiary);
+    --button-padding: var(--button-padding-tertiary);
+    --button-background-color: var(--button-background-color-tertiary);
+    --button-border-color: var(--button-border-color-tertiary);
+    --button-border-width: var(--button-border-width-tertiary);
+    --button-border-offset: var(--button-border-offset-tertiary);
+    --button-text-color: var(--button-text-color-tertiary);
+    --button-icon-color: var(--button-icon-color-tertiary);
+    --button-text-decoration: var(--button-text-decoration-tertiary);
 
     &:enabled:hover {
-      --#{$id}-background-color: var(--#{$id}-background-color-tertiary-hover);
-      --#{$id}-border-color: var(--#{$id}-border-color-tertiary-hover);
-      --#{$id}-border-width: var(--#{$id}-border-width-tertiary-hover);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-tertiary-hover);
-      --#{$id}-text-color: var(--#{$id}-text-color-tertiary-hover);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-tertiary-hover);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-tertiary-hover);
+      --button-background-color: var(--button-background-color-tertiary-hover);
+      --button-border-color: var(--button-border-color-tertiary-hover);
+      --button-border-width: var(--button-border-width-tertiary-hover);
+      --button-border-offset: var(--button-border-offset-tertiary-hover);
+      --button-text-color: var(--button-text-color-tertiary-hover);
+      --button-icon-color: var(--button-icon-color-tertiary-hover);
+      --button-text-decoration: var(--button-text-decoration-tertiary-hover);
     }
 
     &:enabled:focus {
-      --#{$id}-background-color: var(--#{$id}-background-color-tertiary-focus);
-      --#{$id}-border-color: var(--#{$id}-border-color-tertiary-focus);
-      --#{$id}-border-width: var(--#{$id}-border-width-tertiary-focus);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-tertiary-focus);
-      --#{$id}-text-color: var(--#{$id}-text-color-tertiary-focus);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-tertiary-focus);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-tertiary-focus);
+      --button-background-color: var(--button-background-color-tertiary-focus);
+      --button-border-color: var(--button-border-color-tertiary-focus);
+      --button-border-width: var(--button-border-width-tertiary-focus);
+      --button-border-offset: var(--button-border-offset-tertiary-focus);
+      --button-text-color: var(--button-text-color-tertiary-focus);
+      --button-icon-color: var(--button-icon-color-tertiary-focus);
+      --button-text-decoration: var(--button-text-decoration-tertiary-focus);
     }
 
     &:enabled:active {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-tertiary-pressed
+      --button-background-color: var(
+        --button-background-color-tertiary-pressed
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-tertiary-pressed);
-      --#{$id}-border-width: var(--#{$id}-border-width-tertiary-pressed);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-tertiary-pressed);
-      --#{$id}-text-color: var(--#{$id}-text-color-tertiary-pressed);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-tertiary-pressed);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-tertiary-pressed);
+      --button-border-color: var(--button-border-color-tertiary-pressed);
+      --button-border-width: var(--button-border-width-tertiary-pressed);
+      --button-border-offset: var(--button-border-offset-tertiary-pressed);
+      --button-text-color: var(--button-text-color-tertiary-pressed);
+      --button-icon-color: var(--button-icon-color-tertiary-pressed);
+      --button-text-decoration: var(--button-text-decoration-tertiary-pressed);
     }
 
     &:disabled {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-tertiary-disabled
+      --button-background-color: var(
+        --button-background-color-tertiary-disabled
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-tertiary-disabled);
-      --#{$id}-border-width: var(--#{$id}-border-width-tertiary-disabled);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-tertiary-disabled);
-      --#{$id}-text-color: var(--#{$id}-text-color-tertiary-disabled);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-tertiary-disabled);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-tertiary-disabled);
+      --button-border-color: var(--button-border-color-tertiary-disabled);
+      --button-border-width: var(--button-border-width-tertiary-disabled);
+      --button-border-offset: var(--button-border-offset-tertiary-disabled);
+      --button-text-color: var(--button-text-color-tertiary-disabled);
+      --button-icon-color: var(--button-icon-color-tertiary-disabled);
+      --button-text-decoration: var(--button-text-decoration-tertiary-disabled);
     }
   }
 
   &--destructive {
-    --#{$id}-background-color: var(--#{$id}-background-color-destructive);
-    --#{$id}-border-color: var(--#{$id}-border-color-destructive);
-    --#{$id}-border-width: var(--#{$id}-border-width-destructive);
-    --#{$id}-border-offset: var(--#{$id}-border-offset-destructive);
-    --#{$id}-text-color: var(--#{$id}-text-color-destructive);
-    --#{$id}-icon-color: var(--#{$id}-icon-color-destructive);
-    --#{$id}-text-decoration: var(--#{$id}-text-decoration-destructive);
+    --button-background-color: var(--button-background-color-destructive);
+    --button-border-color: var(--button-border-color-destructive);
+    --button-border-width: var(--button-border-width-destructive);
+    --button-border-offset: var(--button-border-offset-destructive);
+    --button-text-color: var(--button-text-color-destructive);
+    --button-icon-color: var(--button-icon-color-destructive);
+    --button-text-decoration: var(--button-text-decoration-destructive);
 
     &:enabled:hover {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-destructive-hover
+      --button-background-color: var(
+        --button-background-color-destructive-hover
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-destructive-hover);
-      --#{$id}-border-width: var(--#{$id}-border-width-destructive-hover);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-destructive-hover);
-      --#{$id}-text-color: var(--#{$id}-text-color-destructive-hover);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-destructive-hover);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-destructive-hover);
+      --button-border-color: var(--button-border-color-destructive-hover);
+      --button-border-width: var(--button-border-width-destructive-hover);
+      --button-border-offset: var(--button-border-offset-destructive-hover);
+      --button-text-color: var(--button-text-color-destructive-hover);
+      --button-icon-color: var(--button-icon-color-destructive-hover);
+      --button-text-decoration: var(--button-text-decoration-destructive-hover);
     }
 
     &:enabled:focus {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-destructive-focus
+      --button-background-color: var(
+        --button-background-color-destructive-focus
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-destructive-focus);
-      --#{$id}-border-width: var(--#{$id}-border-width-destructive-focus);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-destructive-focus);
-      --#{$id}-text-color: var(--#{$id}-text-color-destructive-focus);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-destructive-focus);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-destructive-focus);
+      --button-border-color: var(--button-border-color-destructive-focus);
+      --button-border-width: var(--button-border-width-destructive-focus);
+      --button-border-offset: var(--button-border-offset-destructive-focus);
+      --button-text-color: var(--button-text-color-destructive-focus);
+      --button-icon-color: var(--button-icon-color-destructive-focus);
+      --button-text-decoration: var(--button-text-decoration-destructive-focus);
     }
 
     &:enabled:active {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-destructive-pressed
+      --button-background-color: var(
+        --button-background-color-destructive-pressed
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-destructive-pressed);
-      --#{$id}-border-width: var(--#{$id}-border-width-destructive-pressed);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-destructive-pressed);
-      --#{$id}-text-color: var(--#{$id}-text-color-destructive-pressed);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-destructive-pressed);
-      --#{$id}-text-decoration: var(
-        --#{$id}-text-decoration-destructive-pressed
+      --button-border-color: var(--button-border-color-destructive-pressed);
+      --button-border-width: var(--button-border-width-destructive-pressed);
+      --button-border-offset: var(--button-border-offset-destructive-pressed);
+      --button-text-color: var(--button-text-color-destructive-pressed);
+      --button-icon-color: var(--button-icon-color-destructive-pressed);
+      --button-text-decoration: var(
+        --button-text-decoration-destructive-pressed
       );
     }
 
     &:disabled {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-destructive-disabled
+      --button-background-color: var(
+        --button-background-color-destructive-disabled
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-destructive-disabled);
-      --#{$id}-border-width: var(--#{$id}-border-width-destructive-disabled);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-destructive-disabled);
-      --#{$id}-text-color: var(--#{$id}-text-color-destructive-disabled);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-destructive-disabled);
-      --#{$id}-text-decoration: var(
-        --#{$id}-text-decoration-destructive-disabled
+      --button-border-color: var(--button-border-color-destructive-disabled);
+      --button-border-width: var(--button-border-width-destructive-disabled);
+      --button-border-offset: var(--button-border-offset-destructive-disabled);
+      --button-text-color: var(--button-text-color-destructive-disabled);
+      --button-icon-color: var(--button-icon-color-destructive-disabled);
+      --button-text-decoration: var(
+        --button-text-decoration-destructive-disabled
       );
     }
   }
 
   &--alternative {
-    --#{$id}-background-color: var(--#{$id}-background-color-alternative);
-    --#{$id}-border-color: var(--#{$id}-border-color-alternative);
-    --#{$id}-border-width: var(--#{$id}-border-width-alternative);
-    --#{$id}-border-offset: var(--#{$id}-border-offset-alternative);
-    --#{$id}-text-color: var(--#{$id}-text-color-alternative);
-    --#{$id}-icon-color: var(--#{$id}-icon-color-alternative);
-    --#{$id}-text-decoration: var(--#{$id}-text-decoration-alternative);
+    --button-background-color: var(--button-background-color-alternative);
+    --button-border-color: var(--button-border-color-alternative);
+    --button-border-width: var(--button-border-width-alternative);
+    --button-border-offset: var(--button-border-offset-alternative);
+    --button-text-color: var(--button-text-color-alternative);
+    --button-icon-color: var(--button-icon-color-alternative);
+    --button-text-decoration: var(--button-text-decoration-alternative);
 
     &:enabled:hover {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-alternative-hover
+      --button-background-color: var(
+        --button-background-color-alternative-hover
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-alternative-hover);
-      --#{$id}-border-width: var(--#{$id}-border-width-alternative-hover);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-alternative-hover);
-      --#{$id}-text-color: var(--#{$id}-text-color-alternative-hover);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-alternative-hover);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-alternative-hover);
+      --button-border-color: var(--button-border-color-alternative-hover);
+      --button-border-width: var(--button-border-width-alternative-hover);
+      --button-border-offset: var(--button-border-offset-alternative-hover);
+      --button-text-color: var(--button-text-color-alternative-hover);
+      --button-icon-color: var(--button-icon-color-alternative-hover);
+      --button-text-decoration: var(--button-text-decoration-alternative-hover);
     }
 
     &:enabled:focus {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-alternative-focus
+      --button-background-color: var(
+        --button-background-color-alternative-focus
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-alternative-focus);
-      --#{$id}-border-width: var(--#{$id}-border-width-alternative-focus);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-alternative-focus);
-      --#{$id}-text-color: var(--#{$id}-text-color-alternative-focus);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-alternative-focus);
-      --#{$id}-text-decoration: var(--#{$id}-text-decoration-alternative-focus);
+      --button-border-color: var(--button-border-color-alternative-focus);
+      --button-border-width: var(--button-border-width-alternative-focus);
+      --button-border-offset: var(--button-border-offset-alternative-focus);
+      --button-text-color: var(--button-text-color-alternative-focus);
+      --button-icon-color: var(--button-icon-color-alternative-focus);
+      --button-text-decoration: var(--button-text-decoration-alternative-focus);
     }
 
     &:enabled:active {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-alternative-pressed
+      --button-background-color: var(
+        --button-background-color-alternative-pressed
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-alternative-pressed);
-      --#{$id}-border-width: var(--#{$id}-border-width-alternative-pressed);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-alternative-pressed);
-      --#{$id}-text-color: var(--#{$id}-text-color-alternative-pressed);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-alternative-pressed);
-      --#{$id}-text-decoration: var(
-        --#{$id}-text-decoration-alternative-pressed
+      --button-border-color: var(--button-border-color-alternative-pressed);
+      --button-border-width: var(--button-border-width-alternative-pressed);
+      --button-border-offset: var(--button-border-offset-alternative-pressed);
+      --button-text-color: var(--button-text-color-alternative-pressed);
+      --button-icon-color: var(--button-icon-color-alternative-pressed);
+      --button-text-decoration: var(
+        --button-text-decoration-alternative-pressed
       );
     }
 
     &:disabled {
-      --#{$id}-background-color: var(
-        --#{$id}-background-color-alternative-disabled
+      --button-background-color: var(
+        --button-background-color-alternative-disabled
       );
-      --#{$id}-border-color: var(--#{$id}-border-color-alternative-disabled);
-      --#{$id}-border-width: var(--#{$id}-border-width-alternative-disabled);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-alternative-disabled);
-      --#{$id}-text-color: var(--#{$id}-text-color-alternative-disabled);
-      --#{$id}-icon-color: var(--#{$id}-icon-color-alternative-disabled);
-      --#{$id}-text-decoration: var(
-        --#{$id}-text-decoration-alternative-disabled
+      --button-border-color: var(--button-border-color-alternative-disabled);
+      --button-border-width: var(--button-border-width-alternative-disabled);
+      --button-border-offset: var(--button-border-offset-alternative-disabled);
+      --button-text-color: var(--button-text-color-alternative-disabled);
+      --button-icon-color: var(--button-icon-color-alternative-disabled);
+      --button-text-decoration: var(
+        --button-text-decoration-alternative-disabled
       );
     }
   }

@@ -1,35 +1,33 @@
-$id: "form-item";
-
 :root {
-  --#{id}-gap: var(--size-xxsmall);
-  --#{id}-padding: 0 0 0 var(--size-xxsmall);
-  --#{id}-text-color: var(--figma-color-text);
-  --#{id}-label-width: 96px;
-  --#{id}-helper-padding: 0;
+  --form-item-gap: var(--size-xxsmall);
+  --form-item-padding: 0 0 0 var(--size-xxsmall);
+  --form-item-text-color: var(--figma-color-text);
+  --form-item-label-width: 96px;
+  --form-item-helper-padding: 0;
 
-  --#{id}-text-color-disabled: var(--figma-color-text-disabled);
-  --#{id}-icon-color-disabled: var(--figma-color-icon-disabled);
+  --form-item-text-color-disabled: var(--figma-color-text-disabled);
+  --form-item-icon-color-disabled: var(--figma-color-icon-disabled);
 }
 
 .form-item {
   display: flex;
   flex-direction: column;
-  --text-color-primary: var(--#{id}-text-color);
-  --message-padding: var(--#{id}-helper-padding);
+  --text-color-primary: var(--form-item-text-color);
+  --message-padding: var(--form-item-helper-padding);
 
   &__row {
     display: flex;
     position: relative;
     align-items: baseline;
-    gap: var(--#{id}-gap);
+    gap: var(--form-item-gap);
     cursor: default;
-    padding: var(--#{id}-padding);
+    padding: var(--form-item-padding);
     user-select: none;
   }
 
   &--fill {
     label {
-      flex: 0 1 var(--#{id}-label-width);
+      flex: 0 1 var(--form-item-label-width);
     }
 
     .form-item__input {
@@ -44,8 +42,8 @@ $id: "form-item";
 
   &--blocked {
     pointer-events: none;
-    --text-color-primary: var(--#{id}-text-color-disabled);
-    --message-text-color: var(--#{id}-text-color-disabled);
-    --message-icon-color: var(--#{id}-text-color-disabled);
+    --text-color-primary: var(--form-item-text-color-disabled);
+    --message-text-color: var(--form-item-text-color-disabled);
+    --message-icon-color: var(--form-item-text-color-disabled);
   }
 }

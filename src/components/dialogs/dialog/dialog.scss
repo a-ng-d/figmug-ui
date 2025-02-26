@@ -1,17 +1,15 @@
-$id: "dialog";
-
 :root {
-  --#{$id}-padding: var(--size-medium);
-  --#{$id}-background-color: rgba(0, 0, 0, 0.5);
+  --dialog-padding: var(--size-medium);
+  --dialog-background-color: rgba(0, 0, 0, 0.5);
 
-  --#{$id}-cover-width: 248px;
-  --#{$id}-cover-padding: var(--size-xsmall);
+  --dialog-cover-width: 248px;
+  --dialog-cover-padding: var(--size-xsmall);
 
-  --#{$id}-text-gap: var(--size-xxsmall);
-  --#{$id}-text-padding: var(--size-xsmall);
+  --dialog-text-gap: var(--size-xxsmall);
+  --dialog-text-padding: var(--size-xsmall);
 
-  --#{$id}-form-gap: var(--size-xxxsmall);
-  --#{$id}-form-padding: var(--size-xxsmall) var(--size-xxsmall);
+  --dialog-form-gap: var(--size-xxxsmall);
+  --dialog-form-padding: var(--size-xxsmall) var(--size-xxsmall);
 }
 
 .dialog {
@@ -22,29 +20,29 @@ $id: "dialog";
   align-items: center;
   z-index: 4;
   cursor: default;
-  background-color: var(--#{$id}-background-color);
-  padding: var(--#{$id}-padding);
+  background-color: var(--dialog-background-color);
+  padding: var(--dialog-padding);
   user-select: none;
 
   .dialog__cover {
     display: flex;
-    flex: 1 0 var(--#{$id}-cover-width);
+    flex: 1 0 var(--dialog-cover-width);
     justify-content: center;
     align-items: center;
-    max-width: var(--#{$id}-cover-width);
+    max-width: var(--dialog-cover-width);
     overflow: hidden;
 
     &--padding {
-      padding: var(--#{$id}-cover-padding);
+      padding: var(--dialog-cover-padding);
     }
   }
 
   .dialog__text {
     display: flex;
     flex-direction: column;
-    gap: var(--#{$id}-text-gap);
+    gap: var(--dialog-text-gap);
     margin: 0;
-    padding: var(--#{$id}-text-padding);
+    padding: var(--dialog-text-padding);
 
     p {
       margin: 0;
@@ -55,9 +53,9 @@ $id: "dialog";
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: var(--#{$id}-form-gap);
+    gap: var(--dialog-form-gap);
     margin: 0;
-    padding: var(--#{$id}-form-padding);
+    padding: var(--dialog-form-padding);
   }
 }
 

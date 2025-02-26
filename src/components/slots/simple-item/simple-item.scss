@@ -1,41 +1,39 @@
-$id: "simple-item";
-
 :root {
-  --#{$id}-gap: var(--size-xxsmall);
-  --#{$id}-padding: var(--size-xunit) var(--size-xsmall);
-  --#{$id}-min-height: var(--size-medium);
-  --#{$id}-border-color: var(--figma-color-border-selected);
-  --#{$id}-border-width: var(--size-xunit);
-  --#{$id}-border-radius: var(--border-radius-small);
-  --#{$id}-background-color: var(--figma-color-bg);
-  --#{$id}-border-width: 0;
-  --#{$id}-border-offset: 0;
-  --#{$id}-border-color: transparent;
+  --simple-item-gap: var(--size-xxsmall);
+  --simple-item-padding: var(--size-xunit) var(--size-xsmall);
+  --simple-item-min-height: var(--size-medium);
+  --simple-item-border-color: var(--figma-color-border-selected);
+  --simple-item-border-width: var(--size-xunit);
+  --simple-item-border-radius: var(--border-radius-small);
+  --simple-item-background-color: var(--figma-color-bg);
+  --simple-item-border-width: 0;
+  --simple-item-border-offset: 0;
+  --simple-item-border-color: transparent;
 
-  --#{$id}-background-color-hover: var(--figma-color-bg-hover);
+  --simple-item-background-color-hover: var(--figma-color-bg-hover);
 
-  --#{$id}-background-color-focus: var(--figma-color-bg-selected);
-  --#{$id}-border-width-focus: var(--size-xunit);
-  --#{$id}-border-offset-focus: var(--size-neg-xunit);
-  --#{$id}-border-color-focus: var(--figma-color-border-selected);
+  --simple-item-background-color-focus: var(--figma-color-bg-selected);
+  --simple-item-border-width-focus: var(--size-xunit);
+  --simple-item-border-offset-focus: var(--size-neg-xunit);
+  --simple-item-border-color-focus: var(--figma-color-border-selected);
 
-  --#{$id}-min-width-compact: 112px;
-  --#{$id}-width-compact: 112px;
+  --simple-item-min-width-compact: 112px;
+  --simple-item-width-compact: 112px;
 
-  --#{$id}-min-width-square: var(--size-medium);
-  --#{$id}-width-square: var(--size-medium);
+  --simple-item-min-width-square: var(--size-medium);
+  --simple-item-width-square: var(--size-medium);
 }
 
 .simple-item {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: var(--#{$id}-gap);
-  background-color: var(--#{$id}-background-color);
-  padding: var(--#{$id}-padding);
-  min-height: var(--#{$id}-min-height);
-  outline: var(--#{$id}-border-width) solid var(--#{$id}-border-color);
-  outline-offset: var(--#{$id}-border-offset);
+  gap: var(--simple-item-gap);
+  background-color: var(--simple-item-background-color);
+  padding: var(--simple-item-padding);
+  min-height: var(--simple-item-min-height);
+  outline: var(--simple-item-border-width) solid var(--simple-item-border-color);
+  outline-offset: var(--simple-item-border-offset);
 
   &--center {
     align-items: center;
@@ -47,14 +45,14 @@ $id: "simple-item";
 
   &--interactive:hover {
     &:hover {
-      --#{$id}-background-color: var(--#{$id}-background-color-hover);
+      --simple-item-background-color: var(--simple-item-background-color-hover);
     }
     
     &:focus {
-      --#{$id}-background-color: var(--#{$id}-background-color-focus);
-      --#{$id}-border-width: var(--#{$id}-border-width-focus);
-      --#{$id}-border-offset: var(--#{$id}-border-offset-focus);
-      --#{$id}-border-color: var(--#{$id}-border-color-focus);
+      --simple-item-background-color: var(--simple-item-background-color-focus);
+      --simple-item-border-width: var(--simple-item-border-width-focus);
+      --simple-item-border-offset: var(--simple-item-border-offset-focus);
+      --simple-item-border-color: var(--simple-item-border-color-focus);
     }
   }
 
@@ -72,16 +70,16 @@ $id: "simple-item";
     max-width: 100%;
 
     &--compact {
-      width: var(--#{$id}-width-compact);
-      min-width: var(--#{$id}-min-width-compact);
+      width: var(--simple-item-width-compact);
+      min-width: var(--simple-item-min-width-compact);
     }
 
     &--square {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: var(--#{$id}-width-square);
-      min-width: var(--#{$id}-min-width-square);
+      width: var(--simple-item-width-square);
+      min-width: var(--simple-item-min-width-square);
     }
 
     &--fill {

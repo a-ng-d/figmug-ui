@@ -21,4 +21,7 @@ export const ColorSample: Story = {
     canBeRemoved: false,
     onRemoveColor: fn(),
   },
+  argTypes: {
+    hex: { control: 'color' },
+  },
 }

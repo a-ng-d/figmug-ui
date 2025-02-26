@@ -1,27 +1,34 @@
-.menu.recharged {
+:root {
+  --menu-top-right: calc(var(--size-xxsmall) * -1);
+  --menu-top-left: calc(var(--size-xxsmall) * -1);
+  --menu-bottom-right: calc(var(--size-medium) + var(--size-xxsmall));
+  --menu-bottom-left: calc(var(--size-medium) + var(--size-xxsmall));
+}
+
+.menu {
   position: relative;
 
   &.menu--top-right > .floating-menu {
-    top: calc(var(--size-xxsmall) * -1);
+    top: var(--menu-top-right);
     right: 0;
     left: unset;
     transform: translateY(-100%);
   }
 
   &.menu--top-left > .floating-menu {
-    top: calc(var(--size-xxsmall) * -1);
+    top: var(--menu-top-left);
     left: 0;
     transform: translateY(-100%);
   }
 
   &.menu--bottom-right > .floating-menu {
-    top: calc(var(--size-medium) + var(--size-xxsmall));
+    top: var(--menu-bottom-right);
     right: 0;
     left: unset;
   }
 
   &.menu--bottom-left > .floating-menu {
-    top: calc(var(--size-medium) + var(--size-xxsmall));
+    top: var(--menu-bottom-left);
     left: 0;
   }
 }

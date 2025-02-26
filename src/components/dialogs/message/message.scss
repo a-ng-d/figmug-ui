@@ -1,41 +1,39 @@
-$id: "message";
-
 :root {
-  --#{$id}-padding: 0 calc(var(--size-xsmall) + var(--size-xxxsmall));
-  --#{$id}-gap: var(--size-xxsmall);
-  --#{$id}-text-color: var(--figma-color-text);
-  --#{$id}-icon-color: var(--figma-color-icon);
+  --message-padding: 0 calc(var(--size-xsmall) + var(--size-xxxsmall));
+  --message-gap: var(--size-xxsmall);
+  --message-text-color: var(--figma-color-text);
+  --message-icon-color: var(--figma-color-icon);
 
-  --#{$id}-message-padding: var(--size-xxsmall) 0;
+  --message-message-padding: var(--size-xxsmall) 0;
 
-  --#{$id}-ticker-height: var(--size-medium);
-  --#{$id}-ticker-max-width: 640px;
-  --#{$id}-ticker-gap: var(--size-medium);
-  --#{$id}-ticker-padding: 0 var(--size-xsmall);
-  --#{$id}-ticker-mask-background-color: var(--figma-color-bg);
-  --#{$id}-ticker-mask-width: var(--size-xsmall);
+  --message-ticker-height: var(--size-medium);
+  --message-ticker-max-width: 640px;
+  --message-ticker-gap: var(--size-medium);
+  --message-ticker-padding: 0 var(--size-xsmall);
+  --message-ticker-mask-background-color: var(--figma-color-bg);
+  --message-ticker-mask-width: var(--size-xsmall);
 
-  --#{$id}-text-color-disabled: var(--figma-color-text-disabled);
-  --#{$id}-icon-color-disabled: var(--figma-color-icon-disabled);
+  --message-text-color-disabled: var(--figma-color-text-disabled);
+  --message-icon-color-disabled: var(--figma-color-icon-disabled);
 }
 
 .message {
   cursor: default;
-  padding: var(--#{$id}-padding);
+  padding: var(--message-padding);
   user-select: none;
   display: flex;
   align-items: flex-start;
-  gap: var(--#{$id}-gap);
-  --icon-picto-color: var(--#{$id}-icon-color);
-  --text-color-primary: var(--#{$id}-text-color);
+  gap: var(--message-gap);
+  --icon-picto-color: var(--message-icon-color);
+  --text-color-primary: var(--message-text-color);
 
   &--blocked{
-    --icon-picto-color: var(--#{$id}-icon-color-disabled);
-    --text-color-primary: var(--#{$id}-text-color-disabled);
+    --icon-picto-color: var(--message-icon-color-disabled);
+    --text-color-primary: var(--message-text-color-disabled);
   }
 
   &__msg {
-    padding: var(--#{$id}-message-padding);
+    padding: var(--message-message-padding);
   }
 
   /* Tips ticker */
@@ -44,18 +42,18 @@ $id: "message";
     position: relative;
     flex: 1;
     overflow: hidden;
-    height: var(--#{$id}-ticker-height);
-    max-width: var(--#{$id}-ticker-max-width);
+    height: var(--message-ticker-height);
+    max-width: var(--message-ticker-max-width);
 
     &__msg {
-      padding: var(--#{$id}-message-padding);
+      padding: var(--message-message-padding);
     }
 
     &:before,
     &:after {
       position: absolute;
       z-index: 2;
-      width: var(--#{$id}-ticker-mask-width);
+      width: var(--message-ticker-mask-width);
       height: 100%;
       content: '';
     }
@@ -64,7 +62,7 @@ $id: "message";
       left: 0;
       background: linear-gradient(
         90deg,
-        var(--#{$id}-ticker-mask-background-color) 0%,
+        var(--message-ticker-mask-background-color) 0%,
         transparent 100%
       );
     }
@@ -74,7 +72,7 @@ $id: "message";
       background: linear-gradient(
         90deg,
         transparent 0%,
-        var(--#{$id}-ticker-mask-background-color) 100%
+        var(--message-ticker-mask-background-color) 100%
       );
     }
   }
@@ -83,8 +81,8 @@ $id: "message";
     display: inline-flex;
     position: relative;
     align-items: center;
-    gap: var(--#{$id}-ticker-gap);
-    padding: var(--#{$id}-ticker-padding);
+    gap: var(--message-ticker-gap);
+    padding: var(--message-ticker-padding);
     width: max-content;
   }
 

@@ -1,57 +1,55 @@
-$id: "semantic-message";
-
 :root {
-  --#{$id}-gap: var(--size-xxxsmall);
-  --#{$id}-padding: var(--size-xxsmall) var(--size-xxsmall) var(--size-xxsmall) 0;
-  --#{$id}-border-radius: var(--border-radius-xlarge);
-  --#{$id}-background-color: var(--figma-color-bg);
-  --#{$id}-background-color-info: var(--figma-color-bg-brand-tertiary);
-  --#{$id}-background-color-error: var(--figma-color-bg-danger-tertiary);
-  --#{$id}-background-color-success: var(--figma-color-bg-success-tertiary);
-  --#{$id}-background-color-warning: var(--figma-color-bg-warning-tertiary);
+  --semantic-message-gap: var(--size-xxxsmall);
+  --semantic-message-padding: var(--size-xxsmall) var(--size-xxsmall) var(--size-xxsmall) 0;
+  --semantic-message-border-radius: var(--border-radius-xlarge);
+  --semantic-message-background-color: var(--figma-color-bg);
+  --semantic-message-background-color-info: var(--figma-color-bg-brand-tertiary);
+  --semantic-message-background-color-error: var(--figma-color-bg-danger-tertiary);
+  --semantic-message-background-color-success: var(--figma-color-bg-success-tertiary);
+  --semantic-message-background-color-warning: var(--figma-color-bg-warning-tertiary);
   
-  --#{$id}-padding-anchored: var(--size-small) var(--size-xsmall) var(--size-small) 0;
-  --#{$id}-padding-vertical: var(--size-xsmall) var(--size-xxxsmall);
-  --#{$id}-padding-anchored-vertical: var(--size-xsmall) var(--size-xxxsmall);
+  --semantic-message-padding-anchored: var(--size-small) var(--size-xsmall) var(--size-small) 0;
+  --semantic-message-padding-vertical: var(--size-xsmall) var(--size-xxxsmall);
+  --semantic-message-padding-anchored-vertical: var(--size-xsmall) var(--size-xxxsmall);
 }
 
 .semantic-message {
   display: flex;
   justify-content: space-between;
-  gap: var(--#{$id}-gap);
-  border-radius: var(--#{$id}-border-radius);
-  padding: var(--#{$id}-padding);
-  background-color: var(--#{$id}-background-color);
+  gap: var(--semantic-message-gap);
+  border-radius: var(--semantic-message-border-radius);
+  padding: var(--semantic-message-padding);
+  background-color: var(--semantic-message-background-color);
 
   &--info {
-    --#{$id}-background-color: var(--#{$id}-background-color-info);
+    --semantic-message-background-color: var(--semantic-message-background-color-info);
   }
 
   &--error {
-    --#{$id}-background-color: var(--#{$id}-background-color-error);
+    --semantic-message-background-color: var(--semantic-message-background-color-error);
   }
 
   &--success {
-    --#{$id}-background-color: var(--#{$id}-background-color-success);
+    --semantic-message-background-color: var(--semantic-message-background-color-success);
   }
 
   &--warning {
-    --#{$id}-background-color: var(--#{$id}-background-color-warning);
+    --semantic-message-background-color: var(--semantic-message-background-color-warning);
   }
 
   &--anchored {
     border-radius: 0;
-    --#{$id}-padding: var(--#{$id}-padding-anchored);
+    --semantic-message-padding: var(--semantic-message-padding-anchored);
 
     &.semantic-message--vertical {
-      --#{$id}-padding: var(--#{$id}-padding-anchored-vertical);
+      --semantic-message-padding: var(--semantic-message-padding-anchored-vertical);
     }
   }
 
   &--vertical {
     flex-direction: column;
     align-items: center;
-    --#{$id}-padding: var(--#{$id}-padding-vertical);
+    --semantic-message-padding: var(--semantic-message-padding-vertical);
   }
 
   &__body {

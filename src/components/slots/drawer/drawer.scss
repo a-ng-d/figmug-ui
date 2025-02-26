@@ -1,16 +1,14 @@
-$id: "drawer";
-
 :root {
-  --#{id}-background-color: var(--figma-color-bg);
-  --#{id}-knob-size: var(--size-xxsmall);
-  --#{id}-knob-position: var(--size-neg-xxxsmall);
+  --drawer-background-color: var(--figma-color-bg);
+  --drawer-knob-size: var(--size-xxsmall);
+  --drawer-knob-position: var(--size-neg-xxxsmall);
 }
 
 .drawer {
   display: flex;
   position: relative;
   flex-direction: column;
-  background-color: var(--#{id}-background-color);
+  background-color: var(--drawer-background-color);
 
   &__knob {
     position: absolute;
@@ -21,30 +19,30 @@ $id: "drawer";
     &--bottom {
       cursor: ns-resize;
       width: 100%;
-      height: var(--#{id}-knob-size);
+      height: var(--drawer-knob-size);
     }
 
     &--left,
     &--right {
       cursor: ew-resize;
-      width: var(--#{id}-knob-size);
+      width: var(--drawer-knob-size);
       height: 100%;
     }
 
     &--top {
-      bottom: var(--#{id}-knob-position);
+      bottom: var(--drawer-knob-position);
     }
 
     &--right {
-      left: var(--#{id}-knob-position);
+      left: var(--drawer-knob-position);
     }
 
     &--bottom {
-      top: var(--#{id}-knob-position);
+      top: var(--drawer-knob-position);
     }
 
     &--left {
-      right: var(--#{id}-knob-position);
+      right: var(--drawer-knob-position);
     }
   }
 }

@@ -1,28 +1,26 @@
-$id: "popin";
-
 :root {
-  --#{$id}-breakpoint: 460px;
-  --#{$id}-shadow: var(--shadow-floating-window);
-  --#{$id}-radius: var(--border-radius-small);
-  --#{$id}-min-width: 460px;
-  --#{$id}-max-width: 576px;
-  --#{$id}-min-height: 136px;
-  --#{$id}-background-color: var(--figma-color-bg);
-  --#{$id}-text-color: var(--figma-color-text);
-  --#{$id}-border-color: var(--figma-color-border);
-  --#{$id}-border-width: var(--size-unit);
-  --#{$id}-border-offset: var(--size-neg-unit);
+  --popin-breakpoint: 460px;
+  --popin-shadow: var(--shadow-floating-window);
+  --popin-radius: var(--border-radius-small);
+  --popin-min-width: 460px;
+  --popin-max-width: 576px;
+  --popin-min-height: 136px;
+  --popin-background-color: var(--figma-color-bg);
+  --popin-text-color: var(--figma-color-text);
+  --popin-border-color: var(--figma-color-border);
+  --popin-border-width: var(--size-unit);
+  --popin-border-offset: var(--size-neg-unit);
 
-  --#{$id}-header-height: var(--size-xlarge);
-  --#{$id}-header-gap: var(--size-xxsmall);
-  --#{$id}-header-padding: 0 var(--size-xxsmall);
-  --#{$id}-header-border: 1px solid var(--figma-color-border);
+  --popin-header-height: var(--size-xlarge);
+  --popin-header-gap: var(--size-xxsmall);
+  --popin-header-padding: 0 var(--size-xxsmall);
+  --popin-header-border: 1px solid var(--figma-color-border);
 
-  --#{$id}-footer-padding: var(--size-xsmall) var(--size-xsmall) var(--size-xsmall)
+  --popin-footer-padding: var(--size-xsmall) var(--size-xsmall) var(--size-xsmall)
     var(--size-xsmall);
-  --#{$id}-footer-gap: var(--size-xxsmall);
+  --popin-footer-gap: var(--size-xxsmall);
 
-  --#{$id}-actions-gap: var(--size-xxsmall);
+  --popin-actions-gap: var(--size-xxsmall);
 }
 
 .popin {
@@ -30,26 +28,26 @@ $id: "popin";
   flex-direction: column;
   justify-content: stretch;
   cursor: default;
-  box-shadow: var(--#{$id}-shadow);
-  outline: var(--#{$id}-border-width) solid var(--#{$id}-border-color);
-  outline-offset: var(--#{$id}-border-offset);
-  border-radius: var(--#{$id}-radius);
-  background-color: var(--#{$id}-background-color);
+  box-shadow: var(--popin-shadow);
+  outline: var(--popin-border-width) solid var(--popin-border-color);
+  outline-offset: var(--popin-border-offset);
+  border-radius: var(--popin-radius);
+  background-color: var(--popin-background-color);
   width: 100%;
-  min-width: var(--#{$id}-min-height);
-  max-width: var(--#{$id}-max-width);
-  min-height: var(--#{$id}-min-height);
+  min-width: var(--popin-min-height);
+  max-width: var(--popin-max-width);
+  min-height: var(--popin-min-height);
   max-height: 100%;
   user-select: none;
 
   .popin__header {
     display: flex;
-    flex: 0 1 var(--#{$id}-header-height);
+    flex: 0 1 var(--popin-header-height);
     justify-content: space-between;
     align-items: center;
-    gap: var(--#{$id}-header-gap);
-    border-bottom: var(--#{$id}-header-border);
-    padding: var(--#{$id}-header-padding);
+    gap: var(--popin-header-gap);
+    border-bottom: var(--popin-header-border);
+    padding: var(--popin-header-padding);
   }
 
   .popin__title {
@@ -74,12 +72,12 @@ $id: "popin";
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--#{$id}-footer-padding);
+    padding: var(--popin-footer-padding);
   }
 
   .popin__actions {
     display: flex;
-    gap: var(--#{$id}-actions-gap);
+    gap: var(--popin-actions-gap);
   }
 }
 
@@ -102,7 +100,7 @@ $id: "popin";
     }
 
     .popin__footer {
-      gap: var(--#{$id}-footer-gap);
+      gap: var(--popin-footer-gap);
       height: auto;
     }
 

@@ -1,13 +1,23 @@
-.bar.recharged {
+:root {
+  --bar-min-height: var(--size-large);
+  --bar-gap: var(--size-xxxsmall);
+
+  --bar-height-compact: var(--size-medium);
+
+  --bar-padding-top: var(--size-xxxsmall) !important;
+  --bar-padding-bottom: var(--size-xxxsmall) !important;
+}
+
+.bar {
   display: flex;
   position: relative;
   justify-content: space-between;
   align-items: center;
-  gap: var(--size-xxxsmall) 0;
-  min-height: var(--size-large);
+  gap: var(--bar-gap);
+  min-height: var(--bar-min-height);
 
   &.bar--compact {
-    height: var(--size-medium);
+    height: var(--bar-height-compact);
   }
 
   &.bar--text-only {
@@ -22,9 +32,10 @@
 }
 
 @media (max-width: 460px) {
-  .bar.recharged {
+  .bar {
     flex-direction: column;
-    padding-top: var(--size-xxxsmall) !important;
-    padding-bottom: var(--size-xxxsmall) !important;
+    padding: var(--bar-padding);
+    padding-top: var(--bar-padding-top);
+    padding-bottom: var(--bar-padding-bottom);
   }
 }

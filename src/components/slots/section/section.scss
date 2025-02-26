@@ -1,36 +1,34 @@
-$id: "section";
-
 :root {
-  --#{id}-gap: var(--size-xxxsmall);
-  --#{id}-padding: var(--size-xxsmall) 0;
-  --#{id}-background-color: var(--figma-color-bg);
+  --section-gap: var(--size-xxxsmall);
+  --section-padding: var(--size-xxsmall) 0;
+  --section-background-color: var(--figma-color-bg);
 
-  --#{id}-child-padding: 0 var(--size-xsmall);
-  --#{id}-child-padding-large: 0 var(--size-small);
-  --#{id}-child-padding-tight: 0 var(--size-xxsmall);
-  --#{id}-child-padding-none: 0;
+  --section-child-padding: 0 var(--size-xsmall);
+  --section-child-padding-large: 0 var(--size-small);
+  --section-child-padding-tight: 0 var(--size-xxsmall);
+  --section-child-padding-none: 0;
 }
 
 .section {
   display: flex;
   flex-direction: column;
-  gap: var(--#{id}-gap);
-  padding: var(--#{id}-padding);
-  background-color: var(--#{id}-background-color);
+  gap: var(--section-gap);
+  padding: var(--section-padding);
+  background-color: var(--section-background-color);
 
   &__child {
-    padding: var(--#{id}-child-padding);
+    padding: var(--section-child-padding);
 
     &--large {
-      padding: var(--#{id}-child-padding-large);
+      padding: var(--section-child-padding-large);
     }
 
     &--tight {
-      padding: var(--#{id}-child-padding-tight);
+      padding: var(--section-child-padding-tight);
     }
 
     &--none {
-      padding: var(--#{id}-child-padding-none);
+      padding: var(--section-child-padding-none);
     }
   }
 }

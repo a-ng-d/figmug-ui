@@ -1,20 +1,18 @@
-$id: "inputs-bar";
-
 :root {
-  --#{$id}-gap: var(--size-xxsmall);
-  --#{$id}-width: var(--size-xlarge);
-  --#{$id}-padding: 0 1px;
-  --#{$id}-margin: 0 -1px;
-  --#{$id}-radius: var(--border-radius-small);
+  --inputs-bar-gap: var(--size-xxsmall);
+  --inputs-bar-width: var(--size-xlarge);
+  --inputs-bar-padding: 0 1px;
+  --inputs-bar-margin: 0 -1px;
+  --inputs-bar-radius: var(--border-radius-small);
 
-  --#{$id}-border-color: var(--figma-color-border-selected);
-  --#{$id}-border-width: var(--size-xunit);
+  --inputs-bar-border-color: var(--figma-color-border-selected);
+  --inputs-bar-border-width: var(--size-xunit);
 }
 
 .inputs {
   display: flex;
   align-items: center;
-  gap: var(--#{$id}-gap);
+  gap: var(--inputs-bar-gap);
 
   &:hover {
     --input-border-width: var(--input-border-width-hover);
@@ -25,12 +23,12 @@ $id: "inputs-bar";
   .inputs__bar {
     display: flex;
     position: relative;
-    padding: var(--#{$id}-padding);
-    --input-number-width: var(--#{$id}-width);
-    --input-color-width: var(--#{$id}-width);
+    padding: var(--inputs-bar-padding);
+    --input-number-width: var(--inputs-bar-width);
+    --input-color-width: var(--inputs-bar-width);
 
     & .input {
-      margin: var(--#{$id}-margin);
+      margin: var(--inputs-bar-margin);
 
       input:focus {
         --input-border-width: var(--input-border-width-hover);
@@ -47,8 +45,8 @@ $id: "inputs-bar";
       &:before {
         position: absolute;
         z-index: 2;
-        box-shadow: inset 0 0 0 var(--#{$id}-border-width) var(--#{$id}-border-color);
-        border-radius: var(--#{$id}-radius);
+        box-shadow: inset 0 0 0 var(--inputs-bar-border-width) var(--inputs-bar-border-color);
+        border-radius: var(--inputs-bar-radius);
         inset: 0 0 0 0;
         pointer-events: none;
         content: '';
