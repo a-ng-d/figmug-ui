@@ -152,6 +152,8 @@
   --button-icon-color-secondary-disabled: var(--figma-color-icon-disabled);
 
   /* Tertiary */
+  --button-text-font-size-tertiary: var(--font-size-xsmall);
+  --button-padding-tertiary: 0;
   --button-background-color-tertiary: var(--figma-color-bg);
   --button-background-color-tertiary-hover: var(--figma-color-bg);
   --button-background-color-tertiary-pressed: var(--figma-color-bg);
@@ -584,6 +586,8 @@
   }
 
   &--tertiary {
+    --button-text-font-size: var(--button-text-font-size-tertiary);
+    --button-padding: var(--button-padding-tertiary);
     --button-background-color: var(--button-background-color-tertiary);
     --button-border-color: var(--button-border-color-tertiary);
     --button-border-width: var(--button-border-width-tertiary);

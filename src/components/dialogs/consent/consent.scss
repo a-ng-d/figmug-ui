@@ -1,30 +1,41 @@
-.consent-overlay.recharged {
+$id: "consent";
+
+:root {
+  --#{$id}-banner-gap: var(--size-xxsmall) 0;
+  --#{$id}-banner-padding: var(--size-xxsmall) var(--size-xsmall);
+  --#{$id}-banner-max-height: calc(100% - var(--size-large));
+  --#{$id}-banner-max-width: 400px;
+  --#{$id}-banner-background-color: var(--figma-color-bg);
+  --#{$id}-banner-border: var(--size-unit) solid var(--figma-color-border);
+
+  --#{$id}-list-padding: 0 0 0 var(--size-xsmall);
+  --#{$id}-list-max-width: 400px;
+}
+
+.consent {
   display: flex;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0 0 0 0;
   justify-content: center;
   align-items: flex-end;
   z-index: 5;
   cursor: default;
-  width: 100%;
-  height: 100%;
   pointer-events: none;
   user-select: none;
 
-  .consent-banner {
+  .consent__banner {
     display: flex;
     flex-direction: column;
-    gap: var(--size-xxsmall) 0;
-    border-top: 1px solid var(--figma-color-border);
-    background-color: var(--figma-color-bg);
-    padding: var(--size-xxsmall) var(--size-xsmall);
+    gap: var(--#{$id}-banner-gap);
+    border-top: var(--#{$id}-banner-border);
+    background-color: var(--#{$id}-banner-background-color);
+    padding: var(--#{$id}-banner-padding);
     width: 100%;
-    max-height: calc(100% - var(--size-large));
+    max-height: var(--#{$id}-banner-max-height);
     pointer-events: all;
 
     &__message {
-      max-width: 400px;
+      max-width: var(--#{$id}-banner-max-width);
       overflow-y: auto;
     }
 
@@ -35,7 +46,7 @@
     &__list {
       display: flex;
       flex-direction: column;
-      padding: 0 0 0 var(--size-xsmall);
+      padding: var(--#{$id}-list-padding);
       list-style-type: none;
     }
 
@@ -44,7 +55,7 @@
     }
 
     &__item__description {
-      max-width: 400px;
+      max-width: var(--#{$id}-list-max-width);
     }
 
     & > .bar {
@@ -54,8 +65,8 @@
 }
 
 @media (max-width: 460px) {
-  .consent-overlay.recharged {
-    & .consent-banner__actions {
+  .consent {
+    & .consent__banner__actions {
       flex-direction: column;
       align-items: flex-end;
     }

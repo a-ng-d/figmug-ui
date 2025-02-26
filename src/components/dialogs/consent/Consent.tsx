@@ -111,9 +111,9 @@ export default class Consent extends React.Component<
     const { isVendorsOpen } = this.state
 
     return (
-      <div className="consent-banner">
-        <div className="consent-banner__message">
-          <div className={['type', texts.type].filter((n) => n).join(' ')}>
+      <div className="consent__banner">
+        <div className="consent__banner__message">
+          <div className={[texts.type].filter((n) => n).join(' ')}>
             {welcomeMessage}
           </div>
           <Button
@@ -137,7 +137,7 @@ export default class Consent extends React.Component<
           rightPartSlot={
             <div
               className={[
-                'consent-banner__actions',
+                'consent__banner__actions',
                 layouts['snackbar--medium'],
               ]
                 .filter((n) => n)
@@ -178,17 +178,17 @@ export default class Consent extends React.Component<
     const { isVendorsOpen, vendorsConsent } = this.state
 
     return (
-      <div className="consent-banner">
-        <div className="consent-banner__content">
+      <div className="consent__banner">
+        <div className="consent__banner__content">
           <div
-            className={['consent-banner__message', 'type', texts.type]
+            className={['consent__banner__message', texts.type]
               .filter((n) => n)
               .join(' ')}
           >
             {vendorsMessage}
           </div>
-          <ul className="consent-banner__list">
-            <li className="consent-banner__item">
+          <ul className="consent__banner__list">
+            <li className="consent__banner__item">
               <Bar
                 leftPartSlot={
                   <div
@@ -199,9 +199,8 @@ export default class Consent extends React.Component<
                     <div>
                       <div
                         className={[
-                          'consent-banner__item__title',
-                          'type',
-                          'type--large',
+                          'consent__banner__item__title',
+                          texts['type--large'],
                           texts.type,
                         ]
                           .filter((n) => n)
@@ -211,8 +210,7 @@ export default class Consent extends React.Component<
                       </div>
                       <div
                         className={[
-                          'consent-banner__item__description',
-                          'type',
+                          'consent__banner__item__description',
                           texts.type,
                         ]
                           .filter((n) => n)
@@ -224,7 +222,7 @@ export default class Consent extends React.Component<
                   </div>
                 }
                 rightPartSlot={
-                  <div className="consent-banner__item__action">
+                  <div className="consent__banner__item__action">
                     <Select
                       id={`legit-user-consent`}
                       type="SWITCH_BUTTON"
@@ -240,7 +238,7 @@ export default class Consent extends React.Component<
             {vendorsList.map((vendor, index) => (
               <li
                 key={index}
-                className="consent-banner__item"
+                className="consent__banner__item"
               >
                 <Bar
                   leftPartSlot={
@@ -249,7 +247,7 @@ export default class Consent extends React.Component<
                         .filter((n) => n)
                         .join(' ')}
                     >
-                      <div className="consent-banner__item__icon">
+                      <div className="consent__banner__item__icon">
                         <Thumbnail
                           src={vendor.icon}
                           w="32px"
@@ -259,9 +257,8 @@ export default class Consent extends React.Component<
                       <div>
                         <div
                           className={[
-                            'consent-banner__item__title',
-                            'type',
-                            'type--large',
+                            'consent__banner__item__title',
+                            texts['type--large'],
                             texts.type,
                           ]
                             .filter((n) => n)
@@ -271,8 +268,7 @@ export default class Consent extends React.Component<
                         </div>
                         <div
                           className={[
-                            'consent-banner__item__description',
-                            'type',
+                            'consent__banner__item__description',
                             texts.type,
                           ]
                             .filter((n) => n)
@@ -284,7 +280,7 @@ export default class Consent extends React.Component<
                     </div>
                   }
                   rightPartSlot={
-                    <div className="consent-banner__item__action">
+                    <div className="consent__banner__item__action">
                       <Select
                         id={`change-${vendor.id}-user-consent`}
                         type="SWITCH_BUTTON"
@@ -317,7 +313,7 @@ export default class Consent extends React.Component<
           rightPartSlot={
             <div
               className={[
-                'consent-banner__actions',
+                'consent__banner__actions',
                 layouts['snackbar--medium'],
               ]
                 .filter((n) => n)
@@ -352,12 +348,12 @@ export default class Consent extends React.Component<
 
     if (isVendorsOpen)
       return (
-        <div className="consent-overlay recharged">
+        <div className="consent">
           <this.DetailedVendorsList />
         </div>
       )
     return (
-      <div className="consent-overlay recharged">
+      <div className="consent">
         <this.WelcomeScreen />
       </div>
     )
