@@ -1,4 +1,20 @@
-.dialog.recharged {
+$id: "dialog";
+
+:root {
+  --#{$id}-padding: var(--size-medium);
+  --#{$id}-background-color: rgba(0, 0, 0, 0.5);
+
+  --#{$id}-cover-width: 248px;
+  --#{$id}-cover-padding: var(--size-xsmall);
+
+  --#{$id}-text-gap: var(--size-xxsmall);
+  --#{$id}-text-padding: var(--size-xsmall);
+
+  --#{$id}-form-gap: var(--size-xxxsmall);
+  --#{$id}-form-padding: var(--size-xxsmall) var(--size-xxsmall);
+}
+
+.dialog {
   display: flex;
   position: absolute;
   top: 0;
@@ -7,53 +23,49 @@
   align-items: center;
   z-index: 4;
   cursor: default;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: var(--size-medium);
+  background-color: var(--#{$id}-background-color);
+  padding: var(--#{$id}-padding);
   width: 100%;
   height: 100%;
   user-select: none;
 
-  & .dialog__cover {
+  .dialog__cover {
     display: flex;
-    flex: 1 0 248px;
+    flex: 1 0 var(--#{$id}-cover-width);
     justify-content: center;
     align-items: center;
-    max-width: 248px;
+    max-width: var(--#{$id}-cover-width);
     overflow: hidden;
+
+    &--padding {
+      padding: var(--#{$id}-cover-padding);
+    }
   }
 
-  & .dialog__text {
+  .dialog__text {
     display: flex;
     flex-direction: column;
-    gap: var(--size-xxsmall);
+    gap: var(--#{$id}-text-gap);
     margin: 0;
-    padding: var(--size-xsmall);
+    padding: var(--#{$id}-text-padding);
 
     p {
       margin: 0;
     }
   }
 
-  & .dialog__cover--padding {
-    padding: var(--size-xsmall);
-  }
-
-  & .dialog__form {
+   .dialog__form {
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: var(--size-xxxsmall);
+    gap: var(--#{$id}-form-gap);
     margin: 0;
-    padding: var(--size-xxsmall) 0;
-
-    & > .dialog__form__item {
-      padding: 0 var(--size-xsmall);
-    }
+    padding: var(--#{$id}-form-padding);
   }
 }
 
 @media (max-width: 460px) {
-  .dialog.recharged {
+  .dialog {
     & .dialog__cover {
       flex: auto;
       width: 100%;

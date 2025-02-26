@@ -58,11 +58,15 @@ const PopIn = (props: PopInProps) => {
   return (
     <div
       id={id}
-      className="popin recharged"
+      className="popin"
     >
       <div className="popin__header">
         <div className="popin__title">
-          <p className={`${texts.type} type type--large type--bold`}>{title}</p>
+          <p
+            className={`${texts.type} ${texts['type--large']} ${texts['type--bold']}`}
+          >
+            {title}
+          </p>
           {tag != undefined && <Chip>{tag}</Chip>}
         </div>
         <Button
@@ -94,7 +98,7 @@ const PopIn = (props: PopInProps) => {
         <div className="popin__footer">
           <div className="popin__extra">
             {indicator !== undefined && (
-              <div className={`${texts.label} label`}>{indicator}</div>
+              <div className={`${texts.label}`}>{indicator}</div>
             )}
             {select !== undefined && (
               <Select

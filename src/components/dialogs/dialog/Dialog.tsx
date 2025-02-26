@@ -56,7 +56,7 @@ const Dialog = (props: DialogProps) => {
 
   return (
     <div
-      className="dialog recharged"
+      className="dialog"
       role="button"
       tabIndex={-1}
       onMouseDown={closeHandler}

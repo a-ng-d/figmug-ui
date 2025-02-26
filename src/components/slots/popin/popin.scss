@@ -1,27 +1,55 @@
-.popin.recharged {
+$id: "popin";
+
+:root {
+  --#{$id}-breakpoint: 460px;
+  --#{$id}-shadow: var(--shadow-floating-window);
+  --#{$id}-radius: var(--border-radius-small);
+  --#{$id}-min-width: 460px;
+  --#{$id}-max-width: 576px;
+  --#{$id}-min-height: 136px;
+  --#{$id}-background-color: var(--figma-color-bg);
+  --#{$id}-text-color: var(--figma-color-text);
+  --#{$id}-border-color: var(--figma-color-border);
+  --#{$id}-border-width: var(--size-unit);
+  --#{$id}-border-offset: var(--size-neg-unit);
+
+  --#{$id}-header-height: var(--size-xlarge);
+  --#{$id}-header-gap: var(--size-xxsmall);
+  --#{$id}-header-padding: 0 var(--size-xxsmall);
+  --#{$id}-header-border: 1px solid var(--figma-color-border);
+
+  --#{$id}-footer-padding: var(--size-xsmall) var(--size-xsmall) var(--size-xsmall)
+    var(--size-xsmall);
+  --#{$id}-footer-gap: var(--size-xxsmall);
+
+  --#{$id}-actions-gap: var(--size-xxsmall);
+}
+
+.popin {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   cursor: default;
-  box-shadow: var(--shadow-floating-window);
-  border: 1px solid var(--figma-color-border);
-  border-radius: var(--border-radius-small);
-  background-color: var(--figma-color-bg);
+  box-shadow: var(--#{$id}-shadow);
+  outline: var(--#{$id}-border-width) solid var(--#{$id}-border-color);
+  outline-offset: var(--#{$id}-border-offset);
+  border-radius: var(--#{$id}-radius);
+  background-color: var(--#{$id}-background-color);
   width: 100%;
-  min-width: 460px;
-  max-width: 576px;
-  min-height: 136px;
+  min-width: var(--#{$id}-min-height);
+  max-width: var(--#{$id}-max-width);
+  min-height: var(--#{$id}-min-height);
   max-height: 100%;
   user-select: none;
 
   .popin__header {
     display: flex;
-    flex: 0 1 var(--size-xlarge);
+    flex: 0 1 var(--#{$id}-header-height);
     justify-content: space-between;
     align-items: center;
-    gap: 0 var(--size-xxsmall);
-    border-bottom: 1px solid var(--figma-color-border);
-    padding: 0 var(--size-xxsmall);
+    gap: var(--#{$id}-header-gap);
+    border-bottom: var(--#{$id}-header-border);
+    padding: var(--#{$id}-header-padding);
   }
 
   .popin__title {
@@ -46,19 +74,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--size-xsmall) var(--size-xsmall) var(--size-xsmall)
-      var(--size-xsmall);
-    height: var(--size-xxlarge);
+    padding: var(--#{$id}-footer-padding);
   }
 
   .popin__actions {
     display: flex;
-    gap: var(--size-xxsmall);
+    gap: var(--#{$id}-actions-gap);
   }
 }
 
 @media (max-width: 460px) {
-  .popin.recharged {
+  .popin {
     min-width: unset;
     max-width: unset;
     height: auto;
@@ -76,7 +102,7 @@
     }
 
     .popin__footer {
-      gap: var(--size-xxsmall) 0;
+      gap: var(--#{$id}-footer-gap);
       height: auto;
     }
 
