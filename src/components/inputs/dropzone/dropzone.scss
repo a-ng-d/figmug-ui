@@ -1,19 +1,46 @@
+$id: "dropzone";
+
+:root {
+  --#{$id}-padding: var(--size-small);
+  --#{$id}-gap: var(--size-xxsmall);
+  --#{$id}-min-width: 200px;
+  --#{$id}-min-height: 200px;
+  --#{$id}-border-color: var(--figma-color-border);
+  --#{$id}-border-width: var(--size-unit);
+  --#{$id}-border-offset: var(--size-neg-unit);
+  --#{$id}-border-style: dashed;
+  --#{$id}-background-color: var(--figma-color-bg);
+  --#{$id}-border-radius: var(--border-radius-med);
+
+  --#{$id}-border-color-over: var(--figma-color-border-selected);
+  --#{$id}-border-width-over: var(--size-xunit);
+  --#{$id}-border-offset-over: var(--size-neg-xunit);
+  --#{$id}-border-style-over: solid;
+  --#{$id}-background-color-over: var(--figma-color-bg-selected);
+}
+
 .dropzone {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--size-xxsmall);
+  gap: var(--#{$id}-gap);
   cursor: default;
-  outline: dashed 1px var(--figma-color-border);
-  border-radius: var(--border-radius-med);
-  padding: var(--size-small);
-  min-width: 200px;
-  min-height: 200px;
+  outline: var(--#{$id}-border-width) var(--#{$id}-border-style) var(--#{$id}-border-color);
+  outline-offset: var(--#{$id}-border-offset);
+  border-radius: var(--#{$id}-border-radius);
+  padding: var(--#{$id}-padding);
+  min-width: var(--#{$id}-min-width);
+  min-height: var(--#{$id}-min-height);
   user-select: none;
+  background-color: var(--#{$id}-background-color);
 
   &--dragged-over {
-    outline: solid 2px var(--figma-color-border-brand-strong);
-    background-color: var(--figma-color-bg-selected);
+    --semantic-message-background-color: var(--#{$id}-background-color-over);
+    --#{$id}-border-width: var(--#{$id}-border-width-over);
+    --#{$id}-border-offset: var(--#{$id}-border-offset-over);
+    --#{$id}-border-style: var(--#{$id}-border-style-over);
+    --#{$id}-border-color: var(--#{$id}-border-color-over);
+    --#{$id}-background-color: var(--#{$id}-background-color-over);
   }
 }

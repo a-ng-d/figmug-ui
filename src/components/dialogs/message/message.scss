@@ -6,10 +6,12 @@ $id: "message";
   --#{$id}-text-color: var(--figma-color-text);
   --#{$id}-icon-color: var(--figma-color-icon);
 
+  --#{$id}-message-padding: var(--size-xxsmall) 0;
+
   --#{$id}-ticker-height: var(--size-medium);
   --#{$id}-ticker-max-width: 640px;
   --#{$id}-ticker-gap: var(--size-medium);
-  -#{$id}-ticker-padding: 0 var(--size-xsmall);
+  --#{$id}-ticker-padding: 0 var(--size-xsmall);
   --#{$id}-ticker-mask-background-color: var(--figma-color-bg);
   --#{$id}-ticker-mask-width: var(--size-xsmall);
 
@@ -32,6 +34,10 @@ $id: "message";
     --text-color-primary: var(--#{$id}-text-color-disabled);
   }
 
+  &__msg {
+    padding: var(--#{$id}-message-padding);
+  }
+
   /* Tips ticker */
   &__ticker {
     display: flex;
@@ -40,33 +46,37 @@ $id: "message";
     overflow: hidden;
     height: var(--#{$id}-ticker-height);
     max-width: var(--#{$id}-ticker-max-width);
-  }
 
-  &__ticker:before,
-  &__ticker:after {
-    position: absolute;
-    z-index: 2;
-    width: var(--#{$id}-ticker-mask-width);
-    height: 100%;
-    content: '';
-  }
+    &__msg {
+      padding: var(--#{$id}-message-padding);
+    }
 
-  &__ticker:before {
-    left: 0;
-    background: linear-gradient(
-      90deg,
-      var(--#{$id}-ticker-mask-background-color) 0%,
-      transparent 100%
-    );
-  }
-
-  &__ticker:after {
-    right: 0;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      var(--#{$id}-ticker-mask-background-color) 100%
-    );
+    &:before,
+    &:after {
+      position: absolute;
+      z-index: 2;
+      width: var(--#{$id}-ticker-mask-width);
+      height: 100%;
+      content: '';
+    }
+  
+    &:before {
+      left: 0;
+      background: linear-gradient(
+        90deg,
+        var(--#{$id}-ticker-mask-background-color) 0%,
+        transparent 100%
+      );
+    }
+  
+    &:after {
+      right: 0;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--#{$id}-ticker-mask-background-color) 100%
+      );
+    }
   }
 
   &__tips {
@@ -74,7 +84,7 @@ $id: "message";
     position: relative;
     align-items: center;
     gap: var(--#{$id}-ticker-gap);
-    padding: var(--#{$id}-padding);
+    padding: var(--#{$id}-ticker-padding);
     width: max-content;
   }
 

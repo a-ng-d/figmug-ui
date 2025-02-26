@@ -13,7 +13,7 @@ const meta: Meta<typeof Dropzone> = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const AgeSelect: Story = {
+export const ImageDropBox: Story = {
   args: {
     message: 'Drop files here',
     warningMessage: '$1 file was not imported',

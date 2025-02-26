@@ -61,7 +61,7 @@ export default class Message extends React.Component<MessageProps> {
                     <div className={`${texts.type} message__msg`}>
                       {message}
                     </div>
-                    <div className={`${texts.type}`}>﹒</div>
+                    <div className={`${texts.type} message__msg`}>﹒</div>
                   </React.Fragment>
                 )
               })}
@@ -80,7 +80,7 @@ export default class Message extends React.Component<MessageProps> {
                     <div className={`${texts.type} message__msg`}>
                       {message}
                     </div>
-                    <div className={`${texts.type}`}>﹒</div>
+                    <div className={`${texts.type} message__msg`}>﹒</div>
                   </React.Fragment>
                 )
               })}
