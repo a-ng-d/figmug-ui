@@ -156,7 +156,7 @@ export default class DraggableItem extends React.Component<
               <Button
                 type="icon"
                 icon="ellipses"
-                state={hasMoreOptions ? 'selected' : ''}
+                state={hasMoreOptions ? 'selected' : undefined}
                 action={() => {
                   onCancelSelection
                   onRefoldOptions

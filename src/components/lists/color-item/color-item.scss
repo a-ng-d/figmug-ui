@@ -1,9 +1,15 @@
-.color-item.recharged {
+:root {
+  --color-item-padding: 0 var(--size-xsmall) 0 var(--size-small);
+  --color-item-height: var(--size-medium);
+  --color-item-gap: var(--size-xxsmall);
+}
+
+.color-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--size-xsmall) 0 var(--size-small);
-  height: var(--size-medium);
+  padding: var(--color-item-padding);
+  height: var(--color-item-height);
 
   .color-item__left-part,
   .color-item__right-part {
@@ -13,12 +19,8 @@
   .color-item__info {
     display: flex;
     align-items: center;
-    gap: 0 var(--size-xxsmall);
+    gap: var(--color-item-gap);
     max-width: 100%;
     white-space: nowrap;
-  }
-
-  .color-item__color {
-    padding: 0 0 0 var(--size-xxsmall);
   }
 }

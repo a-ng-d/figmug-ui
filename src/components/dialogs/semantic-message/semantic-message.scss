@@ -1,34 +1,57 @@
+$id: "semantic-message";
+
+:root {
+  --#{$id}-gap: var(--size-xxxsmall);
+  --#{$id}-padding: var(--size-xxsmall) var(--size-xxsmall) var(--size-xxsmall) 0;
+  --#{$id}-border-radius: var(--border-radius-xlarge);
+  --#{$id}-background-color: var(--figma-color-bg);
+  --#{$id}-background-color-info: var(--figma-color-bg-brand-tertiary);
+  --#{$id}-background-color-error: var(--figma-color-bg-danger-tertiary);
+  --#{$id}-background-color-success: var(--figma-color-bg-success-tertiary);
+  --#{$id}-background-color-warning: var(--figma-color-bg-warning-tertiary);
+  
+  --#{$id}-padding-anchored: var(--size-small) var(--size-xsmall) var(--size-small) 0;
+  --#{$id}-padding-vertical: var(--size-xsmall) var(--size-xxxsmall);
+  --#{$id}-padding-anchored-vertical: var(--size-xsmall) var(--size-xxxsmall);
+}
+
 .semantic-message {
   display: flex;
   justify-content: space-between;
-  gap: var(--size-xxxsmall);
-  border-radius: var(--size-xxsmall);
-  padding: var(--size-xxsmall) 0;
+  gap: var(--#{$id}-gap);
+  border-radius: var(--#{$id}-border-radius);
+  padding: var(--#{$id}-padding);
+  background-color: var(--#{$id}-background-color);
 
   &--info {
-    background-color: var(--figma-color-bg-brand-tertiary);
+    --#{$id}-background-color: var(--#{$id}-background-color-info);
   }
 
   &--error {
-    background-color: var(--figma-color-bg-danger-tertiary);
+    --#{$id}-background-color: var(--#{$id}-background-color-error);
   }
 
   &--success {
-    background-color: var(--figma-color-bg-success-tertiary);
+    --#{$id}-background-color: var(--#{$id}-background-color-success);
   }
 
   &--warning {
-    background-color: var(--figma-color-bg-warning-tertiary);
+    --#{$id}-background-color: var(--#{$id}-background-color-warning);
   }
 
   &--anchored {
     border-radius: 0;
-    padding: var(--size-small) 0;
+    --#{$id}-padding: var(--#{$id}-padding-anchored);
+
+    &.semantic-message--vertical {
+      --#{$id}-padding: var(--#{$id}-padding-anchored-vertical);
+    }
   }
 
   &--vertical {
     flex-direction: column;
     align-items: center;
+    --#{$id}-padding: var(--#{$id}-padding-vertical);
   }
 
   &__body {

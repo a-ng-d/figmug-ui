@@ -1,71 +1,89 @@
-.onboarding-tip.recharged {
+$id: "message";
+
+:root {
+  --#{$id}-padding: 0 calc(var(--size-xsmall) + var(--size-xxxsmall));
+  --#{$id}-gap: var(--size-xxsmall);
+  --#{$id}-text-color: var(--figma-color-text);
+  --#{$id}-icon-color: var(--figma-color-icon);
+
+  --#{$id}-ticker-height: var(--size-medium);
+  --#{$id}-ticker-max-width: 640px;
+  --#{$id}-ticker-gap: var(--size-medium);
+  -#{$id}-ticker-padding: 0 var(--size-xsmall);
+  --#{$id}-ticker-mask-background-color: var(--figma-color-bg);
+  --#{$id}-ticker-mask-width: var(--size-xsmall);
+
+  --#{$id}-text-color-disabled: var(--figma-color-text-disabled);
+  --#{$id}-icon-color-disabled: var(--figma-color-icon-disabled);
+}
+
+.message {
   cursor: default;
-  padding: 0 calc(var(--size-xsmall) + var(--size-xxxsmall));
+  padding: var(--#{$id}-padding);
   user-select: none;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--#{$id}-gap);
+  --icon-picto-color: var(--#{$id}-icon-color);
+  --text-color-primary: var(--#{$id}-text-color);
 
-  &.onboarding-tip--blocked .onboarding-tip__msg {
-    color: var(--figma-color-text-disabled);
-  }
-
-  &.onboarding-tip--blocked .icon {
-    background: var(--figma-color-icon-disabled);
-  }
-
-  .onboarding-tip__msg {
-    color: var(--figma-color-text);
-    line-height: var(--font-line-height);
+  &--blocked{
+    --icon-picto-color: var(--#{$id}-icon-color-disabled);
+    --text-color-primary: var(--#{$id}-text-color-disabled);
   }
 
   /* Tips ticker */
-  .onboarding-tip__ticker {
+  &__ticker {
     display: flex;
     position: relative;
     flex: 1;
     overflow: hidden;
+    height: var(--#{$id}-ticker-height);
+    max-width: var(--#{$id}-ticker-max-width);
   }
 
-  .onboarding-tip__ticker:before,
-  .onboarding-tip__ticker:after {
+  &__ticker:before,
+  &__ticker:after {
     position: absolute;
     z-index: 2;
-    width: var(--size-xsmall);
+    width: var(--#{$id}-ticker-mask-width);
     height: 100%;
     content: '';
   }
 
-  .onboarding-tip__ticker:before {
+  &__ticker:before {
     left: 0;
     background: linear-gradient(
       90deg,
-      var(--figma-color-bg) 0%,
+      var(--#{$id}-ticker-mask-background-color) 0%,
       transparent 100%
     );
   }
 
-  .onboarding-tip__ticker:after {
+  &__ticker:after {
     right: 0;
     background: linear-gradient(
       90deg,
       transparent 0%,
-      var(--figma-color-bg) 100%
+      var(--#{$id}-ticker-mask-background-color) 100%
     );
   }
 
-  .onboarding-tip__tips {
+  &__tips {
     display: inline-flex;
     position: relative;
     align-items: center;
-    gap: 0 var(--size-medium);
-    padding: 0 var(--size-xsmall);
+    gap: var(--#{$id}-ticker-gap);
+    padding: var(--#{$id}-padding);
     width: max-content;
   }
 
-  .onboarding-tip__ticker:hover .onboarding-tip__tips {
+  &__ticker:hover &__tips {
     animation-play-state: paused !important;
   }
 }
 
-.callout .onboarding-tip__msg {
+.callout .message__msg {
   white-space: nowrap;
 }
 

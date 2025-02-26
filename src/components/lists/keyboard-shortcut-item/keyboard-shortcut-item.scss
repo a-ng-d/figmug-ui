@@ -1,31 +1,54 @@
-.keyboard-shortcut-item.recharged {
+$id: "keyboard-shortcut-item";
+
+:root {
+  --#{$id}-padding: 0 var(--size-small);
+  --#{$id}-gap: var(--size-xxsmall);
+  --#{$id}-min-height: var(--size-large);
+  --#{$id}-background-color: var(--figma-color-bg);
+  
+  --#{$id}-key-radius: var(--border-radius-small);
+  --#{$id}-key-padding: 0 var(--size-xxsmall);
+  --#{$id}-key-min-width: var(--size-xxsmall);
+  --#{$id}-key-gap: var(--size-xxxsmall);
+  --#{$id}-key-height: var(--size-small);
+  --#{$id}-key-border-width: var(--size-unit);
+  --#{$id}-key-border-offset: var(--size-neg-unit);
+  --#{$id}-key-border-color: var(--figma-color-border);
+
+  --#{$id}-separator-padding: 0 var(--size-xxxsmall);
+
+}
+
+.keyboard-shortcut-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--size-xxsmall);
-  padding: 0 var(--size-small);
-  min-height: var(--size-large);
+  gap: var(--#{$id}-gap);
+  padding: var(--#{$id}-padding);
+  min-height: var(--#{$id}-min-height);
   user-select: none;
+  background-color: var(--#{$id}-background-color);
 
   .keyboard-shortcut-item__keys {
     display: flex;
     align-items: center;
-    gap: var(--size-xxxsmall);
+    gap: var(--#{$id}-key-gap);
   }
 
   .keyboard-shortcut-item__key {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--figma-color-border);
-    border-radius: var(--border-radius-small);
-    padding: 0 var(--size-xxxsmall);
-    min-width: var(--size-small);
-    height: var(--size-small);
+    outline: var(--#{$id}-key-border-width) solid var(--#{$id}-key-border-color);
+    outline-offset: var(--#{$id}-key-border-offset);
+    border-radius: var(--#{$id}-key-radius);
+    padding: var(--#{$id}-key-padding);
+    min-width: var(--#{$id}-key-min-width);
+    height: var(--#{$id}-key-height);
     white-space: nowrap;
   }
 
   .keyboard-shortcut-item__separator {
-    padding: 0 var(--size-xxxsmall);
+    padding: var(--#{$id}-separator-padding);
   }
 }

@@ -70,15 +70,15 @@ export default class ActionsItem extends React.Component<ActionsItemProps> {
         )}
         <div className="actions-item__content">
           <div>
-            <div className={`${texts.type} type--large`}>
+            <div className={`${texts.type} ${texts['type--large']}`}>
               {name}
               {indicator !== undefined && (
                 <Chip state={indicator.status}>{indicator.label}</Chip>
               )}
             </div>
-            <div className={`${texts.type} type`}>{description}</div>
+            <div className={`${texts.type}`}>{description}</div>
             <div
-              className={`${texts.type} ${texts['type--secondary']} type`}
+              className={`${texts.type} ${texts['type--secondary']}`}
               style={{
                 marginTop: '2px',
               }}

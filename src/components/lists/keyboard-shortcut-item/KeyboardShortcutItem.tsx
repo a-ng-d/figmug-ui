@@ -11,15 +11,15 @@ const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
   const { label, shortcuts = [], separator = '' } = props
 
   return (
-    <li className="keyboard-shortcut-item recharged">
+    <li className="keyboard-shortcut-item">
       <div className="keyboard-shortcut-item__label">
-        <span className={`type ${texts.type}`}>{label}</span>
+        <span className={`${texts.type}`}>{label}</span>
       </div>
       <div className="keyboard-shortcut-item__keys">
         <>
           {shortcuts[0].map((shortcut, index) => (
             <span
-              className={`type keyboard-shortcut-item__key ${texts.type}`}
+              className={`keyboard-shortcut-item__key ${texts.type}`}
               key={index}
             >
               {shortcut}
@@ -28,13 +28,13 @@ const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
           {shortcuts[1] !== undefined && (
             <>
               <span
-                className={`type keyboard-shortcut-item__separator ${texts.type}`}
+                className={`keyboard-shortcut-item__separator ${texts.type}`}
               >
                 {separator}
               </span>
               {shortcuts[1].map((shortcut, index) => (
                 <span
-                  className={`type keyboard-shortcut-item__key ${texts.type}`}
+                  className={`keyboard-shortcut-item__key ${texts.type}`}
                   key={index}
                 >
                   {shortcut}

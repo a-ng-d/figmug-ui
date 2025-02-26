@@ -21,25 +21,16 @@ export default class Message extends React.Component<MessageProps> {
 
     return (
       <div
-        className={[
-          'onboarding-tip',
-          'recharged',
-          isBlocked && 'onboarding-tip--blocked',
-        ]
+        className={['message', isBlocked && 'message--blocked']
           .filter((n) => n)
           .join(' ')}
       >
         <Icon
           type="PICTO"
           iconName={icon}
-          iconColor={
-            isBlocked
-              ? 'var(--figma-color-icon-disabled)'
-              : 'var(--figma-color-icon)'
-          }
           customClassName="icon"
         />
-        <div className="onboarding-tip__msg">{messages[0]}</div>
+        <div className={`${texts.type} message__msg`}>{messages[0]}</div>
       </div>
     )
   }
@@ -49,48 +40,50 @@ export default class Message extends React.Component<MessageProps> {
 
     return (
       <div className="callout">
-        <div>
-          <div className="onboarding-tip recharged">
-            <Icon
-              type="PICTO"
-              iconName={icon}
-              customClassName="icon"
-            />
-            <div className="onboarding-tip__ticker">
-              <div
-                className="onboarding-tip__tips"
-                style={{
-                  animation: `ticker ${
-                    messages.length * 5000
-                  }ms 0ms linear infinite`,
-                }}
-              >
-                {messages.map((message, index) => {
-                  return (
-                    <React.Fragment key={`message-${index}`}>
-                      <div className="onboarding-tip__msg">{message}</div>
-                      <div className={`type ${texts.type}`}>﹒</div>
-                    </React.Fragment>
-                  )
-                })}
-              </div>
-              <div
-                className="onboarding-tip__tips"
-                style={{
-                  animation: `ticker ${
-                    messages.length * 5000
-                  }ms 0ms linear infinite`,
-                }}
-              >
-                {messages.map((message, index) => {
-                  return (
-                    <React.Fragment key={`message-${index}`}>
-                      <div className="onboarding-tip__msg">{message}</div>
-                      <div className={`type ${texts.type}`}>﹒</div>
-                    </React.Fragment>
-                  )
-                })}
-              </div>
+        <div className="message">
+          <Icon
+            type="PICTO"
+            iconName={icon}
+            customClassName="icon"
+          />
+          <div className="message__ticker">
+            <div
+              className="message__tips"
+              style={{
+                animation: `ticker ${
+                  messages.length * 5000
+                }ms 0ms linear infinite`,
+              }}
+            >
+              {messages.map((message, index) => {
+                return (
+                  <React.Fragment key={`message-${index}`}>
+                    <div className={`${texts.type} message__msg`}>
+                      {message}
+                    </div>
+                    <div className={`${texts.type}`}>﹒</div>
+                  </React.Fragment>
+                )
+              })}
+            </div>
+            <div
+              className="message__tips"
+              style={{
+                animation: `ticker ${
+                  messages.length * 5000
+                }ms 0ms linear infinite`,
+              }}
+            >
+              {messages.map((message, index) => {
+                return (
+                  <React.Fragment key={`message-${index}`}>
+                    <div className={`${texts.type} message__msg`}>
+                      {message}
+                    </div>
+                    <div className={`${texts.type}`}>﹒</div>
+                  </React.Fragment>
+                )
+              })}
             </div>
           </div>
         </div>

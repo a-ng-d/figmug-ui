@@ -1,16 +1,23 @@
+:root {
+  --draggable-item-template-rows: var(--size-medium);
+  --draggable-item-template-columns: repeat(76, 1fr);
+  --draggable-item-padding: var(--size-xunit) var(--size-xsmall);
+  --draggable-item-background-color: var(--figma-color-bg);
+
+  --draggable-item-background-color-selected: var(--figma-color-bg-selected);
+  --draggable-item-background-color-pressed: var(--figma-color-bg-pressed);
+}
+
 .draggable-item {
   display: grid;
   position: relative;
-  grid-template-rows: var(--size-medium);
-  grid-template-columns: repeat(76, 1fr);
-  background-color: var(--figma-color-bg);
-  padding: 2px var(--size-xsmall);
+  grid-template-rows: var(--draggable-item-template-rows);
+  grid-template-columns: var(--draggable-item-template-columns);
+  background-color: var(--draggable-item-background-color);
+  padding: var(--draggable-item-padding);
 
-  &[draggable='true'],
-  &[draggable='true'] .input__field,
-  &[draggable='true'] .select-menu__button {
-    background-color: var(--figma-color-bg-selected);
-    --white: var(--figma-color-bg-selected) !important;
+  &[draggable='true'] {
+    --draggable-item-background-color: var(--figma-color-bg-selected);
   }
 
   &--emphasis,

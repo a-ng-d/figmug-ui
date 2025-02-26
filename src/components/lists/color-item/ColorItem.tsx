@@ -17,7 +17,7 @@ const ColorItem = (props: ColorItemProps) => {
 
   return (
     <li
-      className="color-item recharged"
+      className="color-item"
       data-id={id}
     >
       <div className="color-item__left-part">
@@ -26,10 +26,10 @@ const ColorItem = (props: ColorItemProps) => {
             color={hex}
             isRounded
           />
-          <div className={`type ${texts.type} ${texts['type--truncated']}`}>
+          <div className={`${texts.type} ${texts['type--truncated']}`}>
             {name}
           </div>
-          <div className={`type ${texts.type} ${texts['type--secondary']}`}>
+          <div className={`${texts.type} ${texts['type--secondary']}`}>
             {hex}
           </div>
         </div>

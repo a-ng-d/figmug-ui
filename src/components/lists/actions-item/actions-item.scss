@@ -1,41 +1,72 @@
+:root {
+  /* Base */
+  --actions-item-gap: var(--size-xsmall);
+  --actions-item-padding: var(--size-xsmall) var(--size-xsmall) var(--size-xsmall)
+  var(--size-small);
+  --actions-item-border-color: var(--figma-color-border-disabled);
+  --actions-item-border-width: var(--size-unit);
+  --actions-item-background-color: var(--figma-color-bg);
+  --actions-item-border-secondary-width: 0;
+  --actions-item-border-secondary-offset: 0;
+  --actions-item-border-secondary-color: transparent;
+
+  --actions-item-asset-min-width: var(--size-xxxlarge);
+  --actions-item-asset-height: var(--size-xxxlarge);
+
+  --actions-item-content-gap: var(--size-xxsmall);
+  --actions-item-actions-gap: var(--size-xxsmall);
+
+  /* States */
+  --actions-item-background-color-hover: var(--figma-color-bg-hover);
+  
+  --actions-item-border-secondary-width-focus: var(--size-xunit);
+  --actions-item-border-secondary-offset-focus: var(--size-neg-xunit);
+  --actions-item-border-secondary-color-focus: var(--figma-color-border-selected);
+}
+
 li.actions-item {
   display: flex;
   align-items: center;
-  gap: 0 var(--size-xsmall);
-  border-bottom: 1px solid var(--figma-color-border-disabled);
-  padding: var(--size-xsmall) var(--size-xsmall) var(--size-xsmall)
-    var(--size-small);
+  gap: var(--actions-item-gap);
+  border-bottom: var(--actions-item-border-width) solid var(--actions-item-border-color);
+  padding: var(--actions-item-padding);
   user-select: none;
+  background-color: var(--actions-item-background-color);
+  outline: var(--actions-item-border-secondary-width) solid var(--actions-item-border-secondary-color);
+  outline-offset: var(--actions-item-border-secondary-offset);
 
   &:last-child {
     border-bottom: none;
   }
 
-  &--interactive:hover {
-    background-color: var(--figma-color-bg-hover);
-  }
+  &--interactive{
+    &:hover {
+      --actions-item-background-color: var(--figma-color-bg-hover);
+    }
 
-  &-interactive:focus {
-    outline: 2px solid var(--figma-color-border-selected);
-    outline-offset: -2px;
+    &:focus {
+      --actions-item-border-secondary-width: var(--actions-item-border-secondary-width-focus);
+      --actions-item-border-secondary-offset: var(--actions-item-border-secondary-offset-focus);
+      --actions-item-border-secondary-color: var(--actions-item-border-secondary-color-focus);
+    }
   }
 
   .actions-item__asset {
     width: 100px;
-    min-width: var(--size-xxxlarge);
-    height: var(--size-xxxlarge);
+    min-width: var(--actions-item-asset-min-width);
+    height: var(--actions-item-asset-height);
   }
 
   .actions-item__content {
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: var(--size-xxsmall) 0;
+    gap: var(--actions-item-content-gap);
   }
 
   .actions-item__actions {
     display: flex;
     align-items: center;
-    gap: var(--size-xxsmall);
+    gap: var(--actions-item-actions-gap);
   }
 }
