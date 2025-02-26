@@ -12,9 +12,9 @@
   --input-padding-color-picker: var(--size-medium);
   --input-right-clearable: var(--size-xxxsmall);
   --input-background-color: var(--figma-color-bg);
-  --input-border-width: var(--size-unit);
-  --input-border-offset: var(--size-neg-unit);
-  --input-border-color: var(--figma-color-border);
+  --input-border-width: 0;
+  --input-border-offset: 0;
+  --input-border-color: transparent;
   --input-text-font-family: var(--font-stack);
   --input-text-font-size: var(--font-size-xsmall);
   --input-text-font-weight: var(--font-weight-normal);
@@ -443,6 +443,10 @@
   line-height: var(--input-text-line-height);
   font-family: var(--input-text-font-family);
   letter-spacing: var(--input-text-letterspacing);
+
+  --input-border-width: var(--input-border-width-hover);
+  --input-border-offset: var(--input-border-offset-hover);
+  --input-border-color: var(--input-border-color-hover);
 
   &--monospace {
     font-family: monospace;
