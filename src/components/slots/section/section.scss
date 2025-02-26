@@ -1,22 +1,36 @@
+$id: "section";
+
+:root {
+  --#{id}-gap: var(--size-xxxsmall);
+  --#{id}-padding: var(--size-xxsmall) 0;
+  --#{id}-background-color: var(--figma-color-bg);
+
+  --#{id}-child-padding: 0 var(--size-xsmall);
+  --#{id}-child-padding-large: 0 var(--size-small);
+  --#{id}-child-padding-tight: 0 var(--size-xxsmall);
+  --#{id}-child-padding-none: 0;
+}
+
 .section {
   display: flex;
   flex-direction: column;
-  gap: var(--size-xxxsmall);
-  padding: var(--size-xxsmall) 0;
+  gap: var(--#{id}-gap);
+  padding: var(--#{id}-padding);
+  background-color: var(--#{id}-background-color);
 
   &__child {
-    padding: 0 var(--size-xsmall);
+    padding: var(--#{id}-child-padding);
 
     &--large {
-      padding: 0 var(--size-small);
+      padding: var(--#{id}-child-padding-large);
     }
 
     &--tight {
-      padding: 0 var(--size-xxsmall);
+      padding: var(--#{id}-child-padding-tight);
     }
 
     &--none {
-      padding: 0;
+      padding: var(--#{id}-child-padding-none);
     }
   }
 }

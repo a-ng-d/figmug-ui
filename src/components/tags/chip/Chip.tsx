@@ -15,7 +15,6 @@ const Chip = (props: ChipProps) => {
     <div
       className={[
         'chip',
-        'recharged',
         state === 'INACTIVE' && 'chip--inactive',
         state === 'ON_BACKGROUND' && 'chip--on-background',
       ]
@@ -27,7 +26,7 @@ const Chip = (props: ChipProps) => {
         <div className="chip__left-slot">{props.leftSlot}</div>
       )}
       <div
-        className={['chip__text', texts.type, texts['type--truncated'], 'type']
+        className={['chip__text', texts.type, texts['type--truncated']]
           .filter((n) => n)
           .join(' ')}
       >

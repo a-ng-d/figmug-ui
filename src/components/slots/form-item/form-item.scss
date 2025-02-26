@@ -1,15 +1,35 @@
-.form-item.recharged {
-  display: flex;
-  position: relative;
-  align-items: baseline;
-  gap: var(--size-xxsmall);
-  cursor: default;
-  padding: 0 0 0 var(--size-xxsmall);
-  user-select: none;
+$id: "form-item";
 
-  &.form-item--fill {
+:root {
+  --#{id}-gap: var(--size-xxsmall);
+  --#{id}-padding: 0 0 0 var(--size-xxsmall);
+  --#{id}-text-color: var(--figma-color-text);
+  --#{id}-label-width: 96px;
+  --#{id}-helper-padding: 0;
+
+  --#{id}-text-color-disabled: var(--figma-color-text-disabled);
+  --#{id}-icon-color-disabled: var(--figma-color-icon-disabled);
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  --text-color-primary: var(--#{id}-text-color);
+  --message-padding: var(--#{id}-helper-padding);
+
+  &__row {
+    display: flex;
+    position: relative;
+    align-items: baseline;
+    gap: var(--#{id}-gap);
+    cursor: default;
+    padding: var(--#{id}-padding);
+    user-select: none;
+  }
+
+  &--fill {
     label {
-      flex: 0 1 96px;
+      flex: 0 1 var(--#{id}-label-width);
     }
 
     .form-item__input {
@@ -22,15 +42,10 @@
     }
   }
 
-  .form-item__helper .onboarding-tip {
-    padding: 0;
-  }
-
-  &.form-item--blocked {
+  &--blocked {
     pointer-events: none;
-  }
-
-  &.form-item--blocked label {
-    color: var(--figma-color-text-disabled);
+    --text-color-primary: var(--#{id}-text-color-disabled);
+    --message-text-color: var(--#{id}-text-color-disabled);
+    --message-icon-color: var(--#{id}-text-color-disabled);
   }
 }

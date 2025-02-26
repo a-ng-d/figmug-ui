@@ -28,20 +28,19 @@ const FormItem = (props: FormItemProps) => {
   } = props
 
   return (
-    <>
-      <div
-        className={[
-          'form-item',
-          'recharged',
-          shouldFill && 'form-item--fill',
-          isBlocked && 'form-item--blocked',
-        ]
-          .filter((n) => n)
-          .join(' ')}
-      >
+    <div
+      className={[
+        'form-item',
+        shouldFill && 'form-item--fill',
+        isBlocked && 'form-item--blocked',
+      ]
+        .filter((n) => n)
+        .join(' ')}
+    >
+      <div className="form-item__row">
         {label !== undefined && (
           <label
-            className={`type ${texts.type}`}
+            className={`${texts.type}`}
             htmlFor={id}
           >
             {label}
@@ -58,7 +57,7 @@ const FormItem = (props: FormItemProps) => {
           />
         </div>
       )}
-    </>
+    </div>
   )
 }
 

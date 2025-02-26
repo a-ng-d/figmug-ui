@@ -1,6 +1,14 @@
+$id: "list";
+
+:root {
+  --#{id}-background-color: var(--figma-color-bg);
+  --#{id}-padding: var(--size-unit) 0;
+}
+
 .list {
-  padding: 1px 0;
+  padding: var(--#{id}-padding);
   overflow-y: auto;
+  background-color: var(--#{id}-background-color);
 
   &--loading,
   &--message {

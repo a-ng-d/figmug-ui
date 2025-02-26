@@ -53,7 +53,7 @@
   --select-toggle-knob-radius: var(--border-radius-full);
   --select-toggle-knob-outline: none;
   --select-toggle-knob-left: 23px;
-  --select-toggle-knob-background: var(--figma-color-icon);
+  --select-toggle-knob-background: var(--grey-0);
   --select-toggle-knob-transform: translateX(0) translateY(-50%);
 
   --select-toggle-background-checked: var(--figma-color-bg-selected-strong);
@@ -224,7 +224,6 @@
     &:after {
       display: block;
       position: absolute;
-      top: var(--select-toggle-knob-top);
       top: 50%;
       left: var(--select-toggle-knob-left);
       transform: var(--select-toggle-knob-transform);

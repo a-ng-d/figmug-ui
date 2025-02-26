@@ -26,6 +26,7 @@ export const TextInputItem: Story = {
     isNew: false,
     children: (
       <Input
+        id="text-input-item"
         type="TEXT"
         value="Jean-Michel Avous"
       />

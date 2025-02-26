@@ -1,39 +1,52 @@
-.chip.recharged {
+$id: "chip";
+
+:root {
+  --#{$id}-gap: var(--size-xxxsmall);
+  --#{$id}-padding: 0 var(--size-xxxsmall);
+  --#{$id}-height: var(--size-xsmall);
+  --#{$id}-margin: 0 0 0 var(--size-xxsmall);
+  --#{$id}-radius: var(--border-radius-small);
+  --#{$id}-text-color: var(--figma-color-text-brand);
+  --#{$id}-text-weight: var(--font-weight-medium);
+  --#{$id}-background-color: var(--figma-color-bg-selected-secondary);
+
+  --#{$id}-background-color-inactive: var(--figma-color-bg-tertiary);
+  --#{$id}-text-color-inactive: var(--figma-color-text);
+
+  --#{$id}-background-color-on-background: rgba(255, 255, 255, 0.4);
+  --#{$id}-text-color-on-background: var(--grey-1000);
+  --#{$id}-text-weight-on-background: var(--font-weight-normal);
+}
+
+.chip {
   display: inline-flex;
   align-items: center;
-  gap: var(--size-xxxsmall);
+  gap: var(--#{$id}-gap);
   cursor: default;
-  margin: 0 0 0 var(--size-xxsmall);
-  border-radius: var(--border-radius-small);
-  background-color: var(--figma-color-bg-selected-secondary);
-  padding: 0 var(--size-xxxsmall);
+  margin: var(--#{$id}-margin);
+  border-radius: var(--#{$id}-radius);
+  background-color: var(--#{$id}-background-color);
+  padding: var(--#{$id}-padding);
   max-width: 100%;
-  min-height: var(--size-xsmall);
-  max-height: var(--size-xsmall);
+  height: var(--#{$id}-height);
   overflow: hidden;
   user-select: none;
 
   .chip__text {
-    color: var(--figma-color-text-brand);
-    font-weight: 500;
+    color: var(--#{$id}-text-color);
+    font-weight: var(--#{$id}-text-weight);
     text-wrap: nowrap;
   }
 
   &.chip--inactive {
-    background-color: var(--figma-color-bg-tertiary);
-
-    .chip__text {
-      color: var(--figma-color-text);
-    }
+    --#{$id}-background-color: var(--#{$id}-background-color-inactive);
+    --#{$id}-text-color: var(--#{$id}-text-color-inactive);
   }
 
   &.chip--on-background {
     margin: 0;
-    background-color: var(--white4);
-
-    .chip__text {
-      color: var(--black);
-      font-weight: 400;
-    }
+    --#{$id}-background-color: var(--#{$id}-background-color-on-background);
+    --#{$id}-text-color: var(--#{$id}-text-color-on-background);
+    --#{$id}-text-weight: var(--#{$id}-text-weight-on-background);
   }
 }

@@ -58,7 +58,7 @@ export const Score: Story = {
     rightSlot: (
       <div
         style={{
-          fontSize: '12px',
+          fontSize: '11px',
         }}
       >
         ✔︎
