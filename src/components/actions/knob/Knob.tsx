@@ -177,7 +177,9 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
         }
       >
         {(isDisplayed || isTooltipOpen) && (
-          <div className={`type ${texts.type} type--inverse knob__tooltip`}>
+          <div
+            className={`${texts.type} ${texts['type--inverse']} knob__tooltip`}
+          >
             {this.transformStopValue(value)}
           </div>
         )}
@@ -206,7 +208,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
             />
           </div>
         )}
-        <div className={`type ${texts.type} knob__label`}>
+        <div className={`${texts.type} knob__label`}>
           {shortId}
           {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>

@@ -1,3 +1,61 @@
+$id: "knob";
+
+:root {
+  /* Base */
+  --#{$id}-min-width: var(--size-medium);
+  --#{$id}-height: var(--size-xxlarge);
+
+  --#{$id}-label-height: var(--size-small);
+  --#{$id}-label-padding: var(--size-xxxsmall);
+  --#{$id}-label-radius: var(--border-radius-small);
+  --#{$id}-label-background-color: var(--figma-color-bg);
+  --#{$id}-label-border-color: var(--figma-color-border-disabled-strong);
+  --#{$id}-label-border-width: var(--size-unit);
+  --#{$id}-label-text-color: var(--figma-color-text);
+
+  --#{$id}-label-arrow-stroke-inset: auto auto calc(var(--size-xxxsmall) * -2) calc(50% - var(--size-xxxsmall));
+  --#{$id}-label-arrow-stroke-width: var(--size-xxxsmall);
+  --#{$id}-label-arrow-fill-inset: auto auto -6px calc(50% - 3px);
+  --#{$id}-label-arrow-fill-width: 3px;
+
+  --#{$id}-tooltip-top: calc(var(--size-xsmall) * -1);
+  --#{$id}-tooltip-padding: var(--size-xxxsmall);
+  --#{$id}-tooltip-min-width: var(--size-small);
+  --#{$id}-tooltip-radius: 0;
+  --#{$id}-tooltip-background-color: var(--figma-color-bg-inverse);
+  --#{$id}-tooltip-text-color: var(--figma-color-text-oninverse);
+
+  --#{$id}-tooltip-arrow-inset: auto auto -8px calc(50% - var(--size-xxxsmall));
+  --#{$id}-tooltip-arrow-width: var(--size-xxxsmall);
+
+  --#{$id}-graduation-width: var(--size-unit);
+  --#{$id}-graduation-height: var(--size-xxxsmall);
+  --#{$id}-graduation-background-color: var(--figma-color-border-disabled-strong);
+
+  --#{$id}-input-top: calc(var(--size-xxsmall) * -1);
+  --#{$id}-input-shadow: var(--shadow-floating-window);
+  --#{$id}-input-border-color: var(--figma-color-border);
+  --#{$id}-input-border-width: 1px;
+  --#{$id}-input-border-offset: -1px;
+  --#{$id}-input-border-radius: var(--border-radius-med);
+  --#{$id}-input-background-color: var(--figma-color-bg);
+  --#{$id}-input-padding: var(--size-xunit);
+  --#{$id}-input-width: var(--size-xxlarge);
+
+  /* State */
+  --#{$id}-label-background-color-hover: var(--figma-color-bg-hover);
+  
+  --#{$id}-label-border-color-focus: var(--figma-color-border-selected);
+  --#{$id}-label-border-width-focus: var(--size-xunit);
+  --#{$id}-label-background-color-focus: var(--figma-color-bg-selected);
+  --#{$id}-label-arrow-stroke-inset-focus: auto auto -12px calc(50% - 6px);
+  --#{$id}-label-arrow-stroke-width-focus: 6px;
+
+  --#{$id}-label-background-color-disabled: var(--figma-color-bg-disabled);
+  --#{$id}-label-border-color-disabled: var(--figma-color-border-disabled);
+  --#{$id}-label-text-color-disabled: var(--figma-color-text-ondisabled);
+}
+
 .knob {
   display: flex;
   position: absolute;
@@ -8,11 +66,19 @@
   z-index: 1;
   cursor: ew-resize;
   background: transparent;
-  min-width: var(--size-medium);
-  height: var(--size-xxlarge);
+  min-width: var(--#{$id}-min-width);
+  height: var(--#{$id}-height);
 
-  &:hover .knob__label {
-    background: var(--figma-color-bg-hover);
+  &:hover {
+    --#{$id}-label-background-color: var(--#{$id}-label-background-color-hover);
+  }
+
+  &:focus, &--selected, &:active {
+    --#{$id}-label-background-color: var(--#{$id}-label-background-color-focus);
+    --#{$id}-label-border-color: var(--#{$id}-label-border-color-focus);
+    --#{$id}-label-border-width: var(--#{$id}-label-border-width-focus);
+    --#{$id}-label-arrow-stroke-inset: var(--#{$id}-label-arrow-stroke-inset-focus);
+    --#{$id}-label-arrow-stroke-width: var(--#{$id}-label-arrow-stroke-width-focus);
   }
 
   &:focus,
@@ -22,68 +88,36 @@
     outline: none;
   }
 
-  &:active .knob__label,
-  &:focus .knob__label,
-  &--selected .knob__label {
-    box-shadow: 0 0 0 2px var(--figma-color-border-selected);
-  }
-
-  &:active .knob__label:before,
-  &:focus .knob__label:before,
-  &--selected .knob__label:before {
-    bottom: -12px;
-    left: calc(50% - 6px);
-    border-width: 6px;
-    border-top-color: var(--figma-color-border-selected);
-  }
-
-  &:hover .knob__label:after,
-  &:active .knob__label:after,
-  &:hover .knob__label:after,
-  &--selected .knob__label:after {
-    border-top-color: var(--figma-color-bg-hover);
-  }
-
   &--disabled {
     pointer-events: none;
-
-    .knob__label {
-      box-shadow: 0 0 0 1px var(--figma-color-border-disabled);
-      background: var(--figma-color-bg-disabled);
-      color: var(--figma-color-text-ondisabled);
-    }
-
-    .knob__label:before {
-      border-top-color: var(--figma-color-border-disabled);
-    }
-
-    .knob__label:after {
-      border-top-color: var(--figma-color-bg-disabled);
-    }
+    --#{$id}-label-background-color: var(--#{$id}-label-background-color-disabled);
+    --#{$id}-label-border-color: var(--#{$id}-label-border-color-disabled);
+    --#{$id}-label-text-color: var(--#{$id}-label-border-color-disabled);
   }
 }
 
 .knob__label {
+  box-sizing: border-box;
   display: flex;
   position: relative;
   justify-content: center;
-  box-shadow: 0 0 0 1px var(--figma-color-border-disabled-strong);
-  border-radius: var(--border-radius-small);
-  background: var(--figma-color-bg);
-  padding: var(--size-xxxsmall);
+  box-shadow: 0 0 0 var(--#{$id}-label-border-width) var(--#{$id}-label-border-color);
+  border-radius: var(--#{$id}-label-radius);
+  background: var(--#{$id}-label-background-color);
+  padding: var(--#{$id}-label-padding);
   width: 100%;
-  height: var(--size-small);
+  height: var(--#{$id}-label-height);
   pointer-events: none;
   user-select: none;
   text-align: center;
+  --text-color-primary: var(--#{$id}-label-text-color);
 
   &:before {
     position: absolute;
-    bottom: calc(var(--size-xxxsmall) * -2);
-    left: calc(50% - var(--size-xxxsmall));
-    border-width: var(--size-xxxsmall);
+    inset: var(--#{$id}-label-arrow-stroke-inset);
+    border-width: var(--#{$id}-label-arrow-stroke-width);
     border-style: solid;
-    border-top-color: var(--figma-color-border-disabled-strong);
+    border-top-color: var(--#{$id}-label-border-color);
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
@@ -94,11 +128,10 @@
 
   &:after {
     position: absolute;
-    bottom: -6px;
-    left: calc(50% - 3px);
-    border-width: 3px;
+    inset: var(--#{$id}-label-arrow-fill-inset);
+    border-width: var(--#{$id}-label-arrow-fill-width);
     border-style: solid;
-    border-top-color: var(--figma-color-bg);
+    border-top-color: var(--#{$id}-label-background-color);
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
@@ -107,25 +140,26 @@
     content: '';
   }
 }
+
 .knob__tooltip {
   position: absolute;
-  top: calc(var(--size-xsmall) * -1);
+  top: var(--#{$id}-tooltip-top);
   left: 50%;
   transform: translateX(-50%) translateY(-100%);
-  background: var(--figma-color-bg-inverse);
-  padding: var(--size-xxxsmall);
-  min-width: var(--size-medium);
-  color: var(--figma-color-text-oninverse);
+  background-color: var(--#{$id}-tooltip-background-color);
+  padding: var(--#{$id}-tooltip-padding);
+  min-width: var(--#{$id}-tooltip-min-width);
+  color: var(--#{$id}-tooltip-text-color);
+  border-radius: var(--#{$id}-tooltip-radius);
   user-select: none;
   text-align: center;
 
   &:after {
     position: absolute;
-    bottom: -8px;
-    left: calc(50% - var(--size-xxxsmall));
-    border-width: var(--size-xxxsmall);
+    inset: var(--#{$id}-tooltip-arrow-inset);
+    border-width: var(--#{$id}-tooltip-arrow-width);
     border-style: solid;
-    border-top-color: var(--figma-color-bg-inverse);
+    border-top-color: var(--#{$id}-tooltip-background-color);
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
@@ -136,22 +170,23 @@
 }
 
 .knob__graduation {
-  background: var(--figma-color-border-disabled-strong);
-  width: 1px;
-  height: var(--size-xxxsmall);
+  background: var(--#{$id}-graduation-background-color);
+  width: var(--#{$id}-graduation-width);
+  height: var(--#{$id}-graduation-height);
   pointer-events: none;
 }
 
 .knob__input {
   position: absolute;
-  top: calc(var(--size-xxsmall) * -1);
+  top: var(--#{$id}-input-top);
   left: 50%;
   transform: translateX(-50%) translateY(-100%);
   z-index: 2;
-  box-shadow: var(--shadow-floating-window);
-  border: 1px solid var(--figma-color-border);
-  border-radius: var(--border-radius-med);
-  background-color: var(--figma-color-bg);
-  padding: 1px 2px;
-  width: var(--size-xxlarge);
+  box-shadow: var(--#{$id}-input-shadow);
+  outline: var(--#{$id}-input-border-width) solid var(--#{$id}-input-border-color);
+  outline-offset: var(--#{$id}-input-border-offset);
+  border-radius: var(--#{$id}-input-border-radius);
+  background-color: var(--#{$id}-input-background-color);
+  padding: var(--#{$id}-input-padding);
+  width: var(--#{$id}-input-width);
 }
