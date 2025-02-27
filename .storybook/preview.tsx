@@ -64,7 +64,6 @@ const preview: Preview = {
     (Story, context) => {
       useEffect(() => {
         const background = context.globals.backgrounds?.value
-        console.log('background', context.globals.backgrounds)
         let mode = 'figma-dark'
 
         if (background === '#fffffe') {
