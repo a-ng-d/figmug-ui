@@ -53,14 +53,39 @@
   /* Shadows */
   --shadow-hud: 0 5px 17px rgba(0, 0, 0, 0.2), 0 2px 7px rgba(0, 0, 0, 0.15);
   --shadow-floating-window: 0 2px 14px rgba(0, 0, 0, 0.15);
-  --elevation-100-canvas: 0px 0px .5px rgba(0, 0, 0, .5), 0px 1px 3px rgba(0, 0, 0, .4), inset 0px 1px 0px rgba(255, 255, 255, .1), inset 0px 0px 1px rgba(255, 255, 255, .3);
-  --elevation-100-canvas-drop-shadow: drop-shadow(0px 0px .5px rgba(0, 0, 0, .5)) drop-shadow(0px 1px 3px rgba(0, 0, 0, .4)) drop-shadow(inset 0px 1px 0px rgba(255, 255, 255, .1)) drop-shadow(inset 0px 0px 1px rgba(255, 255, 255, .3));
-  --elevation-200-canvas: 0px 3px 8px rgba(0, 0, 0, .35), 0px 1px 3px rgba(0, 0, 0, .5), inset 0px 1px 0px rgba(255, 255, 255, .08), inset 0px 0px 1px rgba(255, 255, 255, .3);
-  --elevation-200-canvas-drop-shadow: drop-shadow(0px 1px 3px rgba(0, 0, 0, .5)) drop-shadow(inset 0px 0px .5px rgba(255, 255, 255, .3)) drop-shadow(0px 3px 8px rgba(0, 0, 0, .35)) drop-shadow(inset 0px 1px 0px rgba(255, 255, 255, .08));
-  --elevation-300-tooltip: 0px 5px 12px rgba(0, 0, 0, .35), 0px 1px 3px rgba(0, 0, 0, .5), inset 0px 1px 0px rgba(255, 255, 255, .08), inset 0px 0px 1px rgba(255, 255, 255, .3);
-  --elevation-300-tooltip-drop-shadow: drop-shadow(0px 1px 3px rgba(0, 0, 0, .5)) drop-shadow(inset 0px 0px .5px rgba(255, 255, 255, .3)) drop-shadow(0px 5px 12px rgba(0, 0, 0, .35)) drop-shadow(inset 0px 1px 0px rgba(255, 255, 255, .08));
-  --elevation-400-menu-panel: 0px 10px 16px rgba(0, 0, 0, .35), 0px 2px 5px rgba(0, 0, 0, .35), inset 0px 1px 0px rgba(255, 255, 255, .08), inset 0px 0px 1px rgba(255, 255, 255, .35);
-  --elevation-500-modal-window: 0px 10px 24px rgba(0, 0, 0, .45), 0px 3px 5px rgba(0, 0, 0, .35), inset 0px 1px 0px rgba(255, 255, 255, .08), inset 0px 0px 1px rgba(255, 255, 255, .35);
+  --elevation-100-canvas: 0px 0px 0.5px rgba(0, 0, 0, 0.5),
+    0px 1px 3px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.1),
+    inset 0px 0px 1px rgba(255, 255, 255, 0.3);
+  --elevation-100-canvas-drop-shadow: drop-shadow(
+      0px 0px 0.5px rgba(0, 0, 0, 0.5)
+    )
+    drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.4))
+    drop-shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.1))
+    drop-shadow(inset 0px 0px 1px rgba(255, 255, 255, 0.3));
+  --elevation-200-canvas: 0px 3px 8px rgba(0, 0, 0, 0.35),
+    0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.08),
+    inset 0px 0px 1px rgba(255, 255, 255, 0.3);
+  --elevation-200-canvas-drop-shadow: drop-shadow(
+      0px 1px 3px rgba(0, 0, 0, 0.5)
+    )
+    drop-shadow(inset 0px 0px 0.5px rgba(255, 255, 255, 0.3))
+    drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.35))
+    drop-shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.08));
+  --elevation-300-tooltip: 0px 5px 12px rgba(0, 0, 0, 0.35),
+    0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.08),
+    inset 0px 0px 1px rgba(255, 255, 255, 0.3);
+  --elevation-300-tooltip-drop-shadow: drop-shadow(
+      0px 1px 3px rgba(0, 0, 0, 0.5)
+    )
+    drop-shadow(inset 0px 0px 0.5px rgba(255, 255, 255, 0.3))
+    drop-shadow(0px 5px 12px rgba(0, 0, 0, 0.35))
+    drop-shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.08));
+  --elevation-400-menu-panel: 0px 10px 16px rgba(0, 0, 0, 0.35),
+    0px 2px 5px rgba(0, 0, 0, 0.35), inset 0px 1px 0px rgba(255, 255, 255, 0.08),
+    inset 0px 0px 1px rgba(255, 255, 255, 0.35);
+  --elevation-500-modal-window: 0px 10px 24px rgba(0, 0, 0, 0.45),
+    0px 3px 5px rgba(0, 0, 0, 0.35), inset 0px 1px 0px rgba(255, 255, 255, 0.08),
+    inset 0px 0px 1px rgba(255, 255, 255, 0.35);
 
   /* Sizing */
   --size-neg-xxxlarge: -80px;

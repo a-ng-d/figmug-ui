@@ -20,12 +20,12 @@
 
   .popin__header {
     display: flex;
-    height: var(--popin-header-height);
     justify-content: space-between;
     align-items: center;
     gap: var(--popin-header-gap);
     border-bottom: var(--popin-header-border);
     padding: var(--popin-header-padding);
+    height: var(--popin-header-height);
   }
 
   .popin__title {

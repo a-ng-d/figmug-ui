@@ -327,16 +327,24 @@
   --icon-button-icon-color-disabled: var(--figma-color-icon-disabled);
 
   --icon-button-notification-background-color: var(--figma-color-bg-brand);
-  --icon-button-notification-background-color-hover: var(--figma-color-bg-brand);
-  --icon-button-notification-background-color-pressed: var(--figma-color-bg-brand);
-  --icon-button-notification-background-color-focus: var(--figma-color-bg-brand);
+  --icon-button-notification-background-color-hover: var(
+    --figma-color-bg-brand
+  );
+  --icon-button-notification-background-color-pressed: var(
+    --figma-color-bg-brand
+  );
+  --icon-button-notification-background-color-focus: var(
+    --figma-color-bg-brand
+  );
   --icon-button-notification-background-color-disabled: var(
     --figma-color-bg-brand-secondary
   );
 
   --icon-button-notification-border-color: var(--figma-color-bg);
   --icon-button-notification-border-color-hover: var(--figma-color-bg-hover);
-  --icon-button-notification-border-color-pressed: var(--figma-color-bg-pressed);
+  --icon-button-notification-border-color-pressed: var(
+    --figma-color-bg-pressed
+  );
   --icon-button-notification-border-color-focus: var(--figma-color-bg);
   --icon-button-notification-border-color-disabled: var(--figma-color-bg);
 
@@ -397,9 +405,19 @@
     --figma-color-bg-brand-secondary
   );
 
-  --icon-button-notification-border-color-selected: var(--figma-color-bg-selected);
-  --icon-button-notification-border-color-selected-hover: var(--figma-color-bg-selected-hover);
-  --icon-button-notification-border-color-selected-pressed: var(--figma-color-bg-selected-pressed);
-  --icon-button-notification-border-color-selected-focus: var(--figma-color-bg-selected);
-  --icon-button-notification-border-color-selected-disabled: var(--figma-color-bg-brand-tertiary);
+  --icon-button-notification-border-color-selected: var(
+    --figma-color-bg-selected
+  );
+  --icon-button-notification-border-color-selected-hover: var(
+    --figma-color-bg-selected-hover
+  );
+  --icon-button-notification-border-color-selected-pressed: var(
+    --figma-color-bg-selected-pressed
+  );
+  --icon-button-notification-border-color-selected-focus: var(
+    --figma-color-bg-selected
+  );
+  --icon-button-notification-border-color-selected-disabled: var(
+    --figma-color-bg-brand-tertiary
+  );
 }

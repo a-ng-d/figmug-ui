@@ -11,9 +11,9 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
+    border-radius: var(--actions-list-spot-radius);
     background-color: var(--actions-list-spot-background-color);
     height: var(--actions-list-spot-height);
-    border-radius: var(--actions-list-spot-radius);
     --icon-picto-color: var(--actions-list-spot-icon-color);
 
     &--top {
@@ -38,14 +38,14 @@
     outline: var(--actions-list-border-width) solid
       var(--actions-list-border-color);
     outline-offset: var(--actions-list-border-offset);
+    box-shadow: var(--actions-list-shadow);
+    border-radius: var(--actions-list-radius);
     background-color: var(--actions-list-background-color);
     padding: var(--actions-list-padding);
     width: 100%;
     min-width: var(--actions-list-min-width);
     overflow: visible;
     user-select: none;
-    box-shadow: var(--actions-list-shadow);
-    border-radius: var(--actions-list-radius);
 
     &--scrolling {
       z-index: 1;
@@ -79,11 +79,11 @@
     --text-color-primary: var(--actions-list-item-text-color);
 
     &:after {
-      content: '';
       position: absolute;
       inset: 0 var(--actions-list-patch-right) 0 auto;
-      width: var(--actions-list-patch-width);
       background-color: transparent;
+      width: var(--actions-list-patch-width);
+      content: '';
     }
 
     &__tick {

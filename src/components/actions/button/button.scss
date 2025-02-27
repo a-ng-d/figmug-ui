@@ -402,14 +402,13 @@
     position: absolute;
     top: var(--icon-button-notification-top);
     right: var(--icon-button-notification-right);
+    outline: var(--icon-button-notification-border-width) solid
+      var(--icon-button-notification-border-color);
+    outline-offset: var(--icon-button-notification-border-offset);
     border-radius: var(--icon-button-notification-radius);
     background-color: var(--icon-button-notification-background-color);
     width: var(--icon-button-notification-width);
     height: var(--icon-button-notification-height);
-    outline: var(--icon-button-notification-border-width) solid var(
-      --icon-button-notification-border-color
-    );
-    outline-offset: var(--icon-button-notification-border-offset);
     content: '';
   }
 

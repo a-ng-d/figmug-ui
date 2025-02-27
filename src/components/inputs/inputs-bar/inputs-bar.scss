@@ -16,8 +16,8 @@
   .inputs__bar {
     display: flex;
     position: relative;
-    padding: var(--inputs-bar-padding);
     border-radius: var(--inputs-bar-radius);
+    padding: var(--inputs-bar-padding);
     overflow: hidden;
     --input-number-width: var(--inputs-bar-width);
     --input-color-width: var(--inputs-bar-width);

@@ -341,17 +341,25 @@
 
   --icon-button-notification-border-color: var(--figma-color-bg);
   --icon-button-notification-border-color-hover: var(--figma-color-bg-hover);
-  --icon-button-notification-border-color-pressed: var(--figma-color-bg-pressed);
-  --icon-button-notification-border-color-focus: var(--figma-color-bg);
-  --icon-button-notification-border-color-disabled: var(
-    --figma-color-bg
+  --icon-button-notification-border-color-pressed: var(
+    --figma-color-bg-pressed
   );
+  --icon-button-notification-border-color-focus: var(--figma-color-bg);
+  --icon-button-notification-border-color-disabled: var(--figma-color-bg);
 
   /* Icon Button - Selected */
-  --icon-button-background-color-selected: var(--figma-color-bg-selected-strong);
-  --icon-button-background-color-selected-hover: var(--figma-color-bg-selected-strong);
-  --icon-button-background-color-selected-pressed: var(--figma-color-bg-selected-strong);
-  --icon-button-background-color-selected-focus: var(--figma-color-bg-selected-strong);
+  --icon-button-background-color-selected: var(
+    --figma-color-bg-selected-strong
+  );
+  --icon-button-background-color-selected-hover: var(
+    --figma-color-bg-selected-strong
+  );
+  --icon-button-background-color-selected-pressed: var(
+    --figma-color-bg-selected-strong
+  );
+  --icon-button-background-color-selected-focus: var(
+    --figma-color-bg-selected-strong
+  );
   --icon-button-background-color-selected-disabled: var(
     --figma-color-bg-brand-tertiary
   );

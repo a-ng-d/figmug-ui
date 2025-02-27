@@ -25,7 +25,8 @@
   --knob-tooltip-background-color: var(--figma-color-bg-inverse);
   --knob-tooltip-text-color: var(--figma-color-text-oninverse);
 
-  --knob-tooltip-arrow-inset: auto auto var(--size-neg-xxsmall) calc(50% - var(--size-xxxsmall));
+  --knob-tooltip-arrow-inset: auto auto var(--size-neg-xxsmall)
+    calc(50% - var(--size-xxxsmall));
   --knob-tooltip-arrow-width: var(--size-xxxsmall);
 
   --knob-graduation-width: var(--size-unit);
@@ -48,8 +49,8 @@
   --knob-label-border-color-focus: var(--figma-color-border-selected);
   --knob-label-border-width-focus: var(--size-unit);
   --knob-label-background-color-focus: var(--figma-color-bg-selected);
-  --knob-label-arrow-stroke-inset-focus: auto auto calc(var(--size-xxxsmall) * -2)
-  calc(50% - var(--size-xxxsmall));
+  --knob-label-arrow-stroke-inset-focus: auto auto
+    calc(var(--size-xxxsmall) * -2) calc(50% - var(--size-xxxsmall));
   --knob-label-arrow-stroke-width-focus: var(--size-xxxsmall);
 
   --knob-label-background-color-disabled: var(--figma-color-bg-disabled);

@@ -31,11 +31,11 @@
       z-index: 1;
       outline: none;
       border: none;
+      border-radius: var(--input-color-chip-radius);
       background-color: transparent;
       padding: 0;
       width: var(--input-color-chip-width);
       height: var(--input-color-chip-height);
-      border-radius: var(--input-color-chip-radius)
     }
 
     &[type='color' i]::-webkit-color-swatch-wrapper {
@@ -87,15 +87,15 @@
   }
 
   &__icon {
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
     width: var(--input-icon-width);
     height: var(--input-icon-height);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     --icon-letter-color: var(--input-icon-color);
   }
 

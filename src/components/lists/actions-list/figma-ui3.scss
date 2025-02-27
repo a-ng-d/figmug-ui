@@ -28,8 +28,10 @@
   --actions-list-spot-radius: var(--border-radius-xlarge);
   --actions-list-spot-background-color: var(--grey-1000);
   --actions-list-spot-icon-color: var(--grey-0);
-  --actions-list-spot-inset-top: var(--size-unit) var(--size-unit) auto var(--size-unit);
-  --actions-list-spot-inset-bottom: auto var(--size-unit) var(--size-unit) var(--size-unit);
+  --actions-list-spot-inset-top: var(--size-unit) var(--size-unit) auto
+    var(--size-unit);
+  --actions-list-spot-inset-bottom: auto var(--size-unit) var(--size-unit)
+    var(--size-unit);
   --actions-list-spot-border-width: 0;
   --actions-list-spot-border-color: transparent;
 
@@ -41,8 +43,10 @@
   --actions-list-caret-height: var(--size-xsmall);
   --actions-list-caret-color: var(--grey-0);
 
-  --actions-list-submenu-inset-left: var(--size-neg-xxsmall) var(--size-neg-xunit) auto auto;
-  --actions-list-submenu-inset-right: var(--size-neg-xxsmall) auto auto var(--size-neg-xxsmall);
+  --actions-list-submenu-inset-left: var(--size-neg-xxsmall)
+    var(--size-neg-xunit) auto auto;
+  --actions-list-submenu-inset-right: var(--size-neg-xxsmall) auto auto
+    var(--size-neg-xxsmall);
 
   --actions-list-divider-margin: 11px 0 12px 0;
   --actions-list-divider-height: var(--size-unit);
