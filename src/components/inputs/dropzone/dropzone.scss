@@ -24,14 +24,15 @@
   align-items: center;
   gap: var(--dropzone-gap);
   cursor: default;
-  outline: var(--dropzone-border-width) var(--dropzone-border-style) var(--dropzone-border-color);
+  outline: var(--dropzone-border-width) var(--dropzone-border-style)
+    var(--dropzone-border-color);
   outline-offset: var(--dropzone-border-offset);
   border-radius: var(--dropzone-border-radius);
+  background-color: var(--dropzone-background-color);
   padding: var(--dropzone-padding);
   min-width: var(--dropzone-min-width);
   min-height: var(--dropzone-min-height);
   user-select: none;
-  background-color: var(--dropzone-background-color);
 
   &--dragged-over {
     --semantic-message-background-color: var(--dropzone-background-color-over);

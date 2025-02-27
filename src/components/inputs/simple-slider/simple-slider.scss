@@ -17,7 +17,8 @@
   &__range {
     position: relative;
     flex: 1 1 auto;
-    box-shadow: inset 0 0 0 var(--simple-slider-border-width) var(--simple-slider-border-color);
+    box-shadow: inset 0 0 0 var(--simple-slider-border-width)
+      var(--simple-slider-border-color);
     border-radius: var(--simple-slider-radius);
     height: var(--simple-slider-height);
   }

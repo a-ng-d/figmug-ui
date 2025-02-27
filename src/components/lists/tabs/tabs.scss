@@ -21,17 +21,17 @@
 .tabs {
   display: flex;
   align-items: stretch;
+  gap: var(--tab-gap);
   cursor: default;
   user-select: none;
-  gap: var(--tab-gap);
 
   & .tabs__tab {
     position: relative;
+    border-radius: var(--tab-radius);
+    background-color: var(--tab-background-color);
     padding: var(--tab-padding);
     color: var(--tab-text-color);
     font-weight: var(--tab-text-weight);
-    background-color: var(--tab-background-color);
-    border-radius: var(--tab-radius);
 
     &:hover {
       --tab-text-color: var(--tab-text-color-hover);

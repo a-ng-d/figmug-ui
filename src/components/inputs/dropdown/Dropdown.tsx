@@ -188,93 +188,96 @@ export default class Dropdown extends React.Component<
       isBlocked,
     } = this.props
     const { isMenuOpen, listShouldScroll } = this.state
-console.log('options', options)
-return (
-  <div
-    id={id}
-    className={[
-      'select-menu',
-      (() => {
-        if (alignment === 'LEFT') return 'select-menu--left'
-        if (alignment === 'RIGHT') return 'select-menu--right'
-        return 'select-menu--fill'
-      })(),
-      (isDisabled || isBlocked) && 'select-menu--disabled',
-    ]
-      .filter((n) => n)
-      .join(' ')}
-    ref={this.selectMenuRef}
-  >
-    <button
-      role="dropdown-button"
-      className={[
-        'select-menu__button',
-        isMenuOpen && 'select-menu__button--active',
-      ]
-        .filter((n) => n)
-        .join(' ')}
-      tabIndex={0}
-      disabled={isDisabled || isBlocked}
-      onKeyDown={(e) => {
-        if (e.key === ' ' || (e.key === 'Enter' && !(isDisabled || isBlocked)))
-          return this.onOpenMenu?.()
-        if (e.key === 'Escape') return (e.target as HTMLElement).blur()
-        return null
-      }}
-      onMouseDown={!(isDisabled || isBlocked) ? this.onOpenMenu : undefined}
-      ref={this.buttonRef}
-    >
-      <span
-        className={`${texts['type--truncated']} ${texts.type} select-menu__label`}
+    console.log('options', options)
+    return (
+      <div
+        id={id}
+        className={[
+          'select-menu',
+          (() => {
+            if (alignment === 'LEFT') return 'select-menu--left'
+            if (alignment === 'RIGHT') return 'select-menu--right'
+            return 'select-menu--fill'
+          })(),
+          (isDisabled || isBlocked) && 'select-menu--disabled',
+        ]
+          .filter((n) => n)
+          .join(' ')}
+        ref={this.selectMenuRef}
       >
-        {this.findSelectedOption(options)}
-      </span>
-      <span className="select-menu__caret">
-        <Icon
-          type="PICTO"
-          iconName="chevron-down"
-        />
-      </span>
-    </button>
-    {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
-    {(() => {
-      const { pin } = this.props
-
-      if (isMenuOpen)
-        return (
-          <div
-            className="floating-menu"
-            style={{
-              position: 'absolute',
-              zIndex: 99,
-              top:
-                pin === 'TOP'
-                  ? '-4px'
-                  : pin === 'BOTTOM'
-                    ? 'auto'
-                    : this.setPosition(),
-              bottom: pin === 'BOTTOM' ? '-4px' : 'auto',
-              right: alignment === 'RIGHT' ? 0 : 'auto',
-              left: alignment === 'LEFT' ? 0 : 'auto',
-              visibility: containerId === undefined ? 'visible' : 'hidden',
-            }}
-            ref={this.listRef}
+        <button
+          role="dropdown-button"
+          className={[
+            'select-menu__button',
+            isMenuOpen && 'select-menu__button--active',
+          ]
+            .filter((n) => n)
+            .join(' ')}
+          tabIndex={0}
+          disabled={isDisabled || isBlocked}
+          onKeyDown={(e) => {
+            if (
+              e.key === ' ' ||
+              (e.key === 'Enter' && !(isDisabled || isBlocked))
+            )
+              return this.onOpenMenu?.()
+            if (e.key === 'Escape') return (e.target as HTMLElement).blur()
+            return null
+          }}
+          onMouseDown={!(isDisabled || isBlocked) ? this.onOpenMenu : undefined}
+          ref={this.buttonRef}
+        >
+          <span
+            className={`${texts['type--truncated']} ${texts.type} select-menu__label`}
           >
-            <ActionsList
-              options={options}
-              selected={selected}
-              direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
-              shouldScroll={listShouldScroll}
-              containerId={containerId}
-              onCancellation={() => this.setState({ isMenuOpen: false })}
-              menuRef={this.menuRef}
-              subMenuRef={this.subMenuRef}
+            {this.findSelectedOption(options)}
+          </span>
+          <span className="select-menu__caret">
+            <Icon
+              type="PICTO"
+              iconName="chevron-down"
             />
-          </div>
-        )
-      return null
-    })()}
-  </div>
-)
+          </span>
+        </button>
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+        {(() => {
+          const { pin } = this.props
+
+          if (isMenuOpen)
+            return (
+              <div
+                className="floating-menu"
+                style={{
+                  position: 'absolute',
+                  zIndex: 99,
+                  top:
+                    pin === 'TOP'
+                      ? '-4px'
+                      : pin === 'BOTTOM'
+                        ? 'auto'
+                        : this.setPosition(),
+                  bottom: pin === 'BOTTOM' ? '-4px' : 'auto',
+                  right: alignment === 'RIGHT' ? 0 : 'auto',
+                  left: alignment === 'LEFT' ? 0 : 'auto',
+                  visibility: containerId === undefined ? 'visible' : 'hidden',
+                }}
+                ref={this.listRef}
+              >
+                <ActionsList
+                  options={options}
+                  selected={selected}
+                  direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
+                  shouldScroll={listShouldScroll}
+                  containerId={containerId}
+                  onCancellation={() => this.setState({ isMenuOpen: false })}
+                  menuRef={this.menuRef}
+                  subMenuRef={this.subMenuRef}
+                />
+              </div>
+            )
+          return null
+        })()}
+      </div>
+    )
   }
 }

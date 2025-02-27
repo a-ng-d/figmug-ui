@@ -1,16 +1,27 @@
 :root {
   --semantic-message-gap: var(--size-xxxsmall);
-  --semantic-message-padding: var(--size-xxsmall) var(--size-xxsmall) var(--size-xxsmall) 0;
+  --semantic-message-padding: var(--size-xxsmall) var(--size-xxsmall)
+    var(--size-xxsmall) 0;
   --semantic-message-border-radius: var(--border-radius-xlarge);
   --semantic-message-background-color: var(--figma-color-bg);
-  --semantic-message-background-color-info: var(--figma-color-bg-brand-tertiary);
-  --semantic-message-background-color-error: var(--figma-color-bg-danger-tertiary);
-  --semantic-message-background-color-success: var(--figma-color-bg-success-tertiary);
-  --semantic-message-background-color-warning: var(--figma-color-bg-warning-tertiary);
-  
-  --semantic-message-padding-anchored: var(--size-small) var(--size-xsmall) var(--size-small) 0;
+  --semantic-message-background-color-info: var(
+    --figma-color-bg-brand-tertiary
+  );
+  --semantic-message-background-color-error: var(
+    --figma-color-bg-danger-tertiary
+  );
+  --semantic-message-background-color-success: var(
+    --figma-color-bg-success-tertiary
+  );
+  --semantic-message-background-color-warning: var(
+    --figma-color-bg-warning-tertiary
+  );
+
+  --semantic-message-padding-anchored: var(--size-small) var(--size-xsmall)
+    var(--size-small) 0;
   --semantic-message-padding-vertical: var(--size-xsmall) var(--size-xxxsmall);
-  --semantic-message-padding-anchored-vertical: var(--size-xsmall) var(--size-xxxsmall);
+  --semantic-message-padding-anchored-vertical: var(--size-xsmall)
+    var(--size-xxxsmall);
 }
 
 .semantic-message {
@@ -18,23 +29,31 @@
   justify-content: space-between;
   gap: var(--semantic-message-gap);
   border-radius: var(--semantic-message-border-radius);
-  padding: var(--semantic-message-padding);
   background-color: var(--semantic-message-background-color);
+  padding: var(--semantic-message-padding);
 
   &--info {
-    --semantic-message-background-color: var(--semantic-message-background-color-info);
+    --semantic-message-background-color: var(
+      --semantic-message-background-color-info
+    );
   }
 
   &--error {
-    --semantic-message-background-color: var(--semantic-message-background-color-error);
+    --semantic-message-background-color: var(
+      --semantic-message-background-color-error
+    );
   }
 
   &--success {
-    --semantic-message-background-color: var(--semantic-message-background-color-success);
+    --semantic-message-background-color: var(
+      --semantic-message-background-color-success
+    );
   }
 
   &--warning {
-    --semantic-message-background-color: var(--semantic-message-background-color-warning);
+    --semantic-message-background-color: var(
+      --semantic-message-background-color-warning
+    );
   }
 
   &--anchored {
@@ -42,7 +61,9 @@
     --semantic-message-padding: var(--semantic-message-padding-anchored);
 
     &.semantic-message--vertical {
-      --semantic-message-padding: var(--semantic-message-padding-anchored-vertical);
+      --semantic-message-padding: var(
+        --semantic-message-padding-anchored-vertical
+      );
     }
   }
 

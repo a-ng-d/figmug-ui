@@ -16,8 +16,8 @@
   --popin-header-padding: 0 var(--size-xxsmall);
   --popin-header-border: 1px solid var(--figma-color-border);
 
-  --popin-footer-padding: var(--size-xsmall) var(--size-xsmall) var(--size-xsmall)
-    var(--size-xsmall);
+  --popin-footer-padding: var(--size-xsmall) var(--size-xsmall)
+    var(--size-xsmall) var(--size-xsmall);
   --popin-footer-gap: var(--size-xxsmall);
 
   --popin-actions-gap: var(--size-xxsmall);
@@ -28,9 +28,9 @@
   flex-direction: column;
   justify-content: stretch;
   cursor: default;
-  box-shadow: var(--popin-shadow);
   outline: var(--popin-border-width) solid var(--popin-border-color);
   outline-offset: var(--popin-border-offset);
+  box-shadow: var(--popin-shadow);
   border-radius: var(--popin-radius);
   background-color: var(--popin-background-color);
   width: 100%;

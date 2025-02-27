@@ -29,11 +29,11 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--simple-item-gap);
+  outline: var(--simple-item-border-width) solid var(--simple-item-border-color);
+  outline-offset: var(--simple-item-border-offset);
   background-color: var(--simple-item-background-color);
   padding: var(--simple-item-padding);
   min-height: var(--simple-item-min-height);
-  outline: var(--simple-item-border-width) solid var(--simple-item-border-color);
-  outline-offset: var(--simple-item-border-offset);
 
   &--center {
     align-items: center;
@@ -47,7 +47,7 @@
     &:hover {
       --simple-item-background-color: var(--simple-item-background-color-hover);
     }
-    
+
     &:focus {
       --simple-item-background-color: var(--simple-item-background-color-focus);
       --simple-item-border-width: var(--simple-item-border-width-focus);

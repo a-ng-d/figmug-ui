@@ -1,11 +1,11 @@
 :root {
   --accordion-padding: var(--size-xxsmall) 0;
   --accordion-border: var(--size-unit) solid var(--figma-color-border-disabled);
-  
+
   --accordion-row-gap: var(--size-xsmall);
   --accordion-row-height: var(--size-medium);
   --accordion-row-padding: var(--size-xxxsmall) 0;
-  
+
   --accordion-text-color: var(--figma-color-text-secondary);
   --accordion-icon-color: var(--figma-color-icon-secondary);
 
@@ -29,9 +29,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: var(--accordion-row-height);
-    padding: var(--accordion-row-padding);
     gap: var(--accordion-row-gap);
+    padding: var(--accordion-row-padding);
+    height: var(--accordion-row-height);
 
     --section-title-text-color: var(--accordion-text-color);
     --text-color-primary: var(--accordion-text-color);

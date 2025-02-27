@@ -101,18 +101,18 @@
 }
 
 .label {
-  font-family: var(--text-font-family);
-  font-size: var(--text-label-font-size);
-  font-weight: var(--text-label-font-weight);
-  letter-spacing: var(--text-label-letter-spacing);
-  line-height: var(--text-label-line-height);
-  color: var(--text-label-color);
-  height: var(--text-label-height);
-  width: 100%;
   display: flex;
   align-items: center;
-  cursor: default;
-  user-select: none;
-  padding: var(--text-label-padding);
   gap: var(--text-label-gap);
+  cursor: default;
+  padding: var(--text-label-padding);
+  width: 100%;
+  height: var(--text-label-height);
+  color: var(--text-label-color);
+  font-weight: var(--text-label-font-weight);
+  font-size: var(--text-label-font-size);
+  line-height: var(--text-label-line-height);
+  font-family: var(--text-font-family);
+  letter-spacing: var(--text-label-letter-spacing);
+  user-select: none;
 }

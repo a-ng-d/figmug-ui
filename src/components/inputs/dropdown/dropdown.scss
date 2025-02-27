@@ -4,7 +4,7 @@
   --dropdown-padding: 0 var(--size-xxxsmall) 0 var(--size-xxsmall);
   --dropdown-radius: var(--border-radius-small);
   --dropdown-gap: var(--size-xxxsmall);
-  
+
   --dropdown-background-color: var(--figma-color-bg);
 
   --dropdown-border-color: transparent;
@@ -42,8 +42,8 @@
 
 .select-menu {
   display: flex;
-  align-items: baseline;
   position: relative;
+  align-items: baseline;
   cursor: default;
   user-select: none;
 
@@ -67,15 +67,15 @@
   .select-menu__button {
     display: flex;
     align-items: center;
+    gap: var(--dropdown-gap);
     outline: var(--dropdown-border-width) solid var(--dropdown-border-color);
     outline-offset: var(--dropdown-border-offset);
-    height: var(--dropdown-height);
-    padding: var(--dropdown-padding);   
+    border: none;
     border-radius: var(--dropdown-radius);
     background-color: var(--dropdown-background-color);
+    padding: var(--dropdown-padding);
     width: auto;
-    border: none;
-    gap: var(--dropdown-gap);
+    height: var(--dropdown-height);
 
     &:hover {
       --dropdown-background-color: var(--dropdown-background-color-hover);
@@ -115,11 +115,11 @@
   }
 
   .select-menu__caret {
-    width: var(--dropdown-caret-width);
-    height: var(--dropdown-caret-width);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: var(--dropdown-caret-width);
+    height: var(--dropdown-caret-width);
     pointer-events: none;
     --icon-picto-color: var(--dropdown-caret-color);
   }

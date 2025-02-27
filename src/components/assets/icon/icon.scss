@@ -12,8 +12,8 @@
   align-items: center;
   width: var(--icon-width);
   height: var(--icon-height);
-  user-select: none;
   pointer-events: none;
+  user-select: none;
 
   &--picto {
     background-color: var(--icon-picto-color);

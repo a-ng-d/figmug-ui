@@ -15,26 +15,26 @@
 
 .section-title {
   display: flex;
-  gap: var(--section-title-gap);
-  font-family: var(--section-title-text-font-family);
-  font-size: var(--section-title-text-font-size);
-  font-weight: var(--section-title-text-font-weight);
-  letter-spacing: var(--section-title-text-letter-spacing);
-  line-height: var(--section-title-text-line-height);
-  color: var(--section-title-text-color);
-  height: var(--section-title-height);
-  width: 100%;
   display: flex;
   align-items: center;
+  gap: var(--section-title-gap);
   cursor: default;
-  user-select: none;
   padding: var(--section-title-padding);
+  width: 100%;
+  height: var(--section-title-height);
+  color: var(--section-title-text-color);
+  font-weight: var(--section-title-text-font-weight);
+  font-size: var(--section-title-text-font-size);
+  line-height: var(--section-title-text-line-height);
+  font-family: var(--section-title-text-font-family);
+  letter-spacing: var(--section-title-text-letter-spacing);
+  user-select: none;
 
   .section-title__tooltip {
-    position: relative;
     display: flex;
-    align-items: center;
+    position: relative;
     justify-content: center;
+    align-items: center;
     width: var(--section-title-info-icon-width);
     height: var(--section-title-info-icon-height);
   }

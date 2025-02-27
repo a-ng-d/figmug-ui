@@ -229,8 +229,8 @@
 
   &__unit {
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
     pointer-events: none;
     --icon-letter-color: var(--input-icon-color);
   }
@@ -428,10 +428,10 @@
 }
 
 .textarea {
-  cursor: inherit;
   display: flex;
   position: relative;
   align-items: center;
+  cursor: inherit;
   padding: var(--input-textarea-padding);
   width: 100%;
   min-height: var(--input-textarea-min-height);

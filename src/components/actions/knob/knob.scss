@@ -11,7 +11,8 @@
   --knob-label-border-width: var(--size-unit);
   --knob-label-text-color: var(--figma-color-text);
 
-  --knob-label-arrow-stroke-inset: auto auto calc(var(--size-xxxsmall) * -2) calc(50% - var(--size-xxxsmall));
+  --knob-label-arrow-stroke-inset: auto auto calc(var(--size-xxxsmall) * -2)
+    calc(50% - var(--size-xxxsmall));
   --knob-label-arrow-stroke-width: var(--size-xxxsmall);
   --knob-label-arrow-fill-inset: auto auto -6px calc(50% - 3px);
   --knob-label-arrow-fill-width: 3px;
@@ -42,7 +43,7 @@
 
   /* State */
   --knob-label-background-color-hover: var(--figma-color-bg-hover);
-  
+
   --knob-label-border-color-focus: var(--figma-color-border-selected);
   --knob-label-border-width-focus: var(--size-xunit);
   --knob-label-background-color-focus: var(--figma-color-bg-selected);
@@ -71,7 +72,9 @@
     --knob-label-background-color: var(--knob-label-background-color-hover);
   }
 
-  &:focus, &--selected, &:active {
+  &:focus,
+  &--selected,
+  &:active {
     --knob-label-background-color: var(--knob-label-background-color-focus);
     --knob-label-border-color: var(--knob-label-border-color-focus);
     --knob-label-border-width: var(--knob-label-border-width-focus);
@@ -95,11 +98,12 @@
 }
 
 .knob__label {
-  box-sizing: border-box;
   display: flex;
   position: relative;
   justify-content: center;
-  box-shadow: 0 0 0 var(--knob-label-border-width) var(--knob-label-border-color);
+  box-sizing: border-box;
+  box-shadow: 0 0 0 var(--knob-label-border-width)
+    var(--knob-label-border-color);
   border-radius: var(--knob-label-radius);
   background: var(--knob-label-background-color);
   padding: var(--knob-label-padding);
@@ -144,11 +148,11 @@
   top: var(--knob-tooltip-top);
   left: 50%;
   transform: translateX(-50%) translateY(-100%);
+  border-radius: var(--knob-tooltip-radius);
   background-color: var(--knob-tooltip-background-color);
   padding: var(--knob-tooltip-padding);
   min-width: var(--knob-tooltip-min-width);
   color: var(--knob-tooltip-text-color);
-  border-radius: var(--knob-tooltip-radius);
   user-select: none;
   text-align: center;
 
@@ -180,9 +184,9 @@
   left: 50%;
   transform: translateX(-50%) translateY(-100%);
   z-index: 2;
-  box-shadow: var(--knob-input-shadow);
   outline: var(--knob-input-border-width) solid var(--knob-input-border-color);
   outline-offset: var(--knob-input-border-offset);
+  box-shadow: var(--knob-input-shadow);
   border-radius: var(--knob-input-border-radius);
   background-color: var(--knob-input-background-color);
   padding: var(--knob-input-padding);

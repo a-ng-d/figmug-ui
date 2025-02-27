@@ -111,11 +111,11 @@
 .checkbox,
 .radio,
 .switch {
-  cursor: default;
-  user-select: none;
   display: flex;
   position: relative;
   align-items: center;
+  cursor: default;
+  user-select: none;
 
   .checkbox__label,
   .switch__label,

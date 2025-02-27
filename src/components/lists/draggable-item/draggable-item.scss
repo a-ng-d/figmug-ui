@@ -29,7 +29,9 @@
     --icon-button-background-color: var(--figma-color-bg-selected);
 
     --input-background-color-hover: var(--figma-color-bg-selected);
-    --icon-button-background-color-hover: var(--figma-color-bg-selected-secondary);
+    --icon-button-background-color-hover: var(
+      --figma-color-bg-selected-secondary
+    );
   }
 
   &[draggable='true']:active {
