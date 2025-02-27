@@ -18,14 +18,14 @@
   --knob-label-arrow-fill-inset: auto auto -6px calc(50% - 3px);
   --knob-label-arrow-fill-width: 3px;
 
-  --knob-tooltip-top: calc(var(--size-xsmall) * -1);
+  --knob-tooltip-top: calc(var(--size-xxsmall) * -1);
   --knob-tooltip-padding: var(--size-xxxsmall);
   --knob-tooltip-min-width: var(--size-small);
   --knob-tooltip-radius: var(--border-radius-med);
   --knob-tooltip-background-color: var(--figma-color-bg-inverse);
   --knob-tooltip-text-color: var(--figma-color-text-oninverse);
 
-  --knob-tooltip-arrow-inset: auto auto --size-neg-xxsmall calc(50% - var(--size-xxxsmall));
+  --knob-tooltip-arrow-inset: auto auto var(--size-neg-xxsmall) calc(50% - var(--size-xxxsmall));
   --knob-tooltip-arrow-width: var(--size-xxxsmall);
 
   --knob-graduation-width: var(--size-unit);
