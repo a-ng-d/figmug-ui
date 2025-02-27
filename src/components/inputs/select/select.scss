@@ -42,7 +42,7 @@
       outline-offset: var(--select-box-border-offset-secondary);
       border: var(--select-box-border);
       border-radius: var(--select-box-radius);
-      background: var(--select-box-background);
+      background: var(--select-box-background-color);
       width: var(--select-box-width);
       height: var(--select-box-height);
       content: '';
@@ -76,7 +76,7 @@
     height: var(--select-box-height);
 
     &:checked + .checkbox__label:before {
-      --select-box-background: var(--select-box-background-checked);
+      --select-box-background-color: var(--select-box-background-color-checked);
       --select-box-border: var(--select-box-border-checked);
     }
 
@@ -101,12 +101,12 @@
     }
 
     &:disabled:checked + .checkbox__label:before {
-      --select-box-background: var(--select-box-background-checked-disabled);
+      --select-box-background-color: var(--select-box-background-color-checked-disabled);
       --select-box-border: var(--select-box-border-checked-disabled);
     }
 
     &:disabled + .checkbox__label:before {
-      --select-box-background: var(--select-box-background-disabled);
+      --select-box-background-color: var(--select-box-background-color-disabled);
       --select-box-border: var(--select-box-border-disabled);
     }
   }
@@ -133,10 +133,11 @@
       display: block;
       transition: background-color 0 0.2s;
       margin: var(--select-toggle-margin);
-      outline: var(--select-toggle-border-secondary);
+      outline: var(--select-toggle-border-width-secondary) solid var(--select-toggle-border-color-secondary);
+      outline-offset: var(--select-toggle-border-offset-secondary);
       border: var(--select-toggle-border);
       border-radius: var(--select-toggle-radius);
-      background-color: var(--select-toggle-background);
+      background-color: var(--select-toggle-background-color);
       width: var(--select-toggle-width);
       height: var(--select-toggle-height);
       content: '';
@@ -166,7 +167,7 @@
     height: var(--select-toggle-height);
 
     &:checked + .switch__label:before {
-      --select-toggle-background: var(--select-toggle-background-checked);
+      --select-toggle-background-color: var(--select-toggle-background-color-checked);
       --select-toggle-border: var(--select-toggle-border-checked);
     }
 
@@ -180,9 +181,15 @@
     }
 
     &:focus + .switch__label:before {
-      --select-toggle-border-secondary: var(
-        --select-toggle-border-secondary-focus
-      );
+      --select-toggle-border-width-secondary: var(--select-toggle-border-width-secondary-focus);
+      --select-toggle-border-offset-secondary: var(--select-toggle-border-offset-secondary-focus);
+      --select-toggle-border-color-secondary: var(--select-toggle-border-color-secondary-focus);
+    }
+
+    &:focus:checked + .switch__label:before {
+      --select-toggle-border-width-secondary: var(--select-toggle-border-width-secondary-checked-focus);
+      --select-toggle-border-offset-secondary: var(--select-toggle-border-offset-secondary-checked-focus);
+      --select-toggle-border-color-secondary: var(--select-toggle-border-color-secondary-checked-focus);
     }
 
     &:disabled + .switch__label {
@@ -190,7 +197,7 @@
     }
 
     &:disabled + .switch__label:before {
-      --select-toggle-background: var(--select-toggle-background-disabled);
+      --select-toggle-background-color: var(--select-toggle-background-color-disabled);
       --select-toggle-border: var(--select-toggle-border-disabled);
     }
 
@@ -201,8 +208,8 @@
     }
 
     &:disabled:checked + .switch__label:before {
-      --select-toggle-background: var(
-        --select-toggle-background-checked-disabled
+      --select-toggle-background-color: var(
+        --select-toggle-background-color-checked-disabled
       );
       --select-toggle-border: var(--select-toggle-border-checked-disabled);
     }
@@ -236,10 +243,11 @@
     &:before {
       display: block;
       margin: var(--select-button-margin);
-      outline: var(--select-button-border-secondary);
+      outline: var(--select-button-border-width-secondary) solid var(--select-button-border-color-secondary);
+      outline-offset: var(--select-button-border-offset-secondary);
       border: var(--select-button-border);
       border-radius: var(--select-button-radius);
-      background: var(--select-button-background);
+      background: var(--select-button-background-color);
       width: var(--select-button-width);
       height: var(--select-button-height);
       content: '';
@@ -267,7 +275,7 @@
     height: var(--select-button-height);
 
     &:checked + .radio__label:before {
-      --select-button-background: var(--select-button-background-checked);
+      --select-button-background-color: var(--select-button-background-color-checked);
       --select-button-border: var(--select-button-border-checked);
     }
 
@@ -276,9 +284,15 @@
     }
 
     &:focus + .radio__label:before {
-      --select-button-border-secondary: var(
-        --select-button-border-secondary-focus
-      );
+      --select-button-border-width-secondary: var(--select-button-border-width-secondary-focus);
+      --select-button-border-offset-secondary: var(--select-button-border-offset-secondary-focus);
+      --select-button-border-color-secondary: var(--select-button-border-color-secondary-focus);
+    }
+
+    &:focus:checked + .radio__label:before {
+      --select-button-border-width-secondary: var(--select-button-border-width-secondary-checked-focus);
+      --select-button-border-offset-secondary: var(--select-button-border-offset-secondary-checked-focus);
+      --select-button-border-color-secondary: var(--select-button-border-color-secondary-checked-focus);
     }
 
     &:disabled + .radio__label {
@@ -286,8 +300,8 @@
     }
 
     &:disabled:checked + .radio__label:before {
-      --select-button-background: var(
-        --select-button-background-checked-disabled
+      --select-button-background-color: var(
+        --select-button-background-color-checked-disabled
       );
       --select-button-border: var(--select-button-border-checked-disabled);
     }
@@ -297,7 +311,7 @@
     }
 
     &:disabled + .radio__label:before {
-      --select-button-background: var(--select-button-background-disabled);
+      --select-button-background-color: var(--select-button-background-color-disabled);
       --select-button-border: var(--select-button-border-disabled);
     }
   }
