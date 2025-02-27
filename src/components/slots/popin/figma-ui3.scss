@@ -7,9 +7,9 @@
   --popin-min-height: 136px;
   --popin-background-color: var(--figma-color-bg);
   --popin-text-color: var(--figma-color-text);
-  --popin-border-color: var(--figma-color-border);
-  --popin-border-width: var(--size-unit);
-  --popin-border-offset: var(--size-neg-unit);
+  --popin-border-color: transparent;
+  --popin-border-width: 0;
+  --popin-border-offset: 0;
 
   --popin-header-height: var(--size-xlarge);
   --popin-header-gap: var(--size-xxsmall);

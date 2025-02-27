@@ -1,11 +1,12 @@
 :root[data-theme='figma-ui3'] {
   /* Base */
   --knob-min-width: var(--size-medium);
-  --knob-height: var(--size-xxlarge);
+  --knob-height: 56px;
+  --knob-top: var(--size-neg-xxxsmall);
 
   --knob-label-height: var(--size-small);
   --knob-label-padding: var(--size-xxxsmall);
-  --knob-label-radius: var(--border-radius-small);
+  --knob-label-radius: var(--border-radius-med);
   --knob-label-background-color: var(--figma-color-bg);
   --knob-label-border-color: var(--figma-color-border-disabled-strong);
   --knob-label-border-width: var(--size-unit);
@@ -20,7 +21,7 @@
   --knob-tooltip-top: calc(var(--size-xsmall) * -1);
   --knob-tooltip-padding: var(--size-xxxsmall);
   --knob-tooltip-min-width: var(--size-small);
-  --knob-tooltip-radius: 0;
+  --knob-tooltip-radius: var(--border-radius-med);
   --knob-tooltip-background-color: var(--figma-color-bg-inverse);
   --knob-tooltip-text-color: var(--figma-color-text-oninverse);
 
@@ -45,10 +46,11 @@
   --knob-label-background-color-hover: var(--figma-color-bg-hover);
 
   --knob-label-border-color-focus: var(--figma-color-border-selected);
-  --knob-label-border-width-focus: var(--size-xunit);
+  --knob-label-border-width-focus: var(--size-unit);
   --knob-label-background-color-focus: var(--figma-color-bg-selected);
-  --knob-label-arrow-stroke-inset-focus: auto auto -12px calc(50% - 6px);
-  --knob-label-arrow-stroke-width-focus: 6px;
+  --knob-label-arrow-stroke-inset-focus: auto auto calc(var(--size-xxxsmall) * -2)
+  calc(50% - var(--size-xxxsmall));
+  --knob-label-arrow-stroke-width-focus: var(--size-xxxsmall);
 
   --knob-label-background-color-disabled: var(--figma-color-bg-disabled);
   --knob-label-border-color-disabled: var(--figma-color-border-disabled);

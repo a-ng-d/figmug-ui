@@ -13,6 +13,7 @@
   background: transparent;
   min-width: var(--knob-min-width);
   height: var(--knob-height);
+  top: var(--knob-top);
 
   &:hover {
     --knob-label-background-color: var(--knob-label-background-color-hover);

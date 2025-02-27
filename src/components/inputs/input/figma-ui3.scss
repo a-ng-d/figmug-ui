@@ -47,9 +47,9 @@
 
   /* Default */
   --input-background-color-empty: var(--figma-color-bg-secondary);
-  --input-border-width-empty: var(--size-unit);
-  --input-border-offset-empty: var(--size-neg-unit);
-  --input-border-color-empty: var(--figma-color-border);
+  --input-border-width-empty: 0;
+  --input-border-offset-empty: 0;
+  --input-border-color-empty: transparent;
   --input-text-color-empty: var(--figma-color-text);
   --input-text-placeholder-color-empty: var(--figma-color-text-secondary);
 

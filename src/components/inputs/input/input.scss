@@ -317,9 +317,9 @@
   font-family: var(--input-text-font-family);
   letter-spacing: var(--input-text-letterspacing);
 
-  --input-border-width: var(--input-border-width-hover);
-  --input-border-offset: var(--input-border-offset-hover);
-  --input-border-color: var(--input-border-color-hover);
+  --input-border-width: var(--input-border-width-empty);
+  --input-border-offset: var(--input-border-offset-empty);
+  --input-border-color: var(--input-border-color-empty);
 
   &--monospace {
     font-family: monospace;
