@@ -1,3 +1,5 @@
+@import 'figma-ui2.scss';
+
 .icon {
   mask-position: center;
   -webkit-mask-position: center;
@@ -7,509 +9,509 @@
   pointer-events: none;
 
   &--adjust {
-    mask-image: url('./figma-ui2-icons.svg#adjust');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#adjust');
+    mask-image: var(--icon-adjust);
+    -webkit-mask-image: var(--icon-adjust);
   }
-
+  
   &--alert {
-    mask-image: url('./figma-ui2-icons.svg#alert');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#alert');
+    mask-image: var(--icon-alert);
+    -webkit-mask-image: var(--icon-alert);
   }
-
+  
   &--angle {
-    mask-image: url('./figma-ui2-icons.svg#angle');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#angle');
+    mask-image: var(--icon-angle);
+    -webkit-mask-image: var(--icon-angle);
   }
-
+  
   &--arrow-left-right {
-    mask-image: url('./figma-ui2-icons.svg#arrow-left-right');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#arrow-left-right');
+    mask-image: var(--icon-arrow-left-right);
+    -webkit-mask-image: var(--icon-arrow-left-right);
   }
-
+  
   &--arrow-up-down {
-    mask-image: url('./figma-ui2-icons.svg#arrow-up-down');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#arrow-up-down');
+    mask-image: var(--icon-arrow-up-down);
+    -webkit-mask-image: var(--icon-arrow-up-down);
   }
-
+  
   &--auto-layout-horizontal {
-    mask-image: url('./figma-ui2-icons.svg#auto-layout-horizontal');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#auto-layout-horizontal');
+    mask-image: var(--icon-auto-layout-horizontal);
+    -webkit-mask-image: var(--icon-auto-layout-horizontal);
   }
-
+  
   &--auto-layout-vertical {
-    mask-image: url('./figma-ui2-icons.svg#auto-layout-vertical');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#auto-layout-vertical');
+    mask-image: var(--icon-auto-layout-vertical);
+    -webkit-mask-image: var(--icon-auto-layout-vertical);
   }
-
+  
   &--back {
-    mask-image: url('./figma-ui2-icons.svg#back');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#back');
+    mask-image: var(--icon-back);
+    -webkit-mask-image: var(--icon-back);
   }
-
+  
   &--blend-empty {
-    mask-image: url('./figma-ui2-icons.svg#blend-empty');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#blend-empty');
+    mask-image: var(--icon-blend-empty);
+    -webkit-mask-image: var(--icon-blend-empty);
   }
-
+  
   &--blend {
-    mask-image: url('./figma-ui2-icons.svg#blend');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#blend');
+    mask-image: var(--icon-blend);
+    -webkit-mask-image: var(--icon-blend);
   }
-
+  
   &--break {
-    mask-image: url('./figma-ui2-icons.svg#break');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#break');
+    mask-image: var(--icon-break);
+    -webkit-mask-image: var(--icon-break);
   }
-
+  
   &--caret-down {
-    mask-image: url('./figma-ui2-icons.svg#caret-down');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#caret-down');
+    mask-image: var(--icon-caret-down);
+    -webkit-mask-image: var(--icon-caret-down);
   }
-
+  
   &--caret-left {
-    mask-image: url('./figma-ui2-icons.svg#caret-left');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#caret-left');
+    mask-image: var(--icon-caret-left);
+    -webkit-mask-image: var(--icon-caret-left);
   }
-
+  
   &--caret-right {
-    mask-image: url('./figma-ui2-icons.svg#caret-right');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#caret-right');
+    mask-image: var(--icon-caret-right);
+    -webkit-mask-image: var(--icon-caret-right);
   }
-
+  
   &--caret-up {
-    mask-image: url('./figma-ui2-icons.svg#caret-up');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#caret-up');
+    mask-image: var(--icon-caret-up);
+    -webkit-mask-image: var(--icon-caret-up);
   }
-
+  
   &--chevron-down {
-    mask-image: url('./figma-ui2-icons.svg#chevron-down');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#chevron-down');
+    mask-image: var(--icon-chevron-down);
+    -webkit-mask-image: var(--icon-chevron-down);
   }
-
+  
   &--chevron-left {
-    mask-image: url('./figma-ui2-icons.svg#chevron-left');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#chevron-left');
+    mask-image: var(--icon-chevron-left);
+    -webkit-mask-image: var(--icon-chevron-left);
   }
-
+  
   &--chevron-right {
-    mask-image: url('./figma-ui2-icons.svg#chevron-right');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#chevron-right');
+    mask-image: var(--icon-chevron-right);
+    -webkit-mask-image: var(--icon-chevron-right);
   }
-
+  
   &--chevron-up {
-    mask-image: url('./figma-ui2-icons.svg#chevron-up');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#chevron-up');
+    mask-image: var(--icon-chevron-up);
+    -webkit-mask-image: var(--icon-chevron-up);
   }
-
+  
   &--check {
-    mask-image: url('./figma-ui2-icons.svg#check');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#check');
+    mask-image: var(--icon-check);
+    -webkit-mask-image: var(--icon-check);
   }
-
+  
   &--close {
-    mask-image: url('./figma-ui2-icons.svg#close');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#close');
+    mask-image: var(--icon-close);
+    -webkit-mask-image: var(--icon-close);
   }
-
+  
   &--component {
-    mask-image: url('./figma-ui2-icons.svg#component');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#component');
+    mask-image: var(--icon-component);
+    -webkit-mask-image: var(--icon-component);
   }
-
+  
   &--corner-radius {
-    mask-image: url('./figma-ui2-icons.svg#corner-radius');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#corner-radius');
+    mask-image: var(--icon-corner-radius);
+    -webkit-mask-image: var(--icon-corner-radius);
   }
-
+  
   &--corners {
-    mask-image: url('./figma-ui2-icons.svg#corners');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#corners');
+    mask-image: var(--icon-corners);
+    -webkit-mask-image: var(--icon-corners);
   }
-
+  
   &--downward {
-    mask-image: url('./figma-ui2-icons.svg#downward');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#downward');
+    mask-image: var(--icon-downward);
+    -webkit-mask-image: var(--icon-downward);
   }
-
+  
   &--distribute-horizontal-spacing {
-    mask-image: url('./figma-ui2-icons.svg#distribute-horizontal-spacing');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#distribute-horizontal-spacing');
+    mask-image: var(--icon-distribute-horizontal-spacing);
+    -webkit-mask-image: var(--icon-distribute-horizontal-spacing);
   }
-
+  
   &--distribute-vertical-spacing {
-    mask-image: url('./figma-ui2-icons.svg#distribute-vertical-spacing');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#distribute-vertical-spacing');
+    mask-image: var(--icon-distribute-vertical-spacing);
+    -webkit-mask-image: var(--icon-distribute-vertical-spacing);
   }
-
+  
   &--draft {
-    mask-image: url('./figma-ui2-icons.svg#draft');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#draft');
+    mask-image: var(--icon-draft);
+    -webkit-mask-image: var(--icon-draft);
   }
-
+  
   &--effects {
-    mask-image: url('./figma-ui2-icons.svg#effects');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#effects');
+    mask-image: var(--icon-effects);
+    -webkit-mask-image: var(--icon-effects);
   }
-
+  
   &--ellipses {
-    mask-image: url('./figma-ui2-icons.svg#ellipses');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#ellipses');
+    mask-image: var(--icon-ellipses);
+    -webkit-mask-image: var(--icon-ellipses);
   }
-
+  
   &--eyedropper {
-    mask-image: url('./figma-ui2-icons.svg#eyedropper');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#eyedropper');
+    mask-image: var(--icon-eyedropper);
+    -webkit-mask-image: var(--icon-eyedropper);
   }
-
+  
   &--forward {
-    mask-image: url('./figma-ui2-icons.svg#forward');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#forward');
+    mask-image: var(--icon-forward);
+    -webkit-mask-image: var(--icon-forward);
   }
-
+  
   &--filter {
-    mask-image: url('./figma-ui2-icons.svg#filter');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#filter');
+    mask-image: var(--icon-filter);
+    -webkit-mask-image: var(--icon-filter);
   }
-
+  
   &--frame {
-    mask-image: url('./figma-ui2-icons.svg#frame');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#frame');
+    mask-image: var(--icon-frame);
+    -webkit-mask-image: var(--icon-frame);
   }
-
+  
   &--group {
-    mask-image: url('./figma-ui2-icons.svg#group');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#group');
+    mask-image: var(--icon-group);
+    -webkit-mask-image: var(--icon-group);
   }
-
+  
   &--hidden {
-    mask-image: url('./figma-ui2-icons.svg#hidden');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#hidden');
+    mask-image: var(--icon-hidden);
+    -webkit-mask-image: var(--icon-hidden);
   }
-
+  
   &--horizontal-padding {
-    mask-image: url('./figma-ui2-icons.svg#horizontal-padding');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#horizontal-padding');
+    mask-image: var(--icon-horizontal-padding);
+    -webkit-mask-image: var(--icon-horizontal-padding);
   }
-
+  
   &--hyperlink {
-    mask-image: url('./figma-ui2-icons.svg#hyperlink');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#hyperlink');
+    mask-image: var(--icon-hyperlink);
+    -webkit-mask-image: var(--icon-hyperlink);
   }
-
+  
   &--image {
-    mask-image: url('./figma-ui2-icons.svg#image');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#image');
+    mask-image: var(--icon-image);
+    -webkit-mask-image: var(--icon-image);
   }
-
+  
   &--import {
-    mask-image: url('./figma-ui2-icons.svg#import');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#import');
+    mask-image: var(--icon-import);
+    -webkit-mask-image: var(--icon-import);
   }
-
+  
   &--instance {
-    mask-image: url('./figma-ui2-icons.svg#instance');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#instance');
+    mask-image: var(--icon-instance);
+    -webkit-mask-image: var(--icon-instance);
   }
-
+  
   &--key {
-    mask-image: url('./figma-ui2-icons.svg#key');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#key');
+    mask-image: var(--icon-key);
+    -webkit-mask-image: var(--icon-key);
   }
-
+  
   &--layout-align-bottom {
-    mask-image: url('./figma-ui2-icons.svg#layout-align-bottom');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-bottom');
+    mask-image: var(--icon-layout-align-bottom);
+    -webkit-mask-image: var(--icon-layout-align-bottom);
   }
-
+  
   &--layout-align-horizontal-centers {
-    mask-image: url('./figma-ui2-icons.svg#layout-align-horizontal-centers');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-horizontal-centers');
+    mask-image: var(--icon-layout-align-horizontal-centers);
+    -webkit-mask-image: var(--icon-layout-align-horizontal-centers);
   }
-
+  
   &--layout-align-left {
-    mask-image: url('./figma-ui2-icons.svg#layout-align-left');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-left');
+    mask-image: var(--icon-layout-align-left);
+    -webkit-mask-image: var(--icon-layout-align-left);
   }
-
+  
   &--layout-align-right {
-    mask-image: url('./figma-ui2-icons.svg#layout-align-right');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-right');
+    mask-image: var(--icon-layout-align-right);
+    -webkit-mask-image: var(--icon-layout-align-right);
   }
-
+  
   &--layout-align-top {
-    mask-image: url('./figma-ui2-icons.svg#layout-align-top');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-top');
+    mask-image: var(--icon-layout-align-top);
+    -webkit-mask-image: var(--icon-layout-align-top);
   }
-
+  
   &--layout-align-vertical-centers {
-    mask-image: url('./figma-ui2-icons.svg#layout-align-vertical-centers');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-align-vertical-centers');
+    mask-image: var(--icon-layout-align-vertical-centers);
+    -webkit-mask-image: var(--icon-layout-align-vertical-centers);
   }
-
+  
   &--layout-grid-columns {
-    mask-image: url('./figma-ui2-icons.svg#layout-grid-columns');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-grid-columns');
+    mask-image: var(--icon-layout-grid-columns);
+    -webkit-mask-image: var(--icon-layout-grid-columns);
   }
-
+  
   &--layout-grid-rows {
-    mask-image: url('./figma-ui2-icons.svg#layout-grid-rows');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-grid-rows');
+    mask-image: var(--icon-layout-grid-rows);
+    -webkit-mask-image: var(--icon-layout-grid-rows);
   }
-
+  
   &--layout-grid-uniform {
-    mask-image: url('./figma-ui2-icons.svg#layout-grid-uniform');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#layout-grid-uniform');
+    mask-image: var(--icon-layout-grid-uniform);
+    -webkit-mask-image: var(--icon-layout-grid-uniform);
   }
-
+  
   &--library {
-    mask-image: url('./figma-ui2-icons.svg#library');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#library');
+    mask-image: var(--icon-library);
+    -webkit-mask-image: var(--icon-library);
   }
-
+  
   &--link-broken {
-    mask-image: url('./figma-ui2-icons.svg#link-broken');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#link-broken');
+    mask-image: var(--icon-link-broken);
+    -webkit-mask-image: var(--icon-link-broken);
   }
-
+  
   &--link-connected {
-    mask-image: url('./figma-ui2-icons.svg#link-connected');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#link-connected');
+    mask-image: var(--icon-link-connected);
+    -webkit-mask-image: var(--icon-link-connected);
   }
-
+  
   &--list-detailed {
-    mask-image: url('./figma-ui2-icons.svg#list-detailed');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#list-detailed');
+    mask-image: var(--icon-list-detailed);
+    -webkit-mask-image: var(--icon-list-detailed);
   }
-
+  
   &--list-tile {
-    mask-image: url('./figma-ui2-icons.svg#list-tile');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#list-tile');
+    mask-image: var(--icon-list-tile);
+    -webkit-mask-image: var(--icon-list-tile);
   }
-
+  
   &--list {
-    mask-image: url('./figma-ui2-icons.svg#list');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#list');
+    mask-image: var(--icon-list);
+    -webkit-mask-image: var(--icon-list);
   }
-
+  
   &--lock-off {
-    mask-image: url('./figma-ui2-icons.svg#lock-off');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#lock-off');
+    mask-image: var(--icon-lock-off);
+    -webkit-mask-image: var(--icon-lock-off);
   }
-
+  
   &--lock-on {
-    mask-image: url('./figma-ui2-icons.svg#lock-on');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#lock-on');
+    mask-image: var(--icon-lock-on);
+    -webkit-mask-image: var(--icon-lock-on);
   }
-
+  
   &--minus {
-    mask-image: url('./figma-ui2-icons.svg#minus');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#minus');
+    mask-image: var(--icon-minus);
+    -webkit-mask-image: var(--icon-minus);
   }
-
+  
   &--play {
-    mask-image: url('./figma-ui2-icons.svg#play');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#play');
+    mask-image: var(--icon-play);
+    -webkit-mask-image: var(--icon-play);
   }
-
+  
   &--plus {
-    mask-image: url('./figma-ui2-icons.svg#plus');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#plus');
+    mask-image: var(--icon-plus);
+    -webkit-mask-image: var(--icon-plus);
   }
-
+  
   &--random {
-    mask-image: url('./figma-ui2-icons.svg#random');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#random');
+    mask-image: var(--icon-random);
+    -webkit-mask-image: var(--icon-random);
   }
-
+  
   &--recent {
-    mask-image: url('./figma-ui2-icons.svg#recent');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#recent');
+    mask-image: var(--icon-recent);
+    -webkit-mask-image: var(--icon-recent);
   }
-
+  
   &--refresh {
-    mask-image: url('./figma-ui2-icons.svg#refresh');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#refresh');
+    mask-image: var(--icon-refresh);
+    -webkit-mask-image: var(--icon-refresh);
   }
-
+  
   &--reset {
-    mask-image: url('./figma-ui2-icons.svg#reset');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#reset');
+    mask-image: var(--icon-reset);
+    -webkit-mask-image: var(--icon-reset);
   }
-
+  
   &--resize-to-fit {
-    mask-image: url('./figma-ui2-icons.svg#resize-to-fit');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#resize-to-fit');
+    mask-image: var(--icon-resize-to-fit);
+    -webkit-mask-image: var(--icon-resize-to-fit);
   }
-
+  
   &--resolve-filled {
-    mask-image: url('./figma-ui2-icons.svg#resolve-filled');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#resolve-filled');
+    mask-image: var(--icon-resolve-filled);
+    -webkit-mask-image: var(--icon-resolve-filled);
   }
-
+  
   &--resolve {
-    mask-image: url('./figma-ui2-icons.svg#resolve');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#resolve');
+    mask-image: var(--icon-resolve);
+    -webkit-mask-image: var(--icon-resolve);
   }
-
+  
   &--reverse {
-    mask-image: url('./figma-ui2-icons.svg#reverse');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#reverse');
+    mask-image: var(--icon-reverse);
+    -webkit-mask-image: var(--icon-reverse);
   }
-
+  
   &--search-large {
-    mask-image: url('./figma-ui2-icons.svg#search-large');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#search-large');
+    mask-image: var(--icon-search-large);
+    -webkit-mask-image: var(--icon-search-large);
   }
-
+  
   &--search {
-    mask-image: url('./figma-ui2-icons.svg#search');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#search');
+    mask-image: var(--icon-search);
+    -webkit-mask-image: var(--icon-search);
   }
-
+  
   &--settings {
-    mask-image: url('./figma-ui2-icons.svg#settings');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#settings');
+    mask-image: var(--icon-settings);
+    -webkit-mask-image: var(--icon-settings);
   }
-
+  
   &--share {
-    mask-image: url('./figma-ui2-icons.svg#share');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#share');
+    mask-image: var(--icon-share);
+    -webkit-mask-image: var(--icon-share);
   }
-
+  
   &--smiley {
-    mask-image: url('./figma-ui2-icons.svg#smiley');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#smiley');
+    mask-image: var(--icon-smiley);
+    -webkit-mask-image: var(--icon-smiley);
   }
-
+  
   &--sort-alpha-asc {
-    mask-image: url('./figma-ui2-icons.svg#sort-alpha-asc');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#sort-alpha-asc');
+    mask-image: var(--icon-sort-alpha-asc);
+    -webkit-mask-image: var(--icon-sort-alpha-asc);
   }
-
+  
   &--sort-alpha-dsc {
-    mask-image: url('./figma-ui2-icons.svg#sort-alpha-dsc');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#sort-alpha-dsc');
+    mask-image: var(--icon-sort-alpha-dsc);
+    -webkit-mask-image: var(--icon-sort-alpha-dsc);
   }
-
+  
   &--sort-top-bottom {
-    mask-image: url('./figma-ui2-icons.svg#sort-top-bottom');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#sort-top-bottom');
+    mask-image: var(--icon-sort-top-bottom);
+    -webkit-mask-image: var(--icon-sort-top-bottom);
   }
-
+  
   &--spacing {
-    mask-image: url('./figma-ui2-icons.svg#spacing');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#spacing');
+    mask-image: var(--icon-spacing);
+    -webkit-mask-image: var(--icon-spacing);
   }
-
+  
   &--star-off {
-    mask-image: url('./figma-ui2-icons.svg#star-off');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#star-off');
+    mask-image: var(--icon-star-off);
+    -webkit-mask-image: var(--icon-star-off);
   }
-
+  
   &--star-on {
-    mask-image: url('./figma-ui2-icons.svg#star-on');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#star-on');
+    mask-image: var(--icon-star-on);
+    -webkit-mask-image: var(--icon-star-on);
   }
-
+  
   &--stroke-weight {
-    mask-image: url('./figma-ui2-icons.svg#stroke-weight');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#stroke-weight');
+    mask-image: var(--icon-stroke-weight);
+    -webkit-mask-image: var(--icon-stroke-weight);
   }
-
+  
   &--styles {
-    mask-image: url('./figma-ui2-icons.svg#styles');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#styles');
+    mask-image: var(--icon-styles);
+    -webkit-mask-image: var(--icon-styles);
   }
-
+  
   &--swap {
-    mask-image: url('./figma-ui2-icons.svg#swap');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#swap');
+    mask-image: var(--icon-swap);
+    -webkit-mask-image: var(--icon-swap);
   }
-
+  
   &--theme {
-    mask-image: url('./figma-ui2-icons.svg#theme');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#theme');
+    mask-image: var(--icon-theme);
+    -webkit-mask-image: var(--icon-theme);
   }
-
+  
   &--tidy-up-grid {
-    mask-image: url('./figma-ui2-icons.svg#tidy-up-grid');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#tidy-up-grid');
+    mask-image: var(--icon-tidy-up-grid);
+    -webkit-mask-image: var(--icon-tidy-up-grid);
   }
-
+  
   &--tidy-up-list-horizontal {
-    mask-image: url('./figma-ui2-icons.svg#tidy-up-list-horizontal');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#tidy-up-list-horizontal');
+    mask-image: var(--icon-tidy-up-list-horizontal);
+    -webkit-mask-image: var(--icon-tidy-up-list-horizontal);
   }
-
+  
   &--tidy-up-list-vertical {
-    mask-image: url('./figma-ui2-icons.svg#tidy-up-list-vertical');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#tidy-up-list-vertical');
+    mask-image: var(--icon-tidy-up-list-vertical);
+    -webkit-mask-image: var(--icon-tidy-up-list-vertical);
   }
-
+  
   &--timer {
-    mask-image: url('./figma-ui2-icons.svg#timer');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#timer');
+    mask-image: var(--icon-timer);
+    -webkit-mask-image: var(--icon-timer);
   }
-
+  
   &--trash {
-    mask-image: url('./figma-ui2-icons.svg#trash');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#trash');
+    mask-image: var(--icon-trash);
+    -webkit-mask-image: var(--icon-trash);
   }
-
+  
   &--vertical-padding {
-    mask-image: url('./figma-ui2-icons.svg#vertical-padding');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#vertical-padding');
+    mask-image: var(--icon-vertical-padding);
+    -webkit-mask-image: var(--icon-vertical-padding);
   }
-
+  
   &--visible {
-    mask-image: url('./figma-ui2-icons.svg#visible');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#visible');
+    mask-image: var(--icon-visible);
+    -webkit-mask-image: var(--icon-visible);
   }
-
+  
   &--warning-large {
-    mask-image: url('./figma-ui2-icons.svg#warning-large');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#warning-large');
+    mask-image: var(--icon-warning-large);
+    -webkit-mask-image: var(--icon-warning-large);
   }
-
+  
   &--warning {
-    mask-image: url('./figma-ui2-icons.svg#warning');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#warning');
+    mask-image: var(--icon-warning);
+    -webkit-mask-image: var(--icon-warning);
   }
-
+  
   &--repository {
-    mask-image: url('./figma-ui2-icons.svg#repository');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#repository');
+    mask-image: var(--icon-repository);
+    -webkit-mask-image: var(--icon-repository);
   }
-
+  
   &--info {
-    mask-image: url('./figma-ui2-icons.svg#info');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#info');
+    mask-image: var(--icon-info);
+    -webkit-mask-image: var(--icon-info);
   }
-
+  
   &--resize-grip {
-    mask-image: url('./figma-ui2-icons.svg#resize-grip');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#resize-grip');
+    mask-image: var(--icon-resize-grip);
+    -webkit-mask-image: var(--icon-resize-grip);
   }
-
+  
   &--spinner {
-    mask-image: url('./figma-ui2-icons.svg#spinner');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#spinner');
+    mask-image: var(--icon-spinner);
+    -webkit-mask-image: var(--icon-spinner);
     animation: rotating 1s linear infinite;
   }
-
+  
   &--upward {
-    mask-image: url('./figma-ui2-icons.svg#upward');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#upward');
+    mask-image: var(--icon-upward);
+    -webkit-mask-image: var(--icon-upward);
   }
-
+  
   &--user {
-    mask-image: url('./figma-ui2-icons.svg#user');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#user');
+    mask-image: var(--icon-user);
+    -webkit-mask-image: var(--icon-user);
   }
-
+  
   &--target {
-    mask-image: url('./figma-ui2-icons.svg#target');
-    -webkit-mask-image: url('./figma-ui2-icons.svg#target');
+    mask-image: var(--icon-target);
+    -webkit-mask-image: var(--icon-target);
   }
 }
 
