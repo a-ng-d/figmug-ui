@@ -4,7 +4,7 @@
   list-style-type: none;
 
   &--scrollable {
-    padding: 1px 0;
+    padding: var(--size-unit) 0;
     height: 100%;
     overflow-y: auto;
   }

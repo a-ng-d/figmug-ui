@@ -34,8 +34,8 @@
   --knob-input-top: calc(var(--size-xxsmall) * -1);
   --knob-input-shadow: var(--shadow-floating-window);
   --knob-input-border-color: var(--figma-color-border);
-  --knob-input-border-width: 1px;
-  --knob-input-border-offset: -1px;
+  --knob-input-border-width: var(--size-unit);
+  --knob-input-border-offset: var(--size-neg-unit);
   --knob-input-border-radius: var(--border-radius-med);
   --knob-input-background-color: var(--figma-color-bg);
   --knob-input-padding: var(--size-xunit);

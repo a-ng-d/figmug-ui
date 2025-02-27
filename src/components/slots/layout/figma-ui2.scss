@@ -1,6 +1,6 @@
 :root[data-theme='figma-ui2'] {
   --layout-block-padding: var(--size-xxsmall) 0;
-  --layout-block-border: 1px solid var(--figma-color-border-disabled);
+  --layout-block-border: var(--size-unit) solid var(--figma-color-border-disabled);
 
   --layout-list-padding: padding: var(--size-xxsmall) 0 0 0;
 

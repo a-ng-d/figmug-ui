@@ -20,20 +20,20 @@
   --select-box-margin: 0 10px 0 -8px;
   --select-box-outline: none;
   --select-box-tick-icon: url('data:image/svg+xml;utf8,%3Csvg%20fill%3D%22none%22%20height%3D%227%22%20viewBox%3D%220%200%208%207%22%20width%3D%228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22m1.17647%201.88236%201.88235%201.88236%203.76471-3.76472%201.17647%201.17648-4.94118%204.9412-3.05882-3.05884z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
-  --select-box-tick-position: 1px 2px;
+  --select-box-tick-position: var(--size-unit) 2px;
 
   --select-box-background: var(--figma-color-bg);
   --select-box-background-checked: var(--figma-color-bg-selected-strong);
-  --select-box-border: 1px solid var(--figma-color-icon);
-  --select-box-border-checked: 1px solid var(--figma-color-bg-brand);
+  --select-box-border: var(--size-unit) solid var(--figma-color-icon);
+  --select-box-border-checked: var(--size-unit) solid var(--figma-color-bg-brand);
   --select-box-border-secondary: none;
   --select-box-border-secondary-focus: 2px solid
     var(--figma-color-border-selected-strong);
 
   --select-box-background-disabled: var(--figma-color-bg);
-  --select-box-border-disabled: 1px solid var(--figma-color-icon-disabled);
+  --select-box-border-disabled: var(--size-unit) solid var(--figma-color-icon-disabled);
   --select-box-background-checked-disabled: var(--figma-color-bg-selected);
-  --select-box-border-checked-disabled: 1px solid
+  --select-box-border-checked-disabled: var(--size-unit) solid
     var(--figma-color-border-onselected);
 
   /* Switch */
@@ -46,7 +46,7 @@
   --select-toggle-radius: 8px;
   --select-toggle-margin: 0 8px 0 -8px;
   --select-toggle-background: var(--figma-color-bg-disabled);
-  --select-toggle-border: 1px solid var(--figma-color-bg-disabled);
+  --select-toggle-border: var(--size-unit) solid var(--figma-color-bg-disabled);
 
   --select-toggle-knob-height: 10px;
   --select-toggle-knob-width: 10px;
@@ -57,7 +57,7 @@
   --select-toggle-knob-transform: translateX(0) translateY(-50%);
 
   --select-toggle-background-checked: var(--figma-color-bg-selected-strong);
-  --select-toggle-border-checked: 1px solid
+  --select-toggle-border-checked: var(--size-unit) solid
     var(--figma-color-bg-selected-strong);
   --select-toggle-border-secondary: none;
   --select-toggle-border-secondary-focus: 2px solid
@@ -66,11 +66,11 @@
   --select-toggle-knob-background-checked: var(--figma-color-icon-onbrand);
 
   --select-toggle-background-disabled: var(--figma-color-bg-disabled);
-  --select-toggle-border-disabled: 1px solid var(--figma-color-bg-disabled);
+  --select-toggle-border-disabled: var(--size-unit) solid var(--figma-color-bg-disabled);
   --select-toggle-background-checked-disabled: var(
     --figma-color-bg-brand-secondary
   );
-  --select-toggle-border-checked-disabled: 1px solid
+  --select-toggle-border-checked-disabled: var(--size-unit) solid
     var(--figma-color-bg-brand-secondary);
   --select-toggle-knob-background-disabled: var(--figma-color-icon-ondisabled);
   --select-toggle-knob-background-checked-disabled: var(
@@ -94,16 +94,16 @@
 
   --select-button-background: var(--figma-color-bg);
   --select-button-background-checked: var(--figma-color-bg);
-  --select-button-border: 1px solid var(--figma-color-icon);
-  --select-button-border-checked: 1px solid var(--figma-color-icon);
+  --select-button-border: var(--size-unit) solid var(--figma-color-icon);
+  --select-button-border-checked: var(--size-unit) solid var(--figma-color-icon);
   --select-button-border-secondary: none;
   --select-button-border-secondary-focus: 2px solid
     var(--figma-color-border-selected-strong);
 
   --select-button-background-disabled: var(--figma-color-bg);
-  --select-button-border-disabled: 1px solid var(--figma-color-icon-disabled);
+  --select-button-border-disabled: var(--size-unit) solid var(--figma-color-icon-disabled);
   --select-button-background-checked-disabled: var(--figma-color-bg);
-  --select-button-border-checked-disabled: 1px solid
+  --select-button-border-checked-disabled: var(--size-unit) solid
     var(--figma-color-bg-disabled);
   --select-button-icon-disabled: var(--figma-color-icon-disabled);
 }

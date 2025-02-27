@@ -14,7 +14,7 @@
   --popin-header-height: var(--size-xlarge);
   --popin-header-gap: var(--size-xxsmall);
   --popin-header-padding: 0 var(--size-xxsmall);
-  --popin-header-border: 1px solid var(--figma-color-border);
+  --popin-header-border: var(--size-unit) solid var(--figma-color-border);
 
   --popin-footer-padding: var(--size-xsmall) var(--size-xsmall)
     var(--size-xsmall) var(--size-xsmall);
