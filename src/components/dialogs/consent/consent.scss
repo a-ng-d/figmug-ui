@@ -1,14 +1,4 @@
-:root {
-  --consent-banner-gap: var(--size-xxsmall) 0;
-  --consent-banner-padding: var(--size-xxsmall) var(--size-xsmall);
-  --consent-banner-max-height: calc(100% - var(--size-large));
-  --consent-banner-max-width: 400px;
-  --consent-banner-background-color: var(--figma-color-bg);
-  --consent-banner-border: var(--size-unit) solid var(--figma-color-border);
-
-  --consent-list-padding: 0 0 0 var(--size-xsmall);
-  --consent-list-max-width: 400px;
-}
+@import 'figma-ui2.scss';
 
 .consent {
   display: flex;

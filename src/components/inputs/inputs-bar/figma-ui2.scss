@@ -1,0 +1,10 @@
+:root[data-theme='figma-ui2'] {
+  --inputs-bar-gap: var(--size-xxsmall);
+  --inputs-bar-width: var(--size-xlarge);
+  --inputs-bar-padding: 0 1px;
+  --inputs-bar-margin: 0 -1px;
+  --inputs-bar-radius: var(--border-radius-small);
+
+  --inputs-bar-border-color: var(--figma-color-border-selected);
+  --inputs-bar-border-width: var(--size-xunit);
+}

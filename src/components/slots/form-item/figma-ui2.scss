@@ -1,0 +1,10 @@
+:root[data-theme='figma-ui2'] {
+  --form-item-gap: var(--size-xxsmall);
+  --form-item-padding: 0 0 0 var(--size-xxsmall);
+  --form-item-text-color: var(--figma-color-text);
+  --form-item-label-width: 96px;
+  --form-item-helper-padding: 0;
+
+  --form-item-text-color-disabled: var(--figma-color-text-disabled);
+  --form-item-icon-color-disabled: var(--figma-color-icon-disabled);
+}

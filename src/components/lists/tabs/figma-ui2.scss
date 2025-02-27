@@ -1,0 +1,19 @@
+:root[data-theme='figma-ui2'] {
+  --tab-padding: var(--size-xxxsmall) var(--size-xxsmall);
+  --tab-gap: 0;
+  --tab-radius: 0;
+  --tab-background-color: var(--figma-color-bg);
+  --tab-text-color: var(--figma-color-text-secondary);
+  --tab-text-weight: var(--font-weight-medium);
+
+  --tab-notification-inset: var(--size-unit) var(--size-unit) auto auto;
+  --tab-notification-width: var(--size-xxxsmall);
+  --tab-notification-height: var(--size-xxxsmall);
+  --tab-notification-radius: var(--border-radius-small);
+  --tab-notification-background: var(--figma-color-icon);
+
+  --tab-text-color-hover: var(--figma-color-text);
+  --tab-text-weight-hover: var(--font-weight-medium);
+  --tab-text-color-active: var(--figma-color-text);
+  --tab-text-weight-active: var(--font-weight-bold);
+}

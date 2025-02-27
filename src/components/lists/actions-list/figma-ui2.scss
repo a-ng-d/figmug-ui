@@ -1,0 +1,68 @@
+:root[data-theme='figma-ui2'] {
+  /* Base */
+  --actions-list-min-width: 224px;
+  --actions-list-padding: var(--size-xxsmall) var(--size-unit);
+  --actions-list-background-color: var(--grey-1000);
+  --actions-list-border-width: var(--size-unit);
+  --actions-list-border-color: var(--grey-800);
+  --actions-list-border-offset: var(--size-neg-unit);
+  --actions-list-shadow: var(--shadow-floating-window);
+
+  --actions-list-item-height: var(--size-small);
+  --actions-list-item-padding: 0 var(--size-xsmall) 0 var(--size-medium);
+  --actions-list-item-gap: var(--size-xxsmall);
+  --actions-list-item-radius: 0;
+  --actions-list-item-background-color: transparent;
+  --actions-list-item-text-font-family: var(--font-stack);
+  --actions-list-item-text-font-size: var(--font-size-small);
+  --actions-list-item-text-font-weight: var(--font-weight-normal);
+  --actions-list-item-text-letterspacing: var(--font-letter-spacing-neg-xsmall);
+  --actions-list-item-text-line-height: var(--font-line-height);
+  --actions-list-item-text-color: var(--grey-0);
+
+  --actions-list-spot-height: var(--size-xsmall);
+  --actions-list-spot-background-color: var(--grey-1000);
+  --actions-list-spot-icon-color: var(--grey-0);
+  --actions-list-spot-inset-top: 0 var(--size-unit) auto var(--size-unit);
+  --actions-list-spot-inset-bottom: auto var(--size-unit) 0 var(--size-unit);
+  --actions-list-spot-border-width: var(--size-unit);
+  --actions-list-spot-border-color: var(--grey-800);
+
+  --actions-list-tick-width: var(--size-xsmall);
+  --actions-list-tick-height: var(--size-xsmall);
+  --actions-list-tick-color: var(--grey-0);
+
+  --actions-list-caret-width: var(--size-xsmall);
+  --actions-list-caret-height: var(--size-xsmall);
+  --actions-list-caret-color: var(--grey-0);
+
+  --actions-list-submenu-inset-left: -8px var(--size-neg-xunit) auto auto;
+  --actions-list-submenu-inset-right: -8px auto auto var(--size-neg-xunit);
+
+  --actions-list-divider-margin: 11px 0 12px 0;
+  --actions-list-divider-height: var(--size-unit);
+  --actions-list-divider-background-color: var(--grey-900);
+
+  /* States */
+  --actions-list-item-background-color-hover: var(
+    --figma-color-bg-selected-strong
+  );
+  --actions-list-item-text-color-hover: var(--grey-0);
+  --actions-list-tick-color-hover: var(--grey-0);
+  --actions-list-caret-color-hover: var(--grey-0);
+
+  --actions-list-item-background-color-focus: var(
+    --figma-color-bg-selected-strong
+  );
+  --actions-list-item-text-color-focus: var(--grey-0);
+  --actions-list-tick-color-focus: var(--grey-0);
+  --actions-list-caret-color-focus: var(--grey-0);
+
+  --actions-list-item-padding-selected: 0 var(--size-xsmall) 0
+    var(--size-xxsmall);
+
+  --actions-list-item-background-color-disabled: var(--grey-1000);
+  --actions-list-item-text-color-disabled: var(--grey-600);
+  --actions-list-tick-color-disabled: var(--grey-600);
+  --actions-list-caret-color-disabled: var(--grey-600);
+}

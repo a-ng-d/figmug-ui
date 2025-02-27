@@ -1,7 +1,4 @@
-:root {
-  --list-background-color: var(--figma-color-bg);
-  --list-padding: var(--size-unit) 0;
-}
+@import 'figma-ui2.scss';
 
 .list {
   background-color: var(--list-background-color);

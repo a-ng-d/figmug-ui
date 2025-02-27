@@ -1,19 +1,4 @@
-:root {
-  --draggable-item-template-rows: var(--size-medium);
-  --draggable-item-template-columns: repeat(76, 1fr);
-  --draggable-item-padding: var(--size-xunit) var(--size-xsmall);
-  --draggable-item-background-color: var(--figma-color-bg);
-
-  --draggable-item-ghost-color: var(--figma-color-border-selected);
-  --draggable-item-ghost-height: var(--size-xunit);
-  --draggable-item-ghost-inset: var(--size-neg-unit);
-
-  --draggable-item-background-color-selected: var(--figma-color-bg-selected);
-  --draggable-item-background-color-pressed: var(--figma-color-bg-pressed);
-
-  --draggable-item-param-width-compact: 112px;
-  --draaggagle-item-param-width-square: var(--size-medium);
-}
+@import 'figma-ui2.scss';
 
 .draggable-item {
   display: grid;
@@ -38,9 +23,7 @@
       --figma-color-bg-selected-secondary
     );
 
-    --icon-button-background-color-disabled: var(
-      --figma-color-bg-selected
-    );
+    --icon-button-background-color-disabled: var(--figma-color-bg-selected);
   }
 
   &[draggable='true']:active {

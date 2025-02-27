@@ -1,13 +1,4 @@
-:root {
-  --section-gap: var(--size-xxxsmall);
-  --section-padding: var(--size-xxsmall) 0;
-  --section-background-color: var(--figma-color-bg);
-
-  --section-child-padding: 0 var(--size-xsmall);
-  --section-child-padding-large: 0 var(--size-small);
-  --section-child-padding-tight: 0 var(--size-xxsmall);
-  --section-child-padding-none: 0;
-}
+@import 'figma-ui2.scss';
 
 .section {
   display: flex;

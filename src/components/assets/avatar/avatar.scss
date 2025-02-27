@@ -1,8 +1,4 @@
-:root {
-  --avatar-width: var(--size-small);
-  --avatar-height: var(--size-small);
-  --avatar-radius: var(--size-small);
-}
+@import 'figma-ui2.scss';
 
 .user {
   display: flex;

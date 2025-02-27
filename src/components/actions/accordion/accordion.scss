@@ -1,23 +1,4 @@
-:root {
-  --accordion-padding: var(--size-xxsmall) 0;
-  --accordion-border: var(--size-unit) solid var(--figma-color-border-disabled);
-
-  --accordion-row-gap: var(--size-xsmall);
-  --accordion-row-height: var(--size-medium);
-  --accordion-row-padding: var(--size-xxxsmall) 0;
-
-  --accordion-text-color: var(--figma-color-text-secondary);
-  --accordion-icon-color: var(--figma-color-icon-secondary);
-
-  --accordion-text-color-hover: var(--figma-color-text);
-  --accordion-icon-color-hover: var(--figma-color-icon);
-
-  --accordion-icon-color-expanded: var(--figma-color-icon);
-  --accordion-text-color-expanded: var(--figma-color-text);
-
-  --accordion-icon-color-disabled: var(--figma-color-icon-disabled);
-  --accordion-text-color-disabled: var(--figma-color-text-disabled);
-}
+@import 'figma-ui2.scss';
 
 .accordion {
   cursor: default;

@@ -1,17 +1,4 @@
-:root {
-  --tooltip-min-width: 148px;
-  --tooltip-max-width: 200px;
-  --tooltip-gap: var(--size-xxsmall);
-  --tooltip-radius: var(--border-radius-small);
-  --tooltip-padding: var(--size-xxxsmall) var(--size-xxsmall);
-  --tooltip-arrow-size: var(--size-xxsmall);
-  --tooltip-background-color: var(--grey-1000);
-  --tooltip-border-color: var(--grey-800);
-  --tooltip-border-width: var(--size-unit);
-  --tooltip-border-offset: var(--size-neg-unit);
-  --tooltip-text-color: var(--grey-0);
-  --tooltip-shadow: var(--shadow-hud);
-}
+@import 'figma-ui2.scss';
 
 .tooltip {
   position: absolute;

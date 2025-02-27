@@ -1,8 +1,4 @@
-:root {
-  --drawer-background-color: var(--figma-color-bg);
-  --drawer-knob-size: var(--size-xxsmall);
-  --drawer-knob-position: var(--size-neg-xxxsmall);
-}
+@import 'figma-ui2.scss';
 
 .drawer {
   display: flex;

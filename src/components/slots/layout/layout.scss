@@ -1,11 +1,4 @@
-:root {
-  --layout-block-padding: var(--size-xxsmall) 0;
-  --layout-block-border: 1px solid var(--figma-color-border-disabled);
-
-  --layout-list-padding: padding: var(--size-xxsmall) 0 0 0;
-
-  --layout-distributed-gap: var(--size-small);
-}
+@import 'figma-ui2.scss';
 
 .layout {
   display: flex;

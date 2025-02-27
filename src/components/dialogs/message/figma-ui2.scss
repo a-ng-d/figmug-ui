@@ -1,0 +1,18 @@
+:root[data-theme='figma-ui2'] {
+  --message-padding: 0 calc(var(--size-xsmall) + var(--size-xxxsmall));
+  --message-gap: var(--size-xxsmall);
+  --message-text-color: var(--figma-color-text);
+  --message-icon-color: var(--figma-color-icon);
+
+  --message-message-padding: var(--size-xxsmall) 0;
+
+  --message-ticker-height: var(--size-medium);
+  --message-ticker-max-width: 640px;
+  --message-ticker-gap: var(--size-medium);
+  --message-ticker-padding: 0 var(--size-xsmall);
+  --message-ticker-mask-background-color: var(--figma-color-bg);
+  --message-ticker-mask-width: var(--size-xsmall);
+
+  --message-text-color-disabled: var(--figma-color-text-disabled);
+  --message-icon-color-disabled: var(--figma-color-icon-disabled);
+}

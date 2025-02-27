@@ -1,0 +1,41 @@
+:root[data-theme='figma-ui2'] {
+  /* Base */
+  --dropdown-height: var(--size-medium);
+  --dropdown-padding: 0 var(--size-xxxsmall) 0 var(--size-xxsmall);
+  --dropdown-radius: var(--border-radius-small);
+  --dropdown-gap: var(--size-xxxsmall);
+
+  --dropdown-background-color: var(--figma-color-bg);
+
+  --dropdown-border-color: transparent;
+  --dropdown-border-width: 0;
+  --dropdown-border-offset: 0;
+
+  --dropdown-text-color: var(--figma-color-text);
+
+  --dropdown-caret-width: var(--size-xsmall);
+  --dropdown-caret-height: var(--size-xsmall);
+  --dropdown-caret-color: var(--figma-color-icon-disabled);
+
+  /* States */
+  --dropdown-background-color-hover: var(--figma-color-bg);
+  --dropdown-border-color-hover: var(--figma-color-border);
+  --dropdown-border-width-hover: var(--size-unit);
+  --dropdown-border-offset-hover: var(--size-neg-unit);
+  --dropdown-caret-color-hover: var(--figma-color-icon);
+  --dropdown-text-color-hover: var(--figma-color-text);
+
+  --dropdown-background-color-focus: var(--figma-color-bg);
+  --dropdown-border-color-focus: var(--figma-color-border-selected);
+  --dropdown-border-width-focus: var(--size-xunit);
+  --dropdown-border-offset-focus: var(--size-neg-xunit);
+  --dropdown-caret-color-focus: var(--figma-color-icon);
+  --dropdown-text-color-focus: var(--figma-color-text);
+
+  --dropdown-background-color-disabled: var(--figma-color-bg);
+  --dropdown-border-color-disabled: transparent;
+  --dropdown-border-width-disabled: 0;
+  --dropdown-border-offset-disabled: 0;
+  --dropdown-caret-color-disabled: var(--figma-color-icon-disabled);
+  --dropdown-text-color-disabled: var(--figma-color-text-disabled);
+}

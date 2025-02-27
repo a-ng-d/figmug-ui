@@ -1,12 +1,4 @@
-:root {
-  --bar-min-height: var(--size-large);
-  --bar-gap: var(--size-xxxsmall);
-
-  --bar-height-compact: var(--size-medium);
-
-  --bar-padding-top: var(--size-xxxsmall) !important;
-  --bar-padding-bottom: var(--size-xxxsmall) !important;
-}
+@import 'figma-ui2.scss';
 
 .bar {
   display: flex;

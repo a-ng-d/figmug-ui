@@ -1,16 +1,4 @@
-:root {
-  --dialog-padding: var(--size-medium);
-  --dialog-background-color: rgba(0, 0, 0, 0.5);
-
-  --dialog-cover-width: 248px;
-  --dialog-cover-padding: var(--size-xsmall);
-
-  --dialog-text-gap: var(--size-xxsmall);
-  --dialog-text-padding: var(--size-xsmall);
-
-  --dialog-form-gap: var(--size-xxxsmall);
-  --dialog-form-padding: var(--size-xxsmall) var(--size-xxsmall);
-}
+@import 'figma-ui2.scss';
 
 .dialog {
   display: flex;

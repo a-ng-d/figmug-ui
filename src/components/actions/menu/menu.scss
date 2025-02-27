@@ -1,9 +1,4 @@
-:root {
-  --menu-top-right: calc(var(--size-xxsmall) * -1);
-  --menu-top-left: calc(var(--size-xxsmall) * -1);
-  --menu-bottom-right: calc(var(--size-medium) + var(--size-xxsmall));
-  --menu-bottom-left: calc(var(--size-medium) + var(--size-xxsmall));
-}
+@import 'figma-ui2.scss';
 
 .menu {
   position: relative;

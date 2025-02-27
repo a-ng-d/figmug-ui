@@ -1,9 +1,4 @@
-:root {
-  --icon-width: var(--size-medium);
-  --icon-height: var(--size-medium);
-  --icon-picto-color: var(--figma-color-icon);
-  --icon-letter-color: var(--figma-color-text);
-}
+@import 'figma-ui2.scss';
 
 .icon-box {
   display: flex;
