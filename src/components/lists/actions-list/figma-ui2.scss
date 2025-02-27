@@ -2,9 +2,10 @@
   /* Base */
   --actions-list-min-width: 224px;
   --actions-list-padding: var(--size-xxsmall) var(--size-unit);
+  --actions-list-radius: var(--border-radius-xsmall);
   --actions-list-background-color: var(--grey-1000);
-  --actions-list-border-width: var(--size-unit);
   --actions-list-border-color: var(--grey-800);
+  --actions-list-border-width: var(--size-unit);
   --actions-list-border-offset: var(--size-neg-unit);
   --actions-list-shadow: var(--shadow-floating-window);
 
@@ -20,7 +21,11 @@
   --actions-list-item-text-line-height: var(--font-line-height);
   --actions-list-item-text-color: var(--grey-0);
 
+  --actions-list-patch-right: 0;
+  --actions-list-patch-width: 0;
+
   --actions-list-spot-height: var(--size-xsmall);
+  --actions-list-spot-radius: var(--border-radius-xsmall);
   --actions-list-spot-background-color: var(--grey-1000);
   --actions-list-spot-icon-color: var(--grey-0);
   --actions-list-spot-inset-top: 0 var(--size-unit) auto var(--size-unit);

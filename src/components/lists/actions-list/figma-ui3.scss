@@ -1,17 +1,18 @@
 :root[data-theme='figma-ui3'] {
   /* Base */
   --actions-list-min-width: 224px;
-  --actions-list-padding: var(--size-xxsmall) var(--size-unit);
+  --actions-list-padding: var(--size-xxsmall);
+  --actions-list-radius: var(--border-radius-xlarge);
   --actions-list-background-color: var(--grey-1000);
-  --actions-list-border-width: var(--size-unit);
-  --actions-list-border-color: var(--grey-800);
-  --actions-list-border-offset: var(--size-neg-unit);
-  --actions-list-shadow: var(--shadow-floating-window);
+  --actions-list-border-color: transparent;
+  --actions-list-border-width: 0;
+  --actions-list-border-offset: 0;
+  --actions-list-shadow: var(--elevation-400-menu-panel);
 
   --actions-list-item-height: var(--size-small);
-  --actions-list-item-padding: 0 var(--size-xsmall) 0 var(--size-medium);
+  --actions-list-item-padding: 0 var(--size-xxsmall) 0 var(--size-medium);
   --actions-list-item-gap: var(--size-xxsmall);
-  --actions-list-item-radius: 0;
+  --actions-list-item-radius: var(--border-radius-large);
   --actions-list-item-background-color: transparent;
   --actions-list-item-text-font-family: var(--font-stack);
   --actions-list-item-text-font-size: var(--font-size-small);
@@ -20,13 +21,17 @@
   --actions-list-item-text-line-height: var(--font-line-height);
   --actions-list-item-text-color: var(--grey-0);
 
+  --actions-list-patch-right: var(--size-neg-xxsmall);
+  --actions-list-patch-width: var(--size-xxsmall);
+
   --actions-list-spot-height: var(--size-xsmall);
+  --actions-list-spot-radius: var(--border-radius-xlarge);
   --actions-list-spot-background-color: var(--grey-1000);
   --actions-list-spot-icon-color: var(--grey-0);
-  --actions-list-spot-inset-top: 0 var(--size-unit) auto var(--size-unit);
-  --actions-list-spot-inset-bottom: auto var(--size-unit) 0 var(--size-unit);
-  --actions-list-spot-border-width: var(--size-unit);
-  --actions-list-spot-border-color: var(--grey-800);
+  --actions-list-spot-inset-top: var(--size-unit) var(--size-unit) auto var(--size-unit);
+  --actions-list-spot-inset-bottom: auto var(--size-unit) var(--size-unit) var(--size-unit);
+  --actions-list-spot-border-width: 0;
+  --actions-list-spot-border-color: transparent;
 
   --actions-list-tick-width: var(--size-xsmall);
   --actions-list-tick-height: var(--size-xsmall);
@@ -37,7 +42,7 @@
   --actions-list-caret-color: var(--grey-0);
 
   --actions-list-submenu-inset-left: -8px var(--size-neg-xunit) auto auto;
-  --actions-list-submenu-inset-right: -8px auto auto var(--size-neg-xunit);
+  --actions-list-submenu-inset-right: -8px auto auto var(--size-neg-xxsmall);
 
   --actions-list-divider-margin: 11px 0 12px 0;
   --actions-list-divider-height: var(--size-unit);

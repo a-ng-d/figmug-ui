@@ -68,6 +68,8 @@
   .draggable-item__right-part {
     display: flex;
     max-width: 100%;
+    align-items: center;
+    gap: var(--draggable-item-gap);
   }
 
   .draggable-item__param {

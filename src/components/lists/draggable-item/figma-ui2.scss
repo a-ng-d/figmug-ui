@@ -3,6 +3,7 @@
   --draggable-item-template-columns: repeat(76, 1fr);
   --draggable-item-padding: var(--size-xunit) var(--size-xsmall);
   --draggable-item-background-color: var(--figma-color-bg);
+  --draggable-item-gap: var(--size-xxsmall);
 
   --draggable-item-ghost-color: var(--figma-color-border-selected);
   --draggable-item-ghost-height: var(--size-xunit);

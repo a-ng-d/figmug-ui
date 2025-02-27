@@ -406,6 +406,10 @@
     background-color: var(--icon-button-notification-background-color);
     width: var(--icon-button-notification-width);
     height: var(--icon-button-notification-height);
+    outline: var(--icon-button-notification-border-width) solid var(
+      --icon-button-notification-border-color
+    );
+    outline-offset: var(--icon-button-notification-border-offset);
     content: '';
   }
 
@@ -422,6 +426,9 @@
     --icon-button-notification-background-color: var(
       --icon-button-notification-background-color-hover
     );
+    --icon-button-notification-border-color: var(
+      --icon-button-notification-border-color-hover
+    );
   }
 
   &:enabled:focus {
@@ -433,6 +440,9 @@
     --icon-button-notification-background-color: var(
       --icon-button-notification-background-color-focus
     );
+    --icon-button-notification-border-color: var(
+      --icon-button-notification-border-color-focus
+    );
   }
 
   &:enabled:active {
@@ -443,6 +453,9 @@
     --icon-button-icon-color: var(--icon-button-icon-color-pressed);
     --icon-button-notification-background-color: var(
       --icon-button-notification-background-color-pressed
+    );
+    --icon-button-notification-border-color: var(
+      --icon-button-notification-border-color-pressed
     );
   }
 
@@ -457,6 +470,9 @@
     --icon-button-notification-background-color: var(
       --icon-button-notification-background-color-disabled
     );
+    --icon-button-notification-border-color: var(
+      --icon-button-notification-border-color-disabled
+    );
   }
 
   &--selected {
@@ -469,6 +485,9 @@
     --icon-button-icon-color: var(--icon-button-icon-color-selected);
     --icon-button-notification-background-color: var(
       --icon-button-notification-background-color-selected
+    );
+    --icon-button-notification-border-color: var(
+      --icon-button-notification-border-color-selected
     );
 
     &:enabled:hover {
@@ -487,6 +506,9 @@
       --icon-button-icon-color: var(--icon-button-icon-color-selected-hover);
       --icon-button-notification-background-color: var(
         --icon-button-notification-background-color-selected-hover
+      );
+      --icon-button-notification-border-color: var(
+        --icon-button-notification-border-color-selected-hover
       );
     }
 
@@ -507,6 +529,9 @@
       --icon-button-notification-background-color: var(
         --icon-button-notification-background-color-selected-focus
       );
+      --icon-button-notification-border-color: var(
+        --icon-button-notification-border-color-selected-focus
+      );
     }
 
     &:enabled:active {
@@ -526,6 +551,9 @@
       --icon-button-notification-background-color: var(
         --icon-button-notification-background-color-selected-pressed
       );
+      --icon-button-notification-border-color: var(
+        --icon-button-notification-border-color-selected-pressed
+      );
     }
 
     &:disabled {
@@ -544,6 +572,9 @@
       --icon-button-icon-color: var(--icon-button-icon-color-selected-disabled);
       --icon-button-notification-background-color: var(
         --icon-button-notification-background-color-selected-disabled
+      );
+      --icon-button-notification-border-color: var(
+        --icon-button-notification-border-color-selected-disabled
       );
     }
   }

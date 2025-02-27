@@ -16,14 +16,18 @@
     color: var(--tab-text-color);
     font-weight: var(--tab-text-weight);
 
-    &:hover {
+    &:hover:not(&--active) {
+      --tab-background-color: var(--tab-background-color-hover);
       --tab-text-color: var(--tab-text-color-hover);
       --tab-text-weight: var(--tab-text-weight-hover);
+      --tab-notification-border-color: var(--tab-notification-border-color-hover);
     }
 
     &--active {
+      --tab-background-color: var(--tab-background-color-active);
       --tab-text-color: var(--tab-text-color-active);
       --tab-text-weight: var(--tab-text-weight-active);
+      --tab-notification-border-color: var(--tab-notification-border-color-active);
     }
   }
 
@@ -31,9 +35,11 @@
     position: absolute;
     inset: var(--tab-notification-inset);
     border-radius: var(--tab-notification-radius);
-    background-color: var(--tab-notification-background);
+    background-color: var(--tab-notification-background-color);
     width: var(--tab-notification-width);
     height: var(--tab-notification-height);
+    outline: var(--tab-notification-border-width) solid var(--tab-notification-border-color);
+    outline-offset: var(--tab-notification-border-offset);
     content: '';
   }
 }

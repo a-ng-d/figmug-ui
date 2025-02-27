@@ -1,11 +1,11 @@
 :root[data-theme='figma-ui3'] {
   --draggable-window-width: 296px;
-  --draggable-window-radius: var(--border-radius-med);
-  --draggable-window-shadow: var(--shadow-floating-window);
+  --draggable-window-radius: var(--border-radius-xxlarge);
+  --draggable-window-shadow: var(--elevation-500-modal-window);
   --draggable-window-background-color: var(--figma-color-bg);
-  --draggable-window-border-color: var(--figma-color-border);
-  --draggable-window-border-width: var(--size-unit);
-  --draggable-window-border-offset: var(--size-neg-unit);
+  --draggable-window-border-color: transparent;
+  --draggable-window-border-width: 0;
+  --draggable-window-border-offset: 0;
 
   --draggable-window-content-padding: var(--size-xxsmall);
 }

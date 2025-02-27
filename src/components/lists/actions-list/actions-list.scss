@@ -3,7 +3,7 @@
 
 .select-menu {
   position: relative;
-  box-shadow: var(--action-list-shadow);
+  border-radius: var(--actions-list-radius);
 
   .select-menu__spot {
     display: flex;
@@ -13,6 +13,7 @@
     z-index: 2;
     background-color: var(--actions-list-spot-background-color);
     height: var(--actions-list-spot-height);
+    border-radius: var(--actions-list-spot-radius);
     --icon-picto-color: var(--actions-list-spot-icon-color);
 
     &--top {
@@ -43,6 +44,8 @@
     min-width: var(--actions-list-min-width);
     overflow: visible;
     user-select: none;
+    box-shadow: var(--actions-list-shadow);
+    border-radius: var(--actions-list-radius);
 
     &--scrolling {
       z-index: 1;
@@ -74,6 +77,14 @@
     height: var(--actions-list-item-height);
     user-select: none;
     --text-color-primary: var(--actions-list-item-text-color);
+
+    &:after {
+      content: '';
+      position: absolute;
+      inset: 0 var(--actions-list-patch-right) 0 auto;
+      width: var(--actions-list-patch-width);
+      background-color: transparent;
+    }
 
     &__tick {
       display: flex;

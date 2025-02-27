@@ -14,21 +14,20 @@ export interface DraggableWindowProps {
 const DraggableWindow = (props: DraggableWindowProps) => {
   const { title = 'Options', children, triggerRef, onClose } = props
   const [isDragging, setIsDragging] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [offset, setOffset] = useState({ x: 0, y: 0 })
   const windowRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (triggerRef.current?.buttonRef?.current && windowRef.current) {
-      const triggerRect =
-        triggerRef.current.buttonRef.current.getBoundingClientRect()
       const windowRect = windowRef.current.getBoundingClientRect()
-      console.log('triggerRect', triggerRect)
 
       setPosition({
         x: -windowRect.width / 2,
         y: 0,
       })
+      setIsOpen(true)
     }
   }, [triggerRef])
 
@@ -74,6 +73,7 @@ const DraggableWindow = (props: DraggableWindowProps) => {
       className={`draggable-window ${isDragging ? 'draggable-window--dragging' : ''}`}
       style={{
         transform: `translate(${position.x}px, ${position.y}px)`,
+        visibility: isOpen ? 'visible' : 'hidden',
       }}
       onMouseDown={handleMouseDown}
       ref={windowRef}
