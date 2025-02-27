@@ -1,0 +1,9 @@
+:root[data-theme='figma-ui3'] {
+  --thumbnail-width: var(--size-medium);
+  --thumbnail-height: var(--size-medium);
+  --thumbnail-border-radius: var(--border-radius-med);
+  --thumbnail-border-width: var(--size-unit);
+  --thumbnail-border-offset: var(--size-neg-unit);
+  --thumbnail-border-color: var(--figma-color-border-disabled);
+  --thumbnail-background-color: var(--figma-color-bg-secondary);
+}

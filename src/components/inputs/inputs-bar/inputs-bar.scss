@@ -1,9 +1,11 @@
 @import 'figma-ui2.scss';
+@import 'figma-ui3.scss';
 
 .inputs {
   display: flex;
   align-items: center;
   gap: var(--inputs-bar-gap);
+  --input-radius: var(--inputs-bar-input-radius);
 
   &:hover {
     --input-border-width: var(--input-border-width-hover);
@@ -15,6 +17,8 @@
     display: flex;
     position: relative;
     padding: var(--inputs-bar-padding);
+    border-radius: var(--inputs-bar-radius);
+    overflow: hidden;
     --input-number-width: var(--inputs-bar-width);
     --input-color-width: var(--inputs-bar-width);
 

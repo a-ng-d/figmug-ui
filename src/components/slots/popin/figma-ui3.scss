@@ -1,0 +1,23 @@
+:root[data-theme='figma-ui3'] {
+  --popin-breakpoint: 460px;
+  --popin-shadow: var(--elevation-500-modal-window);
+  --popin-radius: var(--border-radius-xxlarge);
+  --popin-min-width: 460px;
+  --popin-max-width: 576px;
+  --popin-min-height: 136px;
+  --popin-background-color: var(--figma-color-bg);
+  --popin-text-color: var(--figma-color-text);
+  --popin-border-color: var(--figma-color-border);
+  --popin-border-width: var(--size-unit);
+  --popin-border-offset: var(--size-neg-unit);
+
+  --popin-header-height: var(--size-xlarge);
+  --popin-header-gap: var(--size-xxsmall);
+  --popin-header-padding: 0 var(--size-xxsmall);
+  --popin-header-border: var(--size-unit) solid var(--figma-color-border);
+
+  --popin-footer-padding: var(--size-xxsmall) var(--size-xsmall);
+  --popin-footer-gap: var(--size-xxsmall);
+
+  --popin-actions-gap: var(--size-xxsmall);
+}

@@ -1,0 +1,25 @@
+:root[data-theme='figma-ui3'] {
+  --semantic-message-gap: var(--size-xxxsmall);
+  --semantic-message-padding: var(--size-xxsmall) var(--size-xxsmall)
+    var(--size-xxsmall) 0;
+  --semantic-message-border-radius: var(--border-radius-xlarge);
+  --semantic-message-background-color: var(--figma-color-bg);
+  --semantic-message-background-color-info: var(
+    --figma-color-bg-brand-tertiary
+  );
+  --semantic-message-background-color-error: var(
+    --figma-color-bg-danger-tertiary
+  );
+  --semantic-message-background-color-success: var(
+    --figma-color-bg-success-tertiary
+  );
+  --semantic-message-background-color-warning: var(
+    --figma-color-bg-warning-tertiary
+  );
+
+  --semantic-message-padding-anchored: var(--size-small) var(--size-xsmall)
+    var(--size-small) 0;
+  --semantic-message-padding-vertical: var(--size-xsmall) var(--size-xxxsmall);
+  --semantic-message-padding-anchored-vertical: var(--size-xsmall)
+    var(--size-xxxsmall);
+}

@@ -1,4 +1,5 @@
 @import 'figma-ui2.scss';
+@import 'figma-ui3.scss';
 
 .button,
 .icon-button,
@@ -435,11 +436,11 @@
   }
 
   &:enabled:active {
-    --icon-button-background-color: var(--icon-button-background-color-focus);
-    --icon-button-border-color: var(--icon-button-border-color-focus);
-    --icon-button-border-width: var(--icon-button-border-width-focus);
-    --icon-button-border-offset: var(--icon-button-border-offset-focus);
-    --icon-button-icon-color: var(--icon-button-icon-color-focus);
+    --icon-button-background-color: var(--icon-button-background-color-pressed);
+    --icon-button-border-color: var(--icon-button-border-color-pressed);
+    --icon-button-border-width: var(--icon-button-border-width-pressed);
+    --icon-button-border-offset: var(--icon-button-border-offset-pressed);
+    --icon-button-icon-color: var(--icon-button-icon-color-pressed);
     --icon-button-notification-background-color: var(
       --icon-button-notification-background-color-pressed
     );

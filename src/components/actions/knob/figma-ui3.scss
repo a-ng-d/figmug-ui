@@ -1,0 +1,56 @@
+:root[data-theme='figma-ui3'] {
+  /* Base */
+  --knob-min-width: var(--size-medium);
+  --knob-height: var(--size-xxlarge);
+
+  --knob-label-height: var(--size-small);
+  --knob-label-padding: var(--size-xxxsmall);
+  --knob-label-radius: var(--border-radius-small);
+  --knob-label-background-color: var(--figma-color-bg);
+  --knob-label-border-color: var(--figma-color-border-disabled-strong);
+  --knob-label-border-width: var(--size-unit);
+  --knob-label-text-color: var(--figma-color-text);
+
+  --knob-label-arrow-stroke-inset: auto auto calc(var(--size-xxxsmall) * -2)
+    calc(50% - var(--size-xxxsmall));
+  --knob-label-arrow-stroke-width: var(--size-xxxsmall);
+  --knob-label-arrow-fill-inset: auto auto -6px calc(50% - 3px);
+  --knob-label-arrow-fill-width: 3px;
+
+  --knob-tooltip-top: calc(var(--size-xsmall) * -1);
+  --knob-tooltip-padding: var(--size-xxxsmall);
+  --knob-tooltip-min-width: var(--size-small);
+  --knob-tooltip-radius: 0;
+  --knob-tooltip-background-color: var(--figma-color-bg-inverse);
+  --knob-tooltip-text-color: var(--figma-color-text-oninverse);
+
+  --knob-tooltip-arrow-inset: auto auto -8px calc(50% - var(--size-xxxsmall));
+  --knob-tooltip-arrow-width: var(--size-xxxsmall);
+
+  --knob-graduation-width: var(--size-unit);
+  --knob-graduation-height: var(--size-xxxsmall);
+  --knob-graduation-background-color: var(--figma-color-border-disabled-strong);
+
+  --knob-input-top: calc(var(--size-xxsmall) * -1);
+  --knob-input-shadow: var(--shadow-floating-window);
+  --knob-input-border-color: var(--figma-color-border);
+  --knob-input-border-width: var(--size-unit);
+  --knob-input-border-offset: var(--size-neg-unit);
+  --knob-input-border-radius: var(--border-radius-med);
+  --knob-input-background-color: var(--figma-color-bg);
+  --knob-input-padding: var(--size-xunit);
+  --knob-input-width: var(--size-xxlarge);
+
+  /* State */
+  --knob-label-background-color-hover: var(--figma-color-bg-hover);
+
+  --knob-label-border-color-focus: var(--figma-color-border-selected);
+  --knob-label-border-width-focus: var(--size-xunit);
+  --knob-label-background-color-focus: var(--figma-color-bg-selected);
+  --knob-label-arrow-stroke-inset-focus: auto auto -12px calc(50% - 6px);
+  --knob-label-arrow-stroke-width-focus: 6px;
+
+  --knob-label-background-color-disabled: var(--figma-color-bg-disabled);
+  --knob-label-border-color-disabled: var(--figma-color-border-disabled);
+  --knob-label-text-color-disabled: var(--figma-color-text-ondisabled);
+}

@@ -486,7 +486,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
           className={[
             'input__field',
             !isFramed && 'input__field--no-frame',
-            isClearable && 'input__field--clearable',
+            isClearable && inputValue.length > 0 && 'input__field--clearable',
             state === 'ERROR' && 'input__field--error',
           ]
             .filter((n) => n)

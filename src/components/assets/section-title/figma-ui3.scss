@@ -1,0 +1,14 @@
+:root[data-theme='figma-ui3'] {
+  --section-title-height: var(--size-medium);
+  --section-title-gap: var(--size-xxxsmall);
+  --section-title-padding: 0 var(--size-xxxsmall) 0 var(--size-xxsmall);
+  --section-title-text-font-family: var(--font-stack);
+  --section-title-text-font-size: var(--font-size-xsmall);
+  --section-title-text-font-weight: var(--font-weight-bold);
+  --section-title-text-letter-spacing: var(--font-letter-spacing-pos-xsmall);
+  --section-title-text-line-height: var(--font-line-height);
+  --section-title-text-color: var(--figma-color-text);
+
+  --section-title-info-icon-width: var(--size-medium);
+  --section-title-info-icon-height: var(--size-medium);
+}

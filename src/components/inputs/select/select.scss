@@ -1,4 +1,5 @@
 @import 'figma-ui2.scss';
+@import 'figma-ui3.scss';
 
 .checkbox,
 .radio,
@@ -37,13 +38,32 @@
     &:before {
       display: block;
       margin: var(--select-box-margin);
-      outline: var(--select-box-border-secondary);
+      outline: var(--select-box-border-width-secondary) solid var(--select-box-border-color-secondary);
+      outline-offset: var(--select-box-border-offset-secondary);
       border: var(--select-box-border);
       border-radius: var(--select-box-radius);
       background: var(--select-box-background);
       width: var(--select-box-width);
       height: var(--select-box-height);
       content: '';
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      visibility: hidden;
+      margin: var(--select-box-tick-margin);
+      mask-image: var(--select-box-tick-icon);
+      -webkit-mask-image: var(--select-box-tick-icon);
+      mask-position: var(--select-box-tick-position);
+      -webkit-mask-position: var(--select-box-tick-position);
+      mask-size: cover;
+      -webkit-mask-size: cover;
+      background-color: var(--select-box-tick-background-color);
+      width: var(--select-box-tick-width);
+      height: var(--select-box-tick-height);
+      content: '';
+      pointer-events: none;
     }
   }
 
@@ -58,13 +78,22 @@
     &:checked + .checkbox__label:before {
       --select-box-background: var(--select-box-background-checked);
       --select-box-border: var(--select-box-border-checked);
-      background-image: var(--select-box-tick-icon);
-      background-position: var(--select-box-tick-position);
-      background-repeat: no-repeat;
+    }
+
+    &:checked + .checkbox__label:after {
+      visibility: visible;
     }
 
     &:focus + .checkbox__label:before {
-      --select-box-border-secondary: var(--select-box-border-secondary-focus);
+      --select-box-border-width-secondary: var(--select-box-border-width-secondary-focus);
+      --select-box-border-offset-secondary: var(--select-box-border-offset-secondary-focus);
+      --select-box-border-color-secondary: var(--select-box-border-color-secondary-focus);
+    }
+
+    &:focus:checked + .checkbox__label:before {
+      --select-box-border-width-secondary: var(--select-box-border-width-secondary-checked-focus);
+      --select-box-border-offset-secondary: var(--select-box-border-offset-secondary-checked-focus);
+      --select-box-border-color-secondary: var(--select-box-border-color-secondary-checked-focus);
     }
 
     &:disabled + .checkbox__label {

@@ -1,4 +1,5 @@
 @import 'figma-ui2.scss';
+@import 'figma-ui3.scss';
 
 .popin {
   display: flex;
@@ -19,7 +20,7 @@
 
   .popin__header {
     display: flex;
-    flex: 0 1 var(--popin-header-height);
+    height: var(--popin-header-height);
     justify-content: space-between;
     align-items: center;
     gap: var(--popin-header-gap);
