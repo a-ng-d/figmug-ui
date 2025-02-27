@@ -8,31 +8,26 @@ import '@styles/tokens/globals.scss'
 
 export const globalTypes = {
   dataTheme: {
-    defaultValue: 'figma-dark',
+    defaultValue: 'figma-ui2',
   },
   dataThemes: {
     defaultValue: {
       list: [
         {
-          name: 'Figma Light',
-          dataTheme: 'figma-light',
-          color: '#ffffff',
+          name: 'Figma UI2',
+          dataTheme: 'figma-ui2',
+          color: '#0d99ff',
         },
         {
-          name: 'Figma Dark',
-          dataTheme: 'figma-dark',
-          color: '#2c2c2c',
-        },
-        {
-          name: 'FigJam',
-          dataTheme: 'figjam',
-          color: '#ffffff',
+          name: 'Figma UI3',
+          dataTheme: 'figma-ui3',
+          color: '#9747ff',
         },
       ],
       dataAttribute: 'data-theme',
       clearable: false,
       toolbar: {
-        title: 'Change Figma Editor',
+        title: 'Change UI',
         icon: 'paintbrush',
       },
     } satisfies ThemeConfig,
@@ -69,17 +64,18 @@ const preview: Preview = {
     (Story, context) => {
       useEffect(() => {
         const background = context.globals.backgrounds?.value
-        let theme = 'figma-dark'
+        console.log('background', context.globals.backgrounds)
+        let mode = 'figma-dark'
 
         if (background === '#fffffe') {
-          theme = 'figjam'
+          mode = 'figjam'
         } else if (background === '#ffffff') {
-          theme = 'figma-light'
+          mode = 'figma-light'
         } else if (background === '#2c2c2c') {
-          theme = 'figma-dark'
+          mode = 'figma-dark'
         }
 
-        document.documentElement.setAttribute('data-theme', theme)
+        document.documentElement.setAttribute('data-mode', mode)
       }, [context.globals.backgrounds])
 
       return <Story />
