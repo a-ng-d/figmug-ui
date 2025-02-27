@@ -1,6 +1,7 @@
 import { doMap } from '@a_ng_d/figmug-utils'
 import React from 'react'
 import Button from '@components/actions/button/Button'
+import DraggableWindow from '@components/slots/draggable-window/DraggableWindow'
 import './draggable-item.scss'
 
 export interface DraggableItemProps {
@@ -11,6 +12,7 @@ export interface DraggableItemProps {
   secondarySlot?: React.ReactNode
   actionsSlot?: React.ReactNode
   selected?: boolean
+  optionsTitle?: string
   guideAbove?: boolean
   guideBelow?: boolean
   onChangeSelection: React.MouseEventHandler<HTMLLIElement>
@@ -38,6 +40,8 @@ export default class DraggableItem extends React.Component<
   DraggableItemProps,
   DraggableItemStates
 > {
+  private moreButtonRef: React.RefObject<Button>
+
   static defaultProps: Partial<DraggableItemProps> = {
     canBeRemoved: true,
     selected: false,
@@ -51,6 +55,7 @@ export default class DraggableItem extends React.Component<
       isDragged: false,
       hasMoreOptions: false,
     }
+    this.moreButtonRef = React.createRef()
   }
 
   // Direct Actions
@@ -119,6 +124,7 @@ export default class DraggableItem extends React.Component<
       secondarySlot,
       actionsSlot,
       selected,
+      optionsTitle,
       guideAbove,
       guideBelow,
       onRemove,
@@ -138,22 +144,32 @@ export default class DraggableItem extends React.Component<
           isDragged && 'draggable-item--dragged',
           guideAbove && 'draggable-item--above',
           guideBelow && 'draggable-item--below',
-          hasMoreOptions && 'draggable-item--emphasis',
         ]
           .filter((n) => n)
           .join(' ')}
         draggable={selected}
-        onMouseDown={onChangeSelection}
-        onDragStart={(e) => this.onDragStart(e)}
-        onDragEnd={(e) => this.onDragEnd(e)}
-        onDragOver={(e) => this.onDragOver(e)}
-        onDrop={(e) => this.onDrop(e)}
+        onMouseDown={(e) => {
+          if (!hasMoreOptions) onChangeSelection(e)
+        }}
+        onDragStart={(e) => {
+          if (!hasMoreOptions) this.onDragStart(e)
+        }}
+        onDragEnd={(e) => {
+          if (!hasMoreOptions) this.onDragEnd(e)
+        }}
+        onDragOver={(e) => {
+          if (!hasMoreOptions) this.onDragOver(e)
+        }}
+        onDrop={(e) => {
+          if (!hasMoreOptions) this.onDrop(e)
+        }}
       >
         <div className="draggable-item__primary">
           <div className="draggable-item__left-part">{primarySlot}</div>
           <div className="draggable-item__right-part">
             {secondarySlot !== undefined && (
               <Button
+                ref={this.moreButtonRef}
                 type="icon"
                 icon="ellipses"
                 state={hasMoreOptions ? 'selected' : undefined}
@@ -175,7 +191,17 @@ export default class DraggableItem extends React.Component<
           </div>
         </div>
         {hasMoreOptions && secondarySlot !== undefined && (
-          <div className="draggable-item__secondary">{secondarySlot}</div>
+          <DraggableWindow
+            title={optionsTitle}
+            onClose={() =>
+              this.setState({
+                hasMoreOptions: false,
+              })
+            }
+            triggerRef={this.moreButtonRef}
+          >
+            {secondarySlot}
+          </DraggableWindow>
         )}
       </li>
     )

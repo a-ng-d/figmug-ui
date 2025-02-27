@@ -32,7 +32,7 @@
 }
 
 @media (max-width: 460px) {
-  .bar {
+  .bar--reflow {
     flex-direction: column;
     padding: var(--bar-padding);
     padding-top: var(--bar-padding-top);

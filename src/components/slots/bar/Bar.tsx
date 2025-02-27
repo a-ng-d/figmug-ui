@@ -11,6 +11,7 @@ export interface BarProps {
   isCompact: boolean
   isOnlyText: boolean
   isFullWidth?: boolean
+  shouldReflow?: boolean
 }
 
 export default class Bar extends React.Component<BarProps> {
@@ -19,6 +20,7 @@ export default class Bar extends React.Component<BarProps> {
     isOnlyText: false,
     padding: '0 var(--size-xsmall)',
     isFullWidth: false,
+    shouldReflow: true,
   }
 
   setBorder = (
@@ -44,6 +46,7 @@ export default class Bar extends React.Component<BarProps> {
       isCompact,
       isOnlyText,
       isFullWidth,
+      shouldReflow,
       border,
       padding,
       leftPartSlot,
@@ -56,9 +59,9 @@ export default class Bar extends React.Component<BarProps> {
         id={id}
         className={[
           'bar',
-          'recharged',
           isCompact && 'bar--compact',
           isOnlyText && 'bar--text-only',
+          shouldReflow && 'bar--reflow',
         ]
           .filter((n) => n)
           .join(' ')}

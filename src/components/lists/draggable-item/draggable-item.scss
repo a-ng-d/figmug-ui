@@ -4,8 +4,15 @@
   --draggable-item-padding: var(--size-xunit) var(--size-xsmall);
   --draggable-item-background-color: var(--figma-color-bg);
 
+  --draggable-item-ghost-color: var(--figma-color-border-selected);
+  --draggable-item-ghost-height: var(--size-xunit);
+  --draggable-item-ghost-inset: var(---size-neg-unit);
+
   --draggable-item-background-color-selected: var(--figma-color-bg-selected);
   --draggable-item-background-color-pressed: var(--figma-color-bg-pressed);
+
+  --draggable-item-param-width-compact: 112px;
+  --draaggagle-item-param-width-square: var(--size-medium);
 }
 
 .draggable-item {
@@ -18,13 +25,11 @@
 
   &[draggable='true'] {
     --draggable-item-background-color: var(--figma-color-bg-selected);
-  }
+    --input-background-color: var(--figma-color-bg-selected);
+    --icon-button-background-color: var(--figma-color-bg-selected);
 
-  &--emphasis,
-  &--emphasis .input__field,
-  &--emphasis .select-menu__button {
-    background-color: var(--figma-color-bg-pressed);
-    --white: var(--figma-color-bg-pressed) !important;
+    --input-background-color-hover: var(--figma-color-bg-selected);
+    --icon-button-background-color-hover: var(--figma-color-bg-selected-secondary);
   }
 
   &[draggable='true']:active {
@@ -37,23 +42,23 @@
 
   &--above::before {
     position: absolute;
-    top: -1px;
+    top: var(--draggable-item-ghost-inset);
     left: 0;
     z-index: 99;
-    background-color: var(--figma-color-border-selected);
+    background-color: var(--draggable-item-ghost-color);
     width: 100%;
-    height: 2px;
+    height: var(--draggable-item-ghost-height);
     content: '';
   }
 
   &--below:before {
     position: absolute;
-    bottom: -1px;
+    bottom: var(--draggable-item-ghost-inset);
     left: 0;
     z-index: 99;
-    background-color: var(--figma-color-border-selected);
+    background-color: var(--draggable-item-ghost-color);
     width: 100%;
-    height: 2px;
+    height: var(--draggable-item-ghost-height);
     content: '';
   }
 
@@ -62,13 +67,6 @@
     grid-row: 1 / 1;
     grid-column: 1 / 77;
     justify-content: space-between;
-  }
-
-  .draggable-item__secondary {
-    display: flex;
-    grid-row: 2 / 2;
-    grid-column: 1 / 77;
-    flex-direction: column;
   }
 
   .draggable-item__left-part,
@@ -82,16 +80,14 @@
     white-space: nowrap;
 
     &--compact {
-      width: 112px;
-      min-width: 112px;
+      width: var(--draggable-item-param-width-compact);
     }
 
     &--square {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: var(--size-medium);
-      min-width: var(--size-medium);
+      width: var(--draggable-item-param-width-square);
     }
   }
 
