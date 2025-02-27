@@ -41,8 +41,8 @@
   --actions-list-caret-height: var(--size-xsmall);
   --actions-list-caret-color: var(--grey-0);
 
-  --actions-list-submenu-inset-left: -8px var(--size-neg-xunit) auto auto;
-  --actions-list-submenu-inset-right: -8px auto auto var(--size-neg-xunit);
+  --actions-list-submenu-inset-left: --size-neg-xxsmall var(--size-neg-xunit) auto auto;
+  --actions-list-submenu-inset-right: --size-neg-xxsmall auto auto var(--size-neg-xunit);
 
   --actions-list-divider-margin: 11px 0 12px 0;
   --actions-list-divider-height: var(--size-unit);

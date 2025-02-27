@@ -25,7 +25,8 @@
   --knob-tooltip-background-color: var(--figma-color-bg-inverse);
   --knob-tooltip-text-color: var(--figma-color-text-oninverse);
 
-  --knob-tooltip-arrow-inset: auto auto -8px calc(50% - var(--size-xxxsmall));
+  --knob-tooltip-arrow-inset: auto auto --size-neg-xxsmall
+    calc(50% - var(--size-xxxsmall));
   --knob-tooltip-arrow-width: var(--size-xxxsmall);
 
   --knob-graduation-width: var(--size-unit);
