@@ -1,6 +1,7 @@
 import icons from '@styles/icons/icons.module.scss'
 import layouts from '@styles/layouts.module.scss'
 import texts from '@styles/texts.module.scss'
+import tokens from '@styles/tokens.module.scss'
 
 // Actions
 export { default as Accordion } from '@components/actions/accordion/Accordion'
@@ -60,4 +61,4 @@ export type { ConsentConfiguration } from '@tps/consent.types'
 export type { DropdownOption } from '@tps/list.types'
 
 // Styles
-export { icons, layouts, texts }
+export { icons, layouts, texts, tokens }
