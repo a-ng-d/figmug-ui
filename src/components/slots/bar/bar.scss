@@ -7,8 +7,8 @@
   justify-content: space-between;
   align-items: center;
   gap: var(--bar-gap);
-  min-height: var(--bar-min-height);
   box-sizing: border-box;
+  min-height: var(--bar-min-height);
 
   &.bar--compact {
     height: var(--bar-height-compact);
