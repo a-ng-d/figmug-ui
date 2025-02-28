@@ -136,7 +136,6 @@ export default class Dropdown extends React.Component<
 
   handleClickOutside = (e: Event) => {
     const target = e.target as HTMLElement
-    console.log('target', target)
     if (
       target === this.buttonRef.current ||
       target === this.menuRef.current ||
@@ -158,8 +157,6 @@ export default class Dropdown extends React.Component<
   findSelectedOption = (options: Array<DropdownOption>): string => {
     const { selected } = this.props
     const label: Array<string> = []
-
-    console.log(selected)
 
     selected.split(', ').forEach((value) => {
       options.forEach((option) => {
@@ -188,7 +185,7 @@ export default class Dropdown extends React.Component<
       isBlocked,
     } = this.props
     const { isMenuOpen, listShouldScroll } = this.state
-    console.log('options', options)
+
     return (
       <div
         id={id}
