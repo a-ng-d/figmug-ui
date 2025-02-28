@@ -18,7 +18,7 @@
   --knob-label-arrow-fill-inset: auto auto -6px calc(50% - 3px);
   --knob-label-arrow-fill-width: 3px;
 
-  --knob-tooltip-top: calc(var(--size-xxsmall) * -1);
+  --knob-tooltip-top: var(--size-neg-xxsmall);
   --knob-tooltip-padding: var(--size-xunit) var(--size-xxxsmall);
   --knob-tooltip-min-width: var(--size-small);
   --knob-tooltip-radius: var(--border-radius-med);
@@ -33,7 +33,7 @@
   --knob-graduation-height: var(--size-xxxsmall);
   --knob-graduation-background-color: var(--figma-color-border-disabled-strong);
 
-  --knob-input-top: calc(var(--size-xxsmall) * -1);
+  --knob-input-top: var(--size-neg-xxsmall);
   --knob-input-shadow: var(--shadow-floating-window);
   --knob-input-border-color: var(--figma-color-border);
   --knob-input-border-width: var(--size-unit);
