@@ -46,6 +46,7 @@ export { default as Section } from '@components/slots/section/Section'
 export { default as SimpleItem } from '@components/slots/simple-item/SimpleItem'
 export { default as Layout } from '@components/slots/layout/Layout'
 export { default as Drawer } from '@components/slots/drawer/Drawer'
+export { default as DraggableWindow } from '@components/slots/draggable-window/DraggableWindow'
 
 // Tags
 export { default as Chip } from '@components/tags/chip/Chip'
