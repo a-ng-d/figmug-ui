@@ -17,7 +17,6 @@ export default defineConfig({
         './src/components/**/*.test.tsx',
       ],
     }),
-    //modifyCssPaths(),
   ],
   resolve: {
     alias: {
@@ -28,7 +27,10 @@ export default defineConfig({
     },
   },
   build: {
-    assetsInlineLimit: 0,
+    lib: {
+      entry: path.resolve(__dirname, './src/index.ts'),
+      formats: ['es'],
+    },
     emptyOutDir: true,
     sourcemap: true,
     rollupOptions: {
@@ -38,7 +40,6 @@ export default defineConfig({
           './src/index.ts',
           './src/components/**/*.tsx',
           './src/styles/**/*.scss',
-          './src/styles/icons/*.svg',
           './src/types/**/*.ts',
         ])
           .filter(
