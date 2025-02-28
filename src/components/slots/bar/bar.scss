@@ -8,6 +8,7 @@
   align-items: center;
   gap: var(--bar-gap);
   min-height: var(--bar-min-height);
+  box-sizing: border-box;
 
   &.bar--compact {
     height: var(--bar-height-compact);
