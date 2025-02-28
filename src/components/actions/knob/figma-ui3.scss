@@ -19,7 +19,7 @@
   --knob-label-arrow-fill-width: 3px;
 
   --knob-tooltip-top: calc(var(--size-xxsmall) * -1);
-  --knob-tooltip-padding: var(--size-xxxsmall);
+  --knob-tooltip-padding: var(--size-xunit) var(--size-xxxsmall);
   --knob-tooltip-min-width: var(--size-small);
   --knob-tooltip-radius: var(--border-radius-med);
   --knob-tooltip-background-color: var(--figma-color-bg-inverse);
