@@ -23,5 +23,8 @@
 
   &__content {
     padding: var(--draggable-window-content-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--draggable-window-content-gap);
   }
 }
