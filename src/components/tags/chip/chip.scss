@@ -29,6 +29,7 @@
 
   &.chip--on-background {
     margin: 0;
+    max-width: 100%;
     --chip-background-color: var(--chip-background-color-on-background);
     --chip-text-color: var(--chip-text-color-on-background);
     --chip-text-weight: var(--chip-text-weight-on-background);
