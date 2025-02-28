@@ -1,11 +1,11 @@
 :root[data-theme='figma-ui3'] {
   /* Base */
   --knob-min-width: var(--size-medium);
-  --knob-height: 56px;
-  --knob-top: var(--size-neg-xxxsmall);
+  --knob-height: var(--size-xlarge);
+  --knob-top: var(--size-neg-xunit);
 
-  --knob-label-height: var(--size-small);
-  --knob-label-padding: var(--size-xxxsmall);
+  --knob-label-height: 20px;
+  --knob-label-padding: var(--size-xunit) var(--size-xxxsmall);
   --knob-label-radius: var(--border-radius-med);
   --knob-label-background-color: var(--figma-color-bg);
   --knob-label-border-color: var(--figma-color-border-disabled-strong);
