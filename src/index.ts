@@ -2,6 +2,8 @@ import icons from '@styles/icons/icons.module.scss'
 import layouts from '@styles/layouts.module.scss'
 import texts from '@styles/texts.module.scss'
 import tokens from '@styles/tokens/tokens.module.scss'
+import figmaUi2Icons from '@styles/icons/figma-ui2-icons.svg'
+import figmaUi3Icons from '@styles/icons/figma-ui3-icons.svg'
 
 // Actions
 export { default as Accordion } from '@components/actions/accordion/Accordion'
@@ -62,3 +64,9 @@ export type { DropdownOption } from '@tps/list.types'
 
 // Styles
 export { icons, layouts, texts, tokens }
+export const resources = {
+  icons: {
+    figmaUi2: figmaUi2Icons,
+    figmaUi3: figmaUi3Icons,
+  },
+}

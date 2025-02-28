@@ -1,6 +1,6 @@
 import react from '@vitejs/plugin-react'
 import { globSync } from 'glob'
-import path, { resolve } from 'node:path'
+import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import dts from 'vite-plugin-dts'
 import { libInjectCss } from 'vite-plugin-lib-inject-css'
@@ -17,6 +17,7 @@ export default defineConfig({
         './src/components/**/*.test.tsx',
       ],
     }),
+    //modifyCssPaths(),
   ],
   resolve: {
     alias: {
@@ -27,10 +28,7 @@ export default defineConfig({
     },
   },
   build: {
-    lib: {
-      entry: resolve(__dirname, './src/index.ts'),
-      formats: ['es'],
-    },
+    assetsInlineLimit: 0,
     emptyOutDir: true,
     sourcemap: true,
     rollupOptions: {
