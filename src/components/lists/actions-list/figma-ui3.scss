@@ -29,10 +29,8 @@
   --actions-list-spot-radius: var(--border-radius-xlarge);
   --actions-list-spot-background-color: var(--grey-1000);
   --actions-list-spot-icon-color: var(--grey-0);
-  --actions-list-spot-inset-top: 0 var(--size-unit) auto
-    var(--size-unit);
-  --actions-list-spot-inset-bottom: auto var(--size-unit) 0
-    var(--size-unit);
+  --actions-list-spot-inset-top: 0 var(--size-unit) auto var(--size-unit);
+  --actions-list-spot-inset-bottom: auto var(--size-unit) 0 var(--size-unit);
   --actions-list-spot-border-width: 0;
   --actions-list-spot-border-color: transparent;
 

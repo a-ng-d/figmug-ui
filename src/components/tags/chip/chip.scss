@@ -6,6 +6,7 @@
   align-items: center;
   gap: var(--chip-gap);
   cursor: default;
+  box-sizing: border-box;
   margin: var(--chip-margin);
   border-radius: var(--chip-radius);
   background-color: var(--chip-background-color);
@@ -14,7 +15,6 @@
   height: var(--chip-height);
   overflow: hidden;
   user-select: none;
-  box-sizing: border-box;
 
   .chip__text {
     color: var(--chip-text-color);
