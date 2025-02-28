@@ -39,7 +39,9 @@ export default defineConfig({
         globSync([
           './src/index.ts',
           './src/components/**/*.tsx',
-          './src/styles/*.scss',
+          './src/styles/**/*.scss',
+          './src/styles/icons/*.svg',
+          './src/types/**/*.ts',
         ])
           .filter(
             (file) => !/\.test\.tsx|\.test\.ts|colors.module.scss$/.test(file)
