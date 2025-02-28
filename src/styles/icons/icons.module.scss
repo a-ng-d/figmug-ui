@@ -454,6 +454,26 @@
     -webkit-mask-image: var(--icon-timer);
   }
 
+  &--toggle-sidebar-top {
+    mask-image: var(--icon-toggle-sidebar-top);
+    -webkit-mask-image: var(--icon-toggle-sidebar-top);
+  }
+
+  &--toggle-sidebar-right {
+    mask-image: var(--icon-toggle-sidebar-right);
+    -webkit-mask-image: var(--icon-toggle-sidebar-right);
+  }
+
+  &--toggle-sidebar-bottom {
+    mask-image: var(--icon-toggle-sidebar-bottom);
+    -webkit-mask-image: var(--icon-toggle-sidebar-bottom);
+  }
+
+  &--toggle-sidebar-left {
+    mask-image: var(--icon-toggle-sidebar-left);
+    -webkit-mask-image: var(--icon-toggle-sidebar-left);
+  }
+
   &--trash {
     mask-image: var(--icon-trash);
     -webkit-mask-image: var(--icon-trash);
