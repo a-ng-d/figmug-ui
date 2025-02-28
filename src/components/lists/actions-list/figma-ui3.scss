@@ -22,6 +22,7 @@
   --actions-list-item-text-color: var(--grey-0);
 
   --actions-list-patch-right: var(--size-neg-xxsmall);
+  --actions-list-patch-right: var(--size-neg-xxsmall);
   --actions-list-patch-width: var(--size-xxsmall);
 
   --actions-list-spot-height: var(--size-xsmall);
@@ -44,7 +45,7 @@
   --actions-list-caret-color: var(--grey-0);
 
   --actions-list-submenu-inset-left: var(--size-neg-xxsmall)
-    var(--size-neg-xunit) auto auto;
+    var(--size-neg-xxsmall) auto auto;
   --actions-list-submenu-inset-right: var(--size-neg-xxsmall) auto auto
     var(--size-neg-xxsmall);
 

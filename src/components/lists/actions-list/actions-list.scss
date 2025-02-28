@@ -78,6 +78,14 @@
     user-select: none;
     --text-color-primary: var(--actions-list-item-text-color);
 
+    &:before {
+      position: absolute;
+      inset: 0 auto 0 var(--actions-list-patch-left);
+      background-color: transparent;
+      width: var(--actions-list-patch-width);
+      content: '';
+    }
+
     &:after {
       position: absolute;
       inset: 0 var(--actions-list-patch-right) 0 auto;
