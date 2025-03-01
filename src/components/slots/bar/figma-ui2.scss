@@ -1,9 +1,9 @@
 :root[data-theme='figma-ui2'] {
   --bar-min-height: var(--size-large);
   --bar-gap: var(--size-xxxsmall);
+  --bar-padding: 0 var(--size-xsmall);
 
   --bar-height-compact: var(--size-medium);
 
-  --bar-padding-top: var(--size-xxxsmall) !important;
-  --bar-padding-bottom: var(--size-xxxsmall) !important;
+  --bar-padding-mobile: 0 var(--size-xxxsmall);
 }

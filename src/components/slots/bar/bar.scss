@@ -9,6 +9,7 @@
   gap: var(--bar-gap);
   box-sizing: border-box;
   min-height: var(--bar-min-height);
+  padding: var(--bar-padding);
 
   &.bar--compact {
     height: var(--bar-height-compact);
@@ -28,8 +29,6 @@
 @media (max-width: 460px) {
   .bar--reflow {
     flex-direction: column;
-    padding: var(--bar-padding);
-    padding-top: var(--bar-padding-top);
-    padding-bottom: var(--bar-padding-bottom);
+    --bar-padding: var(--bar-padding-mobile);
   }
 }
