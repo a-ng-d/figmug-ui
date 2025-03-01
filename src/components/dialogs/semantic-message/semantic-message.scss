@@ -13,59 +13,132 @@
     --semantic-message-background-color: var(
       --semantic-message-background-color-info
     );
-    --button-background-color-secondary: var(--semantic-message-background-color-info);
-    --button-background-color-secondary-hover: var(--semantic-message-background-color-info-accent);
-    --button-background-color-secondary-pressed: var(--semantic-message-background-color-info-accent);
-    --button-background-color-secondary-focus: var(--semantic-message-background-color-info-accent);
-    --button-border-color-secondary: var(--semantic-message-background-color-info-accent);
-    --icon-button-background-color: var(--semantic-message-background-color-info);
-    --icon-button-background-color-hover: var(--semantic-message-background-color-info-accent);
-    --icon-button-background-color-pressed: var(--semantic-message-background-color-info-accent);
-    --icon-button-background-color-focus: var(--semantic-message-background-color-info-accent);
+    --button-background-color-secondary: var(
+      --semantic-message-background-color-info
+    );
+    --button-background-color-secondary-hover: var(
+      --semantic-message-background-color-info-accent
+    );
+    --button-background-color-secondary-pressed: var(
+      --semantic-message-background-color-info-accent
+    );
+    --button-background-color-secondary-focus: var(
+      --semantic-message-background-color-info-accent
+    );
+    --button-border-color-secondary: var(
+      --semantic-message-background-color-info-accent
+    );
+    --icon-button-background-color: var(
+      --semantic-message-background-color-info
+    );
+    --icon-button-background-color-hover: var(
+      --semantic-message-background-color-info-accent
+    );
+    --icon-button-background-color-pressed: var(
+      --semantic-message-background-color-info-accent
+    );
+    --icon-button-background-color-focus: var(
+      --semantic-message-background-color-info-accent
+    );
   }
 
   &--error {
     --semantic-message-background-color: var(
       --semantic-message-background-color-error
     );
-    --button-background-color-secondary: var(--semantic-message-background-color-error);
-    --button-background-color-secondary-hover: var(--semantic-message-background-color-error-accent);
-    --button-background-color-secondary-pressed: var(--semantic-message-background-color-error-accent);
-    --button-background-color-secondary-focus: var(--semantic-message-background-color-error-accent);
-    --button-border-color-secondary: var(--semantic-message-background-color-error-accent);
-    --icon-button-background-color: var(--semantic-message-background-color-error);
-    --icon-button-background-color-hover: var(--semantic-message-background-color-error-accent);
-    --icon-button-background-color-pressed: var(--semantic-message-background-color-error-accent);
-    --icon-button-background-color-focus: var(--semantic-message-background-color-error-accent);
+    --button-background-color-secondary: var(
+      --semantic-message-background-color-error
+    );
+    --button-background-color-secondary-hover: var(
+      --semantic-message-background-color-error-accent
+    );
+    --button-background-color-secondary-pressed: var(
+      --semantic-message-background-color-error-accent
+    );
+    --button-background-color-secondary-focus: var(
+      --semantic-message-background-color-error-accent
+    );
+    --button-border-color-secondary: var(
+      --semantic-message-background-color-error-accent
+    );
+    --icon-button-background-color: var(
+      --semantic-message-background-color-error
+    );
+    --icon-button-background-color-hover: var(
+      --semantic-message-background-color-error-accent
+    );
+    --icon-button-background-color-pressed: var(
+      --semantic-message-background-color-error-accent
+    );
+    --icon-button-background-color-focus: var(
+      --semantic-message-background-color-error-accent
+    );
   }
 
   &--success {
     --semantic-message-background-color: var(
       --semantic-message-background-color-success
     );
-    --button-background-color-secondary: var(--semantic-message-background-color-success);
-    --button-background-color-secondary-hover: var(--semantic-message-background-color-success-accent);
-    --button-background-color-secondary-pressed: var(--semantic-message-background-color-success-accent);
-    --button-background-color-secondary-focus: var(--semantic-message-background-color-success-accent);
-    --button-border-color-secondary: var(--semantic-message-background-color-success-accent);
-    --icon-button-background-color: var(--semantic-message-background-color-success);
-    --icon-button-background-color-hover: var(--semantic-message-background-color-success-accent);
-    --icon-button-background-color-pressed: var(--semantic-message-background-color-success-accent);
-    --icon-button-background-color-focus: var(--semantic-message-background-color-success-accent);
+    --button-background-color-secondary: var(
+      --semantic-message-background-color-success
+    );
+    --button-background-color-secondary-hover: var(
+      --semantic-message-background-color-success-accent
+    );
+    --button-background-color-secondary-pressed: var(
+      --semantic-message-background-color-success-accent
+    );
+    --button-background-color-secondary-focus: var(
+      --semantic-message-background-color-success-accent
+    );
+    --button-border-color-secondary: var(
+      --semantic-message-background-color-success-accent
+    );
+    --icon-button-background-color: var(
+      --semantic-message-background-color-success
+    );
+    --icon-button-background-color-hover: var(
+      --semantic-message-background-color-success-accent
+    );
+    --icon-button-background-color-pressed: var(
+      --semantic-message-background-color-success-accent
+    );
+    --icon-button-background-color-focus: var(
+      --semantic-message-background-color-success-accent
+    );
   }
 
   &--warning {
     --semantic-message-background-color: var(
       --semantic-message-background-color-warning
     );
-    --button-background-color-secondary: var(--semantic-message-background-color-warning);
-    --button-background-color-secondary-hover: var(--semantic-message-background-color-warning-accent);
-    --button-background-color-secondary-pressed: var(--semantic-message-background-color-warning-accent);
-    --button-background-color-secondary-focus: var(--semantic-message-background-color-warning-accent);
-    --button-border-color-secondary: var(--semantic-message-background-color-warning-accent);
-    --icon-button-background-color: var(--semantic-message-background-color-warning);
-    --icon-button-background-color-hover: var(--semantic-message-background-color-warning-accent);
-    --icon-button-background-color-pressed: var(--semantic-message-background-color-warning-accent);--icon-button-background-color-focus: var(--semantic-message-background-color-warning-accent);
+    --button-background-color-secondary: var(
+      --semantic-message-background-color-warning
+    );
+    --button-background-color-secondary-hover: var(
+      --semantic-message-background-color-warning-accent
+    );
+    --button-background-color-secondary-pressed: var(
+      --semantic-message-background-color-warning-accent
+    );
+    --button-background-color-secondary-focus: var(
+      --semantic-message-background-color-warning-accent
+    );
+    --button-border-color-secondary: var(
+      --semantic-message-background-color-warning-accent
+    );
+    --icon-button-background-color: var(
+      --semantic-message-background-color-warning
+    );
+    --icon-button-background-color-hover: var(
+      --semantic-message-background-color-warning-accent
+    );
+    --icon-button-background-color-pressed: var(
+      --semantic-message-background-color-warning-accent
+    );
+    --icon-button-background-color-focus: var(
+      --semantic-message-background-color-warning-accent
+    );
   }
 
   &--anchored {

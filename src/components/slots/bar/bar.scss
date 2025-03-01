@@ -8,8 +8,8 @@
   align-items: center;
   gap: var(--bar-gap);
   box-sizing: border-box;
-  min-height: var(--bar-min-height);
   padding: var(--bar-padding);
+  min-height: var(--bar-min-height);
 
   &.bar--compact {
     height: var(--bar-height-compact);
