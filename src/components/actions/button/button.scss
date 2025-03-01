@@ -22,7 +22,7 @@
     align-items: center;
     width: var(--button-icon-width);
     height: var(--button-icon-height);
-    --icon-picto-icon: var(--button-icon-color);
+    --icon-picto-color: var(--button-icon-color);
   }
 
   .button__caret {
@@ -31,7 +31,7 @@
     align-items: center;
     width: var(--button-caret-width);
     height: var(--button-caret-height);
-    --icon-picto-icon: var(--button-icon-color);
+    --icon-picto-color: var(--button-icon-color);
   }
 
   .button__loader {
