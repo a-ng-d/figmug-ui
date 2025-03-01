@@ -2,8 +2,7 @@
 @import 'figma-ui3';
 
 .button,
-.icon-button,
-.compact-button {
+.icon-button {
   display: flex;
   position: relative;
   justify-content: center;
@@ -23,6 +22,12 @@
     width: var(--button-icon-width);
     height: var(--button-icon-height);
     --icon-picto-color: var(--button-icon-color);
+  }
+
+  .button__label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .button__caret {

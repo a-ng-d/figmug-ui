@@ -150,6 +150,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           href={url}
           target="_blank"
           rel="noreferrer"
+          className="button__label"
         >
           {label}
         </a>
