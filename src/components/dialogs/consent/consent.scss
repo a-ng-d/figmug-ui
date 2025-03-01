@@ -55,7 +55,15 @@
 
 @media (max-width: 460px) {
   .consent {
-    & .consent__banner__actions {
+    .consent__banner {
+      flex-direction: row;
+    }
+
+    .consent__banner__message {
+      flex: 1;
+    }
+
+    .consent__banner__actions {
       flex-direction: column;
       align-items: flex-end;
     }

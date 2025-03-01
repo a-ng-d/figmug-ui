@@ -1,5 +1,5 @@
 :root[data-theme='figma-ui2'] {
-  --consent-banner-gap: var(--size-xxsmall) 0;
+  --consent-banner-gap: var(--size-xxsmall);
   --consent-banner-padding: var(--size-xxsmall) var(--size-xsmall);
   --consent-banner-max-height: calc(100% - var(--size-large));
   --consent-banner-max-width: 400px;
