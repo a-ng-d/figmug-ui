@@ -4,18 +4,23 @@
     var(--size-xxsmall) 0;
   --semantic-message-border-radius: var(--border-radius-xlarge);
   --semantic-message-background-color: var(--figma-color-bg);
+
   --semantic-message-background-color-info: var(
     --figma-color-bg-brand-tertiary
   );
+  --semantic-message-background-color-info-accent: #00000030;
   --semantic-message-background-color-error: var(
     --figma-color-bg-danger-tertiary
   );
+  --semantic-message-background-color-error-accent: #00000030;
   --semantic-message-background-color-success: var(
     --figma-color-bg-success-tertiary
   );
+  --semantic-message-background-color-success-accent: #00000030;
   --semantic-message-background-color-warning: var(
     --figma-color-bg-warning-tertiary
   );
+  --semantic-message-background-color-warning-accent: #00000030;
 
   --semantic-message-padding-anchored: var(--size-small) var(--size-xsmall)
     var(--size-small) 0;

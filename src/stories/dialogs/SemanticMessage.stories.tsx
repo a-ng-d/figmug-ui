@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 import Button from '@components/actions/button/Button'
 import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
+import layouts from '@styles/layouts.module.scss'
 
 const mock = fn()
 
@@ -24,11 +25,18 @@ export const TypedMessage: Story = {
     isAnchored: false,
     orientation: 'HORIZONTAL',
     actionsSlot: (() => (
-      <Button
-        type="secondary"
-        label="Action"
-        action={mock}
-      />
+      <div className={layouts['snackbar--medium']}>
+        <Button
+          type="secondary"
+          label="Action"
+          action={mock}
+        />
+        <Button
+          type="icon"
+          icon="close"
+          action={mock}
+        />
+      </div>
     ))(),
   },
   argTypes: {
