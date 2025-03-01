@@ -20,7 +20,7 @@ export default class Bar extends React.Component<BarProps> {
     isOnlyText: false,
     padding: '0 var(--size-xsmall)',
     isFullWidth: false,
-    shouldReflow: true,
+    shouldReflow: false,
   }
 
   setBorder = (
