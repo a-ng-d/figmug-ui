@@ -23,7 +23,10 @@ const Avatar = (props: AvatarProps) => {
         .join(' ')}
     >
       <div className="user__avatar">
-        <img src={avatar} />
+        <img
+          src={avatar}
+          alt={fullName}
+        />
       </div>
       <span className={`user_name ${texts.type} ${texts['type--secondary']}`}>
         {fullName}
