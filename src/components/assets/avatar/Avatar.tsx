@@ -12,8 +12,8 @@ const Avatar = (props: AvatarProps) => {
   const {
     avatar = 'https://www.gravatar.com/avatar',
     fullName = 'John Doe',
-    isInverted = false,
     complementarySlot,
+    isInverted = false,
   } = props
 
   return (
