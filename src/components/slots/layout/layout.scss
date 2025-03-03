@@ -44,7 +44,7 @@
     }
   }
 
-  & > .div + & > .div {
+  & > .div + .div {
     border-left: var(--layout-block-border);
   }
 }
