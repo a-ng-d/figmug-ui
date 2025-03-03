@@ -24,10 +24,6 @@
     padding: var(--layout-block-padding);
     overflow-y: auto;
 
-    & + & {
-      border-left: var(--layout-block-border);
-    }
-
     &--list {
       padding: var(--layout-list-padding);
     }
@@ -46,5 +42,9 @@
     &--blank {
       padding: 0;
     }
+  }
+
+  & > .div + & > .div {
+    border-left: var(--layout-block-border);
   }
 }
