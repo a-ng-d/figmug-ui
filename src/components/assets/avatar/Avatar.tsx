@@ -5,6 +5,7 @@ export interface AvatarProps {
   avatar?: string
   fullName?: string
   complementarySlot?: React.ReactNode
+  isAccented?: boolean
   isInverted?: boolean
 }
 
@@ -13,6 +14,7 @@ const Avatar = (props: AvatarProps) => {
     avatar = 'https://www.gravatar.com/avatar',
     fullName = 'John Doe',
     complementarySlot,
+    isAccented = false,
     isInverted = false,
   } = props
 
@@ -28,7 +30,11 @@ const Avatar = (props: AvatarProps) => {
           alt={fullName}
         />
       </div>
-      <span className={`user_name ${texts.type} ${texts['type--secondary']}`}>
+      <span
+        className={['user_name', texts.type, !isAccented && 'user--accented']
+          .filter((n) => n)
+          .join(' ')}
+      >
         {fullName}
       </span>
       {complementarySlot && (
