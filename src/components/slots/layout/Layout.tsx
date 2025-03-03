@@ -33,7 +33,7 @@ const Layout = (props: LayoutProps) => {
           item.node !== undefined &&
           (item.typeModifier === 'DRAWER' &&
           item.drawerOptions !== undefined ? (
-            <Drawer {...item.drawerOptions} />
+            <Drawer {...item.drawerOptions}>{item.node}</Drawer>
           ) : (
             <div
               key={index}
