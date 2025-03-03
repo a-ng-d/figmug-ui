@@ -12,18 +12,23 @@
   &[draggable='true'] {
     --draggable-item-background-color: var(--figma-color-bg-selected);
     --input-background-color: var(--figma-color-bg-selected);
+    --dropdown-background-color: var(--figma-color-bg-selected);
     --icon-button-background-color: var(--figma-color-bg-selected);
 
     --input-background-color-hover: var(--figma-color-bg-selected);
+    --dropdown-background-color-hover: var(--figma-color-bg-selected);
     --icon-button-background-color-hover: var(
       --figma-color-bg-selected-secondary
     );
 
     --input-background-color-focus: var(--figma-color-bg-selected-secondary);
+    --dropdown-background-color-focus: var(--figma-color-bg-selected-secondary);
     --icon-button-background-color-focus: var(
       --figma-color-bg-selected-secondary
     );
 
+    --input-background-color-disabled: var(--figma-color-bg-selected);
+    --dropdown-background-color-disabled: var(--figma-color-bg-selected);
     --icon-button-background-color-disabled: var(--figma-color-bg-selected);
   }
 

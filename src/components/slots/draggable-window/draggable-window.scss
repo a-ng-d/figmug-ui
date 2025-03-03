@@ -2,7 +2,7 @@
 @import 'figma-ui3';
 
 .draggable-window {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   outline: var(--draggable-window-border-width) solid
     var(--draggable-window-border-color);

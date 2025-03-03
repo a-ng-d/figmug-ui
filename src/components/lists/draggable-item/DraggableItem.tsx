@@ -147,7 +147,7 @@ export default class DraggableItem extends React.Component<
         ]
           .filter((n) => n)
           .join(' ')}
-        draggable={selected}
+        draggable={!hasMoreOptions ? selected : false}
         onMouseDown={(e) => {
           if (!hasMoreOptions) onChangeSelection(e)
         }}
