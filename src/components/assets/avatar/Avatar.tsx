@@ -2,7 +2,7 @@ import texts from '@styles/texts.module.scss'
 import './avatar.scss'
 
 export interface AvatarProps {
-  avatar: string
+  avatar?: string
   fullName: string
   complementarySlot?: React.ReactNode
   isInverted?: boolean
