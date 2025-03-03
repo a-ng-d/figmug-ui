@@ -7,6 +7,10 @@
   flex-direction: column;
   background-color: var(--drawer-background-color);
 
+  &--scrolling {
+    overflow-y: auto;
+  }
+
   &__knob {
     position: absolute;
     z-index: 2;

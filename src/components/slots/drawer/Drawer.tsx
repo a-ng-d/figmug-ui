@@ -14,6 +14,7 @@ export type DrawerProps = {
   maxSize: Unit
   minSize: Unit
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
+  isScrolling?: boolean
   children?: React.ReactNode
   onCollapse?: () => void
   onExpand?: () => void
@@ -29,6 +30,10 @@ export type DrawerState = {
 
 export default class Drawer extends React.Component<DrawerProps, DrawerState> {
   drawerRef: React.RefObject<HTMLDivElement>
+
+  static defaultProps: Partial<DrawerProps> = {
+    isScrolling: false,
+  }
 
   constructor(props: DrawerProps) {
     super(props)
@@ -162,8 +167,16 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
 
   // Render
   render() {
-    const { id, pin, children, direction, border, maxSize, minSize } =
-      this.props
+    const {
+      id,
+      pin,
+      children,
+      direction,
+      border,
+      maxSize,
+      minSize,
+      isScrolling,
+    } = this.props
     const { drawerSize } = this.state
 
     return (
@@ -183,7 +196,9 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
                 minWidth: this.setUnit(minSize),
               }),
         }}
-        className={['drawer'].filter((n) => n).join(' ')}
+        className={['drawer', isScrolling && 'drawer--scrolling']
+          .filter((n) => n)
+          .join(' ')}
         role="layout"
         ref={this.drawerRef}
       >
