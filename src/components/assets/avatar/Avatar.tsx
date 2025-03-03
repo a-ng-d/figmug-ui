@@ -31,7 +31,7 @@ const Avatar = (props: AvatarProps) => {
         />
       </div>
       <span
-        className={['user_name', texts.type, !isAccented && 'user--accented']
+        className={['user_name', texts.type, isAccented && 'user--accented']
           .filter((n) => n)
           .join(' ')}
       >
