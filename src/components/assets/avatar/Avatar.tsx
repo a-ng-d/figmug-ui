@@ -3,7 +3,7 @@ import './avatar.scss'
 
 export interface AvatarProps {
   avatar?: string
-  fullName: string
+  fullName?: string
   complementarySlot?: React.ReactNode
   isInverted?: boolean
 }
