@@ -2,8 +2,9 @@ import texts from '@styles/texts.module.scss'
 import './avatar.scss'
 
 export interface AvatarProps {
-  avatar?: string
-  fullName?: string
+  avatar: string
+  fullName: string
+  complementarySlot?: React.ReactNode
   isInverted?: boolean
 }
 
@@ -12,6 +13,7 @@ const Avatar = (props: AvatarProps) => {
     avatar = 'https://www.gravatar.com/avatar',
     fullName = 'John Doe',
     isInverted = false,
+    complementarySlot,
   } = props
 
   return (
@@ -26,6 +28,11 @@ const Avatar = (props: AvatarProps) => {
       <span className={`user_name ${texts.type} ${texts['type--secondary']}`}>
         {fullName}
       </span>
+      {complementarySlot && (
+        <div className="user__complementary-slot">
+          {props.complementarySlot}
+        </div>
+      )}
     </div>
   )
 }
