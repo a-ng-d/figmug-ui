@@ -37,6 +37,7 @@
 
     &:before {
       display: block;
+      flex: none;
       margin: var(--select-box-margin);
       outline: var(--select-box-border-width-secondary) solid
         var(--select-box-border-color-secondary);
@@ -47,7 +48,6 @@
       width: var(--select-box-width);
       height: var(--select-box-height);
       content: '';
-      flex: none
     }
 
     &:after {

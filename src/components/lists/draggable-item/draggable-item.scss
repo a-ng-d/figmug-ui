@@ -10,21 +10,31 @@
   padding: var(--draggable-item-padding);
 
   &[draggable='true'] {
-    --draggable-item-background-color: var(--draggable-item-background-color-selected);
+    --draggable-item-background-color: var(
+      --draggable-item-background-color-selected
+    );
     --input-background-color: var(--input-background-color-onselected);
     --input-border-color: var(--input-border-color-onselected);
     --input-border-width: var(--input-border-width-onselected);
     --input-border-offset: var(--input-border-offset-onselected);
     --dropdown-background-color: var(--dropdown-background-color-onselected);
     --dropdown-border-color: var(--dropdown-border-color-onselected);
-    --icon-button-background-color: var(--icon-button-background-color-onselected);
+    --icon-button-background-color: var(
+      --icon-button-background-color-onselected
+    );
 
-    --input-background-color-hover: var(--input-background-color-onselected-hover);
+    --input-background-color-hover: var(
+      --input-background-color-onselected-hover
+    );
     --input-border-color-hover: var(--input-border-color-onselected-hover);
     --input-border-width-hover: var(--input-border-width-onselected-hover);
     --input-border-offset-hover: var(--input-border-offset-onselected-hover);
-    --dropdown-background-color-hover: var(--dropdown-background-color-onselected-hover);
-    --dropdown-border-color-hover: var(--dropdown-border-color-onselected-hover);
+    --dropdown-background-color-hover: var(
+      --dropdown-background-color-onselected-hover
+    );
+    --dropdown-border-color-hover: var(
+      --dropdown-border-color-onselected-hover
+    );
     --icon-button-background-color-hover: var(
       --icon-button-background-color-onselected-hover
     );
