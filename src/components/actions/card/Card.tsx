@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import texts from '@styles/texts.module.scss'
+import './card.scss'
 
 interface CardProps {
   src: string
