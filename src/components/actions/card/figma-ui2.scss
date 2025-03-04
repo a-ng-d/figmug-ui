@@ -1,0 +1,14 @@
+:root[data-theme='figma-ui2'] {
+  --card-gap: var(--size-xxsmall);
+  --card-radius: var(--border-radius-med);
+  --card-padding: var(--size-xxsmall);
+  --card-width: 200px;
+
+  --card-asset-height: 100px;
+
+  --card-actions-gap: var(--size-xxsmall);
+  --card-actions-padding: var(--size-xxsmall);
+
+  --card-background-color: var(--figma-color-bg);
+  --card-background-color-hover: var(--figma-color-bg-hover);
+}

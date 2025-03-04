@@ -1,0 +1,38 @@
+@import 'figma-ui2';
+@import 'figma-ui3';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+  border-radius: var(--card-radius);
+  background-color: var(--card-background-color);
+  padding: var(--card-paddius);
+  width: var(--card-width);
+
+  &:hover {
+    background-color: var(--card-background-color-hover);
+
+    .card__actions {
+      visibility: visible;
+    }
+  }
+
+  &__asset {
+    position: relative;
+    height: var(--card-asset-height);
+  }
+
+  &__actions {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: var(--card-actions-gap);
+    visibility: hidden;
+    inset: 0 0 0 0;
+    padding: var(--card-actions-padding);
+  }
+}
