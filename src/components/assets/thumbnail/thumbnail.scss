@@ -11,8 +11,8 @@
 
   .thumbnail__image {
     margin: auto;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: calc(100% - var(--thumbnail-padding));
+    max-height: calc(100% - var(--thumbnail-padding));
   }
 
   .thumbnail__error,
