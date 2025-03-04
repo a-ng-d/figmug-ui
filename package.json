@@ -23,7 +23,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@a_ng_d/figmug-utils": "^0.2.0",
+    "@a_ng_d/figmug-utils": "^0.2.2",
     "@storybook/client-api": "^7.6.17"
   },
   "peerDependencies": {
