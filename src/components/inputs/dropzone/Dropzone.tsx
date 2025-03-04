@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
 import Button from '@components/actions/button/Button'
 import Icon from '@components/assets/icon/Icon'
@@ -288,9 +289,10 @@ export default class Dropzone extends React.Component<
 
     return (
       <div
-        className={['dropzone', isDraggedOver && 'dropzone--dragged-over']
-          .filter((n) => n)
-          .join(' ')}
+        className={doClassnames([
+          'dropzone',
+          isDraggedOver && 'dropzone--dragged-over',
+        ])}
         onDragOver={this.onDragOver}
         onDragEnter={this.onDragEnter}
         onDragLeave={this.onDragLeave}

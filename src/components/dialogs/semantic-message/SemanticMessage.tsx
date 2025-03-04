@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import layouts from '@styles/layouts.module.scss'
 import { IconList } from '@tps/icon.types'
 import Message from '../message/Message'
@@ -49,7 +50,10 @@ export default class SemanticMessage extends React.Component<SemanticMessageProp
         </div>
         {actionsSlot !== undefined && (
           <div
-            className={`${layouts['snackbar--medium']} semantic-message__actions`}
+            className={doClassnames([
+              layouts['snackbar--medium'],
+              'semantic-message__actions',
+            ])}
           >
             {actionsSlot}
           </div>

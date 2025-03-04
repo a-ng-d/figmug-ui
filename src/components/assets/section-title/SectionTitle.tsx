@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import texts from '@styles/texts.module.scss'
 import Tooltip from '@components/tags/tooltip/Tooltip'
 import Icon from '../icon/Icon'
@@ -17,12 +18,17 @@ const SectionTitle = (props: SectionTitleProps) => {
 
   return (
     <div className="section-title">
-      <div className={`section-title__title ${texts['section-title']}`}>
+      <div
+        className={doClassnames([
+          'section-title__title',
+          texts['section-title'],
+        ])}
+      >
         {label}
       </div>
       {indicator !== undefined && (
         <div
-          className={`section-title__indicator type ${texts.type}`}
+          className={doClassnames(['section-title__indicator', texts.type])}
         >{`(${indicator})`}</div>
       )}
       {helper !== undefined && (

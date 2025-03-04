@@ -1,3 +1,4 @@
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import texts from '@styles/texts.module.scss'
 import './chip.scss'
 
@@ -26,9 +27,11 @@ const Chip = (props: ChipProps) => {
         <div className="chip__left-slot">{props.leftSlot}</div>
       )}
       <div
-        className={['chip__text', texts.type, texts['type--truncated']]
-          .filter((n) => n)
-          .join(' ')}
+        className={doClassnames([
+          'chip__text',
+          texts.type,
+          texts['type--truncated'],
+        ])}
       >
         {children}
       </div>

@@ -167,7 +167,7 @@ export const Pictogram: Story = {
               iconName={icon}
             />
             <span
-              className={`type ${texts['type']}`}
+              className={texts.type}
               style={{ textAlign: 'center' }}
             >
               {icon}

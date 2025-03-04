@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import Tooltip from '../tooltip/Tooltip'
 import './color-chip.scss'
 
@@ -34,9 +35,10 @@ export default class ColorChip extends React.Component<
     const { color, w, h, isRounded, helper } = this.props
     return (
       <div
-        className={['color-chip', isRounded && 'color-chip--rounded']
-          .filter((n) => n)
-          .join(' ')}
+        className={doClassnames([
+          'color-chip',
+          isRounded && 'color-chip--rounded',
+        ])}
         style={{ backgroundColor: color, width: w, height: h }}
         onMouseEnter={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })

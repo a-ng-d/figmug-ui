@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import Chip from '@components/tags/chip/Chip'
 import './select.scss'
 
@@ -41,9 +42,7 @@ export default class Select extends React.Component<SelectProps> {
 
     return (
       <div
-        className={['checkbox', isBlocked && 'checkbox--blocked']
-          .filter((n) => n)
-          .join(' ')}
+        className={doClassnames(['checkbox', isBlocked && 'checkbox--blocked'])}
       >
         <input
           data-feature={feature}
@@ -82,11 +81,7 @@ export default class Select extends React.Component<SelectProps> {
     } = this.props
 
     return (
-      <div
-        className={['radio', isBlocked && 'radio--blocked']
-          .filter((n) => n)
-          .join(' ')}
-      >
+      <div className={doClassnames(['radio', isBlocked && 'radio--blocked'])}>
         <input
           data-feature={feature}
           id={id}
@@ -124,11 +119,7 @@ export default class Select extends React.Component<SelectProps> {
     } = this.props
 
     return (
-      <div
-        className={['switch', isBlocked && 'switch--blocked']
-          .filter((n) => n)
-          .join(' ')}
-      >
+      <div className={doClassnames(['switch', isBlocked && 'switch--blocked'])}>
         <input
           data-feature={feature}
           id={id}

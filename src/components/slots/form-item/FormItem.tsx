@@ -40,7 +40,7 @@ const FormItem = (props: FormItemProps) => {
       <div className="form-item__row">
         {label !== undefined && (
           <label
-            className={`${texts.type}`}
+            className={texts.type}
             htmlFor={id}
           >
             {label}

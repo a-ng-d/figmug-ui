@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './drawer.scss'
 
 interface Unit {
@@ -196,9 +197,7 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
                 minWidth: this.setUnit(minSize),
               }),
         }}
-        className={['drawer', isScrolling && 'drawer--scrolling']
-          .filter((n) => n)
-          .join(' ')}
+        className={doClassnames(['drawer', isScrolling && 'drawer--scrolling'])}
         role="layout"
         ref={this.drawerRef}
       >

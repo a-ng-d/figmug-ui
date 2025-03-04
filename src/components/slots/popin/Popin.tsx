@@ -1,3 +1,4 @@
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import texts from '@styles/texts.module.scss'
 import Button from '@components/actions/button/Button'
 import Select from '@components/inputs/select/Select'
@@ -63,7 +64,11 @@ const PopIn = (props: PopInProps) => {
       <div className="popin__header">
         <div className="popin__title">
           <p
-            className={`${texts.type} ${texts['type--large']} ${texts['type--bold']}`}
+            className={doClassnames([
+              texts.type,
+              texts['type--large'],
+              texts['type--bold'],
+            ])}
           >
             {title}
           </p>
@@ -98,7 +103,7 @@ const PopIn = (props: PopInProps) => {
         <div className="popin__footer">
           <div className="popin__extra">
             {indicator !== undefined && (
-              <div className={`${texts.label}`}>{indicator}</div>
+              <div className={texts.label}>{indicator}</div>
             )}
             {select !== undefined && (
               <Select

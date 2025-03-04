@@ -12,7 +12,7 @@ const InputsBar = (props: InputsBarProps) => {
 
   return (
     <div className={['inputs', customClassName].filter((n) => n).join(' ')}>
-      <div className={`${texts.label}`}>{label}</div>
+      <div className={texts.label}>{label}</div>
       <div className="inputs__bar">{children}</div>
     </div>
   )

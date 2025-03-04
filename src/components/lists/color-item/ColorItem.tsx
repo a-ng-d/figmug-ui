@@ -1,4 +1,5 @@
 import texts from '@styles/texts.module.scss'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import type { HexModel } from '@tps/color.types'
 import Button from '@components/actions/button/Button'
 import ColorChip from '@components/tags/color-chip/ColorChip'
@@ -26,10 +27,10 @@ const ColorItem = (props: ColorItemProps) => {
             color={hex}
             isRounded
           />
-          <div className={`${texts.type} ${texts['type--truncated']}`}>
+          <div className={doClassnames([texts.type, texts['type--truncated']])}>
             {name}
           </div>
-          <div className={`${texts.type} ${texts['type--secondary']}`}>
+          <div className={doClassnames([texts.type, texts['type--secondary']])}>
             {hex}
           </div>
         </div>

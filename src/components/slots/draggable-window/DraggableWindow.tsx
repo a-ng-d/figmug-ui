@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import SectionTitle from '@components/assets/section-title/SectionTitle'
 import Bar from '../bar/Bar'
 import Button from '@components/actions/button/Button'
@@ -72,7 +73,10 @@ const DraggableWindow = (props: DraggableWindowProps) => {
 
   return (
     <div
-      className={`draggable-window ${isDragging ? 'draggable-window--dragging' : ''}`}
+      className={doClassnames([
+        'draggable-window',
+        isDragging && 'draggable-window--dragging',
+      ])}
       style={{
         transform: `translate(${position.x}px, ${position.y}px)`,
         visibility: isOpen ? 'visible' : 'hidden',

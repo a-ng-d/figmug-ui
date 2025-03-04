@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import layouts from '@styles/layouts.module.scss'
 import texts from '@styles/texts.module.scss'
 import Thumbnail from '@components/assets/thumbnail/Thumbnail'
@@ -70,15 +71,15 @@ export default class ActionsItem extends React.Component<ActionsItemProps> {
         )}
         <div className="actions-item__content">
           <div>
-            <div className={`${texts.type} ${texts['type--large']}`}>
+            <div className={doClassnames([texts.type, texts['type--large']])}>
               {name}
               {indicator !== undefined && (
                 <Chip state={indicator.status}>{indicator.label}</Chip>
               )}
             </div>
-            <div className={`${texts.type}`}>{description}</div>
+            <div className={texts.type}>{description}</div>
             <div
-              className={`${texts.type} ${texts['type--secondary']}`}
+              className={doClassnames([texts.type, texts['type--secondary']])}
               style={{
                 marginTop: '2px',
               }}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import texts from '@styles/texts.module.scss'
 import type { IconList } from '@tps/icon.types'
 import Icon from '@components/assets/icon/Icon'
@@ -21,16 +22,16 @@ export default class Message extends React.Component<MessageProps> {
 
     return (
       <div
-        className={['message', isBlocked && 'message--blocked']
-          .filter((n) => n)
-          .join(' ')}
+        className={doClassnames(['message', isBlocked && 'message--blocked'])}
       >
         <Icon
           type="PICTO"
           iconName={icon}
           customClassName="icon"
         />
-        <div className={`${texts.type} message__msg`}>{messages[0]}</div>
+        <div className={doClassnames([texts.type, 'message__msg'])}>
+          {messages[0]}
+        </div>
       </div>
     )
   }
@@ -58,10 +59,12 @@ export default class Message extends React.Component<MessageProps> {
               {messages.map((message, index) => {
                 return (
                   <React.Fragment key={`message-${index}`}>
-                    <div className={`${texts.type} message__msg`}>
+                    <div className={doClassnames([texts.type, 'message__msg'])}>
                       {message}
                     </div>
-                    <div className={`${texts.type} message__msg`}>﹒</div>
+                    <div className={doClassnames([texts.type, 'message__msg'])}>
+                      ﹒
+                    </div>
                   </React.Fragment>
                 )
               })}
@@ -77,10 +80,12 @@ export default class Message extends React.Component<MessageProps> {
               {messages.map((message, index) => {
                 return (
                   <React.Fragment key={`message-${index}`}>
-                    <div className={`${texts.type} message__msg`}>
+                    <div className={doClassnames([texts.type, 'message__msg'])}>
                       {message}
                     </div>
-                    <div className={`${texts.type} message__msg`}>﹒</div>
+                    <div className={doClassnames([texts.type, 'message__msg'])}>
+                      ﹒
+                    </div>
                   </React.Fragment>
                 )
               })}

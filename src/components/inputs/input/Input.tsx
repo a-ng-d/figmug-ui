@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import type { IconList } from '@tps/icon.types'
 import Button from '@components/actions/button/Button'
 import Icon from '@components/assets/icon/Icon'
@@ -527,9 +528,11 @@ export default class Input extends React.Component<InputProps, InputStates> {
 
     return (
       <div
-        className={['input', 'input--long-text', isBlocked && 'input--blocked']
-          .filter((n) => n)
-          .join(' ')}
+        className={doClassnames([
+          'input',
+          'input--long-text',
+          isBlocked && 'input--blocked',
+        ])}
       >
         <textarea
           role="long-text"
@@ -564,9 +567,11 @@ export default class Input extends React.Component<InputProps, InputStates> {
 
     return (
       <div
-        className={['input', 'input--code', isBlocked && 'input--blocked']
-          .filter((n) => n)
-          .join(' ')}
+        className={doClassnames([
+          'input',
+          'input--code',
+          isBlocked && 'input--blocked',
+        ])}
       >
         <textarea
           role="code-snippet"

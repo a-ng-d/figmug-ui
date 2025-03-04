@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import Chip from '@components/tags/chip/Chip'
 import Input from '@components/inputs/input/Input'
 import Tooltip from '@components/tags/tooltip/Tooltip'
@@ -178,7 +179,11 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
       >
         {(isDisplayed || isTooltipOpen) && (
           <div
-            className={`${texts.type} ${texts['type--inverse']} knob__tooltip`}
+            className={doClassnames([
+              texts.type,
+              texts['type--inverse'],
+              'knob__tooltip',
+            ])}
           >
             {this.transformStopValue(value)}
           </div>
@@ -208,7 +213,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
             />
           </div>
         )}
-        <div className={`${texts.type} knob__label`}>
+        <div className={doClassnames([texts.type, 'knob__label'])}>
           {shortId}
           {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>

@@ -1,3 +1,4 @@
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import texts from '@styles/texts.module.scss'
 import './keyboard-shortcut-item.scss'
 
@@ -13,13 +14,16 @@ const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
   return (
     <li className="keyboard-shortcut-item">
       <div className="keyboard-shortcut-item__label">
-        <span className={`${texts.type}`}>{label}</span>
+        <span className={texts.type}>{label}</span>
       </div>
       <div className="keyboard-shortcut-item__keys">
         <>
           {shortcuts[0].map((shortcut, index) => (
             <span
-              className={`keyboard-shortcut-item__key ${texts.type}`}
+              className={doClassnames([
+                'keyboard-shortcut-item__key',
+                texts.type,
+              ])}
               key={index}
             >
               {shortcut}
@@ -28,13 +32,19 @@ const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
           {shortcuts[1] !== undefined && (
             <>
               <span
-                className={`keyboard-shortcut-item__separator ${texts.type}`}
+                className={doClassnames([
+                  'keyboard-shortcut-item__separator',
+                  texts.type,
+                ])}
               >
                 {separator}
               </span>
               {shortcuts[1].map((shortcut, index) => (
                 <span
-                  className={`keyboard-shortcut-item__key ${texts.type}`}
+                  className={doClassnames([
+                    'keyboard-shortcut-item__key',
+                    texts.type,
+                  ])}
                   key={index}
                 >
                   {shortcut}

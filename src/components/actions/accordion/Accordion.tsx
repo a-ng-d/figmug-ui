@@ -1,3 +1,4 @@
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import { IconList } from '@tps/icon.types'
 import SectionTitle from '@components/assets/section-title/SectionTitle'
 import Chip from '@components/tags/chip/Chip'
@@ -52,13 +53,11 @@ const Accordion = (props: AccordionProps) => {
   return (
     <div
       role="row"
-      className={[
+      className={doClassnames([
         'accordion',
         isExpanded && 'accordion--expanded',
         isBlocked && 'accordion--blocked',
-      ]
-        .filter((n) => n)
-        .join(' ')}
+      ])}
       tabIndex={-1}
       onMouseDown={(e) => {
         if (

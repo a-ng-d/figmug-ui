@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import { DropdownOption } from '@tps/list.types'
 import Chip from '@components/tags/chip/Chip'
 import Icon from '@components/assets/icon/Icon.tsx'
@@ -137,12 +138,17 @@ export default class ActionsList extends React.Component<
       <li
         role="menuitem"
         key={`menu-option-${index}`}
-        className={['select-menu__item', 'select-menu__item--disabled']
-          .filter((n) => n)
-          .join(' ')}
+        className={doClassnames([
+          'select-menu__item',
+          'select-menu__item--disabled',
+        ])}
       >
         <span
-          className={`${texts['type--small']} ${texts.type} ${texts.type}} select-menu__item__label`}
+          className={doClassnames([
+            texts['type--small'],
+            texts.type,
+            'select-menu__item__label',
+          ])}
         >
           {option.label}
         </span>
@@ -202,7 +208,11 @@ export default class ActionsList extends React.Component<
         )}
 
         <span
-          className={`${texts['type--small']} ${texts.type} ${texts.type}} select-menu__item__label`}
+          className={doClassnames([
+            texts['type--small'],
+            texts.type,
+            'select-menu__item__label',
+          ])}
         >
           {option.label}
         </span>
@@ -243,7 +253,11 @@ export default class ActionsList extends React.Component<
         onBlur={() => null}
       >
         <span
-          className={`${texts['type--small']} ${texts.type} ${texts.type}} select-menu__item__label`}
+          className={doClassnames([
+            texts['type--small'],
+            texts.type,
+            'select-menu__item__label',
+          ])}
         >
           {option.label}
         </span>
@@ -305,7 +319,11 @@ export default class ActionsList extends React.Component<
           </span>
         )}
         <span
-          className={`${texts['type--small']} ${texts.type} select-menu__item__label`}
+          className={doClassnames([
+            texts['type--small'],
+            texts.type,
+            'select-menu__item__label',
+          ])}
         >
           {option.label}
         </span>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import type { DropdownOption } from '@tps/list.types'
 import Icon from '@components/assets/icon/Icon'
 import ActionsList from '@components/lists/actions-list/ActionsList'
@@ -225,7 +226,11 @@ export default class Dropdown extends React.Component<
           ref={this.buttonRef}
         >
           <span
-            className={`${texts['type--truncated']} ${texts.type} select-menu__label`}
+            className={doClassnames([
+              texts['type--truncated'],
+              texts.type,
+              'select-menu__label',
+            ])}
           >
             {this.findSelectedOption(options)}
           </span>

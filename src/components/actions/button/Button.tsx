@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import type { IconList } from '@tps/icon.types'
 import Icon from '@components/assets/icon/Icon'
 import Chip from '@components/tags/chip/Chip'
@@ -140,9 +141,11 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
     return (
       <button
         role="link-button"
-        className={['button', `button--${type}`, `button--${size}`]
-          .filter((n) => n)
-          .join(' ')}
+        className={doClassnames([
+          'button',
+          `button--${type}`,
+          `button--${size}`,
+        ])}
         data-feature={feature}
         ref={this.buttonRef}
       >

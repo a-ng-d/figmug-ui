@@ -21,7 +21,7 @@ const onBoardingSample = () => {
         />
       </div>
       <div className="dialog__text">
-        <p className={`type ${texts.type}`}>
+        <p className={texts.type}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus
           nullam eget felis eget nunc lobortis mattis.
@@ -192,7 +192,7 @@ export const SimpleDialog: Story = {
     },
     children: (() => (
       <div className="dialog__text">
-        <p className={`type ${texts.type}`}>
+        <p className={texts.type}>
           Deleting this item will remove it permanently.
         </p>
       </div>
