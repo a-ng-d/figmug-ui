@@ -3,7 +3,7 @@ import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import texts from '@styles/texts.module.scss'
 
 interface CardProps {
-  imageUrl: string
+  src: string
   label: string
   children: React.ReactNode
   action: () => void
@@ -11,7 +11,7 @@ interface CardProps {
 
 const Card = (props: CardProps) => {
   const [isActionsVisible, setActionsVisible] = useState<boolean>(false)
-  const { imageUrl, label, children } = props
+  const { src, label, children } = props
 
   return (
     <div
@@ -20,7 +20,7 @@ const Card = (props: CardProps) => {
       onMouseLeave={() => setActionsVisible(false)}
     >
       <div className={'card__asset'}>
-        <Thumbnail src={imageUrl} />
+        <Thumbnail src={src} />
         {children !== undefined && (
           <div className={'card__actions'}>{isActionsVisible && children}</div>
         )}
