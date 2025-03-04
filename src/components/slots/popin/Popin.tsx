@@ -65,7 +65,7 @@ const PopIn = (props: PopInProps) => {
     >
       <div className="popin__header">
         <div className="popin__title">
-          <p
+          <span
             className={doClassnames([
               texts.type,
               texts['type--large'],
@@ -73,7 +73,7 @@ const PopIn = (props: PopInProps) => {
             ])}
           >
             {title}
-          </p>
+          </span>
           {tag != undefined && <Chip>{tag}</Chip>}
         </div>
         <Button
