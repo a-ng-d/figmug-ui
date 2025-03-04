@@ -97,6 +97,7 @@ export const SingleMessage: Story = {
       state: false,
       action: fn(),
     },
+    pin: 'CENTER',
     children: onBoardingSample(),
     onClose: fn(),
   },
@@ -148,6 +149,7 @@ export const MultipleMessage: Story = {
       },
     },
     indicator: '3 of 3',
+    pin: 'CENTER',
     children: onBoardingSample(),
     onClose: fn(),
   },
@@ -166,6 +168,7 @@ export const Form: Story = {
         action: fn(),
       },
     },
+    pin: 'CENTER',
     children: FormSample(),
     onClose: fn(),
   },
@@ -190,6 +193,7 @@ export const SimpleDialog: Story = {
         action: fn(),
       },
     },
+    pin: 'CENTER',
     children: (() => (
       <div className="dialog__text">
         <p className={texts.type}>
@@ -210,6 +214,7 @@ export const SimpleDialog: Story = {
 export const LoadingDialog: Story = {
   args: {
     title: 'Loading…',
+    pin: 'CENTER',
     isLoading: true,
     onClose: fn(),
   },
@@ -224,6 +229,7 @@ export const LoadingDialog: Story = {
 export const DialogOnError: Story = {
   args: {
     title: 'Something went wrong…',
+    pin: 'CENTER',
     isMessage: true,
     children: (() => (
       <SemanticMessage

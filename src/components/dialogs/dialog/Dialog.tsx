@@ -1,6 +1,7 @@
 import { SyntheticEvent } from 'react'
 import PopIn from '@components/slots/popin/Popin'
 import './dialog.scss'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 
 export interface DialogProps {
   title: string
@@ -31,6 +32,7 @@ export interface DialogProps {
     action: React.ChangeEventHandler<HTMLInputElement>
   }
   indicator?: string
+  pin?: 'CENTER' | 'RIGHT'
   isLoading?: boolean
   isMessage?: boolean
   children?: React.ReactNode
@@ -44,6 +46,7 @@ const Dialog = (props: DialogProps) => {
     select,
     indicator,
     tag,
+    pin = 'CENTER',
     isLoading = false,
     isMessage = false,
     children,
@@ -56,12 +59,13 @@ const Dialog = (props: DialogProps) => {
 
   return (
     <div
-      className="dialog"
-      role="button"
+      className={doClassnames(['dialog', pin === 'RIGHT' && 'dialog--right'])}
+      role="dialog"
       tabIndex={-1}
       onMouseDown={closeHandler}
     >
       <PopIn
+        type={pin === 'RIGHT' ? 'PANEL' : 'POPIN'}
         title={title}
         actions={actions}
         select={select}

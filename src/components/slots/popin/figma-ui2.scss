@@ -1,7 +1,9 @@
 :root[data-theme='figma-ui2'] {
   --popin-breakpoint: 460px;
   --popin-shadow: var(--shadow-floating-window);
+  --popin-shadow-panel: var(--shadow-floating-window);
   --popin-radius: var(--border-radius-small);
+  --popin-width-panel: 296px;
   --popin-min-width: 460px;
   --popin-max-width: 576px;
   --popin-min-height: 136px;

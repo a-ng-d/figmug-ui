@@ -12,11 +12,19 @@
   border-radius: var(--popin-radius);
   background-color: var(--popin-background-color);
   width: 100%;
-  min-width: var(--popin-min-height);
+  min-width: var(--popin-min-width);
   max-width: var(--popin-max-width);
   min-height: var(--popin-min-height);
   max-height: 100%;
   user-select: none;
+
+  &--panel {
+    --popin-max-width: var(--popin-width-panel);
+    --popin-min-width: var(--popin-width-panel);
+    --popin-min-height: 100%;
+    --popin-radius: 0;
+    --popin-shadow: var(--popin-shadow-panel);
+  }
 
   .popin__header {
     display: flex;

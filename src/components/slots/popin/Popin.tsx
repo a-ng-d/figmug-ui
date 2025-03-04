@@ -8,6 +8,7 @@ import './popin.scss'
 
 export interface PopInProps {
   id?: string
+  type?: 'POPIN' | 'PANEL'
   title: string
   tag?: string
   actions?: {
@@ -45,6 +46,7 @@ export interface PopInProps {
 const PopIn = (props: PopInProps) => {
   const {
     id,
+    type = 'POPIN',
     title,
     actions,
     select,
@@ -59,7 +61,7 @@ const PopIn = (props: PopInProps) => {
   return (
     <div
       id={id}
-      className="popin"
+      className={doClassnames(['popin', type === 'PANEL' && 'popin--panel'])}
     >
       <div className="popin__header">
         <div className="popin__title">

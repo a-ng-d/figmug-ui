@@ -1,7 +1,9 @@
 :root[data-theme='figma-ui3'] {
   --popin-breakpoint: 460px;
   --popin-shadow: var(--elevation-500-modal-window);
+  --popin-shadow-panel: var(--elevation-400-menu-panel);
   --popin-radius: var(--border-radius-xxlarge);
+  --popin-width-panel: 296px;
   --popin-min-width: 460px;
   --popin-max-width: 576px;
   --popin-min-height: 136px;
