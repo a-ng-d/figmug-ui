@@ -134,4 +134,14 @@
   --input-border-color-disabled: var(--figma-color-border-disabled);
   --input-text-color-disabled: var(--figma-color-text-disabled);
   --input-text-placeholder-color-disabled: var(--figma-color-text-tertiary);
+
+  /* On Selected */
+  --input-background-color-onselected: var(--figma-color-bg);
+  --input-border-color-onselected: var(--figma-color-border-selected);
+  --input-border-width-onselected: var(--size-xunit);
+  --input-border-offset-onselected: var(--size-neg-xunit);
+  --input-background-color-onselected-hover: var(--figma-color-bg);
+  --input-border-color-onselected-hover: var(--figma-color-border-selected);
+  --input-border-width-onselected-hover: var(--size-xunit);
+  --input-border-offset-onselected-hover: var(--size-neg-xunit);
 }

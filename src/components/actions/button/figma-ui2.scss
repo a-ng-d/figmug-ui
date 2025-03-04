@@ -348,6 +348,11 @@
   --icon-button-notification-border-color-focus: var(--figma-color-bg);
   --icon-button-notification-border-color-disabled: var(--figma-color-bg);
 
+  --icon-button-background-color-onselected: var(--figma-color-bg-selected);
+  --icon-button-background-color-onselected-hover: var(
+    --figma-color-bg-selected-hover
+  );
+
   /* Icon Button - Selected */
   --icon-button-background-color-selected: var(
     --figma-color-bg-selected-strong

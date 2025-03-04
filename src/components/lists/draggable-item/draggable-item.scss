@@ -10,26 +10,24 @@
   padding: var(--draggable-item-padding);
 
   &[draggable='true'] {
-    --draggable-item-background-color: var(--figma-color-bg-selected);
-    --input-background-color: var(--figma-color-bg-selected);
-    --dropdown-background-color: var(--figma-color-bg-selected);
-    --icon-button-background-color: var(--figma-color-bg-selected);
+    --draggable-item-background-color: var(--draggable-item-background-color-selected);
+    --input-background-color: var(--input-background-color-onselected);
+    --input-border-color: var(--input-border-color-onselected);
+    --input-border-width: var(--input-border-width-onselected);
+    --input-border-offset: var(--input-border-offset-onselected);
+    --dropdown-background-color: var(--dropdown-background-color-onselected);
+    --dropdown-border-color: var(--dropdown-border-color-onselected);
+    --icon-button-background-color: var(--icon-button-background-color-onselected);
 
-    --input-background-color-hover: var(--figma-color-bg-selected);
-    --dropdown-background-color-hover: var(--figma-color-bg-selected);
+    --input-background-color-hover: var(--input-background-color-onselected-hover);
+    --input-border-color-hover: var(--input-border-color-onselected-hover);
+    --input-border-width-hover: var(--input-border-width-onselected-hover);
+    --input-border-offset-hover: var(--input-border-offset-onselected-hover);
+    --dropdown-background-color-hover: var(--dropdown-background-color-onselected-hover);
+    --dropdown-border-color-hover: var(--dropdown-border-color-onselected-hover);
     --icon-button-background-color-hover: var(
-      --figma-color-bg-selected-secondary
+      --icon-button-background-color-onselected-hover
     );
-
-    --input-background-color-focus: var(--figma-color-bg-selected-secondary);
-    --dropdown-background-color-focus: var(--figma-color-bg-selected-secondary);
-    --icon-button-background-color-focus: var(
-      --figma-color-bg-selected-secondary
-    );
-
-    --input-background-color-disabled: var(--figma-color-bg-selected);
-    --dropdown-background-color-disabled: var(--figma-color-bg-selected);
-    --icon-button-background-color-disabled: var(--figma-color-bg-selected);
   }
 
   &[draggable='true']:active {
