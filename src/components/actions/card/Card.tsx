@@ -6,7 +6,6 @@ interface CardProps {
   src: string
   label: string
   children: React.ReactNode
-  action: () => void
 }
 
 const Card = (props: CardProps) => {
