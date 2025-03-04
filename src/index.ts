@@ -8,6 +8,7 @@ export { default as Accordion } from '@components/actions/accordion/Accordion'
 export { default as Button } from '@components/actions/button/Button'
 export { default as Knob } from '@components/actions/knob/Knob'
 export { default as Menu } from '@components/actions/menu/Menu'
+export { default as Card } from '@components/actions/card/Card'
 
 // Assets
 export { default as Icon } from '@components/assets/icon/Icon'
