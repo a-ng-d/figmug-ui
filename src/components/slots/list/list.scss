@@ -13,4 +13,8 @@
     align-items: center;
     height: 100%;
   }
+
+  &--top-border {
+    border-top: var(--list-border-width) solid var(--list-border-color);
+  }
 }

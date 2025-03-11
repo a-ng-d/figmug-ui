@@ -80,8 +80,10 @@ export const Default: Story = {
         />
       </>
     ),
+    isTopBorderEnabled: true,
   },
   argTypes: {
+    padding: { control: false },
     isLoading: { control: false },
     isMessage: { control: false },
   },
@@ -105,6 +107,8 @@ export const Message: Story = {
     isMessage: true,
   },
   argTypes: {
+    padding: { control: false },
+    isTopBorderEnabled: { control: false },
     isLoading: { control: false },
     isMessage: { control: false },
   },
@@ -123,6 +127,8 @@ export const Loading: Story = {
   },
   argTypes: {
     children: { control: false },
+    padding: { control: false },
+    isTopBorderEnabled: { control: false },
     isLoading: { control: false },
     isMessage: { control: false },
   },

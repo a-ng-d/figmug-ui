@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Icon from '@components/assets/icon/Icon'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import './list.scss'
@@ -6,14 +6,28 @@ import './list.scss'
 export interface ListProps {
   id?: string
   children?: React.ReactNode
-  hasTopBorder?: boolean
+  padding?: string
+  isTopBorderEnabled?: boolean
   isLoading?: boolean
   isMessage?: boolean
-  padding?: string
 }
 
 export const List = (props: ListProps) => {
-  const { id, children, isLoading = false, isMessage = false, padding } = props
+  const {
+    id,
+    children,
+    isLoading = false,
+    isMessage = false,
+    padding,
+    isTopBorderEnabled = false,
+  } = props
+  const [hasTopBorder, setTopBorder] = useState(false)
+
+  const onScroll = (e: React.UIEvent<HTMLUListElement>) => {
+    e.preventDefault()
+    if (e.currentTarget.scrollTop > 0 && isTopBorderEnabled) setTopBorder(true)
+    else setTopBorder(false)
+  }
 
   return (
     <ul
@@ -25,7 +39,9 @@ export const List = (props: ListProps) => {
         'list',
         isLoading && 'list--loading',
         isMessage && 'list--message',
+        hasTopBorder && 'list--top-border',
       ])}
+      onScroll={onScroll}
     >
       {isLoading ? (
         <Icon
