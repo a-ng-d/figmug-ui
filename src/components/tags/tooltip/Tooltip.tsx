@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import texts from '@styles/texts.module.scss'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './tooltip.scss'
 
 export interface TooltipProps {
@@ -26,14 +27,12 @@ const Tooltip = (props: TooltipProps) => {
 
   return (
     <div
-      className={[
+      className={doClassnames([
         'tooltip',
         isSingleLine && 'tooltip--singleline',
         pin === 'TOP' && 'tooltip--top',
         pin === 'BOTTOM' && 'tooltip--bottom',
-      ]
-        .filter((n) => n)
-        .join(' ')}
+      ])}
       role="tooltip"
       ref={tooltipRef}
       style={{

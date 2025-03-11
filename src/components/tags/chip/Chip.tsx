@@ -14,13 +14,11 @@ const Chip = (props: ChipProps) => {
 
   return (
     <div
-      className={[
+      className={doClassnames([
         'chip',
         state === 'INACTIVE' && 'chip--inactive',
         state === 'ON_BACKGROUND' && 'chip--on-background',
-      ]
-        .filter((n) => n)
-        .join(' ')}
+      ])}
       role="chip"
     >
       {props.leftSlot && (

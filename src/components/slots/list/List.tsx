@@ -1,10 +1,12 @@
 import React from 'react'
 import Icon from '@components/assets/icon/Icon'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './list.scss'
 
 export interface ListProps {
   id?: string
   children?: React.ReactNode
+  hasTopBorder?: boolean
   isLoading?: boolean
   isMessage?: boolean
   padding?: string
@@ -19,13 +21,11 @@ export const List = (props: ListProps) => {
       style={{
         padding: padding,
       }}
-      className={[
+      className={doClassnames([
         'list',
         isLoading && 'list--loading',
         isMessage && 'list--message',
-      ]
-        .filter((n) => n)
-        .join(' ')}
+      ])}
     >
       {isLoading ? (
         <Icon

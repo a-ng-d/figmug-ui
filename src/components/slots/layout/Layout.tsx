@@ -1,3 +1,4 @@
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import Drawer, { DrawerProps } from '../drawer/Drawer'
 import './layout.scss'
 
@@ -19,13 +20,11 @@ const Layout = (props: LayoutProps) => {
   return (
     <div
       id={id}
-      className={[
+      className={doClassnames([
         'layout',
         isFullWidth && 'layout--full-width',
         isFullHeight && 'layout--full-height',
-      ]
-        .filter((n) => n)
-        .join(' ')}
+      ])}
       role="layout"
     >
       {column.map(

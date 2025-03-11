@@ -1,6 +1,7 @@
 import texts from '@styles/texts.module.scss'
 import Message from '@components/dialogs/message/Message'
 import Chip from '@components/tags/chip/Chip'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './form-item.scss'
 
 export interface FormItemProps {
@@ -29,13 +30,11 @@ const FormItem = (props: FormItemProps) => {
 
   return (
     <div
-      className={[
+      className={doClassnames([
         'form-item',
         shouldFill && 'form-item--fill',
         isBlocked && 'form-item--blocked',
-      ]
-        .filter((n) => n)
-        .join(' ')}
+      ])}
     >
       <div className="form-item__row">
         {label !== undefined && (

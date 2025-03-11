@@ -1,4 +1,5 @@
 import texts from '@styles/texts.module.scss'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './avatar.scss'
 
 export interface AvatarProps {
@@ -19,11 +20,7 @@ const Avatar = (props: AvatarProps) => {
   } = props
 
   return (
-    <div
-      className={['user', isInverted && 'user--inverted']
-        .filter((n) => n)
-        .join(' ')}
-    >
+    <div className={doClassnames(['user', isInverted && 'user--inverted'])}>
       <div className="user__avatar">
         <img
           src={avatar}
