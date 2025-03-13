@@ -4,6 +4,7 @@
 .list {
   background-color: var(--list-background-color);
   padding: var(--list-padding);
+  overflow-x: hidden;
   overflow-y: auto;
 
   &--loading,

@@ -22,6 +22,7 @@
     flex-direction: column;
     justify-content: flex-start;
     padding: var(--layout-block-padding);
+    overflow-x: hidden;
     overflow-y: auto;
 
     &--list {
