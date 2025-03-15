@@ -43,7 +43,7 @@ export default class Section extends React.Component<SectionProps> {
         {title}
         {body.map(
           (item, index) =>
-            (item.node !== undefined || item.node) && (
+            (item.node !== undefined || item.node !== null) && (
               <div
                 key={index}
                 className={[
