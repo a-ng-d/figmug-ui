@@ -5,12 +5,13 @@ import './chip.scss'
 export interface ChipProps {
   state?: 'ACTIVE' | 'INACTIVE' | 'ON_BACKGROUND'
   leftSlot?: React.ReactElement
-  children: React.ReactNode
   rightSlot?: React.ReactElement
+  children: React.ReactNode
+  isSolo?: boolean
 }
 
 const Chip = (props: ChipProps) => {
-  const { children, state = 'ACTIVE' } = props
+  const { children, state = 'ACTIVE', isSolo = false } = props
 
   return (
     <div
@@ -18,6 +19,7 @@ const Chip = (props: ChipProps) => {
         'chip',
         state === 'INACTIVE' && 'chip--inactive',
         state === 'ON_BACKGROUND' && 'chip--on-background',
+        isSolo && 'chip--solo',
       ])}
       role="chip"
     >

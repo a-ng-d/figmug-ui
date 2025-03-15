@@ -23,12 +23,16 @@
     text-wrap: nowrap;
   }
 
-  &.chip--inactive {
+  &--inactive {
     --chip-background-color: var(--chip-background-color-inactive);
     --chip-text-color: var(--chip-text-color-inactive);
   }
 
-  &.chip--on-background {
+  &--solo {
+    margin: 0;
+  }
+
+  &--on-background {
     margin: 0;
     --chip-background-color: var(--chip-background-color-on-background);
     --chip-text-color: var(--chip-text-color-on-background);
