@@ -12,7 +12,7 @@
     margin-left: var(--members-list-gap);
   }
 
-  &__member:first-child, &__member:last-child {
+  &__member:first-child {
     margin-left: 0;
   }
   
