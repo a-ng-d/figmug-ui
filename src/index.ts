@@ -38,6 +38,7 @@ export { default as KeyboardShortcutItem } from '@components/lists/keyboard-shor
 export { default as ActionsList } from '@components/lists/actions-list/ActionsList'
 export { default as SortableList } from '@components/lists/sortable-list/SortableList'
 export { default as Tabs } from '@components/lists/tabs/Tabs'
+export { default as MembersList } from '@components/lists/members-list/MembersList'
 
 // Slots
 export { default as Bar } from '@components/slots/bar/Bar'

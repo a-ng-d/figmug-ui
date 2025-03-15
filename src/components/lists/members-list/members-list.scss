@@ -1,0 +1,43 @@
+@import 'figma-ui2';
+@import 'figma-ui3';
+
+.members-list {
+  display: inline-flex;
+  align-items: center;
+  cursor: default;
+  user-select: none;
+
+  & > &__member:not(:first-child):not(:last-child) {
+    margin-left: var(--members-list-gap);
+  }
+
+  &__member {
+    position: relative;
+  }
+
+  &__avatar {
+    flex: none;
+    border-radius: var(--members-list-avatar-radius);
+    width: var(--members-list-avatar-width);
+    height: var(--members-list-avatar-height);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__remaining {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: var(--members-list-more-padding);
+    height: var(--members-list-avatar-height);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
