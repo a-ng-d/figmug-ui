@@ -38,6 +38,9 @@
     &--centered {
       flex: none;
       margin: auto;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: var(--layout-centered-padding);
     }
 
     &--blank {
