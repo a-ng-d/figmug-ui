@@ -8,7 +8,7 @@ import '@styles/tokens/globals.scss'
 
 export const globalTypes = {
   dataTheme: {
-    defaultValue: 'figma-ui2',
+    defaultValue: 'figma-ui3',
   },
   dataThemes: {
     defaultValue: {
