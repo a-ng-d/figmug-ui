@@ -4,7 +4,7 @@
   --tab-radius: var(--border-radius-med);
   --tab-background-color: var(--figma-color-bg);
   --tab-text-color: var(--figma-color-text-secondary);
-  --tab-text-weight: var(--font-weight-medium);
+  --tab-text-weight: var(--font-weight-semi);
 
   --tab-notification-inset: var(--size-xunit) var(--size-xunit) auto auto;
   --tab-notification-width: var(--size-xxsmall);
@@ -16,7 +16,7 @@
   --tab-notification-border-offset: 0;
 
   --tab-background-color-hover: var(--figma-color-bg-hover);
-  --tab-text-color-hover: var(--figma-color-text);
+  --tab-text-color-hover: var(--figma-color-text-secondary);
   --tab-text-weight-hover: var(--font-weight-semi);
   --tab-notification-border-color-hover: var(--figma-color-bg-hover);
   --tab-background-color-active: var(--figma-color-bg-secondary);
