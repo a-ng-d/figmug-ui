@@ -7,13 +7,15 @@
   cursor: default;
   user-select: none;
 
-  & > &__member:not(:first-child):not(:last-child) {
+  &__member {
+    position: relative;
     margin-left: var(--members-list-gap);
   }
 
-  &__member {
-    position: relative;
+  &__member:first-child, &__member:last-child {
+    margin-left: 0;
   }
+  
 
   &__avatar {
     flex: none;
