@@ -37,10 +37,10 @@
 
     &--centered {
       flex: none;
-      margin: auto;
-      max-width: 100%;
       box-sizing: border-box;
+      margin: auto;
       padding: var(--layout-centered-padding);
+      max-width: 100%;
     }
 
     &--blank {

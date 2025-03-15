@@ -11,11 +11,11 @@
   }
 
   .user__avatar {
+    flex: none;
     border-radius: var(--avatar-radius);
     width: var(--avatar-width);
     height: var(--avatar-height);
     overflow: hidden;
-    flex: none;
 
     img {
       width: 100%;

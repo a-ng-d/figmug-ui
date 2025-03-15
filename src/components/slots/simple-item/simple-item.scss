@@ -6,12 +6,12 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--simple-item-gap);
+  box-sizing: border-box;
   outline: var(--simple-item-border-width) solid var(--simple-item-border-color);
   outline-offset: var(--simple-item-border-offset);
   background-color: var(--simple-item-background-color);
   padding: var(--simple-item-padding);
   min-height: var(--simple-item-min-height);
-  box-sizing: border-box;
 
   &--center {
     align-items: center;
