@@ -76,11 +76,13 @@ export default class MembersList extends React.Component<
                 <div className="members-list__list">
                   {members.slice(numberOfAvatarsDisplayed).map((member) => (
                     <SimpleItem
+                      key={member.fullName}
                       leftPartSlot={
                         <Avatar
                           key={member.fullName}
                           avatar={member.avatar}
                           fullName={member.fullName}
+                          isAccented
                         />
                       }
                       isTransparent
