@@ -15,6 +15,7 @@
     width: var(--avatar-width);
     height: var(--avatar-height);
     overflow: hidden;
+    flex: none;
 
     img {
       width: 100%;
@@ -24,5 +25,6 @@
 
   .user__name {
     text-wrap: nowrap;
+    white-space: nowrap;
   }
 }

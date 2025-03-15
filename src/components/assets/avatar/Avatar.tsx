@@ -29,7 +29,7 @@ const Avatar = (props: AvatarProps) => {
       </div>
       <span
         className={[
-          'user_name',
+          'user__name',
           texts.type,
           !isAccented && texts['type--secondary'],
         ]
