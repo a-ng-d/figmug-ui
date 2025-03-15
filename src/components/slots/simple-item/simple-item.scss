@@ -11,6 +11,7 @@
   background-color: var(--simple-item-background-color);
   padding: var(--simple-item-padding);
   min-height: var(--simple-item-min-height);
+  box-sizing: border-box;
 
   &--center {
     align-items: center;
