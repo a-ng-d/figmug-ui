@@ -7,6 +7,7 @@ export interface SimpleItemProps {
   rightPartSlot?: React.ReactNode
   isListItem?: boolean
   isInteractive?: boolean
+  isTransparent?: boolean
   alignment?: 'DEFAULT' | 'CENTER' | 'BASELINE'
   action?: React.MouseEventHandler<HTMLLIElement | HTMLElement> &
     React.KeyboardEventHandler<HTMLLIElement | HTMLElement>
@@ -16,6 +17,7 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
   static defaultProps: Partial<SimpleItemProps> = {
     isListItem: true,
     isInteractive: false,
+    isTransparent: false,
     alignment: 'DEFAULT',
   }
 
@@ -26,6 +28,7 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
       rightPartSlot,
       isListItem,
       isInteractive,
+      isTransparent,
       alignment,
       action,
     } = this.props
@@ -38,6 +41,7 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
             'simple-item',
             `simple-item--${alignment?.toLowerCase()}`,
             isInteractive && 'simple-item--interactive',
+            isTransparent && 'simple-item--transparent',
           ]
             .filter((n) => n)
             .join(' ')}

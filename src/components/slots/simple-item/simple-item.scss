@@ -34,6 +34,10 @@
     }
   }
 
+  &--transparent {
+    --simple-item-background-color: transparent;
+  }
+
   .simple-item__left-part,
   .simple-item__right-part {
     display: flex;
