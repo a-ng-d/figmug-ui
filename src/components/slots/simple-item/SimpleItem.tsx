@@ -63,7 +63,7 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
         data-id={id}
         className={[
           'simple-item',
-          `${alignment?.toLowerCase()}`,
+          `simple-item--${alignment?.toLowerCase()}`,
           isInteractive && 'simple-item--interactive',
         ]
           .filter((n) => n)
