@@ -18,4 +18,10 @@
   &--top-border {
     border-top: var(--list-border-width) solid var(--list-border-color);
   }
+
+  &--alternate {
+    & > *:nth-child(even) {
+      background-color: var(--list-alternate-background-color);
+    }
+  }
 }
