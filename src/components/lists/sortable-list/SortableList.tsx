@@ -203,7 +203,7 @@ export default class SortableList<
     e.preventDefault()
     if (e.currentTarget.scrollTop > 0 && isTopBorderEnabled)
       this.setState({ hasTopBorder: true })
-    else this.setState({ hasTopBorder: true })
+    else this.setState({ hasTopBorder: false })
   }
 
   // Render
