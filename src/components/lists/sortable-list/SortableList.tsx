@@ -26,6 +26,10 @@ export interface SortableListProps<T = DefaultData> {
   }>
   actionsSlot?: Array<React.ReactNode>
   emptySlot?: React.ReactNode
+  helpers?: {
+    remove?: string
+    more?: string
+  }
   isScrollable?: boolean
   isTopBorderEnabled?: boolean
   canBeEmpty?: boolean
@@ -216,6 +220,7 @@ export default class SortableList<
       secondarySlot,
       actionsSlot,
       emptySlot,
+      helpers,
       isScrollable,
       onRemoveItem,
       onRefoldOptions,
@@ -246,6 +251,10 @@ export default class SortableList<
             secondarySlot={secondarySlot ? secondarySlot[index] : undefined}
             actionsSlot={actionsSlot ? actionsSlot[index] : undefined}
             selected={selectedElement.id === item.id}
+            helpers={{
+              remove: helpers?.remove,
+              more: helpers?.more,
+            }}
             guideAbove={
               hoveredElement.id === item.id
                 ? hoveredElement.hasGuideAbove
