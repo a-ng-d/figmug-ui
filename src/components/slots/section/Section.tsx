@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './section.scss'
 
 export interface SectionProps {
@@ -46,14 +47,12 @@ export default class Section extends React.Component<SectionProps> {
             (item.node !== undefined || item.node !== null) && (
               <div
                 key={index}
-                className={[
+                className={doClassnames([
                   'section__child',
                   item.spacingModifier === 'LARGE' && 'section__child--large',
                   item.spacingModifier === 'TIGHT' && 'section__child--tight',
                   item.spacingModifier === 'NONE' && 'section__child--none',
-                ]
-                  .filter((n) => n)
-                  .join(' ')}
+                ])}
               >
                 {item.node}
               </div>

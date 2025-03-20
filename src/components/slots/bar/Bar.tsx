@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './bar.scss'
 
 export interface BarProps {
@@ -56,14 +57,12 @@ export default class Bar extends React.Component<BarProps> {
     return (
       <div
         id={id}
-        className={[
+        className={doClassnames([
           'bar',
           isCompact && 'bar--compact',
           isOnlyText && 'bar--text-only',
           shouldReflow && 'bar--reflow',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         style={{
           ...this.setBorder(border),
           padding: padding,
@@ -72,9 +71,10 @@ export default class Bar extends React.Component<BarProps> {
         <div className="bar__left">{leftPartSlot}</div>
         {soloPartSlot !== undefined && (
           <div
-            className={['bar__solo', isFullWidth && 'bar__solo--full']
-              .filter((n) => n)
-              .join(' ')}
+            className={doClassnames([
+              'bar__solo',
+              isFullWidth && 'bar__solo--full',
+            ])}
           >
             {soloPartSlot}
           </div>

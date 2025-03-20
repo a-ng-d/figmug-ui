@@ -167,14 +167,12 @@ export default class ActionsList extends React.Component<
       <li
         role="menuitem"
         key={`menu-option-${index}`}
-        className={[
+        className={doClassnames([
           'select-menu__item',
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1 && 'select-menu__item--selected',
           option.isBlocked && 'select-menu__item--blocked',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         data-value={option.value}
         data-is-blocked={option.isBlocked}
         data-feature={option.feature}
@@ -230,12 +228,10 @@ export default class ActionsList extends React.Component<
       <li
         role="menuitem"
         key={`menu-group-${index}`}
-        className={[
+        className={doClassnames([
           'select-menu__item',
           option.isBlocked && ' select-menu__item--blocked',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         data-is-blocked={option.isBlocked}
         data-role={'GROUP'}
         tabIndex={option.isBlocked ? -1 : 0}
@@ -285,14 +281,12 @@ export default class ActionsList extends React.Component<
       <li
         role="menuitem"
         key={`menu-suboption-${index}`}
-        className={[
+        className={doClassnames([
           'select-menu__item',
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1 && 'select-menu__item--selected',
           option.isBlocked && 'select-menu__item--blocked',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         data-value={option.value}
         data-is-blocked={option.isBlocked}
         data-feature={option.feature}
@@ -358,16 +352,14 @@ export default class ActionsList extends React.Component<
           </div>
         )}
         <ul
-          className={[
+          className={doClassnames([
             'select-menu__menu',
             'select-menu__menu--active',
             direction === 'RIGHT'
               ? 'select-menu__menu--right'
               : 'select-menu__menu--left',
             shouldScroll && 'select-menu__menu--scrolling',
-          ]
-            .filter((n) => n)
-            .join(' ')}
+          ])}
           onScroll={this.onScroll}
           ref={menuRef}
         >

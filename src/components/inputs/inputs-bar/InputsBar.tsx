@@ -1,4 +1,5 @@
 import texts from '@styles/texts.module.scss'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './inputs-bar.scss'
 
 export interface InputsBarProps {
@@ -11,7 +12,7 @@ const InputsBar = (props: InputsBarProps) => {
   const { label, customClassName, children } = props
 
   return (
-    <div className={['inputs', customClassName].filter((n) => n).join(' ')}>
+    <div className={doClassnames(['inputs', customClassName])}>
       {label !== undefined && <div className={texts.label}>{label}</div>}
       <div className="inputs__bar">{children}</div>
     </div>

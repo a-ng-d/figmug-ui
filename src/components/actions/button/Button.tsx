@@ -80,15 +80,13 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
     return (
       <button
         role="action-button"
-        className={[
+        className={doClassnames([
           'button',
           `button--${type}`,
           `button--${size}`,
           isLoading && 'button--loading',
           isBlocked && 'button--blocked',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         data-feature={feature}
         disabled={isDisabled || isBlocked}
         onKeyDown={(e) => {
@@ -110,11 +108,9 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
             />
           </span>
         )}
-        <span className={['button__label'].filter((n) => n).join(' ')}>
-          {label}
-        </span>
+        <span className="button__label">{label}</span>
         {isLoading && (
-          <div className={['button__loader'].filter((n) => n).join(' ')}>
+          <div className="button__loader">
             <Icon
               type="PICTO"
               iconName="spinner"
@@ -182,15 +178,13 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
       <button
         role="icon-button"
         data-feature={feature}
-        className={[
+        className={doClassnames([
           'icon-button',
           `icon-button--${size}`,
           state === 'selected' && 'icon-button--selected',
           isNew && 'icon-button--new',
           isLoading && 'button--loading',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         disabled={isDisabled || isBlocked}
         onKeyDown={(e) => {
           if (

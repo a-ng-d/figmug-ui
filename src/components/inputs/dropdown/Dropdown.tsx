@@ -190,7 +190,7 @@ export default class Dropdown extends React.Component<
     return (
       <div
         id={id}
-        className={[
+        className={doClassnames([
           'select-menu',
           (() => {
             if (alignment === 'LEFT') return 'select-menu--left'
@@ -198,19 +198,15 @@ export default class Dropdown extends React.Component<
             return 'select-menu--fill'
           })(),
           (isDisabled || isBlocked) && 'select-menu--disabled',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         ref={this.selectMenuRef}
       >
         <button
           role="dropdown-button"
-          className={[
+          className={doClassnames([
             'select-menu__button',
             isMenuOpen && 'select-menu__button--active',
-          ]
-            .filter((n) => n)
-            .join(' ')}
+          ])}
           tabIndex={0}
           disabled={isDisabled || isBlocked}
           onKeyDown={(e) => {

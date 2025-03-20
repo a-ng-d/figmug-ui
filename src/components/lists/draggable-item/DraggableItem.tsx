@@ -1,4 +1,4 @@
-import { doMap } from '@a_ng_d/figmug-utils'
+import { doClassnames, doMap } from '@a_ng_d/figmug-utils'
 import React from 'react'
 import Button from '@components/actions/button/Button'
 import DraggableWindow from '@components/slots/draggable-window/DraggableWindow'
@@ -142,14 +142,12 @@ export default class DraggableItem extends React.Component<
       <li
         data-id={id}
         data-position={index}
-        className={[
+        className={doClassnames([
           'draggable-item',
           isDragged && 'draggable-item--dragged',
           guideAbove && 'draggable-item--above',
           guideBelow && 'draggable-item--below',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         draggable={!hasMoreOptions ? selected : false}
         onMouseDown={(e) => {
           if (!hasMoreOptions) onChangeSelection(e)

@@ -1,3 +1,4 @@
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import icons from '@styles/icons/icons.module.scss'
 import texts from '@styles/texts.module.scss'
 import type { IconList } from '@tps/icon.types'
@@ -29,9 +30,7 @@ export const Icon = (props: IconProps) => {
         }}
         role="icon"
       >
-        <span
-          className={[texts.type, customClassName].filter((n) => n).join(' ')}
-        >
+        <span className={doClassnames([texts.type, customClassName])}>
           {iconLetter}
         </span>
       </div>
@@ -41,15 +40,13 @@ export const Icon = (props: IconProps) => {
   const Pictogram = () => {
     return (
       <div
-        className={[
+        className={doClassnames([
           'icon-box',
           'icon-box--picto',
           icons.icon,
           icons[`icon--${iconName}`],
           customClassName,
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         role="icon"
       />
     )

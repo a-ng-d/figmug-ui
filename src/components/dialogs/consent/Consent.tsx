@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import layouts from '@styles/layouts.module.scss'
 import texts from '@styles/texts.module.scss'
 import type { ConsentConfiguration } from '@tps/consent.types'
@@ -113,9 +114,7 @@ export default class Consent extends React.Component<
     return (
       <div className="consent__banner">
         <div className="consent__banner__message">
-          <div className={[texts.type].filter((n) => n).join(' ')}>
-            {welcomeMessage}
-          </div>
+          <div className={texts.type}>{welcomeMessage}</div>
           <Button
             type="tertiary"
             label={privacyPolicy.label}
@@ -136,12 +135,10 @@ export default class Consent extends React.Component<
           }
           rightPartSlot={
             <div
-              className={[
+              className={doClassnames([
                 'consent__banner__actions',
                 layouts['snackbar--medium'],
-              ]
-                .filter((n) => n)
-                .join(' ')}
+              ])}
             >
               <Button
                 type="secondary"
@@ -181,9 +178,7 @@ export default class Consent extends React.Component<
       <div className="consent__banner">
         <div className="consent__banner__content">
           <div
-            className={['consent__banner__message', texts.type]
-              .filter((n) => n)
-              .join(' ')}
+            className={doClassnames(['consent__banner__message', texts.type])}
           >
             {vendorsMessage}
           </div>
@@ -191,30 +186,22 @@ export default class Consent extends React.Component<
             <li className="consent__banner__item">
               <Bar
                 leftPartSlot={
-                  <div
-                    className={[layouts['snackbar--large']]
-                      .filter((n) => n)
-                      .join(' ')}
-                  >
+                  <div className={layouts['snackbar--large']}>
                     <div>
                       <div
-                        className={[
+                        className={doClassnames([
                           'consent__banner__item__title',
                           texts['type--large'],
                           texts.type,
-                        ]
-                          .filter((n) => n)
-                          .join(' ')}
+                        ])}
                       >
                         {validVendor.name}
                       </div>
                       <div
-                        className={[
+                        className={doClassnames([
                           'consent__banner__item__description',
                           texts.type,
-                        ]
-                          .filter((n) => n)
-                          .join(' ')}
+                        ])}
                       >
                         {validVendor.description}
                       </div>
@@ -242,11 +229,7 @@ export default class Consent extends React.Component<
               >
                 <Bar
                   leftPartSlot={
-                    <div
-                      className={[layouts['snackbar--large']]
-                        .filter((n) => n)
-                        .join(' ')}
-                    >
+                    <div className={layouts['snackbar--large']}>
                       <div className="consent__banner__item__icon">
                         <Thumbnail
                           src={vendor.icon}
@@ -256,23 +239,19 @@ export default class Consent extends React.Component<
                       </div>
                       <div>
                         <div
-                          className={[
+                          className={doClassnames([
                             'consent__banner__item__title',
                             texts['type--large'],
                             texts.type,
-                          ]
-                            .filter((n) => n)
-                            .join(' ')}
+                          ])}
                         >
                           {vendor.name}
                         </div>
                         <div
-                          className={[
+                          className={doClassnames([
                             'consent__banner__item__description',
                             texts.type,
-                          ]
-                            .filter((n) => n)
-                            .join(' ')}
+                          ])}
                         >
                           {vendor.description}
                         </div>
@@ -312,12 +291,10 @@ export default class Consent extends React.Component<
           }
           rightPartSlot={
             <div
-              className={[
+              className={doClassnames([
                 'consent__banner__actions',
                 layouts['snackbar--medium'],
-              ]
-                .filter((n) => n)
-                .join(' ')}
+              ])}
             >
               <Button
                 type="secondary"

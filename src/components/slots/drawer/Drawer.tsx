@@ -202,15 +202,13 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
         ref={this.drawerRef}
       >
         <div
-          className={[
+          className={doClassnames([
             'drawer__knob',
             pin === 'TOP' && 'drawer__knob--top',
             pin === 'LEFT' && 'drawer__knob--left',
             pin === 'BOTTOM' && 'drawer__knob--bottom',
             pin === 'RIGHT' && 'drawer__knob--right',
-          ]
-            .filter((n) => n)
-            .join(' ')}
+          ])}
           onMouseDown={this.onGrab}
           onClick={this.clickHandler}
         />

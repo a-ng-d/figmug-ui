@@ -45,9 +45,7 @@ const Tooltip = (props: TooltipProps) => {
           transform: `translateX(${shift}px)`,
         }}
       >
-        <div
-          className={['tooltip__text', texts.type].filter((n) => n).join(' ')}
-        >
+        <div className={doClassnames(['tooltip__text', texts.type])}>
           {children}
         </div>
       </div>

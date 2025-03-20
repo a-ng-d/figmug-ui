@@ -129,13 +129,11 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
 
     return (
       <div
-        className={[
+        className={doClassnames([
           'knob',
           isStopInputOpen && 'knob--editing',
           (isBlocked || isDisabled) && 'knob--disabled',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         style={{
           left: `${offset}%`,
           zIndex: isTooltipOpen ? '2' : '1',

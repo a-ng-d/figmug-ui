@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import type { IconList } from '@tps/icon.types'
 import type { DropdownOption } from '@tps/list.types'
 import ActionsList from '@components/lists/actions-list/ActionsList'
@@ -144,13 +145,11 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
     return (
       <div
         id={id}
-        className={[
+        className={doClassnames([
           'menu',
           'recharged',
           `menu--${alignment?.toLocaleLowerCase().replace('_', '-')}`,
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         ref={this.selectMenuRef}
       >
         {type === 'ICON' ? (

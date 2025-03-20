@@ -36,16 +36,14 @@ const Layout = (props: LayoutProps) => {
           ) : (
             <div
               key={index}
-              className={[
+              className={doClassnames([
                 'layout__block',
                 item.typeModifier === 'LIST' && 'layout__block--list',
                 item.typeModifier === 'DISTRIBUTED' &&
                   'layout__block--distributed',
                 item.typeModifier === 'CENTERED' && 'layout__block--centered',
                 item.typeModifier === 'BLANK' && 'layout__block--blank',
-              ]
-                .filter((n) => n)
-                .join(' ')}
+              ])}
               style={{
                 width:
                   item.fixedWidth !== undefined ? item.fixedWidth : undefined,

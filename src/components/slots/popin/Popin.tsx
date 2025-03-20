@@ -84,13 +84,11 @@ const PopIn = (props: PopInProps) => {
         />
       </div>
       <div
-        className={[
+        className={doClassnames([
           'popin__content',
           isLoading && 'popin__content--loading',
           isMessage && 'popin__content--message',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
       >
         {isLoading ? (
           <Icon

@@ -49,12 +49,10 @@ export default class ActionsItem extends React.Component<ActionsItemProps> {
     } = this.props
     return (
       <li
-        className={[
+        className={doClassnames([
           'actions-item',
           isInteractive && 'actions-item--interactive',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         data-id={id}
         tabIndex={isInteractive ? 0 : -1}
         onMouseDown={isInteractive ? action : undefined}

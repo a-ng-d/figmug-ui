@@ -33,14 +33,12 @@ export default class SemanticMessage extends React.Component<SemanticMessageProp
 
     return (
       <div
-        className={[
+        className={doClassnames([
           'semantic-message',
           `semantic-message--${type.toLowerCase()}`,
           orientation === 'VERTICAL' && 'semantic-message--vertical',
           isAnchored && 'semantic-message--anchored',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
       >
         <div className="semantic-message__body">
           <Message

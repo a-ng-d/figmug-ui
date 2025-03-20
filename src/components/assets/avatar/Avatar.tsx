@@ -28,13 +28,11 @@ const Avatar = (props: AvatarProps) => {
         />
       </div>
       <span
-        className={[
+        className={doClassnames([
           'user__name',
           texts.type,
           !isAccented && texts['type--secondary'],
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
       >
         {fullName}
       </span>

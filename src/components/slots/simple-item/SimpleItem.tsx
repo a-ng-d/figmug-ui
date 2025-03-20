@@ -1,4 +1,5 @@
 import React from 'react'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './simple-item.scss'
 
 export interface SimpleItemProps {
@@ -37,14 +38,12 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
       return (
         <li
           data-id={id}
-          className={[
+          className={doClassnames([
             'simple-item',
             `simple-item--${alignment?.toLowerCase()}`,
             isInteractive && 'simple-item--interactive',
             isTransparent && 'simple-item--transparent',
-          ]
-            .filter((n) => n)
-            .join(' ')}
+          ])}
           tabIndex={isInteractive ? 0 : -1}
           onMouseDown={isInteractive ? action : undefined}
           onKeyDown={(e) => {
@@ -61,13 +60,11 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
     return (
       <div
         data-id={id}
-        className={[
+        className={doClassnames([
           'simple-item',
           `simple-item--${alignment?.toLowerCase()}`,
           isInteractive && 'simple-item--interactive',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
         tabIndex={isInteractive ? 0 : -1}
         onMouseDown={isInteractive ? action : undefined}
         onKeyDown={(e) => {

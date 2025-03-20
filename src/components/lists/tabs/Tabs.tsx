@@ -1,4 +1,5 @@
 import texts from '@styles/texts.module.scss'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './tabs.scss'
 
 export interface TabsProps {
@@ -20,14 +21,12 @@ const Tabs = (props: TabsProps) => {
         <div
           role="navigation"
           key={tab.label.toLowerCase()}
-          className={[
+          className={doClassnames([
             'tabs__tab',
             texts.type,
             active === tab.id && 'tabs__tab--active',
             tab.isUpdated && 'tabs__tab--new',
-          ]
-            .filter((n) => n)
-            .join(' ')}
+          ])}
           data-feature={tab.id}
           tabIndex={-1}
           onMouseDown={action}

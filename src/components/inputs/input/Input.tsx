@@ -297,14 +297,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
 
     return (
       <div
-        className={[
+        className={doClassnames([
           'input',
           'input--color',
           'input--with-icon',
           isBlocked && 'input--blocked',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
       >
         <input
           role="color-picker"
@@ -365,15 +363,13 @@ export default class Input extends React.Component<InputProps, InputStates> {
 
     return (
       <div
-        className={[
+        className={doClassnames([
           'input',
           'input--number',
           icon !== undefined && 'input--with-icon',
           isFlex && 'input--flex',
           isBlocked && 'input--blocked',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
       >
         <div className="input__wrapper">
           {icon !== undefined && (
@@ -402,13 +398,11 @@ export default class Input extends React.Component<InputProps, InputStates> {
             id={id}
             data-feature={feature}
             type="number"
-            className={[
+            className={doClassnames([
               'input__field',
               isFlex && 'input__field--flex',
               unit !== undefined && 'input__field--unit',
-            ]
-              .filter((n) => n)
-              .join(' ')}
+            ])}
             value={inputValue}
             min={min}
             max={max}
@@ -461,14 +455,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
 
     return (
       <div
-        className={[
+        className={doClassnames([
           'input',
           'input--short-text',
           icon !== undefined && 'input--with-icon',
           isBlocked && 'input--blocked',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+        ])}
       >
         {icon !== undefined && (
           <div className="input__icon">
@@ -484,14 +476,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
           id={id}
           data-feature={feature}
           type="text"
-          className={[
+          className={doClassnames([
             'input__field',
             !isFramed && 'input__field--no-frame',
             isClearable && inputValue.length > 0 && 'input__field--clearable',
             state === 'ERROR' && 'input__field--error',
-          ]
-            .filter((n) => n)
-            .join(' ')}
+          ])}
           placeholder={placeholder}
           value={inputValue}
           maxLength={charactersLimit}
@@ -538,13 +528,11 @@ export default class Input extends React.Component<InputProps, InputStates> {
           role="long-text"
           id={id}
           data-feature={feature}
-          className={[
+          className={doClassnames([
             'textarea',
             'input__field',
             state === 'ERROR' && 'input__field--error',
-          ]
-            .filter((n) => n)
-            .join(' ')}
+          ])}
           rows={1}
           placeholder={placeholder}
           value={inputValue}
@@ -577,9 +565,11 @@ export default class Input extends React.Component<InputProps, InputStates> {
           role="code-snippet"
           id={id}
           data-feature={feature}
-          className={['textarea', 'input__field', 'textarea--monospace']
-            .filter((n) => n)
-            .join(' ')}
+          className={doClassnames([
+            'textarea',
+            'input__field',
+            'textarea--monospace',
+          ])}
           value={value}
           disabled={isDisabled || isBlocked}
           onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
