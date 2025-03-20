@@ -16,6 +16,10 @@ export interface DraggableItemProps {
   actionsSlot?: React.ReactNode
   selected?: boolean
   optionsTitle?: string
+  helpers?: {
+    remove?: string
+    more?: string
+  }
   guideAbove?: boolean
   guideBelow?: boolean
   onChangeSelection: React.MouseEventHandler<HTMLLIElement>
@@ -128,6 +132,7 @@ export default class DraggableItem extends React.Component<
       actionsSlot,
       selected,
       optionsTitle,
+      helpers,
       guideAbove,
       guideBelow,
       onRemove,
@@ -174,6 +179,14 @@ export default class DraggableItem extends React.Component<
                 type="icon"
                 icon="ellipses"
                 state={hasMoreOptions ? 'selected' : undefined}
+                helper={
+                  helpers?.more !== undefined
+                    ? {
+                        label: helpers.more,
+                        isSingleLine: true,
+                      }
+                    : undefined
+                }
                 action={() => {
                   onCancelSelection
                   onRefoldOptions
@@ -185,8 +198,16 @@ export default class DraggableItem extends React.Component<
             <Button
               type="icon"
               icon="minus"
-              isDisabled={!canBeRemoved}
+              helper={
+                helpers?.remove !== undefined
+                  ? {
+                      label: helpers.remove,
+                      isSingleLine: true,
+                    }
+                  : undefined
+              }
               feature="REMOVE_ITEM"
+              isDisabled={!canBeRemoved}
               action={canBeRemoved ? onRemove : () => null}
             />
           </div>

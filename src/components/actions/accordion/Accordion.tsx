@@ -10,6 +10,10 @@ export interface AccordionProps {
   indicator?: string | number
   icon?: IconList
   helper?: string
+  helpers?: {
+    add?: string
+    empty?: string
+  }
   isExpanded: boolean
   isBlocked?: boolean
   isNew?: boolean
@@ -28,6 +32,7 @@ const Accordion = (props: AccordionProps) => {
     indicator,
     icon = 'plus',
     helper,
+    helpers,
     isExpanded,
     isBlocked = false,
     isNew = false,
@@ -82,6 +87,14 @@ const Accordion = (props: AccordionProps) => {
               type="icon"
               icon="minus"
               iconClassName="accordion__row__icon"
+              helper={
+                helpers?.empty !== undefined
+                  ? {
+                      label: helpers.empty,
+                      isSingleLine: true,
+                    }
+                  : undefined
+              }
               isDisabled={isBlocked}
               isBlocked={isBlocked}
               action={(e) => handleEmpty(e)}
@@ -91,6 +104,14 @@ const Accordion = (props: AccordionProps) => {
               type="icon"
               icon={icon}
               iconClassName="accordion__row__icon"
+              helper={
+                helpers?.add !== undefined
+                  ? {
+                      label: helpers.add,
+                      isSingleLine: true,
+                    }
+                  : undefined
+              }
               isDisabled={isBlocked}
               isBlocked={isBlocked}
               action={(e) => handleAdd(e)}
