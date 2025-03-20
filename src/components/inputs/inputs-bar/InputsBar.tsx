@@ -2,7 +2,7 @@ import texts from '@styles/texts.module.scss'
 import './inputs-bar.scss'
 
 export interface InputsBarProps {
-  label: string
+  label?: string
   customClassName?: string
   children: React.ReactNode
 }
@@ -12,7 +12,7 @@ const InputsBar = (props: InputsBarProps) => {
 
   return (
     <div className={['inputs', customClassName].filter((n) => n).join(' ')}>
-      <div className={texts.label}>{label}</div>
+      {label !== undefined && <div className={texts.label}>{label}</div>}
       <div className="inputs__bar">{children}</div>
     </div>
   )
