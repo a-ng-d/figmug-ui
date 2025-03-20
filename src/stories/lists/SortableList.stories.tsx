@@ -209,19 +209,24 @@ export const RichColors: Story = {
             value={item.color}
           />
         ))}
-        secondarySlot={argsState.data.map((item) => (
-          <FormItem
-            label="Description"
-            id="type-description"
-          >
-            <Input
-              id="type-description"
-              type="LONG_TEXT"
-              placeholder="Type something"
-              value={item.description}
-            />
-          </FormItem>
-        ))}
+        secondarySlot={argsState.data.map((item) => {
+          return {
+            title: item.id,
+            node: (
+              <FormItem
+                label="Description"
+                id="type-description"
+              >
+                <Input
+                  id="type-description"
+                  type="LONG_TEXT"
+                  placeholder="Type something"
+                  value={item.description}
+                />
+              </FormItem>
+            ),
+          }
+        })}
         onChangeSortableList={onChange}
         onRemoveItem={onRemove}
       />

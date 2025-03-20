@@ -9,7 +9,10 @@ export interface DraggableItemProps {
   index: number
   canBeRemoved?: boolean
   primarySlot: React.ReactNode
-  secondarySlot?: React.ReactNode
+  secondarySlot?: {
+    title: string
+    node: React.ReactNode
+  }
   actionsSlot?: React.ReactNode
   selected?: boolean
   optionsTitle?: string
@@ -192,7 +195,11 @@ export default class DraggableItem extends React.Component<
         </div>
         {hasMoreOptions && secondarySlot !== undefined && (
           <DraggableWindow
-            title={optionsTitle}
+            title={
+              secondarySlot.title !== undefined
+                ? secondarySlot.title
+                : optionsTitle
+            }
             onClose={() =>
               this.setState({
                 hasMoreOptions: false,
@@ -200,7 +207,7 @@ export default class DraggableItem extends React.Component<
             }
             triggerRef={this.moreButtonRef}
           >
-            {secondarySlot}
+            {secondarySlot.node}
           </DraggableWindow>
         )}
       </li>

@@ -80,18 +80,21 @@ export const RichColorItem: Story = {
         />
       </div>
     ))(),
-    secondarySlot: (() => (
-      <FormItem
-        label="Description"
-        id="type-description"
-      >
-        <Input
+    secondarySlot: {
+      title: 'More options',
+      node: (() => (
+        <FormItem
+          label="Description"
           id="type-description"
-          type="LONG_TEXT"
-          placeholder="Type something"
-        />
-      </FormItem>
-    ))(),
+        >
+          <Input
+            id="type-description"
+            type="LONG_TEXT"
+            placeholder="Type something"
+          />
+        </FormItem>
+      ))(),
+    },
     selected: false,
     guideAbove: false,
     guideBelow: false,

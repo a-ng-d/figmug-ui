@@ -19,7 +19,10 @@ interface HoveredColor extends SelectedColor {
 export interface SortableListProps<T = DefaultData> {
   data: Array<T>
   primarySlot: Array<React.ReactNode>
-  secondarySlot?: Array<React.ReactNode>
+  secondarySlot?: Array<{
+    title: string
+    node: React.ReactNode
+  }>
   actionsSlot?: Array<React.ReactNode>
   emptySlot?: React.ReactNode
   isScrollable?: boolean
