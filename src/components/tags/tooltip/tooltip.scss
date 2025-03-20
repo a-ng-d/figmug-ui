@@ -10,6 +10,7 @@
   min-width: var(--tooltip-min-width);
   max-width: var(--tooltip-max-width);
   user-select: none;
+  pointer-events: none;
 
   &:after {
     position: absolute;
