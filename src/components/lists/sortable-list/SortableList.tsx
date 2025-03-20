@@ -1,6 +1,7 @@
 import React from 'react'
 import DraggableItem from '../draggable-item/DraggableItem'
 import './sortable-list.scss'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 
 interface SelectedColor {
   id: string | undefined
@@ -26,6 +27,7 @@ export interface SortableListProps<T = DefaultData> {
   actionsSlot?: Array<React.ReactNode>
   emptySlot?: React.ReactNode
   isScrollable?: boolean
+  isTopBorderEnabled?: boolean
   canBeEmpty?: boolean
   isBlocked?: boolean
   onChangeSortableList: (data: Array<T>) => void
@@ -37,6 +39,7 @@ export interface SortableListProps<T = DefaultData> {
 export interface SortableListStates {
   selectedElement: SelectedColor
   hoveredElement: HoveredColor
+  hasTopBorder: boolean
 }
 
 export default class SortableList<
@@ -46,6 +49,7 @@ export default class SortableList<
 
   static defaultProps: Partial<SortableListProps> = {
     isScrollable: false,
+    isTopBorderEnabled: false,
     canBeEmpty: true,
     isBlocked: false,
   }
@@ -63,6 +67,7 @@ export default class SortableList<
         hasGuideBelow: false,
         position: 0,
       },
+      hasTopBorder: false,
     }
     this.listRef = React.createRef()
     this.handleClickOutside = this.handleClickOutside.bind(this)
@@ -191,6 +196,16 @@ export default class SortableList<
     onChangeSortableList(duplicatedData.filter((item) => item.id !== id))
   }
 
+  // Direct Actions
+  onScroll = (e: React.UIEvent<HTMLUListElement>) => {
+    const { isTopBorderEnabled } = this.props
+
+    e.preventDefault()
+    if (e.currentTarget.scrollTop > 0 && isTopBorderEnabled)
+      this.setState({ hasTopBorder: true })
+    else this.setState({ hasTopBorder: true })
+  }
+
   // Render
   render() {
     const {
@@ -205,18 +220,18 @@ export default class SortableList<
       onRemoveItem,
       onRefoldOptions,
     } = this.props
-    const { selectedElement, hoveredElement } = this.state
+    const { selectedElement, hoveredElement, hasTopBorder } = this.state
 
     if (data.length === 0 && canBeEmpty)
       return <div className="sortable-list">{emptySlot}</div>
     return (
       <ul
-        className={[
+        className={doClassnames([
           'sortable-list',
           isScrollable && 'sortable-list--scrollable',
-        ]
-          .filter((n) => n)
-          .join(' ')}
+          hasTopBorder && 'sortable-list--top-border',
+        ])}
+        onScroll={this.onScroll}
         ref={this.listRef}
       >
         {data.map((item, index) => (
