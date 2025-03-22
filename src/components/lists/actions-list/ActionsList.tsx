@@ -12,6 +12,11 @@ export interface ActionsListProps {
   direction?: 'LEFT' | 'RIGHT'
   shouldScroll?: boolean
   containerId?: string
+  preview?: {
+    img: string
+    text: string
+    pin?: 'TOP' | 'BOTTOM'
+  }
   onCancellation?: () => void
   menuRef?: React.RefObject<HTMLUListElement>
   subMenuRef?: React.RefObject<HTMLUListElement>
@@ -161,7 +166,7 @@ export default class ActionsList extends React.Component<
   }
 
   MenuOption = (option: DropdownOption, index: number) => {
-    const { selected, onCancellation } = this.props
+    const { selected, preview, onCancellation } = this.props
 
     return (
       <li
@@ -215,13 +220,14 @@ export default class ActionsList extends React.Component<
           {option.label}
         </span>
         {(option.isBlocked || option.isNew) && (
-          <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
+          <Chip preview={preview}>{option.isNew ? 'New' : 'Pro'}</Chip>
         )}
       </li>
     )
   }
 
   MenuGroup = (option: DropdownOption, index: number) => {
+    const { preview } = this.props
     const { openedGroup } = this.state
 
     return (
@@ -258,7 +264,7 @@ export default class ActionsList extends React.Component<
           {option.label}
         </span>
         {(option.isBlocked || option.isNew) && (
-          <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
+          <Chip preview={preview}>{option.isNew ? 'New' : 'Pro'}</Chip>
         )}
         <span className="select-menu__item__caret">
           <Icon
@@ -275,7 +281,7 @@ export default class ActionsList extends React.Component<
   }
 
   MenuSubOption = (option: DropdownOption, index: number) => {
-    const { selected, onCancellation } = this.props
+    const { selected, preview, onCancellation } = this.props
 
     return (
       <li
@@ -322,7 +328,7 @@ export default class ActionsList extends React.Component<
           {option.label}
         </span>
         {(option.isBlocked || option.isNew) && (
-          <Chip>{option.isNew ? 'New' : 'Pro'}</Chip>
+          <Chip preview={preview}>{option.isNew ? 'New' : 'Pro'}</Chip>
         )}
       </li>
     )

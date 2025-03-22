@@ -9,6 +9,11 @@ export interface SelectProps {
   label?: string
   name?: string
   value?: string
+  preview?: {
+    img: string
+    text: string
+    pin?: 'TOP' | 'BOTTOM'
+  }
   feature?: string
   isChecked?: boolean
   isDisabled?: boolean
@@ -32,6 +37,7 @@ export default class Select extends React.Component<SelectProps> {
       id,
       label,
       name,
+      preview,
       feature,
       isChecked,
       isDisabled,
@@ -60,7 +66,9 @@ export default class Select extends React.Component<SelectProps> {
           htmlFor={id}
         >
           {label}
-          {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+          {(isBlocked || isNew) && (
+            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+          )}
         </label>
       </div>
     )
@@ -72,6 +80,7 @@ export default class Select extends React.Component<SelectProps> {
       label,
       name,
       value,
+      preview,
       feature,
       isChecked,
       isDisabled,
@@ -99,7 +108,9 @@ export default class Select extends React.Component<SelectProps> {
           htmlFor={id}
         >
           {label}
-          {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+          {(isBlocked || isNew) && (
+            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+          )}
         </label>
       </div>
     )
@@ -110,6 +121,7 @@ export default class Select extends React.Component<SelectProps> {
       id,
       label,
       name,
+      preview,
       feature,
       isChecked,
       isDisabled,
@@ -136,7 +148,9 @@ export default class Select extends React.Component<SelectProps> {
           htmlFor={id}
         >
           {label}
-          {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+          {(isBlocked || isNew) && (
+            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+          )}
         </label>
       </div>
     )

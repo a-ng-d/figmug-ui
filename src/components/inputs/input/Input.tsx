@@ -18,6 +18,11 @@ export interface InputProps {
   min?: string
   max?: string
   step?: string
+  preview?: {
+    img: string
+    text: string
+    pin?: 'TOP' | 'BOTTOM'
+  }
   feature?: string
   shouldBlur?: boolean
   isAutoFocus?: boolean
@@ -291,7 +296,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
 
   // Templates
   Color = () => {
-    const { id, feature, isBlocked, isDisabled, isNew } = this.props
+    const { id, preview, feature, isBlocked, isDisabled, isNew } = this.props
 
     const { inputValue } = this.state
 
@@ -338,7 +343,9 @@ export default class Input extends React.Component<InputProps, InputStates> {
           onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
           ref={this.inputRef}
         />
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
       </div>
     )
   }
@@ -351,6 +358,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       min,
       max,
       step,
+      preview,
       feature,
       isBlocked,
       isDisabled,
@@ -430,7 +438,9 @@ export default class Input extends React.Component<InputProps, InputStates> {
             </div>
           )}
         </div>
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
       </div>
     )
   }
@@ -442,6 +452,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       state,
       placeholder,
       charactersLimit,
+      preview,
       feature,
       isClearable,
       isFramed,
@@ -492,7 +503,9 @@ export default class Input extends React.Component<InputProps, InputStates> {
           onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
           ref={this.inputRef}
         ></input>
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
         {isClearable && inputValue.length > 0 && (
           <div className="input__clear">
             <Button
@@ -511,8 +524,16 @@ export default class Input extends React.Component<InputProps, InputStates> {
   }
 
   LongText = () => {
-    const { id, state, placeholder, feature, isBlocked, isDisabled, isNew } =
-      this.props
+    const {
+      id,
+      state,
+      placeholder,
+      preview,
+      feature,
+      isBlocked,
+      isDisabled,
+      isNew,
+    } = this.props
 
     const { inputValue } = this.state
 
@@ -545,7 +566,9 @@ export default class Input extends React.Component<InputProps, InputStates> {
           onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
           ref={this.textareaRef}
         />
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
       </div>
     )
   }
