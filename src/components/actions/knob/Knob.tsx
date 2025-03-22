@@ -13,7 +13,10 @@ export interface KnobProps {
   offset: number
   min?: string
   max?: string
-  helper?: string
+  helper?: {
+    label: string
+    type: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+  }
   canBeTyped: boolean
   isDisplayed: boolean
   isBlocked: boolean
@@ -216,7 +219,9 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
           {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>
         <div className="knob__graduation"></div>
-        {helper !== undefined && isTooltipOpen && <Tooltip>{helper}</Tooltip>}
+        {helper !== undefined && isTooltipOpen && (
+          <Tooltip type={helper.type}>{helper.label}</Tooltip>
+        )}
       </div>
     )
   }
