@@ -3,21 +3,21 @@
 
 .chip {
   display: inline-flex;
+  position: relative;
   align-items: center;
   gap: var(--chip-gap);
   cursor: default;
   box-sizing: border-box;
   margin: var(--chip-margin);
-  border-radius: var(--chip-radius);
-  background-color: var(--chip-background-color);
   outline: var(--chip-border-width) solid var(--chip-border-color);
   outline-offset: var(--chip-border-offset);
+  border-radius: var(--chip-radius);
+  background-color: var(--chip-background-color);
   padding: var(--chip-padding);
   max-width: 100%;
   height: var(--chip-height);
-  user-select: none;
-  position: relative;
   pointer-events: all;
+  user-select: none;
 
   &--preview:hover {
     --chip-background-color: var(--chip-background-color-hover);

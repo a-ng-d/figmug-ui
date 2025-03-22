@@ -9,8 +9,8 @@
   width: auto;
   min-width: var(--tooltip-min-width);
   max-width: var(--tooltip-max-width);
-  user-select: none;
   pointer-events: none;
+  user-select: none;
 
   &:after {
     position: absolute;
@@ -64,9 +64,9 @@
   }
 
   &__image {
+    border-radius: var(--tooltip-image-radius);
     width: var(--tooltip-image-width);
     height: var(--tooltip-image-height);
-    border-radius: var(--tooltip-image-radius);
   }
 
   &--singleline {
