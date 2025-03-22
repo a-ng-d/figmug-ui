@@ -12,7 +12,7 @@ export interface ChipProps {
   children: React.ReactNode
   isSolo?: boolean
   preview?: {
-    img: string
+    image: string
     text: string
     pin?: 'TOP' | 'BOTTOM'
   }
@@ -61,7 +61,7 @@ const Chip = (props: ChipProps) => {
         >
           <div className={layouts['snackbar--medium']}>
             <img
-              src={preview?.img}
+              src={preview?.image}
               alt={preview?.text}
               className="tooltip__image"
             />

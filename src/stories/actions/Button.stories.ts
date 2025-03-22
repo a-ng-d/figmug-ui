@@ -124,7 +124,7 @@ export const Primary: Story = {
     size: 'default',
     label: 'Primary action button',
     preview: {
-      img: 'https://placehold.co/96x96',
+      image: 'https://placehold.co/96x96',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
     feature: 'PRIMARY_ACTION',

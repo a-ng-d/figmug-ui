@@ -13,7 +13,7 @@ export interface ActionsListProps {
   shouldScroll?: boolean
   containerId?: string
   preview?: {
-    img: string
+    image: string
     text: string
     pin?: 'TOP' | 'BOTTOM'
   }

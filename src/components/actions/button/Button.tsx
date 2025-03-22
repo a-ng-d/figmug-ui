@@ -27,7 +27,7 @@ export interface ButtonProps {
     type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
   }
   preview?: {
-    img: string
+    image: string
     text: string
     pin?: 'TOP' | 'BOTTOM'
   }

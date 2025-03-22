@@ -19,7 +19,7 @@ export interface InputProps {
   max?: string
   step?: string
   preview?: {
-    img: string
+    image: string
     text: string
     pin?: 'TOP' | 'BOTTOM'
   }

@@ -10,7 +10,7 @@ export interface SelectProps {
   name?: string
   value?: string
   preview?: {
-    img: string
+    image: string
     text: string
     pin?: 'TOP' | 'BOTTOM'
   }
