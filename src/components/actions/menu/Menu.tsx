@@ -132,6 +132,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
       label,
       state,
       icon,
+      helper,
       customIcon,
       options,
       selected,
@@ -158,9 +159,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
             icon={icon === undefined ? undefined : icon}
             customIcon={customIcon === undefined ? undefined : customIcon}
             state={isMenuOpen ? 'selected' : undefined}
-            helper={
-              this.props.helper === undefined ? undefined : this.props.helper
-            }
+            helper={helper === undefined || isMenuOpen ? undefined : helper}
             isLoading={state === 'LOADING'}
             isDisabled={state === 'DISABLED' || isBlocked}
             isNew={isNew}
