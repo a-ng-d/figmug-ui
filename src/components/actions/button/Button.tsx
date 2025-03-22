@@ -24,7 +24,12 @@ export interface ButtonProps {
   helper?: {
     label: string
     pin?: 'TOP' | 'BOTTOM'
-    isSingleLine?: boolean
+    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+  }
+  preview?: {
+    img: string
+    text: string
+    pin?: 'TOP' | 'BOTTOM'
   }
   feature?: string
   hasMultipleActions?: boolean
@@ -67,6 +72,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
       type,
       icon,
       size,
+      preview,
       isBlocked,
       feature,
       hasMultipleActions,
@@ -126,7 +132,9 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
             />
           </span>
         )}
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
       </button>
     )
   }
@@ -230,7 +238,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         {isTooltipVisible && (
           <Tooltip
             pin={helper?.pin}
-            isSingleLine={helper?.isSingleLine}
+            type={helper?.type}
           >
             {helper?.label}
           </Tooltip>

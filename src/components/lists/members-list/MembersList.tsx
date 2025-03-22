@@ -58,7 +58,7 @@ export default class MembersList extends React.Component<
               />
             </div>
             {activeTooltipIndex === index && (
-              <Tooltip isSingleLine>{member.fullName}</Tooltip>
+              <Tooltip>{member.fullName}</Tooltip>
             )}
           </div>
         ))}

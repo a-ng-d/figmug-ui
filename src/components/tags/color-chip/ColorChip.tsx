@@ -45,9 +45,7 @@ export default class ColorChip extends React.Component<
         }}
         onMouseLeave={() => this.setState({ isTooltipVisible: false })}
       >
-        {this.state.isTooltipVisible && (
-          <Tooltip isSingleLine>{helper}</Tooltip>
-        )}
+        {this.state.isTooltipVisible && <Tooltip>{helper}</Tooltip>}
       </div>
     )
   }

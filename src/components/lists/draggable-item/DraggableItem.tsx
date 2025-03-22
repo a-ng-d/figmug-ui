@@ -183,7 +183,6 @@ export default class DraggableItem extends React.Component<
                   helpers?.more !== undefined
                     ? {
                         label: helpers.more,
-                        isSingleLine: true,
                       }
                     : undefined
                 }
@@ -202,7 +201,6 @@ export default class DraggableItem extends React.Component<
                 helpers?.remove !== undefined
                   ? {
                       label: helpers.remove,
-                      isSingleLine: true,
                     }
                   : undefined
               }

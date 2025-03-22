@@ -42,7 +42,7 @@ const SectionTitle = (props: SectionTitleProps) => {
             iconName="info"
             customClassName="tooltip__icon"
           />
-          {isTooltipVisible && <Tooltip>{helper}</Tooltip>}
+          {isTooltipVisible && <Tooltip type="MULTI_LINE">{helper}</Tooltip>}
         </div>
       )}
     </div>

@@ -6,11 +6,11 @@ import './tooltip.scss'
 export interface TooltipProps {
   children: React.ReactNode
   pin?: 'TOP' | 'BOTTOM'
-  isSingleLine?: boolean
+  type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
 }
 
 const Tooltip = (props: TooltipProps) => {
-  const { children, pin = 'BOTTOM', isSingleLine = false } = props
+  const { children, pin = 'BOTTOM', type = 'SINGLE_LINE' } = props
   const tooltipRef = useRef<HTMLDivElement>(null)
   const [shift, setShift] = React.useState(0)
 
@@ -29,7 +29,8 @@ const Tooltip = (props: TooltipProps) => {
     <div
       className={doClassnames([
         'tooltip',
-        isSingleLine && 'tooltip--singleline',
+        type === 'SINGLE_LINE' && 'tooltip--singleline',
+        type === 'WITH_IMAGE' && 'tooltip--withimage',
         pin === 'TOP' && 'tooltip--top',
         pin === 'BOTTOM' && 'tooltip--bottom',
       ])}

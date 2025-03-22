@@ -8,9 +8,16 @@
   --chip-text-weight: var(--font-weight-medium);
   --chip-text-size: var(--font-size-xxsmall);
   --chip-background-color: var(--figma-color-bg-selected-secondary);
+  --chip-border-width: var(--size-unit);
+  --chip-border-color: var(--figma-color-border);
+  --chip-border-offset: var(--size-neg-unit);
 
   --chip-background-color-inactive: var(--figma-color-bg-tertiary);
   --chip-text-color-inactive: var(--figma-color-text);
+
+  --chip-background-color-hover: var(--figma-color-bg-selected);
+  --chip-border-width-hover: var(--size-unit);
+  --chip-border-color-hover: var(--figma-color-border-selected);
 
   --chip-background-color-on-background: rgba(255, 255, 255, 0.4);
   --chip-text-color-on-background: var(--grey-1000);

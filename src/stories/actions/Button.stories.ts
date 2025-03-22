@@ -123,6 +123,10 @@ export const Primary: Story = {
     type: 'primary',
     size: 'default',
     label: 'Primary action button',
+    preview: {
+      img: 'https://placehold.co/96x96',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
     feature: 'PRIMARY_ACTION',
     hasMultipleActions: false,
     isLoading: false,
@@ -222,7 +226,6 @@ export const Icon: Story = {
     helper: {
       label: 'Adjust the parameters',
       pin: 'BOTTOM',
-      isSingleLine: true,
     },
     feature: 'ACTION',
     isLoading: false,

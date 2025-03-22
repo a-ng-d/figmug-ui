@@ -1,5 +1,5 @@
 :root[data-theme='figma-ui2'] {
-  --tooltip-min-width: 148px;
+  --tooltip-min-width: 172px;
   --tooltip-max-width: 200px;
   --tooltip-gap: var(--size-xxsmall);
   --tooltip-radius: var(--border-radius-small);
@@ -11,4 +11,11 @@
   --tooltip-border-offset: var(--size-neg-unit);
   --tooltip-text-color: var(--grey-0);
   --tooltip-shadow: var(--shadow-hud);
+
+  --tooltip-image-width: 96px;
+  --tooltip-image-height: 96px;
+  --tooltip-image-radius: var(--border-radius-med);
+
+  --tooltip-withimage-min-width: 248px;
+  --tooltip-withimage-padding: var(--size-xxxsmall) var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxxsmall);
 }

@@ -91,7 +91,6 @@ const Accordion = (props: AccordionProps) => {
                 helpers?.empty !== undefined
                   ? {
                       label: helpers.empty,
-                      isSingleLine: true,
                     }
                   : undefined
               }
@@ -108,7 +107,6 @@ const Accordion = (props: AccordionProps) => {
                 helpers?.add !== undefined
                   ? {
                       label: helpers.add,
-                      isSingleLine: true,
                     }
                   : undefined
               }

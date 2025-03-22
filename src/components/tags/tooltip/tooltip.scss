@@ -63,11 +63,26 @@
     text-align: center;
   }
 
+  &__image {
+    width: var(--tooltip-image-width);
+    height: var(--tooltip-image-height);
+    border-radius: var(--tooltip-image-radius);
+  }
+
   &--singleline {
     min-width: unset;
 
     .tooltip__text {
       white-space: nowrap;
+    }
+  }
+
+  &--withimage {
+    --tooltip-min-width: var(--tooltip-withimage-min-width);
+    --tooltip-padding: var(--tooltip-withimage-padding);
+
+    .tooltip__text {
+      text-align: left;
     }
   }
 }
