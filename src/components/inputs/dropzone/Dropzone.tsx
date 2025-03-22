@@ -58,7 +58,9 @@ export default class Dropzone extends React.Component<
 
   // Lifecycle
   componentDidUpdate = (prevProps: Readonly<DropzoneProps>) => {
-    if (this.props.isLoading !== prevProps.isLoading && this.props.isLoading) {
+    const { isLoading } = this.props
+
+    if (isLoading !== prevProps.isLoading && isLoading) {
       this.setState({
         isLoading: true,
       })
@@ -70,10 +72,7 @@ export default class Dropzone extends React.Component<
         },
         2 * 60 * 1000
       )
-    } else if (
-      this.props.isLoading !== prevProps.isLoading &&
-      !this.props.isLoading
-    ) {
+    } else if (isLoading !== prevProps.isLoading && !isLoading) {
       clearTimeout(this.stopLoading)
       this.setState({
         isLoading: false,
@@ -207,6 +206,7 @@ export default class Dropzone extends React.Component<
       cta,
       isDisabled,
       isBlocked,
+      isNew,
     } = this.props
     const { status, isLoading, isDraggedOver, blackList } = this.state
     let fragment
@@ -224,7 +224,7 @@ export default class Dropzone extends React.Component<
                 label={cta}
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
-                isNew={this.props.isNew}
+                isNew={isNew}
                 action={() =>
                   !(isBlocked || isDisabled) && this.onValidFilesViaButton()
                 }
@@ -253,7 +253,7 @@ export default class Dropzone extends React.Component<
                 label={cta}
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
-                isNew={this.props.isNew}
+                isNew={isNew}
                 action={() =>
                   !(isBlocked || isDisabled) && this.onValidFilesViaButton()
                 }
@@ -275,7 +275,7 @@ export default class Dropzone extends React.Component<
                 label={cta}
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
-                isNew={this.props.isNew}
+                isNew={isNew}
                 action={() =>
                   !(isBlocked || isDisabled) && this.onValidFilesViaButton()
                 }

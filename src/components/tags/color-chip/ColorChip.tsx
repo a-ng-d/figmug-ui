@@ -33,6 +33,8 @@ export default class ColorChip extends React.Component<
 
   render() {
     const { color, w, h, isRounded, helper } = this.props
+    const { isTooltipVisible } = this.state
+
     return (
       <div
         className={doClassnames([
@@ -45,7 +47,7 @@ export default class ColorChip extends React.Component<
         }}
         onMouseLeave={() => this.setState({ isTooltipVisible: false })}
       >
-        {this.state.isTooltipVisible && <Tooltip>{helper}</Tooltip>}
+        {isTooltipVisible && <Tooltip>{helper}</Tooltip>}
       </div>
     )
   }
