@@ -5,21 +5,28 @@
   --chip-margin: 0 0 0 var(--size-xxsmall);
   --chip-radius: var(--border-radius-small);
   --chip-text-color: var(--figma-color-text-brand);
-  --chip-text-weight: var(--font-weight-medium);
+  --chip-text-weight: var(--font-weight-accent);
   --chip-text-size: var(--font-size-xxsmall);
   --chip-background-color: var(--figma-color-bg-selected-secondary);
-  --chip-border-width: var(--size-unit);
-  --chip-border-color: var(--figma-color-border);
-  --chip-border-offset: var(--size-neg-unit);
+  --chip-border-color: transparent;
+  --chip-border-width: 0;
+  --chip-border-offset: 0;
 
   --chip-background-color-inactive: var(--figma-color-bg-tertiary);
+  --chip-border-color-inactive: var(--figma-color-border-tertiary);
+  --chip-border-width-inactive: 0;
+  --chip-border-offset-inactive: 0;
   --chip-text-color-inactive: var(--figma-color-text);
 
   --chip-background-color-hover: var(--figma-color-bg-selected);
-  --chip-border-width-hover: var(--size-unit);
   --chip-border-color-hover: var(--figma-color-border-selected);
+  --chip-border-width-hover: var(--size-unit);
+  --chip-border-offset-hover: var(--size--neg-unit);
 
   --chip-background-color-on-background: rgba(255, 255, 255, 0.4);
+  --chip-border-color-on-background: transparent;
+  --chip-border-width-on-background: 0;
+  --chip-border-offset-on-background: 0;
   --chip-text-color-on-background: var(--grey-1000);
   --chip-text-weight-on-background: var(--font-weight-normal);
 }

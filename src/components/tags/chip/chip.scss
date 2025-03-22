@@ -21,8 +21,9 @@
 
   &--preview:hover {
     --chip-background-color: var(--chip-background-color-hover);
-    --chip-border-width: var(--chip-border-width-hover);
     --chip-border-color: var(--chip-border-color-hover);
+    --chip-border-offset: var(--chip-border-offset-hover);
+    --chip-border-width: var(--chip-border-width-hover);
   }
 
   .chip__text {
@@ -34,6 +35,9 @@
 
   &--inactive {
     --chip-background-color: var(--chip-background-color-inactive);
+    --chip-border-color: var(--chip-border-color-inactive);
+    --chip-border-width: var(--chip-border-width-inactive);
+    --chip-border-offset: var(--chip-border-offset-inactive);
     --chip-text-color: var(--chip-text-color-inactive);
   }
 
@@ -44,6 +48,9 @@
   &--on-background {
     margin: 0;
     --chip-background-color: var(--chip-background-color-on-background);
+    --chip-border-color: var(--chip-border-color-on-background);
+    --chip-border-width: var(--chip-border-width-on-background);
+    --chip-border-offset: var(--chip-border-offset-on-background);
     --chip-text-color: var(--chip-text-color-on-background);
     --chip-text-weight: var(--chip-text-weight-on-background);
   }
