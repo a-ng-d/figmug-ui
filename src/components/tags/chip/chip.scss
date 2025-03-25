@@ -16,14 +16,17 @@
   padding: var(--chip-padding);
   max-width: 100%;
   height: var(--chip-height);
-  pointer-events: all;
   user-select: none;
 
-  &--preview:hover {
-    --chip-background-color: var(--chip-background-color-hover);
-    --chip-border-color: var(--chip-border-color-hover);
-    --chip-border-offset: var(--chip-border-offset-hover);
-    --chip-border-width: var(--chip-border-width-hover);
+  &--preview {
+    pointer-events: auto;
+
+    &:hover {
+      --chip-background-color: var(--chip-background-color-hover);
+      --chip-border-color: var(--chip-border-color-hover);
+      --chip-border-offset: var(--chip-border-offset-hover);
+      --chip-border-width: var(--chip-border-width-hover);
+    }
   }
 
   .chip__text {
