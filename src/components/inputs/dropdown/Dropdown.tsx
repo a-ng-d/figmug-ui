@@ -14,6 +14,11 @@ export interface DropdownProps {
   containerId?: string
   alignment?: 'RIGHT' | 'LEFT' | 'FILL'
   pin?: 'NONE' | 'TOP' | 'BOTTOM'
+  preview?: {
+    image: string
+    text: string
+    pin?: 'TOP' | 'BOTTOM'
+  }
   isDisabled?: boolean
   isBlocked?: boolean
   isNew?: boolean
@@ -181,6 +186,7 @@ export default class Dropdown extends React.Component<
       options,
       selected,
       containerId,
+      preview,
       isNew,
       isDisabled,
       isBlocked,
@@ -237,7 +243,9 @@ export default class Dropdown extends React.Component<
             />
           </span>
         </button>
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
         {(() => {
           const { pin } = this.props
 
