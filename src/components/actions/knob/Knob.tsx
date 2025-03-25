@@ -56,16 +56,6 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
     }
   }
 
-  // Lifecycle
-  componentDidUpdate(_prevProps: KnobProps, prevStates: KnobStates) {
-    const { isStopInputOpen } = this.state
-
-    if (prevStates.isStopInputOpen !== isStopInputOpen && isStopInputOpen)
-      this.setState({
-        isTooltipOpen: false,
-      })
-  }
-
   // Handlers
   keyboardHandler = (
     action: string,
@@ -85,6 +75,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
         if (canBeTyped)
           this.setState({
             isStopInputOpen: true,
+            isTooltipOpen: false,
             stopInputValue: value,
           })
       },
@@ -110,6 +101,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
     if (e.detail === 2 && canBeTyped)
       this.setState({
         isStopInputOpen: true,
+        isTooltipOpen: false,
         stopInputValue: value,
       })
   }
