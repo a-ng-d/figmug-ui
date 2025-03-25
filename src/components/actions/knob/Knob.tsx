@@ -35,7 +35,7 @@ export interface KnobProps {
 }
 
 export interface KnobStates {
-  isKnobInputOpen: boolean
+  isStopInputOpen: boolean
   isTooltipOpen: boolean
   stopInputValue: string | number
 }
@@ -50,7 +50,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
   constructor(props: KnobProps) {
     super(props)
     this.state = {
-      isKnobInputOpen: false,
+      isStopInputOpen: false,
       isTooltipOpen: false,
       stopInputValue: props.value,
     }
@@ -74,14 +74,14 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
       Enter: () => {
         if (canBeTyped)
           this.setState({
-            isKnobInputOpen: true,
+            isStopInputOpen: true,
             stopInputValue: value,
           })
       },
       Escape: () => {
         // eslint-disable-next-line @typescript-eslint/no-extra-semi
         ;(e.target as HTMLElement).blur()
-        this.setState({ isKnobInputOpen: false })
+        this.setState({ isStopInputOpen: false })
       },
       Backspace: () => {
         if (onDelete !== undefined) onDelete(e)
@@ -99,7 +99,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
 
     if (e.detail === 2 && canBeTyped)
       this.setState({
-        isKnobInputOpen: true,
+        isStopInputOpen: true,
         stopInputValue: value,
       })
   }
@@ -128,13 +128,13 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
       onMouseDown,
       onValidStopValue,
     } = this.props
-    const { isTooltipOpen, isKnobInputOpen, stopInputValue } = this.state
+    const { isTooltipOpen, isStopInputOpen, stopInputValue } = this.state
 
     return (
       <div
         className={doClassnames([
           'knob',
-          isKnobInputOpen && 'knob--editing',
+          isStopInputOpen && 'knob--editing',
           (isBlocked || isDisabled) && 'knob--disabled',
         ])}
         style={{
@@ -154,7 +154,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
         }
         onMouseDown={!(isBlocked || isDisabled) ? onMouseDown : undefined}
         onMouseEnter={() =>
-          !(isBlocked || isDisabled || isKnobInputOpen)
+          !(isBlocked || isDisabled || isStopInputOpen)
             ? this.setState({ isTooltipOpen: true })
             : undefined
         }
@@ -189,7 +189,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
             {this.transformStopValue(value)}
           </div>
         )}
-        {isKnobInputOpen && (
+        {isStopInputOpen && (
           <div className="knob__input">
             <Input
               type="NUMBER"
@@ -209,7 +209,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
               onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
                 if ((e.target as HTMLInputElement)?.value !== value)
                   onValidStopValue?.(shortId, e)
-                this.setState({ isKnobInputOpen: false })
+                this.setState({ isStopInputOpen: false })
               }}
             />
           </div>
