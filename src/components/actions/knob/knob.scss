@@ -99,10 +99,10 @@
   background-color: var(--knob-tooltip-background-color);
   padding: var(--knob-tooltip-padding);
   min-width: var(--knob-tooltip-min-width);
+  pointer-events: none;
   color: var(--knob-tooltip-text-color);
   user-select: none;
   text-align: center;
-  pointer-events: none;
 
   &:after {
     position: absolute;
