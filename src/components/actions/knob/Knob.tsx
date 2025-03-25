@@ -154,7 +154,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
         }
         onMouseDown={!(isBlocked || isDisabled) ? onMouseDown : undefined}
         onMouseEnter={() =>
-          !(isBlocked || isDisabled)
+          !(isBlocked || isDisabled || isStopInputOpen)
             ? this.setState({ isTooltipOpen: true })
             : undefined
         }
