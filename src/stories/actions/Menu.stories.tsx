@@ -108,6 +108,9 @@ export const MultipleActionsIconButton: Story = {
     state: 'DEFAULT',
     options: [...ListStories.FourOptionsList.args.options],
     alignment: 'BOTTOM_LEFT',
+    helper: {
+      label: 'Run actions',
+    },
     isBlocked: false,
     isNew: false,
   },

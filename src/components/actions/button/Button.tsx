@@ -235,7 +235,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
             {customIcon}
           </div>
         )}
-        {isTooltipVisible && (
+        {isTooltipVisible && this.props.helper !== undefined && (
           <Tooltip
             pin={helper?.pin}
             type={helper?.type}
