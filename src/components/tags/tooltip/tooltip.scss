@@ -71,6 +71,7 @@
 
   &--singleline {
     min-width: unset;
+    max-width: unset;
 
     .tooltip__text {
       white-space: nowrap;
