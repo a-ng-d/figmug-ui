@@ -70,6 +70,7 @@ const PopIn = (props: PopInProps) => {
               texts.type,
               texts['type--large'],
               texts['type--bold'],
+              texts['type--truncated'],
             ])}
           >
             {title}
