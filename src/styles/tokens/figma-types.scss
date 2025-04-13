@@ -1,36 +1,6 @@
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url('https://rsms.me/inter/font-files/Inter-Regular.woff2?v=3.7')
-      format('woff2'),
-    url('https://rsms.me/inter/font-files/Inter-Regular.woff?v=3.7')
-      format('woff');
-  font-family: 'Inter';
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-@font-face {
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url('https://rsms.me/inter/font-files/Inter-Medium.woff2?v=3.7')
-      format('woff2'),
-    url('https://rsms.me/inter/font-files/Inter-Medium.woff2?v=3.7')
-      format('woff');
-  font-family: 'Inter';
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 600;
-  src:
-    url('https://rsms.me/inter/font-files/Inter-SemiBold.woff2?v=3.7')
-      format('woff2'),
-    url('https://rsms.me/inter/font-files/Inter-SemiBold.woff2?v=3.7')
-      format('woff');
-  font-family: 'Inter';
-}
-
-:root {
+:root[data-theme='figma-ui3'],
+:root[data-theme='figma-ui2'] {
   --font-stack: 'Inter', sans-serif;
 }
