@@ -1,6 +1,6 @@
 import React from 'react'
 import { doClassnames } from '@a_ng_d/figmug-utils'
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 import type { IconList } from '@tps/icon.types'
 import Icon from '@components/assets/icon/Icon'
 import './message.scss'

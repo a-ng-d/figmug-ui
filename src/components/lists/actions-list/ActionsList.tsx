@@ -3,7 +3,7 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import { DropdownOption } from '@tps/list.types'
 import Chip from '@components/tags/chip/Chip'
 import Icon from '@components/assets/icon/Icon.tsx'
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 import './actions-list.scss'
 
 export interface ActionsListProps {

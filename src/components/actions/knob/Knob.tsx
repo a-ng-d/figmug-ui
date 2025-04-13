@@ -3,7 +3,7 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import Chip from '@components/tags/chip/Chip'
 import Input from '@components/inputs/input/Input'
 import Tooltip from '@components/tags/tooltip/Tooltip'
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 import './knob.scss'
 
 export interface KnobProps {

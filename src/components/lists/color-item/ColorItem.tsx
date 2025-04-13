@@ -1,4 +1,4 @@
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import type { HexModel } from '@tps/color.types'
 import Button from '@components/actions/button/Button'

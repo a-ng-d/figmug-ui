@@ -1,5 +1,5 @@
 import { doClassnames } from '@a_ng_d/figmug-utils'
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 import Button from '@components/actions/button/Button'
 import Select from '@components/inputs/select/Select'
 import Chip from '@components/tags/chip/Chip'

@@ -4,7 +4,7 @@ import type { DropdownOption } from '@tps/list.types'
 import Icon from '@components/assets/icon/Icon'
 import ActionsList from '@components/lists/actions-list/ActionsList'
 import Chip from '@components/tags/chip/Chip'
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 import './dropdown.scss'
 
 export interface DropdownProps {

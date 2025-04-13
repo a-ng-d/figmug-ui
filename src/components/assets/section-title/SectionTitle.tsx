@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { doClassnames } from '@a_ng_d/figmug-utils'
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 import Tooltip from '@components/tags/tooltip/Tooltip'
 import Icon from '../icon/Icon'
 import './section-title.scss'

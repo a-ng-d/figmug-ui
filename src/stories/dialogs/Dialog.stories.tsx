@@ -4,7 +4,7 @@ import { fn } from '@storybook/test'
 import Dialog from '@components/dialogs/dialog/Dialog'
 import Input from '@components/inputs/input/Input'
 import FormItem from '@components/slots/form-item/FormItem'
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
 
 const onBoardingSample = () => {

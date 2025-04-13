@@ -1,0 +1,39 @@
+:root[data-mode='figma-ui3'] {
+  --text-font-family: var(--font-stack);
+  --text-color-primary: var(--figma-color-text);
+  --text-color-secondary: var(--figma-color-text-secondary);
+  --text-color-tertiary: var(--figma-color-text-tertiary);
+  --text-color-inverse: var(--figma-color-text-oninverse);
+  --text-font-weight-medium: var(--font-weight-medium);
+  --text-font-weight-bold: var(--font-weight-bold);
+
+  --text-default-font-size: var(--font-size-xsmall);
+  --text-default-font-weight: var(--font-weight-normal);
+  --text-default-line-height: var(--font-line-height);
+  --text-default-letter-spacing: var(--font-letter-spacing-pos-xsmall);
+
+  --text-small-font-size: var(--font-size-small);
+  --text-small-letter-spacing: var(--font-letter-spacing-pos-small);
+
+  --text-large-font-size: var(--font-size-large);
+  --text-large-line-height: var(--font-line-height-large);
+  --text-large-letter-spacing: var(--font-letter-spacing-pos-large);
+
+  --text-xlarge-font-size: var(--font-size-xlarge);
+  --text-xlarge-line-height: var(--font-line-height-large);
+  --text-xlarge-letter-spacing: var(--font-letter-spacing-pos-xlarge);
+
+  --text-link-color: var(--figma-color-text-brand);
+  --text-link-decoration: none;
+  --text-link-border-focus: none;
+  --text-link-decoration-focus: underline;
+
+  --text-label-color: var(--figma-color-text-tertiary);
+  --text-label-font-size: var(--font-size-xsmall);
+  --text-label-font-weight: var(--font-weight-normal);
+  --text-label-letter-spacing: var(--font-letter-spacing-pos-xsmall);
+  --text-label-line-height: var(--font-line-height);
+  --text-label-height: var(--size-medium);
+  --text-label-padding: 0 var(--size-xxxsmall) 0 var(--size-xxsmall);
+  --text-label-gap: var(--size-xxxsmall);
+}

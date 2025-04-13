@@ -1,6 +1,6 @@
 import icons from '@styles/icons/icons.module.scss'
 import layouts from '@styles/layouts.module.scss'
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 import tokens from '@styles/tokens/tokens.module.scss'
 
 // Actions

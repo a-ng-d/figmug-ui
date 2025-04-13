@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import './tooltip.scss'
 

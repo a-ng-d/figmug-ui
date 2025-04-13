@@ -1,7 +1,7 @@
 import React from 'react'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import layouts from '@styles/layouts.module.scss'
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import Chip from '@components/tags/chip/Chip'
 import Avatar from '@components/assets/avatar/Avatar'

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import Icon from '@components/assets/icon/Icon'
 import { IconList } from '@tps/icon.types'
-import texts from '@styles/texts.module.scss'
+import texts from '@styles/texts/texts.module.scss'
 
 const width = 960
 
