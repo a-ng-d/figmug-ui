@@ -217,6 +217,30 @@ export const Destructive: Story = {
   },
 }
 
+export const Alternative: Story = {
+  args: {
+    type: 'alternative',
+    size: 'default',
+    icon: 'lock-on',
+    label: 'Compact action button',
+    feature: 'ACTION',
+    isBlocked: false,
+    isDisabled: false,
+    isNew: false,
+  },
+  argTypes: {
+    type: { control: false },
+    state: { control: false },
+    hasMultipleActions: { control: false },
+    isLoading: { control: false },
+    isLink: { control: false },
+    url: { control: false },
+    helper: { control: false },
+    iconClassName: { control: false },
+    customIcon: { control: false },
+  },
+}
+
 export const Icon: Story = {
   args: {
     type: 'icon',
@@ -240,29 +264,5 @@ export const Icon: Story = {
     isBlocked: { control: false },
     isLink: { control: false },
     url: { control: false },
-  },
-}
-
-export const Compact: Story = {
-  args: {
-    type: 'alternative',
-    size: 'default',
-    icon: 'lock-on',
-    label: 'Compact action button',
-    feature: 'ACTION',
-    isBlocked: false,
-    isDisabled: false,
-    isNew: false,
-  },
-  argTypes: {
-    type: { control: false },
-    state: { control: false },
-    hasMultipleActions: { control: false },
-    isLoading: { control: false },
-    isLink: { control: false },
-    url: { control: false },
-    helper: { control: false },
-    iconClassName: { control: false },
-    customIcon: { control: false },
   },
 }
