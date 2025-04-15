@@ -40,9 +40,6 @@ export const SingleVendor: Story = {
         label: 'Save your preferences',
         action: action('consent.save'),
       },
-      close: {
-        action: action('consent.close'),
-      },
     },
     validVendor: {
       name: 'Functional Cookies',
@@ -89,9 +86,6 @@ export const SeveralVendors: Story = {
       save: {
         label: 'Save your preferences',
         action: action('consent.save'),
-      },
-      close: {
-        action: action('consent.close'),
       },
     },
     validVendor: {
