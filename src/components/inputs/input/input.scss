@@ -31,11 +31,11 @@
       z-index: 1;
       outline: none;
       border: none;
-      border-radius: var(--input-color-chip-radius);
       background-color: transparent;
       padding: 0;
       width: var(--input-color-chip-width);
       height: var(--input-color-chip-height);
+      opacity: var(--input-color-chip-opacity);
     }
 
     &[type='color' i]::-webkit-color-swatch-wrapper {
@@ -45,6 +45,7 @@
     &[type='color' i]::-webkit-color-swatch {
       box-shadow: var(--input-color-chip-border);
       border: none;
+      border-radius: var(--input-color-chip-radius);
     }
 
     &[type='color' i]:focus {
@@ -86,11 +87,9 @@
     flex: 1;
   }
 
-  &__icon {
+  &__icon, &__unit {
     display: flex;
     position: absolute;
-    top: 0;
-    left: 0;
     justify-content: center;
     align-items: center;
     z-index: 2;
@@ -99,12 +98,15 @@
     --icon-letter-color: var(--input-icon-color);
   }
 
+  &__icon {
+    top: 0;
+    left: 0;
+  }
+
   &__unit {
-    position: absolute;
     top: 0;
     right: 0;
     pointer-events: none;
-    --icon-letter-color: var(--input-icon-color);
   }
 
   &__field {
@@ -127,6 +129,7 @@
     font-size: var(--input-text-font-size);
     line-height: var(--input-text-line-height);
     letter-spacing: var(--input-text-letterspacing);
+    font-family: var(--input-text-font-family);
 
     &::placeholder {
       color: var(--input-text-placeholder-color);

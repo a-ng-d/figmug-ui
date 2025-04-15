@@ -30,6 +30,8 @@
   --input-color-chip-border: rgba(0, 0, 0, 0.1) 0 0 0 var(--size-unit) inset;
   --input-color-chip-border-focus: var(--figma-color-border-selected) 0 0 0
     var(--size-unit) inset;
+  --input-color-chip-opacity: 1;
+  --input-color-chip-opacity-disabled: 0.5;
 
   --input-icon-width: var(--size-small);
   --input-icon-height: var(--size-small);
