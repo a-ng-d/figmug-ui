@@ -201,7 +201,7 @@
       --select-toggle-knob-transform: var(
         --select-toggle-knob-transform-checked
       );
-      --select-toggle-knob-background: var(
+      --select-toggle-knob-background-color: var(
         --select-toggle-knob-background-checked
       );
     }
@@ -242,7 +242,7 @@
     }
 
     &:disabled + .switch__label:after {
-      --select-toggle-knob-background: var(
+      --select-toggle-knob-background-color: var(
         --select-toggle-knob-background-disabled
       );
     }
@@ -255,7 +255,7 @@
     }
 
     &:disabled:checked + .switch__label:after {
-      --select-toggle-knob-background: var(
+      --select-toggle-knob-background-color: var(
         --select-toggle-knob-background-checked-disabled
       );
     }
