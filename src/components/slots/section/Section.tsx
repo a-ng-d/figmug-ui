@@ -16,8 +16,7 @@ export default class Section extends React.Component<SectionProps> {
   setBorder = (
     orientation: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'> | undefined
   ) => {
-    const property =
-      '1px solid var(--figma-color-border)' as React.CSSProperties
+    const property = 'var(--section-border)' as React.CSSProperties
     const styles: { [key: string]: React.CSSProperties } = {}
 
     if (!orientation) return styles

@@ -1,7 +1,8 @@
-:root[data-theme='penpot'] {
+:root[data-theme='figma-ui3'] {
   --section-gap: 0;
   --section-padding: var(--size-xxsmall) 0;
-  --section-background-color: var(--color-background-primary);
+  --section-background-color: var(--figma-color-bg);
+  --section-border: var(--size-unit) solid var(--figma-color-border);
 
   --section-child-padding: 0 var(--size-xsmall);
   --section-child-padding-large: 0 var(--size-small);

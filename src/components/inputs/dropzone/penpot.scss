@@ -1,4 +1,4 @@
-:root[data-theme='figma-ui3'] {
+:root[data-theme='penpot'] {
   --dropzone-padding: var(--size-small);
   --dropzone-gap: var(--size-xxsmall);
   --dropzone-min-width: 200px;
@@ -7,7 +7,7 @@
   --dropzone-border-width: var(--size-unit);
   --dropzone-border-offset: var(--size-neg-unit);
   --dropzone-border-style: dashed;
-  --dropzone-background-color: var(--figma-color-bg);
+  --dropzone-background-color: var(--color-background-primary);
   --dropzone-radius: var(--border-radius-med);
 
   --dropzone-border-color-over: var(--color-accent-primary);
