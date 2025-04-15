@@ -30,7 +30,6 @@
   --input-color-chip-border-focus: var(--color-accent-primary) 0 0 0
     var(--size-xunit) inset;
   --input-color-chip-opacity: 1;
-  --input-color-chip-opacity-disabled: 1;
 
   --input-icon-width: var(--size-medium);
   --input-icon-height: var(--size-medium);
@@ -131,12 +130,13 @@
   --input-text-placeholder-color-error-focus: var(--color-foreground-secondary);
 
   /* Disabled */
-  --input-background-color-disabled: var(--color-background-tertiary);
+  --input-background-color-disabled: var(--color-background-primary);
   --input-border-width-disabled: var(--size-unit);
   --input-border-offset-disabled: var(--size-unit);
   --input-border-color-disabled: var(--color-background-quaternary);
-  --input-text-color-disabled: var(--color-foreground-primary);
-  --input-text-placeholder-color-disabled: var(--color-foreground-secondary);
+  --input-text-color-disabled: var(--color-foreground-secondary);
+  --input-text-placeholder-color-disabled: var(--color-foreground-disabled);
+  --input-color-chip-opacity-disabled: 1;
 
   /* On Selected */
   --input-background-color-onselected: var(--color-background-primary);

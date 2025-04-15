@@ -31,7 +31,6 @@
   --input-color-chip-border-focus: var(--figma-color-border-selected) 0 0 0
     var(--size-unit) inset;
   --input-color-chip-opacity: 1;
-  --input-color-chip-opacity-disabled: 0.5;
 
   --input-icon-width: var(--size-small);
   --input-icon-height: var(--size-small);
@@ -138,6 +137,7 @@
   --input-border-color-disabled: var(--figma-color-border-disabled);
   --input-text-color-disabled: var(--figma-color-text-disabled);
   --input-text-placeholder-color-disabled: var(--figma-color-text-tertiary);
+  --input-color-chip-opacity-disabled: 0.5;
 
   /* On Selected */
   --input-background-color-onselected: var(--figma-color-bg);
