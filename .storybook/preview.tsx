@@ -70,7 +70,7 @@ const preview: Preview = {
         },
         {
           name: 'Penpot Dark',
-          value: '#18181a',
+          value: '#000',
         },
       ],
     },
