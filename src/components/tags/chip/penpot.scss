@@ -1,26 +1,26 @@
-:root[data-theme='figma-ui2'] {
+:root[data-theme='penpot'] {
   --chip-gap: var(--size-xxxsmall);
   --chip-padding: 0 var(--size-xxxsmall);
   --chip-height: var(--size-xsmall);
   --chip-margin: 0 0 0 var(--size-xxsmall);
-  --chip-radius: var(--border-radius-small);
-  --chip-text-color: var(--figma-color-text-brand);
-  --chip-text-weight: var(--font-weight-normal);
+  --chip-radius: var(--border-radius-large);
+  --chip-text-color: var(--color-accent-primary);
+  --chip-text-weight: var(--font-weight-accent);
   --chip-text-size: var(--font-size-xsmall);
-  --chip-text-transform: none;
-  --chip-background-color: var(--figma-color-bg-selected-secondary);
+  --chip-text-transform: uppercase;
+  --chip-background-color: var(--color-accent-primary-muted);
   --chip-border-color: transparent;
   --chip-border-width: 0;
   --chip-border-offset: 0;
 
-  --chip-background-color-inactive: var(--figma-color-bg-tertiary);
+  --chip-background-color-inactive: var(--color-background-tertiary);
   --chip-border-color-inactive: transparent;
   --chip-border-width-inactive: 0;
   --chip-border-offset-inactive: 0;
-  --chip-text-color-inactive: var(--figma-color-text);
+  --chip-text-color-inactive: var(--color-foreground-secondary);
 
-  --chip-background-color-hover: var(--figma-color-bg-selected);
-  --chip-border-color-hover: var(--figma-color-border-selected);
+  --chip-background-color-hover: var(--color-accent-secondary);
+  --chip-border-color-hover: var(--color-accent-secondary);
   --chip-border-width-hover: var(--size-unit);
   --chip-border-offset-hover: var(--size-neg-unit);
 

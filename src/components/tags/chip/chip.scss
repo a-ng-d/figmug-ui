@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .chip {
   display: inline-flex;
@@ -34,6 +35,7 @@
     font-weight: var(--chip-text-weight);
     font-size: var(--chip-text-size);
     text-wrap: nowrap;
+    text-transform: var(--chip-text-transform);
   }
 
   &--inactive {

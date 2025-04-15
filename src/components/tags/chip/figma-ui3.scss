@@ -7,13 +7,14 @@
   --chip-text-color: var(--figma-color-text-brand);
   --chip-text-weight: var(--font-weight-accent);
   --chip-text-size: var(--font-size-xxsmall);
+  --chip-text-transform: none;
   --chip-background-color: var(--figma-color-bg-selected-secondary);
   --chip-border-color: transparent;
   --chip-border-width: 0;
   --chip-border-offset: 0;
 
   --chip-background-color-inactive: var(--figma-color-bg-tertiary);
-  --chip-border-color-inactive: var(--figma-color-border-tertiary);
+  --chip-border-color-inactive: transparent;
   --chip-border-width-inactive: 0;
   --chip-border-offset-inactive: 0;
   --chip-text-color-inactive: var(--figma-color-text);
@@ -21,7 +22,7 @@
   --chip-background-color-hover: var(--figma-color-bg-selected);
   --chip-border-color-hover: var(--figma-color-border-selected);
   --chip-border-width-hover: var(--size-unit);
-  --chip-border-offset-hover: var(--size--neg-unit);
+  --chip-border-offset-hover: var(--size-neg-unit);
 
   --chip-background-color-on-background: rgba(255, 255, 255, 0.4);
   --chip-border-color-on-background: transparent;
