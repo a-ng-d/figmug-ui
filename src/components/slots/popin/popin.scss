@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .popin {
   display: flex;
@@ -41,6 +42,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    text-transform: var(--popin-header-text-transform);
   }
 
   .popin__content {
