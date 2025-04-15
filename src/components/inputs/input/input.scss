@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .input {
   display: flex;
@@ -292,7 +293,7 @@
       --input-text-placeholder-color: var(--input-text-placeholder-color-hover);
     }
     &:disabled[type='color' i] {
-      opacity: 0.5;
+      --input-color-chip-opacity: var(--input-color-chip-opacity-disabled);
       pointer-events: none;
     }
   }

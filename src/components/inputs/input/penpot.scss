@@ -1,0 +1,150 @@
+:root[data-theme='penpot'] {
+  /* Base */
+  --input-number-width: 108px;
+  --input-color-width: 108px;
+  --input-height: var(--size-medium);
+  --input-margin: 0;
+  --input-radius: var(--border-radius-xlarge);
+  --input-padding: var(--size-xxsmall);
+  --input-padding-clearable: var(--size-medium);
+  --input-padding-unit: var(--size-medium);
+  --input-padding-with-icon: var(--size-medium);
+  --input-right-clearable: var(--size-xxxsmall);
+  --input-background-color: var(--color-background-tertiary);
+  --input-border-width: 0;
+  --input-border-offset: 0;
+  --input-border-color: transparent;
+  --input-text-font-family: var(--font-stack);
+  --input-text-font-size: var(--font-size-small);
+  --input-text-font-weight: var(--font-weight-normal);
+  --input-text-letterspacing: var(--font-letter-spacing-neg-xsmall);
+  --input-text-line-height: var(--font-line-height);
+  --input-text-color: var(--color-foreground-primary);
+  --input-text-placeholder-color: var(--color-foreground-secondary);
+
+  --input-color-chip-width: var(--size-xsmall);
+  --input-color-chip-height: var(--size-xsmall);
+  --input-color-chip-left: var(--size-xxsmall);
+  --input-color-chip-radius: var(--border-radius-med);
+  --input-color-chip-border: rgba(0, 0, 0, 0.1) 0 0 0 var(--size-unit) inset;
+  --input-color-chip-border-focus: var(--color-accent-primary) 0 0 0
+    var(--size-xunit) inset;
+  --input-color-chip-opacity: 1;
+  --input-color-chip-opacity-disabled: 1;
+
+  --input-icon-width: var(--size-medium);
+  --input-icon-height: var(--size-medium);
+  --input-icon-color: var(--color-icon-default);
+
+  --input-textarea-min-height: var(--size-xxlarge);
+  --input-textarea-padding: var(--size-xxsmall);
+  --input-textarea-background-color: var(--color-background-tertiary);
+  --input-textarea-border-width: 0;
+  --input-textarea-border-offset: 0;
+  --input-textarea-border-color: transparent;
+  --input-textarea-text-color: var(--color-foreground-primary);
+  --input-text-textarea-placeholder-color: var(--color-foreground-secondary);
+
+  /* Default */
+  --input-background-color-empty: var(--color-background-tertiary);
+  --input-border-width-empty: 0;
+  --input-border-offset-empty: 0;
+  --input-border-color-empty: transparent;
+  --input-text-color-empty: var(--color-foreground-primary);
+  --input-text-placeholder-color-empty: var(--color-foreground-secondary);
+
+  --input-background-color-empty-hover: var(--color-background-quaternary);
+  --input-border-width-empty-hover: 0;
+  --input-border-offset-empty-hover: 0;
+  --input-border-color-empty-hover: transparent;
+  --input-text-color-empty-hover: var(--color-foreground-primary);
+  --input-text-placeholder-color-empty-hover: var(--color-foreground-secondary);
+
+  --input-background-color-empty-focus: var(--color-background-tertiary);
+  --input-border-width-empty-focus: var(--size-unit);
+  --input-border-offset-empty-focus: var(--size-unit);
+  --input-border-color-empty-focus: var(--color-accent-primary);
+  --input-text-color-empty-focus: var(--color-foreground-primary);
+  --input-text-placeholder-color-empty-focus: var(--color-foreground-secondary);
+
+  --input-background-color-hover: var(--color-background-quaternary);
+  --input-border-width-hover: 0;
+  --input-border-offset-hover: 0;
+  --input-border-color-hover: transparent;
+  --input-text-color-hover: var(--color-foreground-primary);
+  --input-text-placeholder-color-hover: var(--color-foreground-secondary);
+
+  --input-background-color-focus: var(--color-background-tertiary);
+  --input-border-width-focus: var(--size-unit);
+  --input-border-offset-focus: var(--size-unit);
+  --input-border-color-focus: var(--color-accent-primary);
+  --input-text-color-focus: var(--color-foreground-primary);
+  --input-text-placeholder-color-focus: var(--color-foreground-secondary);
+
+  /* Error */
+  --input-background-color-empty-error: var(--color-background-tertiary);
+  --input-border-width-empty-error: var(--size-unit);
+  --input-border-offset-empty-error: var(--size-unit);
+  --input-border-color-empty-error: var(--color-foreground-error);
+  --input-text-color-empty-error: var(--color-foreground-primary);
+  --input-text-placeholder-color-empty-error: var(--color-foreground-secondary);
+
+  --input-background-color-empty-error-hover: var(
+    --color-background-quaternary
+  );
+  --input-border-width-empty-error-hover: var(--size-unit);
+  --input-border-offset-empty-error-hover: var(--size-unit);
+  --input-border-color-empty-error-hover: var(--color-foreground-error);
+  --input-text-color-empty-error-hover: var(--color-foreground-primary);
+  --input-text-placeholder-color-empty-error-hover: var(
+    --color-foreground-secondary
+  );
+
+  --input-background-color-empty-error-focus: var(--color-background-tertiary);
+  --input-border-width-empty-error-focus: var(--size-unit);
+  --input-border-offset-empty-error-focus: var(--size-unit);
+  --input-border-color-empty-error-focus: var(--color-accent-error);
+  --input-text-color-empty-error-focus: var(--color-foreground-primary);
+  --input-text-placeholder-color-empty-error-focus: var(
+    --color-foreground-secondary
+  );
+
+  --input-background-color-error: var(--color-background-tertiary);
+  --input-border-width-error: var(--size-unit);
+  --input-border-offset-error: var(--size-unit);
+  --input-border-color-error: var(--color-foreground-error);
+  --input-text-color-error: var(--color-foreground-primary);
+  --input-text-placeholder-color-error: var(--color-foreground-secondary);
+
+  --input-background-color-error-hover: var(--color-background-quaternary);
+  --input-border-width-error-hover: var(--size-unit);
+  --input-border-offset-error-hover: var(--size-unit);
+  --input-border-color-error-hover: var(--color-foreground-error);
+  --input-text-color-error-hover: var(--color-foreground-primary);
+  --input-text-placeholder-color-error-hover: var(--color-foreground-secondary);
+
+  --input-background-color-error-focus: var(--color-background-tertiary);
+  --input-border-width-error-focus: var(--size-unit);
+  --input-border-offset-error-focus: var(--size-unit);
+  --input-border-color-error-focus: var(--color-accent-error);
+  --input-text-color-error-focus: var(--color-foreground-primary);
+  --input-text-placeholder-color-error-focus: var(--color-foreground-secondary);
+
+  /* Disabled */
+  --input-background-color-disabled: var(--color-background-tertiary);
+  --input-border-width-disabled: var(--size-unit);
+  --input-border-offset-disabled: var(--size-unit);
+  --input-border-color-disabled: var(--color-background-quaternary);
+  --input-text-color-disabled: var(--color-foreground-primary);
+  --input-text-placeholder-color-disabled: var(--color-foreground-secondary);
+
+  /* On Selected */
+  --input-background-color-onselected: var(--color-background-primary);
+  --input-border-color-onselected: var(--color-background-tertiary);
+  --input-border-width-onselected: var(--size-unit);
+  --input-border-offset-onselected: var(--size-neg-unit);
+  --input-background-color-onselected-hover: var(--color-background-primary);
+  --input-border-color-onselected-hover: var(--color-background-tertiary);
+  --input-border-width-onselected-hover: var(--size-unit);
+  --input-border-offset-onselected-hover: var(--size-neg-unit);
+}
