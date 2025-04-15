@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .section-title {
   display: flex;
@@ -17,6 +18,10 @@
   font-family: var(--section-title-text-font-family);
   letter-spacing: var(--section-title-text-letter-spacing);
   user-select: none;
+
+  &__title {
+    text-transform: var(--section-title-text-transform);
+  }
 
   .section-title__tooltip {
     display: flex;
