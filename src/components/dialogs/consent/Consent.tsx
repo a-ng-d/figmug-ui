@@ -31,9 +31,6 @@ export interface ConsentProps {
       label: string
       action: (vendorsConsent: Array<ConsentConfiguration>) => void
     }
-    close: {
-      action: React.MouseEventHandler & React.KeyboardEventHandler
-    }
   }
   validVendor: ConsentConfiguration
   vendorsList: Array<ConsentConfiguration>
@@ -149,11 +146,6 @@ export default class Consent extends React.Component<
                 type="primary"
                 label={consentActions.consent.label}
                 action={this.onConsentAll}
-              />
-              <Button
-                type="icon"
-                icon="close"
-                action={consentActions.close.action}
               />
             </div>
           }
@@ -305,11 +297,6 @@ export default class Consent extends React.Component<
                 type="primary"
                 label={consentActions.save.label}
                 action={this.onPartialConsent}
-              />
-              <Button
-                type="icon"
-                icon="close"
-                action={consentActions.close.action}
               />
             </div>
           }
