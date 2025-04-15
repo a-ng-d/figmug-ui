@@ -1,4 +1,5 @@
 :root[data-theme='penpot'] {
+  --sortable-list-padding: var(--size-unit) 0;
   --sortable-list-border-width: var(--size-unit);
   --sortable-list-border-color: var(--color-background-quaternary);
 }

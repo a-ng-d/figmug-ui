@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .keyboard-shortcut-item {
   display: flex;
@@ -29,6 +30,7 @@
     min-width: var(--keyboard-shortcut-item-key-min-width);
     height: var(--keyboard-shortcut-item-key-height);
     white-space: nowrap;
+    background-color: var(--keyboard-shortcut-item-key-background-color);
   }
 
   .keyboard-shortcut-item__separator {

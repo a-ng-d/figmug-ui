@@ -68,6 +68,24 @@
 
   --actions-list-item-padding-selected: 0 var(--size-xsmall) 0
     var(--size-xxsmall);
+  --actions-list-item-background-color-selected: var(--figma-color-bg-selected-strong);
+  --actions-list-item-text-color-selected: var(--grey-0);
+  --actions-list-tick-color-selected: var(--grey-0);
+  --actions-list-caret-color-selected: var(--grey-0);
+
+  --actions-list-item-padding-selected-hover: 0 var(--size-xsmall) 0
+  var(--size-xxsmall);
+  --actions-list-item-background-color-selected-hover: var(--figma-color-bg-selected-strong);
+  --actions-list-item-text-color-selected-hover: var(--grey-0);
+  --actions-list-tick-color-selected-hover: var(--grey-0);
+  --actions-list-caret-color-selected-hover: var(--grey-0);
+
+  --actions-list-item-padding-selected-focus: 0 var(--size-xsmall) 0
+  var(--size-xxsmall);
+  --actions-list-item-background-color-selected-focus: var(--figma-color-bg-selected-strong);
+  --actions-list-item-text-color-selected-focus: var(--grey-0);
+  --actions-list-tick-color-selected-focus: var(--grey-0);
+  --actions-list-caret-color-selected-focus: var(--grey-0);
 
   --actions-list-item-background-color-disabled: var(--grey-1000);
   --actions-list-item-text-color-disabled: var(--grey-600);

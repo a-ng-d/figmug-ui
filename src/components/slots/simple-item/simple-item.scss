@@ -22,7 +22,7 @@
     align-items: baseline;
   }
 
-  &--interactive:hover {
+  &--interactive {
     &:hover {
       --simple-item-background-color: var(--simple-item-background-color-hover);
     }

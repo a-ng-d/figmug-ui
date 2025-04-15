@@ -139,12 +139,12 @@
   --input-color-chip-opacity-disabled: 1;
 
   /* On Selected */
-  --input-background-color-onselected: var(--color-background-primary);
-  --input-border-color-onselected: var(--color-background-tertiary);
+  --input-background-color-onselected: var(--color-background-tertiary);
+  --input-border-color-onselected: var(--color-accent-primary);
   --input-border-width-onselected: var(--size-unit);
-  --input-border-offset-onselected: var(--size-neg-unit);
-  --input-background-color-onselected-hover: var(--color-background-primary);
-  --input-border-color-onselected-hover: var(--color-background-tertiary);
+  --input-border-offset-onselected: var(--size-unit);
+  --input-background-color-onselected-hover: var(--color-background-tertiary);
+  --input-border-color-onselected-hover: var(--color-accent-primary);
   --input-border-width-onselected-hover: var(--size-unit);
-  --input-border-offset-onselected-hover: var(--size-neg-unit);
+  --input-border-offset-onselected-hover: var(--size-unit);
 }

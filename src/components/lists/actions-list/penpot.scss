@@ -1,0 +1,102 @@
+:root[data-theme='penpot'] {
+  /* Base */
+  --actions-list-min-width: 224px;
+  --actions-list-padding: var(--size-xxxsmall) var(--size-xxxsmall);
+  --actions-list-radius: var(--border-radius-xlarge);
+  --actions-list-background-color: var(--color-background-primary);
+  --actions-list-border-color: var(--color-background-quaternary);
+  --actions-list-border-width: var(--size-unit);
+  --actions-list-border-offset: var(--size-neg-unit);
+  --actions-list-shadow: none;
+
+  --actions-list-item-height: var(--size-medium);
+  --actions-list-item-padding: 0 var(--size-xxsmall) 0 var(--size-medium);
+  --actions-list-item-gap: var(--size-xxsmall);
+  --actions-list-item-radius: var(--border-radius-large);
+  --actions-list-item-background-color: transparent;
+  --actions-list-item-text-font-family: var(--font-stack);
+  --actions-list-item-text-font-size: var(--font-size-small);
+  --actions-list-item-text-font-weight: var(--font-weight-normal);
+  --actions-list-item-text-letterspacing: var(--font-letter-spacing-neg-xsmall);
+  --actions-list-item-text-line-height: var(--font-line-height);
+  --actions-list-item-text-color: var(--color-foreground-primary);
+
+  --actions-list-patch-right: var(--size-neg-xxxsmall);
+  --actions-list-patch-left: var(--size-neg-xxxsmall);
+  --actions-list-patch-width: var(--size-xxxsmall);
+
+  --actions-list-spot-height: var(--size-xsmall);
+  --actions-list-spot-radius: var(--border-radius-xlarge);
+  --actions-list-spot-background-color: var(--color-background-primary);
+  --actions-list-spot-icon-color: var(--color-foreground-primary);
+  --actions-list-spot-inset-top: 0 var(--size-unit) auto var(--size-unit);
+  --actions-list-spot-inset-bottom: auto var(--size-unit) 0 var(--size-unit);
+  --actions-list-spot-border-width: 0;
+  --actions-list-spot-border-color: transparent;
+
+  --actions-list-tick-width: var(--size-xsmall);
+  --actions-list-tick-height: var(--size-xsmall);
+  --actions-list-tick-color: var(--color-foreground-primary);
+
+  --actions-list-caret-width: var(--size-xsmall);
+  --actions-list-caret-height: var(--size-xsmall);
+  --actions-list-caret-color: var(--color-foreground-primary);
+
+  --actions-list-submenu-inset-right: var(--size-neg-xxxsmall)
+    var(--size-neg-xxxsmall) auto auto;
+  --actions-list-submenu-inset-left: var(--size-neg-xxxsmall) auto auto
+    var(--size-neg-xxxsmall);
+
+  --actions-list-divider-margin: 11px 0 12px 0;
+  --actions-list-divider-height: var(--size-unit);
+  --actions-list-divider-background-color: var(--color-background-quaternary);
+
+  /* States */
+  --actions-list-item-background-color-hover: var(
+    --color-background-quaternary
+  );
+  --actions-list-item-text-color-hover: var(--color-foreground-primary);
+  --actions-list-tick-color-hover: var(--color-foreground-primary);
+  --actions-list-caret-color-hover: var(--color-foreground-primary);
+
+  --actions-list-item-background-color-focus: var(
+    --color-background-quaternary
+  );
+  --actions-list-item-text-color-focus: var(--color-foreground-primary);
+  --actions-list-tick-color-focus: var(--color-foreground-primary);
+  --actions-list-caret-color-focus: var(--color-foreground-primary);
+
+  --actions-list-item-padding-selected: 0 var(--size-xsmall) 0
+    var(--size-xxsmall);
+  --actions-list-item-background-color-selected: var(
+    --color-background-quaternary
+  );
+  --actions-list-item-text-color-selected: var(--color-accent-primary);
+  --actions-list-tick-color-selected: var(--color-accent-primary);
+  --actions-list-caret-color-selected: var(--color-accent-primary);
+
+  --actions-list-item-padding-selected-hover: 0 var(--size-xsmall) 0
+    var(--size-xxsmall);
+  --actions-list-item-background-color-selected-hover: var(
+    --color-background-quaternary
+  );
+  --actions-list-item-text-color-selected-hover: var(--color-accent-primary);
+  --actions-list-tick-color-selected-hover: var(--color-accent-primary);
+  --actions-list-caret-color-selected-hover: var(--color-accent-primary);
+
+  --actions-list-item-padding-selected-focus: 0 var(--size-xsmall) 0
+    var(--size-xxsmall);
+  --actions-list-item-background-color-selected-focus: var(
+    --color-background-quaternary
+  );
+  --actions-list-item-text-color-selected-focus: var(--color-accent-primary);
+  --actions-list-tick-color-selected-focus: var(--color-accent-primary);
+  --actions-list-caret-color-selected-focus: var(--color-accent-primary);
+
+  --actions-list-item-background-color-disabled: var(
+    --color-background-primary
+  );
+  --actions-list-item-text-color-disabled: var(--color-foreground-disabled);
+  --actions-list-tick-color-disabled: var(--color-foreground-disabled);
+  --actions-list-caret-color-disabled: var(--color-foreground-disabled);
+}
