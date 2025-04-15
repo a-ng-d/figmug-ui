@@ -43,9 +43,9 @@
   --actions-list-caret-color: var(--color-foreground-primary);
 
   --actions-list-submenu-inset-right: var(--size-neg-xxxsmall)
-    var(--size-neg-xxxsmall) auto auto;
+    -3px auto auto;
   --actions-list-submenu-inset-left: var(--size-neg-xxxsmall) auto auto
-    var(--size-neg-xxxsmall);
+    -3px;
 
   --actions-list-divider-margin: 11px 0 12px 0;
   --actions-list-divider-height: var(--size-unit);

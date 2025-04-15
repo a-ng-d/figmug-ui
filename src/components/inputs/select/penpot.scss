@@ -73,7 +73,7 @@
   --select-toggle-knob-height: 12px;
   --select-toggle-knob-width: 12px;
   --select-toggle-knob-radius: var(--border-radius-full);
-  --select-toggle-knob-left: 12px;
+  --select-toggle-knob-left: 11px;
   --select-toggle-knob-background-color: var(--color-foreground-primary);
   --select-toggle-knob-transform: translateX(0) translateY(-50%);
 
@@ -81,7 +81,7 @@
   --select-toggle-border-checked: var(--size-unit) solid
     var(--color-accent-primary);
   --select-toggle-knob-transform-checked: translateX(8px) translateY(-50%);
-  --select-toggle-knob-background-checked: var(--color-background-primary);
+  --select-toggle-knob-background-color-checked: var(--color-background-primary);
 
   --select-toggle-border-color-secondary-focus: var(
     --color-accent-primary
@@ -102,8 +102,8 @@
   );
   --select-toggle-border-checked-disabled: var(--size-unit) solid
     var(--color-accent-primary-muted);
-  --select-toggle-knob-background-disabled: var(--color-foreground-disabled);
-  --select-toggle-knob-background-checked-disabled: var(
+  --select-toggle-knob-background-color-disabled: var(--color-foreground-disabled);
+  --select-toggle-knob-background-color-checked-disabled: var(
     --color-foreground-disabled
   );
 

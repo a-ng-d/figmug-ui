@@ -175,7 +175,7 @@
       transform: var(--select-toggle-knob-transform);
       transition: transform 0.2s;
       border-radius: var(--select-toggle-knob-radius);
-      background-color: var(--select-toggle-knob-background);
+      background-color: var(--select-toggle-knob-background-color);
       width: var(--select-toggle-knob-width);
       height: var(--select-toggle-knob-height);
       content: '';
@@ -202,7 +202,7 @@
         --select-toggle-knob-transform-checked
       );
       --select-toggle-knob-background-color: var(
-        --select-toggle-knob-background-checked
+        --select-toggle-knob-background-color-checked
       );
     }
 
@@ -243,7 +243,7 @@
 
     &:disabled + .switch__label:after {
       --select-toggle-knob-background-color: var(
-        --select-toggle-knob-background-disabled
+        --select-toggle-knob-background-color-disabled
       );
     }
 
@@ -256,7 +256,7 @@
 
     &:disabled:checked + .switch__label:after {
       --select-toggle-knob-background-color: var(
-        --select-toggle-knob-background-checked-disabled
+        --select-toggle-knob-background-color-checked-disabled
       );
     }
   }
