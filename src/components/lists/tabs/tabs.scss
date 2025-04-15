@@ -6,11 +6,11 @@
   display: flex;
   align-items: stretch;
   gap: var(--tabs-gap);
-  background-color: var(--tabs-background-color);
-  border-radius: var(--tabs-radius);
   cursor: default;
-  user-select: none;
+  border-radius: var(--tabs-radius);
+  background-color: var(--tabs-background-color);
   padding: var(--tabs-padding);
+  user-select: none;
 
   & .tabs__tab {
     position: relative;
@@ -19,8 +19,8 @@
     padding: var(--tabs-tab-padding);
     color: var(--tabs-tab-text-color);
     font-weight: var(--tabs-tab-text-weight);
-    text-transform: var(--tabs-tab-text-transform);
     font-size: var(--tabs-tab-text-size);
+    text-transform: var(--tabs-tab-text-transform);
 
     &:hover:not(&--active) {
       --tabs-tab-background-color: var(--tabs-tab-background-color-hover);

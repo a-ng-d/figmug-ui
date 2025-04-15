@@ -163,27 +163,39 @@
       --actions-list-caret-color: var(--actions-list-caret-color-selected);
 
       &:hover {
-        --actions-list-item-padding: var(--actions-list-item-padding-selected-hover);
+        --actions-list-item-padding: var(
+          --actions-list-item-padding-selected-hover
+        );
         --actions-list-item-background-color: var(
           --actions-list-item-background-color-selected-hover
         );
         --actions-list-item-text-color: var(
           --actions-list-item-text-color-selected-hover
         );
-        --actions-list-tick-color: var(--actions-list-tick-color-selected-hover);
-        --actions-list-caret-color: var(--actions-list-caret-color-selected-hover);
+        --actions-list-tick-color: var(
+          --actions-list-tick-color-selected-hover
+        );
+        --actions-list-caret-color: var(
+          --actions-list-caret-color-selected-hover
+        );
       }
 
       &:focus {
-        --actions-list-item-padding: var(--actions-list-item-padding-selected-focus);
+        --actions-list-item-padding: var(
+          --actions-list-item-padding-selected-focus
+        );
         --actions-list-item-background-color: var(
           --actions-list-item-background-color-selected-focus
         );
         --actions-list-item-text-color: var(
           --actions-list-item-text-color-selected-focus
         );
-        --actions-list-tick-color: var(--actions-list-tick-color-selected-focus);
-        --actions-list-caret-color: var(--actions-list-caret-color-selected-focus);
+        --actions-list-tick-color: var(
+          --actions-list-tick-color-selected-focus
+        );
+        --actions-list-caret-color: var(
+          --actions-list-caret-color-selected-focus
+        );
       }
     }
 

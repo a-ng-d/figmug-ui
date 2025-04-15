@@ -21,14 +21,18 @@ li.actions-item {
 
   &--interactive {
     &:hover {
-      --actions-item-background-color: var(--actions-item-background-color-hover);
+      --actions-item-background-color: var(
+        --actions-item-background-color-hover
+      );
     }
 
     &:focus {
       --actions-item-background-color: var(
-          --actions-item-background-color-focus
+        --actions-item-background-color-focus
       );
-      --actions-item-border-secondary-width: var(--actions-item-border-secondary-width-focus);
+      --actions-item-border-secondary-width: var(
+        --actions-item-border-secondary-width-focus
+      );
       --actions-item-border-secondary-offset: var(
         --actions-item-border-secondary-offset-focus
       );

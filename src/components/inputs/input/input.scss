@@ -29,6 +29,7 @@
       left: var(--input-color-chip-left);
       transform: translateY(-50%);
       appearance: none;
+      opacity: var(--input-color-chip-opacity);
       z-index: 1;
       outline: none;
       border: none;
@@ -36,7 +37,6 @@
       padding: 0;
       width: var(--input-color-chip-width);
       height: var(--input-color-chip-height);
-      opacity: var(--input-color-chip-opacity);
     }
 
     &[type='color' i]::-webkit-color-swatch-wrapper {
@@ -88,7 +88,8 @@
     flex: 1;
   }
 
-  &__icon, &__unit {
+  &__icon,
+  &__unit {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -129,8 +130,8 @@
     font-weight: var(--input-text-font-weight);
     font-size: var(--input-text-font-size);
     line-height: var(--input-text-line-height);
-    letter-spacing: var(--input-text-letterspacing);
     font-family: var(--input-text-font-family);
+    letter-spacing: var(--input-text-letterspacing);
 
     &::placeholder {
       color: var(--input-text-placeholder-color);

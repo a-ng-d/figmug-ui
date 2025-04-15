@@ -81,11 +81,11 @@
   --select-toggle-border-checked: var(--size-unit) solid
     var(--color-accent-primary);
   --select-toggle-knob-transform-checked: translateX(8px) translateY(-50%);
-  --select-toggle-knob-background-color-checked: var(--color-background-primary);
-
-  --select-toggle-border-color-secondary-focus: var(
-    --color-accent-primary
+  --select-toggle-knob-background-color-checked: var(
+    --color-background-primary
   );
+
+  --select-toggle-border-color-secondary-focus: var(--color-accent-primary);
   --select-toggle-border-width-secondary-focus: var(--size-unit);
   --select-toggle-border-offset-secondary-focus: var(--size-unit);
   --select-toggle-border-color-secondary-checked-focus: var(
@@ -102,7 +102,9 @@
   );
   --select-toggle-border-checked-disabled: var(--size-unit) solid
     var(--color-accent-primary-muted);
-  --select-toggle-knob-background-color-disabled: var(--color-foreground-disabled);
+  --select-toggle-knob-background-color-disabled: var(
+    --color-foreground-disabled
+  );
   --select-toggle-knob-background-color-checked-disabled: var(
     --color-foreground-disabled
   );
