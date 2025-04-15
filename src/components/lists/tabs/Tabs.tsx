@@ -26,6 +26,7 @@ const Tabs = (props: TabsProps) => {
             texts.type,
             active === tab.id && 'tabs__tab--active',
             tab.isUpdated && 'tabs__tab--new',
+            texts['type--truncated'],
           ])}
           data-feature={tab.id}
           tabIndex={-1}

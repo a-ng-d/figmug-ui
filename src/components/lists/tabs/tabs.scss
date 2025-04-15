@@ -1,50 +1,56 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .tabs {
   display: flex;
   align-items: stretch;
-  gap: var(--tab-gap);
+  gap: var(--tabs-gap);
+  background-color: var(--tabs-background-color);
+  border-radius: var(--tabs-radius);
   cursor: default;
   user-select: none;
+  padding: var(--tabs-padding);
 
   & .tabs__tab {
     position: relative;
-    border-radius: var(--tab-radius);
-    background-color: var(--tab-background-color);
-    padding: var(--tab-padding);
-    color: var(--tab-text-color);
-    font-weight: var(--tab-text-weight);
+    border-radius: var(--tabs-tab-radius);
+    background-color: var(--tabs-tab-background-color);
+    padding: var(--tabs-tab-padding);
+    color: var(--tabs-tab-text-color);
+    font-weight: var(--tabs-tab-text-weight);
+    text-transform: var(--tabs-tab-text-transform);
+    font-size: var(--tabs-tab-text-size);
 
     &:hover:not(&--active) {
-      --tab-background-color: var(--tab-background-color-hover);
-      --tab-text-color: var(--tab-text-color-hover);
-      --tab-text-weight: var(--tab-text-weight-hover);
-      --tab-notification-border-color: var(
-        --tab-notification-border-color-hover
+      --tabs-tab-background-color: var(--tabs-tab-background-color-hover);
+      --tabs-tab-text-color: var(--tabs-tab-text-color-hover);
+      --tabs-tab-text-weight: var(--tabs-tab-text-weight-hover);
+      --tabs-tab-notification-border-color: var(
+        --tabs-tab-notification-border-color-hover
       );
     }
 
     &--active {
-      --tab-background-color: var(--tab-background-color-active);
-      --tab-text-color: var(--tab-text-color-active);
-      --tab-text-weight: var(--tab-text-weight-active);
-      --tab-notification-border-color: var(
-        --tab-notification-border-color-active
+      --tabs-tab-background-color: var(--tabs-tab-background-color-active);
+      --tabs-tab-text-color: var(--tabs-tab-text-color-active);
+      --tabs-tab-text-weight: var(--tabs-tab-text-weight-active);
+      --tabs-tab-notification-border-color: var(
+        --tabs-tab-notification-border-color-active
       );
     }
   }
 
   & .tabs__tab--new:after {
     position: absolute;
-    inset: var(--tab-notification-inset);
-    outline: var(--tab-notification-border-width) solid
-      var(--tab-notification-border-color);
-    outline-offset: var(--tab-notification-border-offset);
-    border-radius: var(--tab-notification-radius);
-    background-color: var(--tab-notification-background-color);
-    width: var(--tab-notification-width);
-    height: var(--tab-notification-height);
+    inset: var(--tabs-tab-notification-inset);
+    outline: var(--tabs-tab-notification-border-width) solid
+      var(--tabs-tab-notification-border-color);
+    outline-offset: var(--tabs-tab-notification-border-offset);
+    border-radius: var(--tabs-tab-notification-radius);
+    background-color: var(--tabs-tab-notification-background-color);
+    width: var(--tabs-tab-notification-width);
+    height: var(--tabs-tab-notification-height);
     content: '';
   }
 }
