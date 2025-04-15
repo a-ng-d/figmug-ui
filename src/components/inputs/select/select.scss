@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .checkbox,
 .radio,
@@ -61,7 +62,7 @@
       mask-size: cover;
       -webkit-mask-size: cover;
       margin: var(--select-box-tick-margin);
-      background-color: var(--select-box-tick-background-color);
+      background-color: var(--select-box-tick-color);
       width: var(--select-box-tick-width);
       height: var(--select-box-tick-height);
       pointer-events: none;
@@ -119,6 +120,10 @@
         --select-box-background-color-checked-disabled
       );
       --select-box-border: var(--select-box-border-checked-disabled);
+    }
+
+    &:disabled:checked + .checkbox__label:after {
+      --select-box-tick-color: var(--select-box-tick-color-disabled);
     }
 
     &:disabled + .checkbox__label:before {
@@ -295,7 +300,7 @@
       left: var(--select-button-inner-left);
       visibility: hidden;
       border-radius: var(--select-button-radius);
-      background-color: var(--select-button-icon);
+      background-color: var(--select-button-icon-color);
       width: var(--select-button-inner-width);
       height: var(--select-button-inner-height);
       content: '';
@@ -357,7 +362,7 @@
     }
 
     &:disabled:checked + .radio__label:after {
-      --select-button-icon: var(--select-button-icon-disabled);
+      --select-button-icon-color: var(--select-button-icon-color-disabled);
     }
 
     &:disabled + .radio__label:before {
