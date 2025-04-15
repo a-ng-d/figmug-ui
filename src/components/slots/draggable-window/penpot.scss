@@ -1,0 +1,12 @@
+:root[data-theme='penpot'] {
+  --draggable-window-width: 296px;
+  --draggable-window-radius: var(--border-radius-xxlarge);
+  --draggable-window-shadow: none;
+  --draggable-window-background-color: var(--color-background-primary);
+  --draggable-window-border-color: var(--color-background-quaternary);
+  --draggable-window-border-width: var(--size-unit);
+  --draggable-window-border-offset: var(--size-neg-unit);
+
+  --draggable-window-content-padding: var(--size-xxsmall);
+  --draggable-window-content-gap: var(--size-xxxsmall);
+}
