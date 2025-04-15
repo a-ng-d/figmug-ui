@@ -1,6 +1,6 @@
 :root[data-theme='figma-ui3'] {
   --dialog-padding: var(--size-medium);
-  --dialog-background-color: rgba(0, 0, 0, 0.5);
+  --dialog-background-color: var(--color-overlay-default);
 
   --dialog-cover-width: 248px;
   --dialog-cover-padding: var(--size-xsmall);

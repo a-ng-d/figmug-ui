@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .message {
   display: flex;
@@ -14,6 +15,10 @@
   &--blocked {
     --icon-picto-color: var(--message-icon-color-disabled);
     --text-color-primary: var(--message-text-color-disabled);
+  }
+
+  &--multiple {
+    align-items: center;
   }
 
   &__msg {

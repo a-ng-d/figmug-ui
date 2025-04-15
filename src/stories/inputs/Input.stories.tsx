@@ -81,6 +81,7 @@ export const NumericStepper: Story = {
     max: '100',
     step: '1',
     feature: 'ADJUST_NUMBER',
+    state: 'DEFAULT',
     isAutoFocus: false,
     isBlocked: false,
     isDisabled: false,
@@ -90,7 +91,7 @@ export const NumericStepper: Story = {
   argTypes: {
     type: { control: false },
     placeholder: { control: false },
-    state: { control: false },
+    state: { control: 'select', options: ['DEFAULT', 'ERROR'] },
     charactersLimit: { control: false },
   },
   render: (args) => {

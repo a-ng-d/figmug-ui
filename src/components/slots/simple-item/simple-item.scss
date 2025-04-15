@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .simple-item {
   display: flex;
@@ -21,7 +22,7 @@
     align-items: baseline;
   }
 
-  &--interactive:hover {
+  &--interactive {
     &:hover {
       --simple-item-background-color: var(--simple-item-background-color-hover);
     }

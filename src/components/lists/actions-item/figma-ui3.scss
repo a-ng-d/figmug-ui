@@ -20,8 +20,8 @@
   --actions-item-background-color-hover: var(--figma-color-bg-hover);
 
   --actions-item-background-color-focus: var(--figma-color-bg-selected);
-  --actions-item-border-secondary-width-focus: var(--size-xunit);
-  --actions-item-border-secondary-offset-focus: var(--size-neg-xunit);
+  --actions-item-border-secondary-width-focus: var(--size-unit);
+  --actions-item-border-secondary-offset-focus: var(--size-neg-unit);
   --actions-item-border-secondary-color-focus: var(
     --figma-color-border-selected
   );

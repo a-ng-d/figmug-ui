@@ -29,7 +29,7 @@
   --select-box-tick-width: var(--size-medium);
   --select-box-tick-height: var(--size-medium);
   --select-box-tick-margin: 0 0 0 var(--size-neg-xsmall);
-  --select-box-tick-background-color: var(--grey-0);
+  --select-box-tick-color: var(--grey-0);
 
   --select-box-background-color-checked: var(--figma-color-bg-selected-strong);
   --select-box-border-checked: var(--size-unit) solid
@@ -52,6 +52,7 @@
   );
   --select-box-border-checked-disabled: var(--size-unit) solid
     var(--figma-color-bg-selected);
+  --select-box-tick-color-disabled: var(--figma-color-icon-disabled);
 
   /* Switch */
   --select-switch-height: var(--size-medium);
@@ -72,7 +73,7 @@
   --select-toggle-knob-width: 10px;
   --select-toggle-knob-radius: var(--border-radius-full);
   --select-toggle-knob-left: 7px;
-  --select-toggle-knob-background: var(--grey-0);
+  --select-toggle-knob-background-color: var(--grey-0);
   --select-toggle-knob-transform: translateX(0) translateY(-50%);
 
   --select-toggle-background-color-checked: var(
@@ -81,7 +82,9 @@
   --select-toggle-border-checked: var(--size-unit) solid
     var(--figma-color-bg-selected-strong);
   --select-toggle-knob-transform-checked: translateX(12px) translateY(-50%);
-  --select-toggle-knob-background-checked: var(--figma-color-icon-onbrand);
+  --select-toggle-knob-background-color-checked: var(
+    --figma-color-icon-onbrand
+  );
 
   --select-toggle-border-color-secondary-focus: var(
     --figma-color-border-selected
@@ -102,8 +105,10 @@
   );
   --select-toggle-border-checked-disabled: var(--size-unit) solid
     var(--figma-color-bg-brand-secondary);
-  --select-toggle-knob-background-disabled: var(--figma-color-icon-ondisabled);
-  --select-toggle-knob-background-checked-disabled: var(
+  --select-toggle-knob-background-color-disabled: var(
+    --figma-color-icon-ondisabled
+  );
+  --select-toggle-knob-background-color-checked-disabled: var(
     --figma-color-icon-onbrand-secondary
   );
 
@@ -119,7 +124,7 @@
   --select-button-radius: var(--border-radius-full);
   --select-button-margin: 0 var(--size-xxsmall) 0 var(--size-neg-xxsmall);
   --select-button-inner-left: 5px;
-  --select-button-icon: var(--figma-color-icon);
+  --select-button-icon-color: var(--figma-color-icon);
   --select-button-background-color: var(--figma-color-bg);
   --select-button-border: var(--size-unit) solid var(--figma-color-icon);
   --select-button-border-color-secondary: transparent;
@@ -146,5 +151,5 @@
   --select-button-background-color-checked-disabled: var(--figma-color-bg);
   --select-button-border-checked-disabled: var(--size-unit) solid
     var(--figma-color-bg-disabled);
-  --select-button-icon-disabled: var(--figma-color-icon-disabled);
+  --select-button-icon-color-disabled: var(--figma-color-icon-disabled);
 }

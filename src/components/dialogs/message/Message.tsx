@@ -41,7 +41,7 @@ export default class Message extends React.Component<MessageProps> {
 
     return (
       <div className="callout">
-        <div className="message">
+        <div className="message message--multiple">
           <Icon
             type="PICTO"
             iconName={icon}

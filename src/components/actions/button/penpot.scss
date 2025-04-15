@@ -354,9 +354,9 @@
     --color-background-quaternary
   );
 
-  --icon-button-background-color-onselected: var(--figma-color-bg-selected);
+  --icon-button-background-color-onselected: var(--color-accent-primary-muted);
   --icon-button-background-color-onselected-hover: var(
-    --figma-color-bg-selected-hover
+    --color-accent-primary-muted
   );
 
   /* Icon Button - Selected */

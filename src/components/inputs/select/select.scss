@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .checkbox,
 .radio,
@@ -61,7 +62,7 @@
       mask-size: cover;
       -webkit-mask-size: cover;
       margin: var(--select-box-tick-margin);
-      background-color: var(--select-box-tick-background-color);
+      background-color: var(--select-box-tick-color);
       width: var(--select-box-tick-width);
       height: var(--select-box-tick-height);
       pointer-events: none;
@@ -121,6 +122,10 @@
       --select-box-border: var(--select-box-border-checked-disabled);
     }
 
+    &:disabled:checked + .checkbox__label:after {
+      --select-box-tick-color: var(--select-box-tick-color-disabled);
+    }
+
     &:disabled + .checkbox__label:before {
       --select-box-background-color: var(
         --select-box-background-color-disabled
@@ -170,7 +175,7 @@
       transform: var(--select-toggle-knob-transform);
       transition: transform 0.2s;
       border-radius: var(--select-toggle-knob-radius);
-      background-color: var(--select-toggle-knob-background);
+      background-color: var(--select-toggle-knob-background-color);
       width: var(--select-toggle-knob-width);
       height: var(--select-toggle-knob-height);
       content: '';
@@ -196,8 +201,8 @@
       --select-toggle-knob-transform: var(
         --select-toggle-knob-transform-checked
       );
-      --select-toggle-knob-background: var(
-        --select-toggle-knob-background-checked
+      --select-toggle-knob-background-color: var(
+        --select-toggle-knob-background-color-checked
       );
     }
 
@@ -237,8 +242,8 @@
     }
 
     &:disabled + .switch__label:after {
-      --select-toggle-knob-background: var(
-        --select-toggle-knob-background-disabled
+      --select-toggle-knob-background-color: var(
+        --select-toggle-knob-background-color-disabled
       );
     }
 
@@ -250,8 +255,8 @@
     }
 
     &:disabled:checked + .switch__label:after {
-      --select-toggle-knob-background: var(
-        --select-toggle-knob-background-checked-disabled
+      --select-toggle-knob-background-color: var(
+        --select-toggle-knob-background-color-checked-disabled
       );
     }
   }
@@ -295,7 +300,7 @@
       left: var(--select-button-inner-left);
       visibility: hidden;
       border-radius: var(--select-button-radius);
-      background-color: var(--select-button-icon);
+      background-color: var(--select-button-icon-color);
       width: var(--select-button-inner-width);
       height: var(--select-button-inner-height);
       content: '';
@@ -357,7 +362,7 @@
     }
 
     &:disabled:checked + .radio__label:after {
-      --select-button-icon: var(--select-button-icon-disabled);
+      --select-button-icon-color: var(--select-button-icon-color-disabled);
     }
 
     &:disabled + .radio__label:before {

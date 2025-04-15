@@ -1,0 +1,35 @@
+:root[data-theme='penpot'] {
+  --tab-gap: 0;
+  --tabs-radius: var(--border-radius-xlarge);
+  --tabs-padding: var(--size-xunit);
+  --tabs-background-color: var(--color-background-secondary);
+
+  --tabs-tab-padding: var(--size-xxsmall) 12px;
+  --tabs-tab-radius: var(--border-radius-med);
+  --tabs-tab-background-color: var(--color-background-secondary);
+  --tabs-tab-text-size: var(--font-size-small);
+  --tabs-tab-text-color: var(--color-foreground-secondary);
+  --tabs-tab-text-weight: var(--font-weight-medium);
+  --tabs-tab-text-transform: uppercase;
+
+  --tabs-tab-notification-inset: var(--size-xunit) var(--size-xunit) auto auto;
+  --tabs-tab-notification-width: var(--size-xxsmall);
+  --tabs-tab-notification-height: var(--size-xxsmall);
+  --tabs-tab-notification-radius: var(--border-radius-full);
+  --tabs-tab-notification-background-color: var(--color-accent-primary);
+  --tabs-tab-notification-border-color: var(--color-background-secondary);
+  --tabs-tab-notification-border-width: var(--size-xunit);
+  --tabs-tab-notification-border-offset: 0;
+
+  --tabs-tab-background-color-hover: var(--color-background-secondary);
+  --tabs-tab-text-color-hover: var(--color-foreground-primary);
+  --tabs-tab-text-weight-hover: var(--font-weight-medium);
+  --tabs-tab-notification-border-color-hover: var(--color-background-secondary);
+
+  --tabs-tab-background-color-active: var(--color-background-quaternary);
+  --tabs-tab-text-color-active: var(--color-accent-primary);
+  --tabs-tab-text-weight-active: var(--font-weight-medium);
+  --tabs-tab-notification-border-color-active: var(
+    --color-background-quaternary
+  );
+}

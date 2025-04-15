@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .sortable-list {
   margin: 0;
@@ -7,12 +8,13 @@
   list-style-type: none;
 
   &--scrollable {
-    padding: var(--size-unit) 0;
+    padding: var(--sortable-list-padding);
     height: 100%;
     overflow-y: auto;
   }
 
   &--top-border {
-    border-top: var(--list-border-width) solid var(--list-border-color);
+    border-top: var(--sortable-list-border-width) solid
+      var(--sortable-list-border-color);
   }
 }

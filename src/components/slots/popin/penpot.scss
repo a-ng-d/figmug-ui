@@ -1,0 +1,30 @@
+:root[data-theme='penpot'] {
+  --popin-breakpoint: 460px;
+  --popin-shadow: none;
+  --popin-shadow-panel: none;
+  --popin-radius: var(--border-radius-xxlarge);
+  --popin-width-panel: 248px;
+  --popin-min-width: 460px;
+  --popin-max-width: 576px;
+  --popin-min-height: 136px;
+  --popin-background-color: var(--color-background-primary);
+  --popin-text-color: var(--color-foreground-primary);
+  --popin-border-color: var(--color-background-quaternary);
+  --popin-border-width: var(--size-xunit);
+  --popin-border-offset: var(--size-neg-xunit);
+
+  --popin-header-height: var(--size-large);
+  --popin-header-gap: var(--size-xxsmall);
+  --popin-header-padding: var(--size-medium) var(--size-medium) 0
+    var(--size-medium);
+  --popin-header-border: var(--size-unit) solid transparent;
+  --popin-header-text-transform: uppercase;
+
+  --popin-content-padding: var(--size-small) var(--size-medium);
+
+  --popin-footer-padding: var(--size-xxsmall) var(--size-medium)
+    var(--size-medium);
+  --popin-footer-gap: var(--size-xxsmall);
+
+  --popin-actions-gap: var(--size-xxsmall);
+}

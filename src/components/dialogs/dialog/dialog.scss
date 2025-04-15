@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .dialog {
   display: flex;
@@ -24,8 +25,8 @@
     flex: 1 0 var(--dialog-cover-width);
     justify-content: center;
     align-items: center;
-    max-width: var(--dialog-cover-width);
     aspect-ratio: var(--dialog-cover-ratio);
+    max-width: var(--dialog-cover-width);
     overflow: hidden;
 
     &--padding {

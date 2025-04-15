@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .input {
   display: flex;
@@ -28,10 +29,10 @@
       left: var(--input-color-chip-left);
       transform: translateY(-50%);
       appearance: none;
+      opacity: var(--input-color-chip-opacity);
       z-index: 1;
       outline: none;
       border: none;
-      border-radius: var(--input-color-chip-radius);
       background-color: transparent;
       padding: 0;
       width: var(--input-color-chip-width);
@@ -45,6 +46,7 @@
     &[type='color' i]::-webkit-color-swatch {
       box-shadow: var(--input-color-chip-border);
       border: none;
+      border-radius: var(--input-color-chip-radius);
     }
 
     &[type='color' i]:focus {
@@ -86,11 +88,10 @@
     flex: 1;
   }
 
-  &__icon {
+  &__icon,
+  &__unit {
     display: flex;
     position: absolute;
-    top: 0;
-    left: 0;
     justify-content: center;
     align-items: center;
     z-index: 2;
@@ -99,12 +100,15 @@
     --icon-letter-color: var(--input-icon-color);
   }
 
+  &__icon {
+    top: 0;
+    left: 0;
+  }
+
   &__unit {
-    position: absolute;
     top: 0;
     right: 0;
     pointer-events: none;
-    --icon-letter-color: var(--input-icon-color);
   }
 
   &__field {
@@ -126,6 +130,7 @@
     font-weight: var(--input-text-font-weight);
     font-size: var(--input-text-font-size);
     line-height: var(--input-text-line-height);
+    font-family: var(--input-text-font-family);
     letter-spacing: var(--input-text-letterspacing);
 
     &::placeholder {
@@ -289,7 +294,7 @@
       --input-text-placeholder-color: var(--input-text-placeholder-color-hover);
     }
     &:disabled[type='color' i] {
-      opacity: 0.5;
+      --input-color-chip-opacity: var(--input-color-chip-opacity-disabled);
       pointer-events: none;
     }
   }

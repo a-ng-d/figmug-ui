@@ -54,7 +54,7 @@ const preview: Preview = {
       values: [
         {
           name: 'Figma Light',
-          value: '#ffffff',
+          value: '#fffff',
         },
         {
           name: 'Figma Dark',
@@ -70,7 +70,7 @@ const preview: Preview = {
         },
         {
           name: 'Penpot Dark',
-          value: '#18181a',
+          value: '#000000',
         },
       ],
     },
@@ -82,18 +82,18 @@ const preview: Preview = {
         const currentTheme = context.globals.dataTheme
         let mode = 'figma-dark'
 
-        // Adapter le mode en fonction du thème
-        if (currentTheme === 'penpot') {
-          mode = background === '#fffffd' ? 'penpot-light' : 'penpot-dark'
-        } else {
-          if (background === '#fffffe') {
-            mode = 'figjam'
-          } else if (background === '#ffffff') {
-            mode = 'figma-light'
-          } else if (background === '#2c2c2c') {
-            mode = 'figma-dark'
-          }
-        }
+        if (currentTheme.includes('penpot') && background === '#000000')
+          mode = 'penpot-dark'
+        else if (currentTheme.includes('penpot') && background === '#fffffd')
+          mode = 'penpot-light'
+        else if (currentTheme.includes('figma') && background === '#fffffe')
+          mode = 'figjam'
+        else if (currentTheme.includes('figma') && background === '#ffffff')
+          mode = 'figma-light'
+        else if (currentTheme.includes('figma') && background === '#2c2c2c')
+          mode = 'figma-dark'
+
+        console.log('Current theme:', context)
 
         document.documentElement.setAttribute('data-mode', mode)
       }, [context.globals.backgrounds])

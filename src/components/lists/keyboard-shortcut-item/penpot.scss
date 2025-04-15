@@ -1,0 +1,20 @@
+:root[data-theme='penpot'] {
+  --keyboard-shortcut-item-padding: 0 var(--size-small);
+  --keyboard-shortcut-item-gap: var(--size-xxsmall);
+  --keyboard-shortcut-item-min-height: var(--size-medium);
+  --keyboard-shortcut-item-background-color: var(--color-background-primary);
+
+  --keyboard-shortcut-item-key-radius: var(--border-radius-xlarge);
+  --keyboard-shortcut-item-key-padding: 0 var(--size-xxsmall);
+  --keyboard-shortcut-item-key-min-width: var(--size-xxsmall);
+  --keyboard-shortcut-item-key-gap: var(--size-xxxsmall);
+  --keyboard-shortcut-item-key-height: var(--size-small);
+  --keyboard-shortcut-item-key-background-color: var(
+    --color-background-secondary
+  );
+  --keyboard-shortcut-item-key-border-width: var(--size-unit);
+  --keyboard-shortcut-item-key-border-offset: var(--size-neg-unit);
+  --keyboard-shortcut-item-key-border-color: var(--color-background-quaternary);
+
+  --keyboard-shortcut-item-separator-padding: 0 var(--size-xxxsmall);
+}

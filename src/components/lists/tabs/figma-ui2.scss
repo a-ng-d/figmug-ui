@@ -1,26 +1,33 @@
 :root[data-theme='figma-ui2'] {
-  --tab-padding: var(--size-xxxsmall) var(--size-xxsmall);
-  --tab-gap: 0;
-  --tab-radius: 0;
-  --tab-background-color: var(--figma-color-bg);
-  --tab-text-color: var(--figma-color-text-secondary);
-  --tab-text-weight: var(--font-weight-medium);
+  --tabs-gap: 0;
+  --tabs-radius: 0;
+  --tabs-padding: 0;
+  --tabs-background-color: var(--figma-color-bg);
 
-  --tab-notification-inset: var(--size-unit) var(--size-unit) auto auto;
-  --tab-notification-width: var(--size-xxxsmall);
-  --tab-notification-height: var(--size-xxxsmall);
-  --tab-notification-radius: var(--border-radius-full);
-  --tab-notification-background-color: var(--figma-color-icon);
-  --tab-notification-border-color: transparent;
-  --tab-notification-border-width: 0;
-  --tab-notification-border-offset: 0;
+  --tabs-tab-padding: var(--size-xxxsmall) var(--size-xxsmall);
+  --tabs-tab-radius: 0;
+  --tabs-tab-background-color: var(--figma-color-bg);
+  --tabs-tab-text-size: var(--font-size-xsmall);
+  --tabs-tab-text-color: var(--figma-color-text-secondary);
+  --tabs-tab-text-weight: var(--font-weight-medium);
+  --tabs-tab-text-transform: none;
 
-  --tab-background-color-hover: var(--figma-color-bg);
-  --tab-text-color-hover: var(--figma-color-text);
-  --tab-text-weight-hover: var(--font-weight-medium);
-  --tab-notification-border-color-hover: transparent;
-  --tab-background-color-active: var(--figma-color-bg);
-  --tab-text-color-active: var(--figma-color-text);
-  --tab-text-weight-active: var(--font-weight-bold);
-  --tab-notification-border-color-active: transparent;
+  --tabs-tab-notification-inset: var(--size-unit) var(--size-unit) auto auto;
+  --tabs-tab-notification-width: var(--size-xxxsmall);
+  --tabs-tab-notification-height: var(--size-xxxsmall);
+  --tabs-tab-notification-radius: var(--border-radius-full);
+  --tabs-tab-notification-background-color: var(--figma-color-icon);
+  --tabs-tab-notification-border-color: transparent;
+  --tabs-tab-notification-border-width: 0;
+  --tabs-tab-notification-border-offset: 0;
+
+  --tabs-tab-background-color-hover: var(--figma-color-bg);
+  --tabs-tab-text-color-hover: var(--figma-color-text);
+  --tabs-tab-text-weight-hover: var(--font-weight-medium);
+  --tabs-tab-notification-border-color-hover: transparent;
+
+  --tabs-tab-background-color-active: var(--figma-color-bg);
+  --tabs-tab-text-color-active: var(--figma-color-text);
+  --tabs-tab-text-weight-active: var(--font-weight-bold);
+  --tabs-tab-notification-border-color-active: transparent;
 }

@@ -1,0 +1,26 @@
+:root[data-theme='penpot'] {
+  /* Base */
+  --actions-item-gap: var(--size-xsmall);
+  --actions-item-padding: var(--size-xsmall) var(--size-xsmall)
+    var(--size-xsmall) var(--size-small);
+  --actions-item-border-color: var(--color-background-tertiary);
+  --actions-item-border-width: var(--size-unit);
+  --actions-item-background-color: var(--color-background-primary);
+  --actions-item-border-secondary-width: 0;
+  --actions-item-border-secondary-offset: 0;
+  --actions-item-border-secondary-color: transparent;
+
+  --actions-item-asset-min-width: var(--size-xxxlarge);
+  --actions-item-asset-height: var(--size-xxxlarge);
+
+  --actions-item-content-gap: var(--size-xxsmall);
+  --actions-item-actions-gap: var(--size-xxsmall);
+
+  /* States */
+  --actions-item-background-color-hover: var(--color-background-tertiary);
+
+  --actions-item-background-color-focus: var(--color-accent-primary-muted);
+  --actions-item-border-secondary-width-focus: var(--size-unit);
+  --actions-item-border-secondary-offset-focus: var(--size-neg-unit);
+  --actions-item-border-secondary-color-focus: var(--color-accent-primary);
+}

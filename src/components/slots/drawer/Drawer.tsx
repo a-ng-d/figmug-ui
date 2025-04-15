@@ -81,8 +81,7 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
   setBorder = (
     orientation: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'> | undefined
   ) => {
-    const property =
-      '1px solid var(--figma-color-border)' as React.CSSProperties
+    const property = 'var(--drawer-border)' as React.CSSProperties
     const styles: { [key: string]: React.CSSProperties } = {}
 
     if (!orientation) return styles

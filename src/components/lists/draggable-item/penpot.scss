@@ -1,0 +1,17 @@
+:root[data-theme='penpot'] {
+  --draggable-item-template-rows: var(--size-medium);
+  --draggable-item-template-columns: repeat(76, 1fr);
+  --draggable-item-padding: var(--size-xunit) var(--size-xsmall);
+  --draggable-item-background-color: var(--color-background-primary);
+  --draggable-item-gap: var(--size-xxsmall);
+
+  --draggable-item-ghost-color: var(--color-accent-primary);
+  --draggable-item-ghost-height: var(--size-xunit);
+  --draggable-item-ghost-inset: var(--size-neg-unit);
+
+  --draggable-item-background-color-selected: var(--color-accent-primary-muted);
+  --draggable-item-background-color-pressed: var(--color-accent-primary-muted);
+
+  --draggable-item-param-width-compact: 112px;
+  --draaggagle-item-param-width-square: var(--size-medium);
+}

@@ -1,0 +1,12 @@
+:root[data-theme='penpot'] {
+  --inputs-bar-gap: var(--size-xxsmall);
+  --inputs-bar-width: var(--size-xlarge);
+  --inputs-bar-padding: 0 var(--size-unit);
+  --inputs-bar-margin: 0 var(--size-neg-unit);
+  --inputs-bar-radius: var(--border-radius-med);
+
+  --inputs-bar-border-color: var(--color-accent-primary);
+  --inputs-bar-border-width: var(--size-unit);
+
+  --inputs-bar-input-radius: 0;
+}

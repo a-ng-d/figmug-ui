@@ -1,5 +1,6 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
+@import 'penpot';
 
 .knob {
   display: flex;
@@ -40,7 +41,7 @@
     pointer-events: none;
     --knob-label-background-color: var(--knob-label-background-color-disabled);
     --knob-label-border-color: var(--knob-label-border-color-disabled);
-    --knob-label-text-color: var(--knob-label-border-color-disabled);
+    --knob-label-text-color: var(--knob-label-text-color-disabled);
   }
 }
 

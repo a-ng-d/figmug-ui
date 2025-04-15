@@ -26,8 +26,7 @@ export default class Bar extends React.Component<BarProps> {
   setBorder = (
     orientation: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'> | undefined
   ) => {
-    const property =
-      '1px solid var(--figma-color-border)' as React.CSSProperties
+    const property = 'var(--bar-border)' as React.CSSProperties
     const styles: { [key: string]: React.CSSProperties } = {}
 
     if (!orientation) return styles

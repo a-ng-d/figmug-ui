@@ -44,9 +44,6 @@ export const SingleAction: Story = {
     isInteractive: false,
     action: mock,
   },
-  argTypes: {
-    isInteractive: { control: false },
-  },
 }
 
 export const SeveralActions: Story = {
@@ -82,9 +79,6 @@ export const SeveralActions: Story = {
     })(),
     isInteractive: false,
     action: mock,
-  },
-  argTypes: {
-    isInteractive: { control: false },
   },
 }
 

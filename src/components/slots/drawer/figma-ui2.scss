@@ -1,5 +1,6 @@
 :root[data-theme='figma-ui2'] {
   --drawer-background-color: var(--figma-color-bg);
+  --drawer-border: var(--size-unit) solid var(--figma-color-border);
   --drawer-knob-size: var(--size-xxsmall);
   --drawer-knob-position: var(--size-neg-xxxsmall);
 }
