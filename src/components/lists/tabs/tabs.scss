@@ -13,6 +13,10 @@
   user-select: none;
 
   & .tabs__tab {
+    display: flex;
+    height: var(--tabs-tab-height);
+    align-items: center;
+    gap: var(--tabs-tab-gap);
     position: relative;
     border-radius: var(--tabs-tab-radius);
     background-color: var(--tabs-tab-background-color);
@@ -21,11 +25,20 @@
     font-weight: var(--tabs-tab-text-weight);
     font-size: var(--tabs-tab-text-size);
     text-transform: var(--tabs-tab-text-transform);
+    --icon-width: var(--tabs-tab-icon-width);
+    --icon-height: var(--tabs-tab-icon-height);
+    --icon-picto-color: var(--tabs-tab-icon-color);
+    --icon-letter-color: var(--tabs-tab-icon-color);
+
+    &--with-icon {
+      --tabs-tab-padding: var(--tabs-tab-padding-with-icon);
+    }
 
     &:hover:not(&--active) {
       --tabs-tab-background-color: var(--tabs-tab-background-color-hover);
       --tabs-tab-text-color: var(--tabs-tab-text-color-hover);
       --tabs-tab-text-weight: var(--tabs-tab-text-weight-hover);
+      --tabs-tab-icon-color: var(--tabs-tab-icon-color-hover);
       --tabs-tab-notification-border-color: var(
         --tabs-tab-notification-border-color-hover
       );
@@ -35,6 +48,7 @@
       --tabs-tab-background-color: var(--tabs-tab-background-color-active);
       --tabs-tab-text-color: var(--tabs-tab-text-color-active);
       --tabs-tab-text-weight: var(--tabs-tab-text-weight-active);
+      --tabs-tab-icon-color: var(--tabs-tab-icon-color-active);
       --tabs-tab-notification-border-color: var(
         --tabs-tab-notification-border-color-active
       );
@@ -59,27 +73,32 @@
     --tabs-gap: var(--tabs-gap-vertical);
     --tabs-radius: var(--tabs-radius-vertical);
     --tabs-padding: var(--tabs-padding-vertical);
-    --tabs-background-color: var(--tabs-background-color-alternative);
+    --tabs-background-color: var(--tabs-background-color-vertical);
 
+    --tabs-tab-gap: var(--tabs-tab-gap-alternative);
     --tabs-tab-padding: var(--tabs-tab-padding-alternative);
     --tabs-tab-radius: var(--tabs-tab-radius-alternative);
+    --tabs-tab-height: var(--tabs-tab-height-alternative);
     --tabs-tab-background-color: var(--tabs-tab-background-color-alternative);
     --tabs-tab-text-color: var(--tabs-tab-text-color-alternative);
     --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative);
     --tabs-tab-text-transform: var(--tabs-tab-text-transform-alternative);
+    --tabs-tab-icon-width: var(--tabs-tab-icon-width-alternative);
+    --tabs-tab-icon-height: var(--tabs-tab-icon-width-alternative);
+    --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative);
 
-    --tabs-tab-padding-hover: var(--tabs-tab-padding-alternative-hover);
-    --tabs-tab-radius-hover: var(--tabs-tab-radius-alternative-hover);
+    --tabs-tab-padding-with-icon: var(--tabs-tab-padding-with-icon-alternative);
+  
     --tabs-tab-background-color-hover: var(--tabs-tab-background-color-alternative-hover);
     --tabs-tab-text-color-hover: var(--tabs-tab-text-color-alternative-hover);
     --tabs-tab-text-weight-hover: var(--tabs-tab-text-weight-alternative-hover);
-    --tabs-tab-text-transform-hover: var(--tabs-tab-text-transform-alternative-hover);
+    --tabs-tab-icon-color-hover: var(--tabs-tab-icon-color-alternative-hover);
+    --tabs-tab-notification-border-color-hover: var(--tabs-tab-notification-border-color-alternative-hover);
 
-    --tabs-tab-padding-active: var(--tabs-tab-padding-alternative-active);
-    --tabs-tab-radius-active: var(--tabs-tab-radius-alternative-active);
     --tabs-tab-background-color-active: var(--tabs-tab-background-color-alternative-active);
     --tabs-tab-text-color-active: var(--tabs-tab-text-color-alternative-active);
     --tabs-tab-text-weight-active: var(--tabs-tab-text-weight-alternative-active);
-    --tabs-tab-text-transform-active: var(--tabs-tab-text-transform-alternative-active);
+    --tabs-tab-icon-color-active: var(--tabs-tab-icon-color-alternative-active);
+    --tabs-tab-notification-border-color-active: var(--tabs-tab-notification-border-color-alternative-active);
   }
 }

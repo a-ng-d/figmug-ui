@@ -9,21 +9,35 @@
   --tabs-padding-vertical: var(--size-xxsmall) 0;
   --tabs-background-color-vertical: var(--color-background-primary);
 
-  --tabs-tab-padding: var(--size-xxsmall) 12px;
+  --tabs-tab-gap: var(--size-xxsmall);
+  --tabs-tab-padding: 0 12px;
   --tabs-tab-radius: var(--border-radius-med);
+  --tabs-tab-height: var(--size-medium);
   --tabs-tab-background-color: var(--color-background-secondary);
   --tabs-tab-text-size: var(--font-size-small);
   --tabs-tab-text-color: var(--color-foreground-secondary);
   --tabs-tab-text-weight: var(--font-weight-medium);
   --tabs-tab-text-transform: uppercase;
+  --tabs-tab-icon-width: var(--size-xsmall);
+  --tabs-tab-icon-height: var(--size-xsmall);
+  --tabs-tab-icon-color: var(--color-foreground-secondary);
 
-  --tabs-tab-padding-alternative: var(--size-xxsmall) 12px;
+  --tabs-tab-padding-with-icon: 0 12px;
+
+  --tabs-tab-gap-alternative: var(--size-xxsmall);
+  --tabs-tab-padding-alternative: 0 12px;
   --tabs-tab-radius-alternative: 0;
+  --tabs-tab-height-alternative: var(--size-medium);
   --tabs-tab-background-color-alternative: var(--color-background-primary);
   --tabs-tab-text-size-alternative: var(--font-size-small);
   --tabs-tab-text-color-alternative: var(--color-foreground-secondary);
   --tabs-tab-text-weight-alternative: var(--font-weight-medium);
   --tabs-tab-text-transform-alternative: uppercase;
+  --tabs-tab-icon-width-alternative: var(--size-xsmall);
+  --tabs-tab-icon-height-alternative: var(--size-xsmall);
+  --tabs-tab-icon-color-alternative: var(--color-foreground-secondary);
+
+  --tabs-tab-padding-with-icon-alternative: 0 12px;
 
   --tabs-tab-notification-inset: var(--size-xunit) var(--size-xunit) auto auto;
   --tabs-tab-notification-width: var(--size-xxsmall);
@@ -37,16 +51,19 @@
   --tabs-tab-background-color-hover: var(--color-background-secondary);
   --tabs-tab-text-color-hover: var(--color-foreground-primary);
   --tabs-tab-text-weight-hover: var(--font-weight-medium);
+  --tabs-tab-icon-color-hover: var(--color-foreground-primary);
   --tabs-tab-notification-border-color-hover: var(--color-background-secondary);
 
   --tabs-tab-background-color-alternative-hover: var(--color-background-secondary);
   --tabs-tab-text-color-alternative-hover: var(--color-foreground-primary);
   --tabs-tab-text-weight-alternative-hover: var(--font-weight-medium);
+  --tabs-tab-icon-color-alternative-hover: var(--color-foreground-primary);
   --tabs-tab-notification-border-color-alternative-hover: var(--color-background-secondary);
 
   --tabs-tab-background-color-active: var(--color-background-quaternary);
   --tabs-tab-text-color-active: var(--color-accent-primary);
   --tabs-tab-text-weight-active: var(--font-weight-medium);
+  --tabs-tab-icon-color-active: var(--color-accent-primary);
   --tabs-tab-notification-border-color-active: var(
     --color-background-quaternary
   );
@@ -54,6 +71,7 @@
   --tabs-tab-background-color-alternative-active: var(--color-background-quaternary);
   --tabs-tab-text-color-alternative-active: var(--color-accent-primary);
   --tabs-tab-text-weight-alternative-active: var(--font-weight-medium);
+  --tabs-tab-icon-color-alternative-active: var(--color-accent-primary);
   --tabs-tab-notification-border-color-alternative-active: var(
     --color-background-quaternary
   );

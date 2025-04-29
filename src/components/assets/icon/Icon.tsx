@@ -9,25 +9,15 @@ export interface IconProps {
   iconName?: IconList
   iconLetter?: string
   customClassName?: string
-  customSize?: number
 }
 
 export const Icon = (props: IconProps) => {
-  const {
-    type = 'PICTO',
-    iconName,
-    iconLetter,
-    customClassName,
-    customSize = 32,
-  } = props
+  const { type = 'PICTO', iconName, iconLetter, customClassName } = props
 
   const Letter = () => {
     return (
       <div
         className="icon-box icon-box--letter"
-        style={{
-          width: `${customSize}px`,
-        }}
         role="icon"
       >
         <span className={doClassnames([texts.type, customClassName])}>

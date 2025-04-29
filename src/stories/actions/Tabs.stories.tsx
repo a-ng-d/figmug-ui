@@ -76,11 +76,19 @@ export const FiveTabs: Story = {
       {
         label: 'Section 1',
         id: 'SECTION_1',
+        icon: {
+          type: 'PICTO',
+          name: 'adjust',
+        },
         isUpdated: false,
       },
       {
         label: 'Section 2',
         id: 'SECTION_2',
+        icon: {
+          type: 'LETTER',
+          name: 'A',
+        },
         isUpdated: true,
       },
       {
