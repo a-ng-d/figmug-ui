@@ -15,8 +15,8 @@
   & .tabs__tab {
     display: flex;
     position: relative;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: var(--tabs-tab-gap);
     border-radius: var(--tabs-tab-radius);
     background-color: var(--tabs-tab-background-color);
@@ -28,11 +28,11 @@
     --icon-letter-color: var(--tabs-tab-icon-color);
 
     & span {
+      pointer-events: none;
       color: var(--tabs-tab-text-color);
       font-weight: var(--tabs-tab-text-weight);
       font-size: var(--tabs-tab-text-size);
       text-transform: var(--tabs-tab-text-transform);
-      pointer-events: none;
     }
 
     &--with-icon {
