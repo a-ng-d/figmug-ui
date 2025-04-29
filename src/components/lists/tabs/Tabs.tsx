@@ -15,7 +15,7 @@ export interface TabsProps {
     isUpdated: boolean
   }>
   active: string
-  direction: 'HORIZONTAL' | 'VERTICAL'
+  direction?: 'HORIZONTAL' | 'VERTICAL'
   action: React.MouseEventHandler
 }
 
