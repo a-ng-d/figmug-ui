@@ -16,11 +16,18 @@ export interface TabsProps {
   }>
   active: string
   direction?: 'HORIZONTAL' | 'VERTICAL'
+  isFlex?: boolean
   action: React.MouseEventHandler
 }
 
 const Tabs = (props: TabsProps) => {
-  const { tabs, active, direction = 'HORIZONTAL', action } = props
+  const {
+    tabs,
+    active,
+    direction = 'HORIZONTAL',
+    isFlex = false,
+    action,
+  } = props
 
   return (
     <div
@@ -35,11 +42,10 @@ const Tabs = (props: TabsProps) => {
           key={tab.label.toLowerCase()}
           className={doClassnames([
             'tabs__tab',
-            texts.type,
             active === tab.id && 'tabs__tab--active',
             tab.isUpdated && 'tabs__tab--new',
-            texts['type--truncated'],
             tab.icon !== undefined && 'tabs__tab--with-icon',
+            isFlex && 'tabs__tab--flex',
           ])}
           data-feature={tab.id}
           tabIndex={-1}
@@ -54,7 +60,11 @@ const Tabs = (props: TabsProps) => {
               }
             />
           )}
-          {tab.label}
+          <span
+            className={doClassnames([texts.type, texts['type--truncated']])}
+          >
+            {tab.label}
+          </span>
         </div>
       ))}
     </div>

@@ -16,22 +16,32 @@
     display: flex;
     position: relative;
     align-items: center;
+    justify-content: center;
     gap: var(--tabs-tab-gap);
     border-radius: var(--tabs-tab-radius);
     background-color: var(--tabs-tab-background-color);
     padding: var(--tabs-tab-padding);
     height: var(--tabs-tab-height);
-    color: var(--tabs-tab-text-color);
-    font-weight: var(--tabs-tab-text-weight);
-    font-size: var(--tabs-tab-text-size);
-    text-transform: var(--tabs-tab-text-transform);
     --icon-width: var(--tabs-tab-icon-width);
     --icon-height: var(--tabs-tab-icon-height);
     --icon-picto-color: var(--tabs-tab-icon-color);
     --icon-letter-color: var(--tabs-tab-icon-color);
 
+    & span {
+      color: var(--tabs-tab-text-color);
+      font-weight: var(--tabs-tab-text-weight);
+      font-size: var(--tabs-tab-text-size);
+      text-transform: var(--tabs-tab-text-transform);
+      pointer-events: none;
+    }
+
     &--with-icon {
       --tabs-tab-padding: var(--tabs-tab-padding-with-icon);
+    }
+
+    &--flex {
+      flex: 1;
+      overflow: hidden;
     }
 
     &:hover:not(&--active) {
@@ -110,5 +120,9 @@
     --tabs-tab-notification-border-color-active: var(
       --tabs-tab-notification-border-color-alternative-active
     );
+
+    & .tabs__tab {
+      justify-content: start;
+    }
   }
 }
