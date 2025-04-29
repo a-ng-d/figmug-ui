@@ -54,11 +54,15 @@
   --tabs-tab-icon-color-hover: var(--color-foreground-primary);
   --tabs-tab-notification-border-color-hover: var(--color-background-secondary);
 
-  --tabs-tab-background-color-alternative-hover: var(--color-background-secondary);
+  --tabs-tab-background-color-alternative-hover: var(
+    --color-background-secondary
+  );
   --tabs-tab-text-color-alternative-hover: var(--color-foreground-primary);
   --tabs-tab-text-weight-alternative-hover: var(--font-weight-medium);
   --tabs-tab-icon-color-alternative-hover: var(--color-foreground-primary);
-  --tabs-tab-notification-border-color-alternative-hover: var(--color-background-secondary);
+  --tabs-tab-notification-border-color-alternative-hover: var(
+    --color-background-secondary
+  );
 
   --tabs-tab-background-color-active: var(--color-background-quaternary);
   --tabs-tab-text-color-active: var(--color-accent-primary);
@@ -68,7 +72,9 @@
     --color-background-quaternary
   );
 
-  --tabs-tab-background-color-alternative-active: var(--color-background-quaternary);
+  --tabs-tab-background-color-alternative-active: var(
+    --color-background-quaternary
+  );
   --tabs-tab-text-color-alternative-active: var(--color-accent-primary);
   --tabs-tab-text-weight-alternative-active: var(--font-weight-medium);
   --tabs-tab-icon-color-alternative-active: var(--color-accent-primary);
