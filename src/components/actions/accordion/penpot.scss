@@ -1,6 +1,6 @@
 :root[data-theme='penpot'] {
   --accordion-padding: var(--size-xxxsmall) 0;
-  --accordion-border: var(--size-unit) solid var(--color-background-quaternary);
+  --accordion-border: 0 solid transparent;
 
   --accordion-row-gap: var(--size-xsmall);
   --accordion-row-height: var(--size-medium);
