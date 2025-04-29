@@ -6,7 +6,7 @@
 
   --tabs-gap-vertical: var(--size-xxxsmall);
   --tabs-radius-vertical: 0;
-  --tabs-padding-vertical: 0;
+  --tabs-padding-vertical: var(--size-xxsmall) 0;
   --tabs-background-color-vertical: var(--figma-color-bg);
 
   --tabs-tab-gap: 0;
