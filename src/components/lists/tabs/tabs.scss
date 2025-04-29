@@ -53,4 +53,33 @@
     height: var(--tabs-tab-notification-height);
     content: '';
   }
+
+  &--vertical {
+    flex-direction: column;
+    --tabs-gap: var(--tabs-gap-vertical);
+    --tabs-radius: var(--tabs-radius-vertical);
+    --tabs-padding: var(--tabs-padding-vertical);
+    --tabs-background-color: var(--tabs-background-color-alternative);
+
+    --tabs-tab-padding: var(--tabs-tab-padding-alternative);
+    --tabs-tab-radius: var(--tabs-tab-radius-alternative);
+    --tabs-tab-background-color: var(--tabs-tab-background-color-alternative);
+    --tabs-tab-text-color: var(--tabs-tab-text-color-alternative);
+    --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative);
+    --tabs-tab-text-transform: var(--tabs-tab-text-transform-alternative);
+
+    --tabs-tab-padding-hover: var(--tabs-tab-padding-alternative-hover);
+    --tabs-tab-radius-hover: var(--tabs-tab-radius-alternative-hover);
+    --tabs-tab-background-color-hover: var(--tabs-tab-background-color-alternative-hover);
+    --tabs-tab-text-color-hover: var(--tabs-tab-text-color-alternative-hover);
+    --tabs-tab-text-weight-hover: var(--tabs-tab-text-weight-alternative-hover);
+    --tabs-tab-text-transform-hover: var(--tabs-tab-text-transform-alternative-hover);
+
+    --tabs-tab-padding-active: var(--tabs-tab-padding-alternative-active);
+    --tabs-tab-radius-active: var(--tabs-tab-radius-alternative-active);
+    --tabs-tab-background-color-active: var(--tabs-tab-background-color-alternative-active);
+    --tabs-tab-text-color-active: var(--tabs-tab-text-color-alternative-active);
+    --tabs-tab-text-weight-active: var(--tabs-tab-text-weight-alternative-active);
+    --tabs-tab-text-transform-active: var(--tabs-tab-text-transform-alternative-active);
+  }
 }

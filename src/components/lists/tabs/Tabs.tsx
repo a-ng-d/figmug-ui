@@ -9,14 +9,20 @@ export interface TabsProps {
     isUpdated: boolean
   }>
   active: string
+  direction: 'HORIZONTAL' | 'VERTICAL'
   action: React.MouseEventHandler
 }
 
 const Tabs = (props: TabsProps) => {
-  const { tabs, active, action } = props
+  const { tabs, active, direction = 'HORIZONTAL', action } = props
 
   return (
-    <div className="tabs">
+    <div
+      className={doClassnames([
+        'tabs',
+        direction === 'VERTICAL' && 'tabs--vertical',
+      ])}
+    >
       {tabs.map((tab) => (
         <div
           role="navigation"

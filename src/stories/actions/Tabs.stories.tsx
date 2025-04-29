@@ -39,6 +39,7 @@ export const ThreeTabs: Story = {
       },
     ],
     active: 'SECTION_1',
+    direction: 'HORIZONTAL',
     action: fn(),
   },
   argTypes: {
@@ -99,6 +100,7 @@ export const FiveTabs: Story = {
       },
     ],
     active: 'SECTION_1',
+    direction: 'HORIZONTAL',
     action: fn(),
   },
   argTypes: {

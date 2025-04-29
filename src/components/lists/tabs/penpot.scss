@@ -1,8 +1,13 @@
 :root[data-theme='penpot'] {
-  --tab-gap: 0;
+  --tabs-gap: 0;
   --tabs-radius: var(--border-radius-xlarge);
   --tabs-padding: var(--size-xunit);
   --tabs-background-color: var(--color-background-secondary);
+
+  --tabs-gap-vertical: 0;
+  --tabs-radius-vertical: 0;
+  --tabs-padding-vertical: var(--size-xxsmall) 0;
+  --tabs-background-color-vertical: var(--color-background-primary);
 
   --tabs-tab-padding: var(--size-xxsmall) 12px;
   --tabs-tab-radius: var(--border-radius-med);
@@ -11,6 +16,14 @@
   --tabs-tab-text-color: var(--color-foreground-secondary);
   --tabs-tab-text-weight: var(--font-weight-medium);
   --tabs-tab-text-transform: uppercase;
+
+  --tabs-tab-padding-alternative: var(--size-xxsmall) 12px;
+  --tabs-tab-radius-alternative: 0;
+  --tabs-tab-background-color-alternative: var(--color-background-primary);
+  --tabs-tab-text-size-alternative: var(--font-size-small);
+  --tabs-tab-text-color-alternative: var(--color-foreground-secondary);
+  --tabs-tab-text-weight-alternative: var(--font-weight-medium);
+  --tabs-tab-text-transform-alternative: uppercase;
 
   --tabs-tab-notification-inset: var(--size-xunit) var(--size-xunit) auto auto;
   --tabs-tab-notification-width: var(--size-xxsmall);
@@ -26,10 +39,22 @@
   --tabs-tab-text-weight-hover: var(--font-weight-medium);
   --tabs-tab-notification-border-color-hover: var(--color-background-secondary);
 
+  --tabs-tab-background-color-alternative-hover: var(--color-background-secondary);
+  --tabs-tab-text-color-alternative-hover: var(--color-foreground-primary);
+  --tabs-tab-text-weight-alternative-hover: var(--font-weight-medium);
+  --tabs-tab-notification-border-color-alternative-hover: var(--color-background-secondary);
+
   --tabs-tab-background-color-active: var(--color-background-quaternary);
   --tabs-tab-text-color-active: var(--color-accent-primary);
   --tabs-tab-text-weight-active: var(--font-weight-medium);
   --tabs-tab-notification-border-color-active: var(
+    --color-background-quaternary
+  );
+
+  --tabs-tab-background-color-alternative-active: var(--color-background-quaternary);
+  --tabs-tab-text-color-alternative-active: var(--color-accent-primary);
+  --tabs-tab-text-weight-alternative-active: var(--font-weight-medium);
+  --tabs-tab-notification-border-color-alternative-active: var(
     --color-background-quaternary
   );
 }

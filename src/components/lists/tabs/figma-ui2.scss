@@ -4,6 +4,11 @@
   --tabs-padding: 0;
   --tabs-background-color: var(--figma-color-bg);
 
+  --tabs-gap-vertical: var(--size-xxxsmall);
+  --tabs-radius-vertical: 0;
+  --tabs-padding-vertical: 0;
+  --tabs-background-color-vertical: var(--figma-color-bg);
+
   --tabs-tab-padding: var(--size-xxxsmall) var(--size-xxsmall);
   --tabs-tab-radius: 0;
   --tabs-tab-background-color: var(--figma-color-bg);
@@ -11,6 +16,14 @@
   --tabs-tab-text-color: var(--figma-color-text-secondary);
   --tabs-tab-text-weight: var(--font-weight-medium);
   --tabs-tab-text-transform: none;
+
+  --tabs-tab-padding-alternative: var(--size-xxxsmall) var(--size-xxsmall);
+  --tabs-tab-radius-alternative: 0;
+  --tabs-tab-background-color-alternative: var(--figma-color-bg);
+  --tabs-tab-text-size-alternative: var(--font-size-xsmall);
+  --tabs-tab-text-color-alternative: var(--figma-color-text-secondary);
+  --tabs-tab-text-weight-alternative: var(--font-weight-medium);
+  --tabs-tab-text-transform-alternative: none;
 
   --tabs-tab-notification-inset: var(--size-unit) var(--size-unit) auto auto;
   --tabs-tab-notification-width: var(--size-xxxsmall);
@@ -26,8 +39,18 @@
   --tabs-tab-text-weight-hover: var(--font-weight-medium);
   --tabs-tab-notification-border-color-hover: transparent;
 
+  --tabs-tab-background-color-alternative-hover: var(--figma-color-bg);
+  --tabs-tab-text-color-alternative-hover: var(--figma-color-text);
+  --tabs-tab-text-weight-alternative-hover: var(--font-weight-medium);
+  --tabs-tab-notification-border-color-alternative-hover: transparent;
+
   --tabs-tab-background-color-active: var(--figma-color-bg);
   --tabs-tab-text-color-active: var(--figma-color-text);
   --tabs-tab-text-weight-active: var(--font-weight-bold);
   --tabs-tab-notification-border-color-active: transparent;
+
+  --tabs-tab-background-color-alternative-active: var(--figma-color-bg);
+  --tabs-tab-text-color-alternative-active: var(--figma-color-text);
+  --tabs-tab-text-weight-alternative-active: var(--font-weight-bold);
+  --tabs-tab-notification-border-color-alternative-active: transparent;
 }
