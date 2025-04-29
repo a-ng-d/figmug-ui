@@ -6,7 +6,13 @@ export type LayoutProps = {
   id?: string
   column: Array<{
     node?: React.ReactElement
-    typeModifier?: 'LIST' | 'DISTRIBUTED' | 'CENTERED' | 'BLANK' | 'DRAWER'
+    typeModifier?:
+      | 'LIST'
+      | 'DISTRIBUTED'
+      | 'CENTERED'
+      | 'BLANK'
+      | 'DRAWER'
+      | 'FIXED'
     fixedWidth?: string
     drawerOptions?: DrawerProps
   }>
@@ -43,6 +49,7 @@ const Layout = (props: LayoutProps) => {
                   'layout__block--distributed',
                 item.typeModifier === 'CENTERED' && 'layout__block--centered',
                 item.typeModifier === 'BLANK' && 'layout__block--blank',
+                item.typeModifier === 'FIXED' && 'layout__block--fixed',
               ])}
               style={{
                 width:

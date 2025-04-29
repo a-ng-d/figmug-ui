@@ -47,6 +47,10 @@
     &--blank {
       padding: 0;
     }
+
+    &--fixed {
+      flex: none;
+    }
   }
 
   & > div + div {
