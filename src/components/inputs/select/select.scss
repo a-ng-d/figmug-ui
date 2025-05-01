@@ -165,6 +165,7 @@
       width: var(--select-toggle-width);
       height: var(--select-toggle-height);
       content: '';
+      flex: none
     }
 
     &:after {
@@ -179,6 +180,7 @@
       width: var(--select-toggle-knob-width);
       height: var(--select-toggle-knob-height);
       content: '';
+      flex: none;
     }
   }
 
@@ -189,6 +191,7 @@
     padding: 0;
     width: var(--select-toggle-width);
     height: var(--select-toggle-height);
+    flex: none;
 
     &:checked + .switch__label:before {
       --select-toggle-background-color: var(

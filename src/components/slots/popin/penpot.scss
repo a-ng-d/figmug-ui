@@ -3,7 +3,7 @@
   --popin-shadow: none;
   --popin-shadow-panel: none;
   --popin-radius: var(--border-radius-xxlarge);
-  --popin-width-panel: 248px;
+  --popin-width-panel: 400px;
   --popin-min-width: 460px;
   --popin-max-width: 576px;
   --popin-min-height: 136px;
@@ -11,7 +11,7 @@
   --popin-text-color: var(--color-foreground-primary);
   --popin-border-color: var(--color-background-quaternary);
   --popin-border-width: var(--size-xunit);
-  --popin-border-offset: var(--size-neg-xunit);
+  --popin-border-offset: 0;
 
   --popin-header-height: var(--size-large);
   --popin-header-gap: var(--size-xxsmall);
