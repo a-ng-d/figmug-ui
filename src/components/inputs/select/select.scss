@@ -154,6 +154,7 @@
 
     &:before {
       display: block;
+      flex: none;
       transition: background-color 0 0.2s;
       margin: var(--select-toggle-margin);
       outline: var(--select-toggle-border-width-secondary) solid
@@ -165,7 +166,6 @@
       width: var(--select-toggle-width);
       height: var(--select-toggle-height);
       content: '';
-      flex: none
     }
 
     &:after {
@@ -173,6 +173,7 @@
       position: absolute;
       top: 50%;
       left: var(--select-toggle-knob-left);
+      flex: none;
       transform: var(--select-toggle-knob-transform);
       transition: transform 0.2s;
       border-radius: var(--select-toggle-knob-radius);
@@ -180,18 +181,17 @@
       width: var(--select-toggle-knob-width);
       height: var(--select-toggle-knob-height);
       content: '';
-      flex: none;
     }
   }
 
   &__toggle {
+    flex: none;
     opacity: 0;
     margin: 0;
     outline: none;
     padding: 0;
     width: var(--select-toggle-width);
     height: var(--select-toggle-height);
-    flex: none;
 
     &:checked + .switch__label:before {
       --select-toggle-background-color: var(
