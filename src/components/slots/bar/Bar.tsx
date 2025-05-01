@@ -67,9 +67,7 @@ export default class Bar extends React.Component<BarProps> {
           padding: padding,
         }}
       >
-        {leftPartSlot !== undefined && (
-          <div className="bar__left">{leftPartSlot}</div>
-        )}
+        <div className="bar__left">{leftPartSlot}</div>
         {soloPartSlot !== undefined && (
           <div
             className={doClassnames([
@@ -80,9 +78,7 @@ export default class Bar extends React.Component<BarProps> {
             {soloPartSlot}
           </div>
         )}
-        {rightPartSlot !== undefined && (
-          <div className="bar__right">{rightPartSlot}</div>
-        )}
+        <div className="bar__right">{rightPartSlot}</div>
       </div>
     )
   }
