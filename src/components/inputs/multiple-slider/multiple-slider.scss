@@ -1,0 +1,28 @@
+@import 'figma-ui2';
+@import 'figma-ui3';
+@import 'penpot';
+
+.slider {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: var(--multiple-slider-margin-top);
+  padding: var(--multiple-slider-padding);
+
+  .slider__range {
+    position: relative;
+    flex: 1 1 auto;
+    box-shadow: inset 0 0 0 var(--multiple-slider-border-width)
+      var(--multiple-slider-border-color);
+    border-radius: var(--multiple-slider-radius);
+    height: var(--multiple-slider-height);
+
+    &--add {
+      cursor: copy;
+    }
+
+    &--not-allowed {
+      cursor: not-allowed;
+    }
+  }
+}

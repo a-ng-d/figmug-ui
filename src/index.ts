@@ -28,6 +28,7 @@ export { default as Dropzone } from '@components/inputs/dropzone/Dropzone'
 export { default as Input } from '@components/inputs/input/Input'
 export { default as InputsBar } from '@components/inputs/inputs-bar/InputsBar'
 export { default as Select } from '@components/inputs/select/Select'
+export { default as MultipleSlider } from '@components/inputs/multiple-slider/MultipleSlider'
 export { default as SimpleSlider } from '@components/inputs/simple-slider/SimpleSlider'
 
 // Lists

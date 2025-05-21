@@ -93,8 +93,6 @@ const preview: Preview = {
         else if (currentTheme.includes('figma') && background === '#2c2c2c')
           mode = 'figma-dark'
 
-        console.log('Current theme:', context)
-
         document.documentElement.setAttribute('data-mode', mode)
       }, [context.globals.backgrounds])
 

@@ -1,0 +1,12 @@
+export type Easing =
+  | 'LINEAR'
+  | 'SLOW_EASE_IN'
+  | 'SLOW_EASE_OUT'
+  | 'SLOW_EASE_IN_OUT'
+  | 'EASE_IN'
+  | 'EASE_OUT'
+  | 'EASE_IN_OUT'
+  | 'FAST_EASE_IN'
+  | 'FAST_EASE_OUT'
+  | 'FAST_EASE_IN_OUT'
+  | 'NONE'
