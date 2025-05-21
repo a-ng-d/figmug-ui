@@ -1,8 +1,8 @@
 :root[data-theme='penpot'] {
   /* Base */
   --knob-min-width: var(--size-medium);
-  --knob-height: 56px;
-  --knob-top: 0;
+  --knob-height: 48px;
+  --knob-top: var(--size-neg-xxxsmall);
 
   --knob-label-height: 20px;
   --knob-label-padding: var(--size-xunit) var(--size-xxxsmall);
