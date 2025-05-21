@@ -59,6 +59,9 @@ export { default as ColorChip } from '@components/tags/color-chip/ColorChip'
 // Types
 export type { HexModel } from '@tps/color.types'
 export type { RgbModel } from '@tps/color.types'
+export type { HslModel } from '@tps/color.types'
+export type { Channel } from '@tps/color.types'
+export type { IconList } from '@tps/icon.types'
 export type { ConsentConfiguration } from '@tps/consent.types'
 export type { DropdownOption } from '@tps/list.types'
 
