@@ -3,7 +3,7 @@
   --form-item-padding: var(--size-xunit) 0 var(--size-xunit) var(--size-xxsmall);
   --form-item-text-color: var(--figma-color-text);
   --form-item-label-width: 96px;
-  --form-item-helper-padding: 0;
+  --form-item-helper-padding: 0 var(--size-xxxsmall);
 
   --form-item-text-color-disabled: var(--figma-color-text-disabled);
   --form-item-icon-color-disabled: var(--figma-color-icon-disabled);
