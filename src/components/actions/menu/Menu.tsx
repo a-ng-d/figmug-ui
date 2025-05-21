@@ -142,7 +142,38 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
     } = this.props
     const { isMenuOpen } = this.state
 
-    if (options.every((option) => option.isActive === false)) return null
+    const activeOptions = options.filter((option) => option.isActive !== false)
+
+    if (activeOptions.length === 0) return null
+    if (activeOptions.length === 1) {
+      const option = activeOptions[0]
+      return (
+        <Button
+          type={type === 'ICON' ? 'icon' : 'primary'}
+          label={type === 'ICON' ? undefined : option.label}
+          icon={type === 'ICON' ? icon : undefined}
+          customIcon={type === 'ICON' ? customIcon : undefined}
+          helper={
+            type === 'ICON' && option.label
+              ? {
+                  label: option.label,
+                }
+              : undefined
+          }
+          isLoading={state === 'LOADING'}
+          isDisabled={state === 'DISABLED' || isBlocked}
+          isNew={isNew}
+          action={
+            !(state === 'DISABLED' || isBlocked)
+              ? (e: React.MouseEvent<Element> | React.KeyboardEvent<Element>) =>
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  option.action?.(e as any)
+              : undefined
+          }
+        />
+      )
+    }
+
     return (
       <div
         id={id}
@@ -159,7 +190,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
             icon={icon === undefined ? undefined : icon}
             customIcon={customIcon === undefined ? undefined : customIcon}
             state={isMenuOpen ? 'selected' : undefined}
-            helper={helper !== undefined ? helper : undefined}
+            helper={helper === undefined ? undefined : helper}
             isLoading={state === 'LOADING'}
             isDisabled={state === 'DISABLED' || isBlocked}
             isNew={isNew}
