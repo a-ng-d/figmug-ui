@@ -21,6 +21,7 @@ export { default as Consent } from '@components/dialogs/consent/Consent'
 export { default as Dialog } from '@components/dialogs/dialog/Dialog'
 export { default as Message } from '@components/dialogs/message/Message'
 export { default as SemanticMessage } from '@components/dialogs/semantic-message/SemanticMessage'
+export { default as Notification } from '@components/dialogs/notification/Notification'
 
 // Inputs
 export { default as Dropdown } from '@components/inputs/dropdown/Dropdown'
