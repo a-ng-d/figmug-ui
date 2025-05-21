@@ -49,7 +49,7 @@ export default class Dropzone extends React.Component<
     super(props)
     this.state = {
       status: 'READY',
-      isLoading: this.props.isLoading || false,
+      isLoading: props.isLoading || false,
       isDraggedOver: false,
       blackList: [],
     }
