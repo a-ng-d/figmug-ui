@@ -54,7 +54,7 @@ const preview: Preview = {
       values: [
         {
           name: 'Figma Light',
-          value: '#fffff',
+          value: '#ffffff',
         },
         {
           name: 'Figma Dark',
