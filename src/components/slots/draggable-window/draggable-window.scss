@@ -15,6 +15,7 @@
   max-width: 100%;
 
   &__header {
+    --bar-border: var(--draggable-window-header-border);
     cursor: move;
 
     .section-title {
