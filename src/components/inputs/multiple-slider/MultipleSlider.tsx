@@ -270,13 +270,16 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
 
     const results = shiftRightStop(scale, knob, isMeta, isCtrl, min, max)
 
-    const knobId = knob.dataset.id
-
     onChange('SHIFTED', results)
 
     requestAnimationFrame(() => {
-      const updatedKnob = document.querySelector(`[data-id="${knobId}"]`)
-      if (updatedKnob instanceof HTMLElement) updatedKnob.focus()
+      const sliderRange = knob.closest('.slider__range')
+      if (sliderRange) {
+        const updatedKnob = sliderRange.querySelector(
+          `[data-id="${knob.dataset.id}"]`
+        )
+        if (updatedKnob instanceof HTMLElement) updatedKnob.focus()
+      }
     })
   }
 
@@ -286,13 +289,16 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
 
     const results = shiftLeftStop(scale, knob, isMeta, isCtrl, min, max)
 
-    const knobId = knob.dataset.id
-
     onChange('SHIFTED', results)
 
     requestAnimationFrame(() => {
-      const updatedKnob = document.querySelector(`[data-id="${knobId}"]`)
-      if (updatedKnob instanceof HTMLElement) updatedKnob.focus()
+      const sliderRange = knob.closest('.slider__range')
+      if (sliderRange) {
+        const updatedKnob = sliderRange.querySelector(
+          `[data-id="${knob.dataset.id}"]`
+        )
+        if (updatedKnob instanceof HTMLElement) updatedKnob.focus()
+      }
     })
   }
 
