@@ -4,6 +4,7 @@ import type { IconList } from '@tps/icon.types'
 import Button from '@components/actions/button/Button'
 import Icon from '@components/assets/icon/Icon'
 import Chip from '@components/tags/chip/Chip'
+import Tooltip from '@components/tags/tooltip/Tooltip'
 import './input.scss'
 
 export interface InputProps {
@@ -18,6 +19,11 @@ export interface InputProps {
   min?: string
   max?: string
   step?: string
+  helper?: {
+    label: string
+    pin?: 'TOP' | 'BOTTOM'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+  }
   preview?: {
     image: string
     text: string
@@ -44,6 +50,7 @@ export interface InputProps {
 
 export interface InputStates {
   inputValue: string
+  isTooltipVisible: boolean
 }
 
 export default class Input extends React.Component<InputProps, InputStates> {
@@ -70,6 +77,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
     super(props)
     this.state = {
       inputValue: props.value,
+      isTooltipVisible: false,
     }
     this.startValue = props.value
     this.inputRef = React.createRef()
@@ -296,9 +304,10 @@ export default class Input extends React.Component<InputProps, InputStates> {
 
   // Templates
   Color = () => {
-    const { id, preview, feature, isBlocked, isDisabled, isNew } = this.props
+    const { id, preview, feature, helper, isBlocked, isDisabled, isNew } =
+      this.props
 
-    const { inputValue } = this.state
+    const { inputValue, isTooltipVisible } = this.state
 
     return (
       <div
@@ -308,6 +317,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
           'input--with-icon',
           isBlocked && 'input--blocked',
         ])}
+        onMouseEnter={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onMouseLeave={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
       >
         <input
           role="color-picker"
@@ -346,6 +361,14 @@ export default class Input extends React.Component<InputProps, InputStates> {
         {(isBlocked || isNew) && (
           <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
         )}
+        {isTooltipVisible && helper !== undefined && (
+          <Tooltip
+            pin={helper?.pin}
+            type={helper?.type}
+          >
+            {helper?.label}
+          </Tooltip>
+        )}
       </div>
     )
   }
@@ -358,6 +381,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       min,
       max,
       step,
+      helper,
       preview,
       feature,
       isBlocked,
@@ -367,7 +391,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       onSlide,
     } = this.props
 
-    const { inputValue } = this.state
+    const { inputValue, isTooltipVisible } = this.state
 
     return (
       <div
@@ -378,6 +402,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
           isFlex && 'input--flex',
           isBlocked && 'input--blocked',
         ])}
+        onMouseEnter={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onMouseLeave={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
       >
         <div className="input__wrapper">
           {icon !== undefined && (
@@ -441,6 +471,14 @@ export default class Input extends React.Component<InputProps, InputStates> {
         {(isBlocked || isNew) && (
           <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
         )}
+        {isTooltipVisible && helper !== undefined && (
+          <Tooltip
+            pin={helper?.pin}
+            type={helper?.type}
+          >
+            {helper?.label}
+          </Tooltip>
+        )}
       </div>
     )
   }
@@ -452,6 +490,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       state,
       placeholder,
       charactersLimit,
+      helper,
       preview,
       feature,
       isClearable,
@@ -462,7 +501,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       onClear,
     } = this.props
 
-    const { inputValue } = this.state
+    const { inputValue, isTooltipVisible } = this.state
 
     return (
       <div
@@ -472,6 +511,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
           icon !== undefined && 'input--with-icon',
           isBlocked && 'input--blocked',
         ])}
+        onMouseEnter={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onMouseLeave={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
       >
         {icon !== undefined && (
           <div className="input__icon">
@@ -519,6 +564,14 @@ export default class Input extends React.Component<InputProps, InputStates> {
             />
           </div>
         )}
+        {isTooltipVisible && helper !== undefined && (
+          <Tooltip
+            pin={helper?.pin}
+            type={helper?.type}
+          >
+            {helper?.label}
+          </Tooltip>
+        )}
       </div>
     )
   }
@@ -528,6 +581,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       id,
       state,
       placeholder,
+      helper,
       preview,
       feature,
       isBlocked,
@@ -535,7 +589,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       isNew,
     } = this.props
 
-    const { inputValue } = this.state
+    const { inputValue, isTooltipVisible } = this.state
 
     return (
       <div
@@ -544,6 +598,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
           'input--long-text',
           isBlocked && 'input--blocked',
         ])}
+        onMouseEnter={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onMouseLeave={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
       >
         <textarea
           role="long-text"
@@ -568,6 +628,14 @@ export default class Input extends React.Component<InputProps, InputStates> {
         />
         {(isBlocked || isNew) && (
           <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
+        {isTooltipVisible && helper !== undefined && (
+          <Tooltip
+            pin={helper?.pin}
+            type={helper?.type}
+          >
+            {helper?.label}
+          </Tooltip>
         )}
       </div>
     )
