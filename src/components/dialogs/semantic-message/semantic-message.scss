@@ -9,6 +9,7 @@
   border-radius: var(--semantic-message-radius);
   background-color: var(--semantic-message-background-color);
   padding: var(--semantic-message-padding);
+  max-width: var(--semantic-message-max-width);
 
   &--info {
     --semantic-message-background-color: var(
@@ -161,5 +162,8 @@
 
   &__body {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
