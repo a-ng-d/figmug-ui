@@ -80,7 +80,6 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
           })
       },
       Escape: () => {
-        // eslint-disable-next-line @typescript-eslint/no-extra-semi
         ;(e.target as HTMLElement).blur()
         this.setState({ isStopInputOpen: false })
       },
