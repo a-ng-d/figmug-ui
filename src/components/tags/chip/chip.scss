@@ -38,6 +38,14 @@
     text-wrap: nowrap;
   }
 
+  .chip__left-slot {
+    display: flex;
+  }
+
+  .chip__right-slot {
+    display: flex;
+  }
+
   &--inactive {
     --chip-background-color: var(--chip-background-color-inactive);
     --chip-border-color: var(--chip-border-color-inactive);
