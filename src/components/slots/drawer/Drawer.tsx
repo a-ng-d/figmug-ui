@@ -123,38 +123,44 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
   }
 
   onDrag = (e: MouseEvent) => {
-    const { direction, pin, minSize } = this.props
+    const { direction, pin, minSize, maxSize } = this.props
     const { drawerRef } = this
     const { clientX, clientY } = e
 
-    let anchor = 0
-    if (pin === 'TOP')
-      anchor = drawerRef.current
-        ? drawerRef.current.getBoundingClientRect().top
-        : 0
-    if (pin === 'RIGHT')
-      anchor = drawerRef.current
-        ? drawerRef.current.getBoundingClientRect().right
-        : 0
-    if (pin === 'BOTTOM')
-      anchor = drawerRef.current
-        ? drawerRef.current.getBoundingClientRect().bottom
-        : 0
-    if (pin === 'LEFT')
-      anchor = drawerRef.current
-        ? drawerRef.current.getBoundingClientRect().left
-        : 0
+    if (!drawerRef.current) return
 
-    const offset = direction === 'VERTICAL' ? clientY : clientX
+    const rect = drawerRef.current.getBoundingClientRect()
+    const parentRect = drawerRef.current.parentElement?.getBoundingClientRect()
 
-    const delta = Math.abs(anchor - offset)
+    if (!parentRect) return
+
+    let delta = 0
+
+    if (pin === 'TOP') {
+      const maxDelta = parentRect.bottom - rect.top
+      delta = Math.min(clientY - rect.top, maxDelta)
+    } else if (pin === 'BOTTOM') {
+      const maxDelta = rect.bottom - parentRect.top
+      delta = Math.min(rect.bottom - clientY, maxDelta)
+    } else if (pin === 'LEFT') {
+      const maxDelta = parentRect.right - rect.left
+      delta = Math.min(clientX - rect.left, maxDelta)
+    } else if (pin === 'RIGHT') {
+      const maxDelta = rect.right - parentRect.left
+      delta = Math.min(rect.right - clientX, maxDelta)
+    }
+
+    delta = Math.max(0, delta)
+    const minValue = minSize.value ?? 0
+    const maxValue = Math.min(maxSize.value ?? Infinity, delta)
+    delta = Math.max(minValue, Math.min(delta, maxValue))
 
     this.setState({
       drawerSize: {
         value: delta,
         unit: 'PIXEL',
       },
-      isDrawerCollapsed: delta <= (minSize.value ?? 0),
+      isDrawerCollapsed: delta <= minValue,
     })
 
     document.body.style.cursor =
