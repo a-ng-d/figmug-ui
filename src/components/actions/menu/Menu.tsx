@@ -146,8 +146,9 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
       (option) => option.isActive !== false && option.type === 'OPTION'
     )
 
-    if (activeOptions.length === 0) return null
-    if (activeOptions.length === 1) {
+    if (activeOptions.length === 0 && activeOptions[0].children === undefined)
+      return null
+    if (activeOptions.length === 1 && activeOptions[0].children === undefined) {
       const option = activeOptions[0]
       return (
         <Button
