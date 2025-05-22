@@ -142,7 +142,9 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
     } = this.props
     const { isMenuOpen } = this.state
 
-    const activeOptions = options.filter((option) => option.isActive !== false)
+    const activeOptions = options.filter(
+      (option) => option.isActive !== false && option.type === 'OPTION'
+    )
 
     if (activeOptions.length === 0) return null
     if (activeOptions.length === 1) {
