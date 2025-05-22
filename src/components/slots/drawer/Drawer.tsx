@@ -135,6 +135,8 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
     if (!parentRect) return
 
     let delta = 0
+    const parentSize =
+      direction === 'VERTICAL' ? parentRect.height : parentRect.width
 
     if (pin === 'TOP') {
       const maxDelta = parentRect.bottom - rect.top
@@ -151,16 +153,24 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
     }
 
     delta = Math.max(0, delta)
-    const minValue = minSize.value ?? 0
-    const maxValue = Math.min(maxSize.value ?? Infinity, delta)
-    delta = Math.max(minValue, Math.min(delta, maxValue))
+
+    const minPixels =
+      minSize.unit === 'PERCENT'
+        ? ((minSize.value ?? 0) * parentSize) / 100
+        : minSize.value ?? 0
+    const maxPixels =
+      maxSize.unit === 'PERCENT'
+        ? ((maxSize.value ?? 100) * parentSize) / 100
+        : maxSize.value ?? Infinity
+
+    delta = Math.max(minPixels, Math.min(delta, maxPixels))
 
     this.setState({
       drawerSize: {
-        value: delta,
-        unit: 'PIXEL',
+        value: maxSize.unit === 'PERCENT' ? (delta / parentSize) * 100 : delta,
+        unit: maxSize.unit,
       },
-      isDrawerCollapsed: delta <= minValue,
+      isDrawerCollapsed: delta <= minPixels,
     })
 
     document.body.style.cursor =
