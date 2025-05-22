@@ -10,7 +10,6 @@
   background-color: var(--card-background-color);
   padding: var(--card-padding);
   width: var(--card-width);
-  aspect-ratio: var(--card-ratio);
 
   &--fill {
     width: 100%;
@@ -26,7 +25,7 @@
 
   &__asset {
     position: relative;
-    height: var(--card-asset-height);
+    aspect-ratio: var(--card-ratio);
   }
 
   &__actions {
