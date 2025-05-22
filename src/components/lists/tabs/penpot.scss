@@ -10,7 +10,7 @@
   --tabs-background-color-vertical: var(--color-background-primary);
 
   --tabs-tab-gap: var(--size-xxsmall);
-  --tabs-tab-padding: 0 12px;
+  --tabs-tab-padding: 0 var(--size-xmsmall);
   --tabs-tab-radius: var(--border-radius-med);
   --tabs-tab-height: var(--size-medium);
   --tabs-tab-background-color: var(--color-background-secondary);
@@ -22,10 +22,10 @@
   --tabs-tab-icon-height: var(--size-xsmall);
   --tabs-tab-icon-color: var(--color-foreground-secondary);
 
-  --tabs-tab-padding-with-icon: 0 12px;
+  --tabs-tab-padding-with-icon: 0 var(--size-xmsmall);
 
   --tabs-tab-gap-alternative: var(--size-xxsmall);
-  --tabs-tab-padding-alternative: 0 12px;
+  --tabs-tab-padding-alternative: 0 var(--size-xmsmall);
   --tabs-tab-radius-alternative: 0;
   --tabs-tab-height-alternative: var(--size-medium);
   --tabs-tab-background-color-alternative: var(--color-background-primary);
@@ -37,7 +37,7 @@
   --tabs-tab-icon-height-alternative: var(--size-xsmall);
   --tabs-tab-icon-color-alternative: var(--color-foreground-secondary);
 
-  --tabs-tab-padding-with-icon-alternative: 0 12px;
+  --tabs-tab-padding-with-icon-alternative: 0 var(--size-xmsmall);
 
   --tabs-tab-notification-inset: var(--size-xunit) var(--size-xunit) auto auto;
   --tabs-tab-notification-width: var(--size-xxsmall);
