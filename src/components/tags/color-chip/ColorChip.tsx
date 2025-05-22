@@ -5,8 +5,8 @@ import './color-chip.scss'
 
 interface ColorChipProps {
   color: string
-  w?: string
-  h?: string
+  width?: string
+  height?: string
   isRounded?: boolean
   helper?: string
 }
@@ -15,13 +15,10 @@ interface ColorChipStates {
   isTooltipVisible: boolean
 }
 
-export default class ColorChip extends React.Component<
-  ColorChipProps,
-  ColorChipStates
-> {
+export default class ColorChip extends React.Component<ColorChipProps, ColorChipStates> {
   static defaultProps: Partial<ColorChipProps> = {
-    w: '16px',
-    h: '16px',
+    width: '16px',
+    height: '16px',
   }
 
   constructor(props: ColorChipProps) {
@@ -32,7 +29,7 @@ export default class ColorChip extends React.Component<
   }
 
   render() {
-    const { color, w, h, isRounded, helper } = this.props
+    const { color, width, height, isRounded, helper } = this.props
     const { isTooltipVisible } = this.state
 
     return (
@@ -41,7 +38,7 @@ export default class ColorChip extends React.Component<
           'color-chip',
           isRounded && 'color-chip--rounded',
         ])}
-        style={{ backgroundColor: color, width: w, height: h }}
+        style={{ backgroundColor: color, width: width, height: height }}
         onMouseEnter={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}

@@ -225,8 +225,8 @@ export default class Consent extends React.Component<
                       <div className="consent__banner__item__icon">
                         <Thumbnail
                           src={vendor.icon}
-                          w="32px"
-                          h="32px"
+                          width="32px"
+                          height="32px"
                         />
                       </div>
                       <div>

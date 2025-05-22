@@ -4,14 +4,14 @@ import './thumbnail.scss'
 
 export interface ThumbnailProps {
   src: string
-  w?: string
-  h?: string
+  width?: string
+  height?: string
 }
 
 const Thumbnail = (props: ThumbnailProps) => {
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
-  const { src, w = '100%', h = '100%' } = props
+  const { src, width = '100%', height = '100%' } = props
 
   useEffect(() => {
     const img = new Image()
@@ -25,8 +25,8 @@ const Thumbnail = (props: ThumbnailProps) => {
       <div
         className="thumbnail"
         style={{
-          width: w,
-          height: h,
+          width: width,
+          height: height,
         }}
       >
         <Icon
@@ -41,8 +41,8 @@ const Thumbnail = (props: ThumbnailProps) => {
     <div
       className="thumbnail"
       style={{
-        width: w,
-        height: h,
+        width: width,
+        height: height,
       }}
     >
       {isLoading ? (
