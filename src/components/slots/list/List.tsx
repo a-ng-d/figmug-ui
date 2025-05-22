@@ -11,6 +11,8 @@ export interface ListProps {
   isLoading?: boolean
   isMessage?: boolean
   isAlternate?: boolean
+  isFullWidth?: boolean
+  isFullHeight?: boolean
 }
 
 export const List = (props: ListProps) => {
@@ -22,6 +24,8 @@ export const List = (props: ListProps) => {
     padding,
     isTopBorderEnabled = false,
     isAlternate = false,
+    isFullWidth = false,
+    isFullHeight = false,
   } = props
   const [hasTopBorder, setTopBorder] = useState(false)
 
@@ -43,6 +47,8 @@ export const List = (props: ListProps) => {
         isMessage && 'list--message',
         hasTopBorder && 'list--top-border',
         isAlternate && 'list--alternate',
+        isFullWidth && 'list--full-width',
+        isFullHeight && 'list--full-height',
       ])}
       onScroll={onScroll}
     >
