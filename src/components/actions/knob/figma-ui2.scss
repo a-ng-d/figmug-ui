@@ -49,7 +49,8 @@
   --knob-label-border-color-focus: var(--figma-color-border-selected);
   --knob-label-border-width-focus: var(--size-xunit);
   --knob-label-background-color-focus: var(--figma-color-bg-selected);
-  --knob-label-arrow-stroke-inset-focus: auto auto var(--size-neg-xmsmall) calc(50% - 6px);
+  --knob-label-arrow-stroke-inset-focus: auto auto var(--size-neg-xmsmall)
+    calc(50% - 6px);
   --knob-label-arrow-stroke-width-focus: 6px;
 
   --knob-label-background-color-disabled: var(--figma-color-bg-disabled);
