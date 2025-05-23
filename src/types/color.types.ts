@@ -14,4 +14,4 @@ export interface HslModel {
   a: number
 }
 
-export type Channel = [number, number, number, number]
+export type Channel = [number, number, number, number?]
