@@ -1,13 +1,12 @@
 import texts from '@styles/texts/texts.module.scss'
 import { doClassnames } from '@a_ng_d/figmug-utils'
-import type { HexModel } from '@tps/color.types'
 import Button from '@components/actions/button/Button'
 import ColorChip from '@components/tags/color-chip/ColorChip'
 import './color-item.scss'
 
 export type ColorItemProps = {
   name: string
-  hex: HexModel
+  hex: string
   id: string
   canBeRemoved?: boolean
   onRemoveColor?: React.ReactEventHandler
