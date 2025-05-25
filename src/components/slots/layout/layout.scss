@@ -8,6 +8,7 @@
   justify-content: flex-start;
   align-items: stretch;
   overflow: hidden;
+  background-color: var(--layout-background-color);
 
   &--full-width {
     width: 100%;

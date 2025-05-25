@@ -11,6 +11,7 @@
   box-sizing: border-box;
   padding: var(--bar-padding);
   min-height: var(--bar-min-height);
+  background-color: var(--bar-background-color);
 
   &.bar--compact {
     height: var(--bar-height-compact);
