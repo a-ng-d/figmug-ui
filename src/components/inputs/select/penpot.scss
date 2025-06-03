@@ -17,7 +17,7 @@
   --select-box-height: var(--size-xsmall);
   --select-box-width: var(--size-xsmall);
   --select-box-radius: var(--border-radius-med);
-  --select-box-margin: 0 var(--size-xxsmall) 0 var(--size-neg-xxsmall);
+  --select-box-margin: var(--size-neg-unit) var(--size-xxsmall) 0 var(--size-neg-xxsmall);
   --select-box-border: var(--size-unit) solid var(--color-foreground-secondary);
   --select-box-background-color: var(--color-background-tertiary);
   --select-box-border-color-secondary: transparent;
@@ -25,7 +25,7 @@
   --select-box-border-offset-secondary: 0;
 
   --select-box-tick-icon: var(--icon-check);
-  --select-box-tick-position: var(--size-unit) 0;
+  --select-box-tick-position: var(--size-unit) var(--size-unit);
   --select-box-tick-width: var(--size-xsmall);
   --select-box-tick-height: var(--size-xsmall);
   --select-box-tick-margin: 0 0 0 var(--size-neg-xxsmall);
@@ -62,25 +62,28 @@
   --select-toggle-height: 16px;
   --select-toggle-width: 24px;
   --select-toggle-radius: var(--size-xsmall);
-  --select-toggle-margin: 0 var(--size-xxsmall) 0 var(--size-neg-xxsmall);
+  --select-toggle-margin: var(--size-neg-unit) var(--size-xxsmall) 0 var(--size-neg-xxsmall);
   --select-toggle-background-color: var(--color-background-tertiary);
   --select-toggle-border: var(--size-unit) solid
     var(--color-foreground-secondary);
   --select-toggle-border-color-secondary: transparent;
   --select-toggle-border-width-secondary: 0;
   --select-toggle-border-offset-secondary: 0;
+  --select-toggle-transition: background-color 0.2s ease-in-out;
+
 
   --select-toggle-knob-height: var(--size-xmsmall);
   --select-toggle-knob-width: var(--size-xmsmall);
   --select-toggle-knob-radius: var(--border-radius-full);
   --select-toggle-knob-left: 11px;
   --select-toggle-knob-background-color: var(--color-foreground-primary);
-  --select-toggle-knob-transform: translateX(0) translateY(-50%);
+  --select-toggle-knob-transform: translateX(0) translateY(var(--size-xunit));
+  --select-toggle-knob-transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
   --select-toggle-background-color-checked: var(--color-accent-primary);
   --select-toggle-border-checked: var(--size-unit) solid
     var(--color-accent-primary);
-  --select-toggle-knob-transform-checked: translateX(8px) translateY(-50%);
+  --select-toggle-knob-transform-checked: translateX(var(--size-xxsmall)) translateY(var(--size-xunit));
   --select-toggle-knob-background-color-checked: var(
     --color-background-primary
   );
@@ -119,7 +122,8 @@
   --select-button-inner-height: var(--size-xxsmall);
   --select-button-inner-width: var(--size-xxsmall);
   --select-button-radius: var(--border-radius-full);
-  --select-button-margin: 0 var(--size-xxsmall) 0 var(--size-neg-xxsmall);
+  --select-button-margin: var(--size-neg-unit) var(--size-xxsmall) 0 var(--size-neg-xxsmall);
+  --select-button-inner-top: var(--size-xxxsmall);
   --select-button-inner-left: 5px;
   --select-button-icon-color: var(--color-background-primary);
   --select-button-background-color: var(--color-background-tertiary);

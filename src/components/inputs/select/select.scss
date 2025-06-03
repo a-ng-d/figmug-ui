@@ -20,11 +20,11 @@
 
 /* Checkbox */
 .checkbox {
-  height: var(--select-checkbox-height);
+  min-height: var(--select-checkbox-height);
 
   &__label {
     display: flex;
-    align-items: center;
+    align-items: start;
     margin-left: var(--select-checkbox-margin);
     padding: var(--select-checkbox-padding);
     height: 100%;
@@ -136,11 +136,11 @@
 }
 
 .switch {
-  height: var(--select-radio-height);
+  min-height: var(--select-radio-height);
 
   &__label {
     display: flex;
-    align-items: center;
+    align-items: start;
     margin-left: var(--select-radio-margin);
     padding: var(--select-radio-padding);
     height: 100%;
@@ -155,7 +155,7 @@
     &:before {
       display: block;
       flex: none;
-      transition: background-color 0 0.2s;
+      transition: var(--select-toggle-transition);
       margin: var(--select-toggle-margin);
       outline: var(--select-toggle-border-width-secondary) solid
         var(--select-toggle-border-color-secondary);
@@ -171,11 +171,10 @@
     &:after {
       display: block;
       position: absolute;
-      top: 50%;
       left: var(--select-toggle-knob-left);
       flex: none;
       transform: var(--select-toggle-knob-transform);
-      transition: transform 0.2s;
+      transition: var(--select-toggle-knob-transition);
       border-radius: var(--select-toggle-knob-radius);
       background-color: var(--select-toggle-knob-background-color);
       width: var(--select-toggle-knob-width);
@@ -267,11 +266,11 @@
 
 /* Radio */
 .radio {
-  height: var(--select-radio-height);
+  min-height: var(--select-radio-height);
 
   &__label {
     display: flex;
-    align-items: center;
+    align-items: start;
     margin-left: var(--select-radio-margin);
     padding: var(--select-radio-padding);
     height: 100%;
@@ -282,9 +281,11 @@
     font-family: var(--select-text-font-family);
     letter-spacing: var(--select-text-letter-spacing);
     user-select: none;
+    position: relative;
 
     &:before {
       display: block;
+      flex: none;
       margin: var(--select-button-margin);
       outline: var(--select-button-border-width-secondary) solid
         var(--select-button-border-color-secondary);
@@ -300,6 +301,7 @@
     &:after {
       display: block;
       position: absolute;
+      top: var(--select-button-inner-top);
       left: var(--select-button-inner-left);
       visibility: hidden;
       border-radius: var(--select-button-radius);
