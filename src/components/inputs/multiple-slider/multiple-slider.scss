@@ -2,14 +2,14 @@
 @import 'figma-ui3';
 @import 'penpot';
 
-.slider {
+.multiple-slider {
   display: flex;
   position: relative;
   align-items: center;
-  margin-top: var(--multiple-slider-margin-top);
+  margin: var(--multiple-slider-margin);
   padding: var(--multiple-slider-padding);
 
-  .slider__range {
+  &__range {
     position: relative;
     flex: 1 1 auto;
     box-shadow: inset 0 0 0 var(--multiple-slider-border-width)

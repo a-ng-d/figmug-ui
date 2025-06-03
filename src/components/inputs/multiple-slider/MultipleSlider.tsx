@@ -272,7 +272,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     onChange('SHIFTED', results)
 
     requestAnimationFrame(() => {
-      const sliderRange = knob.closest('.slider__range')
+      const sliderRange = knob.closest('.multiple-slider__range')
       if (sliderRange) {
         const updatedKnob = sliderRange.querySelector(
           `[data-id="${knob.dataset.id}"]`
@@ -291,7 +291,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     onChange('SHIFTED', results)
 
     requestAnimationFrame(() => {
-      const sliderRange = knob.closest('.slider__range')
+      const sliderRange = knob.closest('.multiple-slider__range')
       if (sliderRange) {
         const updatedKnob = sliderRange.querySelector(
           `[data-id="${knob.dataset.id}"]`
@@ -385,7 +385,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
 
     return (
       <div
-        className="slider__range"
+        className="multiple-slider__range"
         style={{
           background: `linear-gradient(90deg, ${colors.min}, ${colors.max})`,
         }}
@@ -437,10 +437,11 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     return (
       <div
         className={doClassnames([
-          'slider__range',
-          stops.list.length < (stops.max ?? Infinity) && 'slider__range--add',
+          'multiple-slider__range',
+          stops.list.length < (stops.max ?? Infinity) &&
+            'multiple-slider__range--add',
           stops.list.length === (stops.max ?? Infinity) &&
-            'slider__range--not-allowed',
+            'multiple-slider__range--not-allowed',
         ])}
         style={{
           background: `linear-gradient(90deg, ${colors.min}, ${colors.max})`,
@@ -498,7 +499,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     const { type } = this.props
 
     return (
-      <div className="slider">
+      <div className="multiple-slider">
         {type === 'EDIT' && <this.Edit />}
         {type === 'FULLY_EDIT' && <this.FullyEdit />}
       </div>
