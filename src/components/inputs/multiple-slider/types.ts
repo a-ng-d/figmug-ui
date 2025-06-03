@@ -1,4 +1,5 @@
 export type Easing =
+  | 'NONE'
   | 'LINEAR'
   | 'EASEIN_SINE'
   | 'EASEOUT_SINE'
@@ -9,4 +10,3 @@ export type Easing =
   | 'EASEIN_CUBIC'
   | 'EASEOUT_CUBIC'
   | 'EASEINOUT_CUBIC'
-  | 'NONE'
