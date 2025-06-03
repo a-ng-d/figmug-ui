@@ -58,6 +58,21 @@ export const TripleValues: Story = {
   },
   argTypes: {
     type: { control: false },
+    distributionEasing: {
+      control: 'select',
+      options: [
+        'LINEAR',
+        'EASEIN_SINE',
+        'EASEOUT_SINE',
+        'EASEINOUT_SINE',
+        'EASEIN_QUAD',
+        'EASEOUT_QUAD',
+        'EASEINOUT_QUAD',
+        'EASEIN_CUBIC',
+        'EASEOUT_CUBIC',
+        'EASEINOUT_CUBIC',
+      ],
+    },
   },
   render: (args) => {
     const [{ scale, stops }, updateArgs] = useArgs()
