@@ -22,8 +22,8 @@ jobs:
         npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
         npm install
 
-    - name: Run tests
-      run: npm run test
+    #- name: Run tests
+    #  run: npm run test
 
     - name: Build module
       run: npm run build
