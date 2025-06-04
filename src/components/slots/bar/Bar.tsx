@@ -9,8 +9,9 @@ export interface BarProps {
   leftPartSlot?: React.ReactElement
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
   padding?: string
-  isCompact: boolean
-  isOnlyText: boolean
+  isCompact?: boolean
+  isOnlyText?: boolean
+  isInverted?: boolean
   shouldReflow?: boolean
 }
 
@@ -18,6 +19,7 @@ export default class Bar extends React.Component<BarProps> {
   static defaultProps: Partial<BarProps> = {
     isCompact: false,
     isOnlyText: false,
+    isInverted: false,
     shouldReflow: false,
   }
 
@@ -42,6 +44,7 @@ export default class Bar extends React.Component<BarProps> {
       id,
       isCompact,
       isOnlyText,
+      isInverted,
       shouldReflow,
       border,
       padding,
@@ -57,6 +60,7 @@ export default class Bar extends React.Component<BarProps> {
           'bar',
           isCompact && 'bar--compact',
           isOnlyText && 'bar--text-only',
+          isInverted && 'bar--inverted',
           shouldReflow && 'bar--reflow',
         ])}
         style={{

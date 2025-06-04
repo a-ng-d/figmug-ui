@@ -24,9 +24,20 @@
   &__left {
     flex: 1;
   }
-
+  &__right {
+    flex: auto;
+  }
   &__solo {
     flex: 1;
+  }
+
+  &.bar--inverted {
+    .bar__left {
+      flex: auto;
+    }
+    .bar__right {
+      flex: 1;
+    }
   }
 }
 
