@@ -21,10 +21,12 @@
     align-items: baseline;
   }
 
-  & .bar__solo {
-    &--full {
-      flex: 1;
-    }
+  &__left {
+    flex: 1;
+  }
+
+  &__solo {
+    flex: 1;
   }
 }
 

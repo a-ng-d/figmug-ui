@@ -22,6 +22,7 @@ const SectionTitle = (props: SectionTitleProps) => {
         className={doClassnames([
           'section-title__title',
           texts['section-title'],
+          texts['type--truncated'],
         ])}
       >
         {label}
