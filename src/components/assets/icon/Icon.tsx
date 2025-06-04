@@ -5,7 +5,7 @@ import type { IconList } from '@tps/icon.types'
 import './icon.scss'
 
 export interface IconProps {
-  type: 'PICTO' | 'LETTER'
+  type?: 'PICTO' | 'LETTER'
   iconName?: IconList
   iconLetter?: string
   customClassName?: string
