@@ -63,12 +63,28 @@ export default class Bar extends React.Component<BarProps> {
           ...this.setBorder(border),
           padding: padding,
         }}
+        role="toolbar"
       >
-        <div className="bar__left">{leftPartSlot}</div>
+        <div
+          className="bar__left"
+          role="group"
+        >
+          {leftPartSlot}
+        </div>
         {soloPartSlot !== undefined && (
-          <div className={doClassnames(['bar__solo'])}>{soloPartSlot}</div>
+          <div
+            className={doClassnames(['bar__solo'])}
+            role="group"
+          >
+            {soloPartSlot}
+          </div>
         )}
-        <div className="bar__right">{rightPartSlot}</div>
+        <div
+          className="bar__right"
+          role="group"
+        >
+          {rightPartSlot}
+        </div>
       </div>
     )
   }

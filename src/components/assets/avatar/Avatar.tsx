@@ -20,11 +20,18 @@ const Avatar = (props: AvatarProps) => {
   } = props
 
   return (
-    <div className={doClassnames(['user', isInverted && 'user--inverted'])}>
-      <div className="user__avatar">
+    <div
+      className={doClassnames(['user', isInverted && 'user--inverted'])}
+      role="group"
+    >
+      <div
+        className="user__avatar"
+        role="img"
+      >
         <img
           src={avatar}
           alt={fullName}
+          role="presentation"
         />
       </div>
       <span
@@ -33,11 +40,15 @@ const Avatar = (props: AvatarProps) => {
           texts.type,
           !isAccented && texts['type--secondary'],
         ])}
+        role="text"
       >
         {fullName}
       </span>
       {complementarySlot && (
-        <div className="user__complementary-slot">
+        <div
+          className="user__complementary-slot"
+          role="complementary"
+        >
           {props.complementarySlot}
         </div>
       )}

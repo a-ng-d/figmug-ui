@@ -154,6 +154,9 @@ export default class DraggableItem extends React.Component<
           guideBelow && 'draggable-item--below',
         ])}
         draggable={!hasMoreOptions ? selected : false}
+        role="listitem"
+        aria-grabbed={isDragged}
+        aria-selected={selected}
         onMouseDown={(e) => {
           if (!hasMoreOptions) onChangeSelection(e)
         }}
@@ -170,9 +173,20 @@ export default class DraggableItem extends React.Component<
           if (!hasMoreOptions) this.onDrop(e)
         }}
       >
-        <div className="draggable-item__primary">
-          <div className="draggable-item__left-part">{primarySlot}</div>
-          <div className="draggable-item__right-part">
+        <div
+          className="draggable-item__primary"
+          role="group"
+        >
+          <div
+            className="draggable-item__left-part"
+            role="presentation"
+          >
+            {primarySlot}
+          </div>
+          <div
+            className="draggable-item__right-part"
+            role="group"
+          >
             {secondarySlot !== undefined && (
               <Button
                 ref={this.moreButtonRef}

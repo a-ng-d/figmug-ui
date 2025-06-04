@@ -35,11 +35,15 @@ export default class MembersList extends React.Component<
     const { activeTooltipIndex, isMembersListVisible } = this.state
 
     return (
-      <div className="members-list">
+      <div
+        className="members-list"
+        role="list"
+      >
         {members.slice(0, numberOfAvatarsDisplayed).map((member, index) => (
           <div
             key={member.fullName}
             className="members-list__member"
+            role="listitem"
             onMouseEnter={() =>
               this.setState({
                 activeTooltipIndex: index,
@@ -51,10 +55,14 @@ export default class MembersList extends React.Component<
               })
             }
           >
-            <div className="members-list__avatar">
+            <div
+              className="members-list__avatar"
+              role="presentation"
+            >
               <img
                 src={member.avatar}
                 alt={member.fullName}
+                aria-hidden="true"
               />
             </div>
             {activeTooltipIndex === index && (
@@ -65,15 +73,22 @@ export default class MembersList extends React.Component<
         {members.slice(numberOfAvatarsDisplayed).length > 0 && (
           <div
             className="members-list__remaining"
+            role="listitem"
             onMouseEnter={() => this.setState({ isMembersListVisible: true })}
             onMouseLeave={() => this.setState({ isMembersListVisible: false })}
           >
-            <span className={texts.type}>
+            <span
+              className={texts.type}
+              aria-hidden="true"
+            >
               +{members.slice(numberOfAvatarsDisplayed).length}
             </span>
             {isMembersListVisible && (
               <Tooltip>
-                <div className="members-list__list">
+                <div
+                  className="members-list__list"
+                  role="list"
+                >
                   {members.slice(numberOfAvatarsDisplayed).map((member) => (
                     <SimpleItem
                       key={member.fullName}

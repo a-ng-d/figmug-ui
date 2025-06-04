@@ -18,16 +18,36 @@ const Card = (props: CardProps) => {
   return (
     <div
       className={doClassnames(['card', shouldFill && 'card--fill'])}
+      role="article"
+      aria-label={label}
       onMouseEnter={() => setActionsVisible(true)}
       onMouseLeave={() => setActionsVisible(false)}
+      onFocus={() => setActionsVisible(true)}
+      onBlur={() => setActionsVisible(false)}
+      tabIndex={0}
     >
-      <div className={'card__asset'}>
+      <div
+        className={'card__asset'}
+        role="group"
+      >
         <Thumbnail src={src} />
         {children !== undefined && (
-          <div className={'card__actions'}>{isActionsVisible && children}</div>
+          <div
+            className={'card__actions'}
+            role="group"
+            aria-hidden={!isActionsVisible}
+          >
+            {isActionsVisible && children}
+          </div>
         )}
       </div>
-      <span className={texts.type}>{label}</span>
+      <span
+        className={texts.type}
+        role="heading"
+        aria-level={2}
+      >
+        {label}
+      </span>
     </div>
   )
 }

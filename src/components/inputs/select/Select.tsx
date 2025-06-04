@@ -49,6 +49,9 @@ export default class Select extends React.Component<SelectProps> {
     return (
       <div
         className={doClassnames(['checkbox', isBlocked && 'checkbox--blocked'])}
+        role="checkbox"
+        aria-checked={isChecked}
+        aria-disabled={isDisabled || isBlocked}
       >
         <input
           data-feature={feature}
@@ -60,6 +63,7 @@ export default class Select extends React.Component<SelectProps> {
           disabled={isDisabled || isBlocked}
           onChange={action}
           ref={this.inputRef}
+          aria-label={label}
         />
         <label
           className="checkbox__label"
@@ -90,7 +94,12 @@ export default class Select extends React.Component<SelectProps> {
     } = this.props
 
     return (
-      <div className={doClassnames(['radio', isBlocked && 'radio--blocked'])}>
+      <div
+        className={doClassnames(['radio', isBlocked && 'radio--blocked'])}
+        role="radio"
+        aria-checked={isChecked}
+        aria-disabled={isDisabled || isBlocked}
+      >
         <input
           data-feature={feature}
           id={id}
@@ -102,6 +111,7 @@ export default class Select extends React.Component<SelectProps> {
           disabled={isDisabled || isBlocked}
           onChange={action}
           ref={this.inputRef}
+          aria-label={label}
         />
         <label
           className="radio__label"
@@ -131,7 +141,12 @@ export default class Select extends React.Component<SelectProps> {
     } = this.props
 
     return (
-      <div className={doClassnames(['switch', isBlocked && 'switch--blocked'])}>
+      <div
+        className={doClassnames(['switch', isBlocked && 'switch--blocked'])}
+        role="switch"
+        aria-checked={isChecked}
+        aria-disabled={isDisabled || isBlocked}
+      >
         <input
           data-feature={feature}
           id={id}
@@ -142,6 +157,7 @@ export default class Select extends React.Component<SelectProps> {
           disabled={isDisabled || isBlocked}
           onChange={action}
           ref={this.inputRef}
+          aria-label={label}
         />
         <label
           className="switch__label"

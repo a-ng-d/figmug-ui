@@ -85,7 +85,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
 
     return (
       <button
-        role="action-button"
+        role="button"
         className={doClassnames([
           'button',
           `button--${type}`,
@@ -95,6 +95,9 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         ])}
         data-feature={feature}
         disabled={isDisabled || isBlocked}
+        aria-label={label}
+        aria-disabled={isDisabled || isBlocked}
+        aria-busy={isLoading}
         onKeyDown={(e) => {
           if (
             (e.key === ' ' || e.key === 'Enter') &&
@@ -107,7 +110,10 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         ref={this.buttonRef}
       >
         {icon !== undefined && (
-          <span className="button__icon">
+          <span
+            className="button__icon"
+            aria-hidden="true"
+          >
             <Icon
               type="PICTO"
               iconName={icon}
@@ -116,7 +122,10 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         )}
         <span className="button__label">{label}</span>
         {isLoading && (
-          <div className="button__loader">
+          <div
+            className="button__loader"
+            aria-hidden="true"
+          >
             <Icon
               type="PICTO"
               iconName="spinner"
@@ -125,7 +134,10 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           </div>
         )}
         {hasMultipleActions && (
-          <span className="button__caret">
+          <span
+            className="button__caret"
+            aria-hidden="true"
+          >
             <Icon
               type="PICTO"
               iconName="chevron-down"
@@ -144,7 +156,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
 
     return (
       <button
-        role="link-button"
+        role="link"
         className={doClassnames([
           'button',
           `button--${type}`,
@@ -152,12 +164,14 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         ])}
         data-feature={feature}
         ref={this.buttonRef}
+        aria-label={label}
       >
         <a
           href={url}
           target="_blank"
           rel="noreferrer"
           className="button__label"
+          aria-label={label}
         >
           {label}
         </a>
@@ -184,7 +198,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
 
     return (
       <button
-        role="icon-button"
+        role="button"
         data-feature={feature}
         className={doClassnames([
           'icon-button',
@@ -194,6 +208,10 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           isLoading && 'button--loading',
         ])}
         disabled={isDisabled || isBlocked}
+        aria-label={helper?.label || icon}
+        aria-disabled={isDisabled || isBlocked}
+        aria-pressed={state === 'selected'}
+        aria-busy={isLoading}
         onKeyDown={(e) => {
           if (
             (e.key === ' ' || e.key === 'Enter') &&

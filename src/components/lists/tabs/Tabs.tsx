@@ -35,10 +35,12 @@ const Tabs = (props: TabsProps) => {
         'tabs',
         direction === 'VERTICAL' && 'tabs--vertical',
       ])}
+      role="tablist"
+      aria-orientation={direction === 'VERTICAL' ? 'vertical' : 'horizontal'}
     >
       {tabs.map((tab) => (
         <div
-          role="navigation"
+          role="tab"
           key={tab.label.toLowerCase()}
           className={doClassnames([
             'tabs__tab',
@@ -58,6 +60,7 @@ const Tabs = (props: TabsProps) => {
               iconLetter={
                 tab.icon.type === 'LETTER' ? tab.icon.name : undefined
               }
+              aria-hidden="true"
             />
           )}
           <span

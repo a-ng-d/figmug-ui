@@ -83,10 +83,21 @@ const DraggableWindow = (props: DraggableWindowProps) => {
       }}
       onMouseDown={handleMouseDown}
       ref={windowRef}
+      role="dialog"
+      aria-modal="true"
+      aria-hidden={!isOpen}
     >
-      <div className="draggable-window__header">
+      <div
+        className="draggable-window__header"
+        role="presentation"
+      >
         <Bar
-          leftPartSlot={<SectionTitle label={title} />}
+          leftPartSlot={
+            <SectionTitle
+              label={title}
+              id={`draggable-window-title-${title}`}
+            />
+          }
           rightPartSlot={
             <Button
               type="icon"
@@ -100,7 +111,12 @@ const DraggableWindow = (props: DraggableWindowProps) => {
           border={['BOTTOM']}
         />
       </div>
-      <div className="draggable-window__content">{children}</div>
+      <div
+        className="draggable-window__content"
+        role="document"
+      >
+        {children}
+      </div>
     </div>
   )
 }

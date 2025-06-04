@@ -19,9 +19,16 @@ const ColorItem = (props: ColorItemProps) => {
     <li
       className="color-item"
       data-id={id}
+      role="listitem"
     >
-      <div className="color-item__left-part">
-        <div className="color-item__info">
+      <div
+        className="color-item__left-part"
+        role="group"
+      >
+        <div
+          className="color-item__info"
+          role="presentation"
+        >
           <ColorChip
             color={hex}
             isRounded
@@ -34,7 +41,10 @@ const ColorItem = (props: ColorItemProps) => {
           </div>
         </div>
       </div>
-      <div className="color-item__right-part">
+      <div
+        className="color-item__right-part"
+        role="group"
+      >
         {canBeRemoved && (
           <Button
             type="icon"

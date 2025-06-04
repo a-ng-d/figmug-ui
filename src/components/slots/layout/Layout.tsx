@@ -31,7 +31,7 @@ const Layout = (props: LayoutProps) => {
         isFullWidth && 'layout--full-width',
         isFullHeight && 'layout--full-height',
       ])}
-      role="layout"
+      role="main"
     >
       {column.map(
         (item, index) =>
@@ -55,6 +55,7 @@ const Layout = (props: LayoutProps) => {
                 width:
                   item.fixedWidth !== undefined ? item.fixedWidth : undefined,
               }}
+              role="region"
             >
               {item.node}
             </div>

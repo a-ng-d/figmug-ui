@@ -21,7 +21,8 @@ const Notification = (props: NotificationProps) => {
   return (
     <div
       className={doClassnames(['notification'])}
-      role="dialog"
+      role="alert"
+      aria-live="polite"
       tabIndex={-1}
     >
       <SemanticMessage

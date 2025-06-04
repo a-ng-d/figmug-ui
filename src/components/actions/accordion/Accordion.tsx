@@ -57,7 +57,9 @@ const Accordion = (props: AccordionProps) => {
 
   return (
     <div
-      role="row"
+      role="region"
+      aria-expanded={isExpanded}
+      aria-label={label}
       className={doClassnames([
         'accordion',
         isExpanded && 'accordion--expanded',
@@ -73,15 +75,36 @@ const Accordion = (props: AccordionProps) => {
           onAdd(e as React.MouseEvent<HTMLDivElement, MouseEvent>)
       }}
     >
-      <div className="accordion__row">
-        <div className="accordion__row__left-part">
+      <div
+        className="accordion__row"
+        role="button"
+        aria-expanded={isExpanded}
+        aria-controls={`accordion-content-${label}`}
+        aria-disabled={isBlocked}
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            if (!isExpanded && !isBlocked) {
+              onAdd(e)
+            }
+          }
+        }}
+      >
+        <div
+          className="accordion__row__left-part"
+          role="presentation"
+        >
           <SectionTitle
             label={label}
             indicator={indicator}
             helper={helper}
           />
         </div>
-        <div className="accordion__row__right-part">
+        <div
+          className="accordion__row__right-part"
+          role="group"
+        >
           {isExpanded ? (
             <Button
               type="icon"
@@ -118,9 +141,17 @@ const Accordion = (props: AccordionProps) => {
           {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>
       </div>
-      {isExpanded && <div>{children}</div>}
+      {isExpanded && (
+        <div
+          id={`accordion-content-${label}`}
+          role="region"
+        >
+          {children}
+        </div>
+      )}
     </div>
   )
 }
 
 export default Accordion
+

@@ -317,6 +317,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
           'input--with-icon',
           isBlocked && 'input--blocked',
         ])}
+        role="group"
         onMouseEnter={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
@@ -332,6 +333,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
           className="input__color"
           value={inputValue}
           disabled={isDisabled || isBlocked}
+          aria-disabled={isDisabled || isBlocked}
           onChange={
             !(isDisabled || isBlocked) ? this.onPickColorValue : undefined
           }
@@ -402,6 +404,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
           isFlex && 'input--flex',
           isBlocked && 'input--blocked',
         ])}
+        role="group"
         onMouseEnter={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
@@ -432,7 +435,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
             </div>
           )}
           <input
-            role="numeric-stepper"
+            role="spinbutton"
             id={id}
             data-feature={feature}
             type="number"
@@ -446,6 +449,10 @@ export default class Input extends React.Component<InputProps, InputStates> {
             max={max}
             step={step}
             disabled={isDisabled || isBlocked}
+            aria-valuemin={min ? parseFloat(min) : undefined}
+            aria-valuemax={max ? parseFloat(max) : undefined}
+            aria-valuenow={parseFloat(inputValue)}
+            aria-disabled={isDisabled || isBlocked}
             onKeyDown={
               !(isDisabled || isBlocked) ? this.onValidNumber : undefined
             }
@@ -511,6 +518,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
           icon !== undefined && 'input--with-icon',
           isBlocked && 'input--blocked',
         ])}
+        role="group"
         onMouseEnter={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
@@ -528,7 +536,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
           </div>
         )}
         <input
-          role="short-text"
+          role="textbox"
           id={id}
           data-feature={feature}
           type="text"
@@ -542,6 +550,8 @@ export default class Input extends React.Component<InputProps, InputStates> {
           value={inputValue}
           maxLength={charactersLimit}
           disabled={isDisabled || isBlocked}
+          aria-invalid={state === 'ERROR'}
+          aria-disabled={isDisabled || isBlocked}
           onKeyDown={!(isDisabled || isBlocked) ? this.onValidText : undefined}
           onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
           onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
@@ -598,6 +608,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
           'input--long-text',
           isBlocked && 'input--blocked',
         ])}
+        role="group"
         onMouseEnter={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
@@ -606,7 +617,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
         }}
       >
         <textarea
-          role="long-text"
+          role="textbox"
           id={id}
           data-feature={feature}
           className={doClassnames([
@@ -618,6 +629,8 @@ export default class Input extends React.Component<InputProps, InputStates> {
           placeholder={placeholder}
           value={inputValue}
           disabled={isDisabled || isBlocked}
+          aria-invalid={state === 'ERROR'}
+          aria-disabled={isDisabled || isBlocked}
           onKeyDown={
             !(isDisabled || isBlocked) ? this.onValidLongText : undefined
           }
@@ -651,9 +664,10 @@ export default class Input extends React.Component<InputProps, InputStates> {
           'input--code',
           isBlocked && 'input--blocked',
         ])}
+        role="group"
       >
         <textarea
-          role="code-snippet"
+          role="textbox"
           id={id}
           data-feature={feature}
           className={doClassnames([
@@ -663,6 +677,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
           ])}
           value={value}
           disabled={isDisabled || isBlocked}
+          aria-disabled={isDisabled || isBlocked}
           onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
           onFocus={(e) => e.target.select()}
           onBlur={() => window.getSelection()?.removeAllRanges()}

@@ -39,8 +39,9 @@ export default class Section extends React.Component<SectionProps> {
         style={{
           ...this.setBorder(border),
         }}
+        role="region"
       >
-        {title}
+        <div role="presentation">{title}</div>
         {body.map(
           (item, index) =>
             (item.node !== undefined || item.node !== null) && (
@@ -52,6 +53,7 @@ export default class Section extends React.Component<SectionProps> {
                   item.spacingModifier === 'TIGHT' && 'section__child--tight',
                   item.spacingModifier === 'NONE' && 'section__child--none',
                 ])}
+                role="group"
               >
                 {item.node}
               </div>

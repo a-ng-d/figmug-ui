@@ -389,6 +389,10 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
         style={{
           background: `linear-gradient(90deg, ${colors.min}, ${colors.max})`,
         }}
+        role="slider"
+        aria-orientation="horizontal"
+        aria-valuemin={range.min}
+        aria-valuemax={range.max}
       >
         {Object.entries(scale)
           .sort((a, b) => a[1] - b[1])
@@ -424,6 +428,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
                 ;(e.target as HTMLElement).focus()
               }}
               onValidStopValue={(stopId, e) => this.validHandler(stopId, e)}
+              aria-valuenow={item[1]}
             />
           ))}
       </div>
@@ -488,6 +493,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
                 ;(e.target as HTMLElement).focus()
               }}
               onValidStopValue={(stopId, e) => this.validHandler(stopId, e)}
+              aria-valuenow={item[1]}
             />
           ))}
       </div>

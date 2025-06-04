@@ -52,9 +52,20 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
             if (e.key === 'Escape' && isInteractive)
               (e.target as HTMLElement).blur()
           }}
+          role={isInteractive ? 'button' : 'listitem'}
         >
-          <div className="simple-item__left-part">{leftPartSlot}</div>
-          <div className="simple-item__right-part">{rightPartSlot}</div>
+          <div
+            className="simple-item__left-part"
+            role="presentation"
+          >
+            {leftPartSlot}
+          </div>
+          <div
+            className="simple-item__right-part"
+            role="presentation"
+          >
+            {rightPartSlot}
+          </div>
         </li>
       )
     return (
@@ -72,9 +83,20 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
           if (e.key === 'Escape' && isInteractive)
             (e.target as HTMLElement).blur()
         }}
+        role={isInteractive ? 'button' : 'group'}
       >
-        <div className="simple-item__left-part">{leftPartSlot}</div>
-        <div className="simple-item__right-part">{rightPartSlot}</div>
+        <div
+          className="simple-item__left-part"
+          role="presentation"
+        >
+          {leftPartSlot}
+        </div>
+        <div
+          className="simple-item__right-part"
+          role="presentation"
+        >
+          {rightPartSlot}
+        </div>
       </div>
     )
   }

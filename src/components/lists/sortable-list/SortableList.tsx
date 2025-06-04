@@ -238,6 +238,8 @@ export default class SortableList<
         ])}
         onScroll={this.onScroll}
         ref={this.listRef}
+        role="list"
+        aria-orientation="vertical"
       >
         {data.map((item, index) => (
           <DraggableItem
@@ -272,6 +274,7 @@ export default class SortableList<
             onChangeSelection={this.selectionHandler}
             onDragChange={this.dragHandler}
             onDropOutside={this.orderHandler}
+            aria-selected={selectedElement.id === item.id}
           />
         ))}
       </ul>

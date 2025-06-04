@@ -61,6 +61,7 @@ const Dialog = (props: DialogProps) => {
     <div
       className={doClassnames(['dialog', pin === 'RIGHT' && 'dialog--right'])}
       role="dialog"
+      aria-modal="true"
       tabIndex={-1}
       onMouseDown={closeHandler}
     >

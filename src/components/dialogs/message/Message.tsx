@@ -23,13 +23,19 @@ export default class Message extends React.Component<MessageProps> {
     return (
       <div
         className={doClassnames(['message', isBlocked && 'message--blocked'])}
+        role="status"
+        aria-live="polite"
       >
         <Icon
           type="PICTO"
           iconName={icon}
           customClassName="icon"
+          aria-hidden="true"
         />
-        <div className={doClassnames([texts.type, 'message__msg'])}>
+        <div
+          className={doClassnames([texts.type, 'message__msg'])}
+          role="presentation"
+        >
           {messages[0]}
         </div>
       </div>
@@ -41,13 +47,21 @@ export default class Message extends React.Component<MessageProps> {
 
     return (
       <div className="callout">
-        <div className="message message--multiple">
+        <div
+          className="message message--multiple"
+          role="status"
+          aria-live="polite"
+        >
           <Icon
             type="PICTO"
             iconName={icon}
             customClassName="icon"
+            aria-hidden="true"
           />
-          <div className="message__ticker">
+          <div
+            className="message__ticker"
+            role="marquee"
+          >
             <div
               className="message__tips"
               style={{
@@ -55,14 +69,22 @@ export default class Message extends React.Component<MessageProps> {
                   messages.length * 5000
                 }ms 0ms linear infinite`,
               }}
+              role="presentation"
             >
               {messages.map((message, index) => {
                 return (
                   <React.Fragment key={`message-${index}`}>
-                    <div className={doClassnames([texts.type, 'message__msg'])}>
+                    <div
+                      className={doClassnames([texts.type, 'message__msg'])}
+                      role="presentation"
+                    >
                       {message}
                     </div>
-                    <div className={doClassnames([texts.type, 'message__msg'])}>
+                    <div
+                      className={doClassnames([texts.type, 'message__msg'])}
+                      role="presentation"
+                      aria-hidden="true"
+                    >
                       ﹒
                     </div>
                   </React.Fragment>
@@ -76,14 +98,23 @@ export default class Message extends React.Component<MessageProps> {
                   messages.length * 5000
                 }ms 0ms linear infinite`,
               }}
+              role="presentation"
+              aria-hidden="true"
             >
               {messages.map((message, index) => {
                 return (
                   <React.Fragment key={`message-${index}`}>
-                    <div className={doClassnames([texts.type, 'message__msg'])}>
+                    <div
+                      className={doClassnames([texts.type, 'message__msg'])}
+                      role="presentation"
+                    >
                       {message}
                     </div>
-                    <div className={doClassnames([texts.type, 'message__msg'])}>
+                    <div
+                      className={doClassnames([texts.type, 'message__msg'])}
+                      role="presentation"
+                      aria-hidden="true"
+                    >
                       ﹒
                     </div>
                   </React.Fragment>

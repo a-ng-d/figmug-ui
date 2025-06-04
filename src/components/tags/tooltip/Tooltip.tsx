@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import texts from '@styles/texts/texts.module.scss'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import './tooltip.scss'
@@ -13,6 +13,7 @@ const Tooltip = (props: TooltipProps) => {
   const { children, pin = 'BOTTOM', type = 'SINGLE_LINE' } = props
   const tooltipRef = useRef<HTMLDivElement>(null)
   const [shift, setShift] = React.useState(0)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     const tooltipElement = tooltipRef.current
@@ -21,7 +22,7 @@ const Tooltip = (props: TooltipProps) => {
       if (rect.x < 0) setShift(-rect.x + 8)
       if (rect.x + rect.width > window.innerWidth)
         setShift(window.innerWidth - rect.x - rect.width - 8)
-      tooltipElement.style.visibility = 'visible'
+      setIsVisible(true)
     }
   }, [])
 
@@ -37,16 +38,21 @@ const Tooltip = (props: TooltipProps) => {
       role="tooltip"
       ref={tooltipRef}
       style={{
-        visibility: 'hidden',
+        visibility: isVisible ? 'visible' : 'hidden',
       }}
+      aria-hidden={!isVisible}
     >
       <div
         className="tooltip__block"
         style={{
           transform: `translateX(${shift}px)`,
         }}
+        role="presentation"
       >
-        <div className={doClassnames(['tooltip__text', texts.type])}>
+        <div
+          className={doClassnames(['tooltip__text', texts.type])}
+          role="presentation"
+        >
           {children}
         </div>
       </div>

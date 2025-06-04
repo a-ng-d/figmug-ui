@@ -39,6 +39,7 @@ export default class SemanticMessage extends React.Component<SemanticMessageProp
           orientation === 'VERTICAL' && 'semantic-message--vertical',
           isAnchored && 'semantic-message--anchored',
         ])}
+        role="status"
       >
         <div className="semantic-message__body">
           <Message
@@ -52,6 +53,7 @@ export default class SemanticMessage extends React.Component<SemanticMessageProp
               layouts['snackbar--medium'],
               'semantic-message__actions',
             ])}
+            role="toolbar"
           >
             {actionsSlot}
           </div>

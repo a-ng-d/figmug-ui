@@ -293,6 +293,8 @@ export default class Dropzone extends React.Component<
           'dropzone',
           isDraggedOver && 'dropzone--dragged-over',
         ])}
+        role="region"
+        aria-disabled={isDisabled || isBlocked}
         onDragOver={this.onDragOver}
         onDragEnter={this.onDragEnter}
         onDragLeave={this.onDragLeave}

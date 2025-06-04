@@ -109,13 +109,21 @@ export default class Consent extends React.Component<
     const { isVendorsOpen } = this.state
 
     return (
-      <div className="consent__banner">
-        <div className="consent__banner__message">
+      <div
+        className="consent__banner"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          className="consent__banner__message"
+          role="region"
+        >
           <div className={texts.type}>{welcomeMessage}</div>
           <Button
             type="tertiary"
             label={privacyPolicy.label}
             action={privacyPolicy.action}
+            aria-label={privacyPolicy.label}
           />
         </div>
         <Bar
@@ -128,6 +136,8 @@ export default class Consent extends React.Component<
                   isVendorsOpen: !isVendorsOpen,
                 })
               }
+              aria-label={moreDetailsLabel}
+              aria-expanded={isVendorsOpen}
             />
           }
           rightPartSlot={
@@ -136,16 +146,19 @@ export default class Consent extends React.Component<
                 'consent__banner__actions',
                 layouts['snackbar--medium'],
               ])}
+              role="group"
             >
               <Button
                 type="secondary"
                 label={consentActions.deny.label}
                 action={this.onDenyAll}
+                aria-label={consentActions.deny.label}
               />
               <Button
                 type="primary"
                 label={consentActions.consent.label}
                 action={this.onConsentAll}
+                aria-label={consentActions.consent.label}
               />
             </div>
           }
@@ -167,15 +180,30 @@ export default class Consent extends React.Component<
     const { isVendorsOpen, vendorsConsent } = this.state
 
     return (
-      <div className="consent__banner">
-        <div className="consent__banner__content">
+      <div
+        className="consent__banner"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          className="consent__banner__content"
+          role="region"
+        >
           <div
             className={doClassnames(['consent__banner__message', texts.type])}
+            role="status"
+            aria-live="polite"
           >
             {vendorsMessage}
           </div>
-          <ul className="consent__banner__list">
-            <li className="consent__banner__item">
+          <ul
+            className="consent__banner__list"
+            role="list"
+          >
+            <li
+              className="consent__banner__item"
+              role="listitem"
+            >
               <Bar
                 leftPartSlot={
                   <div className={layouts['snackbar--large']}>
@@ -186,6 +214,8 @@ export default class Consent extends React.Component<
                           texts['type--large'],
                           texts.type,
                         ])}
+                        role="heading"
+                        aria-level={2}
                       >
                         {validVendor.name}
                       </div>
@@ -194,6 +224,7 @@ export default class Consent extends React.Component<
                           'consent__banner__item__description',
                           texts.type,
                         ])}
+                        role="note"
                       >
                         {validVendor.description}
                       </div>
@@ -201,7 +232,12 @@ export default class Consent extends React.Component<
                   </div>
                 }
                 rightPartSlot={
-                  <div className="consent__banner__item__action">
+                  <div
+                    className="consent__banner__item__action"
+                    role="switch"
+                    aria-checked={validVendor.isConsented}
+                    aria-readonly="true"
+                  >
                     <Select
                       id={`legit-user-consent`}
                       type="SWITCH_BUTTON"
@@ -218,11 +254,15 @@ export default class Consent extends React.Component<
               <li
                 key={index}
                 className="consent__banner__item"
+                role="listitem"
               >
                 <Bar
                   leftPartSlot={
                     <div className={layouts['snackbar--large']}>
-                      <div className="consent__banner__item__icon">
+                      <div
+                        className="consent__banner__item__icon"
+                        role="img"
+                      >
                         <Thumbnail
                           src={vendor.icon}
                           width="32px"
@@ -236,6 +276,8 @@ export default class Consent extends React.Component<
                             texts['type--large'],
                             texts.type,
                           ])}
+                          role="heading"
+                          aria-level={2}
                         >
                           {vendor.name}
                         </div>
@@ -244,6 +286,7 @@ export default class Consent extends React.Component<
                             'consent__banner__item__description',
                             texts.type,
                           ])}
+                          role="note"
                         >
                           {vendor.description}
                         </div>
@@ -251,7 +294,11 @@ export default class Consent extends React.Component<
                     </div>
                   }
                   rightPartSlot={
-                    <div className="consent__banner__item__action">
+                    <div
+                      className="consent__banner__item__action"
+                      role="switch"
+                      aria-checked={vendorsConsent[index].isConsented}
+                    >
                       <Select
                         id={`change-${vendor.id}-user-consent`}
                         type="SWITCH_BUTTON"
@@ -279,6 +326,8 @@ export default class Consent extends React.Component<
                   isVendorsOpen: !isVendorsOpen,
                 })
               }
+              aria-label={lessDetailsLabel}
+              aria-expanded={!isVendorsOpen}
             />
           }
           rightPartSlot={
@@ -287,16 +336,19 @@ export default class Consent extends React.Component<
                 'consent__banner__actions',
                 layouts['snackbar--medium'],
               ])}
+              role="group"
             >
               <Button
                 type="secondary"
                 label={consentActions.deny.label}
                 action={this.onDenyAll}
+                aria-label={consentActions.deny.label}
               />
               <Button
                 type="primary"
                 label={consentActions.save.label}
                 action={this.onPartialConsent}
+                aria-label={consentActions.save.label}
               />
             </div>
           }

@@ -54,6 +54,8 @@ export default class ActionsItem extends React.Component<ActionsItemProps> {
           isInteractive && 'actions-item--interactive',
         ])}
         data-id={id}
+        role="listitem"
+        aria-label={name}
         tabIndex={isInteractive ? 0 : -1}
         onMouseDown={isInteractive ? action : undefined}
         onKeyDown={(e) => {
@@ -63,13 +65,23 @@ export default class ActionsItem extends React.Component<ActionsItemProps> {
         }}
       >
         {src !== undefined && (
-          <div className="actions-item__asset">
+          <div
+            className="actions-item__asset"
+            role="presentation"
+          >
             <Thumbnail src={src} />
           </div>
         )}
-        <div className="actions-item__content">
+        <div
+          className="actions-item__content"
+          role="group"
+        >
           <div>
-            <div className={doClassnames([texts.type, texts['type--large']])}>
+            <div
+              className={doClassnames([texts.type, texts['type--large']])}
+              role="heading"
+              aria-level={2}
+            >
               {name}
               {indicator !== undefined && (
                 <Chip state={indicator.status}>{indicator.label}</Chip>
@@ -86,7 +98,12 @@ export default class ActionsItem extends React.Component<ActionsItemProps> {
             </div>
           </div>
           {complementSlot !== undefined && (
-            <div className="actions-item__complement">{complementSlot}</div>
+            <div
+              className="actions-item__complement"
+              role="complementary"
+            >
+              {complementSlot}
+            </div>
           )}
           {user !== undefined && (
             <Avatar
@@ -96,7 +113,12 @@ export default class ActionsItem extends React.Component<ActionsItemProps> {
           )}
         </div>
         {actionsSlot !== undefined && (
-          <div className={layouts['snackbar--medium']}>{actionsSlot}</div>
+          <div
+            className={layouts['snackbar--medium']}
+            role="group"
+          >
+            {actionsSlot}
+          </div>
         )}
       </li>
     )

@@ -144,6 +144,13 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
         }}
         data-id={id}
         data-value={value}
+        role="slider"
+        aria-valuemin={min ? parseFloat(min) : undefined}
+        aria-valuemax={max ? parseFloat(max) : undefined}
+        aria-valuenow={typeof value === 'number' ? value : parseFloat(value)}
+        aria-valuetext={this.transformStopValue(value).toString()}
+        aria-disabled={isDisabled || isBlocked}
+        aria-readonly={isBlocked}
         tabIndex={!(isBlocked || isDisabled) ? 0 : -1}
         onKeyDown={(e) =>
           !(isBlocked || isDisabled)
@@ -186,12 +193,16 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
               texts['type--inverse'],
               'knob__tooltip',
             ])}
+            role="status"
           >
             {this.transformStopValue(value)}
           </div>
         )}
         {isStopInputOpen && (
-          <div className="knob__input">
+          <div
+            className="knob__input"
+            role="group"
+          >
             <Input
               type="NUMBER"
               value={(stopInputValue as number).toFixed(1) ?? '0'}
@@ -215,11 +226,19 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
             />
           </div>
         )}
-        <div className={doClassnames([texts.type, 'knob__label'])}>
+        <div
+          className={doClassnames([texts.type, 'knob__label'])}
+          role="presentation"
+          aria-hidden="true"
+        >
           {shortId}
           {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>
-        <div className="knob__graduation"></div>
+        <div
+          className="knob__graduation"
+          role="presentation"
+          aria-hidden="true"
+        ></div>
         {helper !== undefined && isTooltipOpen && (
           <Tooltip type={helper.type}>{helper.label}</Tooltip>
         )}

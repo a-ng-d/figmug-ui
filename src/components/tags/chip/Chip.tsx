@@ -37,10 +37,15 @@ const Chip = (props: ChipProps) => {
       onMouseLeave={() => {
         if (preview !== undefined) setIsPreviewVisible(false)
       }}
-      role="chip"
+      role="status"
     >
       {props.leftSlot && (
-        <div className="chip__left-slot">{props.leftSlot}</div>
+        <div
+          className="chip__left-slot"
+          role="presentation"
+        >
+          {props.leftSlot}
+        </div>
       )}
       <div
         className={doClassnames([
@@ -48,24 +53,39 @@ const Chip = (props: ChipProps) => {
           texts.type,
           texts['type--truncated'],
         ])}
+        role="presentation"
       >
         {children}
       </div>
       {props.rightSlot && (
-        <div className="chip__right-slot">{props.rightSlot}</div>
+        <div
+          className="chip__right-slot"
+          role="presentation"
+        >
+          {props.rightSlot}
+        </div>
       )}
       {isPreviewVisible && (
         <Tooltip
           pin={preview?.pin}
           type="WITH_IMAGE"
         >
-          <div className={layouts['snackbar--medium']}>
+          <div
+            className={layouts['snackbar--medium']}
+            role="presentation"
+          >
             <img
               src={preview?.image}
               alt={preview?.text}
               className="tooltip__image"
+              role="presentation"
             />
-            <span className="tooltip__text">{preview?.text}</span>
+            <span
+              className="tooltip__text"
+              role="presentation"
+            >
+              {preview?.text}
+            </span>
           </div>
         </Tooltip>
       )}

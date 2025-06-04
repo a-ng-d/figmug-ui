@@ -62,10 +62,19 @@ const PopIn = (props: PopInProps) => {
     <div
       id={id}
       className={doClassnames(['popin', type === 'PANEL' && 'popin--panel'])}
+      role={type === 'PANEL' ? 'complementary' : 'dialog'}
+      aria-modal="true"
     >
-      <div className="popin__header">
-        <div className="popin__title">
+      <div
+        className="popin__header"
+        role="presentation"
+      >
+        <div
+          className="popin__title"
+          role="presentation"
+        >
           <span
+            id={`${id}-title`}
             className={doClassnames([
               texts.type,
               texts['type--large'],
@@ -80,7 +89,6 @@ const PopIn = (props: PopInProps) => {
         <Button
           type="icon"
           icon="close"
-          feature="CLOSE_HIGHLIGHT"
           action={onClose}
         />
       </div>
@@ -90,21 +98,35 @@ const PopIn = (props: PopInProps) => {
           isLoading && 'popin__content--loading',
           isMessage && 'popin__content--message',
         ])}
+        role="region"
+        aria-busy={isLoading}
       >
         {isLoading ? (
           <Icon
             type="PICTO"
             iconName="spinner"
+            role="status"
           />
         ) : (
           children
         )}
       </div>
       {(actions !== undefined || indicator !== undefined) && (
-        <div className="popin__footer">
-          <div className="popin__extra">
+        <div
+          className="popin__footer"
+          role="toolbar"
+        >
+          <div
+            className="popin__extra"
+            role="group"
+          >
             {indicator !== undefined && (
-              <div className={texts.label}>{indicator}</div>
+              <div
+                className={texts.label}
+                role="status"
+              >
+                {indicator}
+              </div>
             )}
             {select !== undefined && (
               <Select
@@ -117,7 +139,10 @@ const PopIn = (props: PopInProps) => {
               />
             )}
           </div>
-          <div className="popin__actions">
+          <div
+            className="popin__actions"
+            role="group"
+          >
             {actions?.secondary !== undefined && (
               <Button
                 type="secondary"

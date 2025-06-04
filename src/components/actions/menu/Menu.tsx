@@ -186,6 +186,10 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
           `menu--${alignment?.toLocaleLowerCase().replace('_', '-')}`,
         ])}
         ref={this.selectMenuRef}
+        role="menu"
+        aria-label={label}
+        aria-expanded={isMenuOpen}
+        aria-controls={`menu-${id}`}
       >
         {type === 'ICON' ? (
           <Button
@@ -201,6 +205,10 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
             action={
               !(state === 'DISABLED' || isBlocked) ? this.onOpenMenu : undefined
             }
+            aria-label={label}
+            aria-haspopup="true"
+            aria-controls={`menu-${id}`}
+            aria-expanded={isMenuOpen}
           />
         ) : (
           <Button
@@ -214,18 +222,25 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
             action={
               !(state === 'DISABLED' || isBlocked) ? this.onOpenMenu : undefined
             }
+            aria-label={label}
+            aria-haspopup="true"
+            aria-controls={`menu-${id}`}
+            aria-expanded={isMenuOpen}
           />
         )}
         {(() => {
           if (isMenuOpen)
             return (
               <div
+                id={`menu-${id}`}
                 className="floating-menu"
                 style={{
                   position: 'absolute',
                   zIndex: 99,
                 }}
                 ref={this.listRef}
+                role="menu"
+                aria-orientation="vertical"
               >
                 <ActionsList
                   options={options}

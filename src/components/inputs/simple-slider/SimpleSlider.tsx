@@ -147,9 +147,19 @@ export default class SimpleSlider extends React.Component<
     const { isTooltipDisplay } = this.state
 
     return (
-      <div className="simple-slider">
+      <div
+        className="simple-slider"
+        role="group"
+        aria-label={label}
+      >
         <div
           className="simple-slider__range"
+          role="slider"
+          aria-valuemin={min}
+          aria-valuemax={max}
+          aria-valuenow={value}
+          aria-valuetext={value.toString()}
+          aria-label={label}
           style={{
             background: `linear-gradient(90deg, ${colors.min}, ${colors.max})`,
           }}

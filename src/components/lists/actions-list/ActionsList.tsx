@@ -110,10 +110,14 @@ export default class ActionsList extends React.Component<
     const { subMenuRef } = this.props
 
     return (
-      <div className="select-menu__submenu">
+      <div
+        className="select-menu__submenu"
+        role="menu"
+      >
         <ul
           className="select-menu__menu select-menu__menu--active"
           ref={subMenuRef}
+          role="menu"
         >
           {options?.map((option, index) => {
             const isActive =
@@ -147,6 +151,7 @@ export default class ActionsList extends React.Component<
           'select-menu__item',
           'select-menu__item--disabled',
         ])}
+        aria-disabled="true"
       >
         <span
           className={doClassnames([
@@ -154,6 +159,7 @@ export default class ActionsList extends React.Component<
             texts.type,
             'select-menu__item__label',
           ])}
+          aria-hidden="true"
         >
           {option.label}
         </span>
@@ -183,6 +189,12 @@ export default class ActionsList extends React.Component<
         data-feature={option.feature}
         data-role={'OPTION'}
         tabIndex={option.isBlocked ? -1 : 0}
+        aria-selected={
+          selected?.split(', ').filter((value) => value === option.value)
+            .length === 1
+        }
+        aria-disabled={option.isBlocked}
+        aria-label={option.label}
         onKeyDown={(e) => {
           if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
             option.action && option.action(e)
@@ -241,6 +253,10 @@ export default class ActionsList extends React.Component<
         data-is-blocked={option.isBlocked}
         data-role={'GROUP'}
         tabIndex={option.isBlocked ? -1 : 0}
+        aria-expanded={openedGroup === option.value}
+        aria-disabled={option.isBlocked}
+        aria-label={option.label}
+        aria-haspopup="true"
         onKeyDown={(e) => {
           if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked)
             return this.setState({ openedGroup: option.value ?? 'EMPTY' })
@@ -298,6 +314,12 @@ export default class ActionsList extends React.Component<
         data-feature={option.feature}
         data-role={'OPTION'}
         tabIndex={option.isBlocked ? -1 : 0}
+        aria-selected={
+          selected?.split(', ').filter((value) => value === option.value)
+            .length === 1
+        }
+        aria-disabled={option.isBlocked}
+        aria-label={option.label}
         onKeyDown={(e) => {
           if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
             option.action && option.action(e)

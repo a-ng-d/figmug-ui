@@ -9,12 +9,13 @@ export type SectionTitleProps = {
   label: string
   indicator?: string | number
   helper?: string
+  id?: string
 }
 
 const SectionTitle = (props: SectionTitleProps) => {
   const [isTooltipVisible, setTooltipState] = useState(false)
 
-  const { label, indicator, helper } = props
+  const { label, indicator, helper, id } = props
 
   return (
     <div className="section-title">
@@ -24,6 +25,7 @@ const SectionTitle = (props: SectionTitleProps) => {
           texts['section-title'],
           texts['type--truncated'],
         ])}
+        id={id}
       >
         {label}
       </div>

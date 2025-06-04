@@ -28,11 +28,13 @@ const Thumbnail = (props: ThumbnailProps) => {
           width: width,
           height: height,
         }}
+        role="img"
       >
         <Icon
           type="PICTO"
           iconName="warning"
           customClassName="thumbnail__error"
+          aria-hidden="true"
         />
       </div>
     )
@@ -44,12 +46,15 @@ const Thumbnail = (props: ThumbnailProps) => {
         width: width,
         height: height,
       }}
+      role="img"
+      aria-busy={isLoading}
     >
       {isLoading ? (
         <Icon
           type="PICTO"
           iconName="spinner"
           customClassName="thumbnail__loader"
+          role="status"
         />
       ) : (
         <img
@@ -57,6 +62,7 @@ const Thumbnail = (props: ThumbnailProps) => {
           src={src}
           loading="lazy"
           alt=""
+          role="presentation"
         />
       )}
     </div>

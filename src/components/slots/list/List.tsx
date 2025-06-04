@@ -51,11 +51,14 @@ export const List = (props: ListProps) => {
         isFullHeight && 'list--full-height',
       ])}
       onScroll={onScroll}
+      role="list"
+      aria-busy={isLoading}
     >
       {isLoading ? (
         <Icon
           type="PICTO"
           iconName="spinner"
+          role="status"
         />
       ) : (
         children

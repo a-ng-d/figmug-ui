@@ -12,11 +12,25 @@ const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
   const { label, shortcuts = [], separator = '' } = props
 
   return (
-    <li className="keyboard-shortcut-item">
-      <div className="keyboard-shortcut-item__label">
-        <span className={texts.type}>{label}</span>
+    <li
+      className="keyboard-shortcut-item"
+      role="listitem"
+    >
+      <div
+        className="keyboard-shortcut-item__label"
+        role="presentation"
+      >
+        <span
+          className={texts.type}
+          aria-label={label}
+        >
+          {label}
+        </span>
       </div>
-      <div className="keyboard-shortcut-item__keys">
+      <div
+        className="keyboard-shortcut-item__keys"
+        role="group"
+      >
         <>
           {shortcuts[0].map((shortcut, index) => (
             <span
@@ -25,6 +39,7 @@ const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
                 texts.type,
               ])}
               key={index}
+              role="presentation"
             >
               {shortcut}
             </span>
@@ -36,6 +51,8 @@ const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
                   'keyboard-shortcut-item__separator',
                   texts.type,
                 ])}
+                role="presentation"
+                aria-hidden="true"
               >
                 {separator}
               </span>
@@ -46,6 +63,7 @@ const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
                     texts.type,
                   ])}
                   key={index}
+                  role="presentation"
                 >
                   {shortcut}
                 </span>

@@ -35,21 +35,37 @@ const FormItem = (props: FormItemProps) => {
         shouldFill && 'form-item--fill',
         isBlocked && 'form-item--blocked',
       ])}
+      role="group"
+      aria-describedby={helper ? `${id}-helper` : undefined}
     >
-      <div className="form-item__row">
+      <div
+        className="form-item__row"
+        role="presentation"
+      >
         {label !== undefined && (
           <label
             className={texts.type}
             htmlFor={id}
+            id={`${id}-label`}
           >
             {label}
           </label>
         )}
-        <div className="form-item__input">{children}</div>
+        <div
+          className="form-item__input"
+          role="presentation"
+        >
+          {children}
+        </div>
         {isNew && <Chip>New</Chip>}
       </div>
       {helper !== undefined && (
-        <div className="form-item__helper">
+        <div
+          className="form-item__helper"
+          id={`${id}-helper`}
+          role="alert"
+          aria-live="polite"
+        >
           <Message
             icon={helper.type === 'INFO' ? 'info' : 'warning'}
             messages={[helper.message]}

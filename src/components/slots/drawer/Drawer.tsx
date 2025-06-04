@@ -213,7 +213,7 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
               }),
         }}
         className={doClassnames(['drawer', isScrolling && 'drawer--scrolling'])}
-        role="layout"
+        role="complementary"
         ref={this.drawerRef}
       >
         <div
@@ -226,8 +226,15 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
           ])}
           onMouseDown={this.onGrab}
           onClick={this.clickHandler}
+          role="separator"
+          aria-orientation={
+            direction === 'VERTICAL' ? 'vertical' : 'horizontal'
+          }
+          aria-valuemin={minSize.value}
+          aria-valuemax={maxSize.value}
+          aria-valuenow={drawerSize.value}
         />
-        {children}
+        <div role="region">{children}</div>
       </div>
     )
   }
