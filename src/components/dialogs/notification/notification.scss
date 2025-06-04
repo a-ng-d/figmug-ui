@@ -12,8 +12,8 @@
   cursor: default;
   inset: 0 0 0 0;
   padding: var(--notification-padding);
-  user-select: none;
   pointer-events: none;
+  user-select: none;
 
   & > div {
     pointer-events: auto;

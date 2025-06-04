@@ -684,13 +684,7 @@ function App() {
 import { Chip } from 'figmug-ui'
 
 function App() {
-  return (
-    <Chip
-      state="ACTIVE"
-    >
-      New
-    </Chip>
-  )
+  return <Chip state="ACTIVE">New</Chip>
 }
 ```
 
@@ -711,11 +705,7 @@ function App() {
           isRounded={true}
         />
       }
-      rightSlot={
-        <div style={{ fontSize: '11px' }}>
-          ✔︎
-        </div>
-      }
+      rightSlot={<div style={{ fontSize: '11px' }}>✔︎</div>}
     >
       AA
     </Chip>
@@ -765,9 +755,7 @@ function App() {
       />
 
       {/* Default Avatar */}
-      <Avatar
-        isInverted={false}
-      />
+      <Avatar isInverted={false} />
     </>
   )
 }

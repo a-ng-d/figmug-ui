@@ -1,4 +1,3 @@
-
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { defineConfig } from 'vitest/config'
@@ -6,7 +5,6 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css'
 import dts from 'vite-plugin-dts'
 import { globSync } from 'glob'
 import react from '@vitejs/plugin-react'
-
 
 export default defineConfig({
   plugins: [

@@ -64,7 +64,8 @@
   --select-toggle-height: 10px;
   --select-toggle-width: 22px;
   --select-toggle-radius: var(--size-xxsmall);
-  --select-toggle-margin: var(--size-xunit) var(--size-xxsmall) 0 var(--size-neg-xxsmall);
+  --select-toggle-margin: var(--size-xunit) var(--size-xxsmall) 0
+    var(--size-neg-xxsmall);
   --select-toggle-background-color: var(--figma-color-bg-disabled);
   --select-toggle-border: var(--size-unit) solid var(--figma-color-bg-disabled);
   --select-toggle-border-color-secondary: transparent;

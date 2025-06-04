@@ -7,8 +7,8 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  overflow: hidden;
   background-color: var(--layout-background-color);
+  overflow: hidden;
 
   &--full-width {
     width: 100%;

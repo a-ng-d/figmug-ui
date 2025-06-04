@@ -17,7 +17,8 @@
   --select-box-height: var(--size-xsmall);
   --select-box-width: var(--size-xsmall);
   --select-box-radius: var(--border-radius-med);
-  --select-box-margin: var(--size-neg-unit) var(--size-xxsmall) 0 var(--size-neg-xxsmall);
+  --select-box-margin: var(--size-neg-unit) var(--size-xxsmall) 0
+    var(--size-neg-xxsmall);
   --select-box-border: var(--size-unit) solid var(--figma-color-border);
   --select-box-background-color: var(--figma-color-bg-secondary);
   --select-box-border-color-secondary: transparent;
@@ -62,7 +63,8 @@
   --select-toggle-height: 10px;
   --select-toggle-width: 22px;
   --select-toggle-radius: var(--size-xxsmall);
-  --select-toggle-margin: var(--size-xunit) var(--size-xxsmall) 0 var(--size-neg-xxsmall);
+  --select-toggle-margin: var(--size-xunit) var(--size-xxsmall) 0
+    var(--size-neg-xxsmall);
   --select-toggle-background-color: var(--figma-color-bg-secondary);
   --select-toggle-border: var(--size-unit) solid var(--figma-color-border);
   --select-toggle-border-color-secondary: transparent;
@@ -125,7 +127,8 @@
   --select-button-inner-height: var(--size-xxsmall);
   --select-button-inner-width: var(--size-xxsmall);
   --select-button-radius: var(--border-radius-full);
-  --select-button-margin: var(--size-neg-unit) var(--size-xxsmall) 0 var(--size-neg-xxsmall);
+  --select-button-margin: var(--size-neg-unit) var(--size-xxsmall) 0
+    var(--size-neg-xxsmall);
   --select-button-inner-top: var(--size-xxxsmall);
   --select-button-inner-left: 5px;
   --select-button-icon-color: var(--figma-color-icon);

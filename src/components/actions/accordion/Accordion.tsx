@@ -85,9 +85,7 @@ const Accordion = (props: AccordionProps) => {
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
-            if (!isExpanded && !isBlocked) 
-              onAdd(e)
-            
+            if (!isExpanded && !isBlocked) onAdd(e)
           }
         }}
       >
@@ -154,4 +152,3 @@ const Accordion = (props: AccordionProps) => {
 }
 
 export default Accordion
-

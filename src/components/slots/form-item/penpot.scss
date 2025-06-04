@@ -1,6 +1,7 @@
 :root[data-theme='penpot'] {
   --form-item-gap: var(--size-xxsmall);
-  --form-item-padding: var(--size-xunit) 0 var(--size-xxxsmall) var(--size-xxsmall);
+  --form-item-padding: var(--size-xunit) 0 var(--size-xxxsmall)
+    var(--size-xxsmall);
   --form-item-text-color: var(--color-foreground-primary);
   --form-item-label-width: 112px;
   --form-item-helper-padding: 0 var(--size-xxsmall);

@@ -7,6 +7,7 @@
   align-items: center;
   gap: var(--section-title-gap);
   cursor: default;
+  box-sizing: border-box;
   padding: var(--section-title-padding);
   width: 100%;
   height: var(--section-title-height);
@@ -17,7 +18,6 @@
   font-family: var(--section-title-text-font-family);
   letter-spacing: var(--section-title-text-letter-spacing);
   user-select: none;
-  box-sizing: border-box;
 
   &__title {
     text-transform: var(--section-title-text-transform);

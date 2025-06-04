@@ -9,9 +9,9 @@
   align-items: center;
   gap: var(--bar-gap);
   box-sizing: border-box;
+  background-color: var(--bar-background-color);
   padding: var(--bar-padding);
   min-height: var(--bar-min-height);
-  background-color: var(--bar-background-color);
 
   &.bar--compact {
     height: var(--bar-height-compact);

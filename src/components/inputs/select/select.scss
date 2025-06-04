@@ -270,6 +270,7 @@
 
   &__label {
     display: flex;
+    position: relative;
     align-items: start;
     margin-left: var(--select-radio-margin);
     padding: var(--select-radio-padding);
@@ -281,7 +282,6 @@
     font-family: var(--select-text-font-family);
     letter-spacing: var(--select-text-letter-spacing);
     user-select: none;
-    position: relative;
 
     &:before {
       display: block;
