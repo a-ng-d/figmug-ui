@@ -13,4 +13,9 @@
   inset: 0 0 0 0;
   padding: var(--notification-padding);
   user-select: none;
+  pointer-events: none;
+
+  & > div {
+    pointer-events: auto;
+  }
 }

@@ -1,4 +1,3 @@
-import { SyntheticEvent } from 'react'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import SemanticMessage from '../semantic-message/SemanticMessage'
 import Button from '@components/actions/button/Button'
@@ -7,22 +6,23 @@ import './notification.scss'
 export interface NotificationProps {
   type: 'NEUTRAL' | 'INFO' | 'SUCCESS' | 'WARNING' | 'ERROR'
   message: string
+  timer?: number
   onClose: React.ReactEventHandler
 }
 
 const Notification = (props: NotificationProps) => {
-  const { type, message, onClose } = props
+  const { type, message, timer, onClose } = props
 
-  const closeHandler = (e: SyntheticEvent) => {
-    if (e.currentTarget === e.target) onClose(e)
-  }
+  if (timer !== undefined && timer <= 0)
+    setTimeout(() => {
+      onClose
+    }, timer)
 
   return (
     <div
       className={doClassnames(['notification'])}
       role="dialog"
       tabIndex={-1}
-      onMouseDown={closeHandler}
     >
       <SemanticMessage
         type={type}
