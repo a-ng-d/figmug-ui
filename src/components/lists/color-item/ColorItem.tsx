@@ -1,7 +1,7 @@
 import texts from '@styles/texts/texts.module.scss'
-import { doClassnames } from '@a_ng_d/figmug-utils'
-import Button from '@components/actions/button/Button'
 import ColorChip from '@components/tags/color-chip/ColorChip'
+import Button from '@components/actions/button/Button'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './color-item.scss'
 
 export type ColorItemProps = {

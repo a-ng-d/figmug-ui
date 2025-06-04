@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import texts from '@styles/texts/texts.module.scss'
+import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import './card.scss'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 

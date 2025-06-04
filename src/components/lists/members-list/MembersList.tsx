@@ -1,8 +1,8 @@
 import React from 'react'
-import Tooltip from '@components/tags/tooltip/Tooltip'
 import texts from '@styles/texts/texts.module.scss'
-import Avatar from '@components/assets/avatar/Avatar'
+import Tooltip from '@components/tags/tooltip/Tooltip'
 import SimpleItem from '@components/slots/simple-item/SimpleItem'
+import Avatar from '@components/assets/avatar/Avatar'
 import './members-list.scss'
 
 export interface MembersListProps {

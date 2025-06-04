@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { doClassnames } from '@a_ng_d/figmug-utils'
 import texts from '@styles/texts/texts.module.scss'
 import layouts from '@styles/layouts.module.scss'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import Tooltip from '../tooltip/Tooltip'
 import './chip.scss'
 

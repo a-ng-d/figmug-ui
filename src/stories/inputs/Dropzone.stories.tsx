@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import Dropzone from '@components/inputs/dropzone/Dropzone'
 import { fn } from '@storybook/test'
+import Dropzone from '@components/inputs/dropzone/Dropzone'
 
 const meta: Meta<typeof Dropzone> = {
   title: 'Components/Inputs/Dropzone',

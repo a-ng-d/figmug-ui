@@ -1,10 +1,10 @@
 import React from 'react'
+import Tooltip from '@components/tags/tooltip/Tooltip'
+import Chip from '@components/tags/chip/Chip'
+import Icon from '@components/assets/icon/Icon'
+import Button from '@components/actions/button/Button'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import type { IconList } from '@tps/icon.types'
-import Button from '@components/actions/button/Button'
-import Icon from '@components/assets/icon/Icon'
-import Chip from '@components/tags/chip/Chip'
-import Tooltip from '@components/tags/tooltip/Tooltip'
 import './input.scss'
 
 export interface InputProps {

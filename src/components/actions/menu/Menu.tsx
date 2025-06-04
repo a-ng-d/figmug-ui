@@ -1,8 +1,8 @@
 import React from 'react'
-import { doClassnames } from '@a_ng_d/figmug-utils'
-import type { IconList } from '@tps/icon.types'
-import type { DropdownOption } from '@tps/list.types'
 import ActionsList from '@components/lists/actions-list/ActionsList'
+import { doClassnames } from '@a_ng_d/figmug-utils'
+import type { DropdownOption } from '@tps/list.types'
+import type { IconList } from '@tps/icon.types'
 import Button from '../button/Button'
 import './menu.scss'
 

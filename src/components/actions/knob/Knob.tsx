@@ -1,9 +1,9 @@
 import React from 'react'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import texts from '@styles/texts/texts.module.scss'
+import Tooltip from '@components/tags/tooltip/Tooltip'
 import Chip from '@components/tags/chip/Chip'
 import Input from '@components/inputs/input/Input'
-import Tooltip from '@components/tags/tooltip/Tooltip'
-import texts from '@styles/texts/texts.module.scss'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './knob.scss'
 
 export interface KnobProps {

@@ -1,7 +1,7 @@
-import { doClassnames } from '@a_ng_d/figmug-utils'
 import { IconList } from '@tps/icon.types'
-import SectionTitle from '@components/assets/section-title/SectionTitle'
 import Chip from '@components/tags/chip/Chip'
+import SectionTitle from '@components/assets/section-title/SectionTitle'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import Button from '../button/Button'
 import './accordion.scss'
 
@@ -85,9 +85,9 @@ const Accordion = (props: AccordionProps) => {
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
-            if (!isExpanded && !isBlocked) {
+            if (!isExpanded && !isBlocked) 
               onAdd(e)
-            }
+            
           }
         }}
       >

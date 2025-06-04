@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { fn } from '@storybook/test'
-import Button from '@components/actions/button/Button'
-import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
 import layouts from '@styles/layouts.module.scss'
+import { fn } from '@storybook/test'
+import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
+import Button from '@components/actions/button/Button'
 
 const mock = fn()
 

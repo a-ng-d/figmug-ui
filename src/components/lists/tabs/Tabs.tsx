@@ -1,8 +1,8 @@
-import texts from '@styles/texts/texts.module.scss'
-import { doClassnames } from '@a_ng_d/figmug-utils'
 import './tabs.scss'
 import { IconList } from '@tps/icon.types'
+import texts from '@styles/texts/texts.module.scss'
 import Icon from '@components/assets/icon/Icon'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 
 export interface TabsProps {
   tabs: Array<{

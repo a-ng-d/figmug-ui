@@ -1,6 +1,6 @@
 import React from 'react'
-import DraggableItem from '../draggable-item/DraggableItem'
 import { doClassnames } from '@a_ng_d/figmug-utils'
+import DraggableItem from '../draggable-item/DraggableItem'
 import './sortable-list.scss'
 
 interface SelectedColor {

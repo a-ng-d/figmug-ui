@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
+import { IconList } from '@tps/icon.types'
 import { fn } from '@storybook/test'
 import Button from '@components/actions/button/Button'
-import { IconList } from '@tps/icon.types'
 
 const icons: Array<IconList> = [
   'adjust',

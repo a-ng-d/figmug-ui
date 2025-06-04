@@ -1,6 +1,6 @@
 import texts from '@styles/texts/texts.module.scss'
-import Message from '@components/dialogs/message/Message'
 import Chip from '@components/tags/chip/Chip'
+import Message from '@components/dialogs/message/Message'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import './form-item.scss'
 

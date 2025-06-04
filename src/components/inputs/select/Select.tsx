@@ -1,6 +1,6 @@
 import React from 'react'
-import { doClassnames } from '@a_ng_d/figmug-utils'
 import Chip from '@components/tags/chip/Chip'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './select.scss'
 
 export interface SelectProps {

@@ -1,7 +1,7 @@
-import { doClassnames, doMap } from '@a_ng_d/figmug-utils'
 import React from 'react'
-import Button from '@components/actions/button/Button'
 import DraggableWindow from '@components/slots/draggable-window/DraggableWindow'
+import Button from '@components/actions/button/Button'
+import { doClassnames, doMap } from '@a_ng_d/figmug-utils'
 import './draggable-item.scss'
 
 export interface DraggableItemProps {

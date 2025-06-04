@@ -1,12 +1,12 @@
 import React from 'react'
-import { doClassnames } from '@a_ng_d/figmug-utils'
-import layouts from '@styles/layouts.module.scss'
 import texts from '@styles/texts/texts.module.scss'
-import type { ConsentConfiguration } from '@tps/consent.types'
-import Button from '@components/actions/button/Button'
-import Thumbnail from '@components/assets/thumbnail/Thumbnail'
-import Select from '@components/inputs/select/Select'
+import layouts from '@styles/layouts.module.scss'
 import Bar from '@components/slots/bar/Bar'
+import Select from '@components/inputs/select/Select'
+import Thumbnail from '@components/assets/thumbnail/Thumbnail'
+import Button from '@components/actions/button/Button'
+import { doClassnames } from '@a_ng_d/figmug-utils'
+import type { ConsentConfiguration } from '@tps/consent.types'
 import './consent.scss'
 
 export interface ConsentProps {

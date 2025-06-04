@@ -1,6 +1,6 @@
-import { useArgs } from '@storybook/preview-api'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
+import { useArgs } from '@storybook/preview-api'
 import SimpleSlider from '@components/inputs/simple-slider/SimpleSlider'
 
 const meta: Meta<typeof SimpleSlider> = {

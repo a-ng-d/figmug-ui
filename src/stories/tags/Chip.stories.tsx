@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import Chip from '@components/tags/chip/Chip'
 import ColorChip from '@components/tags/color-chip/ColorChip'
+import Chip from '@components/tags/chip/Chip'
 
 const meta = {
   title: 'Components/Tags/Chip',

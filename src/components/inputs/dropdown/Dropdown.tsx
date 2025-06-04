@@ -1,10 +1,10 @@
 import React from 'react'
+import texts from '@styles/texts/texts.module.scss'
+import Chip from '@components/tags/chip/Chip'
+import ActionsList from '@components/lists/actions-list/ActionsList'
+import Icon from '@components/assets/icon/Icon'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import type { DropdownOption } from '@tps/list.types'
-import Icon from '@components/assets/icon/Icon'
-import ActionsList from '@components/lists/actions-list/ActionsList'
-import Chip from '@components/tags/chip/Chip'
-import texts from '@styles/texts/texts.module.scss'
 import './dropdown.scss'
 
 export interface DropdownProps {

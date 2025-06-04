@@ -1,7 +1,7 @@
-import { useArgs } from '@storybook/client-api'
 import type { Meta, StoryObj } from '@storybook/react'
-import Dropdown from '@components/inputs/dropdown/Dropdown'
+import { useArgs } from '@storybook/client-api'
 import * as ListStories from '@stories/lists/List.stories'
+import Dropdown from '@components/inputs/dropdown/Dropdown'
 
 const meta = {
   title: 'Components/Inputs/Dropdown',

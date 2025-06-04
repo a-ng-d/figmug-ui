@@ -1,11 +1,11 @@
-import { useArgs } from '@storybook/preview-api'
 import type { Meta, StoryObj } from '@storybook/react'
-import { fn } from '@storybook/test'
-import Dialog from '@components/dialogs/dialog/Dialog'
-import Input from '@components/inputs/input/Input'
-import FormItem from '@components/slots/form-item/FormItem'
 import texts from '@styles/texts/texts.module.scss'
+import { fn } from '@storybook/test'
+import { useArgs } from '@storybook/preview-api'
+import FormItem from '@components/slots/form-item/FormItem'
+import Input from '@components/inputs/input/Input'
 import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
+import Dialog from '@components/dialogs/dialog/Dialog'
 
 const onBoardingSample = () => {
   return (

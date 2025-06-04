@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { doClassnames } from '@a_ng_d/figmug-utils'
 import SectionTitle from '@components/assets/section-title/SectionTitle'
-import Bar from '../bar/Bar'
 import Button from '@components/actions/button/Button'
+import { doClassnames } from '@a_ng_d/figmug-utils'
+import Bar from '../bar/Bar'
+
 import './draggable-window.scss'
 
 export interface DraggableWindowProps {

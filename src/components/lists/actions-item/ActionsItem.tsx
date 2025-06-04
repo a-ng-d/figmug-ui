@@ -1,10 +1,10 @@
 import React from 'react'
-import { doClassnames } from '@a_ng_d/figmug-utils'
-import layouts from '@styles/layouts.module.scss'
 import texts from '@styles/texts/texts.module.scss'
-import Thumbnail from '@components/assets/thumbnail/Thumbnail'
+import layouts from '@styles/layouts.module.scss'
 import Chip from '@components/tags/chip/Chip'
+import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import Avatar from '@components/assets/avatar/Avatar'
+import { doClassnames } from '@a_ng_d/figmug-utils'
 import './actions-item.scss'
 
 export interface ActionsItemProps {
