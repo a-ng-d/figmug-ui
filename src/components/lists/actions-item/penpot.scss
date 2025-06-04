@@ -3,7 +3,7 @@
   --actions-item-gap: var(--size-xsmall);
   --actions-item-padding: var(--size-xsmall) var(--size-xsmall)
     var(--size-xsmall) var(--size-small);
-  --actions-item-border-color: var(--color-background-tertiary);
+  --actions-item-border-color: var(--color-background-quaternary);
   --actions-item-border-width: var(--size-unit);
   --actions-item-background-color: var(--color-background-primary);
   --actions-item-border-secondary-width: 0;
@@ -17,7 +17,7 @@
   --actions-item-actions-gap: var(--size-xxsmall);
 
   /* States */
-  --actions-item-background-color-hover: var(--color-background-tertiary);
+  --actions-item-background-color-hover: var(--color-background-quaternary);
 
   --actions-item-background-color-focus: var(--color-accent-primary-muted);
   --actions-item-border-secondary-width-focus: var(--size-unit);
