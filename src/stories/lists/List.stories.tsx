@@ -3,7 +3,7 @@ import { fn } from '@storybook/test'
 import ActionsList from '@components/lists/actions-list/ActionsList'
 
 const meta = {
-  title: 'Components/Lists/ActionsList',
+  title: 'Components/Lists/Actions List',
   component: ActionsList,
   parameters: {
     layout: 'centered',

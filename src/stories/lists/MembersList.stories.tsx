@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import MembersList from '@components/lists/members-list/MembersList'
 
 const meta: Meta<typeof MembersList> = {
-  title: 'Components/Lists/MembersList',
+  title: 'Components/Lists/Members List',
   component: MembersList,
   parameters: {
     layout: 'centered',
