@@ -13,10 +13,22 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const InfoNotification: Story = {
+export const SingleMessage: Story = {
   args: {
     type: 'INFO',
     message: 'The file has been saved successfully',
+    onClose: fn(),
+  },
+  argTypes: {
+    onClose: { control: false },
+  },
+}
+
+export const MultipleMessages: Story = {
+  args: {
+    type: 'INFO',
+    message:
+      'The file has been saved successfully. You can now close this notification. Do you want to continue?',
     onClose: fn(),
   },
   argTypes: {
