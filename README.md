@@ -7,10 +7,10 @@ Figmug UI is a comprehensive library of UI components designed specifically for 
 
 ## Features
 
-- **Build with React**: A popular JavaScript library for building user interfaces
-- **Bundled with Vite**: Fast and optimized build tool for modern web projects.
-- **Tested with Jest and Vitest**: Ensures reliability and robustness of components.
-- **Exposed with Storybook**: Interactive UI component explorer for easy development and testing.
+- **Built with React**: A popular JavaScript library for building user interfaces
+- **Bundled with Vite**: Fast and optimized build tool for modern web projects
+- **Tested with Jest and Vitest**: Ensures reliability and robustness of components
+- **Exposed with Storybook**: Interactive UI component explorer for easy development and testing
 
 ## Installation
 
@@ -24,29 +24,774 @@ yarn add figmug-ui
 
 ## Usage
 
-Here's an example of how to use a button component from Figmug UI:
+### Slots
+
+#### Form Item
+
+```tsx
+import { FormItem } from 'figmug-ui'
+import { Input } from 'figmug-ui'
+
+function App() {
+  return (
+    <FormItem
+      id="text-input-item"
+      label="Type your name"
+      helper={{
+        type: 'INFO',
+        message: 'First name followed by your last name',
+      }}
+      shouldFill={false}
+      isBlocked={false}
+      isNew={false}
+    >
+      <Input
+        id="text-input-item"
+        type="TEXT"
+        value="Jean-Michel Avous"
+      />
+    </FormItem>
+  )
+}
+```
+
+#### Section
+
+```tsx
+import { Section } from 'figmug-ui'
+
+function App() {
+  return (
+    <Section
+      title="Section Title"
+      description="Section description goes here"
+      isNew={false}
+    >
+      <div>Section content goes here</div>
+    </Section>
+  )
+}
+```
+
+#### Drawer
+
+```tsx
+import { Drawer } from 'figmug-ui'
+
+function App() {
+  return (
+    <Drawer
+      title="Drawer Title"
+      isOpen={true}
+      onClose={() => console.log('Drawer closed')}
+    >
+      <div>Drawer content goes here</div>
+    </Drawer>
+  )
+}
+```
+
+### Actions
+
+#### Primary Button
 
 ```tsx
 import { Button } from 'figmug-ui'
 
 function App() {
   return (
-    <div>
-      <Button
-        type="primary"
-        label="Primary action button"
-        action={() => console.log('I have been clicked')}
-      />
-    </div>
+    <Button
+      type="primary"
+      size="default"
+      label="Primary action button"
+      preview={{
+        image: 'https://placehold.co/96x96',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      }}
+      feature="PRIMARY_ACTION"
+      action={() => console.log('Primary button clicked')}
+    />
   )
 }
+```
 
-export default App
+#### Secondary Button
+
+```tsx
+import { Button } from 'figmug-ui'
+
+function App() {
+  return (
+    <Button
+      type="secondary"
+      size="default"
+      label="Secondary action button"
+      feature="SECONDARY_ACTION"
+      action={() => console.log('Secondary button clicked')}
+    />
+  )
+}
+```
+
+#### Tertiary Button
+
+```tsx
+import { Button } from 'figmug-ui'
+
+function App() {
+  return (
+    <Button
+      type="tertiary"
+      label="Tertiary action button"
+      feature="TERTIARY_ACTION"
+      isLink={true}
+      url="https://example.com"
+      action={() => console.log('Tertiary button clicked')}
+    />
+  )
+}
+```
+
+#### Destructive Button
+
+```tsx
+import { Button } from 'figmug-ui'
+
+function App() {
+  return (
+    <Button
+      type="destructive"
+      size="default"
+      label="Destructive action button"
+      feature="DESTRUCTIVE_ACTION"
+      action={() => console.log('Destructive button clicked')}
+    />
+  )
+}
+```
+
+#### Icon Button
+
+```tsx
+import { Button } from 'figmug-ui'
+
+function App() {
+  return (
+    <Button
+      type="icon"
+      size="default"
+      state="default"
+      icon="adjust"
+      helper={{
+        label: 'Adjust',
+        type: 'SINGLE_LINE',
+      }}
+      action={() => console.log('Icon button clicked')}
+    />
+  )
+}
+```
+
+### Inputs
+
+#### Short Text Input
+
+```tsx
+import { Input } from 'figmug-ui'
+
+function App() {
+  return (
+    <Input
+      id="short-text-typing"
+      type="TEXT"
+      placeholder="Type something (64 characters max.)…"
+      value=""
+      charactersLimit={64}
+      feature="TYPE_SHORT_TEXT"
+      state="DEFAULT"
+      isAutoFocus={false}
+      isClearable={false}
+      isFramed={true}
+      onChange={(e) => console.log(e.target.value)}
+    />
+  )
+}
+```
+
+#### Long Text Input
+
+```tsx
+import { Input } from 'figmug-ui'
+
+function App() {
+  return (
+    <Input
+      id="long-text-typing"
+      type="LONG_TEXT"
+      placeholder="Type something"
+      value=""
+      feature="TYPE_LONG_TEXT"
+      state="DEFAULT"
+      isGrowing={false}
+      onChange={(e) => console.log(e.target.value)}
+    />
+  )
+}
+```
+
+#### Color Picker
+
+```tsx
+import { Input } from 'figmug-ui'
+
+function App() {
+  return (
+    <Input
+      id="color-picker"
+      type="COLOR"
+      value="#87ebe7"
+      feature="PICK_COLOR"
+      onChange={(e) => console.log(e.target.value)}
+    />
+  )
+}
+```
+
+#### Numeric Stepper
+
+```tsx
+import { Input } from 'figmug-ui'
+
+function App() {
+  return (
+    <Input
+      id="numeric-stepper"
+      type="NUMBER"
+      icon={{
+        type: 'LETTER',
+        value: 'H',
+      }}
+      value="20"
+      min="0"
+      max="100"
+      step="1"
+      feature="ADJUST_NUMBER"
+      onChange={(e) => console.log(e.target.value)}
+    />
+  )
+}
+```
+
+### Dropdown
+
+#### Single Selection
+
+```tsx
+import { Dropdown } from 'figmug-ui'
+
+function App() {
+  return (
+    <Dropdown
+      id="dropdown-button"
+      options={[
+        {
+          label: 'Option 1',
+          value: 'OPTION_1',
+          type: 'OPTION',
+        },
+        {
+          label: 'Option 2',
+          value: 'OPTION_2',
+          type: 'OPTION',
+          children: [
+            {
+              label: 'Option 2.1',
+              value: 'OPTION_2.1',
+              type: 'OPTION',
+            },
+            {
+              label: 'Option 2.2',
+              value: 'OPTION_2.2',
+              type: 'OPTION',
+            },
+          ],
+        },
+        {
+          type: 'SEPARATOR',
+        },
+        {
+          label: 'Title',
+          type: 'TITLE',
+        },
+        {
+          label: 'Option 3',
+          value: 'OPTION_3',
+          type: 'OPTION',
+        },
+      ]}
+      selected="OPTION_1"
+      alignment="LEFT"
+      onChange={(value) => console.log(value)}
+    />
+  )
+}
+```
+
+#### Multiple Selection
+
+```tsx
+import { Dropdown } from 'figmug-ui'
+
+function App() {
+  return (
+    <Dropdown
+      id="dropdown-button"
+      options={[
+        {
+          label: 'All',
+          value: 'ANY',
+          type: 'OPTION',
+        },
+        {
+          label: 'Option 1',
+          value: 'OPTION_1',
+          type: 'OPTION',
+        },
+        {
+          label: 'Option 2',
+          value: 'OPTION_2',
+          type: 'OPTION',
+        },
+      ]}
+      selected={['ANY']}
+      alignment="LEFT"
+      onChange={(values) => console.log(values)}
+    />
+  )
+}
+```
+
+### Sliders
+
+#### Simple Slider
+
+```tsx
+import { SimpleSlider } from 'figmug-ui'
+
+function App() {
+  return (
+    <SimpleSlider
+      id="simple-slider"
+      label="Simple Slider"
+      value={50}
+      min={0}
+      max={100}
+      colors={{
+        min: 'white',
+        max: 'black',
+      }}
+      feature="ADJUST_VALUE"
+      onChange={(feature, type, value) => console.log(value)}
+    />
+  )
+}
+```
+
+#### Multiple Slider
+
+```tsx
+import { MultipleSlider } from 'figmug-ui'
+
+function App() {
+  return (
+    <MultipleSlider
+      id="multiple-slider"
+      label="Multiple Slider"
+      stops={[
+        { id: 'stop-1', value: 20 },
+        { id: 'stop-2', value: 50 },
+        { id: 'stop-3', value: 80 },
+      ]}
+      min={0}
+      max={100}
+      colors={{
+        min: 'white',
+        max: 'black',
+      }}
+      feature="ADJUST_VALUES"
+      onChange={(feature, type, value) => console.log(value)}
+    />
+  )
+}
+```
+
+### Dialogs
+
+#### Simple Dialog
+
+```tsx
+import { Dialog } from 'figmug-ui'
+
+function App() {
+  return (
+    <Dialog
+      title="Are you sure to delete?"
+      actions={{
+        destructive: {
+          label: 'Delete',
+          action: () => console.log('Delete action'),
+        },
+        secondary: {
+          label: 'Cancel',
+          action: () => console.log('Cancel action'),
+        },
+      }}
+      pin="CENTER"
+      onClose={() => console.log('Dialog closed')}
+    >
+      <div className="dialog__text">
+        <p>Deleting this item will remove it permanently.</p>
+      </div>
+    </Dialog>
+  )
+}
+```
+
+#### Form Dialog
+
+```tsx
+import { Dialog } from 'figmug-ui'
+import { Input } from 'figmug-ui'
+import { FormItem } from 'figmug-ui'
+
+function App() {
+  return (
+    <Dialog
+      title="What do you want to say?"
+      actions={{
+        primary: {
+          label: 'Submit',
+          action: () => console.log('Submit action'),
+        },
+      }}
+      pin="CENTER"
+      onClose={() => console.log('Dialog closed')}
+    >
+      <div className="dialog__form">
+        <div className="dialog__form__item">
+          <FormItem
+            label="Full Name"
+            id="type-fullname"
+            shouldFill
+          >
+            <Input type="TEXT" />
+          </FormItem>
+        </div>
+        <div className="dialog__form__item">
+          <FormItem
+            label="Email"
+            id="type-email"
+            shouldFill
+          >
+            <Input type="TEXT" />
+          </FormItem>
+        </div>
+        <div className="dialog__form__item">
+          <FormItem
+            label="Message"
+            id="type-message"
+            shouldFill
+          >
+            <Input
+              type="LONG_TEXT"
+              placeholder="Type your message here"
+            />
+          </FormItem>
+        </div>
+      </div>
+    </Dialog>
+  )
+}
+```
+
+#### Loading Dialog
+
+```tsx
+import { Dialog } from 'figmug-ui'
+
+function App() {
+  return (
+    <Dialog
+      title="Loading…"
+      pin="CENTER"
+      isLoading={true}
+      onClose={() => console.log('Dialog closed')}
+    />
+  )
+}
+```
+
+### Lists
+
+#### Simple List
+
+```tsx
+import { ActionsList } from 'figmug-ui'
+
+function App() {
+  return (
+    <ActionsList
+      options={[
+        {
+          label: 'Option 1',
+          value: 'OPTION_1',
+          type: 'OPTION',
+          action: () => console.log('Option 1 clicked'),
+        },
+        {
+          label: 'Option 2',
+          value: 'OPTION_2',
+          type: 'OPTION',
+          action: () => console.log('Option 2 clicked'),
+        },
+        {
+          label: 'Option 3',
+          value: 'OPTION_3',
+          type: 'OPTION',
+          action: () => console.log('Option 3 clicked'),
+        },
+        {
+          label: 'Option 4',
+          value: 'OPTION_4',
+          type: 'OPTION',
+          action: () => console.log('Option 4 clicked'),
+        },
+      ]}
+      selected="OPTION_1"
+    />
+  )
+}
+```
+
+#### Grouped List
+
+```tsx
+import { ActionsList } from 'figmug-ui'
+
+function App() {
+  return (
+    <ActionsList
+      options={[
+        {
+          label: 'Group 1',
+          type: 'TITLE',
+        },
+        {
+          label: 'Option 1',
+          value: 'OPTION_1',
+          type: 'OPTION',
+          action: () => console.log('Option 1 clicked'),
+        },
+        {
+          label: 'Option 2',
+          value: 'OPTION_2',
+          type: 'OPTION',
+          action: () => console.log('Option 2 clicked'),
+        },
+        {
+          type: 'SEPARATOR',
+        },
+        {
+          label: 'Group 2',
+          type: 'TITLE',
+        },
+        {
+          label: 'Option 3',
+          value: 'OPTION_3',
+          type: 'OPTION',
+          action: () => console.log('Option 3 clicked'),
+        },
+        {
+          label: 'Option 4',
+          value: 'OPTION_4',
+          type: 'OPTION',
+          action: () => console.log('Option 4 clicked'),
+        },
+      ]}
+    />
+  )
+}
+```
+
+#### Nested List
+
+```tsx
+import { ActionsList } from 'figmug-ui'
+
+function App() {
+  return (
+    <ActionsList
+      options={[
+        {
+          label: 'Group 1',
+          value: 'GROUP_1',
+          type: 'OPTION',
+          children: [
+            {
+              label: 'Option 1',
+              value: 'OPTION_A_1',
+              type: 'OPTION',
+              action: () => console.log('Option A.1 clicked'),
+            },
+            {
+              label: 'Option 2',
+              value: 'OPTION_A_2',
+              type: 'OPTION',
+              action: () => console.log('Option A.2 clicked'),
+            },
+          ],
+        },
+        {
+          label: 'Group 2',
+          value: 'GROUP_2',
+          type: 'OPTION',
+          children: [
+            {
+              label: 'Option 1',
+              value: 'OPTION_B_1',
+              type: 'OPTION',
+              action: () => console.log('Option B.1 clicked'),
+            },
+            {
+              label: 'Option 2',
+              value: 'OPTION_B_2',
+              type: 'OPTION',
+              action: () => console.log('Option B.2 clicked'),
+            },
+          ],
+        },
+      ]}
+    />
+  )
+}
+```
+
+### Tags
+
+#### Basic Chip
+
+```tsx
+import { Chip } from 'figmug-ui'
+
+function App() {
+  return (
+    <Chip
+      state="ACTIVE"
+    >
+      New
+    </Chip>
+  )
+}
+```
+
+#### Chip with Color Indicator
+
+```tsx
+import { Chip, ColorChip } from 'figmug-ui'
+
+function App() {
+  return (
+    <Chip
+      state="ON_BACKGROUND"
+      leftSlot={
+        <ColorChip
+          color="blue"
+          width="8px"
+          height="8px"
+          isRounded={true}
+        />
+      }
+      rightSlot={
+        <div style={{ fontSize: '11px' }}>
+          ✔︎
+        </div>
+      }
+    >
+      AA
+    </Chip>
+  )
+}
+```
+
+### Assets
+
+#### Icon
+
+```tsx
+import { Icon } from 'figmug-ui'
+
+function App() {
+  return (
+    <>
+      {/* Pictogram Icon */}
+      <Icon
+        type="PICTO"
+        iconName="adjust"
+      />
+
+      {/* Letter Icon */}
+      <Icon
+        type="LETTER"
+        iconLetter="L"
+      />
+    </>
+  )
+}
+```
+
+#### Avatar
+
+```tsx
+import { Avatar } from 'figmug-ui'
+
+function App() {
+  return (
+    <>
+      {/* Avatar with Image */}
+      <Avatar
+        avatar="https://example.com/avatar.jpg"
+        fullName="John Doe"
+        isInverted={false}
+      />
+
+      {/* Default Avatar */}
+      <Avatar
+        isInverted={false}
+      />
+    </>
+  )
+}
+```
+
+#### Thumbnail
+
+```tsx
+import { Thumbnail } from 'figmug-ui'
+
+function App() {
+  return (
+    <Thumbnail
+      src="https://example.com/image.jpg"
+      width="300px"
+      height="200px"
+    />
+  )
+}
 ```
 
 ## Testing
 
-To run tests, use the following commands:
+To run tests:
 
 ```bash
 npm test
