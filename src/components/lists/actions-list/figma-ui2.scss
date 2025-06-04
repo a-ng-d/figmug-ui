@@ -68,9 +68,7 @@
 
   --actions-list-item-padding-selected: 0 var(--size-xsmall) 0
     var(--size-xxsmall);
-  --actions-list-item-background-color-selected: var(
-    --figma-color-bg-selected-strong
-  );
+  --actions-list-item-background-color-selected: transparent;
   --actions-list-item-text-color-selected: var(--grey-0);
   --actions-list-tick-color-selected: var(--grey-0);
   --actions-list-caret-color-selected: var(--grey-0);
