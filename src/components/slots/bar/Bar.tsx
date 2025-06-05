@@ -4,9 +4,9 @@ import './bar.scss'
 
 export interface BarProps {
   id?: string
-  rightPartSlot?: React.ReactElement
-  soloPartSlot?: React.ReactElement
   leftPartSlot?: React.ReactElement
+  soloPartSlot?: React.ReactElement
+  rightPartSlot?: React.ReactElement
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
   padding?: string
   isCompact?: boolean
