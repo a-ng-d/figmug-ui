@@ -69,12 +69,15 @@ export default class Bar extends React.Component<BarProps> {
         }}
         role="toolbar"
       >
-        <div
-          className="bar__left"
-          role="group"
-        >
-          {leftPartSlot}
-        </div>
+        {leftPartSlot !== undefined && (
+          <div
+            className="bar__left"
+            role="group"
+          >
+            {leftPartSlot}
+          </div>
+        )}
+
         {soloPartSlot !== undefined && (
           <div
             className={doClassnames(['bar__solo'])}
@@ -83,12 +86,14 @@ export default class Bar extends React.Component<BarProps> {
             {soloPartSlot}
           </div>
         )}
-        <div
-          className="bar__right"
-          role="group"
-        >
-          {rightPartSlot}
-        </div>
+        {rightPartSlot === undefined && (
+          <div
+            className="bar__right"
+            role="group"
+          >
+            {rightPartSlot}
+          </div>
+        )}
       </div>
     )
   }
