@@ -80,7 +80,7 @@ export default class Bar extends React.Component<BarProps> {
 
         {soloPartSlot !== undefined && (
           <div
-            className={doClassnames(['bar__solo'])}
+            className={'bar__solo'}
             role="group"
           >
             {soloPartSlot}
