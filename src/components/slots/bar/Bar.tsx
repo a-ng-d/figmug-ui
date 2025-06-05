@@ -12,6 +12,7 @@ export interface BarProps {
   isCompact?: boolean
   isOnlyText?: boolean
   isInverted?: boolean
+  isCentered?: boolean
   shouldReflow?: boolean
 }
 
@@ -20,6 +21,7 @@ export default class Bar extends React.Component<BarProps> {
     isCompact: false,
     isOnlyText: false,
     isInverted: false,
+    isCentered: false,
     shouldReflow: false,
   }
 
@@ -45,6 +47,7 @@ export default class Bar extends React.Component<BarProps> {
       isCompact,
       isOnlyText,
       isInverted,
+      isCentered,
       shouldReflow,
       border,
       padding,
@@ -61,6 +64,7 @@ export default class Bar extends React.Component<BarProps> {
           isCompact && 'bar--compact',
           isOnlyText && 'bar--text-only',
           isInverted && 'bar--inverted',
+          isCentered && 'bar--centered',
           shouldReflow && 'bar--reflow',
         ])}
         style={{
