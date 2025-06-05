@@ -86,7 +86,7 @@ export default class Bar extends React.Component<BarProps> {
             {soloPartSlot}
           </div>
         )}
-        {rightPartSlot === undefined && (
+        {rightPartSlot !== undefined && (
           <div
             className="bar__right"
             role="group"
