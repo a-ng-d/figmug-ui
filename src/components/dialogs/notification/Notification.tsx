@@ -13,9 +13,9 @@ export interface NotificationProps {
 const Notification = (props: NotificationProps) => {
   const { type, message, timer, onClose } = props
 
-  if (timer !== undefined && timer <= 0)
+  if (timer !== undefined && timer > 0)
     setTimeout(() => {
-      onClose
+      onClose({} as React.SyntheticEvent)
     }, timer)
 
   return (
