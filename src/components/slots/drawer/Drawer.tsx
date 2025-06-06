@@ -226,7 +226,7 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
           ])}
           onMouseDown={this.onGrab}
           onClick={this.clickHandler}
-          role="separator"
+          role="region"
           aria-orientation={
             direction === 'VERTICAL' ? 'vertical' : 'horizontal'
           }
@@ -234,7 +234,7 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
           aria-valuemax={maxSize.value}
           aria-valuenow={drawerSize.value}
         />
-        <div role="region">{children}</div>
+        {children}
       </div>
     )
   }
