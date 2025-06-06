@@ -10,4 +10,15 @@
 
   --card-background-color: var(--figma-color-bg);
   --card-background-color-hover: var(--figma-color-bg-hover);
+  --card-background-color-focus: var(--figma-color-bg-hover);
+
+  --card-border-color: transparent;
+  --card-border-color-hover: transparent;
+  --card-border-color-focus: var(--figma-color-bg-selected);
+  --card-border-width: 0;
+  --card-border-width-hover: 0;
+  --card-border-width-focus: var(--size-unit);
+  --card-border-offset: 0;
+  --card-border-offset-hover: 0;
+  --card-border-offset-focus: var(--size-neg-unit);
 }

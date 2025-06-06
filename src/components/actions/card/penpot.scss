@@ -10,4 +10,15 @@
 
   --card-background-color: var(--color-background-primary);
   --card-background-color-hover: var(--color-background-secondary);
+  --card-background-color-focus: var(--color-background-secondary);
+
+  --card-border-color: transparent;
+  --card-border-color-hover: transparent;
+  --card-border-color-focus: var(--color-accent-primary);
+  --card-border-width: 0;
+  --card-border-width-hover: 0;
+  --card-border-width-focus: var(--size-unit);
+  --card-border-offset: 0;
+  --card-border-offset-hover: 0;
+  --card-border-offset-focus: var(--size-neg-unit);
 }

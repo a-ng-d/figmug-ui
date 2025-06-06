@@ -9,11 +9,14 @@ interface CardProps {
   label: string
   children: React.ReactNode
   shouldFill?: boolean
+  action: (
+    event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+  ) => void
 }
 
 const Card = (props: CardProps) => {
   const [isActionsVisible, setActionsVisible] = useState<boolean>(false)
-  const { src, label, children, shouldFill = false } = props
+  const { src, label, children, shouldFill = false, action } = props
 
   return (
     <div
@@ -24,6 +27,10 @@ const Card = (props: CardProps) => {
       onMouseLeave={() => setActionsVisible(false)}
       onFocus={() => setActionsVisible(true)}
       onBlur={() => setActionsVisible(false)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') action(e)
+        if (e.key === 'Escape') (e.target as HTMLElement).blur()
+      }}
       tabIndex={0}
     >
       <div

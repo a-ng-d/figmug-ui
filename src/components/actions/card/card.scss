@@ -11,13 +11,29 @@
   background-color: var(--card-background-color);
   padding: var(--card-padding);
   width: var(--card-width);
+  outline: var(--card-border-width) solid var(--card-border-color);
+  box-shadow: var(--card-border-offset);
 
   &--fill {
     width: 100%;
   }
 
   &:hover {
-    background-color: var(--card-background-color-hover);
+    --card-background-color: var(--card-background-color-hover);
+    --card-border-width: var(--card-border-width-hover);
+    --card-border-color: var(--card-border-color-hover);
+    --card-border-offset: var(--card-border-offset-hover);
+
+    .card__actions {
+      visibility: visible;
+    }
+  }
+
+  &:focus {
+    --card-background-color: var(--card-background-color-focus);
+    --card-border-width: var(--card-border-width-focus);
+    --card-border-color: var(--card-border-color-focus);
+    --card-border-offset: var(--card-border-offset-focus);
 
     .card__actions {
       visibility: visible;
