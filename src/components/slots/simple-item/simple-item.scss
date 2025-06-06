@@ -5,7 +5,7 @@
 .simple-item {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: start;
   gap: var(--simple-item-gap);
   box-sizing: content-box;
   outline: var(--simple-item-border-width) solid var(--simple-item-border-color);

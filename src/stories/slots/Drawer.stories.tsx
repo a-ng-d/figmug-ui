@@ -68,9 +68,7 @@ export const Default: Story = {
           display: 'flex',
           flexDirection: args.direction === 'VERTICAL' ? 'column' : 'row',
           justifyContent:
-            args.pin === 'TOP' || args.pin === 'LEFT'
-              ? 'flex-start'
-              : 'flex-end',
+            args.pin === 'TOP' || args.pin === 'LEFT' ? 'start' : 'end',
         }}
       >
         <Drawer

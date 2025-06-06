@@ -4,7 +4,7 @@
 
 .message {
   display: flex;
-  align-items: flex-start;
+  align-items: start;
   gap: var(--message-gap);
   cursor: default;
   padding: var(--message-padding);

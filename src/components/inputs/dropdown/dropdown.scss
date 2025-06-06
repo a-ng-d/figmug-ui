@@ -10,11 +10,11 @@
   user-select: none;
 
   &.select-menu--right {
-    justify-content: flex-end;
+    justify-content: end;
   }
 
   &.select-menu--left {
-    justify-content: flex-start;
+    justify-content: start;
   }
 
   &.select-menu--fill {

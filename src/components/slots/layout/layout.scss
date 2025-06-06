@@ -5,7 +5,7 @@
 .layout {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: start;
   align-items: stretch;
   background-color: var(--layout-background-color);
   overflow: hidden;
@@ -22,7 +22,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: start;
     padding: var(--layout-block-padding);
     overflow-x: hidden;
     overflow-y: auto;

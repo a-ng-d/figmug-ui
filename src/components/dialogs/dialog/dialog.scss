@@ -15,8 +15,8 @@
   user-select: none;
 
   &--right {
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: end;
+    align-items: start;
     --dialog-padding: 0;
   }
 

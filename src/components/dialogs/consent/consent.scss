@@ -6,7 +6,7 @@
   display: flex;
   position: absolute;
   justify-content: center;
-  align-items: flex-end;
+  align-items: end;
   z-index: 5;
   cursor: default;
   inset: 0 0 0 0;
@@ -62,7 +62,7 @@
 
     .consent__banner__actions {
       flex-direction: column;
-      align-items: flex-end;
+      align-items: end;
     }
   }
 }
