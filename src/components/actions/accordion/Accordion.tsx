@@ -81,7 +81,7 @@ const Accordion = (props: AccordionProps) => {
         aria-expanded={isExpanded}
         aria-controls={`accordion-content-${label}`}
         aria-disabled={isBlocked}
-        tabIndex={0}
+        tabIndex={-1}
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
