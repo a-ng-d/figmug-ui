@@ -44,7 +44,7 @@ const FormItem = (props: FormItemProps) => {
       >
         {label !== undefined && (
           <label
-            className={texts.type}
+            className={doClassnames([texts.type, 'form-item__label'])}
             htmlFor={id}
             id={`${id}-label`}
           >
