@@ -217,7 +217,6 @@ export default class Dropdown extends React.Component<
             'select-menu__button',
             isMenuOpen && 'select-menu__button--active',
           ])}
-          tabIndex={0}
           disabled={isDisabled || isBlocked}
           aria-expanded={isMenuOpen}
           aria-controls={`${id}-listbox`}
