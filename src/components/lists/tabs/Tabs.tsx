@@ -17,7 +17,7 @@ export interface TabsProps {
   active: string
   direction?: 'HORIZONTAL' | 'VERTICAL'
   isFlex?: boolean
-  action: React.MouseEventHandler
+  action: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 const Tabs = (props: TabsProps) => {
@@ -50,8 +50,12 @@ const Tabs = (props: TabsProps) => {
             isFlex && 'tabs__tab--flex',
           ])}
           data-feature={tab.id}
-          tabIndex={-1}
+          tabIndex={active === tab.id ? -1 : 0}
           onMouseDown={action}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') action(e)
+            if (e.key === 'Escape') (e.target as HTMLElement).blur()
+          }}
         >
           {tab.icon !== undefined && (
             <Icon

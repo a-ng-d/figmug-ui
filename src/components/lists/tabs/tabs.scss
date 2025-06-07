@@ -20,6 +20,8 @@
     gap: var(--tabs-tab-gap);
     border-radius: var(--tabs-tab-radius);
     background-color: var(--tabs-tab-background-color);
+    outline: var(--tabs-tab-border-width) solid var(--tabs-tab-border-color);
+    outline-offset: var(--tabs-tab-border-offset);
     padding: var(--tabs-tab-padding);
     height: var(--tabs-tab-height);
     --icon-width: var(--tabs-tab-icon-width);
@@ -46,6 +48,9 @@
 
     &:hover:not(&--active) {
       --tabs-tab-background-color: var(--tabs-tab-background-color-hover);
+      --tabs-tab-border-color: var(--tabs-tab-border-color-hover);
+      --tabs-tab-border-width: var(--tabs-tab-border-width-hover);
+      --tabs-tab-border-offset: var(--tabs-tab-border-offset-hover);
       --tabs-tab-text-color: var(--tabs-tab-text-color-hover);
       --tabs-tab-text-weight: var(--tabs-tab-text-weight-hover);
       --tabs-tab-icon-color: var(--tabs-tab-icon-color-hover);
@@ -54,8 +59,26 @@
       );
     }
 
+    &:focus:not(&--active) {
+      --tabs-tab-background-color: var(
+        --tabs-tab-background-color-focus
+      );
+      --tabs-tab-border-color: var(--tabs-tab-border-color-focus);
+      --tabs-tab-border-width: var(--tabs-tab-border-width-focus);
+      --tabs-tab-border-offset: var(--tabs-tab-border-offset-focus);
+      --tabs-tab-text-color: var(--tabs-tab-text-color-focus);
+      --tabs-tab-text-weight: var(--tabs-tab-text-weight-focus);
+      --tabs-tab-icon-color: var(--tabs-tab-icon-color-focus);
+      --tabs-tab-notification-border-color: var(
+        --tabs-tab-notification-border-color-focus
+      );
+    }
+
     &--active {
       --tabs-tab-background-color: var(--tabs-tab-background-color-active);
+      --tabs-tab-border-color: var(--tabs-tab-border-color-active);
+      --tabs-tab-border-width: var(--tabs-tab-border-width-active);
+      --tabs-tab-border-offset: var(--tabs-tab-border-offset-active);
       --tabs-tab-text-color: var(--tabs-tab-text-color-active);
       --tabs-tab-text-weight: var(--tabs-tab-text-weight-active);
       --tabs-tab-icon-color: var(--tabs-tab-icon-color-active);
@@ -102,11 +125,31 @@
     --tabs-tab-background-color-hover: var(
       --tabs-tab-background-color-alternative-hover
     );
+    --tabs-tab-border-color-hover: var(--tabs-tab-border-color-alternative-hover);
+    --tabs-tab-border-width-hover: var(--tabs-tab-border-width-alternative-hover);
+    --tabs-tab-border-offset-hover: var(
+      --tabs-tab-border-offset-alternative-hover
+    );
     --tabs-tab-text-color-hover: var(--tabs-tab-text-color-alternative-hover);
     --tabs-tab-text-weight-hover: var(--tabs-tab-text-weight-alternative-hover);
     --tabs-tab-icon-color-hover: var(--tabs-tab-icon-color-alternative-hover);
     --tabs-tab-notification-border-color-hover: var(
       --tabs-tab-notification-border-color-alternative-hover
+    );
+
+    --tabs-tab-background-color-focus: var(
+      --tabs-tab-background-color-alternative-focus
+    );
+    --tabs-tab-border-color-focus: var(--tabs-tab-border-color-alternative-focus);
+    --tabs-tab-border-width-focus: var(--tabs-tab-border-width-alternative-focus);
+    --tabs-tab-border-offset-focus: var(
+      --tabs-tab-border-offset-alternative-focus
+    );
+    --tabs-tab-text-color-focus: var(--tabs-tab-text-color-alternative-focus);
+    --tabs-tab-text-weight-focus: var(--tabs-tab-text-weight-alternative-focus);
+    --tabs-tab-icon-color-focus: var(--tabs-tab-icon-color-alternative-focus);
+    --tabs-tab-notification-border-color-focus: var(
+      --tabs-tab-notification-border-color-alternative-focus
     );
 
     --tabs-tab-background-color-active: var(
