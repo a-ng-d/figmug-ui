@@ -18,10 +18,10 @@
     justify-content: center;
     align-items: center;
     gap: var(--tabs-tab-gap);
-    border-radius: var(--tabs-tab-radius);
-    background-color: var(--tabs-tab-background-color);
     outline: var(--tabs-tab-border-width) solid var(--tabs-tab-border-color);
     outline-offset: var(--tabs-tab-border-offset);
+    border-radius: var(--tabs-tab-radius);
+    background-color: var(--tabs-tab-background-color);
     padding: var(--tabs-tab-padding);
     height: var(--tabs-tab-height);
     --icon-width: var(--tabs-tab-icon-width);
@@ -60,9 +60,7 @@
     }
 
     &:focus:not(&--active) {
-      --tabs-tab-background-color: var(
-        --tabs-tab-background-color-focus
-      );
+      --tabs-tab-background-color: var(--tabs-tab-background-color-focus);
       --tabs-tab-border-color: var(--tabs-tab-border-color-focus);
       --tabs-tab-border-width: var(--tabs-tab-border-width-focus);
       --tabs-tab-border-offset: var(--tabs-tab-border-offset-focus);
@@ -125,8 +123,12 @@
     --tabs-tab-background-color-hover: var(
       --tabs-tab-background-color-alternative-hover
     );
-    --tabs-tab-border-color-hover: var(--tabs-tab-border-color-alternative-hover);
-    --tabs-tab-border-width-hover: var(--tabs-tab-border-width-alternative-hover);
+    --tabs-tab-border-color-hover: var(
+      --tabs-tab-border-color-alternative-hover
+    );
+    --tabs-tab-border-width-hover: var(
+      --tabs-tab-border-width-alternative-hover
+    );
     --tabs-tab-border-offset-hover: var(
       --tabs-tab-border-offset-alternative-hover
     );
@@ -140,8 +142,12 @@
     --tabs-tab-background-color-focus: var(
       --tabs-tab-background-color-alternative-focus
     );
-    --tabs-tab-border-color-focus: var(--tabs-tab-border-color-alternative-focus);
-    --tabs-tab-border-width-focus: var(--tabs-tab-border-width-alternative-focus);
+    --tabs-tab-border-color-focus: var(
+      --tabs-tab-border-color-alternative-focus
+    );
+    --tabs-tab-border-width-focus: var(
+      --tabs-tab-border-width-alternative-focus
+    );
     --tabs-tab-border-offset-focus: var(
       --tabs-tab-border-offset-alternative-focus
     );

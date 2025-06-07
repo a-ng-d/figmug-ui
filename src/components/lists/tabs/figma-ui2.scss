@@ -49,7 +49,7 @@
   --tabs-tab-notification-border-offset: 0;
 
   --tabs-tab-background-color-hover: var(--figma-color-bg);
-    --tabs-tab-border-color-hover: transparent;
+  --tabs-tab-border-color-hover: transparent;
   --tabs-tab-border-width-hover: 0;
   --tabs-tab-border-offset-hover: 0;
   --tabs-tab-text-color-hover: var(--figma-color-text);
@@ -57,7 +57,7 @@
   --tabs-tab-icon-color-hover: var(--figma-color-text);
   --tabs-tab-notification-border-color-hover: transparent;
 
-    --tabs-tab-background-color-focus: var(--figma-color-bg);
+  --tabs-tab-background-color-focus: var(--figma-color-bg);
   --tabs-tab-border-color-focus: transparent;
   --tabs-tab-border-width-focus: 0;
   --tabs-tab-border-offset-focus: 0;
@@ -67,7 +67,7 @@
   --tabs-tab-notification-border-color-focus: transparent;
 
   --tabs-tab-background-color-alternative-hover: var(--figma-color-bg);
-      --tabs-tab-border-color-alternative-hover: transparent;
+  --tabs-tab-border-color-alternative-hover: transparent;
   --tabs-tab-border-width-alternative-hover: 0;
   --tabs-tab-border-offset-alternative-hover: 0;
   --tabs-tab-text-color-alternative-hover: var(--figma-color-text);
@@ -75,18 +75,14 @@
   --tabs-tab-icon-color-alternative-hover: var(--figma-color-text);
   --tabs-tab-notification-border-color-alternative-hover: transparent;
 
-      --tabs-tab-background-color-alternative-focus: var(
-    --figma-color-bg
-  );
+  --tabs-tab-background-color-alternative-focus: var(--figma-color-bg);
   --tabs-tab-border-color-alternative-focus: transparent;
-  --tabs-tab-border-width-alternative-focus: 0;  
+  --tabs-tab-border-width-alternative-focus: 0;
   --tabs-tab-border-offset-alternative-focus: 0;
   --tabs-tab-text-color-alternative-focus: var(--figma-color-text);
   --tabs-tab-text-weight-alternative-focus: var(--font-weight-semi);
   --tabs-tab-icon-color-alternative-focus: var(--figma-color-text);
-  --tabs-tab-notification-border-color-alternative-focus: var(
-    --figma-color-bg
-  );
+  --tabs-tab-notification-border-color-alternative-focus: var(--figma-color-bg);
 
   --tabs-tab-background-color-active: var(--figma-color-bg);
   --tabs-tab-text-color-active: var(--figma-color-text);
