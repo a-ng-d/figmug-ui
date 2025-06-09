@@ -10,7 +10,6 @@ import '@styles/tokens/globals.scss'
 const withTheme: Decorator = (Story, context) => {
   React.useEffect(() => {
     const { themes, modes } = context.globals
-    console.log('Setting themes and modes:', themes, modes)
 
     if (themes) {
       document.documentElement.setAttribute('data-theme', themes)
