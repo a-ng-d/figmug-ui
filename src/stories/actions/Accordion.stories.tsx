@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { fn } from '@storybook/test'
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
 import { useArgs } from '@storybook/client-api'
 import * as InputStory from '@stories/inputs/Input.stories'
 import * as TitleStory from '@stories/assets/SectionTitle.stories'

@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { fn } from '@storybook/test'
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
 import { useArgs } from '@storybook/client-api'
 import FormItem from '@components/slots/form-item/FormItem'
 import SortableList from '@components/lists/sortable-list/SortableList'

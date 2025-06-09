@@ -5,17 +5,13 @@ const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
     {
       name: '@chromatic-com/storybook',
       options: {
         configFile: 'chromatic.config.json',
       },
     },
-    '@storybook/addon-interactions',
-    '@storybook/addon-backgrounds',
-    'storybook-addon-data-theme-switcher',
-    '@storybook/addon-viewport',
+    '@storybook/addon-docs',
   ],
   framework: {
     name: '@storybook/react-vite',

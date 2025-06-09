@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import KeyboardShortcutItem from '@components/lists/keyboard-shortcut-item/KeyboardShortcutItem'
 
 const meta = {

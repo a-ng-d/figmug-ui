@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import ColorChip from '@components/tags/color-chip/ColorChip'
 import Chip from '@components/tags/chip/Chip'
 

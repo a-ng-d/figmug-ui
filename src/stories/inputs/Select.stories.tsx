@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
+import { useArgs } from 'storybook/preview-api'
 import { ChangeEvent } from 'react'
-import { fn } from '@storybook/test'
-import { useArgs } from '@storybook/preview-api'
 import Select from '@components/inputs/select/Select'
 
 const meta: Meta<typeof Select> = {

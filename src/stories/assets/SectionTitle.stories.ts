@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import SectionTitle from '@components/assets/section-title/SectionTitle'
 
 const meta = {

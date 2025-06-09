@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { useArgs } from '@storybook/client-api'
 import * as ListStories from '@stories/lists/List.stories'
 import Dropdown from '@components/inputs/dropdown/Dropdown'

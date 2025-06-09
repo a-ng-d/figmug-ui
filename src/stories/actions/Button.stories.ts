@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
 import { IconList } from '@tps/icon.types'
-import { fn } from '@storybook/test'
 import Button from '@components/actions/button/Button'
 
 const icons: Array<IconList> = [

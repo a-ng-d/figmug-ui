@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { fn } from '@storybook/test'
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
 import FormItem from '@components/slots/form-item/FormItem'
 import DraggableItem from '@components/lists/draggable-item/DraggableItem'
 import Input from '@components/inputs/input/Input'

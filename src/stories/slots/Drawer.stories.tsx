@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import { useRef } from 'react'
 import { useArgs } from '@storybook/client-api'
 import Drawer from '@components/slots/drawer/Drawer'

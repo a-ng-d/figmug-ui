@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { fn } from '@storybook/test'
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
 import List from '@components/slots/list/List'
 import ActionsItem from '@components/lists/actions-item/ActionsItem'
 import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'

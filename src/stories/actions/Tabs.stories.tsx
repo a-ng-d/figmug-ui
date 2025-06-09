@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import { fn } from '@storybook/test'
-import { useArgs } from '@storybook/preview-api'
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
+import { useArgs } from 'storybook/preview-api'
 import Tabs from '@components/lists/tabs/Tabs'
 
 const meta = {

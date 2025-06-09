@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 import MembersList from '@components/lists/members-list/MembersList'
 
 const meta: Meta<typeof MembersList> = {

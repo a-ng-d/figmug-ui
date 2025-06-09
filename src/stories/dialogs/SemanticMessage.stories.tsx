@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
 import layouts from '@styles/layouts.module.scss'
-import { fn } from '@storybook/test'
 import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
 import Button from '@components/actions/button/Button'
 
