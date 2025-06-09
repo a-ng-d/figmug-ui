@@ -41,6 +41,11 @@ module.exports = {
             position: 'before',
           },
           {
+            pattern: 'storybook/**',
+            group: 'external',
+            position: 'before',
+          },
+          {
             pattern: '@tps/**',
             group: 'internal',
             position: 'before',
