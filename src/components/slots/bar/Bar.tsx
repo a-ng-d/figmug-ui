@@ -56,6 +56,12 @@ export default class Bar extends React.Component<BarProps> {
       rightPartSlot,
     } = this.props
 
+    if (
+      leftPartSlot === undefined &&
+      soloPartSlot === undefined &&
+      rightPartSlot === undefined
+    )
+      return null
     return (
       <div
         id={id}
