@@ -1,0 +1,3035 @@
+{
+  "activity": {},
+  "announcedBuild": {
+    "id": "6846e766f3b2b2b8a6374da0",
+    "number": 350,
+    "status": "PUBLISHED",
+    "autoAcceptChanges": false,
+    "app": {
+      "id": "663a220bcc5dda79791c430e",
+      "turboSnapAvailability": "UNUSED"
+    },
+    "storybookUrl": "https://663a220bcc5dda79791c430e-arpypzrlbk.chromatic.com/"
+  },
+  "build": {
+    "id": "6846e766f3b2b2b8a6374da0",
+    "number": 350,
+    "status": "PENDING",
+    "autoAcceptChanges": false,
+    "app": {
+      "manageUrl": "https://www.chromatic.com/manage?appId=663a220bcc5dda79791c430e",
+      "setupUrl": "https://www.chromatic.com/setup?appId=663a220bcc5dda79791c430e",
+      "account": {
+        "exceededThreshold": false,
+        "paymentRequired": false,
+        "billingUrl": "https://www.chromatic.com/billing?accountId=663a20a54bf73bbf57aa84be"
+      },
+      "repository": {
+        "provider": "github"
+      }
+    },
+    "storybookUrl": "https://663a220bcc5dda79791c430e-arpypzrlbk.chromatic.com/",
+    "specCount": 78,
+    "componentCount": 33,
+    "testCount": 78,
+    "changeCount": 78,
+    "errorCount": 0,
+    "actualTestCount": 78,
+    "actualCaptureCount": 78,
+    "inheritedCaptureCount": 0,
+    "interactionTestFailuresCount": 0,
+    "webUrl": "https://www.chromatic.com/build?appId=663a220bcc5dda79791c430e&number=350",
+    "browsers": [
+      {
+        "browser": "chrome"
+      }
+    ],
+    "features": {
+      "uiTests": true,
+      "uiReview": true
+    },
+    "turboSnapEnabled": null,
+    "wasLimited": false,
+    "tests": [
+      {
+        "spec": {
+          "name": "Expand Collapse Input",
+          "component": {
+            "name": "Components/Actions/Accordion",
+            "displayName": "Accordion"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Primary",
+          "component": {
+            "name": "Components/Actions/Button",
+            "displayName": "Button"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Secondary",
+          "component": {
+            "name": "Components/Actions/Button",
+            "displayName": "Button"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Tertiary",
+          "component": {
+            "name": "Components/Actions/Button",
+            "displayName": "Button"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Destructive",
+          "component": {
+            "name": "Components/Actions/Button",
+            "displayName": "Button"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Alternative",
+          "component": {
+            "name": "Components/Actions/Button",
+            "displayName": "Button"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Icon",
+          "component": {
+            "name": "Components/Actions/Button",
+            "displayName": "Button"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Dropdown Icon",
+          "component": {
+            "name": "Components/Actions/Multiple Actions",
+            "displayName": "Multiple Actions"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Multiple Actions Icon Button",
+          "component": {
+            "name": "Components/Actions/Multiple Actions",
+            "displayName": "Multiple Actions"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Multiple Actions Button",
+          "component": {
+            "name": "Components/Actions/Multiple Actions",
+            "displayName": "Multiple Actions"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Three Tabs",
+          "component": {
+            "name": "Components/Lists/Tabs",
+            "displayName": "Tabs"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Five Tabs",
+          "component": {
+            "name": "Components/Lists/Tabs",
+            "displayName": "Tabs"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Defined User",
+          "component": {
+            "name": "Components/Assets/Avatar",
+            "displayName": "Avatar"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Undefined User",
+          "component": {
+            "name": "Components/Assets/Avatar",
+            "displayName": "Avatar"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Pictogram",
+          "component": {
+            "name": "Components/Assets/Icon",
+            "displayName": "Icon"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Letter",
+          "component": {
+            "name": "Components/Assets/Icon",
+            "displayName": "Icon"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Title With Helper",
+          "component": {
+            "name": "Components/Assets/Section Title",
+            "displayName": "Section Title"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "External Image",
+          "component": {
+            "name": "Components/Assets/Thumbnail",
+            "displayName": "Thumbnail"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Single Vendor",
+          "component": {
+            "name": "Components/Dialogs/Consent",
+            "displayName": "Consent"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Several Vendors",
+          "component": {
+            "name": "Components/Dialogs/Consent",
+            "displayName": "Consent"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Single Message",
+          "component": {
+            "name": "Components/Dialogs/Dialog",
+            "displayName": "Dialog"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Multiple Message",
+          "component": {
+            "name": "Components/Dialogs/Dialog",
+            "displayName": "Dialog"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Form",
+          "component": {
+            "name": "Components/Dialogs/Dialog",
+            "displayName": "Dialog"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Simple Dialog",
+          "component": {
+            "name": "Components/Dialogs/Dialog",
+            "displayName": "Dialog"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Loading Dialog",
+          "component": {
+            "name": "Components/Dialogs/Dialog",
+            "displayName": "Dialog"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Dialog On Error",
+          "component": {
+            "name": "Components/Dialogs/Dialog",
+            "displayName": "Dialog"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Simple Message",
+          "component": {
+            "name": "Components/Dialogs/Message",
+            "displayName": "Message"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Message Ticker",
+          "component": {
+            "name": "Components/Dialogs/Message",
+            "displayName": "Message"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Single Message",
+          "component": {
+            "name": "Components/Dialogs/Notification",
+            "displayName": "Notification"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Multiple Messages",
+          "component": {
+            "name": "Components/Dialogs/Notification",
+            "displayName": "Notification"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Typed Message",
+          "component": {
+            "name": "Components/Dialogs/Semantic Message",
+            "displayName": "Semantic Message"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Single Selection",
+          "component": {
+            "name": "Components/Inputs/Dropdown",
+            "displayName": "Dropdown"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Many Options Selection",
+          "component": {
+            "name": "Components/Inputs/Dropdown",
+            "displayName": "Dropdown"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Multiple Selection",
+          "component": {
+            "name": "Components/Inputs/Dropdown",
+            "displayName": "Dropdown"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Image Drop Box",
+          "component": {
+            "name": "Components/Inputs/Dropzone",
+            "displayName": "Dropzone"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Color Picker",
+          "component": {
+            "name": "Components/Inputs/Input",
+            "displayName": "Input"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Numeric Stepper",
+          "component": {
+            "name": "Components/Inputs/Input",
+            "displayName": "Input"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Short Text",
+          "component": {
+            "name": "Components/Inputs/Input",
+            "displayName": "Input"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Long Text",
+          "component": {
+            "name": "Components/Inputs/Input",
+            "displayName": "Input"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Code Snippet",
+          "component": {
+            "name": "Components/Inputs/Input",
+            "displayName": "Input"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Color Parameters",
+          "component": {
+            "name": "Components/Inputs/Inputs Bar",
+            "displayName": "Inputs Bar"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Triple Values",
+          "component": {
+            "name": "Components/Inputs/Multiple Slider",
+            "displayName": "Multiple Slider"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Editing Values",
+          "component": {
+            "name": "Components/Inputs/Multiple Slider",
+            "displayName": "Multiple Slider"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Check Box",
+          "component": {
+            "name": "Components/Inputs/Select",
+            "displayName": "Select"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Radio Button",
+          "component": {
+            "name": "Components/Inputs/Select",
+            "displayName": "Select"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Switch Button",
+          "component": {
+            "name": "Components/Inputs/Select",
+            "displayName": "Select"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Multiple Choices",
+          "component": {
+            "name": "Components/Inputs/Select",
+            "displayName": "Select"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Single Choice",
+          "component": {
+            "name": "Components/Inputs/Select",
+            "displayName": "Select"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Age Select",
+          "component": {
+            "name": "Components/Inputs/Simple Slider",
+            "displayName": "Simple Slider"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Single Action",
+          "component": {
+            "name": "Components/Lists/Actions Item",
+            "displayName": "Actions Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Several Actions",
+          "component": {
+            "name": "Components/Lists/Actions Item",
+            "displayName": "Actions Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Without Action Nor Thumbnail",
+          "component": {
+            "name": "Components/Lists/Actions Item",
+            "displayName": "Actions Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Color Sample",
+          "component": {
+            "name": "Components/Lists/Color Item",
+            "displayName": "Color Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Color Item",
+          "component": {
+            "name": "Components/Lists/Draggable Item",
+            "displayName": "Draggable Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Rich Color Item",
+          "component": {
+            "name": "Components/Lists/Draggable Item",
+            "displayName": "Draggable Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Single Key",
+          "component": {
+            "name": "Components/Lists/Keyboard Shortcut Item",
+            "displayName": "Keyboard Shortcut Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Combo Keys",
+          "component": {
+            "name": "Components/Lists/Keyboard Shortcut Item",
+            "displayName": "Keyboard Shortcut Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Several Combo Keys",
+          "component": {
+            "name": "Components/Lists/Keyboard Shortcut Item",
+            "displayName": "Keyboard Shortcut Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Four Options List",
+          "component": {
+            "name": "Components/Lists/Actions List",
+            "displayName": "Actions List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Four Options List With Separator",
+          "component": {
+            "name": "Components/Lists/Actions List",
+            "displayName": "Actions List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Four Options List In Groups",
+          "component": {
+            "name": "Components/Lists/Actions List",
+            "displayName": "Actions List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Long List With Scroll",
+          "component": {
+            "name": "Components/Lists/Actions List",
+            "displayName": "Actions List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Default",
+          "component": {
+            "name": "Components/Lists/Members List",
+            "displayName": "Members List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Show All Members",
+          "component": {
+            "name": "Components/Lists/Members List",
+            "displayName": "Members List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Show One Member",
+          "component": {
+            "name": "Components/Lists/Members List",
+            "displayName": "Members List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Empty List",
+          "component": {
+            "name": "Components/Lists/Members List",
+            "displayName": "Members List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Simple Colors",
+          "component": {
+            "name": "Components/Lists/Sortable List",
+            "displayName": "Sortable List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Rich Colors",
+          "component": {
+            "name": "Components/Lists/Sortable List",
+            "displayName": "Sortable List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Default",
+          "component": {
+            "name": "Components/Slots/Drawer",
+            "displayName": "Drawer"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Text Input Item",
+          "component": {
+            "name": "Components/Slots/Form Item",
+            "displayName": "Form Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Default",
+          "component": {
+            "name": "Components/Slots/List",
+            "displayName": "List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Message",
+          "component": {
+            "name": "Components/Slots/List",
+            "displayName": "List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Loading",
+          "component": {
+            "name": "Components/Slots/List",
+            "displayName": "List"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Default",
+          "component": {
+            "name": "Components/Slots/Section",
+            "displayName": "Section"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Color Item",
+          "component": {
+            "name": "Components/Slots/Simple Item",
+            "displayName": "Simple Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "New",
+          "component": {
+            "name": "Components/Tags/Chip",
+            "displayName": "Chip"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Pro",
+          "component": {
+            "name": "Components/Tags/Chip",
+            "displayName": "Chip"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Score",
+          "component": {
+            "name": "Components/Tags/Chip",
+            "displayName": "Chip"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      }
+    ],
+    "inProgressCount": 0,
+    "completedAt": 1749477272111
+  },
+  "buildCommand": "npm run build-storybook -- --output-dir=/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--40607-IVYcKr6VNN5T",
+  "buildLogFile": "/Users/a_ng_d/DEV/figmug-ui/build-storybook.log",
+  "configuration": {
+    "configFile": "chromatic.config.json",
+    "projectId": "Project:663a220bcc5dda79791c430e",
+    "debug": true,
+    "zip": true,
+    "buildScriptName": "build-storybook"
+  },
+  "environment": {},
+  "exitCode": 0,
+  "exitCodeKey": "OK",
+  "extraOptions": {
+    "configFile": "chromatic.config.json",
+    "projectId": "Project:663a220bcc5dda79791c430e",
+    "autoAcceptChanges": false,
+    "exitOnceUploaded": false,
+    "exitZeroOnChanges": true,
+    "forceRebuild": true,
+    "fromCI": false,
+    "interactive": false,
+    "isLocalBuild": true,
+    "logPrefix": "\u001b[38;5;202mChromatic\u001b[0m:",
+    "skip": false,
+    "skipUpdateCheck": true,
+    "experimental_abortSignal": {}
+  },
+  "fileInfo": {
+    "lengths": [
+      {
+        "pathname": "addon-visual-tests-assets/visual-test-illustration.mp4",
+        "contentLength": 105312,
+        "knownAs": "addon-visual-tests-assets/visual-test-illustration.mp4"
+      },
+      {
+        "pathname": "assets/Accordion-DTYDiMOt.css",
+        "contentLength": 3682,
+        "knownAs": "assets/Accordion-DTYDiMOt.css"
+      },
+      {
+        "pathname": "assets/Accordion.stories-CJ7zV71t.js",
+        "contentLength": 3246,
+        "knownAs": "assets/Accordion.stories-CJ7zV71t.js"
+      },
+      {
+        "pathname": "assets/ActionsItem-C-MZ7mOu.css",
+        "contentLength": 4378,
+        "knownAs": "assets/ActionsItem-C-MZ7mOu.css"
+      },
+      {
+        "pathname": "assets/ActionsItem-DPa-za3E.js",
+        "contentLength": 1468,
+        "knownAs": "assets/ActionsItem-DPa-za3E.js"
+      },
+      {
+        "pathname": "assets/ActionsItem.stories-CJrzhty0.js",
+        "contentLength": 5328,
+        "knownAs": "assets/ActionsItem.stories-CJrzhty0.js"
+      },
+      {
+        "pathname": "assets/Avatar-Cu9J1Swb.js",
+        "contentLength": 651,
+        "knownAs": "assets/Avatar-Cu9J1Swb.js"
+      },
+      {
+        "pathname": "assets/Avatar-tEDaSJ4J.css",
+        "contentLength": 735,
+        "knownAs": "assets/Avatar-tEDaSJ4J.css"
+      },
+      {
+        "pathname": "assets/Avatar.stories-QLdBdCOo.js",
+        "contentLength": 1256,
+        "knownAs": "assets/Avatar.stories-QLdBdCOo.js"
+      },
+      {
+        "pathname": "assets/Bar-Bu5T73PS.css",
+        "contentLength": 1637,
+        "knownAs": "assets/Bar-Bu5T73PS.css"
+      },
+      {
+        "pathname": "assets/Bar-CVh8aULv.js",
+        "contentLength": 1060,
+        "knownAs": "assets/Bar-CVh8aULv.js"
+      },
+      {
+        "pathname": "assets/Button-Bng6Su02.css",
+        "contentLength": 72106,
+        "knownAs": "assets/Button-Bng6Su02.css"
+      },
+      {
+        "pathname": "assets/Button-D4UpHB2Z.js",
+        "contentLength": 3074,
+        "knownAs": "assets/Button-D4UpHB2Z.js"
+      },
+      {
+        "pathname": "assets/Button.stories-BWbtqzqY.js",
+        "contentLength": 8706,
+        "knownAs": "assets/Button.stories-BWbtqzqY.js"
+      },
+      {
+        "pathname": "assets/Chip-BCFvzgzS.js",
+        "contentLength": 1869,
+        "knownAs": "assets/Chip-BCFvzgzS.js"
+      },
+      {
+        "pathname": "assets/Chip-rCoYypT3.css",
+        "contentLength": 6419,
+        "knownAs": "assets/Chip-rCoYypT3.css"
+      },
+      {
+        "pathname": "assets/Chip.stories-CXh1ds8K.js",
+        "contentLength": 1741,
+        "knownAs": "assets/Chip.stories-CXh1ds8K.js"
+      },
+      {
+        "pathname": "assets/ColorChip-BDtV27BB.js",
+        "contentLength": 679,
+        "knownAs": "assets/ColorChip-BDtV27BB.js"
+      },
+      {
+        "pathname": "assets/ColorChip-CNR_w8YN.css",
+        "contentLength": 1032,
+        "knownAs": "assets/ColorChip-CNR_w8YN.css"
+      },
+      {
+        "pathname": "assets/ColorItem-sZLll6nI.css",
+        "contentLength": 853,
+        "knownAs": "assets/ColorItem-sZLll6nI.css"
+      },
+      {
+        "pathname": "assets/ColorItem.stories-BwM8PnPt.js",
+        "contentLength": 1562,
+        "knownAs": "assets/ColorItem.stories-BwM8PnPt.js"
+      },
+      {
+        "pathname": "assets/Consent-DbWMJZwF.css",
+        "contentLength": 2372,
+        "knownAs": "assets/Consent-DbWMJZwF.css"
+      },
+      {
+        "pathname": "assets/Consent.stories-DFg0e3Ft.js",
+        "contentLength": 10902,
+        "knownAs": "assets/Consent.stories-DFg0e3Ft.js"
+      },
+      {
+        "pathname": "assets/Dialog-BoIPK5-M.css",
+        "contentLength": 6882,
+        "knownAs": "assets/Dialog-BoIPK5-M.css"
+      },
+      {
+        "pathname": "assets/Dialog.stories-Crr1n0ol.js",
+        "contentLength": 10177,
+        "knownAs": "assets/Dialog.stories-Crr1n0ol.js"
+      },
+      {
+        "pathname": "assets/DraggableItem-CeaIDuzJ.css",
+        "contentLength": 7192,
+        "knownAs": "assets/DraggableItem-CeaIDuzJ.css"
+      },
+      {
+        "pathname": "assets/DraggableItem-CiVbvNpN.js",
+        "contentLength": 4162,
+        "knownAs": "assets/DraggableItem-CiVbvNpN.js"
+      },
+      {
+        "pathname": "assets/DraggableItem.stories-CR43TQDk.js",
+        "contentLength": 4423,
+        "knownAs": "assets/DraggableItem.stories-CR43TQDk.js"
+      },
+      {
+        "pathname": "assets/Drawer-DRsIairj.css",
+        "contentLength": 1332,
+        "knownAs": "assets/Drawer-DRsIairj.css"
+      },
+      {
+        "pathname": "assets/Drawer.stories-D1RcXKpz.js",
+        "contentLength": 5834,
+        "knownAs": "assets/Drawer.stories-D1RcXKpz.js"
+      },
+      {
+        "pathname": "assets/Dropdown-BQh6G7GM.css",
+        "contentLength": 7879,
+        "knownAs": "assets/Dropdown-BQh6G7GM.css"
+      },
+      {
+        "pathname": "assets/Dropdown.stories-BgLJKPCK.js",
+        "contentLength": 12670,
+        "knownAs": "assets/Dropdown.stories-BgLJKPCK.js"
+      },
+      {
+        "pathname": "assets/Dropzone--VjUAUjB.css",
+        "contentLength": 2976,
+        "knownAs": "assets/Dropzone--VjUAUjB.css"
+      },
+      {
+        "pathname": "assets/Dropzone.stories-DXEIWb-B.js",
+        "contentLength": 4487,
+        "knownAs": "assets/Dropzone.stories-DXEIWb-B.js"
+      },
+      {
+        "pathname": "assets/FormItem-5LCbPYiB.js",
+        "contentLength": 923,
+        "knownAs": "assets/FormItem-5LCbPYiB.js"
+      },
+      {
+        "pathname": "assets/FormItem-Cc2AAIL1.css",
+        "contentLength": 1892,
+        "knownAs": "assets/FormItem-Cc2AAIL1.css"
+      },
+      {
+        "pathname": "assets/Formitem.stories-DT06Q0EP.js",
+        "contentLength": 1182,
+        "knownAs": "assets/Formitem.stories-DT06Q0EP.js"
+      },
+      {
+        "pathname": "assets/Icon-BBZvmbO6.css",
+        "contentLength": 200833,
+        "knownAs": "assets/Icon-BBZvmbO6.css"
+      },
+      {
+        "pathname": "assets/Icon-CLX7SKA8.js",
+        "contentLength": 5807,
+        "knownAs": "assets/Icon-CLX7SKA8.js"
+      },
+      {
+        "pathname": "assets/Icon.stories-DR2fZaBg.js",
+        "contentLength": 3692,
+        "knownAs": "assets/Icon.stories-DR2fZaBg.js"
+      },
+      {
+        "pathname": "assets/Input-D_AghwZI.js",
+        "contentLength": 9731,
+        "knownAs": "assets/Input-D_AghwZI.js"
+      },
+      {
+        "pathname": "assets/Input-vTkV8atF.css",
+        "contentLength": 29369,
+        "knownAs": "assets/Input-vTkV8atF.css"
+      },
+      {
+        "pathname": "assets/Input.stories-RWITkDYA.js",
+        "contentLength": 9292,
+        "knownAs": "assets/Input.stories-RWITkDYA.js"
+      },
+      {
+        "pathname": "assets/InputsBar-BeTMdZy8.css",
+        "contentLength": 2324,
+        "knownAs": "assets/InputsBar-BeTMdZy8.css"
+      },
+      {
+        "pathname": "assets/InputsBar.stories-DtbF-xis.js",
+        "contentLength": 1276,
+        "knownAs": "assets/InputsBar.stories-DtbF-xis.js"
+      },
+      {
+        "pathname": "assets/KeyboardShortcutItem-h20X3iWU.css",
+        "contentLength": 3781,
+        "knownAs": "assets/KeyboardShortcutItem-h20X3iWU.css"
+      },
+      {
+        "pathname": "assets/KeyboardShortcutItem.stories-DflhsgZz.js",
+        "contentLength": 2234,
+        "knownAs": "assets/KeyboardShortcutItem.stories-DflhsgZz.js"
+      },
+      {
+        "pathname": "assets/Knob-DJQPkk-a.css",
+        "contentLength": 10613,
+        "knownAs": "assets/Knob-DJQPkk-a.css"
+      },
+      {
+        "pathname": "assets/Knob-unAf-t_M.js",
+        "contentLength": 2910,
+        "knownAs": "assets/Knob-unAf-t_M.js"
+      },
+      {
+        "pathname": "assets/List-Bc7GqhjT.css",
+        "contentLength": 18059,
+        "knownAs": "assets/List-Bc7GqhjT.css"
+      },
+      {
+        "pathname": "assets/List-CxQWa0vv.css",
+        "contentLength": 1270,
+        "knownAs": "assets/List-CxQWa0vv.css"
+      },
+      {
+        "pathname": "assets/List.stories-BHqnAFs6.js",
+        "contentLength": 14184,
+        "knownAs": "assets/List.stories-BHqnAFs6.js"
+      },
+      {
+        "pathname": "assets/List.stories-C8a-jbqB.js",
+        "contentLength": 5157,
+        "knownAs": "assets/List.stories-C8a-jbqB.js"
+      },
+      {
+        "pathname": "assets/MembersList-D-O1G57w.css",
+        "contentLength": 1639,
+        "knownAs": "assets/MembersList-D-O1G57w.css"
+      },
+      {
+        "pathname": "assets/MembersList.stories-Bau4Ldjl.js",
+        "contentLength": 3047,
+        "knownAs": "assets/MembersList.stories-Bau4Ldjl.js"
+      },
+      {
+        "pathname": "assets/Menu-D0Gn-hXO.css",
+        "contentLength": 1231,
+        "knownAs": "assets/Menu-D0Gn-hXO.css"
+      },
+      {
+        "pathname": "assets/Menu.stories-CxeILPrS.js",
+        "contentLength": 7970,
+        "knownAs": "assets/Menu.stories-CxeILPrS.js"
+      },
+      {
+        "pathname": "assets/Message-DB2uaHhu.js",
+        "contentLength": 1826,
+        "knownAs": "assets/Message-DB2uaHhu.js"
+      },
+      {
+        "pathname": "assets/Message-DdHkGw2T.css",
+        "contentLength": 3433,
+        "knownAs": "assets/Message-DdHkGw2T.css"
+      },
+      {
+        "pathname": "assets/Message.stories-BhX9FneM.js",
+        "contentLength": 1930,
+        "knownAs": "assets/Message.stories-BhX9FneM.js"
+      },
+      {
+        "pathname": "assets/MultipleSlider-D0weXxt6.css",
+        "contentLength": 1499,
+        "knownAs": "assets/MultipleSlider-D0weXxt6.css"
+      },
+      {
+        "pathname": "assets/MultipleSlider.stories-BafDluB2.js",
+        "contentLength": 11966,
+        "knownAs": "assets/MultipleSlider.stories-BafDluB2.js"
+      },
+      {
+        "pathname": "assets/Notification-BtLQ2wqs.css",
+        "contentLength": 626,
+        "knownAs": "assets/Notification-BtLQ2wqs.css"
+      },
+      {
+        "pathname": "assets/Notification.stories-T1mnlHUH.js",
+        "contentLength": 1761,
+        "knownAs": "assets/Notification.stories-T1mnlHUH.js"
+      },
+      {
+        "pathname": "assets/Section-rXYRDUtG.css",
+        "contentLength": 1587,
+        "knownAs": "assets/Section-rXYRDUtG.css"
+      },
+      {
+        "pathname": "assets/Section.stories-BnpQTiQp.js",
+        "contentLength": 2408,
+        "knownAs": "assets/Section.stories-BnpQTiQp.js"
+      },
+      {
+        "pathname": "assets/SectionTitle-B2j_nyMb.js",
+        "contentLength": 775,
+        "knownAs": "assets/SectionTitle-B2j_nyMb.js"
+      },
+      {
+        "pathname": "assets/SectionTitle-DjAfJvYB.css",
+        "contentLength": 2816,
+        "knownAs": "assets/SectionTitle-DjAfJvYB.css"
+      },
+      {
+        "pathname": "assets/SectionTitle.stories-B8x6JhwP.js",
+        "contentLength": 960,
+        "knownAs": "assets/SectionTitle.stories-B8x6JhwP.js"
+      },
+      {
+        "pathname": "assets/Select-BZc-PKxc.css",
+        "contentLength": 28890,
+        "knownAs": "assets/Select-BZc-PKxc.css"
+      },
+      {
+        "pathname": "assets/Select-c0QXhFd9.js",
+        "contentLength": 2033,
+        "knownAs": "assets/Select-c0QXhFd9.js"
+      },
+      {
+        "pathname": "assets/Select.stories-DgkcK9kL.js",
+        "contentLength": 9036,
+        "knownAs": "assets/Select.stories-DgkcK9kL.js"
+      },
+      {
+        "pathname": "assets/SemanticMessage-9gEsyK3f.js",
+        "contentLength": 867,
+        "knownAs": "assets/SemanticMessage-9gEsyK3f.js"
+      },
+      {
+        "pathname": "assets/SemanticMessage-YPuZEGTY.css",
+        "contentLength": 7892,
+        "knownAs": "assets/SemanticMessage-YPuZEGTY.css"
+      },
+      {
+        "pathname": "assets/SemanticMessage.stories-DhRp7w94.js",
+        "contentLength": 1776,
+        "knownAs": "assets/SemanticMessage.stories-DhRp7w94.js"
+      },
+      {
+        "pathname": "assets/SimpleItem-BC3PousL.js",
+        "contentLength": 1307,
+        "knownAs": "assets/SimpleItem-BC3PousL.js"
+      },
+      {
+        "pathname": "assets/SimpleItem-CQM13yw2.css",
+        "contentLength": 4103,
+        "knownAs": "assets/SimpleItem-CQM13yw2.css"
+      },
+      {
+        "pathname": "assets/SimpleItem.stories-Cplk9LXQ.js",
+        "contentLength": 1213,
+        "knownAs": "assets/SimpleItem.stories-Cplk9LXQ.js"
+      },
+      {
+        "pathname": "assets/SimpleSlider-BHiKmw27.css",
+        "contentLength": 1350,
+        "knownAs": "assets/SimpleSlider-BHiKmw27.css"
+      },
+      {
+        "pathname": "assets/SimpleSlider.stories-CKFSjzZX.js",
+        "contentLength": 4116,
+        "knownAs": "assets/SimpleSlider.stories-CKFSjzZX.js"
+      },
+      {
+        "pathname": "assets/SortableList-FcMMIPG0.css",
+        "contentLength": 791,
+        "knownAs": "assets/SortableList-FcMMIPG0.css"
+      },
+      {
+        "pathname": "assets/SortableList.stories-CcWO7ime.js",
+        "contentLength": 10131,
+        "knownAs": "assets/SortableList.stories-CcWO7ime.js"
+      },
+      {
+        "pathname": "assets/Tabs-BeAwV0yA.css",
+        "contentLength": 20050,
+        "knownAs": "assets/Tabs-BeAwV0yA.css"
+      },
+      {
+        "pathname": "assets/Tabs.stories-N55TSFon.js",
+        "contentLength": 4590,
+        "knownAs": "assets/Tabs.stories-N55TSFon.js"
+      },
+      {
+        "pathname": "assets/Thumbnail-4t136AtU.css",
+        "contentLength": 1659,
+        "knownAs": "assets/Thumbnail-4t136AtU.css"
+      },
+      {
+        "pathname": "assets/Thumbnail-CZPshkeN.js",
+        "contentLength": 760,
+        "knownAs": "assets/Thumbnail-CZPshkeN.js"
+      },
+      {
+        "pathname": "assets/Thumbnail.stories-oZ-8yNpG.js",
+        "contentLength": 883,
+        "knownAs": "assets/Thumbnail.stories-oZ-8yNpG.js"
+      },
+      {
+        "pathname": "assets/Tooltip-95qOz2ti.css",
+        "contentLength": 3998,
+        "knownAs": "assets/Tooltip-95qOz2ti.css"
+      },
+      {
+        "pathname": "assets/Tooltip-CV0k5qyj.js",
+        "contentLength": 884,
+        "knownAs": "assets/Tooltip-CV0k5qyj.js"
+      },
+      {
+        "pathname": "assets/chunk-2WNKQWTL-BojUnj9C.js",
+        "contentLength": 6901,
+        "knownAs": "assets/chunk-2WNKQWTL-BojUnj9C.js"
+      },
+      {
+        "pathname": "assets/do-classnames-CStnmS_I.css",
+        "contentLength": 6561,
+        "knownAs": "assets/do-classnames-CStnmS_I.css"
+      },
+      {
+        "pathname": "assets/do-classnames-XCFI27ga.js",
+        "contentLength": 498,
+        "knownAs": "assets/do-classnames-XCFI27ga.js"
+      },
+      {
+        "pathname": "assets/do-map-LnAUJFLK.js",
+        "contentLength": 75,
+        "knownAs": "assets/do-map-LnAUJFLK.js"
+      },
+      {
+        "pathname": "assets/iframe-CYxZ0f5y.js",
+        "contentLength": 1276623,
+        "knownAs": "assets/iframe-CYxZ0f5y.js"
+      },
+      {
+        "pathname": "assets/iframe-dcLj5MSJ.css",
+        "contentLength": 28797,
+        "knownAs": "assets/iframe-dcLj5MSJ.css"
+      },
+      {
+        "pathname": "assets/react-18-C4YAYGXf.js",
+        "contentLength": 134636,
+        "knownAs": "assets/react-18-C4YAYGXf.js"
+      },
+      {
+        "pathname": "components/actions/accordion/Accordion.d.ts",
+        "contentLength": 689,
+        "knownAs": "components/actions/accordion/Accordion.d.ts"
+      },
+      {
+        "pathname": "components/actions/accordion/Accordion.d.ts.map",
+        "contentLength": 914,
+        "knownAs": "components/actions/accordion/Accordion.d.ts.map"
+      },
+      {
+        "pathname": "components/actions/button/Button.d.ts",
+        "contentLength": 1457,
+        "knownAs": "components/actions/button/Button.d.ts"
+      },
+      {
+        "pathname": "components/actions/button/Button.d.ts.map",
+        "contentLength": 1507,
+        "knownAs": "components/actions/button/Button.d.ts.map"
+      },
+      {
+        "pathname": "components/actions/card/Card.d.ts",
+        "contentLength": 343,
+        "knownAs": "components/actions/card/Card.d.ts"
+      },
+      {
+        "pathname": "components/actions/card/Card.d.ts.map",
+        "contentLength": 511,
+        "knownAs": "components/actions/card/Card.d.ts.map"
+      },
+      {
+        "pathname": "components/actions/knob/Knob.d.ts",
+        "contentLength": 1382,
+        "knownAs": "components/actions/knob/Knob.d.ts"
+      },
+      {
+        "pathname": "components/actions/knob/Knob.d.ts.map",
+        "contentLength": 1449,
+        "knownAs": "components/actions/knob/Knob.d.ts.map"
+      },
+      {
+        "pathname": "components/actions/menu/Menu.d.ts",
+        "contentLength": 1395,
+        "knownAs": "components/actions/menu/Menu.d.ts"
+      },
+      {
+        "pathname": "components/actions/menu/Menu.d.ts.map",
+        "contentLength": 1464,
+        "knownAs": "components/actions/menu/Menu.d.ts.map"
+      },
+      {
+        "pathname": "components/assets/avatar/Avatar.d.ts",
+        "contentLength": 317,
+        "knownAs": "components/assets/avatar/Avatar.d.ts"
+      },
+      {
+        "pathname": "components/assets/avatar/Avatar.d.ts.map",
+        "contentLength": 459,
+        "knownAs": "components/assets/avatar/Avatar.d.ts.map"
+      },
+      {
+        "pathname": "components/assets/icon/Icon.d.ts",
+        "contentLength": 361,
+        "knownAs": "components/assets/icon/Icon.d.ts"
+      },
+      {
+        "pathname": "components/assets/icon/Icon.d.ts.map",
+        "contentLength": 498,
+        "knownAs": "components/assets/icon/Icon.d.ts.map"
+      },
+      {
+        "pathname": "components/assets/section-title/SectionTitle.d.ts",
+        "contentLength": 298,
+        "knownAs": "components/assets/section-title/SectionTitle.d.ts"
+      },
+      {
+        "pathname": "components/assets/section-title/SectionTitle.d.ts.map",
+        "contentLength": 453,
+        "knownAs": "components/assets/section-title/SectionTitle.d.ts.map"
+      },
+      {
+        "pathname": "components/assets/thumbnail/Thumbnail.d.ts",
+        "contentLength": 253,
+        "knownAs": "components/assets/thumbnail/Thumbnail.d.ts"
+      },
+      {
+        "pathname": "components/assets/thumbnail/Thumbnail.d.ts.map",
+        "contentLength": 389,
+        "knownAs": "components/assets/thumbnail/Thumbnail.d.ts.map"
+      },
+      {
+        "pathname": "components/dialogs/consent/Consent.d.ts",
+        "contentLength": 1496,
+        "knownAs": "components/dialogs/consent/Consent.d.ts"
+      },
+      {
+        "pathname": "components/dialogs/consent/Consent.d.ts.map",
+        "contentLength": 1304,
+        "knownAs": "components/dialogs/consent/Consent.d.ts.map"
+      },
+      {
+        "pathname": "components/dialogs/dialog/Dialog.d.ts",
+        "contentLength": 1161,
+        "knownAs": "components/dialogs/dialog/Dialog.d.ts"
+      },
+      {
+        "pathname": "components/dialogs/dialog/Dialog.d.ts.map",
+        "contentLength": 1327,
+        "knownAs": "components/dialogs/dialog/Dialog.d.ts.map"
+      },
+      {
+        "pathname": "components/dialogs/message/Message.d.ts",
+        "contentLength": 551,
+        "knownAs": "components/dialogs/message/Message.d.ts"
+      },
+      {
+        "pathname": "components/dialogs/message/Message.d.ts.map",
+        "contentLength": 579,
+        "knownAs": "components/dialogs/message/Message.d.ts.map"
+      },
+      {
+        "pathname": "components/dialogs/notification/Notification.d.ts",
+        "contentLength": 353,
+        "knownAs": "components/dialogs/notification/Notification.d.ts"
+      },
+      {
+        "pathname": "components/dialogs/notification/Notification.d.ts.map",
+        "contentLength": 477,
+        "knownAs": "components/dialogs/notification/Notification.d.ts.map"
+      },
+      {
+        "pathname": "components/dialogs/semantic-message/SemanticMessage.d.ts",
+        "contentLength": 614,
+        "knownAs": "components/dialogs/semantic-message/SemanticMessage.d.ts"
+      },
+      {
+        "pathname": "components/dialogs/semantic-message/SemanticMessage.d.ts.map",
+        "contentLength": 714,
+        "knownAs": "components/dialogs/semantic-message/SemanticMessage.d.ts.map"
+      },
+      {
+        "pathname": "components/inputs/dropdown/Dropdown.d.ts",
+        "contentLength": 1212,
+        "knownAs": "components/inputs/dropdown/Dropdown.d.ts"
+      },
+      {
+        "pathname": "components/inputs/dropdown/Dropdown.d.ts.map",
+        "contentLength": 1282,
+        "knownAs": "components/inputs/dropdown/Dropdown.d.ts.map"
+      },
+      {
+        "pathname": "components/inputs/dropzone/Dropzone.d.ts",
+        "contentLength": 1379,
+        "knownAs": "components/inputs/dropzone/Dropzone.d.ts"
+      },
+      {
+        "pathname": "components/inputs/dropzone/Dropzone.d.ts.map",
+        "contentLength": 1342,
+        "knownAs": "components/inputs/dropzone/Dropzone.d.ts.map"
+      },
+      {
+        "pathname": "components/inputs/input/Input.d.ts",
+        "contentLength": 3233,
+        "knownAs": "components/inputs/input/Input.d.ts"
+      },
+      {
+        "pathname": "components/inputs/input/Input.d.ts.map",
+        "contentLength": 2924,
+        "knownAs": "components/inputs/input/Input.d.ts.map"
+      },
+      {
+        "pathname": "components/inputs/inputs-bar/InputsBar.d.ts",
+        "contentLength": 276,
+        "knownAs": "components/inputs/inputs-bar/InputsBar.d.ts"
+      },
+      {
+        "pathname": "components/inputs/inputs-bar/InputsBar.d.ts.map",
+        "contentLength": 401,
+        "knownAs": "components/inputs/inputs-bar/InputsBar.d.ts.map"
+      },
+      {
+        "pathname": "components/inputs/multiple-slider/MultipleSlider.d.ts",
+        "contentLength": 2421,
+        "knownAs": "components/inputs/multiple-slider/MultipleSlider.d.ts"
+      },
+      {
+        "pathname": "components/inputs/multiple-slider/MultipleSlider.d.ts.map",
+        "contentLength": 2044,
+        "knownAs": "components/inputs/multiple-slider/MultipleSlider.d.ts.map"
+      },
+      {
+        "pathname": "components/inputs/multiple-slider/actions/addStop.d.ts",
+        "contentLength": 265,
+        "knownAs": "components/inputs/multiple-slider/actions/addStop.d.ts"
+      },
+      {
+        "pathname": "components/inputs/multiple-slider/actions/addStop.d.ts.map",
+        "contentLength": 320,
+        "knownAs": "components/inputs/multiple-slider/actions/addStop.d.ts.map"
+      },
+      {
+        "pathname": "components/inputs/multiple-slider/actions/deleteStop.d.ts",
+        "contentLength": 250,
+        "knownAs": "components/inputs/multiple-slider/actions/deleteStop.d.ts"
+      },
+      {
+        "pathname": "components/inputs/multiple-slider/actions/deleteStop.d.ts.map",
+        "contentLength": 306,
+        "knownAs": "components/inputs/multiple-slider/actions/deleteStop.d.ts.map"
+      },
+      {
+        "pathname": "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts",
+        "contentLength": 270,
+        "knownAs": "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts"
+      },
+      {
+        "pathname": "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts.map",
+        "contentLength": 350,
+        "knownAs": "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts.map"
+      },
+      {
+        "pathname": "components/inputs/multiple-slider/actions/shiftRightStop.d.ts",
+        "contentLength": 273,
+        "knownAs": "components/inputs/multiple-slider/actions/shiftRightStop.d.ts"
+      },
+      {
+        "pathname": "components/inputs/multiple-slider/actions/shiftRightStop.d.ts.map",
+        "contentLength": 352,
+        "knownAs": "components/inputs/multiple-slider/actions/shiftRightStop.d.ts.map"
+      },
+      {
+        "pathname": "components/inputs/select/Select.d.ts",
+        "contentLength": 903,
+        "knownAs": "components/inputs/select/Select.d.ts"
+      },
+      {
+        "pathname": "components/inputs/select/Select.d.ts.map",
+        "contentLength": 961,
+        "knownAs": "components/inputs/select/Select.d.ts.map"
+      },
+      {
+        "pathname": "components/inputs/simple-slider/SimpleSlider.d.ts",
+        "contentLength": 1179,
+        "knownAs": "components/inputs/simple-slider/SimpleSlider.d.ts"
+      },
+      {
+        "pathname": "components/inputs/simple-slider/SimpleSlider.d.ts.map",
+        "contentLength": 1202,
+        "knownAs": "components/inputs/simple-slider/SimpleSlider.d.ts.map"
+      },
+      {
+        "pathname": "components/lists/actions-item/ActionsItem.d.ts",
+        "contentLength": 766,
+        "knownAs": "components/lists/actions-item/ActionsItem.d.ts"
+      },
+      {
+        "pathname": "components/lists/actions-item/ActionsItem.d.ts.map",
+        "contentLength": 933,
+        "knownAs": "components/lists/actions-item/ActionsItem.d.ts.map"
+      },
+      {
+        "pathname": "components/lists/actions-list/ActionsList.d.ts",
+        "contentLength": 1791,
+        "knownAs": "components/lists/actions-list/ActionsList.d.ts"
+      },
+      {
+        "pathname": "components/lists/actions-list/ActionsList.d.ts.map",
+        "contentLength": 1486,
+        "knownAs": "components/lists/actions-list/ActionsList.d.ts.map"
+      },
+      {
+        "pathname": "components/lists/color-item/ColorItem.d.ts",
+        "contentLength": 317,
+        "knownAs": "components/lists/color-item/ColorItem.d.ts"
+      },
+      {
+        "pathname": "components/lists/color-item/ColorItem.d.ts.map",
+        "contentLength": 463,
+        "knownAs": "components/lists/color-item/ColorItem.d.ts.map"
+      },
+      {
+        "pathname": "components/lists/draggable-item/DraggableItem.d.ts",
+        "contentLength": 1663,
+        "knownAs": "components/lists/draggable-item/DraggableItem.d.ts"
+      },
+      {
+        "pathname": "components/lists/draggable-item/DraggableItem.d.ts.map",
+        "contentLength": 1747,
+        "knownAs": "components/lists/draggable-item/DraggableItem.d.ts.map"
+      },
+      {
+        "pathname": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts",
+        "contentLength": 328,
+        "knownAs": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts"
+      },
+      {
+        "pathname": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map",
+        "contentLength": 467,
+        "knownAs": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map"
+      },
+      {
+        "pathname": "components/lists/members-list/MembersList.d.ts",
+        "contentLength": 545,
+        "knownAs": "components/lists/members-list/MembersList.d.ts"
+      },
+      {
+        "pathname": "components/lists/members-list/MembersList.d.ts.map",
+        "contentLength": 614,
+        "knownAs": "components/lists/members-list/MembersList.d.ts.map"
+      },
+      {
+        "pathname": "components/lists/sortable-list/SortableList.d.ts",
+        "contentLength": 2037,
+        "knownAs": "components/lists/sortable-list/SortableList.d.ts"
+      },
+      {
+        "pathname": "components/lists/sortable-list/SortableList.d.ts.map",
+        "contentLength": 2029,
+        "knownAs": "components/lists/sortable-list/SortableList.d.ts.map"
+      },
+      {
+        "pathname": "components/lists/tabs/Tabs.d.ts",
+        "contentLength": 566,
+        "knownAs": "components/lists/tabs/Tabs.d.ts"
+      },
+      {
+        "pathname": "components/lists/tabs/Tabs.d.ts.map",
+        "contentLength": 693,
+        "knownAs": "components/lists/tabs/Tabs.d.ts.map"
+      },
+      {
+        "pathname": "components/slots/bar/Bar.d.ts",
+        "contentLength": 761,
+        "knownAs": "components/slots/bar/Bar.d.ts"
+      },
+      {
+        "pathname": "components/slots/bar/Bar.d.ts.map",
+        "contentLength": 876,
+        "knownAs": "components/slots/bar/Bar.d.ts.map"
+      },
+      {
+        "pathname": "components/slots/draggable-window/DraggableWindow.d.ts",
+        "contentLength": 449,
+        "knownAs": "components/slots/draggable-window/DraggableWindow.d.ts"
+      },
+      {
+        "pathname": "components/slots/draggable-window/DraggableWindow.d.ts.map",
+        "contentLength": 538,
+        "knownAs": "components/slots/draggable-window/DraggableWindow.d.ts.map"
+      },
+      {
+        "pathname": "components/slots/drawer/Drawer.d.ts",
+        "contentLength": 1423,
+        "knownAs": "components/slots/drawer/Drawer.d.ts"
+      },
+      {
+        "pathname": "components/slots/drawer/Drawer.d.ts.map",
+        "contentLength": 1441,
+        "knownAs": "components/slots/drawer/Drawer.d.ts.map"
+      },
+      {
+        "pathname": "components/slots/form-item/FormItem.d.ts",
+        "contentLength": 409,
+        "knownAs": "components/slots/form-item/FormItem.d.ts"
+      },
+      {
+        "pathname": "components/slots/form-item/FormItem.d.ts.map",
+        "contentLength": 581,
+        "knownAs": "components/slots/form-item/FormItem.d.ts.map"
+      },
+      {
+        "pathname": "components/slots/layout/Layout.d.ts",
+        "contentLength": 518,
+        "knownAs": "components/slots/layout/Layout.d.ts"
+      },
+      {
+        "pathname": "components/slots/layout/Layout.d.ts.map",
+        "contentLength": 660,
+        "knownAs": "components/slots/layout/Layout.d.ts.map"
+      },
+      {
+        "pathname": "components/slots/list/List.d.ts",
+        "contentLength": 456,
+        "knownAs": "components/slots/list/List.d.ts"
+      },
+      {
+        "pathname": "components/slots/list/List.d.ts.map",
+        "contentLength": 607,
+        "knownAs": "components/slots/list/List.d.ts.map"
+      },
+      {
+        "pathname": "components/slots/popin/Popin.d.ts",
+        "contentLength": 1242,
+        "knownAs": "components/slots/popin/Popin.d.ts"
+      },
+      {
+        "pathname": "components/slots/popin/Popin.d.ts.map",
+        "contentLength": 1378,
+        "knownAs": "components/slots/popin/Popin.d.ts.map"
+      },
+      {
+        "pathname": "components/slots/section/Section.d.ts",
+        "contentLength": 595,
+        "knownAs": "components/slots/section/Section.d.ts"
+      },
+      {
+        "pathname": "components/slots/section/Section.d.ts.map",
+        "contentLength": 698,
+        "knownAs": "components/slots/section/Section.d.ts.map"
+      },
+      {
+        "pathname": "components/slots/simple-item/SimpleItem.d.ts",
+        "contentLength": 652,
+        "knownAs": "components/slots/simple-item/SimpleItem.d.ts"
+      },
+      {
+        "pathname": "components/slots/simple-item/SimpleItem.d.ts.map",
+        "contentLength": 774,
+        "knownAs": "components/slots/simple-item/SimpleItem.d.ts.map"
+      },
+      {
+        "pathname": "components/tags/chip/Chip.d.ts",
+        "contentLength": 447,
+        "knownAs": "components/tags/chip/Chip.d.ts"
+      },
+      {
+        "pathname": "components/tags/chip/Chip.d.ts.map",
+        "contentLength": 606,
+        "knownAs": "components/tags/chip/Chip.d.ts.map"
+      },
+      {
+        "pathname": "components/tags/color-chip/ColorChip.d.ts",
+        "contentLength": 526,
+        "knownAs": "components/tags/color-chip/ColorChip.d.ts"
+      },
+      {
+        "pathname": "components/tags/color-chip/ColorChip.d.ts.map",
+        "contentLength": 627,
+        "knownAs": "components/tags/color-chip/ColorChip.d.ts.map"
+      },
+      {
+        "pathname": "components/tags/tooltip/Tooltip.d.ts",
+        "contentLength": 342,
+        "knownAs": "components/tags/tooltip/Tooltip.d.ts"
+      },
+      {
+        "pathname": "components/tags/tooltip/Tooltip.d.ts.map",
+        "contentLength": 455,
+        "knownAs": "components/tags/tooltip/Tooltip.d.ts.map"
+      },
+      {
+        "pathname": "favicon.svg",
+        "contentLength": 1251,
+        "knownAs": "favicon.svg"
+      },
+      {
+        "pathname": "iframe.html",
+        "contentLength": 18192,
+        "knownAs": "iframe.html"
+      },
+      {
+        "pathname": "index.d.ts",
+        "contentLength": 3735,
+        "knownAs": "index.d.ts"
+      },
+      {
+        "pathname": "index.d.ts.map",
+        "contentLength": 2643,
+        "knownAs": "index.d.ts.map"
+      },
+      {
+        "pathname": "index.html",
+        "contentLength": 3309,
+        "knownAs": "index.html"
+      },
+      {
+        "pathname": "index.json",
+        "contentLength": 24673,
+        "knownAs": "index.json"
+      },
+      {
+        "pathname": "nunito-sans-bold-italic.woff2",
+        "contentLength": 49460,
+        "knownAs": "nunito-sans-bold-italic.woff2"
+      },
+      {
+        "pathname": "nunito-sans-bold.woff2",
+        "contentLength": 47144,
+        "knownAs": "nunito-sans-bold.woff2"
+      },
+      {
+        "pathname": "nunito-sans-italic.woff2",
+        "contentLength": 49620,
+        "knownAs": "nunito-sans-italic.woff2"
+      },
+      {
+        "pathname": "nunito-sans-regular.woff2",
+        "contentLength": 47072,
+        "knownAs": "nunito-sans-regular.woff2"
+      },
+      {
+        "pathname": "project.json",
+        "contentLength": 1178,
+        "knownAs": "project.json"
+      },
+      {
+        "pathname": "sb-addons/chromatic-com-storybook-2/manager-bundle.js",
+        "contentLength": 552070,
+        "knownAs": "sb-addons/chromatic-com-storybook-2/manager-bundle.js"
+      },
+      {
+        "pathname": "sb-addons/chromatic-com-storybook-2/manager-bundle.js.LEGAL.txt",
+        "contentLength": 1684,
+        "knownAs": "sb-addons/chromatic-com-storybook-2/manager-bundle.js.LEGAL.txt"
+      },
+      {
+        "pathname": "sb-addons/links-1/manager-bundle.js",
+        "contentLength": 1255,
+        "knownAs": "sb-addons/links-1/manager-bundle.js"
+      },
+      {
+        "pathname": "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js",
+        "contentLength": 308974,
+        "knownAs": "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js"
+      },
+      {
+        "pathname": "sb-common-assets/favicon.svg",
+        "contentLength": 1251,
+        "knownAs": "sb-common-assets/favicon.svg"
+      },
+      {
+        "pathname": "sb-common-assets/nunito-sans-bold-italic.woff2",
+        "contentLength": 49460,
+        "knownAs": "sb-common-assets/nunito-sans-bold-italic.woff2"
+      },
+      {
+        "pathname": "sb-common-assets/nunito-sans-bold.woff2",
+        "contentLength": 47144,
+        "knownAs": "sb-common-assets/nunito-sans-bold.woff2"
+      },
+      {
+        "pathname": "sb-common-assets/nunito-sans-italic.woff2",
+        "contentLength": 49620,
+        "knownAs": "sb-common-assets/nunito-sans-italic.woff2"
+      },
+      {
+        "pathname": "sb-common-assets/nunito-sans-regular.woff2",
+        "contentLength": 47072,
+        "knownAs": "sb-common-assets/nunito-sans-regular.woff2"
+      },
+      {
+        "pathname": "sb-manager/globals-module-info.js",
+        "contentLength": 17757,
+        "knownAs": "sb-manager/globals-module-info.js"
+      },
+      {
+        "pathname": "sb-manager/globals-runtime.js",
+        "contentLength": 2184924,
+        "knownAs": "sb-manager/globals-runtime.js"
+      },
+      {
+        "pathname": "sb-manager/globals.js",
+        "contentLength": 1564,
+        "knownAs": "sb-manager/globals.js"
+      },
+      {
+        "pathname": "sb-manager/runtime.js",
+        "contentLength": 438428,
+        "knownAs": "sb-manager/runtime.js"
+      },
+      {
+        "pathname": "tests/setup.d.ts",
+        "contentLength": 36,
+        "knownAs": "tests/setup.d.ts"
+      },
+      {
+        "pathname": "tests/setup.d.ts.map",
+        "contentLength": 176,
+        "knownAs": "tests/setup.d.ts.map"
+      },
+      {
+        "pathname": "types/consent.types.d.ts",
+        "contentLength": 287,
+        "knownAs": "types/consent.types.d.ts"
+      },
+      {
+        "pathname": "types/consent.types.d.ts.map",
+        "contentLength": 391,
+        "knownAs": "types/consent.types.d.ts.map"
+      },
+      {
+        "pathname": "types/icon.types.d.ts",
+        "contentLength": 1846,
+        "knownAs": "types/icon.types.d.ts"
+      },
+      {
+        "pathname": "types/icon.types.d.ts.map",
+        "contentLength": 1571,
+        "knownAs": "types/icon.types.d.ts.map"
+      },
+      {
+        "pathname": "types/list.types.d.ts",
+        "contentLength": 450,
+        "knownAs": "types/list.types.d.ts"
+      },
+      {
+        "pathname": "types/list.types.d.ts.map",
+        "contentLength": 633,
+        "knownAs": "types/list.types.d.ts.map"
+      }
+    ],
+    "paths": [
+      "addon-visual-tests-assets/visual-test-illustration.mp4",
+      "assets/Accordion-DTYDiMOt.css",
+      "assets/Accordion.stories-CJ7zV71t.js",
+      "assets/ActionsItem-C-MZ7mOu.css",
+      "assets/ActionsItem-DPa-za3E.js",
+      "assets/ActionsItem.stories-CJrzhty0.js",
+      "assets/Avatar-Cu9J1Swb.js",
+      "assets/Avatar-tEDaSJ4J.css",
+      "assets/Avatar.stories-QLdBdCOo.js",
+      "assets/Bar-Bu5T73PS.css",
+      "assets/Bar-CVh8aULv.js",
+      "assets/Button-Bng6Su02.css",
+      "assets/Button-D4UpHB2Z.js",
+      "assets/Button.stories-BWbtqzqY.js",
+      "assets/Chip-BCFvzgzS.js",
+      "assets/Chip-rCoYypT3.css",
+      "assets/Chip.stories-CXh1ds8K.js",
+      "assets/ColorChip-BDtV27BB.js",
+      "assets/ColorChip-CNR_w8YN.css",
+      "assets/ColorItem-sZLll6nI.css",
+      "assets/ColorItem.stories-BwM8PnPt.js",
+      "assets/Consent-DbWMJZwF.css",
+      "assets/Consent.stories-DFg0e3Ft.js",
+      "assets/Dialog-BoIPK5-M.css",
+      "assets/Dialog.stories-Crr1n0ol.js",
+      "assets/DraggableItem-CeaIDuzJ.css",
+      "assets/DraggableItem-CiVbvNpN.js",
+      "assets/DraggableItem.stories-CR43TQDk.js",
+      "assets/Drawer-DRsIairj.css",
+      "assets/Drawer.stories-D1RcXKpz.js",
+      "assets/Dropdown-BQh6G7GM.css",
+      "assets/Dropdown.stories-BgLJKPCK.js",
+      "assets/Dropzone--VjUAUjB.css",
+      "assets/Dropzone.stories-DXEIWb-B.js",
+      "assets/FormItem-5LCbPYiB.js",
+      "assets/FormItem-Cc2AAIL1.css",
+      "assets/Formitem.stories-DT06Q0EP.js",
+      "assets/Icon-BBZvmbO6.css",
+      "assets/Icon-CLX7SKA8.js",
+      "assets/Icon.stories-DR2fZaBg.js",
+      "assets/Input-D_AghwZI.js",
+      "assets/Input-vTkV8atF.css",
+      "assets/Input.stories-RWITkDYA.js",
+      "assets/InputsBar-BeTMdZy8.css",
+      "assets/InputsBar.stories-DtbF-xis.js",
+      "assets/KeyboardShortcutItem-h20X3iWU.css",
+      "assets/KeyboardShortcutItem.stories-DflhsgZz.js",
+      "assets/Knob-DJQPkk-a.css",
+      "assets/Knob-unAf-t_M.js",
+      "assets/List-Bc7GqhjT.css",
+      "assets/List-CxQWa0vv.css",
+      "assets/List.stories-BHqnAFs6.js",
+      "assets/List.stories-C8a-jbqB.js",
+      "assets/MembersList-D-O1G57w.css",
+      "assets/MembersList.stories-Bau4Ldjl.js",
+      "assets/Menu-D0Gn-hXO.css",
+      "assets/Menu.stories-CxeILPrS.js",
+      "assets/Message-DB2uaHhu.js",
+      "assets/Message-DdHkGw2T.css",
+      "assets/Message.stories-BhX9FneM.js",
+      "assets/MultipleSlider-D0weXxt6.css",
+      "assets/MultipleSlider.stories-BafDluB2.js",
+      "assets/Notification-BtLQ2wqs.css",
+      "assets/Notification.stories-T1mnlHUH.js",
+      "assets/Section-rXYRDUtG.css",
+      "assets/Section.stories-BnpQTiQp.js",
+      "assets/SectionTitle-B2j_nyMb.js",
+      "assets/SectionTitle-DjAfJvYB.css",
+      "assets/SectionTitle.stories-B8x6JhwP.js",
+      "assets/Select-BZc-PKxc.css",
+      "assets/Select-c0QXhFd9.js",
+      "assets/Select.stories-DgkcK9kL.js",
+      "assets/SemanticMessage-9gEsyK3f.js",
+      "assets/SemanticMessage-YPuZEGTY.css",
+      "assets/SemanticMessage.stories-DhRp7w94.js",
+      "assets/SimpleItem-BC3PousL.js",
+      "assets/SimpleItem-CQM13yw2.css",
+      "assets/SimpleItem.stories-Cplk9LXQ.js",
+      "assets/SimpleSlider-BHiKmw27.css",
+      "assets/SimpleSlider.stories-CKFSjzZX.js",
+      "assets/SortableList-FcMMIPG0.css",
+      "assets/SortableList.stories-CcWO7ime.js",
+      "assets/Tabs-BeAwV0yA.css",
+      "assets/Tabs.stories-N55TSFon.js",
+      "assets/Thumbnail-4t136AtU.css",
+      "assets/Thumbnail-CZPshkeN.js",
+      "assets/Thumbnail.stories-oZ-8yNpG.js",
+      "assets/Tooltip-95qOz2ti.css",
+      "assets/Tooltip-CV0k5qyj.js",
+      "assets/chunk-2WNKQWTL-BojUnj9C.js",
+      "assets/do-classnames-CStnmS_I.css",
+      "assets/do-classnames-XCFI27ga.js",
+      "assets/do-map-LnAUJFLK.js",
+      "assets/iframe-CYxZ0f5y.js",
+      "assets/iframe-dcLj5MSJ.css",
+      "assets/react-18-C4YAYGXf.js",
+      "components/actions/accordion/Accordion.d.ts",
+      "components/actions/accordion/Accordion.d.ts.map",
+      "components/actions/button/Button.d.ts",
+      "components/actions/button/Button.d.ts.map",
+      "components/actions/card/Card.d.ts",
+      "components/actions/card/Card.d.ts.map",
+      "components/actions/knob/Knob.d.ts",
+      "components/actions/knob/Knob.d.ts.map",
+      "components/actions/menu/Menu.d.ts",
+      "components/actions/menu/Menu.d.ts.map",
+      "components/assets/avatar/Avatar.d.ts",
+      "components/assets/avatar/Avatar.d.ts.map",
+      "components/assets/icon/Icon.d.ts",
+      "components/assets/icon/Icon.d.ts.map",
+      "components/assets/section-title/SectionTitle.d.ts",
+      "components/assets/section-title/SectionTitle.d.ts.map",
+      "components/assets/thumbnail/Thumbnail.d.ts",
+      "components/assets/thumbnail/Thumbnail.d.ts.map",
+      "components/dialogs/consent/Consent.d.ts",
+      "components/dialogs/consent/Consent.d.ts.map",
+      "components/dialogs/dialog/Dialog.d.ts",
+      "components/dialogs/dialog/Dialog.d.ts.map",
+      "components/dialogs/message/Message.d.ts",
+      "components/dialogs/message/Message.d.ts.map",
+      "components/dialogs/notification/Notification.d.ts",
+      "components/dialogs/notification/Notification.d.ts.map",
+      "components/dialogs/semantic-message/SemanticMessage.d.ts",
+      "components/dialogs/semantic-message/SemanticMessage.d.ts.map",
+      "components/inputs/dropdown/Dropdown.d.ts",
+      "components/inputs/dropdown/Dropdown.d.ts.map",
+      "components/inputs/dropzone/Dropzone.d.ts",
+      "components/inputs/dropzone/Dropzone.d.ts.map",
+      "components/inputs/input/Input.d.ts",
+      "components/inputs/input/Input.d.ts.map",
+      "components/inputs/inputs-bar/InputsBar.d.ts",
+      "components/inputs/inputs-bar/InputsBar.d.ts.map",
+      "components/inputs/multiple-slider/MultipleSlider.d.ts",
+      "components/inputs/multiple-slider/MultipleSlider.d.ts.map",
+      "components/inputs/multiple-slider/actions/addStop.d.ts",
+      "components/inputs/multiple-slider/actions/addStop.d.ts.map",
+      "components/inputs/multiple-slider/actions/deleteStop.d.ts",
+      "components/inputs/multiple-slider/actions/deleteStop.d.ts.map",
+      "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts",
+      "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts.map",
+      "components/inputs/multiple-slider/actions/shiftRightStop.d.ts",
+      "components/inputs/multiple-slider/actions/shiftRightStop.d.ts.map",
+      "components/inputs/select/Select.d.ts",
+      "components/inputs/select/Select.d.ts.map",
+      "components/inputs/simple-slider/SimpleSlider.d.ts",
+      "components/inputs/simple-slider/SimpleSlider.d.ts.map",
+      "components/lists/actions-item/ActionsItem.d.ts",
+      "components/lists/actions-item/ActionsItem.d.ts.map",
+      "components/lists/actions-list/ActionsList.d.ts",
+      "components/lists/actions-list/ActionsList.d.ts.map",
+      "components/lists/color-item/ColorItem.d.ts",
+      "components/lists/color-item/ColorItem.d.ts.map",
+      "components/lists/draggable-item/DraggableItem.d.ts",
+      "components/lists/draggable-item/DraggableItem.d.ts.map",
+      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts",
+      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map",
+      "components/lists/members-list/MembersList.d.ts",
+      "components/lists/members-list/MembersList.d.ts.map",
+      "components/lists/sortable-list/SortableList.d.ts",
+      "components/lists/sortable-list/SortableList.d.ts.map",
+      "components/lists/tabs/Tabs.d.ts",
+      "components/lists/tabs/Tabs.d.ts.map",
+      "components/slots/bar/Bar.d.ts",
+      "components/slots/bar/Bar.d.ts.map",
+      "components/slots/draggable-window/DraggableWindow.d.ts",
+      "components/slots/draggable-window/DraggableWindow.d.ts.map",
+      "components/slots/drawer/Drawer.d.ts",
+      "components/slots/drawer/Drawer.d.ts.map",
+      "components/slots/form-item/FormItem.d.ts",
+      "components/slots/form-item/FormItem.d.ts.map",
+      "components/slots/layout/Layout.d.ts",
+      "components/slots/layout/Layout.d.ts.map",
+      "components/slots/list/List.d.ts",
+      "components/slots/list/List.d.ts.map",
+      "components/slots/popin/Popin.d.ts",
+      "components/slots/popin/Popin.d.ts.map",
+      "components/slots/section/Section.d.ts",
+      "components/slots/section/Section.d.ts.map",
+      "components/slots/simple-item/SimpleItem.d.ts",
+      "components/slots/simple-item/SimpleItem.d.ts.map",
+      "components/tags/chip/Chip.d.ts",
+      "components/tags/chip/Chip.d.ts.map",
+      "components/tags/color-chip/ColorChip.d.ts",
+      "components/tags/color-chip/ColorChip.d.ts.map",
+      "components/tags/tooltip/Tooltip.d.ts",
+      "components/tags/tooltip/Tooltip.d.ts.map",
+      "favicon.svg",
+      "iframe.html",
+      "index.d.ts",
+      "index.d.ts.map",
+      "index.html",
+      "index.json",
+      "nunito-sans-bold-italic.woff2",
+      "nunito-sans-bold.woff2",
+      "nunito-sans-italic.woff2",
+      "nunito-sans-regular.woff2",
+      "project.json",
+      "sb-addons/chromatic-com-storybook-2/manager-bundle.js",
+      "sb-addons/chromatic-com-storybook-2/manager-bundle.js.LEGAL.txt",
+      "sb-addons/links-1/manager-bundle.js",
+      "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js",
+      "sb-common-assets/favicon.svg",
+      "sb-common-assets/nunito-sans-bold-italic.woff2",
+      "sb-common-assets/nunito-sans-bold.woff2",
+      "sb-common-assets/nunito-sans-italic.woff2",
+      "sb-common-assets/nunito-sans-regular.woff2",
+      "sb-manager/globals-module-info.js",
+      "sb-manager/globals-runtime.js",
+      "sb-manager/globals.js",
+      "sb-manager/runtime.js",
+      "tests/setup.d.ts",
+      "tests/setup.d.ts.map",
+      "types/consent.types.d.ts",
+      "types/consent.types.d.ts.map",
+      "types/icon.types.d.ts",
+      "types/icon.types.d.ts.map",
+      "types/list.types.d.ts",
+      "types/list.types.d.ts.map"
+    ],
+    "statsPath": "",
+    "total": 6272741,
+    "hashes": {
+      "addon-visual-tests-assets/visual-test-illustration.mp4": "94d2af4dd76f0574",
+      "assets/Accordion-DTYDiMOt.css": "b379309e1c546aea",
+      "assets/Accordion.stories-CJ7zV71t.js": "24519ffd2c6a9e10",
+      "assets/ActionsItem-C-MZ7mOu.css": "1df87308b6fae62a",
+      "assets/ActionsItem-DPa-za3E.js": "ceac2bcaa8364c95",
+      "assets/ActionsItem.stories-CJrzhty0.js": "baf542630803c02f",
+      "assets/Avatar-Cu9J1Swb.js": "5bdfe698636ac976",
+      "assets/Avatar-tEDaSJ4J.css": "02e99e8d6350721d",
+      "assets/Avatar.stories-QLdBdCOo.js": "549513abc5d738fc",
+      "assets/Bar-Bu5T73PS.css": "5310a146bd013062",
+      "assets/Bar-CVh8aULv.js": "8790b0f4d18408c6",
+      "assets/Button-Bng6Su02.css": "18b6e0238404f6e0",
+      "assets/Button-D4UpHB2Z.js": "38080f05d152f53f",
+      "assets/Button.stories-BWbtqzqY.js": "45e9dadd43a699c8",
+      "assets/Chip-BCFvzgzS.js": "d95b00baaf337ddc",
+      "assets/Chip-rCoYypT3.css": "cf3fae81c6fe446d",
+      "assets/Chip.stories-CXh1ds8K.js": "e43df4c54ee922c7",
+      "assets/ColorChip-BDtV27BB.js": "ae686e94269e8de9",
+      "assets/ColorChip-CNR_w8YN.css": "eefd23949f10c563",
+      "assets/ColorItem-sZLll6nI.css": "615b4d25ac09f627",
+      "assets/ColorItem.stories-BwM8PnPt.js": "8aefa205c3711193",
+      "assets/Consent-DbWMJZwF.css": "e62a5f0b11c352af",
+      "assets/Consent.stories-DFg0e3Ft.js": "66cacb0ca9381ebe",
+      "assets/Dialog-BoIPK5-M.css": "51cceb3eccf09794",
+      "assets/Dialog.stories-Crr1n0ol.js": "9885717dd6f86944",
+      "assets/DraggableItem-CeaIDuzJ.css": "cebddc560fe232bc",
+      "assets/DraggableItem-CiVbvNpN.js": "aa416a922d297a24",
+      "assets/DraggableItem.stories-CR43TQDk.js": "cfccd4defba768d6",
+      "assets/Drawer-DRsIairj.css": "8bd9d9be3f2b1161",
+      "assets/Drawer.stories-D1RcXKpz.js": "5df9a0831afe8014",
+      "assets/Dropdown-BQh6G7GM.css": "5572d5a2cbc15274",
+      "assets/Dropdown.stories-BgLJKPCK.js": "614e7d3b88647812",
+      "assets/Dropzone--VjUAUjB.css": "29384a42141e015d",
+      "assets/Dropzone.stories-DXEIWb-B.js": "82301f1e87e421c3",
+      "assets/FormItem-5LCbPYiB.js": "0ed196f9c6c77d2a",
+      "assets/FormItem-Cc2AAIL1.css": "88e4ceea38425c3f",
+      "assets/Formitem.stories-DT06Q0EP.js": "1a056020a6ed4379",
+      "assets/Icon-BBZvmbO6.css": "025a4af8f0f1c0d5",
+      "assets/Icon-CLX7SKA8.js": "57410cf57f97e820",
+      "assets/Icon.stories-DR2fZaBg.js": "082f5340a11c00be",
+      "assets/Input-D_AghwZI.js": "3c3970ef57b41cef",
+      "assets/Input-vTkV8atF.css": "b7d0f0a76363a685",
+      "assets/Input.stories-RWITkDYA.js": "6ce9f4391969ae6e",
+      "assets/InputsBar-BeTMdZy8.css": "a95fb69f722190b8",
+      "assets/InputsBar.stories-DtbF-xis.js": "f814b657c6a18e05",
+      "assets/KeyboardShortcutItem-h20X3iWU.css": "ac5414ca6f549acb",
+      "assets/KeyboardShortcutItem.stories-DflhsgZz.js": "51186b10978e6b9e",
+      "assets/Knob-DJQPkk-a.css": "f7d13c7d151a79bd",
+      "assets/Knob-unAf-t_M.js": "a3ae906dd6965dd1",
+      "assets/List-Bc7GqhjT.css": "6889962df82539f8",
+      "assets/List-CxQWa0vv.css": "3aab46a8aec2d996",
+      "assets/List.stories-BHqnAFs6.js": "3762e31df3c15b37",
+      "assets/List.stories-C8a-jbqB.js": "f6981b3dfebc7769",
+      "assets/MembersList-D-O1G57w.css": "00cba9e5b88280c8",
+      "assets/MembersList.stories-Bau4Ldjl.js": "57aa23b0345ef378",
+      "assets/Menu-D0Gn-hXO.css": "09ec54254603498e",
+      "assets/Menu.stories-CxeILPrS.js": "3e6d31df403c866c",
+      "assets/Message-DB2uaHhu.js": "1ab1591073807b61",
+      "assets/Message-DdHkGw2T.css": "07869fcc1b207ec8",
+      "assets/Message.stories-BhX9FneM.js": "aa868f64eb30d323",
+      "assets/MultipleSlider-D0weXxt6.css": "27ad4502988d5361",
+      "assets/MultipleSlider.stories-BafDluB2.js": "8548f404cf22c315",
+      "assets/Notification-BtLQ2wqs.css": "e7a894f0515d8789",
+      "assets/Notification.stories-T1mnlHUH.js": "a1f3c4025ec9ae00",
+      "assets/Section-rXYRDUtG.css": "480a6f50ca271868",
+      "assets/Section.stories-BnpQTiQp.js": "f63e5c2f8976edb1",
+      "assets/SectionTitle-B2j_nyMb.js": "0a164f348838c2d1",
+      "assets/SectionTitle-DjAfJvYB.css": "406037037e55a5ed",
+      "assets/SectionTitle.stories-B8x6JhwP.js": "9f95c501fdc58f22",
+      "assets/Select-BZc-PKxc.css": "b89a722adcecc407",
+      "assets/Select-c0QXhFd9.js": "825850873996306c",
+      "assets/Select.stories-DgkcK9kL.js": "050470280cafd149",
+      "assets/SemanticMessage-9gEsyK3f.js": "54b9b4907d491cb2",
+      "assets/SemanticMessage-YPuZEGTY.css": "a0bb47e2ee6a1eec",
+      "assets/SemanticMessage.stories-DhRp7w94.js": "9464d9b1c5835835",
+      "assets/SimpleItem-BC3PousL.js": "f9ad74a50f67d7bc",
+      "assets/SimpleItem-CQM13yw2.css": "1587192c224653a6",
+      "assets/SimpleItem.stories-Cplk9LXQ.js": "471ee8af63d1850b",
+      "assets/SimpleSlider-BHiKmw27.css": "d5c609925e4b1592",
+      "assets/SimpleSlider.stories-CKFSjzZX.js": "e8b473b1b8597442",
+      "assets/SortableList-FcMMIPG0.css": "0112348aff87929e",
+      "assets/SortableList.stories-CcWO7ime.js": "012eaf17241db5db",
+      "assets/Tabs-BeAwV0yA.css": "61b0acb08af87042",
+      "assets/Tabs.stories-N55TSFon.js": "e1ce406b45455c3b",
+      "assets/Thumbnail-4t136AtU.css": "6bc30ee95f2f41ea",
+      "assets/Thumbnail-CZPshkeN.js": "133de1e219019051",
+      "assets/Thumbnail.stories-oZ-8yNpG.js": "7b341a2d4f41c309",
+      "assets/Tooltip-95qOz2ti.css": "5e41de0521c7a8b6",
+      "assets/Tooltip-CV0k5qyj.js": "7182285aa07ecc6f",
+      "assets/chunk-2WNKQWTL-BojUnj9C.js": "9ea4d9344f834479",
+      "assets/do-classnames-CStnmS_I.css": "4043820fb14b22e6",
+      "assets/do-classnames-XCFI27ga.js": "5fc2a5717e4dd9c3",
+      "assets/do-map-LnAUJFLK.js": "a1d857a09bd1088d",
+      "assets/iframe-CYxZ0f5y.js": "fd1c30a0703941d7",
+      "assets/iframe-dcLj5MSJ.css": "54c09adf2444b49b",
+      "assets/react-18-C4YAYGXf.js": "0a128b2a07cc193f",
+      "components/actions/accordion/Accordion.d.ts": "a3ff1aa3b73aa358",
+      "components/actions/accordion/Accordion.d.ts.map": "bf6b84703bd4cfdc",
+      "components/actions/button/Button.d.ts": "8579103c4ab85fa6",
+      "components/actions/button/Button.d.ts.map": "99882eb84d9644a4",
+      "components/actions/card/Card.d.ts": "ddcc2e2f876bea0d",
+      "components/actions/card/Card.d.ts.map": "6bd3080a29e070c6",
+      "components/actions/knob/Knob.d.ts": "d40af0de9f971eb1",
+      "components/actions/knob/Knob.d.ts.map": "d9c4a082be7f1af3",
+      "components/actions/menu/Menu.d.ts": "6b028f18174c1c9e",
+      "components/actions/menu/Menu.d.ts.map": "a4cbf020cf433ed4",
+      "components/assets/avatar/Avatar.d.ts": "646f5890c531eb53",
+      "components/assets/avatar/Avatar.d.ts.map": "b364634757933fb1",
+      "components/assets/icon/Icon.d.ts": "2301980af7f2dd21",
+      "components/assets/icon/Icon.d.ts.map": "d5b5b5948f3780e2",
+      "components/assets/section-title/SectionTitle.d.ts": "42c532da8a105a5b",
+      "components/assets/section-title/SectionTitle.d.ts.map": "30a00465c8cd5c78",
+      "components/assets/thumbnail/Thumbnail.d.ts": "ec370fa6a60be205",
+      "components/assets/thumbnail/Thumbnail.d.ts.map": "9cebca263d522c0d",
+      "components/dialogs/consent/Consent.d.ts": "852944c608a2efd4",
+      "components/dialogs/consent/Consent.d.ts.map": "78d9434211f09f7d",
+      "components/dialogs/dialog/Dialog.d.ts": "d24e8a5053be1bc1",
+      "components/dialogs/dialog/Dialog.d.ts.map": "b91eb94e673b1c63",
+      "components/dialogs/message/Message.d.ts": "0978287794005136",
+      "components/dialogs/message/Message.d.ts.map": "2b594c3b50a34b98",
+      "components/dialogs/notification/Notification.d.ts": "8849610419394b22",
+      "components/dialogs/notification/Notification.d.ts.map": "57ef770f5f7ccb5f",
+      "components/dialogs/semantic-message/SemanticMessage.d.ts": "6a6f0c1d94247ed8",
+      "components/dialogs/semantic-message/SemanticMessage.d.ts.map": "dc142cb20acc8684",
+      "components/inputs/dropdown/Dropdown.d.ts": "29e1483570f06a2c",
+      "components/inputs/dropdown/Dropdown.d.ts.map": "75b034ed2b1d1b2d",
+      "components/inputs/dropzone/Dropzone.d.ts": "eab6a49ad6b213b9",
+      "components/inputs/dropzone/Dropzone.d.ts.map": "47ab7da1a364fa1e",
+      "components/inputs/input/Input.d.ts": "7eaa628ee40ed1f4",
+      "components/inputs/input/Input.d.ts.map": "3f342f01e5e881e2",
+      "components/inputs/inputs-bar/InputsBar.d.ts": "a0bad6bf08b44fab",
+      "components/inputs/inputs-bar/InputsBar.d.ts.map": "2f49b05551f6d93a",
+      "components/inputs/multiple-slider/MultipleSlider.d.ts": "4ff8acee287d8bd7",
+      "components/inputs/multiple-slider/MultipleSlider.d.ts.map": "398f2d3460220351",
+      "components/inputs/multiple-slider/actions/addStop.d.ts": "089ad74cc00f12ab",
+      "components/inputs/multiple-slider/actions/addStop.d.ts.map": "784d594b1d90b9ea",
+      "components/inputs/multiple-slider/actions/deleteStop.d.ts": "d2e69ffc3ae70e65",
+      "components/inputs/multiple-slider/actions/deleteStop.d.ts.map": "bd73f039035b983f",
+      "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts": "b298b283341a6e17",
+      "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts.map": "53e8bad4b7bd4d97",
+      "components/inputs/multiple-slider/actions/shiftRightStop.d.ts": "da74a3f6ab876f89",
+      "components/inputs/multiple-slider/actions/shiftRightStop.d.ts.map": "b72bbff585573aa7",
+      "components/inputs/select/Select.d.ts": "d75e4f060d5042fc",
+      "components/inputs/select/Select.d.ts.map": "eff4e87e7cfa54c8",
+      "components/inputs/simple-slider/SimpleSlider.d.ts": "b55cbc956d2e5f24",
+      "components/inputs/simple-slider/SimpleSlider.d.ts.map": "34ddd877ba4c1693",
+      "components/lists/actions-item/ActionsItem.d.ts": "f1655fa333d550af",
+      "components/lists/actions-item/ActionsItem.d.ts.map": "c0bd773a48c08e5f",
+      "components/lists/actions-list/ActionsList.d.ts": "091a3ad239947326",
+      "components/lists/actions-list/ActionsList.d.ts.map": "725f60d16135fd07",
+      "components/lists/color-item/ColorItem.d.ts": "c89763dbff9bf83d",
+      "components/lists/color-item/ColorItem.d.ts.map": "6fc2aa818f3a30bf",
+      "components/lists/draggable-item/DraggableItem.d.ts": "00cee234e22f7eef",
+      "components/lists/draggable-item/DraggableItem.d.ts.map": "c3d024888a381a4b",
+      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts": "31ed0265a3bff783",
+      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map": "3d6b37dae9f7f2ed",
+      "components/lists/members-list/MembersList.d.ts": "5a8d546e2962e47e",
+      "components/lists/members-list/MembersList.d.ts.map": "454c364d72ee6410",
+      "components/lists/sortable-list/SortableList.d.ts": "a7e96df71f81c8fb",
+      "components/lists/sortable-list/SortableList.d.ts.map": "27868a127f1a9b1a",
+      "components/lists/tabs/Tabs.d.ts": "6c6da8b27c173336",
+      "components/lists/tabs/Tabs.d.ts.map": "14b5d7f6901f446a",
+      "components/slots/bar/Bar.d.ts": "d6990f41e5518db4",
+      "components/slots/bar/Bar.d.ts.map": "e1ba6c12348934fc",
+      "components/slots/draggable-window/DraggableWindow.d.ts": "39790fc312381837",
+      "components/slots/draggable-window/DraggableWindow.d.ts.map": "70ba026fefaf7127",
+      "components/slots/drawer/Drawer.d.ts": "c4d47513c91b81cd",
+      "components/slots/drawer/Drawer.d.ts.map": "5380e0c39abc2433",
+      "components/slots/form-item/FormItem.d.ts": "62ede6341f2ffc13",
+      "components/slots/form-item/FormItem.d.ts.map": "561d5db3a2c6978e",
+      "components/slots/layout/Layout.d.ts": "9ff8396a208d31bf",
+      "components/slots/layout/Layout.d.ts.map": "3046945f22409668",
+      "components/slots/list/List.d.ts": "005ae9c6a95f4753",
+      "components/slots/list/List.d.ts.map": "ece287caf6134a14",
+      "components/slots/popin/Popin.d.ts": "7800c7278a14feeb",
+      "components/slots/popin/Popin.d.ts.map": "8f1baf237fb4a07e",
+      "components/slots/section/Section.d.ts": "50c845bbc2389235",
+      "components/slots/section/Section.d.ts.map": "bb7ffd67bbfa2d0d",
+      "components/slots/simple-item/SimpleItem.d.ts": "a6c9239a81d107f2",
+      "components/slots/simple-item/SimpleItem.d.ts.map": "f8a6175926e031fb",
+      "components/tags/chip/Chip.d.ts": "4625e2f44a5878d1",
+      "components/tags/chip/Chip.d.ts.map": "13741b8a537141b2",
+      "components/tags/color-chip/ColorChip.d.ts": "9dce4a8bf147f24b",
+      "components/tags/color-chip/ColorChip.d.ts.map": "32c49d44371b3fcf",
+      "components/tags/tooltip/Tooltip.d.ts": "c99feedd8428c5f8",
+      "components/tags/tooltip/Tooltip.d.ts.map": "292152d2ec9d35ee",
+      "favicon.svg": "293aff65db45e6c4",
+      "iframe.html": "401c13978eebed1c",
+      "index.d.ts": "139654b4cf5bb7fe",
+      "index.d.ts.map": "420246c1212d81a3",
+      "index.html": "803b2c2f80908581",
+      "index.json": "c84a7bf6a28c0d70",
+      "nunito-sans-bold-italic.woff2": "d64464b3594b3fb9",
+      "nunito-sans-bold.woff2": "0bd5b61b7fb7f7d5",
+      "nunito-sans-italic.woff2": "b7807d9de055e9a0",
+      "nunito-sans-regular.woff2": "6687b7be04c2debe",
+      "project.json": "ac99016323d08979",
+      "sb-addons/chromatic-com-storybook-2/manager-bundle.js": "5016923c01e62c02",
+      "sb-addons/chromatic-com-storybook-2/manager-bundle.js.LEGAL.txt": "285dd9e1dc6c7408",
+      "sb-addons/links-1/manager-bundle.js": "c7b6db7f288ef9e5",
+      "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js": "8342c1a4831ad9d4",
+      "sb-common-assets/favicon.svg": "293aff65db45e6c4",
+      "sb-common-assets/nunito-sans-bold-italic.woff2": "d64464b3594b3fb9",
+      "sb-common-assets/nunito-sans-bold.woff2": "0bd5b61b7fb7f7d5",
+      "sb-common-assets/nunito-sans-italic.woff2": "b7807d9de055e9a0",
+      "sb-common-assets/nunito-sans-regular.woff2": "6687b7be04c2debe",
+      "sb-manager/globals-module-info.js": "36983567768d4727",
+      "sb-manager/globals-runtime.js": "b52a04da14b78b7d",
+      "sb-manager/globals.js": "65b5882f82eea1c2",
+      "sb-manager/runtime.js": "6a133cae623124ff",
+      "tests/setup.d.ts": "adf36bcc5e336aa6",
+      "tests/setup.d.ts.map": "2491cf3170b2bc52",
+      "types/consent.types.d.ts": "25c3e3855e9e6034",
+      "types/consent.types.d.ts.map": "44fc69c5cf994a88",
+      "types/icon.types.d.ts": "24517dc7cdd3ce29",
+      "types/icon.types.d.ts.map": "93fe0bc387d4f1fd",
+      "types/list.types.d.ts": "5efff6129ea3bbbb",
+      "types/list.types.d.ts.map": "a45b8300b4f05242"
+    }
+  },
+  "flags": {
+    "interactive": false
+  },
+  "git": {
+    "version": "2.39.5",
+    "gitUserEmail": "a.grimaud@involt.io",
+    "uncommittedHash": "",
+    "rootPath": "/Users/a_ng_d/DEV/figmug-ui",
+    "commit": "4cdc25f95307fcfd36d33eb029711cc13cf4793e",
+    "committedAt": 1749477207000,
+    "committerEmail": "a.grimaud@involt.io",
+    "committerName": "@a-ng-d",
+    "branch": "main",
+    "slug": "a-ng-d/figmug-ui",
+    "fromCI": false,
+    "parentCommits": [
+      "76022be90831e033ecf47300532d031adf130295"
+    ]
+  },
+  "input": [],
+  "isOnboarding": false,
+  "isPublishOnly": false,
+  "options": {
+    "fromCI": false,
+    "inAction": false,
+    "dryRun": false,
+    "debug": true,
+    "autoAcceptChanges": false,
+    "exitZeroOnChanges": true,
+    "exitOnceUploaded": false,
+    "diagnosticsFile": "chromatic-diagnostics.json",
+    "fileHashing": true,
+    "interactive": false,
+    "isLocalBuild": true,
+    "originalArgv": [],
+    "logFile": "chromatic.log",
+    "skip": false,
+    "forceRebuild": true,
+    "zip": true,
+    "skipUpdateCheck": true,
+    "buildScriptName": "build-storybook",
+    "storybookLogFile": "build-storybook.log",
+    "branchName": "",
+    "configFile": "chromatic.config.json",
+    "projectId": "Project:663a220bcc5dda79791c430e",
+    "logPrefix": "\u001b[38;5;202mChromatic\u001b[0m:",
+    "experimental_abortSignal": {}
+  },
+  "packageJson": {
+    "name": "@a_ng_d/figmug-ui",
+    "version": "1.9.26",
+    "type": "module",
+    "files": [
+      "dist"
+    ],
+    "exports": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+      "start": "npm run storybook",
+      "build": "tsc && vite build",
+      "test": "vitest",
+      "test:ui": "vitest --ui",
+      "coverage": "vitest run --coverage",
+      "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+      "lint:fix": "eslint . --ext ts,tsx --fix",
+      "format": "prettier --check .",
+      "format:fix": "prettier --write .",
+      "preview": "vite preview",
+      "storybook": "storybook dev -p 6006",
+      "build-storybook": "storybook build"
+    },
+    "dependencies": {
+      "@a_ng_d/figmug-utils": "^0.3.1",
+      "@storybook/client-api": "^7.6.17"
+    },
+    "peerDependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+      "@chromatic-com/storybook": "^4.0.0",
+      "@storybook/addon-docs": "^9.0.6",
+      "@storybook/addon-links": "^9.0.6",
+      "@storybook/addon-onboarding": "^9.0.6",
+      "@storybook/react-vite": "^9.0.6",
+      "@testing-library/react": "^15.0.7",
+      "@types/react": "^18.2.66",
+      "@types/react-dom": "^18.2.22",
+      "@typescript-eslint/eslint-plugin": "^7.2.0",
+      "@typescript-eslint/parser": "^7.2.0",
+      "@vitejs/plugin-react": "^4.2.1",
+      "@vitest/coverage-v8": "^1.6.0",
+      "@vitest/ui": "^1.6.0",
+      "chromatic": "^11.3.1",
+      "dotenv-cli": "^7.4.2",
+      "eslint": "^8.57.0",
+      "eslint-config-prettier": "^9.1.0",
+      "eslint-plugin-import": "^2.31.0",
+      "eslint-plugin-react-hooks": "^4.6.0",
+      "eslint-plugin-react-refresh": "^0.4.6",
+      "eslint-plugin-storybook": "^9.0.6",
+      "glob": "^10.3.12",
+      "jsdom": "^24.0.0",
+      "prettier": "^3.2.5",
+      "prettier-plugin-css-order": "^2.1.2",
+      "sass": "^1.77.0",
+      "storybook": "^9.0.6",
+      "storybook-addon-data-theme-switcher": "^2.0.0",
+      "typescript": "^5.4.3",
+      "vite": "^5.2.0",
+      "vite-plugin-dts": "^3.9.1",
+      "vite-plugin-lib-inject-css": "^2.0.1",
+      "vite-tsconfig-paths": "^4.3.2",
+      "vitest": "^1.6.0"
+    },
+    "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/a-ng-d/figmug-ui.git"
+    },
+    "keywords": [
+      "library",
+      "ui",
+      "figma-ui"
+    ],
+    "author": "Aurélien Grimaud",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/a-ng-d/figmug-ui/issues"
+    },
+    "homepage": "https://github.com/a-ng-d/figmug-ui#readme",
+    "overrides": {
+      "storybook": "$storybook"
+    }
+  },
+  "packagePath": "/Users/a_ng_d/DEV/figmug-ui/package.json",
+  "projectMetadata": {
+    "hasRouter": false,
+    "creationDate": {},
+    "storybookCreationDate": {},
+    "numberOfCommitters": 2,
+    "numberOfAppFiles": 0
+  },
+  "runtimeMetadata": {
+    "nodePlatform": "darwin",
+    "nodeVersion": "21.7.2",
+    "packageManager": "npm",
+    "packageManagerVersion": "10.5.0"
+  },
+  "sentinelUrls": [
+    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-arpypzrlbk/.chromatic/files-copied.2992232433.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20250609%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250609T135350Z&X-Amz-Expires=1800&X-Amz-Signature=2943fca9d7de71ea6b3ffc3044559bf768d08e7fbf3c370790e93cabc65a1a19&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-arpypzrlbk/.chromatic/zip-unpacked.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20250609%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250609T135350Z&X-Amz-Expires=1980&X-Amz-Signature=6a534fd07ef43edaae693e239ca14ba1331d2309149add455a0908b9f12dc87d&X-Amz-SignedHeaders=host&x-id=GetObject"
+  ],
+  "sessionId": "ea9c2c51-9082-4199-93ea-4164053921b2",
+  "sourceDir": "/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--40607-IVYcKr6VNN5T",
+  "startedAt": 1749477239972,
+  "storybook": {
+    "version": "9.0.6",
+    "baseDir": "."
+  },
+  "storybookUrl": "https://663a220bcc5dda79791c430e-arpypzrlbk.chromatic.com/",
+  "task": "snapshot",
+  "uploadedBytes": 846790,
+  "uploadedFiles": 159,
+  "userError": false
+}
