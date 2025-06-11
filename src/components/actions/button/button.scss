@@ -54,7 +54,8 @@
   }
 
   &.button--loading > .button__label,
-  &.button--loading > .button__caret {
+  &.button--loading > .button__caret,
+  &.button--loading > .button__icon {
     opacity: 0;
   }
 }
