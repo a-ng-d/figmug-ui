@@ -90,7 +90,7 @@ const Accordion = (props: AccordionProps) => {
         }}
       >
         <div
-          className="accordion__row__left-part"
+          className="accordion__row__left"
           role="presentation"
         >
           <SectionTitle
@@ -100,7 +100,7 @@ const Accordion = (props: AccordionProps) => {
           />
         </div>
         <div
-          className="accordion__row__right-part"
+          className="accordion__row__right"
           role="group"
         >
           {isExpanded ? (

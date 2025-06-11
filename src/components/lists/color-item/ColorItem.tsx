@@ -22,7 +22,7 @@ const ColorItem = (props: ColorItemProps) => {
       role="listitem"
     >
       <div
-        className="color-item__left-part"
+        className="color-item__left"
         role="group"
       >
         <div
@@ -42,7 +42,7 @@ const ColorItem = (props: ColorItemProps) => {
         </div>
       </div>
       <div
-        className="color-item__right-part"
+        className="color-item__right"
         role="group"
       >
         {canBeRemoved && (

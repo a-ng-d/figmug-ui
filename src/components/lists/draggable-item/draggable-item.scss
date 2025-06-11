@@ -81,8 +81,8 @@
     justify-content: space-between;
   }
 
-  .draggable-item__left-part,
-  .draggable-item__right-part {
+  .draggable-item__left,
+  .draggable-item__right {
     display: flex;
     align-items: center;
     gap: var(--draggable-item-gap);

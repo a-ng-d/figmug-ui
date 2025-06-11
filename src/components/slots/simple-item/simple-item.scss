@@ -39,13 +39,13 @@
     --simple-item-background-color: transparent;
   }
 
-  .simple-item__left-part,
-  .simple-item__right-part {
+  .simple-item__left,
+  .simple-item__right {
     display: flex;
     max-width: 100%;
   }
 
-  .simple-item__left-part {
+  .simple-item__left {
     flex: 1;
   }
 

@@ -55,13 +55,13 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
           role={isInteractive ? 'button' : 'listitem'}
         >
           <div
-            className="simple-item__left-part"
+            className="simple-item__left"
             role="presentation"
           >
             {leftPartSlot}
           </div>
           <div
-            className="simple-item__right-part"
+            className="simple-item__right"
             role="presentation"
           >
             {rightPartSlot}
@@ -86,13 +86,13 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
         role={isInteractive ? 'button' : 'group'}
       >
         <div
-          className="simple-item__left-part"
+          className="simple-item__left"
           role="presentation"
         >
           {leftPartSlot}
         </div>
         <div
-          className="simple-item__right-part"
+          className="simple-item__right"
           role="presentation"
         >
           {rightPartSlot}

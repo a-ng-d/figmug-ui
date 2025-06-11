@@ -178,13 +178,13 @@ export default class DraggableItem extends React.Component<
           role="group"
         >
           <div
-            className="draggable-item__left-part"
+            className="draggable-item__left"
             role="presentation"
           >
             {primarySlot}
           </div>
           <div
-            className="draggable-item__right-part"
+            className="draggable-item__right"
             role="group"
           >
             {secondarySlot !== undefined && (
