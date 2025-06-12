@@ -29,53 +29,55 @@ const Tabs = (props: TabsProps) => {
     action,
   } = props
 
-  return (
-    <div
-      className={doClassnames([
-        'tabs',
-        direction === 'VERTICAL' && 'tabs--vertical',
-      ])}
-      role="tablist"
-      aria-orientation={direction === 'VERTICAL' ? 'vertical' : 'horizontal'}
-    >
-      {tabs.map((tab) => (
-        <div
-          role="tab"
-          key={tab.label.toLowerCase()}
-          className={doClassnames([
-            'tabs__tab',
-            active === tab.id && 'tabs__tab--active',
-            tab.isUpdated && 'tabs__tab--new',
-            tab.icon !== undefined && 'tabs__tab--with-icon',
-            isFlex && 'tabs__tab--flex',
-          ])}
-          data-feature={tab.id}
-          tabIndex={active === tab.id ? -1 : 0}
-          onMouseDown={action}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') action(e)
-            if (e.key === 'Escape') (e.target as HTMLElement).blur()
-          }}
-        >
-          {tab.icon !== undefined && (
-            <Icon
-              type={tab.icon.type}
-              iconName={tab.icon.type === 'PICTO' ? tab.icon.name : undefined}
-              iconLetter={
-                tab.icon.type === 'LETTER' ? tab.icon.name : undefined
-              }
-              aria-hidden="true"
-            />
-          )}
-          <span
-            className={doClassnames([texts.type, texts['type--truncated']])}
+  if (tabs.length > 0)
+    return (
+      <div
+        className={doClassnames([
+          'tabs',
+          direction === 'VERTICAL' && 'tabs--vertical',
+        ])}
+        role="tablist"
+        aria-orientation={direction === 'VERTICAL' ? 'vertical' : 'horizontal'}
+      >
+        {tabs.map((tab) => (
+          <div
+            role="tab"
+            key={tab.label.toLowerCase()}
+            className={doClassnames([
+              'tabs__tab',
+              active === tab.id && 'tabs__tab--active',
+              tab.isUpdated && 'tabs__tab--new',
+              tab.icon !== undefined && 'tabs__tab--with-icon',
+              isFlex && 'tabs__tab--flex',
+            ])}
+            data-feature={tab.id}
+            tabIndex={active === tab.id ? -1 : 0}
+            onMouseDown={action}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') action(e)
+              if (e.key === 'Escape') (e.target as HTMLElement).blur()
+            }}
           >
-            {tab.label}
-          </span>
-        </div>
-      ))}
-    </div>
-  )
+            {tab.icon !== undefined && (
+              <Icon
+                type={tab.icon.type}
+                iconName={tab.icon.type === 'PICTO' ? tab.icon.name : undefined}
+                iconLetter={
+                  tab.icon.type === 'LETTER' ? tab.icon.name : undefined
+                }
+                aria-hidden="true"
+              />
+            )}
+            <span
+              className={doClassnames([texts.type, texts['type--truncated']])}
+            >
+              {tab.label}
+            </span>
+          </div>
+        ))}
+      </div>
+    )
+  return null
 }
 
 export default Tabs
