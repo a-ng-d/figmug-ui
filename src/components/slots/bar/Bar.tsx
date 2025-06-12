@@ -4,9 +4,9 @@ import './bar.scss'
 
 export interface BarProps {
   id?: string
-  leftPartSlot?: React.ReactElement
-  soloPartSlot?: React.ReactElement
-  rightPartSlot?: React.ReactElement
+  leftPartSlot?: React.ReactElement | null
+  soloPartSlot?: React.ReactElement | null
+  rightPartSlot?: React.ReactElement | null
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
   padding?: string
   isCompact?: boolean
@@ -56,54 +56,64 @@ export default class Bar extends React.Component<BarProps> {
       rightPartSlot,
     } = this.props
 
-    if (
-      (leftPartSlot !== undefined || leftPartSlot !== null) &&
-      (soloPartSlot !== undefined || soloPartSlot !== null) &&
-      (rightPartSlot !== undefined || rightPartSlot !== null)
-    )
+    const hasValidSolo = soloPartSlot !== undefined && soloPartSlot !== null
+    const hasValidLeft = leftPartSlot !== undefined && leftPartSlot !== null
+    const hasValidRight = rightPartSlot !== undefined && rightPartSlot !== null
+
+    if (!hasValidSolo && !hasValidLeft && !hasValidRight) return null
+
+    const barClassName = doClassnames([
+      'bar',
+      isCompact && 'bar--compact',
+      isOnlyText && 'bar--text-only',
+      isInverted && 'bar--inverted',
+      isCentered && 'bar--centered',
+      shouldReflow && 'bar--reflow',
+    ])
+
+    if (hasValidSolo)
       return (
         <div
           id={id}
-          className={doClassnames([
-            'bar',
-            isCompact && 'bar--compact',
-            isOnlyText && 'bar--text-only',
-            isInverted && 'bar--inverted',
-            isCentered && 'bar--centered',
-            shouldReflow && 'bar--reflow',
-          ])}
+          className={barClassName}
           style={{
             ...this.setBorder(border),
             padding: padding,
           }}
           role="toolbar"
         >
-          {soloPartSlot === undefined && (
-            <div
-              className="bar__left"
-              role="group"
-            >
-              {leftPartSlot}
-            </div>
-          )}
-          {soloPartSlot !== undefined && (
-            <div
-              className={'bar__solo'}
-              role="group"
-            >
-              {soloPartSlot}
-            </div>
-          )}
-          {soloPartSlot === undefined && (
-            <div
-              className="bar__right"
-              role="group"
-            >
-              {rightPartSlot}
-            </div>
-          )}
+          <div
+            className="bar__solo"
+            role="group"
+          >
+            {soloPartSlot}
+          </div>
         </div>
       )
-          return null
+
+    return (
+      <div
+        id={id}
+        className={barClassName}
+        style={{
+          ...this.setBorder(border),
+          padding: padding,
+        }}
+        role="toolbar"
+      >
+        <div
+          className="bar__left"
+          role="group"
+        >
+          {leftPartSlot}
+        </div>
+        <div
+          className="bar__right"
+          role="group"
+        >
+          {rightPartSlot}
+        </div>
+      </div>
+    )
   }
 }
