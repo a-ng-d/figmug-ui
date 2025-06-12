@@ -53,7 +53,7 @@
     calc(var(--size-xxxsmall) * -2) calc(50% - var(--size-xxxsmall));
   --knob-label-arrow-stroke-width-focus: var(--size-xxxsmall);
 
-  --knob-label-background-color-disabled: var(--color-background-primary);
+  --knob-label-background-color-disabled: var(--color-background-quaternary);
   --knob-label-border-color-disabled: var(--color-background-quaternary);
   --knob-label-text-color-disabled: var(--color-foreground-secondary);
 }
