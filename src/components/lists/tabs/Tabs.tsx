@@ -29,7 +29,7 @@ const Tabs = (props: TabsProps) => {
     action,
   } = props
 
-  if (tabs.length > 0)
+  if (tabs.length > 1)
     return (
       <div
         className={doClassnames([
