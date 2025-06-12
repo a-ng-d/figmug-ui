@@ -57,56 +57,53 @@ export default class Bar extends React.Component<BarProps> {
     } = this.props
 
     if (
-      leftPartSlot === undefined &&
-      soloPartSlot === undefined &&
-      rightPartSlot === undefined &&
-      leftPartSlot === null &&
-      soloPartSlot === null &&
-      rightPartSlot === null
+      (leftPartSlot !== undefined || leftPartSlot !== null) &&
+      (soloPartSlot !== undefined || soloPartSlot !== null) &&
+      (rightPartSlot !== undefined || rightPartSlot !== null)
     )
-      return null
-    return (
-      <div
-        id={id}
-        className={doClassnames([
-          'bar',
-          isCompact && 'bar--compact',
-          isOnlyText && 'bar--text-only',
-          isInverted && 'bar--inverted',
-          isCentered && 'bar--centered',
-          shouldReflow && 'bar--reflow',
-        ])}
-        style={{
-          ...this.setBorder(border),
-          padding: padding,
-        }}
-        role="toolbar"
-      >
-        {soloPartSlot === undefined && (
-          <div
-            className="bar__left"
-            role="group"
-          >
-            {leftPartSlot}
-          </div>
-        )}
-        {soloPartSlot !== undefined && (
-          <div
-            className={'bar__solo'}
-            role="group"
-          >
-            {soloPartSlot}
-          </div>
-        )}
-        {soloPartSlot === undefined && (
-          <div
-            className="bar__right"
-            role="group"
-          >
-            {rightPartSlot}
-          </div>
-        )}
-      </div>
-    )
+      return (
+        <div
+          id={id}
+          className={doClassnames([
+            'bar',
+            isCompact && 'bar--compact',
+            isOnlyText && 'bar--text-only',
+            isInverted && 'bar--inverted',
+            isCentered && 'bar--centered',
+            shouldReflow && 'bar--reflow',
+          ])}
+          style={{
+            ...this.setBorder(border),
+            padding: padding,
+          }}
+          role="toolbar"
+        >
+          {soloPartSlot === undefined && (
+            <div
+              className="bar__left"
+              role="group"
+            >
+              {leftPartSlot}
+            </div>
+          )}
+          {soloPartSlot !== undefined && (
+            <div
+              className={'bar__solo'}
+              role="group"
+            >
+              {soloPartSlot}
+            </div>
+          )}
+          {soloPartSlot === undefined && (
+            <div
+              className="bar__right"
+              role="group"
+            >
+              {rightPartSlot}
+            </div>
+          )}
+        </div>
+      )
+          return null
   }
 }
