@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
+import React from 'react'
 import { useArgs } from '@storybook/client-api'
 import FormItem from '@components/slots/form-item/FormItem'
 import SortableList from '@components/lists/sortable-list/SortableList'
@@ -62,6 +63,7 @@ export const SimpleColors: Story = {
     emptySlot: [<div></div>],
     canBeEmpty: true,
     isScrollable: false,
+    isBlocked: false,
     onChangeSortableList: mock,
   },
   argTypes: {

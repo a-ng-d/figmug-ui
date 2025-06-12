@@ -22,6 +22,7 @@ export interface DraggableItemProps {
   }
   guideAbove?: boolean
   guideBelow?: boolean
+  isBlocked?: boolean
   onChangeSelection: React.MouseEventHandler<HTMLLIElement>
   onCancelSelection: React.MouseEventHandler<Element> &
     React.FocusEventHandler<HTMLInputElement>
@@ -54,6 +55,7 @@ export default class DraggableItem extends React.Component<
     selected: false,
     guideAbove: false,
     guideBelow: false,
+    isBlocked: false,
   }
 
   constructor(props: DraggableItemProps) {
@@ -135,6 +137,7 @@ export default class DraggableItem extends React.Component<
       helpers,
       guideAbove,
       guideBelow,
+      isBlocked,
       onRemove,
       onChangeSelection,
       onCancelSelection,
@@ -153,24 +156,24 @@ export default class DraggableItem extends React.Component<
           guideAbove && 'draggable-item--above',
           guideBelow && 'draggable-item--below',
         ])}
-        draggable={!hasMoreOptions ? selected : false}
+        draggable={!hasMoreOptions && !isBlocked ? selected : false}
         role="listitem"
         aria-grabbed={isDragged}
         aria-selected={selected}
         onMouseDown={(e) => {
-          if (!hasMoreOptions) onChangeSelection(e)
+          if (!hasMoreOptions && !isBlocked) onChangeSelection(e)
         }}
         onDragStart={(e) => {
-          if (!hasMoreOptions) this.onDragStart(e)
+          if (!hasMoreOptions && !isBlocked) this.onDragStart(e)
         }}
         onDragEnd={(e) => {
-          if (!hasMoreOptions) this.onDragEnd(e)
+          if (!hasMoreOptions && !isBlocked) this.onDragEnd(e)
         }}
         onDragOver={(e) => {
-          if (!hasMoreOptions) this.onDragOver(e)
+          if (!hasMoreOptions && !isBlocked) this.onDragOver(e)
         }}
         onDrop={(e) => {
-          if (!hasMoreOptions) this.onDrop(e)
+          if (!hasMoreOptions && !isBlocked) this.onDrop(e)
         }}
       >
         <div

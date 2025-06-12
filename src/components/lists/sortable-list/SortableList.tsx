@@ -267,6 +267,7 @@ export default class SortableList<
                 ? hoveredElement.hasGuideBelow
                 : false
             }
+            isBlocked={isBlocked}
             onCancelSelection={this.selectionHandler}
             onRefoldOptions={onRefoldOptions}
             onChangeOrder={this.orderHandler}
