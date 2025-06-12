@@ -75,6 +75,9 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    a111y: {
+      element: '#root',
+    },
   },
   decorators: [withTheme],
 }

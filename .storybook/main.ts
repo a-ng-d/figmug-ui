@@ -3,16 +3,12 @@ import path from 'path'
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-  addons: [
-    '@storybook/addon-links',
-    {
-      name: '@chromatic-com/storybook',
-      options: {
-        configFile: 'chromatic.config.json',
-      },
+  addons: ['@storybook/addon-links', {
+    name: '@chromatic-com/storybook',
+    options: {
+      configFile: 'chromatic.config.json',
     },
-    '@storybook/addon-docs',
-  ],
+  }, '@storybook/addon-docs', '@storybook/addon-a11y'],
   framework: {
     name: '@storybook/react-vite',
     options: {},
