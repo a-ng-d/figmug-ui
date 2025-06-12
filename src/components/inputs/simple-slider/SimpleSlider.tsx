@@ -1,4 +1,5 @@
 import React from 'react'
+import Chip from '@components/tags/chip/Chip'
 import Knob from '@components/actions/knob/Knob'
 import { doMap } from '@a_ng_d/figmug-utils'
 import './simple-slider.scss'
@@ -175,7 +176,6 @@ export default class SimpleSlider extends React.Component<
             isDisplayed={isTooltipDisplay}
             isBlocked={isBlocked}
             isDisabled={isDisabled}
-            isNew={isNew}
             onShiftRight={(e) => {
               if (e.shiftKey)
                 onChange(
@@ -203,6 +203,7 @@ export default class SimpleSlider extends React.Component<
             onValidStopValue={(_stopId, e) => this.validHandler(e)}
           />
         </div>
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }

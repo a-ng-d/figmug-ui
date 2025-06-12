@@ -1,4 +1,5 @@
 import React from 'react'
+import Chip from '@components/tags/chip/Chip'
 import Knob from '@components/actions/knob/Knob'
 import { doClassnames, doMap, Easing } from '@a_ng_d/figmug-utils'
 import { doScale } from '@a_ng_d/figmug-utils'
@@ -380,7 +381,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
 
   // Templates
   Edit = () => {
-    const { scale, range, colors, tips, isBlocked, isNew } = this.props
+    const { scale, range, colors, tips, isBlocked } = this.props
     const { isTooltipDisplay } = this.state
 
     return (
@@ -416,7 +417,6 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
               canBeTyped
               isDisplayed={isTooltipDisplay[index]}
               isBlocked={isBlocked}
-              isNew={isNew}
               onShiftRight={(e: React.KeyboardEvent<HTMLInputElement>) => {
                 this.onShiftRight(e.target as HTMLElement, e.metaKey, e.ctrlKey)
               }}
@@ -436,7 +436,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
   }
 
   FullyEdit = () => {
-    const { scale, stops, range, colors, tips, isBlocked, isNew } = this.props
+    const { scale, stops, range, colors, tips, isBlocked } = this.props
     const { isTooltipDisplay } = this.state
 
     return (
@@ -477,7 +477,6 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
               canBeTyped
               isDisplayed={isTooltipDisplay[index]}
               isBlocked={isBlocked}
-              isNew={isNew}
               onShiftRight={(e: React.KeyboardEvent<HTMLInputElement>) => {
                 this.onShiftRight(e.target as HTMLElement, e.metaKey, e.ctrlKey)
               }}
@@ -502,12 +501,13 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
 
   // Render
   render() {
-    const { type } = this.props
+    const { type, isBlocked, isNew } = this.props
 
     return (
       <div className="multiple-slider">
         {type === 'EDIT' && <this.Edit />}
         {type === 'FULLY_EDIT' && <this.FullyEdit />}
+        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
   }

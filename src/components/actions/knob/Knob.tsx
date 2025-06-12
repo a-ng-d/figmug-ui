@@ -1,7 +1,6 @@
 import React from 'react'
 import texts from '@styles/texts/texts.module.scss'
 import Tooltip from '@components/tags/tooltip/Tooltip'
-import Chip from '@components/tags/chip/Chip'
 import Input from '@components/inputs/input/Input'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import './knob.scss'
@@ -21,7 +20,6 @@ export interface KnobProps {
   isDisplayed: boolean
   isBlocked: boolean
   isDisabled: boolean
-  isNew: boolean
   onShiftRight?: React.KeyboardEventHandler<HTMLInputElement>
   onShiftLeft?: React.KeyboardEventHandler<HTMLInputElement>
   onDelete?: React.KeyboardEventHandler<HTMLInputElement>
@@ -44,7 +42,6 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
   static defaultProps: Partial<KnobProps> = {
     isBlocked: false,
     isDisabled: false,
-    isNew: false,
   }
 
   constructor(props: KnobProps) {
@@ -125,7 +122,6 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
       isDisplayed,
       isBlocked,
       isDisabled,
-      isNew,
       onMouseDown,
       onValidStopValue,
     } = this.props
@@ -232,7 +228,6 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
           aria-hidden="true"
         >
           {shortId}
-          {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>
         <div
           className="knob__graduation"

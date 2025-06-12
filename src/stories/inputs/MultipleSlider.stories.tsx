@@ -12,7 +12,6 @@ const meta: Meta<typeof MultipleSlider> = {
   decorators: [
     (Story) => (
       <div
-        id="dropdown-container"
         style={{
           width: '400px',
         }}
