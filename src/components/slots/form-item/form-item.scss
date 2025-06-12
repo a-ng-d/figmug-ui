@@ -18,6 +18,12 @@
     user-select: none;
   }
 
+  &--centered {
+    &__row {
+      align-items: center;
+    }
+  }
+
   &--fill {
     .form-item__label {
       flex: 0 1 var(--form-item-label-width);
