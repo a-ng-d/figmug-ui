@@ -40,7 +40,8 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
           data-id={id}
           className={doClassnames([
             'simple-item',
-            `simple-item--${alignment?.toLowerCase()}`,
+            alignment === 'CENTER' && 'simple-item--centered',
+            alignment === 'BASELINE' && 'simple-item--baseline',
             isInteractive && 'simple-item--interactive',
             isTransparent && 'simple-item--transparent',
           ])}
@@ -73,7 +74,8 @@ export default class SimpleItem extends React.Component<SimpleItemProps> {
         data-id={id}
         className={doClassnames([
           'simple-item',
-          `simple-item--${alignment?.toLowerCase()}`,
+          alignment === 'CENTER' && 'simple-item--centered',
+          alignment === 'BASELINE' && 'simple-item--baseline',
           isInteractive && 'simple-item--interactive',
         ])}
         tabIndex={isInteractive ? 0 : -1}
