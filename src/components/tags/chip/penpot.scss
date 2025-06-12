@@ -19,10 +19,11 @@
   --chip-border-offset-inactive: 0;
   --chip-text-color-inactive: var(--color-foreground-secondary);
 
-  --chip-background-color-hover: var(--color-accent-secondary);
-  --chip-border-color-hover: var(--color-accent-secondary);
+  --chip-background-color-hover: var(--color-accent-tertiary);
+  --chip-border-color-hover: var(--color-accent-tertiary);
   --chip-border-width-hover: var(--size-unit);
   --chip-border-offset-hover: var(--size-neg-unit);
+  --chip-text-color-hover: var(--color-foreground-primary);
 
   --chip-background-color-on-background: rgba(255, 255, 255, 0.4);
   --chip-border-color-on-background: transparent;
