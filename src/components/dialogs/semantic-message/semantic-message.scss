@@ -6,6 +6,9 @@
   display: flex;
   justify-content: space-between;
   gap: var(--semantic-message-gap);
+  outline: var(--semaintic-message-border-width) solid
+    var(--semantic-message-border-color);
+  outline-offset: var(--semantic-message-border-offset);
   border-radius: var(--semantic-message-radius);
   background-color: var(--semantic-message-background-color);
   padding: var(--semantic-message-padding);
@@ -14,6 +17,11 @@
   &--info {
     --semantic-message-background-color: var(
       --semantic-message-background-color-info
+    );
+    --semaintic-message-border-width: var(--semantic-message-border-width-info);
+    --semantic-message-border-color: var(--semantic-message-border-color-info);
+    --semantic-message-border-offset: var(
+      --semantic-message-border-offset-info
     );
     --button-background-color-secondary: var(
       --semantic-message-background-color-info
@@ -48,6 +56,13 @@
     --semantic-message-background-color: var(
       --semantic-message-background-color-error
     );
+    --semaintic-message-border-width: var(
+      --semantic-message-border-width-error
+    );
+    --semantic-message-border-color: var(--semantic-message-border-color-error);
+    --semantic-message-border-offset: var(
+      --semantic-message-border-offset-error
+    );
     --button-background-color-secondary: var(
       --semantic-message-background-color-error
     );
@@ -81,6 +96,15 @@
     --semantic-message-background-color: var(
       --semantic-message-background-color-success
     );
+    --semaintic-message-border-width: var(
+      --semantic-message-border-width-success
+    );
+    --semantic-message-border-color: var(
+      --semantic-message-border-color-success
+    );
+    --semantic-message-border-offset: var(
+      --semantic-message-border-offset-success
+    );
     --button-background-color-secondary: var(
       --semantic-message-background-color-success
     );
@@ -113,6 +137,15 @@
   &--warning {
     --semantic-message-background-color: var(
       --semantic-message-background-color-warning
+    );
+    --semaintic-message-border-width: var(
+      --semantic-message-border-width-warning
+    );
+    --semantic-message-border-color: var(
+      --semantic-message-border-color-warning
+    );
+    --semantic-message-border-offset: var(
+      --semantic-message-border-offset-warning
     );
     --button-background-color-secondary: var(
       --semantic-message-background-color-warning
