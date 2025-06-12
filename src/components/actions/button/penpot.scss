@@ -249,8 +249,8 @@
   --button-icon-color-destructive-disabled: var(--color-foreground-disabled);
 
   /* Alternative */
-  --button-background-color-alternative: var(--color-accent-secondary);
-  --button-background-color-alternative-hover: var(--color-accent-quaternary);
+  --button-background-color-alternative: var(--color-accent-primary-muted);
+  --button-background-color-alternative-hover: var(--color-accent-tertiary);
   --button-background-color-alternative-pressed: var(
     --color-background-secondary
   );
@@ -274,13 +274,13 @@
   --button-border-color-alternative: transparent;
   --button-border-color-alternative-hover: transparent;
   --button-border-color-alternative-pressed: transparent;
-  --button-border-color-alternative-focus: var(--color-accent-secondary);
+  --button-border-color-alternative-focus: var(--color-accent-tertiary);
   --button-border-color-alternative-disabled: transparent;
 
   --button-text-color-alternative: var(--color-foreground-primary);
   --button-text-color-alternative-hover: var(--color-foreground-primary);
-  --button-text-color-alternative-pressed: var(--color-accent-secondary);
-  --button-text-color-alternative-focus: var(--color-foreground-secondary);
+  --button-text-color-alternative-pressed: var(--color-accent-tertiary);
+  --button-text-color-alternative-focus: var(--color-accent-tertiary);
   --button-text-color-alternative-disabled: var(--color-foreground-disabled);
 
   --button-text-decoration-alternative: none;
@@ -291,8 +291,8 @@
 
   --button-icon-color-alternative: var(--color-foreground-primary);
   --button-icon-color-alternative-hover: var(--color-foreground-primary);
-  --button-icon-color-alternative-pressed: var(--color-accent-secondary);
-  --button-icon-color-alternative-focus: var(--color-foreground-secondary);
+  --button-icon-color-alternative-pressed: var(--color-accent-tertiary);
+  --button-icon-color-alternative-focus: var(--color-accent-tertiary);
   --button-icon-color-alternative-disabled: var(--color-foreground-disabled);
 
   /* Icon Button - Default */
