@@ -48,6 +48,7 @@ interface SliderProps {
 
 interface SliderStates {
   isTooltipDisplay: Array<boolean>
+  activeKnobId: string | null
 }
 
 export default class Slider extends React.Component<SliderProps, SliderStates> {
@@ -70,6 +71,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     super(props)
     this.state = {
       isTooltipDisplay: Array(props.stops.list.length).fill(false),
+      activeKnobId: null,
     }
   }
 
@@ -115,6 +117,10 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
       rangeWidth = range.offsetWidth as number,
       slider = range.parentElement as HTMLElement,
       stops = Array.from(range.children as HTMLCollectionOf<HTMLElement>)
+
+    this.setState({
+      activeKnobId: stop.dataset.id || null,
+    })
 
     const update = (event: UpdateEvent) => {
       const { range, onChange } = this.props
@@ -236,6 +242,10 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     document.onmouseup = null
     stop.onmouseup = null
     stop.style.zIndex = '1'
+
+    this.setState({
+      activeKnobId: null,
+    })
 
     requestAnimationFrame(() => {
       stop.focus()
@@ -417,6 +427,12 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
               canBeTyped
               isDisplayed={isTooltipDisplay[index]}
               isBlocked={isBlocked}
+              style={{
+                pointerEvents:
+                  this.state.activeKnobId && this.state.activeKnobId !== item[0]
+                    ? 'none'
+                    : 'auto',
+              }}
               onShiftRight={(e: React.KeyboardEvent<HTMLInputElement>) => {
                 this.onShiftRight(e.target as HTMLElement, e.metaKey, e.ctrlKey)
               }}
@@ -477,6 +493,12 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
               canBeTyped
               isDisplayed={isTooltipDisplay[index]}
               isBlocked={isBlocked}
+              style={{
+                pointerEvents:
+                  this.state.activeKnobId && this.state.activeKnobId !== item[0]
+                    ? 'none'
+                    : 'auto',
+              }}
               onShiftRight={(e: React.KeyboardEvent<HTMLInputElement>) => {
                 this.onShiftRight(e.target as HTMLElement, e.metaKey, e.ctrlKey)
               }}
