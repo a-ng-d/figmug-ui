@@ -18,7 +18,9 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
-  docs: {},
+  docs: {
+    defaultName: 'Documentation',
+  },
   viteFinal: async (config) => {
     config.resolve = config.resolve || {}
     config.resolve.alias = {

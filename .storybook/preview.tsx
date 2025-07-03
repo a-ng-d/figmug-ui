@@ -80,6 +80,7 @@ const preview: Preview = {
     },
   },
   decorators: [withTheme],
+  tags: ['autodocs'],
 }
 
 export default preview
