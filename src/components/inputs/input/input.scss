@@ -6,6 +6,7 @@
   display: flex;
   position: relative;
   align-items: start;
+  gap: var(--input-gap);
   cursor: default;
   user-select: none;
 
@@ -309,6 +310,7 @@
     display: flex;
     align-items: center;
     height: var(--input-status-height);
+    gap: var(--input-status-gap);
   }
 
   &--long-text {

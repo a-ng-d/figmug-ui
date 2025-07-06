@@ -4,6 +4,7 @@
   --input-color-width: 96px;
   --input-height: var(--size-medium);
   --input-margin: 0;
+  --input-gap: var(--size-xxsmall);
   --input-radius: var(--border-radius-small);
   --input-padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall)
     var(--size-xxsmall);
@@ -48,6 +49,7 @@
 
   --input-status-height: var(--size-medium);
   --input-status-height-long-text: var(--size-medium);
+  --input-status-gap: var(--size-xxsmall);
 
   /* Default */
   --input-background-color-empty: var(--figma-color-bg);

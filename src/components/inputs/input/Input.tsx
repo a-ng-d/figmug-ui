@@ -390,7 +390,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
           {warning !== undefined && (
             <div
               style={{
-                marginLeft: 'var(--size-xxsmall)',
                 position: 'relative',
                 pointerEvents: 'auto',
               }}
@@ -420,7 +419,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
             </div>
           )}
           {(isBlocked || isNew) && (
-            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+            <Chip
+              preview={preview}
+              isSolo
+            >
+              {isNew ? 'New' : 'Pro'}
+            </Chip>
           )}
         </div>
       </div>
@@ -541,7 +545,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
           {warning !== undefined && (
             <div
               style={{
-                marginLeft: 'var(--size-xxsmall)',
                 position: 'relative',
                 pointerEvents: 'auto',
               }}
@@ -571,7 +574,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
             </div>
           )}
           {(isBlocked || isNew) && (
-            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+            <Chip
+              preview={preview}
+              isSolo
+            >
+              {isNew ? 'New' : 'Pro'}
+            </Chip>
           )}
         </div>
       </div>
@@ -681,7 +689,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
           {warning !== undefined && (
             <div
               style={{
-                marginLeft: 'var(--size-xxsmall)',
                 position: 'relative',
                 pointerEvents: 'auto',
               }}
@@ -711,7 +718,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
             </div>
           )}
           {(isBlocked || isNew) && (
-            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+            <Chip
+              preview={preview}
+              isSolo
+            >
+              {isNew ? 'New' : 'Pro'}
+            </Chip>
           )}
         </div>
       </div>
@@ -789,7 +801,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
           {warning !== undefined && (
             <div
               style={{
-                marginLeft: 'var(--size-xxsmall)',
                 position: 'relative',
                 pointerEvents: 'auto',
               }}
@@ -819,7 +830,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
             </div>
           )}
           {(isBlocked || isNew) && (
-            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+            <Chip
+              preview={preview}
+              isSolo
+            >
+              {isNew ? 'New' : 'Pro'}
+            </Chip>
           )}
         </div>
       </div>
@@ -827,7 +843,8 @@ export default class Input extends React.Component<InputProps, InputStates> {
   }
 
   CodeSnippet = () => {
-    const { id, value, feature, isBlocked, isDisabled, isNew } = this.props
+    const { id, value, preview, feature, isBlocked, isDisabled, isNew } =
+      this.props
 
     return (
       <div
@@ -856,7 +873,14 @@ export default class Input extends React.Component<InputProps, InputStates> {
           readOnly
           ref={this.textareaRef}
         />
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+        {(isBlocked || isNew) && (
+          <Chip
+            preview={preview}
+            isSolo
+          >
+            {isNew ? 'New' : 'Pro'}
+          </Chip>
+        )}
       </div>
     )
   }

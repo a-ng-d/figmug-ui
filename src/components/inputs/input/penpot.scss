@@ -4,6 +4,7 @@
   --input-color-width: 108px;
   --input-height: var(--size-medium);
   --input-margin: 0;
+  --input-gap: var(--size-xxsmall);
   --input-radius: var(--border-radius-xlarge);
   --input-padding: var(--size-xxsmall);
   --input-padding-clearable: var(--size-medium);
@@ -47,6 +48,7 @@
 
   --input-status-height: var(--size-medium);
   --input-status-height-long-text: var(--size-medium);
+  --input-status-gap: var(--size-xxsmall);
 
   /* Default */
   --input-background-color-empty: var(--color-background-tertiary);
