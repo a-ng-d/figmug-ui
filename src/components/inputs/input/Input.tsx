@@ -29,6 +29,11 @@ export interface InputProps {
     text: string
     pin?: 'TOP' | 'BOTTOM'
   }
+  warning?: {
+    label: string
+    pin?: 'TOP' | 'BOTTOM'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+  }
   feature?: string
   shouldBlur?: boolean
   isAutoFocus?: boolean
@@ -51,6 +56,7 @@ export interface InputProps {
 export interface InputStates {
   inputValue: string
   isTooltipVisible: boolean
+  isWarningVisible: boolean
 }
 
 export default class Input extends React.Component<InputProps, InputStates> {
@@ -78,6 +84,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
     this.state = {
       inputValue: props.value,
       isTooltipVisible: false,
+      isWarningVisible: false,
     }
     this.startValue = props.value
     this.inputRef = React.createRef()
@@ -304,10 +311,17 @@ export default class Input extends React.Component<InputProps, InputStates> {
 
   // Templates
   Color = () => {
-    const { id, preview, feature, helper, isBlocked, isDisabled, isNew } =
-      this.props
-
-    const { inputValue, isTooltipVisible } = this.state
+    const {
+      id,
+      preview,
+      warning,
+      feature,
+      helper,
+      isBlocked,
+      isDisabled,
+      isNew,
+    } = this.props
+    const { inputValue, isTooltipVisible, isWarningVisible } = this.state
 
     return (
       <div
@@ -371,6 +385,38 @@ export default class Input extends React.Component<InputProps, InputStates> {
             {helper?.label}
           </Tooltip>
         )}
+        {warning !== undefined && (
+          <div
+            style={{
+              marginLeft: 'var(--size-xxxsmall',
+              position: 'relative',
+              pointerEvents: 'auto',
+            }}
+            onMouseEnter={() =>
+              this.setState({
+                isWarningVisible: true,
+              })
+            }
+            onMouseLeave={() =>
+              this.setState({
+                isWarningVisible: false,
+              })
+            }
+          >
+            <Icon
+              type="PICTO"
+              iconName="warning"
+            />
+            {isWarningVisible && (
+              <Tooltip
+                pin={warning.pin}
+                type={warning.type}
+              >
+                {warning.label}
+              </Tooltip>
+            )}
+          </div>
+        )}
       </div>
     )
   }
@@ -385,6 +431,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       step,
       helper,
       preview,
+      warning,
       feature,
       isBlocked,
       isDisabled,
@@ -392,8 +439,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       isFlex,
       onSlide,
     } = this.props
-
-    const { inputValue, isTooltipVisible } = this.state
+    const { inputValue, isTooltipVisible, isWarningVisible } = this.state
 
     return (
       <div
@@ -486,6 +532,38 @@ export default class Input extends React.Component<InputProps, InputStates> {
             {helper?.label}
           </Tooltip>
         )}
+        {warning !== undefined && (
+          <div
+            style={{
+              marginLeft: 'var(--size-xxxsmall',
+              position: 'relative',
+              pointerEvents: 'auto',
+            }}
+            onMouseEnter={() =>
+              this.setState({
+                isWarningVisible: true,
+              })
+            }
+            onMouseLeave={() =>
+              this.setState({
+                isWarningVisible: false,
+              })
+            }
+          >
+            <Icon
+              type="PICTO"
+              iconName="warning"
+            />
+            {isWarningVisible && (
+              <Tooltip
+                pin={warning.pin}
+                type={warning.type}
+              >
+                {warning.label}
+              </Tooltip>
+            )}
+          </div>
+        )}
       </div>
     )
   }
@@ -499,6 +577,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       charactersLimit,
       helper,
       preview,
+      warning,
       feature,
       isClearable,
       isFramed,
@@ -507,8 +586,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       isNew,
       onClear,
     } = this.props
-
-    const { inputValue, isTooltipVisible } = this.state
+    const { inputValue, isTooltipVisible, isWarningVisible } = this.state
 
     return (
       <div
@@ -582,6 +660,38 @@ export default class Input extends React.Component<InputProps, InputStates> {
             {helper?.label}
           </Tooltip>
         )}
+        {warning !== undefined && (
+          <div
+            style={{
+              marginLeft: 'var(--size-xxxsmall',
+              position: 'relative',
+              pointerEvents: 'auto',
+            }}
+            onMouseEnter={() =>
+              this.setState({
+                isWarningVisible: true,
+              })
+            }
+            onMouseLeave={() =>
+              this.setState({
+                isWarningVisible: false,
+              })
+            }
+          >
+            <Icon
+              type="PICTO"
+              iconName="warning"
+            />
+            {isWarningVisible && (
+              <Tooltip
+                pin={warning.pin}
+                type={warning.type}
+              >
+                {warning.label}
+              </Tooltip>
+            )}
+          </div>
+        )}
       </div>
     )
   }
@@ -593,13 +703,13 @@ export default class Input extends React.Component<InputProps, InputStates> {
       placeholder,
       helper,
       preview,
+      warning,
       feature,
       isBlocked,
       isDisabled,
       isNew,
     } = this.props
-
-    const { inputValue, isTooltipVisible } = this.state
+    const { inputValue, isTooltipVisible, isWarningVisible } = this.state
 
     return (
       <div
@@ -649,6 +759,38 @@ export default class Input extends React.Component<InputProps, InputStates> {
           >
             {helper?.label}
           </Tooltip>
+        )}
+        {warning !== undefined && (
+          <div
+            style={{
+              marginLeft: 'var(--size-xxxsmall',
+              position: 'relative',
+              pointerEvents: 'auto',
+            }}
+            onMouseEnter={() =>
+              this.setState({
+                isWarningVisible: true,
+              })
+            }
+            onMouseLeave={() =>
+              this.setState({
+                isWarningVisible: false,
+              })
+            }
+          >
+            <Icon
+              type="PICTO"
+              iconName="warning"
+            />
+            {isWarningVisible && (
+              <Tooltip
+                pin={warning.pin}
+                type={warning.type}
+              >
+                {warning.label}
+              </Tooltip>
+            )}
+          </div>
         )}
       </div>
     )

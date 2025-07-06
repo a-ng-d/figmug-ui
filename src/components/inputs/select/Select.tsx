@@ -1,5 +1,7 @@
 import React from 'react'
+import Tooltip from '@components/tags/tooltip/Tooltip'
 import Chip from '@components/tags/chip/Chip'
+import Icon from '@components/assets/icon/Icon'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import './select.scss'
 
@@ -14,6 +16,11 @@ export interface SelectProps {
     text: string
     pin?: 'TOP' | 'BOTTOM'
   }
+  warning?: {
+    label: string
+    pin?: 'TOP' | 'BOTTOM'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+  }
   feature?: string
   isChecked?: boolean
   isDisabled?: boolean
@@ -22,7 +29,11 @@ export interface SelectProps {
   action: React.ChangeEventHandler<HTMLInputElement>
 }
 
-export default class Select extends React.Component<SelectProps> {
+export interface SelectStates {
+  isWarningVisible: boolean
+}
+
+export default class Select extends React.Component<SelectProps, SelectStates> {
   private inputRef: React.RefObject<HTMLInputElement> = React.createRef()
 
   static defaultProps: Partial<SelectProps> = {
@@ -32,12 +43,20 @@ export default class Select extends React.Component<SelectProps> {
     isNew: false,
   }
 
+  constructor(props: SelectProps) {
+    super(props)
+    this.state = {
+      isWarningVisible: false,
+    }
+  }
+
   CheckBox = () => {
     const {
       id,
       label,
       name,
       preview,
+      warning,
       feature,
       isChecked,
       isDisabled,
@@ -45,6 +64,8 @@ export default class Select extends React.Component<SelectProps> {
       isNew,
       action,
     } = this.props
+
+    const { isWarningVisible } = this.state
 
     return (
       <div
@@ -70,10 +91,42 @@ export default class Select extends React.Component<SelectProps> {
           htmlFor={id}
         >
           {label}
-          {(isBlocked || isNew) && (
-            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-          )}
         </label>
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
+        {warning !== undefined && (
+          <div
+            style={{
+              marginLeft: 'var(--size-xxxsmall)',
+              position: 'relative',
+              pointerEvents: 'auto',
+            }}
+            onMouseEnter={() =>
+              this.setState({
+                isWarningVisible: true,
+              })
+            }
+            onMouseLeave={() =>
+              this.setState({
+                isWarningVisible: false,
+              })
+            }
+          >
+            <Icon
+              type="PICTO"
+              iconName="warning"
+            />
+            {isWarningVisible && (
+              <Tooltip
+                pin={warning.pin}
+                type={warning.type}
+              >
+                {warning.label}
+              </Tooltip>
+            )}
+          </div>
+        )}
       </div>
     )
   }

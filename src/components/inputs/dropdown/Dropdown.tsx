@@ -1,5 +1,6 @@
 import React from 'react'
 import texts from '@styles/texts/texts.module.scss'
+import Tooltip from '@components/tags/tooltip/Tooltip'
 import Chip from '@components/tags/chip/Chip'
 import ActionsList from '@components/lists/actions-list/ActionsList'
 import Icon from '@components/assets/icon/Icon'
@@ -19,6 +20,11 @@ export interface DropdownProps {
     text: string
     pin?: 'TOP' | 'BOTTOM'
   }
+  warning?: {
+    label: string
+    pin?: 'TOP' | 'BOTTOM'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+  }
   isDisabled?: boolean
   isBlocked?: boolean
   isNew?: boolean
@@ -26,6 +32,7 @@ export interface DropdownProps {
 
 export interface DropdownStates {
   isMenuOpen: boolean
+  isWarningVisible: boolean
   listShouldScroll: boolean
 }
 
@@ -51,6 +58,7 @@ export default class Dropdown extends React.Component<
     super(props)
     this.state = {
       isMenuOpen: false,
+      isWarningVisible: false,
       listShouldScroll: false,
     }
     this.selectMenuRef = React.createRef()
@@ -187,11 +195,12 @@ export default class Dropdown extends React.Component<
       selected,
       containerId,
       preview,
+      warning,
       isNew,
       isDisabled,
       isBlocked,
     } = this.props
-    const { isMenuOpen, listShouldScroll } = this.state
+    const { isMenuOpen, isWarningVisible, listShouldScroll } = this.state
 
     return (
       <div
@@ -250,6 +259,38 @@ export default class Dropdown extends React.Component<
         </button>
         {(isBlocked || isNew) && (
           <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
+        {warning !== undefined && (
+          <div
+            style={{
+              marginLeft: 'var(--size-xxxsmall',
+              position: 'relative',
+              pointerEvents: 'auto',
+            }}
+            onMouseEnter={() =>
+              this.setState({
+                isWarningVisible: true,
+              })
+            }
+            onMouseLeave={() =>
+              this.setState({
+                isWarningVisible: false,
+              })
+            }
+          >
+            <Icon
+              type="PICTO"
+              iconName="warning"
+            />
+            {isWarningVisible && (
+              <Tooltip
+                pin={warning.pin}
+                type={warning.type}
+              >
+                {warning.label}
+              </Tooltip>
+            )}
+          </div>
         )}
         {(() => {
           const { pin } = this.props
