@@ -22,7 +22,7 @@ export interface InputProps {
   helper?: {
     label: string
     pin?: 'TOP' | 'BOTTOM'
-    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
   preview?: {
     image: string
@@ -32,7 +32,7 @@ export interface InputProps {
   warning?: {
     label: string
     pin?: 'TOP' | 'BOTTOM'
-    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
   feature?: string
   shouldBlur?: boolean
