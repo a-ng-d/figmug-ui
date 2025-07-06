@@ -153,9 +153,6 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
             />
           </span>
         )}
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
         {warning !== undefined && (
           <div
             style={{
@@ -187,6 +184,9 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
               </Tooltip>
             )}
           </div>
+        )}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
         )}
       </button>
     )

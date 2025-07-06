@@ -374,17 +374,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
           onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
           ref={this.inputRef}
         />
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
-        {isTooltipVisible && helper !== undefined && (
-          <Tooltip
-            pin={helper?.pin}
-            type={helper?.type}
-          >
-            {helper?.label}
-          </Tooltip>
-        )}
         {warning !== undefined && (
           <div
             style={{
@@ -416,6 +405,17 @@ export default class Input extends React.Component<InputProps, InputStates> {
               </Tooltip>
             )}
           </div>
+        )}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
+        {isTooltipVisible && helper !== undefined && (
+          <Tooltip
+            pin={helper?.pin}
+            type={helper?.type}
+          >
+            {helper?.label}
+          </Tooltip>
         )}
       </div>
     )
@@ -521,17 +521,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
             </div>
           )}
         </div>
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
-        {isTooltipVisible && helper !== undefined && (
-          <Tooltip
-            pin={helper?.pin}
-            type={helper?.type}
-          >
-            {helper?.label}
-          </Tooltip>
-        )}
         {warning !== undefined && (
           <div
             style={{
@@ -563,6 +552,17 @@ export default class Input extends React.Component<InputProps, InputStates> {
               </Tooltip>
             )}
           </div>
+        )}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
+        {isTooltipVisible && helper !== undefined && (
+          <Tooltip
+            pin={helper?.pin}
+            type={helper?.type}
+          >
+            {helper?.label}
+          </Tooltip>
         )}
       </div>
     )
@@ -639,27 +639,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
         {(isBlocked || isNew) && (
           <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
         )}
-        {isClearable && inputValue.length > 0 && (
-          <div className="input__clear">
-            <Button
-              type="icon"
-              size="small"
-              icon="close"
-              action={() => {
-                this.setState({ inputValue: '' })
-                if (onClear !== undefined) onClear('')
-              }}
-            />
-          </div>
-        )}
-        {isTooltipVisible && helper !== undefined && (
-          <Tooltip
-            pin={helper?.pin}
-            type={helper?.type}
-          >
-            {helper?.label}
-          </Tooltip>
-        )}
         {warning !== undefined && (
           <div
             style={{
@@ -691,6 +670,27 @@ export default class Input extends React.Component<InputProps, InputStates> {
               </Tooltip>
             )}
           </div>
+        )}
+        {isClearable && inputValue.length > 0 && (
+          <div className="input__clear">
+            <Button
+              type="icon"
+              size="small"
+              icon="close"
+              action={() => {
+                this.setState({ inputValue: '' })
+                if (onClear !== undefined) onClear('')
+              }}
+            />
+          </div>
+        )}
+        {isTooltipVisible && helper !== undefined && (
+          <Tooltip
+            pin={helper?.pin}
+            type={helper?.type}
+          >
+            {helper?.label}
+          </Tooltip>
         )}
       </div>
     )
@@ -749,17 +749,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
           onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
           ref={this.textareaRef}
         />
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
-        {isTooltipVisible && helper !== undefined && (
-          <Tooltip
-            pin={helper?.pin}
-            type={helper?.type}
-          >
-            {helper?.label}
-          </Tooltip>
-        )}
         {warning !== undefined && (
           <div
             style={{
@@ -791,6 +780,17 @@ export default class Input extends React.Component<InputProps, InputStates> {
               </Tooltip>
             )}
           </div>
+        )}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
+        {isTooltipVisible && helper !== undefined && (
+          <Tooltip
+            pin={helper?.pin}
+            type={helper?.type}
+          >
+            {helper?.label}
+          </Tooltip>
         )}
       </div>
     )

@@ -257,9 +257,6 @@ export default class Dropdown extends React.Component<
             />
           </span>
         </button>
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
         {warning !== undefined && (
           <div
             style={{
@@ -291,6 +288,9 @@ export default class Dropdown extends React.Component<
               </Tooltip>
             )}
           </div>
+        )}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
         )}
         {(() => {
           const { pin } = this.props
