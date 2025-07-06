@@ -6,6 +6,9 @@
   --form-item-label-width: 112px;
   --form-item-helper-padding: 0 var(--size-xxsmall);
 
+  --form-item-label-margin: var(--size-xxsmall) 0 0;
+  --form-item-label-margin-multiline: var(--size-xxsmall) 0 0;
+
   --form-item-text-color-disabled: var(--color-foreground-disabled);
   --form-item-icon-color-disabled: var(--color-foreground-disabled);
 }

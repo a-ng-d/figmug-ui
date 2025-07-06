@@ -22,13 +22,19 @@ export const TextInputItem: Story = {
       message: 'First name followed by your last name',
     },
     shouldFill: false,
+    isMultiLine: false,
     isBlocked: false,
     isNew: false,
     children: (
       <Input
         id="text-input-item"
         type="TEXT"
-        value="Jean-Michel Avous"
+        value=""
+        placeholder="Type your name"
+        isBlocked={true}
+        warning={{
+          label: 'This field is blocked',
+        }}
       />
     ),
   },

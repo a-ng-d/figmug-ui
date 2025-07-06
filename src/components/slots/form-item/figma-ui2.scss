@@ -5,6 +5,9 @@
   --form-item-label-width: 96px;
   --form-item-helper-padding: 0;
 
+  --form-item-label-margin: var(--size-xxsmall) 0 0;
+  --form-item-label-margin-multiline: var(--size-xxsmall) 0 0;
+
   --form-item-text-color-disabled: var(--figma-color-text-disabled);
   --form-item-icon-color-disabled: var(--figma-color-icon-disabled);
 }

@@ -9,19 +9,21 @@
   --message-padding: var(--form-item-helper-padding);
 
   &__row {
-    display: flex;
+    display: inline-flex;
     position: relative;
-    align-items: baseline;
+    align-items: start;
     gap: var(--form-item-gap);
     cursor: default;
     padding: var(--form-item-padding);
     user-select: none;
+
+    .form-item__label {
+      margin: var(--form-item-label-margin);
+    }
   }
 
-  &--centered {
-    .form-item__row {
-      align-items: center;
-    }
+  &--multiline {
+    --form-item-label-margin: var(--form-item-label-margin-multiline);
   }
 
   &--fill {

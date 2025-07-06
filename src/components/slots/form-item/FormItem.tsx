@@ -12,7 +12,7 @@ export interface FormItemProps {
     message: string
   }
   shouldFill?: boolean
-  isCentered?: boolean
+  isMultiLine?: boolean
   isBlocked?: boolean
   isNew?: boolean
   children: React.ReactNode
@@ -24,7 +24,7 @@ const FormItem = (props: FormItemProps) => {
     label,
     helper,
     shouldFill = true,
-    isCentered = false,
+    isMultiLine = false,
     isBlocked = false,
     isNew = false,
     children,
@@ -35,7 +35,7 @@ const FormItem = (props: FormItemProps) => {
       className={doClassnames([
         'form-item',
         shouldFill && 'form-item--fill',
-        isCentered && 'form-item--centered',
+        isMultiLine && 'form-item--multiline',
         isBlocked && 'form-item--blocked',
       ])}
       role="group"
