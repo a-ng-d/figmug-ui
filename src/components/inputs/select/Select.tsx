@@ -64,7 +64,6 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       isNew,
       action,
     } = this.props
-
     const { isWarningVisible } = this.state
 
     return (
@@ -92,9 +91,6 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         >
           {label}
         </label>
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
         {warning !== undefined && (
           <div
             style={{
@@ -127,6 +123,9 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
             )}
           </div>
         )}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
       </div>
     )
   }
@@ -138,6 +137,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       name,
       value,
       preview,
+      warning,
       feature,
       isChecked,
       isDisabled,
@@ -145,6 +145,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       isNew,
       action,
     } = this.props
+    const { isWarningVisible } = this.state
 
     return (
       <div
@@ -171,10 +172,42 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           htmlFor={id}
         >
           {label}
-          {(isBlocked || isNew) && (
-            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-          )}
         </label>
+        {warning !== undefined && (
+          <div
+            style={{
+              marginLeft: 'var(--size-xxxsmall)',
+              position: 'relative',
+              pointerEvents: 'auto',
+            }}
+            onMouseEnter={() =>
+              this.setState({
+                isWarningVisible: true,
+              })
+            }
+            onMouseLeave={() =>
+              this.setState({
+                isWarningVisible: false,
+              })
+            }
+          >
+            <Icon
+              type="PICTO"
+              iconName="warning"
+            />
+            {isWarningVisible && (
+              <Tooltip
+                pin={warning.pin}
+                type={warning.type}
+              >
+                {warning.label}
+              </Tooltip>
+            )}
+          </div>
+        )}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
       </div>
     )
   }
@@ -185,6 +218,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       label,
       name,
       preview,
+      warning,
       feature,
       isChecked,
       isDisabled,
@@ -192,6 +226,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       isNew,
       action,
     } = this.props
+    const { isWarningVisible } = this.state
 
     return (
       <div
@@ -217,10 +252,42 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           htmlFor={id}
         >
           {label}
-          {(isBlocked || isNew) && (
-            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-          )}
         </label>
+        {warning !== undefined && (
+          <div
+            style={{
+              marginLeft: 'var(--size-xxxsmall)',
+              position: 'relative',
+              pointerEvents: 'auto',
+            }}
+            onMouseEnter={() =>
+              this.setState({
+                isWarningVisible: true,
+              })
+            }
+            onMouseLeave={() =>
+              this.setState({
+                isWarningVisible: false,
+              })
+            }
+          >
+            <Icon
+              type="PICTO"
+              iconName="warning"
+            />
+            {isWarningVisible && (
+              <Tooltip
+                pin={warning.pin}
+                type={warning.type}
+              >
+                {warning.label}
+              </Tooltip>
+            )}
+          </div>
+        )}
+        {(isBlocked || isNew) && (
+          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+        )}
       </div>
     )
   }

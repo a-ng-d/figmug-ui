@@ -1,5 +1,7 @@
 import React from 'react'
+import Tooltip from '@components/tags/tooltip/Tooltip'
 import Chip from '@components/tags/chip/Chip'
+import Icon from '@components/assets/icon/Icon'
 import Knob from '@components/actions/knob/Knob'
 import { doMap } from '@a_ng_d/figmug-utils'
 import './simple-slider.scss'
@@ -14,6 +16,11 @@ export interface SimpleSliderProps {
     min: string
     max: string
   }
+  warning?: {
+    label: string
+    pin?: 'TOP' | 'BOTTOM'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+  }
   feature: string
   isBlocked?: boolean
   isDisabled?: boolean
@@ -23,6 +30,7 @@ export interface SimpleSliderProps {
 
 export interface SimpleSliderStates {
   isTooltipDisplay: boolean
+  isWarningVisible: boolean
 }
 
 export default class SimpleSlider extends React.Component<
@@ -41,6 +49,7 @@ export default class SimpleSlider extends React.Component<
     super(props)
     this.state = {
       isTooltipDisplay: false,
+      isWarningVisible: false,
     }
     this.value = props.value
   }
@@ -139,13 +148,14 @@ export default class SimpleSlider extends React.Component<
       min,
       max,
       colors,
+      warning,
       feature,
       isBlocked,
       isDisabled,
       isNew,
       onChange,
     } = this.props
-    const { isTooltipDisplay } = this.state
+    const { isTooltipDisplay, isWarningVisible } = this.state
 
     return (
       <div
@@ -203,6 +213,38 @@ export default class SimpleSlider extends React.Component<
             onValidStopValue={(_stopId, e) => this.validHandler(e)}
           />
         </div>
+        {warning !== undefined && (
+          <div
+            style={{
+              marginLeft: 'var(--size-xxxsmall',
+              position: 'relative',
+              pointerEvents: 'auto',
+            }}
+            onMouseEnter={() =>
+              this.setState({
+                isWarningVisible: true,
+              })
+            }
+            onMouseLeave={() =>
+              this.setState({
+                isWarningVisible: false,
+              })
+            }
+          >
+            <Icon
+              type="PICTO"
+              iconName="warning"
+            />
+            {isWarningVisible && (
+              <Tooltip
+                pin={warning.pin}
+                type={warning.type}
+              >
+                {warning.label}
+              </Tooltip>
+            )}
+          </div>
+        )}
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )

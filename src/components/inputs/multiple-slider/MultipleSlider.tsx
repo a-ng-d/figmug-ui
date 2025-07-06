@@ -1,5 +1,7 @@
 import React from 'react'
+import Tooltip from '@components/tags/tooltip/Tooltip'
 import Chip from '@components/tags/chip/Chip'
+import Icon from '@components/assets/icon/Icon'
 import Knob from '@components/actions/knob/Knob'
 import { doClassnames, doMap, Easing } from '@a_ng_d/figmug-utils'
 import { doScale } from '@a_ng_d/figmug-utils'
@@ -32,6 +34,11 @@ interface SliderProps {
   tips: {
     minMax: string
   }
+  warning?: {
+    label: string
+    pin?: 'TOP' | 'BOTTOM'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+  }
   isBlocked?: boolean
   isNew?: boolean
   onChange: (
@@ -48,6 +55,7 @@ interface SliderProps {
 
 interface SliderStates {
   isTooltipDisplay: Array<boolean>
+  isWarningVisible: boolean
   activeKnobId: string | null
 }
 
@@ -71,6 +79,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     super(props)
     this.state = {
       isTooltipDisplay: Array(props.stops.list.length).fill(false),
+      isWarningVisible: false,
       activeKnobId: null,
     }
   }
@@ -523,12 +532,45 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
 
   // Render
   render() {
-    const { type, isBlocked, isNew } = this.props
+    const { type, warning, isBlocked, isNew } = this.props
+    const { isWarningVisible } = this.state
 
     return (
       <div className="multiple-slider">
         {type === 'EDIT' && <this.Edit />}
         {type === 'FULLY_EDIT' && <this.FullyEdit />}
+        {warning !== undefined && (
+          <div
+            style={{
+              marginLeft: 'var(--size-xxxsmall',
+              position: 'relative',
+              pointerEvents: 'auto',
+            }}
+            onMouseEnter={() =>
+              this.setState({
+                isWarningVisible: true,
+              })
+            }
+            onMouseLeave={() =>
+              this.setState({
+                isWarningVisible: false,
+              })
+            }
+          >
+            <Icon
+              type="PICTO"
+              iconName="warning"
+            />
+            {isWarningVisible && (
+              <Tooltip
+                pin={warning.pin}
+                type={warning.type}
+              >
+                {warning.label}
+              </Tooltip>
+            )}
+          </div>
+        )}
         {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
       </div>
     )
