@@ -309,8 +309,8 @@
   &__status {
     display: flex;
     align-items: center;
-    height: var(--input-status-height);
     gap: var(--input-status-gap);
+    height: var(--input-status-height);
   }
 
   &--long-text {
