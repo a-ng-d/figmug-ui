@@ -260,7 +260,7 @@ export default class Dropdown extends React.Component<
         {warning !== undefined && (
           <div
             style={{
-              marginLeft: 'var(--size-xxxsmall',
+              marginLeft: 'var(--size-xxsmall)',
               position: 'relative',
               pointerEvents: 'auto',
             }}

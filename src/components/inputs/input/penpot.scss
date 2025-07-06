@@ -9,6 +9,7 @@
   --input-padding-clearable: var(--size-medium);
   --input-padding-unit: var(--size-medium);
   --input-padding-with-icon: var(--size-medium);
+  --input-top-clearable: 6px;
   --input-right-clearable: var(--size-xxxsmall);
   --input-background-color: var(--color-background-tertiary);
   --input-border-width: 0;
@@ -43,6 +44,9 @@
   --input-textarea-border-color: transparent;
   --input-textarea-text-color: var(--color-foreground-primary);
   --input-text-textarea-placeholder-color: var(--color-foreground-secondary);
+
+  --input-status-height: var(--size-medium);
+  --input-status-height-long-text: var(--size-medium);
 
   /* Default */
   --input-background-color-empty: var(--color-background-tertiary);

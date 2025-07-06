@@ -542,7 +542,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
         {warning !== undefined && (
           <div
             style={{
-              marginLeft: 'var(--size-xxxsmall',
+              marginLeft: 'var(--size-xxsmall)',
               position: 'relative',
               pointerEvents: 'auto',
             }}

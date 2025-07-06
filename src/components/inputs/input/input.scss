@@ -5,7 +5,7 @@
 .input {
   display: flex;
   position: relative;
-  align-items: center;
+  align-items: start;
   cursor: default;
   user-select: none;
 
@@ -301,7 +301,18 @@
 
   &__clear {
     position: absolute;
+    top: var(--input-top-clearable);
     right: var(--input-right-clearable);
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    height: var(--input-status-height);
+  }
+
+  &--long-text {
+    --input-status-height: var(--input-status-height-long-text);
   }
 }
 

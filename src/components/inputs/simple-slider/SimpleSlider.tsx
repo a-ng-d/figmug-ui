@@ -216,7 +216,7 @@ export default class SimpleSlider extends React.Component<
         {warning !== undefined && (
           <div
             style={{
-              marginLeft: 'var(--size-xxxsmall',
+              marginLeft: 'var(--size-xxsmall)',
               position: 'relative',
               pointerEvents: 'auto',
             }}

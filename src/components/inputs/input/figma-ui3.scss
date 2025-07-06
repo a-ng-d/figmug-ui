@@ -10,6 +10,7 @@
   --input-padding-clearable: var(--size-medium);
   --input-padding-unit: var(--size-small);
   --input-padding-with-icon: var(--size-small);
+  --input-top-clearable: var(--size-xunit);
   --input-right-clearable: var(--size-xxxsmall);
   --input-background-color: var(--figma-color-bg-secondary);
   --input-border-width: 0;
@@ -44,6 +45,9 @@
   --input-textarea-border-color: var(--figma-color-border);
   --input-textarea-text-color: var(--figma-color-text);
   --input-text-textarea-placeholder-color: var(--figma-color-text-secondary);
+
+  --input-status-height: var(--size-small);
+  --input-status-height-long-text: var(--size-medium);
 
   /* Default */
   --input-background-color-empty: var(--figma-color-bg-secondary);

@@ -94,7 +94,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         {warning !== undefined && (
           <div
             style={{
-              marginLeft: 'var(--size-xxxsmall)',
+              marginLeft: 'var(--size-xxsmall)',
               position: 'relative',
               pointerEvents: 'auto',
             }}
@@ -176,7 +176,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         {warning !== undefined && (
           <div
             style={{
-              marginLeft: 'var(--size-xxxsmall)',
+              marginLeft: 'var(--size-xxsmall)',
               position: 'relative',
               pointerEvents: 'auto',
             }}
@@ -256,7 +256,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         {warning !== undefined && (
           <div
             style={{
-              marginLeft: 'var(--size-xxxsmall)',
+              marginLeft: 'var(--size-xxsmall)',
               position: 'relative',
               pointerEvents: 'auto',
             }}

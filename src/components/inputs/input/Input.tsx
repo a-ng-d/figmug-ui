@@ -332,91 +332,97 @@ export default class Input extends React.Component<InputProps, InputStates> {
           isBlocked && 'input--blocked',
         ])}
         role="group"
-        onMouseEnter={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: true })
-        }}
-        onMouseLeave={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: false })
-        }}
       >
-        <input
-          role="color-picker"
-          id={id}
-          data-feature={feature}
-          type="color"
-          className="input__color"
-          value={inputValue}
-          disabled={isDisabled || isBlocked}
-          aria-disabled={isDisabled || isBlocked}
-          onChange={
-            !(isDisabled || isBlocked) ? this.onPickColorValue : undefined
-          }
-          onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
-          onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
-          ref={this.inputRef}
-        />
-        <input
-          role="color-display"
-          id={id}
-          data-feature={feature}
-          type="input"
-          className="input__field"
-          value={inputValue.toUpperCase().replace('#', '')}
-          maxLength={6}
-          disabled={isDisabled || isBlocked}
-          onChange={
-            !(isDisabled || isBlocked) ? this.onChangeColorValue : undefined
-          }
-          onFocus={(e) => {
-            e.target.select()
-            this.onFocus(e)
+        <div
+          className="input__wrapper"
+          onMouseEnter={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}
-          onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
-          ref={this.inputRef}
-        />
-        {warning !== undefined && (
-          <div
-            style={{
-              marginLeft: 'var(--size-xxxsmall',
-              position: 'relative',
-              pointerEvents: 'auto',
+          onMouseLeave={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          }}
+        >
+          <input
+            role="color-picker"
+            id={id}
+            data-feature={feature}
+            type="color"
+            className="input__color"
+            value={inputValue}
+            disabled={isDisabled || isBlocked}
+            aria-disabled={isDisabled || isBlocked}
+            onChange={
+              !(isDisabled || isBlocked) ? this.onPickColorValue : undefined
+            }
+            onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
+            onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
+            ref={this.inputRef}
+          />
+          <input
+            role="color-display"
+            id={id}
+            data-feature={feature}
+            type="input"
+            className="input__field"
+            value={inputValue.toUpperCase().replace('#', '')}
+            maxLength={6}
+            disabled={isDisabled || isBlocked}
+            onChange={
+              !(isDisabled || isBlocked) ? this.onChangeColorValue : undefined
+            }
+            onFocus={(e) => {
+              e.target.select()
+              this.onFocus(e)
             }}
-            onMouseEnter={() =>
-              this.setState({
-                isWarningVisible: true,
-              })
-            }
-            onMouseLeave={() =>
-              this.setState({
-                isWarningVisible: false,
-              })
-            }
-          >
-            <Icon
-              type="PICTO"
-              iconName="warning"
-            />
-            {isWarningVisible && (
-              <Tooltip
-                pin={warning.pin}
-                type={warning.type}
-              >
-                {warning.label}
-              </Tooltip>
-            )}
-          </div>
-        )}
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
-        {isTooltipVisible && helper !== undefined && (
-          <Tooltip
-            pin={helper?.pin}
-            type={helper?.type}
-          >
-            {helper?.label}
-          </Tooltip>
-        )}
+            onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
+            ref={this.inputRef}
+          />
+          {isTooltipVisible && helper !== undefined && (
+            <Tooltip
+              pin={helper?.pin}
+              type={helper?.type}
+            >
+              {helper?.label}
+            </Tooltip>
+          )}
+        </div>
+        <div className="input__status">
+          {warning !== undefined && (
+            <div
+              style={{
+                marginLeft: 'var(--size-xxsmall)',
+                position: 'relative',
+                pointerEvents: 'auto',
+              }}
+              onMouseEnter={() =>
+                this.setState({
+                  isWarningVisible: true,
+                })
+              }
+              onMouseLeave={() =>
+                this.setState({
+                  isWarningVisible: false,
+                })
+              }
+            >
+              <Icon
+                type="PICTO"
+                iconName="warning"
+              />
+              {isWarningVisible && (
+                <Tooltip
+                  pin={warning.pin}
+                  type={warning.type}
+                >
+                  {warning.label}
+                </Tooltip>
+              )}
+            </div>
+          )}
+          {(isBlocked || isNew) && (
+            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+          )}
+        </div>
       </div>
     )
   }
@@ -451,14 +457,16 @@ export default class Input extends React.Component<InputProps, InputStates> {
           isBlocked && 'input--blocked',
         ])}
         role="group"
-        onMouseEnter={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: true })
-        }}
-        onMouseLeave={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: false })
-        }}
       >
-        <div className="input__wrapper">
+        <div
+          className="input__wrapper"
+          onMouseEnter={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: true })
+          }}
+          onMouseLeave={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          }}
+        >
           {icon !== undefined && (
             <div
               className="input__icon"
@@ -520,50 +528,52 @@ export default class Input extends React.Component<InputProps, InputStates> {
               />
             </div>
           )}
+          {isTooltipVisible && helper !== undefined && (
+            <Tooltip
+              pin={helper?.pin}
+              type={helper?.type}
+            >
+              {helper?.label}
+            </Tooltip>
+          )}
         </div>
-        {warning !== undefined && (
-          <div
-            style={{
-              marginLeft: 'var(--size-xxxsmall',
-              position: 'relative',
-              pointerEvents: 'auto',
-            }}
-            onMouseEnter={() =>
-              this.setState({
-                isWarningVisible: true,
-              })
-            }
-            onMouseLeave={() =>
-              this.setState({
-                isWarningVisible: false,
-              })
-            }
-          >
-            <Icon
-              type="PICTO"
-              iconName="warning"
-            />
-            {isWarningVisible && (
-              <Tooltip
-                pin={warning.pin}
-                type={warning.type}
-              >
-                {warning.label}
-              </Tooltip>
-            )}
-          </div>
-        )}
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
-        {isTooltipVisible && helper !== undefined && (
-          <Tooltip
-            pin={helper?.pin}
-            type={helper?.type}
-          >
-            {helper?.label}
-          </Tooltip>
-        )}
+        <div className="input__status">
+          {warning !== undefined && (
+            <div
+              style={{
+                marginLeft: 'var(--size-xxsmall)',
+                position: 'relative',
+                pointerEvents: 'auto',
+              }}
+              onMouseEnter={() =>
+                this.setState({
+                  isWarningVisible: true,
+                })
+              }
+              onMouseLeave={() =>
+                this.setState({
+                  isWarningVisible: false,
+                })
+              }
+            >
+              <Icon
+                type="PICTO"
+                iconName="warning"
+              />
+              {isWarningVisible && (
+                <Tooltip
+                  pin={warning.pin}
+                  type={warning.type}
+                >
+                  {warning.label}
+                </Tooltip>
+              )}
+            </div>
+          )}
+          {(isBlocked || isNew) && (
+            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+          )}
+        </div>
       </div>
     )
   }
@@ -597,101 +607,113 @@ export default class Input extends React.Component<InputProps, InputStates> {
           isBlocked && 'input--blocked',
         ])}
         role="group"
-        onMouseEnter={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: true })
-        }}
-        onMouseLeave={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: false })
-        }}
       >
-        {icon !== undefined && (
-          <div className="input__icon">
-            <Icon
-              type={icon?.type}
-              iconName={icon?.value}
-              iconLetter={icon?.value}
-            />
-          </div>
-        )}
-        <input
-          role="textbox"
-          id={id}
-          data-feature={feature}
-          type="text"
-          className={doClassnames([
-            'input__field',
-            !isFramed && 'input__field--no-frame',
-            isClearable && inputValue.length > 0 && 'input__field--clearable',
-            state === 'ERROR' && 'input__field--error',
-          ])}
-          placeholder={placeholder}
-          value={inputValue}
-          maxLength={charactersLimit}
-          disabled={isDisabled || isBlocked}
-          aria-invalid={state === 'ERROR'}
-          aria-disabled={isDisabled || isBlocked}
-          onKeyDown={!(isDisabled || isBlocked) ? this.onValidText : undefined}
-          onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
-          onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
-          onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
-          ref={this.inputRef}
-        ></input>
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
-        {warning !== undefined && (
-          <div
-            style={{
-              marginLeft: 'var(--size-xxxsmall',
-              position: 'relative',
-              pointerEvents: 'auto',
-            }}
-            onMouseEnter={() =>
-              this.setState({
-                isWarningVisible: true,
-              })
+        <div
+          className="input__wrapper"
+          onMouseEnter={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: true })
+          }}
+          onMouseLeave={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          }}
+        >
+          {icon !== undefined && (
+            <div className="input__icon">
+              <Icon
+                type={icon?.type}
+                iconName={icon?.value}
+                iconLetter={icon?.value}
+              />
+            </div>
+          )}
+          <input
+            role="textbox"
+            id={id}
+            data-feature={feature}
+            type="text"
+            className={doClassnames([
+              'input__field',
+              !isFramed && 'input__field--no-frame',
+              isClearable && inputValue.length > 0 && 'input__field--clearable',
+              state === 'ERROR' && 'input__field--error',
+            ])}
+            placeholder={placeholder}
+            value={inputValue}
+            maxLength={charactersLimit}
+            disabled={isDisabled || isBlocked}
+            aria-invalid={state === 'ERROR'}
+            aria-disabled={isDisabled || isBlocked}
+            onKeyDown={
+              !(isDisabled || isBlocked) ? this.onValidText : undefined
             }
-            onMouseLeave={() =>
-              this.setState({
-                isWarningVisible: false,
-              })
+            onChange={
+              !(isDisabled || isBlocked) ? this.onChangeText : undefined
             }
-          >
-            <Icon
-              type="PICTO"
-              iconName="warning"
-            />
-            {isWarningVisible && (
-              <Tooltip
-                pin={warning.pin}
-                type={warning.type}
-              >
-                {warning.label}
-              </Tooltip>
+            onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
+            onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
+            ref={this.inputRef}
+          ></input>
+          {isClearable &&
+            inputValue.length > 0 &&
+            !(isDisabled || isBlocked) && (
+              <div className="input__clear">
+                <Button
+                  type="icon"
+                  size="small"
+                  icon="close"
+                  action={() => {
+                    this.setState({ inputValue: '' })
+                    if (onClear !== undefined) onClear('')
+                  }}
+                />
+              </div>
             )}
-          </div>
-        )}
-        {isClearable && inputValue.length > 0 && (
-          <div className="input__clear">
-            <Button
-              type="icon"
-              size="small"
-              icon="close"
-              action={() => {
-                this.setState({ inputValue: '' })
-                if (onClear !== undefined) onClear('')
+          {isTooltipVisible && helper !== undefined && (
+            <Tooltip
+              pin={helper?.pin}
+              type={helper?.type}
+            >
+              {helper?.label}
+            </Tooltip>
+          )}
+        </div>
+        <div className="input__status">
+          {warning !== undefined && (
+            <div
+              style={{
+                marginLeft: 'var(--size-xxsmall)',
+                position: 'relative',
+                pointerEvents: 'auto',
               }}
-            />
-          </div>
-        )}
-        {isTooltipVisible && helper !== undefined && (
-          <Tooltip
-            pin={helper?.pin}
-            type={helper?.type}
-          >
-            {helper?.label}
-          </Tooltip>
-        )}
+              onMouseEnter={() =>
+                this.setState({
+                  isWarningVisible: true,
+                })
+              }
+              onMouseLeave={() =>
+                this.setState({
+                  isWarningVisible: false,
+                })
+              }
+            >
+              <Icon
+                type="PICTO"
+                iconName="warning"
+              />
+              {isWarningVisible && (
+                <Tooltip
+                  pin={warning.pin}
+                  type={warning.type}
+                >
+                  {warning.label}
+                </Tooltip>
+              )}
+            </div>
+          )}
+          {(isBlocked || isNew) && (
+            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+          )}
+        </div>
       </div>
     )
   }
@@ -719,79 +741,87 @@ export default class Input extends React.Component<InputProps, InputStates> {
           isBlocked && 'input--blocked',
         ])}
         role="group"
-        onMouseEnter={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: true })
-        }}
-        onMouseLeave={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: false })
-        }}
       >
-        <textarea
-          role="textbox"
-          id={id}
-          data-feature={feature}
-          className={doClassnames([
-            'textarea',
-            'input__field',
-            state === 'ERROR' && 'input__field--error',
-          ])}
-          rows={1}
-          placeholder={placeholder}
-          value={inputValue}
-          disabled={isDisabled || isBlocked}
-          aria-invalid={state === 'ERROR'}
-          aria-disabled={isDisabled || isBlocked}
-          onKeyDown={
-            !(isDisabled || isBlocked) ? this.onValidLongText : undefined
-          }
-          onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
-          onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
-          onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
-          ref={this.textareaRef}
-        />
-        {warning !== undefined && (
-          <div
-            style={{
-              marginLeft: 'var(--size-xxxsmall',
-              position: 'relative',
-              pointerEvents: 'auto',
-            }}
-            onMouseEnter={() =>
-              this.setState({
-                isWarningVisible: true,
-              })
+        <div
+          className="input__wrapper"
+          onMouseEnter={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: true })
+          }}
+          onMouseLeave={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          }}
+        >
+          <textarea
+            role="textbox"
+            id={id}
+            data-feature={feature}
+            className={doClassnames([
+              'textarea',
+              'input__field',
+              state === 'ERROR' && 'input__field--error',
+            ])}
+            rows={1}
+            placeholder={placeholder}
+            value={inputValue}
+            disabled={isDisabled || isBlocked}
+            aria-invalid={state === 'ERROR'}
+            aria-disabled={isDisabled || isBlocked}
+            onKeyDown={
+              !(isDisabled || isBlocked) ? this.onValidLongText : undefined
             }
-            onMouseLeave={() =>
-              this.setState({
-                isWarningVisible: false,
-              })
+            onChange={
+              !(isDisabled || isBlocked) ? this.onChangeText : undefined
             }
-          >
-            <Icon
-              type="PICTO"
-              iconName="warning"
-            />
-            {isWarningVisible && (
-              <Tooltip
-                pin={warning.pin}
-                type={warning.type}
-              >
-                {warning.label}
-              </Tooltip>
-            )}
-          </div>
-        )}
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
-        {isTooltipVisible && helper !== undefined && (
-          <Tooltip
-            pin={helper?.pin}
-            type={helper?.type}
-          >
-            {helper?.label}
-          </Tooltip>
-        )}
+            onFocus={!(isDisabled || isBlocked) ? this.onFocus : undefined}
+            onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
+            ref={this.textareaRef}
+          />
+          {isTooltipVisible && helper !== undefined && (
+            <Tooltip
+              pin={helper?.pin}
+              type={helper?.type}
+            >
+              {helper?.label}
+            </Tooltip>
+          )}
+        </div>
+        <div className="input__status">
+          {warning !== undefined && (
+            <div
+              style={{
+                marginLeft: 'var(--size-xxsmall)',
+                position: 'relative',
+                pointerEvents: 'auto',
+              }}
+              onMouseEnter={() =>
+                this.setState({
+                  isWarningVisible: true,
+                })
+              }
+              onMouseLeave={() =>
+                this.setState({
+                  isWarningVisible: false,
+                })
+              }
+            >
+              <Icon
+                type="PICTO"
+                iconName="warning"
+              />
+              {isWarningVisible && (
+                <Tooltip
+                  pin={warning.pin}
+                  type={warning.type}
+                >
+                  {warning.label}
+                </Tooltip>
+              )}
+            </div>
+          )}
+          {(isBlocked || isNew) && (
+            <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
+          )}
+        </div>
       </div>
     )
   }

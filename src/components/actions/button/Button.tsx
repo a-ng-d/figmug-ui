@@ -156,7 +156,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         {warning !== undefined && (
           <div
             style={{
-              marginLeft: 'var(--size-xxxsmall',
+              marginLeft: 'var(--size-xxsmall)',
               position: 'relative',
               pointerEvents: 'auto',
             }}
