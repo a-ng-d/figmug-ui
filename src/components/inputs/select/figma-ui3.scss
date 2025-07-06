@@ -11,7 +11,7 @@
 
   /* Checkbox */
   --select-checkbox-height: var(--size-medium);
-  --select-checkbox-padding: 0 var(--size-xxsmall);
+  --select-checkbox-padding: 0 0 0 var(--size-xxsmall);
   --select-checkbox-margin: var(--size-neg-xsmall);
 
   --select-box-height: var(--size-xsmall);
@@ -57,7 +57,7 @@
 
   /* Switch */
   --select-switch-height: var(--size-medium);
-  --select-switch-padding: 0 var(--size-xxsmall);
+  --select-switch-padding: 0 0 0 var(--size-xxsmall);
   --select-switch-margin: var(--size-neg-xsmall);
 
   --select-toggle-height: 10px;
@@ -119,7 +119,7 @@
 
   /* Radio */
   --select-radio-height: var(--size-medium);
-  --select-radio-padding: 0 var(--size-xxsmall);
+  --select-radio-padding: 0 0 0 var(--size-xxsmall);
   --select-radio-margin: var(--size-neg-xsmall);
 
   --select-button-height: var(--size-xsmall);
