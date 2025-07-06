@@ -310,18 +310,58 @@ export default class Input extends React.Component<InputProps, InputStates> {
   }
 
   // Templates
+  Status = () => {
+    const { warning, preview, isBlocked, isNew } = this.props
+    const { isWarningVisible } = this.state
+
+    if (warning || isBlocked || isNew)
+      return (
+        <div className="input__status">
+          {warning !== undefined && (
+            <div
+              style={{
+                position: 'relative',
+                pointerEvents: 'auto',
+              }}
+              onMouseEnter={() =>
+                this.setState({
+                  isWarningVisible: true,
+                })
+              }
+              onMouseLeave={() =>
+                this.setState({
+                  isWarningVisible: false,
+                })
+              }
+            >
+              <Icon
+                type="PICTO"
+                iconName="warning"
+              />
+              {isWarningVisible && (
+                <Tooltip
+                  pin={warning?.pin}
+                  type={warning?.type}
+                >
+                  {warning?.label}
+                </Tooltip>
+              )}
+            </div>
+          )}
+          {(isBlocked || isNew) && (
+            <Chip
+              preview={preview}
+              isSolo
+            >
+              {isNew ? 'New' : 'Pro'}
+            </Chip>
+          )}
+        </div>
+      )
+  }
   Color = () => {
-    const {
-      id,
-      preview,
-      warning,
-      feature,
-      helper,
-      isBlocked,
-      isDisabled,
-      isNew,
-    } = this.props
-    const { inputValue, isTooltipVisible, isWarningVisible } = this.state
+    const { id, feature, helper, isBlocked, isDisabled } = this.props
+    const { inputValue, isTooltipVisible } = this.state
 
     return (
       <div
@@ -386,47 +426,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
             </Tooltip>
           )}
         </div>
-        <div className="input__status">
-          {warning !== undefined && (
-            <div
-              style={{
-                position: 'relative',
-                pointerEvents: 'auto',
-              }}
-              onMouseEnter={() =>
-                this.setState({
-                  isWarningVisible: true,
-                })
-              }
-              onMouseLeave={() =>
-                this.setState({
-                  isWarningVisible: false,
-                })
-              }
-            >
-              <Icon
-                type="PICTO"
-                iconName="warning"
-              />
-              {isWarningVisible && (
-                <Tooltip
-                  pin={warning.pin}
-                  type={warning.type}
-                >
-                  {warning.label}
-                </Tooltip>
-              )}
-            </div>
-          )}
-          {(isBlocked || isNew) && (
-            <Chip
-              preview={preview}
-              isSolo
-            >
-              {isNew ? 'New' : 'Pro'}
-            </Chip>
-          )}
-        </div>
+        {this.Status()}
       </div>
     )
   }
@@ -440,16 +440,13 @@ export default class Input extends React.Component<InputProps, InputStates> {
       max,
       step,
       helper,
-      preview,
-      warning,
       feature,
       isBlocked,
       isDisabled,
-      isNew,
       isFlex,
       onSlide,
     } = this.props
-    const { inputValue, isTooltipVisible, isWarningVisible } = this.state
+    const { inputValue, isTooltipVisible } = this.state
 
     return (
       <div
@@ -541,47 +538,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
             </Tooltip>
           )}
         </div>
-        <div className="input__status">
-          {warning !== undefined && (
-            <div
-              style={{
-                position: 'relative',
-                pointerEvents: 'auto',
-              }}
-              onMouseEnter={() =>
-                this.setState({
-                  isWarningVisible: true,
-                })
-              }
-              onMouseLeave={() =>
-                this.setState({
-                  isWarningVisible: false,
-                })
-              }
-            >
-              <Icon
-                type="PICTO"
-                iconName="warning"
-              />
-              {isWarningVisible && (
-                <Tooltip
-                  pin={warning.pin}
-                  type={warning.type}
-                >
-                  {warning.label}
-                </Tooltip>
-              )}
-            </div>
-          )}
-          {(isBlocked || isNew) && (
-            <Chip
-              preview={preview}
-              isSolo
-            >
-              {isNew ? 'New' : 'Pro'}
-            </Chip>
-          )}
-        </div>
+        {this.Status()}
       </div>
     )
   }
@@ -594,17 +551,14 @@ export default class Input extends React.Component<InputProps, InputStates> {
       placeholder,
       charactersLimit,
       helper,
-      preview,
-      warning,
       feature,
       isClearable,
       isFramed,
       isBlocked,
       isDisabled,
-      isNew,
       onClear,
     } = this.props
-    const { inputValue, isTooltipVisible, isWarningVisible } = this.state
+    const { inputValue, isTooltipVisible } = this.state
 
     return (
       <div
@@ -685,65 +639,15 @@ export default class Input extends React.Component<InputProps, InputStates> {
             </Tooltip>
           )}
         </div>
-        <div className="input__status">
-          {warning !== undefined && (
-            <div
-              style={{
-                position: 'relative',
-                pointerEvents: 'auto',
-              }}
-              onMouseEnter={() =>
-                this.setState({
-                  isWarningVisible: true,
-                })
-              }
-              onMouseLeave={() =>
-                this.setState({
-                  isWarningVisible: false,
-                })
-              }
-            >
-              <Icon
-                type="PICTO"
-                iconName="warning"
-              />
-              {isWarningVisible && (
-                <Tooltip
-                  pin={warning.pin}
-                  type={warning.type}
-                >
-                  {warning.label}
-                </Tooltip>
-              )}
-            </div>
-          )}
-          {(isBlocked || isNew) && (
-            <Chip
-              preview={preview}
-              isSolo
-            >
-              {isNew ? 'New' : 'Pro'}
-            </Chip>
-          )}
-        </div>
+        {this.Status()}
       </div>
     )
   }
 
   LongText = () => {
-    const {
-      id,
-      state,
-      placeholder,
-      helper,
-      preview,
-      warning,
-      feature,
-      isBlocked,
-      isDisabled,
-      isNew,
-    } = this.props
-    const { inputValue, isTooltipVisible, isWarningVisible } = this.state
+    const { id, state, placeholder, helper, feature, isBlocked, isDisabled } =
+      this.props
+    const { inputValue, isTooltipVisible } = this.state
 
     return (
       <div
@@ -797,54 +701,13 @@ export default class Input extends React.Component<InputProps, InputStates> {
             </Tooltip>
           )}
         </div>
-        <div className="input__status">
-          {warning !== undefined && (
-            <div
-              style={{
-                position: 'relative',
-                pointerEvents: 'auto',
-              }}
-              onMouseEnter={() =>
-                this.setState({
-                  isWarningVisible: true,
-                })
-              }
-              onMouseLeave={() =>
-                this.setState({
-                  isWarningVisible: false,
-                })
-              }
-            >
-              <Icon
-                type="PICTO"
-                iconName="warning"
-              />
-              {isWarningVisible && (
-                <Tooltip
-                  pin={warning.pin}
-                  type={warning.type}
-                >
-                  {warning.label}
-                </Tooltip>
-              )}
-            </div>
-          )}
-          {(isBlocked || isNew) && (
-            <Chip
-              preview={preview}
-              isSolo
-            >
-              {isNew ? 'New' : 'Pro'}
-            </Chip>
-          )}
-        </div>
+        {this.Status()}
       </div>
     )
   }
 
   CodeSnippet = () => {
-    const { id, value, preview, feature, isBlocked, isDisabled, isNew } =
-      this.props
+    const { id, value, helper, feature, isBlocked, isDisabled } = this.props
 
     return (
       <div
@@ -855,32 +718,37 @@ export default class Input extends React.Component<InputProps, InputStates> {
         ])}
         role="group"
       >
-        <textarea
-          role="textbox"
-          id={id}
-          data-feature={feature}
-          className={doClassnames([
-            'textarea',
-            'input__field',
-            'textarea--monospace',
-          ])}
-          value={value}
-          disabled={isDisabled || isBlocked}
-          aria-disabled={isDisabled || isBlocked}
-          onChange={!(isDisabled || isBlocked) ? this.onChangeText : undefined}
-          onFocus={(e) => e.target.select()}
-          onBlur={() => window.getSelection()?.removeAllRanges()}
-          readOnly
-          ref={this.textareaRef}
-        />
-        {(isBlocked || isNew) && (
-          <Chip
-            preview={preview}
-            isSolo
-          >
-            {isNew ? 'New' : 'Pro'}
-          </Chip>
-        )}
+        <div
+          className="input__wrapper"
+          onMouseEnter={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: true })
+          }}
+          onMouseLeave={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          }}
+        >
+          <textarea
+            role="textbox"
+            id={id}
+            data-feature={feature}
+            className={doClassnames([
+              'textarea',
+              'input__field',
+              'textarea--monospace',
+            ])}
+            value={value}
+            disabled={isDisabled || isBlocked}
+            aria-disabled={isDisabled || isBlocked}
+            onChange={
+              !(isDisabled || isBlocked) ? this.onChangeText : undefined
+            }
+            onFocus={(e) => e.target.select()}
+            onBlur={() => window.getSelection()?.removeAllRanges()}
+            readOnly
+            ref={this.textareaRef}
+          />
+        </div>
+        {this.Status()}
       </div>
     )
   }

@@ -83,6 +83,7 @@
   /* Input */
   &__wrapper {
     position: relative;
+    flex: 1;
   }
 
   &.input--flex .input__wrapper {
