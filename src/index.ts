@@ -1,4 +1,9 @@
-import tokens from '@styles/tokens/tokens.module.scss'
+import penpotTypes from '@styles/tokens/modules/penpot-types.module.scss'
+import penpotColors from '@styles/tokens/modules/penpot-colors.module.scss'
+import globals from '@styles/tokens/modules/globals.module.scss'
+import figmaTypes from '@styles/tokens/modules/figma-types.module.scss'
+import figmaColors from '@styles/tokens/modules/figma-colors.module.scss'
+import allTokens from '@styles/tokens/modules/all.module.scss'
 import texts from '@styles/texts/texts.module.scss'
 import layouts from '@styles/layouts.module.scss'
 import icons from '@styles/icons/icons.module.scss'
@@ -64,4 +69,14 @@ export type { ConsentConfiguration } from '@tps/consent.types'
 export type { DropdownOption } from '@tps/list.types'
 
 // Styles
-export { icons, layouts, texts, tokens }
+export {
+  icons,
+  layouts,
+  texts,
+  globals,
+  figmaColors,
+  figmaTypes,
+  penpotColors,
+  penpotTypes,
+  allTokens,
+}

@@ -40,10 +40,14 @@ export default defineConfig({
           './src/index.ts',
           './src/components/**/*.tsx',
           './src/styles/**/*.scss',
+          './src/styles/tokens/modules/**/*.scss',
           './src/types/**/*.ts',
         ])
           .filter(
-            (file) => !/\.test\.tsx|\.test\.ts|colors.module.scss$/.test(file)
+            (file) =>
+              (!/\.test\.tsx|\.test\.ts|colors\.module\.scss$/.test(file) &&
+                !/\/modules\/.*\.scss$/.test(file)) ||
+              /\/modules\/.*\.module\.scss$/.test(file)
           )
           .map((file) => {
             const entryName = path.relative(
