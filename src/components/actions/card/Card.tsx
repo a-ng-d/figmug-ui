@@ -31,6 +31,7 @@ const Card = (props: CardProps) => {
         if (e.key === 'Enter' || e.key === ' ') action(e)
         if (e.key === 'Escape') (e.target as HTMLElement).blur()
       }}
+      onMouseDown={action}
       tabIndex={0}
     >
       <div
