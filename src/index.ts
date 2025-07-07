@@ -3,7 +3,6 @@ import penpotColors from '@styles/tokens/modules/penpot-colors.module.scss'
 import globals from '@styles/tokens/modules/globals.module.scss'
 import figmaTypes from '@styles/tokens/modules/figma-types.module.scss'
 import figmaColors from '@styles/tokens/modules/figma-colors.module.scss'
-import allTokens from '@styles/tokens/modules/all.module.scss'
 import texts from '@styles/texts/texts.module.scss'
 import layouts from '@styles/layouts.module.scss'
 import icons from '@styles/icons/icons.module.scss'
@@ -78,5 +77,4 @@ export {
   figmaTypes,
   penpotColors,
   penpotTypes,
-  allTokens,
 }
