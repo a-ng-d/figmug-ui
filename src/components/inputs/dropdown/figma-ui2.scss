@@ -17,6 +17,10 @@
   --dropdown-caret-height: var(--size-xsmall);
   --dropdown-caret-color: var(--figma-color-icon-disabled);
 
+  --dropdown-status-gap: var(--size-xxsmall);
+  --dropdown-status-height: var(--size-medium);
+  --dropdown-status-margin: 0 0 0 var(--size-xxsmall);
+
   /* States */
   --dropdown-background-color-hover: var(--figma-color-bg);
   --dropdown-border-color-hover: var(--figma-color-border);

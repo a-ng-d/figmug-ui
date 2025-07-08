@@ -17,4 +17,12 @@
     border-radius: var(--simple-slider-radius);
     height: var(--simple-slider-height);
   }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    gap: var(--simple-slider-status-gap);
+    margin: var(--simple-slider-status-margin);
+    height: var(--simple-slider-status-height);
+  }
 }

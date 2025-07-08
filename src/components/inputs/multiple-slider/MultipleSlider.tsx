@@ -399,6 +399,49 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
   }
 
   // Templates
+  Status = () => {
+    const { warning, isBlocked, isNew } = this.props
+    const { isWarningVisible } = this.state
+
+    if (warning || isBlocked || isNew)
+      return (
+        <div className="multiple-slider__status">
+          {warning !== undefined && (
+            <div
+              style={{
+                position: 'relative',
+                pointerEvents: 'auto',
+              }}
+              onMouseEnter={() =>
+                this.setState({
+                  isWarningVisible: true,
+                })
+              }
+              onMouseLeave={() =>
+                this.setState({
+                  isWarningVisible: false,
+                })
+              }
+            >
+              <Icon
+                type="PICTO"
+                iconName="warning"
+              />
+              {isWarningVisible && (
+                <Tooltip
+                  pin={warning?.pin}
+                  type={warning?.type}
+                >
+                  {warning?.label}
+                </Tooltip>
+              )}
+            </div>
+          )}
+          {(isBlocked || isNew) && <Chip isSolo>{isNew ? 'New' : 'Pro'}</Chip>}
+        </div>
+      )
+  }
+
   Edit = () => {
     const { scale, range, colors, tips, isBlocked } = this.props
     const { isTooltipDisplay } = this.state
@@ -532,46 +575,13 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
 
   // Render
   render() {
-    const { type, warning, isBlocked, isNew } = this.props
-    const { isWarningVisible } = this.state
+    const { type } = this.props
 
     return (
       <div className="multiple-slider">
         {type === 'EDIT' && <this.Edit />}
         {type === 'FULLY_EDIT' && <this.FullyEdit />}
-        {warning !== undefined && (
-          <div
-            style={{
-              marginLeft: 'var(--size-xxsmall)',
-              position: 'relative',
-              pointerEvents: 'auto',
-            }}
-            onMouseEnter={() =>
-              this.setState({
-                isWarningVisible: true,
-              })
-            }
-            onMouseLeave={() =>
-              this.setState({
-                isWarningVisible: false,
-              })
-            }
-          >
-            <Icon
-              type="PICTO"
-              iconName="warning"
-            />
-            {isWarningVisible && (
-              <Tooltip
-                pin={warning.pin}
-                type={warning.type}
-              >
-                {warning.label}
-              </Tooltip>
-            )}
-          </div>
-        )}
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+        {this.Status()}
       </div>
     )
   }

@@ -9,6 +9,10 @@
 
   --select-text-color-disabled: var(--figma-color-text-disabled);
 
+  --select-status-gap: var(--size-xxsmall);
+  --select-status-margin: 0 0 0 var(--size-xxsmall);
+  --select-status-height: var(--size-medium);
+
   /* Checkbox */
   --select-checkbox-height: var(--size-medium);
   --select-checkbox-padding: 0 0 0 var(--size-xxsmall);

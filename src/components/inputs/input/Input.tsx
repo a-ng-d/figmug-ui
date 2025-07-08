@@ -359,6 +359,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
         </div>
       )
   }
+
   Color = () => {
     const { id, feature, helper, isBlocked, isDisabled } = this.props
     const { inputValue, isTooltipVisible } = this.state

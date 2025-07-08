@@ -13,9 +13,20 @@
   user-select: none;
 
   .checkbox__label,
-  .switch__label,
-  .radio__label {
+  .radio__label,
+  .switch__label {
     color: var(--select-text-color);
+  }
+
+  .checkbox__status,
+  .radio__status,
+  .switch__status {
+    display: flex;
+    align-items: center;
+    gap: var(--select-status-gap);
+    margin: var(--select-status-margin);
+    height: var(--select-status-height);
+    align-self: start;
   }
 }
 

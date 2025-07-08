@@ -50,21 +50,68 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
     }
   }
 
+  // Templates
+  Status = (type: 'checkbox' | 'radio' | 'switch') => {
+    const { warning, preview, isBlocked, isNew } = this.props
+    const { isWarningVisible } = this.state
+
+    if (warning || isBlocked || isNew)
+      return (
+        <div className={`${type}__status`}>
+          {warning !== undefined && (
+            <div
+              style={{
+                position: 'relative',
+                pointerEvents: 'auto',
+              }}
+              onMouseEnter={() =>
+                this.setState({
+                  isWarningVisible: true,
+                })
+              }
+              onMouseLeave={() =>
+                this.setState({
+                  isWarningVisible: false,
+                })
+              }
+            >
+              <Icon
+                type="PICTO"
+                iconName="warning"
+              />
+              {isWarningVisible && (
+                <Tooltip
+                  pin={warning?.pin}
+                  type={warning?.type}
+                >
+                  {warning?.label}
+                </Tooltip>
+              )}
+            </div>
+          )}
+          {(isBlocked || isNew) && (
+            <Chip
+              preview={preview}
+              isSolo
+            >
+              {isNew ? 'New' : 'Pro'}
+            </Chip>
+          )}
+        </div>
+      )
+  }
+
   CheckBox = () => {
     const {
       id,
       label,
       name,
-      preview,
-      warning,
       feature,
       isChecked,
       isDisabled,
       isBlocked,
-      isNew,
       action,
     } = this.props
-    const { isWarningVisible } = this.state
 
     return (
       <div
@@ -91,41 +138,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         >
           {label}
         </label>
-        {warning !== undefined && (
-          <div
-            style={{
-              marginLeft: 'var(--size-xxsmall)',
-              position: 'relative',
-              pointerEvents: 'auto',
-            }}
-            onMouseEnter={() =>
-              this.setState({
-                isWarningVisible: true,
-              })
-            }
-            onMouseLeave={() =>
-              this.setState({
-                isWarningVisible: false,
-              })
-            }
-          >
-            <Icon
-              type="PICTO"
-              iconName="warning"
-            />
-            {isWarningVisible && (
-              <Tooltip
-                pin={warning.pin}
-                type={warning.type}
-              >
-                {warning.label}
-              </Tooltip>
-            )}
-          </div>
-        )}
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
+        {this.Status('checkbox')}
       </div>
     )
   }
@@ -136,16 +149,12 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       label,
       name,
       value,
-      preview,
-      warning,
       feature,
       isChecked,
       isDisabled,
       isBlocked,
-      isNew,
       action,
     } = this.props
-    const { isWarningVisible } = this.state
 
     return (
       <div
@@ -173,41 +182,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         >
           {label}
         </label>
-        {warning !== undefined && (
-          <div
-            style={{
-              marginLeft: 'var(--size-xxsmall)',
-              position: 'relative',
-              pointerEvents: 'auto',
-            }}
-            onMouseEnter={() =>
-              this.setState({
-                isWarningVisible: true,
-              })
-            }
-            onMouseLeave={() =>
-              this.setState({
-                isWarningVisible: false,
-              })
-            }
-          >
-            <Icon
-              type="PICTO"
-              iconName="warning"
-            />
-            {isWarningVisible && (
-              <Tooltip
-                pin={warning.pin}
-                type={warning.type}
-              >
-                {warning.label}
-              </Tooltip>
-            )}
-          </div>
-        )}
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
+        {this.Status('radio')}
       </div>
     )
   }
@@ -217,16 +192,12 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       id,
       label,
       name,
-      preview,
-      warning,
       feature,
       isChecked,
       isDisabled,
       isBlocked,
-      isNew,
       action,
     } = this.props
-    const { isWarningVisible } = this.state
 
     return (
       <div
@@ -253,41 +224,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         >
           {label}
         </label>
-        {warning !== undefined && (
-          <div
-            style={{
-              marginLeft: 'var(--size-xxsmall)',
-              position: 'relative',
-              pointerEvents: 'auto',
-            }}
-            onMouseEnter={() =>
-              this.setState({
-                isWarningVisible: true,
-              })
-            }
-            onMouseLeave={() =>
-              this.setState({
-                isWarningVisible: false,
-              })
-            }
-          >
-            <Icon
-              type="PICTO"
-              iconName="warning"
-            />
-            {isWarningVisible && (
-              <Tooltip
-                pin={warning.pin}
-                type={warning.type}
-              >
-                {warning.label}
-              </Tooltip>
-            )}
-          </div>
-        )}
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
+        {this.Status('switch')}
       </div>
     )
   }

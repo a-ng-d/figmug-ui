@@ -139,6 +139,50 @@ export default class SimpleSlider extends React.Component<
     document.body.style.cursor = ''
   }
 
+  // Templates
+  Status = () => {
+    const { warning, isBlocked, isNew } = this.props
+    const { isWarningVisible } = this.state
+
+    if (warning || isBlocked || isNew)
+      return (
+        <div className="simple-slider__status">
+          {warning !== undefined && (
+            <div
+              style={{
+                position: 'relative',
+                pointerEvents: 'auto',
+              }}
+              onMouseEnter={() =>
+                this.setState({
+                  isWarningVisible: true,
+                })
+              }
+              onMouseLeave={() =>
+                this.setState({
+                  isWarningVisible: false,
+                })
+              }
+            >
+              <Icon
+                type="PICTO"
+                iconName="warning"
+              />
+              {isWarningVisible && (
+                <Tooltip
+                  pin={warning?.pin}
+                  type={warning?.type}
+                >
+                  {warning?.label}
+                </Tooltip>
+              )}
+            </div>
+          )}
+          {(isBlocked || isNew) && <Chip isSolo>{isNew ? 'New' : 'Pro'}</Chip>}
+        </div>
+      )
+  }
+
   // Render
   render() {
     const {
@@ -148,14 +192,12 @@ export default class SimpleSlider extends React.Component<
       min,
       max,
       colors,
-      warning,
       feature,
       isBlocked,
       isDisabled,
-      isNew,
       onChange,
     } = this.props
-    const { isTooltipDisplay, isWarningVisible } = this.state
+    const { isTooltipDisplay } = this.state
 
     return (
       <div
@@ -213,39 +255,7 @@ export default class SimpleSlider extends React.Component<
             onValidStopValue={(_stopId, e) => this.validHandler(e)}
           />
         </div>
-        {warning !== undefined && (
-          <div
-            style={{
-              marginLeft: 'var(--size-xxsmall)',
-              position: 'relative',
-              pointerEvents: 'auto',
-            }}
-            onMouseEnter={() =>
-              this.setState({
-                isWarningVisible: true,
-              })
-            }
-            onMouseLeave={() =>
-              this.setState({
-                isWarningVisible: false,
-              })
-            }
-          >
-            <Icon
-              type="PICTO"
-              iconName="warning"
-            />
-            {isWarningVisible && (
-              <Tooltip
-                pin={warning.pin}
-                type={warning.type}
-              >
-                {warning.label}
-              </Tooltip>
-            )}
-          </div>
-        )}
-        {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+        {this.Status()}
       </div>
     )
   }

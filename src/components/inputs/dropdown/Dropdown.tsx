@@ -36,10 +36,7 @@ export interface DropdownStates {
   listShouldScroll: boolean
 }
 
-export default class Dropdown extends React.Component<
-  DropdownProps,
-  DropdownStates
-> {
+export default class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   private selectMenuRef: React.RefObject<HTMLDivElement>
   private buttonRef: React.RefObject<HTMLButtonElement>
   private listRef: React.RefObject<HTMLDivElement>
@@ -186,6 +183,57 @@ export default class Dropdown extends React.Component<
     return label.join(', ')
   }
 
+  // Template
+  Status = () => {
+    const { warning, preview, isBlocked, isNew } = this.props
+    const { isWarningVisible } = this.state
+
+    if (warning || isBlocked || isNew)
+      return (
+        <div className="select-menu__status">
+          {warning !== undefined && (
+            <div
+              style={{
+                position: 'relative',
+                pointerEvents: 'auto',
+              }}
+              onMouseEnter={() =>
+                this.setState({
+                  isWarningVisible: true,
+                })
+              }
+              onMouseLeave={() =>
+                this.setState({
+                  isWarningVisible: false,
+                })
+              }
+            >
+              <Icon
+                type="PICTO"
+                iconName="warning"
+              />
+              {isWarningVisible && (
+                <Tooltip
+                  pin={warning?.pin}
+                  type={warning?.type}
+                >
+                  {warning?.label}
+                </Tooltip>
+              )}
+            </div>
+          )}
+          {(isBlocked || isNew) && (
+            <Chip
+              preview={preview}
+              isSolo
+            >
+              {isNew ? 'New' : 'Pro'}
+            </Chip>
+          )}
+        </div>
+      )
+  }
+
   // Render
   render() {
     const {
@@ -194,13 +242,10 @@ export default class Dropdown extends React.Component<
       options,
       selected,
       containerId,
-      preview,
-      warning,
-      isNew,
       isDisabled,
       isBlocked,
     } = this.props
-    const { isMenuOpen, isWarningVisible, listShouldScroll } = this.state
+    const { isMenuOpen, listShouldScroll } = this.state
 
     return (
       <div
@@ -257,41 +302,7 @@ export default class Dropdown extends React.Component<
             />
           </span>
         </button>
-        {warning !== undefined && (
-          <div
-            style={{
-              marginLeft: 'var(--size-xxsmall)',
-              position: 'relative',
-              pointerEvents: 'auto',
-            }}
-            onMouseEnter={() =>
-              this.setState({
-                isWarningVisible: true,
-              })
-            }
-            onMouseLeave={() =>
-              this.setState({
-                isWarningVisible: false,
-              })
-            }
-          >
-            <Icon
-              type="PICTO"
-              iconName="warning"
-            />
-            {isWarningVisible && (
-              <Tooltip
-                pin={warning.pin}
-                type={warning.type}
-              >
-                {warning.label}
-              </Tooltip>
-            )}
-          </div>
-        )}
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
+        {this.Status()}
         {(() => {
           const { pin } = this.props
 

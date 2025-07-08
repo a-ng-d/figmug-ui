@@ -25,4 +25,12 @@
       cursor: not-allowed;
     }
   }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    gap: var(--multiple-slider-status-gap);
+    margin: var(--multiple-slider-status-margin);
+    height: var(--multiple-slider-status-height);
+  }
 }
