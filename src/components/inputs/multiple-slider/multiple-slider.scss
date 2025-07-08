@@ -24,6 +24,11 @@
     &--not-allowed {
       cursor: not-allowed;
     }
+
+    &--blocked {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
   }
 
   &__status {

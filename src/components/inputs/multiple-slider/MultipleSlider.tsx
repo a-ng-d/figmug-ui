@@ -186,9 +186,8 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     )
     let offset = e.clientX - slider.offsetLeft - sliderPadding - shift
 
-    if (stop === range.firstChild && offset <= 0) offset = 0
-    else if (stop === range.lastChild && offset >= rangeWidth)
-      offset = rangeWidth
+    if (offset <= 0) offset = 0
+    else if (offset >= rangeWidth) offset = rangeWidth
 
     // Distribute stops horizontal spacing
     if (stop === range.firstChild && e.shiftKey)
@@ -448,7 +447,10 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
 
     return (
       <div
-        className="multiple-slider__range"
+        className={doClassnames([
+          'multiple-slider__range',
+          isBlocked && 'multiple-slider__range--blocked',
+        ])}
         style={{
           background: `linear-gradient(90deg, ${colors.min}, ${colors.max})`,
         }}
@@ -481,7 +483,9 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
               isBlocked={isBlocked}
               style={{
                 pointerEvents:
-                  this.state.activeKnobId && this.state.activeKnobId !== item[0]
+                  (this.state.activeKnobId &&
+                    this.state.activeKnobId !== item[0]) ||
+                  isBlocked
                     ? 'none'
                     : 'auto',
               }}
@@ -512,9 +516,11 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
         className={doClassnames([
           'multiple-slider__range',
           stops.list.length < (stops.max ?? Infinity) &&
+            !isBlocked &&
             'multiple-slider__range--add',
           stops.list.length === (stops.max ?? Infinity) &&
             'multiple-slider__range--not-allowed',
+          isBlocked && 'multiple-slider__range--blocked',
         ])}
         style={{
           background: `linear-gradient(90deg, ${colors.min}, ${colors.max})`,
@@ -547,7 +553,9 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
               isBlocked={isBlocked}
               style={{
                 pointerEvents:
-                  this.state.activeKnobId && this.state.activeKnobId !== item[0]
+                  (this.state.activeKnobId &&
+                    this.state.activeKnobId !== item[0]) ||
+                  isBlocked
                     ? 'none'
                     : 'auto',
               }}
