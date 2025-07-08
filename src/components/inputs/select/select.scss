@@ -12,15 +12,11 @@
   min-width: fit-content;
   user-select: none;
 
-  .checkbox__label,
-  .radio__label,
-  .switch__label {
+  &__label {
     color: var(--select-text-color);
   }
 
-  .checkbox__status,
-  .radio__status,
-  .switch__status {
+  &__status {
     display: flex;
     align-items: center;
     gap: var(--select-status-gap);
