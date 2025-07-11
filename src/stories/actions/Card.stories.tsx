@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
 import React from 'react'
+import texts from '@styles/texts/texts.module.scss'
 import Card from '@components/actions/card/Card'
 import Button from '@components/actions/button/Button'
 
@@ -24,7 +25,9 @@ export const Default: Story = {
     src: demoImage,
     title: 'Card title',
     subtitle: 'Subtitle',
-    richText: <span>This is an example text for the card</span>,
+    richText: (
+      <span className={texts.type}>This is an example text for the card</span>
+    ),
     shouldFill: false,
     action: fn(),
     actions: (
@@ -63,7 +66,11 @@ export const WithoutActions: Story = {
     src: demoImage,
     title: 'Card without actions',
     subtitle: 'Informative subtitle',
-    richText: <span>This card does not display action buttons on hover</span>,
+    richText: (
+      <span className={texts.type}>
+        This card does not display action buttons on hover
+      </span>
+    ),
     shouldFill: false,
     action: fn(),
     actions: null,
@@ -74,7 +81,11 @@ export const WithoutTitle: Story = {
   args: {
     src: demoImage,
     subtitle: 'Card without main title',
-    richText: <span>This card has no title, only a subtitle and text</span>,
+    richText: (
+      <span className={texts.type}>
+        This card has no title, only a subtitle and text
+      </span>
+    ),
     shouldFill: false,
     action: fn(),
     actions: (
@@ -100,7 +111,7 @@ export const Filled: Story = {
     title: 'Card in fill mode',
     subtitle: 'With shouldFill set to true',
     richText: (
-      <span>
+      <span className={texts.type}>
         This card uses the shouldFill option to occupy all available space
       </span>
     ),
