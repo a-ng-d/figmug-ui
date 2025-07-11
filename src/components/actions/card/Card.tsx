@@ -7,7 +7,8 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 interface CardProps {
   src: string
   title?: string
-  label: string
+  subtitle?: string
+  text: string
   children: React.ReactNode
   shouldFill?: boolean
   action: (
@@ -17,13 +18,20 @@ interface CardProps {
 
 const Card = (props: CardProps) => {
   const [isActionsVisible, setActionsVisible] = useState<boolean>(false)
-  const { src, title, label, children, shouldFill = false, action } = props
+  const {
+    src,
+    title,
+    subtitle,
+    text,
+    children,
+    shouldFill = false,
+    action,
+  } = props
 
   return (
     <div
       className={doClassnames(['card', shouldFill && 'card--fill'])}
       role="article"
-      aria-label={label}
       onMouseEnter={() => setActionsVisible(true)}
       onMouseLeave={() => setActionsVisible(false)}
       onFocus={() => setActionsVisible(true)}
@@ -67,12 +75,20 @@ const Card = (props: CardProps) => {
             {title}
           </span>
         )}
+        {subtitle && (
+          <span
+            className={doClassnames([texts.type, texts['text--large']])}
+            role="note"
+          >
+            {subtitle}
+          </span>
+        )}
         <span
           className={texts.type}
           role="textbox"
-          aria-label={label}
+          aria-label={text}
         >
-          {label}
+          {text}
         </span>
       </div>
     </div>
