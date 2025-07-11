@@ -8,8 +8,8 @@ interface CardProps {
   src: string
   title?: string
   subtitle?: string
-  text: string
-  children: React.ReactNode
+  richText: React.ReactNode
+  actions: React.ReactNode
   shouldFill?: boolean
   action: (
     event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
@@ -22,8 +22,8 @@ const Card = (props: CardProps) => {
     src,
     title,
     subtitle,
-    text,
-    children,
+    richText,
+    actions,
     shouldFill = false,
     action,
   } = props
@@ -48,13 +48,13 @@ const Card = (props: CardProps) => {
         role="group"
       >
         <Thumbnail src={src} />
-        {children !== undefined && (
+        {actions !== undefined && (
           <div
             className={'card__actions'}
             role="group"
             aria-hidden={!isActionsVisible}
           >
-            {isActionsVisible && children}
+            {isActionsVisible && actions}
           </div>
         )}
       </div>
@@ -83,13 +83,7 @@ const Card = (props: CardProps) => {
             {subtitle}
           </span>
         )}
-        <span
-          className={texts.type}
-          role="textbox"
-          aria-label={text}
-        >
-          {text}
-        </span>
+        {richText}
       </div>
     </div>
   )

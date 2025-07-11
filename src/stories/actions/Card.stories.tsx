@@ -24,10 +24,10 @@ export const Default: Story = {
     src: demoImage,
     title: 'Card title',
     subtitle: 'Subtitle',
-    text: 'This is an example text for the card',
+    richText: <span>This is an example text for the card</span>,
     shouldFill: false,
     action: fn(),
-    children: (
+    actions: (
       <>
         <Button
           type="icon"
@@ -63,10 +63,10 @@ export const WithoutActions: Story = {
     src: demoImage,
     title: 'Card without actions',
     subtitle: 'Informative subtitle',
-    text: 'This card does not display action buttons on hover',
+    richText: <span>This card does not display action buttons on hover</span>,
     shouldFill: false,
     action: fn(),
-    children: null,
+    actions: null,
   },
 }
 
@@ -74,10 +74,10 @@ export const WithoutTitle: Story = {
   args: {
     src: demoImage,
     subtitle: 'Card without main title',
-    text: 'This card has no title, only a subtitle and text',
+    richText: <span>This card has no title, only a subtitle and text</span>,
     shouldFill: false,
     action: fn(),
-    children: (
+    actions: (
       <Button
         type="icon"
         icon="settings"
@@ -99,10 +99,14 @@ export const Filled: Story = {
     src: demoImage,
     title: 'Card in fill mode',
     subtitle: 'With shouldFill set to true',
-    text: 'This card uses the shouldFill option to occupy all available space',
+    richText: (
+      <span>
+        This card uses the shouldFill option to occupy all available space
+      </span>
+    ),
     shouldFill: true,
     action: fn(),
-    children: (
+    actions: (
       <>
         <Button
           type="icon"
