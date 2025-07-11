@@ -164,7 +164,8 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
           }
           isLoading={state === 'LOADING'}
           isDisabled={state === 'DISABLED' || isBlocked}
-          isNew={isNew}
+          isBlocked={activeOptions[0].isBlocked}
+          isNew={activeOptions[0].isNew}
           action={
             !(state === 'DISABLED' || isBlocked)
               ? (e: React.MouseEvent<Element> | React.KeyboardEvent<Element>) =>
