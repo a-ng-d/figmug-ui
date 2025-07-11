@@ -57,4 +57,10 @@
     inset: 0 0 0 0;
     padding: var(--card-actions-padding);
   }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-content-gap);
+  }
 }

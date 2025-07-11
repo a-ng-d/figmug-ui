@@ -6,6 +6,7 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 
 interface CardProps {
   src: string
+  title?: string
   label: string
   children: React.ReactNode
   shouldFill?: boolean
@@ -16,7 +17,7 @@ interface CardProps {
 
 const Card = (props: CardProps) => {
   const [isActionsVisible, setActionsVisible] = useState<boolean>(false)
-  const { src, label, children, shouldFill = false, action } = props
+  const { src, title, label, children, shouldFill = false, action } = props
 
   return (
     <div
@@ -35,7 +36,7 @@ const Card = (props: CardProps) => {
       tabIndex={0}
     >
       <div
-        className={'card__asset'}
+        className="card__asset"
         role="group"
       >
         <Thumbnail src={src} />
@@ -49,13 +50,31 @@ const Card = (props: CardProps) => {
           </div>
         )}
       </div>
-      <span
-        className={texts.type}
-        role="heading"
-        aria-level={2}
+      <div
+        className="card__text"
+        role="contentinfo"
       >
-        {label}
-      </span>
+        {title && (
+          <span
+            className={doClassnames([
+              texts.type,
+              texts['text--xlarge'],
+              texts['text--bold'],
+            ])}
+            role="heading"
+            aria-level={3}
+          >
+            {title}
+          </span>
+        )}
+        <span
+          className={texts.type}
+          role="textbox"
+          aria-label={label}
+        >
+          {label}
+        </span>
+      </div>
     </div>
   )
 }
