@@ -66,8 +66,8 @@ const Card = (props: CardProps) => {
           <span
             className={doClassnames([
               texts.type,
-              texts['text--xlarge'],
-              texts['text--bold'],
+              texts['type--xlarge'],
+              texts['type--bold'],
             ])}
             role="heading"
             aria-level={3}
@@ -77,7 +77,7 @@ const Card = (props: CardProps) => {
         )}
         {subtitle && (
           <span
-            className={doClassnames([texts.type, texts['text--large']])}
+            className={doClassnames([texts.type, texts['type--large']])}
             role="note"
           >
             {subtitle}
