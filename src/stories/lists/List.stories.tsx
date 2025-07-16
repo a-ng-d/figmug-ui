@@ -101,7 +101,7 @@ export const FourOptionsListInGroups: Story = {
       {
         label: 'Group 1',
         value: 'GROUP_1',
-        type: 'OPTION',
+        type: 'GROUP',
         children: [
           {
             label: 'Option 1',
@@ -132,7 +132,7 @@ export const FourOptionsListInGroups: Story = {
       {
         label: 'Group 2',
         value: 'GROUP_2',
-        type: 'OPTION',
+        type: 'GROUP',
         children: [
           {
             label: 'Option 1',
