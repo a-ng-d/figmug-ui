@@ -127,15 +127,20 @@ export default class ActionsList extends React.Component<
               isNew = option.isNew !== undefined ? option.isNew : false,
               children = option.children !== undefined ? option.children : []
 
-            if (isActive && children.length > 0)
+            const activeChildren = children.filter(
+              (child) => child.isActive !== false
+            )
+
+            if (isActive && activeChildren.length > 0)
               return this.MenuGroup(
                 { ...option, isActive, isBlocked, isNew, children },
                 index
               )
-            return this.MenuSubOption(
-              { ...option, isActive, isBlocked, isNew, children },
-              index
-            )
+            else if (isActive && activeChildren.length === 0)
+              return this.MenuSubOption(
+                { ...option, isActive, isBlocked, isNew, children },
+                index
+              )
           })}
         </ul>
       </div>
@@ -403,16 +408,33 @@ export default class ActionsList extends React.Component<
               return this.MenuSeparator(index)
             if (isActive && option.type === 'TITLE')
               return this.MenuTitle(option, index)
-            if (isActive && option.type === 'OPTION' && children)
-              return children.length > 0
-                ? this.MenuGroup(
-                    { ...option, isActive, isBlocked, isNew, children },
-                    index
-                  )
-                : this.MenuOption(
-                    { ...option, isActive, isBlocked, isNew, children },
-                    index
-                  )
+            if (isActive && option.type === 'OPTION')
+              return this.MenuOption(
+                { ...option, isActive, isBlocked, isNew, children },
+                index
+              )
+            if (isActive && option.type === 'GROUP' && children) {
+              const activeChildren = children.filter(
+                (child) => child.isActive !== false
+              )
+
+              if (activeChildren.length > 1)
+                return this.MenuGroup(
+                  { ...option, isActive, isBlocked, isNew, children },
+                  index
+                )
+              else if (activeChildren.length === 1)
+                return this.MenuOption(
+                  {
+                    ...activeChildren[0],
+                    isActive: activeChildren[0].isActive,
+                    isBlocked: activeChildren[0].isBlocked,
+                    isNew: activeChildren[0].isNew,
+                  },
+                  index
+                )
+              else return null
+            }
             return null
           })}
         </ul>
