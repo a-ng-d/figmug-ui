@@ -153,6 +153,7 @@ export const Pictogram: Story = {
       <>
         {icons.map((icon) => (
           <div
+            key={icon}
             style={{
               display: 'flex',
               flexDirection: 'column',
