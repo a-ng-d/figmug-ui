@@ -3,8 +3,13 @@ import React from 'react'
 
 import '@styles/tokens/modules/figma-colors.module.scss'
 import '@styles/tokens/modules/figma-types.module.scss'
+
 import '@styles/tokens/modules/penpot-colors.module.scss'
 import '@styles/tokens/modules/penpot-types.module.scss'
+
+import '@styles/tokens/modules/sketch-colors.module.scss'
+import '@styles/tokens/modules/sketch-types.module.scss'
+
 import '@styles/tokens/modules/globals.module.scss'
 
 const withTheme: Decorator = (Story, context) => {
@@ -24,6 +29,8 @@ const withTheme: Decorator = (Story, context) => {
         figjam: '#ffffff',
         'penpot-light': '#ffffff',
         'penpot-dark': '#000000',
+        'sketch-light': '#ffffff',
+        'sketch-dark': '#202022',
       }
 
       const bgValue = backgroundMap[modes]
@@ -46,7 +53,7 @@ const preview: Preview = {
       toolbar: {
         title: 'UI Theme',
         icon: 'paintbrush',
-        items: ['figma-ui2', 'figma-ui3', 'penpot'],
+        items: ['figma-ui2', 'figma-ui3', 'penpot', 'sketch'],
         dynamicTitle: true,
       },
     },
@@ -63,6 +70,8 @@ const preview: Preview = {
           'figjam',
           'penpot-light',
           'penpot-dark',
+          'sketch-light',
+          'sketch-dark',
         ],
         dynamicTitle: true,
       },
