@@ -49,8 +49,8 @@
   --icon-button-text-color: var(--color-background-secondary);
 
   --icon-button-icon-color: var(--color-background-secondary);
-  --icon-button-icon-width: var(--size-xsmall);
-  --icon-button-icon-height: var(--size-xsmall);
+  --icon-button-icon-width: var(--size-small);
+  --icon-button-icon-height: var(--size-small);
 
   --icon-button-notification-width: var(--size-xxsmall);
   --icon-button-notification-height: var(--size-xxsmall);
@@ -153,7 +153,7 @@
 
   --button-icon-color-secondary: var(--color-foreground-primary);
   --button-icon-color-secondary-hover: var(--color-accent-primary);
-  --button-icon-color-secondary-pressed: var(---color-accent-primary);
+  --button-icon-color-secondary-pressed: var(--color-accent-primary);
   --button-icon-color-secondary-focus: var(--color-foreground-secondary);
   --button-icon-color-secondary-disabled: var(--color-foreground-disabled);
 
