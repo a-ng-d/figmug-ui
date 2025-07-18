@@ -1,0 +1,6 @@
+:root[data-theme='sketch'] {
+  --menu-top-right: var(--size-neg-xxsmall);
+  --menu-top-left: var(--size-neg-xxsmall);
+  --menu-bottom-right: calc(var(--size-small) + var(--size-xsmall));
+  --menu-bottom-left: calc(var(--size-small) + var(--size-xsmall));
+}

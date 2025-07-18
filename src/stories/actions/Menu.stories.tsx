@@ -58,7 +58,7 @@ export const DropdownIcon: Story = {
           {
             label: 'Option 2',
             value: 'OPTION_2',
-            type: 'OPTION',
+            type: 'GROUP',
             children: [
               {
                 label: 'Option 2.1',
