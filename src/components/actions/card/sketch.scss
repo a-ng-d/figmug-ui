@@ -1,6 +1,6 @@
-:root[data-theme='penpot'] {
+:root[data-theme='sketch'] {
   --card-gap: var(--size-xxsmall);
-  --card-radius: calc(var(--border-radius-med) + var(--size-xxxsmall));
+  --card-radius: calc(var(--border-radius-xlarge) + var(--size-xxsmall));
   --card-padding: var(--size-xxsmall);
   --card-width: 200px;
   --card-ratio: 2 / 1;
@@ -10,13 +10,13 @@
 
   --card-content-gap: var(--size-xxxsmall);
 
-  --card-background-color: var(--color-background-primary);
-  --card-background-color-hover: var(--color-background-secondary);
-  --card-background-color-focus: var(--color-background-secondary);
+  --card-background-color: var(--sketch-color-background-primary);
+  --card-background-color-hover: var(--sketch-color-background-secondary);
+  --card-background-color-focus: var(--sketch-color-background-secondary);
 
   --card-border-color: transparent;
   --card-border-color-hover: transparent;
-  --card-border-color-focus: var(--color-accent-primary);
+  --card-border-color-focus: var(--sketch-color-accent-primary);
   --card-border-width: 0;
   --card-border-width-hover: 0;
   --card-border-width-focus: var(--size-unit);

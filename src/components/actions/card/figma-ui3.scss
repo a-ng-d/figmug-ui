@@ -1,6 +1,6 @@
 :root[data-theme='figma-ui3'] {
   --card-gap: var(--size-xxsmall);
-  --card-radius: var(--border-radius-med);
+  --card-radius: calc(var(--border-radius-med) + var(--size-xxxsmall));
   --card-padding: var(--size-xxsmall);
   --card-width: 200px;
   --card-ratio: 2 / 1;
@@ -16,7 +16,7 @@
 
   --card-border-color: transparent;
   --card-border-color-hover: transparent;
-  --card-border-color-focus: var(--figma-color-bg-selected);
+  --card-border-color-focus: var(--figma-color-border-selected);
   --card-border-width: 0;
   --card-border-width-hover: 0;
   --card-border-width-focus: var(--size-unit);
