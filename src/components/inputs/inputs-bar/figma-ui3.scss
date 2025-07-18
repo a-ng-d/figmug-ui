@@ -1,5 +1,6 @@
 :root[data-theme='figma-ui3'] {
   --inputs-bar-gap: var(--size-xxsmall);
+  --inputs-bar-gap-inner: 0;
   --inputs-bar-width: var(--size-xlarge);
   --inputs-bar-padding: 0 var(--size-unit);
   --inputs-bar-margin: 0 var(--size-neg-unit);
