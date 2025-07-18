@@ -1,8 +1,5 @@
-:root[data-theme='penpot'] {
-  --color-chip-radius: var(--border-radius-small);
-  --color-chip-border-color: rgba(0, 0, 0, 0.1);
-  --color-chip-border-width: var(--size-unit);
-  --color-chip-border-offset: var(--size-neg-unit);
-
-  --color-chip-radius-full: 99px;
+:root[data-theme='sketch'] {
+  --avatar-width: var(--size-small);
+  --avatar-height: var(--size-small);
+  --avatar-radius: var(--size-small);
 }
