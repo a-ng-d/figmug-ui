@@ -152,6 +152,7 @@ export default class ActionsList extends React.Component<
       <li
         role="menuitem"
         key={`menu-option-${index}`}
+        data-role={'TITLE'}
         className={doClassnames([
           'select-menu__item',
           'select-menu__item--disabled',
@@ -173,7 +174,12 @@ export default class ActionsList extends React.Component<
   }
 
   MenuSeparator = (index: number) => {
-    return <hr key={`menu-option-${index}`} />
+    return (
+      <hr
+        key={`menu-option-${index}`}
+        data-role={'SEPARATOR'}
+      />
+    )
   }
 
   MenuOption = (option: DropdownOption, index: number) => {
@@ -380,7 +386,7 @@ export default class ActionsList extends React.Component<
           >
             <Icon
               type="PICTO"
-              iconName="upward"
+              iconName="chevron-up"
             />
           </div>
         )}
@@ -448,7 +454,7 @@ export default class ActionsList extends React.Component<
             >
               <Icon
                 type="PICTO"
-                iconName="downward"
+                iconName="chevron-down"
               />
             </div>
           )}

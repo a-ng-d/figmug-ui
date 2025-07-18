@@ -1,6 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
+@import 'sketch';
 
 .select-menu {
   position: relative;
@@ -78,6 +79,10 @@
     height: var(--actions-list-item-height);
     user-select: none;
     --text-color-primary: var(--actions-list-item-text-color);
+
+    &[data-role='TITLE'] {
+      text-transform: var(--actions-list-title-text-transform);
+    }
 
     &:before {
       position: absolute;
