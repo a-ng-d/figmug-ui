@@ -15,8 +15,11 @@
   --knob-label-arrow-stroke-inset: auto auto calc(var(--size-xxxsmall) * -2)
     calc(50% - var(--size-xxxsmall));
   --knob-label-arrow-stroke-width: var(--size-xxxsmall);
+  --knob-label-arrow-stroke-border-color: var(--figma-color-border-disabled-strong);
+
   --knob-label-arrow-fill-inset: auto auto -6px calc(50% - 3px);
   --knob-label-arrow-fill-width: 3px;
+  --knob-label-arrow-fill-border-color: var(--figma-color-bg);
 
   --knob-tooltip-top: var(--size-neg-xsmall);
   --knob-tooltip-padding: var(--size-xxxsmall);
@@ -49,11 +52,17 @@
   --knob-label-border-color-focus: var(--figma-color-border-selected);
   --knob-label-border-width-focus: var(--size-xunit);
   --knob-label-background-color-focus: var(--figma-color-bg-selected);
+
   --knob-label-arrow-stroke-inset-focus: auto auto var(--size-neg-xmsmall)
     calc(50% - 6px);
   --knob-label-arrow-stroke-width-focus: 6px;
+  --knob-label-arrow-stroke-border-color-focus: var(--figma-color-border-selected);
+  --knob-label-arrow-fill-border-color-focus: var(--figma-color-bg-selected);
 
   --knob-label-background-color-disabled: var(--figma-color-bg-disabled);
   --knob-label-border-color-disabled: var(--figma-color-border-disabled);
   --knob-label-text-color-disabled: var(--figma-color-text-ondisabled);
+
+  --knob-label-arrow-stroke-border-color-disabled: var(--figma-color-border-disabled);
+  --knob-label-arrow-fill-border-color-disabled: var(--figma-color-bg-disabled);
 }

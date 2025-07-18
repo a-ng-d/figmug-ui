@@ -1,0 +1,12 @@
+:root[data-theme='sketch'] {
+  --simple-slider-margin: var(--size-small) 0 0;
+  --simple-slider-padding: 0 var(--size-medium);
+  --simple-slider-height: var(--size-xmsmall);
+  --simple-slider-radius: var(--border-radius-large);
+  --simple-slider-border-color: var(--sketch-color-border-primary);
+  --simple-slider-border-width: var(--size-unit);
+
+  --simple-slider-status-gap: var(--size-xxsmall);
+  --simple-slider-status-margin: 0 0 0 var(--size-xxsmall);
+  --simple-slider-status-height: var(--size-xmsmall);
+}

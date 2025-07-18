@@ -1,6 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
+@import 'sketch';
 
 .knob {
   display: flex;
@@ -28,6 +29,8 @@
     --knob-label-border-width: var(--knob-label-border-width-focus);
     --knob-label-arrow-stroke-inset: var(--knob-label-arrow-stroke-inset-focus);
     --knob-label-arrow-stroke-width: var(--knob-label-arrow-stroke-width-focus);
+    --knob-label-arrow-stroke-border-color: var(--knob-label-arrow-stroke-border-color-focus);
+    --knob-label-arrow-fill-border-color: var(--knob-label-arrow-fill-border-color-focus);
   }
 
   &:focus,
@@ -42,6 +45,8 @@
     --knob-label-background-color: var(--knob-label-background-color-disabled);
     --knob-label-border-color: var(--knob-label-border-color-disabled);
     --knob-label-text-color: var(--knob-label-text-color-disabled);
+    --knob-label-arrow-stroke-border-color: var(--knob-label-arrow-stroke-border-color-disabled);
+    --knob-label-arrow-fill-border-color: var(--knob-label-arrow-fill-border-color-disabled);
   }
 }
 
@@ -67,7 +72,7 @@
     inset: var(--knob-label-arrow-stroke-inset);
     border-width: var(--knob-label-arrow-stroke-width);
     border-style: solid;
-    border-top-color: var(--knob-label-border-color);
+    border-top-color: var(--knob-label-arrow-stroke-border-color);
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
@@ -81,7 +86,7 @@
     inset: var(--knob-label-arrow-fill-inset);
     border-width: var(--knob-label-arrow-fill-width);
     border-style: solid;
-    border-top-color: var(--knob-label-background-color);
+    border-top-color: var(--knob-label-arrow-fill-border-color);
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;

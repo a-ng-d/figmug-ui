@@ -15,8 +15,11 @@
   --knob-label-arrow-stroke-inset: auto auto calc(var(--size-xxxsmall) * -2)
     calc(50% - var(--size-xxxsmall));
   --knob-label-arrow-stroke-width: var(--size-xxxsmall);
+  --knob-label-arrow-stroke-border-color: var(--color-background-quaternary);
+
   --knob-label-arrow-fill-inset: auto auto -6px calc(50% - 3px);
   --knob-label-arrow-fill-width: 3px;
+  --knob-label-arrow-fill-border-color: var(--color-background-primary);
 
   --knob-tooltip-top: var(--size-neg-xxsmall);
   --knob-tooltip-padding: var(--size-xunit) var(--size-xxxsmall);
@@ -49,11 +52,17 @@
   --knob-label-border-color-focus: var(--color-accent-primary);
   --knob-label-border-width-focus: var(--size-unit);
   --knob-label-background-color-focus: var(--color-accent-primary-muted);
+
   --knob-label-arrow-stroke-inset-focus: auto auto
     calc(var(--size-xxxsmall) * -2) calc(50% - var(--size-xxxsmall));
   --knob-label-arrow-stroke-width-focus: var(--size-xxxsmall);
+  --knob-label-arrow-stroke-border-color-focus: var(--color-accent-primary);
+  --knob-label-arrow-fill-border-color-focus: var(--color-accent-primary-muted);
 
   --knob-label-background-color-disabled: var(--color-background-quaternary);
   --knob-label-border-color-disabled: var(--color-background-quaternary);
   --knob-label-text-color-disabled: var(--color-foreground-secondary);
+
+  --knob-label-arrow-stroke-border-color-disabled: var(--color-background-quaternary);
+  --knob-label-arrow-fill-border-color-disabled: var(--color-background-quaternary);
 }
