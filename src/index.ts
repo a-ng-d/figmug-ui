@@ -61,6 +61,7 @@ export { default as DraggableWindow } from '@components/slots/draggable-window/D
 export { default as Chip } from '@components/tags/chip/Chip'
 export { default as Tooltip } from '@components/tags/tooltip/Tooltip'
 export { default as ColorChip } from '@components/tags/color-chip/ColorChip'
+export { default as IconChip } from '@components/tags/icon-chip/IconChip'
 
 // Types
 export type { IconList } from '@tps/icon.types'
