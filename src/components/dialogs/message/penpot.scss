@@ -1,8 +1,8 @@
 :root[data-theme='penpot'] {
   --message-padding: 0 calc(var(--size-xsmall) + var(--size-xxxsmall));
   --message-gap: var(--size-xxsmall);
-  --message-text-color: var(--color-foreground-primary);
-  --message-icon-color: var(--color-foreground-primary);
+  --message-text-color: var(--penpot-color-foreground-primary);
+  --message-icon-color: var(--penpot-color-foreground-primary);
 
   --message-message-padding: var(--size-xxxsmall) 0;
 
@@ -10,9 +10,9 @@
   --message-ticker-max-width: 640px;
   --message-ticker-gap: var(--size-medium);
   --message-ticker-padding: 0 var(--size-xsmall);
-  --message-ticker-mask-background-color: var(--color-background-primary);
+  --message-ticker-mask-background-color: var(--penpot-color-background-primary);
   --message-ticker-mask-width: var(--size-xsmall);
 
-  --message-text-color-disabled: var(--color-foreground-disabled);
-  --message-icon-color-disabled: var(--color-foreground-disabled);
+  --message-text-color-disabled: var(--penpot-color-foreground-disabled);
+  --message-icon-color-disabled: var(--penpot-color-foreground-disabled);
 }

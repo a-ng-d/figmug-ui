@@ -2,28 +2,28 @@
   --tabs-gap: 0;
   --tabs-radius: var(--border-radius-xlarge);
   --tabs-padding: var(--size-xunit);
-  --tabs-background-color: var(--color-background-secondary);
+  --tabs-background-color: var(--penpot-color-background-secondary);
 
   --tabs-gap-vertical: 0;
   --tabs-radius-vertical: 0;
   --tabs-padding-vertical: 0;
-  --tabs-background-color-vertical: var(--color-background-primary);
+  --tabs-background-color-vertical: var(--penpot-color-background-primary);
 
   --tabs-tab-gap: var(--size-xxsmall);
   --tabs-tab-padding: 0 var(--size-xmsmall);
   --tabs-tab-radius: var(--border-radius-med);
   --tabs-tab-height: var(--size-medium);
-  --tabs-tab-background-color: var(--color-background-secondary);
+  --tabs-tab-background-color: var(--penpot-color-background-secondary);
   --tabs-tab-border-color: transparent;
   --tabs-tab-border-width: 0;
   --tabs-tab-border-offset: 0;
   --tabs-tab-text-size: var(--font-size-small);
-  --tabs-tab-text-color: var(--color-foreground-secondary);
+  --tabs-tab-text-color: var(--penpot-color-foreground-secondary);
   --tabs-tab-text-weight: var(--font-weight-medium);
   --tabs-tab-text-transform: uppercase;
   --tabs-tab-icon-width: var(--size-xsmall);
   --tabs-tab-icon-height: var(--size-xsmall);
-  --tabs-tab-icon-color: var(--color-foreground-secondary);
+  --tabs-tab-icon-color: var(--penpot-color-foreground-secondary);
 
   --tabs-tab-padding-with-icon: 0 var(--size-xmsmall);
 
@@ -31,14 +31,14 @@
   --tabs-tab-padding-alternative: 0 var(--size-xmsmall);
   --tabs-tab-radius-alternative: 0;
   --tabs-tab-height-alternative: var(--size-medium);
-  --tabs-tab-background-color-alternative: var(--color-background-primary);
+  --tabs-tab-background-color-alternative: var(--penpot-color-background-primary);
   --tabs-tab-text-size-alternative: var(--font-size-small);
-  --tabs-tab-text-color-alternative: var(--color-foreground-secondary);
+  --tabs-tab-text-color-alternative: var(--penpot-color-foreground-secondary);
   --tabs-tab-text-weight-alternative: var(--font-weight-medium);
   --tabs-tab-text-transform-alternative: uppercase;
   --tabs-tab-icon-width-alternative: var(--size-xsmall);
   --tabs-tab-icon-height-alternative: var(--size-xsmall);
-  --tabs-tab-icon-color-alternative: var(--color-foreground-secondary);
+  --tabs-tab-icon-color-alternative: var(--penpot-color-foreground-secondary);
 
   --tabs-tab-padding-with-icon-alternative: 0 var(--size-xmsmall);
 
@@ -47,73 +47,73 @@
   --tabs-tab-notification-width: var(--size-xxsmall);
   --tabs-tab-notification-height: var(--size-xxsmall);
   --tabs-tab-notification-radius: var(--border-radius-full);
-  --tabs-tab-notification-background-color: var(--color-accent-primary);
-  --tabs-tab-notification-border-color: var(--color-background-secondary);
+  --tabs-tab-notification-background-color: var(--penpot-color-accent-primary);
+  --tabs-tab-notification-border-color: var(--penpot-color-background-secondary);
   --tabs-tab-notification-border-width: var(--size-xunit);
   --tabs-tab-notification-border-offset: 0;
 
-  --tabs-tab-background-color-hover: var(--color-background-secondary);
+  --tabs-tab-background-color-hover: var(--penpot-color-background-secondary);
   --tabs-tab-border-color-hover: transparent;
   --tabs-tab-border-width-hover: 0;
   --tabs-tab-border-offset-hover: 0;
-  --tabs-tab-text-color-hover: var(--color-foreground-primary);
+  --tabs-tab-text-color-hover: var(--penpot-color-foreground-primary);
   --tabs-tab-text-weight-hover: var(--font-weight-medium);
-  --tabs-tab-icon-color-hover: var(--color-foreground-primary);
-  --tabs-tab-notification-border-color-hover: var(--color-background-secondary);
+  --tabs-tab-icon-color-hover: var(--penpot-color-foreground-primary);
+  --tabs-tab-notification-border-color-hover: var(--penpot-color-background-secondary);
 
-  --tabs-tab-background-color-focus: var(--color-background-tertiary);
-  --tabs-tab-border-color-focus: var(--color-accent-primary);
+  --tabs-tab-background-color-focus: var(--penpot-color-background-tertiary);
+  --tabs-tab-border-color-focus: var(--penpot-color-accent-primary);
   --tabs-tab-border-width-focus: var(--size-unit);
   --tabs-tab-border-offset-focus: var(--size-neg-unit);
-  --tabs-tab-text-color-focus: var(--color-foreground-primary);
+  --tabs-tab-text-color-focus: var(--penpot-color-foreground-primary);
   --tabs-tab-text-weight-focus: var(--font-weight-medium);
-  --tabs-tab-icon-color-focus: var(--color-foreground-primary);
-  --tabs-tab-notification-border-color-focus: var(--color-background-secondary);
+  --tabs-tab-icon-color-focus: var(--penpot-color-foreground-primary);
+  --tabs-tab-notification-border-color-focus: var(--penpot-color-background-secondary);
 
   --tabs-tab-background-color-alternative-hover: var(
-    --color-background-secondary
+    --penpot-color-background-secondary
   );
   --tabs-tab-border-color-alternative-hover: transparent;
   --tabs-tab-border-width-alternative-hover: 0;
   --tabs-tab-border-offset-alternative-hover: 0;
-  --tabs-tab-text-color-alternative-hover: var(--color-foreground-primary);
+  --tabs-tab-text-color-alternative-hover: var(--penpot-color-foreground-primary);
   --tabs-tab-text-weight-alternative-hover: var(--font-weight-medium);
-  --tabs-tab-icon-color-alternative-hover: var(--color-foreground-primary);
+  --tabs-tab-icon-color-alternative-hover: var(--penpot-color-foreground-primary);
   --tabs-tab-notification-border-color-alternative-hover: var(
-    --color-background-secondary
+    --penpot-color-background-secondary
   );
 
   --tabs-tab-background-color-alternative-focus: var(
-    --color-background-tertiary
+    --penpot-color-background-tertiary
   );
-  --tabs-tab-border-color-alternative-focus: var(--color-accent-primary);
+  --tabs-tab-border-color-alternative-focus: var(--penpot-color-accent-primary);
   --tabs-tab-border-width-alternative-focus: var(--size-unit);
   --tabs-tab-border-offset-alternative-focus: var(--size-neg-unit);
-  --tabs-tab-text-color-alternative-focus: var(--color-foreground-primary);
+  --tabs-tab-text-color-alternative-focus: var(--penpot-color-foreground-primary);
   --tabs-tab-text-weight-alternative-focus: var(--font-weight-medium);
-  --tabs-tab-icon-color-alternative-focus: var(--color-foreground-primary);
+  --tabs-tab-icon-color-alternative-focus: var(--penpot-color-foreground-primary);
   --tabs-tab-notification-border-color-alternative-focus: var(
-    --color-background-secondary
+    --penpot-color-background-secondary
   );
 
-  --tabs-tab-background-color-active: var(--color-background-quaternary);
+  --tabs-tab-background-color-active: var(--penpot-color-background-quaternary);
   --tabs-tab-border-color-active: transparent;
   --tabs-tab-border-width-active: 0;
   --tabs-tab-border-offset-active: 0;
-  --tabs-tab-text-color-active: var(--color-accent-primary);
+  --tabs-tab-text-color-active: var(--penpot-color-accent-primary);
   --tabs-tab-text-weight-active: var(--font-weight-medium);
-  --tabs-tab-icon-color-active: var(--color-accent-primary);
+  --tabs-tab-icon-color-active: var(--penpot-color-accent-primary);
   --tabs-tab-notification-border-color-active: var(
-    --color-background-quaternary
+    --penpot-color-background-quaternary
   );
 
   --tabs-tab-background-color-alternative-active: var(
-    --color-background-quaternary
+    --penpot-color-background-quaternary
   );
-  --tabs-tab-text-color-alternative-active: var(--color-accent-primary);
+  --tabs-tab-text-color-alternative-active: var(--penpot-color-accent-primary);
   --tabs-tab-text-weight-alternative-active: var(--font-weight-medium);
-  --tabs-tab-icon-color-alternative-active: var(--color-accent-primary);
+  --tabs-tab-icon-color-alternative-active: var(--penpot-color-accent-primary);
   --tabs-tab-notification-border-color-alternative-active: var(
-    --color-background-quaternary
+    --penpot-color-background-quaternary
   );
 }

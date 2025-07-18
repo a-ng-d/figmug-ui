@@ -5,41 +5,41 @@
   --dropdown-radius: var(--border-radius-med);
   --dropdown-gap: var(--size-xxxsmall);
 
-  --dropdown-background-color: var(--color-background-tertiary);
+  --dropdown-background-color: var(--penpot-color-background-tertiary);
 
   --dropdown-border-color: transparent;
   --dropdown-border-width: 0;
   --dropdown-border-offset: 0;
 
-  --dropdown-text-color: var(--color-foreground-primary);
+  --dropdown-text-color: var(--penpot-color-foreground-primary);
 
   --dropdown-caret-width: var(--size-xsmall);
   --dropdown-caret-height: var(--size-xsmall);
-  --dropdown-caret-color: var(--color-icon-default);
+  --dropdown-caret-color: var(--penpot-color-icon-default);
 
   --dropdown-status-gap: var(--size-xxsmall);
   --dropdown-status-height: var(--size-medium);
   --dropdown-status-margin: 0 0 0 var(--size-xxsmall);
 
   /* States */
-  --dropdown-background-color-hover: var(--color-background-quaternary);
+  --dropdown-background-color-hover: var(--penpot-color-background-quaternary);
   --dropdown-border-color-hover: transparent;
   --dropdown-border-width-hover: 0;
   --dropdown-border-offset-hover: 0;
-  --dropdown-caret-color-hover: var(--color-icon-default);
-  --dropdown-text-color-hover: var(--color-foreground-primary);
+  --dropdown-caret-color-hover: var(--penpot-color-icon-default);
+  --dropdown-text-color-hover: var(--penpot-color-foreground-primary);
 
-  --dropdown-background-color-focus: var(--color-background-tertiary);
-  --dropdown-border-color-focus: var(--color-accent-primary);
+  --dropdown-background-color-focus: var(--penpot-color-background-tertiary);
+  --dropdown-border-color-focus: var(--penpot-color-accent-primary);
   --dropdown-border-width-focus: var(--size-unit);
   --dropdown-border-offset-focus: var(--size-unit);
-  --dropdown-caret-color-focus: var(--color-icon-default);
-  --dropdown-text-color-focus: var(--color-foreground-primary);
+  --dropdown-caret-color-focus: var(--penpot-color-icon-default);
+  --dropdown-text-color-focus: var(--penpot-color-foreground-primary);
 
-  --dropdown-background-color-disabled: var(--color-background-primary);
-  --dropdown-border-color-disabled: var(--color-background-quaternary);
+  --dropdown-background-color-disabled: var(--penpot-color-background-primary);
+  --dropdown-border-color-disabled: var(--penpot-color-background-quaternary);
   --dropdown-border-width-disabled: var(--size-unit);
   --dropdown-border-offset-disabled: var(--size-unit);
-  --dropdown-caret-color-disabled: var(--color-icon-default);
-  --dropdown-text-color-disabled: var(--color-foreground-secondary);
+  --dropdown-caret-color-disabled: var(--penpot-color-icon-default);
+  --dropdown-text-color-disabled: var(--penpot-color-foreground-secondary);
 }

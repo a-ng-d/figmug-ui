@@ -7,26 +7,26 @@
   --knob-label-height: 20px;
   --knob-label-padding: var(--size-xunit) var(--size-xxxsmall);
   --knob-label-radius: var(--border-radius-med);
-  --knob-label-background-color: var(--color-background-primary);
-  --knob-label-border-color: var(--color-background-quaternary);
+  --knob-label-background-color: var(--penpot-color-background-primary);
+  --knob-label-border-color: var(--penpot-color-background-quaternary);
   --knob-label-border-width: var(--size-unit);
-  --knob-label-text-color: var(--color-foreground-primary);
+  --knob-label-text-color: var(--penpot-color-foreground-primary);
 
   --knob-label-arrow-stroke-inset: auto auto calc(var(--size-xxxsmall) * -2)
     calc(50% - var(--size-xxxsmall));
   --knob-label-arrow-stroke-width: var(--size-xxxsmall);
-  --knob-label-arrow-stroke-border-color: var(--color-background-quaternary);
+  --knob-label-arrow-stroke-border-color: var(--penpot-color-background-quaternary);
 
   --knob-label-arrow-fill-inset: auto auto -6px calc(50% - 3px);
   --knob-label-arrow-fill-width: 3px;
-  --knob-label-arrow-fill-border-color: var(--color-background-primary);
+  --knob-label-arrow-fill-border-color: var(--penpot-color-background-primary);
 
   --knob-tooltip-top: var(--size-neg-xxsmall);
   --knob-tooltip-padding: var(--size-xunit) var(--size-xxxsmall);
   --knob-tooltip-min-width: var(--size-small);
   --knob-tooltip-radius: var(--border-radius-med);
-  --knob-tooltip-background-color: var(--color-foreground-primary);
-  --knob-tooltip-text-color: var(--color-background-primary);
+  --knob-tooltip-background-color: var(--penpot-color-foreground-primary);
+  --knob-tooltip-text-color: var(--penpot-color-background-primary);
 
   --knob-tooltip-arrow-inset: auto auto var(--size-neg-xxsmall)
     calc(50% - var(--size-xxxsmall));
@@ -34,35 +34,35 @@
 
   --knob-graduation-width: var(--size-unit);
   --knob-graduation-height: var(--size-xxxsmall);
-  --knob-graduation-background-color: var(--color-background-quaternary);
+  --knob-graduation-background-color: var(--penpot-color-background-quaternary);
 
   --knob-input-top: var(--size-neg-xxsmall);
   --knob-input-shadow: var(--elevation-300-tooltip);
-  --knob-input-border-color: var(--color-background-quaternary);
+  --knob-input-border-color: var(--penpot-color-background-quaternary);
   --knob-input-border-width: var(--size-unit);
   --knob-input-border-offset: var(--size-neg-unit);
   --knob-input-radius: 10px;
-  --knob-input-background-color: var(--color-background-primary);
+  --knob-input-background-color: var(--penpot-color-background-primary);
   --knob-input-padding: var(--size-xunit);
   --knob-input-width: var(--size-xxlarge);
 
   /* State */
-  --knob-label-background-color-hover: var(--color-background-tertiary);
+  --knob-label-background-color-hover: var(--penpot-color-background-tertiary);
 
-  --knob-label-border-color-focus: var(--color-accent-primary);
+  --knob-label-border-color-focus: var(--penpot-color-accent-primary);
   --knob-label-border-width-focus: var(--size-unit);
-  --knob-label-background-color-focus: var(--color-accent-primary-muted);
+  --knob-label-background-color-focus: var(--penpot-color-accent-primary-muted);
 
   --knob-label-arrow-stroke-inset-focus: auto auto
     calc(var(--size-xxxsmall) * -2) calc(50% - var(--size-xxxsmall));
   --knob-label-arrow-stroke-width-focus: var(--size-xxxsmall);
-  --knob-label-arrow-stroke-border-color-focus: var(--color-accent-primary);
-  --knob-label-arrow-fill-border-color-focus: var(--color-accent-primary-muted);
+  --knob-label-arrow-stroke-border-color-focus: var(--penpot-color-accent-primary);
+  --knob-label-arrow-fill-border-color-focus: var(--penpot-color-accent-primary-muted);
 
-  --knob-label-background-color-disabled: var(--color-background-quaternary);
-  --knob-label-border-color-disabled: var(--color-background-quaternary);
-  --knob-label-text-color-disabled: var(--color-foreground-secondary);
+  --knob-label-background-color-disabled: var(--penpot-color-background-quaternary);
+  --knob-label-border-color-disabled: var(--penpot-color-background-quaternary);
+  --knob-label-text-color-disabled: var(--penpot-color-foreground-secondary);
 
-  --knob-label-arrow-stroke-border-color-disabled: var(--color-background-quaternary);
-  --knob-label-arrow-fill-border-color-disabled: var(--color-background-quaternary);
+  --knob-label-arrow-stroke-border-color-disabled: var(--penpot-color-background-quaternary);
+  --knob-label-arrow-fill-border-color-disabled: var(--penpot-color-background-quaternary);
 }

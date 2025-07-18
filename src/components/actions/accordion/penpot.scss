@@ -6,15 +6,15 @@
   --accordion-row-height: var(--size-medium);
   --accordion-row-padding: 0 var(--size-xsmall);
 
-  --accordion-text-color: var(--color-foreground-secondary);
-  --accordion-icon-color: var(--color-foreground-secondary);
+  --accordion-text-color: var(--penpot-color-foreground-secondary);
+  --accordion-icon-color: var(--penpot-color-foreground-secondary);
 
-  --accordion-text-color-hover: var(--color-foreground-primary);
-  --accordion-icon-color-hover: var(--color-foreground-primary);
+  --accordion-text-color-hover: var(--penpot-color-foreground-primary);
+  --accordion-icon-color-hover: var(--penpot-color-foreground-primary);
 
-  --accordion-icon-color-expanded: var(--color-foreground-primary);
-  --accordion-text-color-expanded: var(--color-foreground-primary);
+  --accordion-icon-color-expanded: var(--penpot-color-foreground-primary);
+  --accordion-text-color-expanded: var(--penpot-color-foreground-primary);
 
-  --accordion-icon-color-disabled: var(--color-background-tertiary);
-  --accordion-text-color-disabled: var(--color-background-tertiary);
+  --accordion-icon-color-disabled: var(--penpot-color-background-tertiary);
+  --accordion-text-color-disabled: var(--penpot-color-background-tertiary);
 }

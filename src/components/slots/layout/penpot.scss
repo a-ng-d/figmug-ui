@@ -1,8 +1,8 @@
 :root[data-theme='penpot'] {
   --layout-block-padding: var(--size-xxsmall) 0;
   --layout-block-border: var(--size-unit) solid
-    var(--color-background-quaternary);
-  --layout-background-color: var(--color-background-primary);
+    var(--penpot-color-background-quaternary);
+  --layout-background-color: var(--penpot-color-background-primary);
 
   --layout-list-padding: var(--size-xxsmall) 0 0 0;
 

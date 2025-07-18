@@ -3,17 +3,17 @@
   --simple-item-padding: var(--size-xunit) var(--size-xsmall);
   --simple-item-min-height: var(--size-medium);
   --simple-item-border-radius: var(--border-radius-small);
-  --simple-item-background-color: var(--color-background-primary);
+  --simple-item-background-color: var(--penpot-color-background-primary);
   --simple-item-border-width: 0;
   --simple-item-border-offset: 0;
   --simple-item-border-color: transparent;
 
-  --simple-item-background-color-hover: var(--color-background-tertiary);
+  --simple-item-background-color-hover: var(--penpot-color-background-tertiary);
 
-  --simple-item-background-color-focus: var(--color-accent-primary-muted);
+  --simple-item-background-color-focus: var(--penpot-color-accent-primary-muted);
   --simple-item-border-width-focus: var(--size-unit);
   --simple-item-border-offset-focus: var(--size-neg-unit);
-  --simple-item-border-color-focus: var(--color-accent-primary);
+  --simple-item-border-color-focus: var(--penpot-color-accent-primary);
 
   --simple-item-min-width-compact: 112px;
   --simple-item-width-compact: 112px;

@@ -4,15 +4,15 @@
   --tooltip-gap: var(--size-xxsmall);
   --tooltip-radius: var(--border-radius-xlarge);
   --tooltip-padding: var(--size-xxxsmall) var(--size-xxsmall);
-  --tooltip-background-color: var(--color-background-primary);
-  --tooltip-border-color: var(--color-background-quaternary);
+  --tooltip-background-color: var(--penpot-color-background-primary);
+  --tooltip-border-color: var(--penpot-color-background-quaternary);
   --tooltip-border-width: var(--size-unit);
   --tooltip-border-offset: var(--size-neg-unit);
-  --tooltip-text-color: var(--color-foreground-primary);
+  --tooltip-text-color: var(--penpot-color-foreground-primary);
   --tooltip-shadow: none;
   
   --tooltip-arrow-size: var(--size-xxsmall);
-  --tooltip-arrow-background-color: var(--color-background-primary);
+  --tooltip-arrow-background-color: var(--penpot-color-background-primary);
 
   --tooltip-image-width: 96px;
   --tooltip-image-height: 96px;
