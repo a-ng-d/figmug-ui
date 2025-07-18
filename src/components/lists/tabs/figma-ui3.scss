@@ -14,6 +14,9 @@
   --tabs-tab-radius: var(--border-radius-med);
   --tabs-tab-height: var(--size-small);
   --tabs-tab-background-color: var(--figma-color-bg);
+  --tabs-tab-border-color: transparent;
+  --tabs-tab-border-width: 0;
+  --tabs-tab-border-offset: 0;
   --tabs-tab-text-size: var(--font-size-xsmall);
   --tabs-tab-text-color: var(--figma-color-text-secondary);
   --tabs-tab-text-weight: var(--font-weight-semi);
@@ -89,6 +92,9 @@
   );
 
   --tabs-tab-background-color-active: var(--figma-color-bg-secondary);
+  --tabs-tab-border-color-active: transparent;
+  --tabs-tab-border-width-active: 0;
+  --tabs-tab-border-offset-active: 0;
   --tabs-tab-text-color-active: var(--figma-color-text);
   --tabs-tab-text-weight-active: var(--font-weight-bold);
   --tabs-tab-icon-color-active: var(--figma-color-text);
