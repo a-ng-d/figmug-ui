@@ -1,5 +1,6 @@
 import React from 'react'
 import Tooltip from '@components/tags/tooltip/Tooltip'
+import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
 import Icon from '@components/assets/icon/Icon'
 import { doClassnames } from '@a_ng_d/figmug-utils'
@@ -48,7 +49,6 @@ export interface ButtonProps {
 
 interface ButtonStates {
   isTooltipVisible: boolean
-  isWarningVisible: boolean
 }
 
 export default class Button extends React.Component<ButtonProps, ButtonStates> {
@@ -69,7 +69,6 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
     super(props)
     this.state = {
       isTooltipVisible: false,
-      isWarningVisible: false,
     }
   }
 
@@ -90,7 +89,6 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
       action,
       label,
     } = this.props
-    const { isWarningVisible } = this.state
 
     return (
       <button
@@ -154,36 +152,13 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           </span>
         )}
         {warning !== undefined && (
-          <div
-            style={{
-              marginLeft: 'var(--size-xxsmall)',
-              position: 'relative',
-              pointerEvents: 'auto',
-            }}
-            onMouseEnter={() =>
-              this.setState({
-                isWarningVisible: true,
-              })
-            }
-            onMouseLeave={() =>
-              this.setState({
-                isWarningVisible: false,
-              })
-            }
-          >
-            <Icon
-              type="PICTO"
-              iconName="warning"
-            />
-            {isWarningVisible && (
-              <Tooltip
-                pin={warning.pin}
-                type={warning.type}
-              >
-                {warning.label}
-              </Tooltip>
-            )}
-          </div>
+          <IconChip
+            iconType="PICTO"
+            iconName="warning"
+            text={warning.label}
+            pin={warning.pin}
+            type={warning.type}
+          />
         )}
         {(isBlocked || isNew) && (
           <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>

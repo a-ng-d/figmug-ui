@@ -1,8 +1,6 @@
-import { useState } from 'react'
 import texts from '@styles/texts/texts.module.scss'
-import Tooltip from '@components/tags/tooltip/Tooltip'
+import IconChip from '@components/tags/icon-chip/IconChip'
 import { doClassnames } from '@a_ng_d/figmug-utils'
-import Icon from '../icon/Icon'
 import './section-title.scss'
 
 export type SectionTitleProps = {
@@ -13,8 +11,6 @@ export type SectionTitleProps = {
 }
 
 const SectionTitle = (props: SectionTitleProps) => {
-  const [isTooltipVisible, setTooltipState] = useState(false)
-
   const { label, indicator, helper, id } = props
 
   return (
@@ -35,18 +31,12 @@ const SectionTitle = (props: SectionTitleProps) => {
         >{`(${indicator})`}</div>
       )}
       {helper !== undefined && (
-        <div
-          className="section-title__tooltip"
-          onMouseEnter={() => setTooltipState(true)}
-          onMouseLeave={() => setTooltipState(false)}
-        >
-          <Icon
-            type="PICTO"
-            iconName="info"
-            customClassName="tooltip__icon"
-          />
-          {isTooltipVisible && <Tooltip type="MULTI_LINE">{helper}</Tooltip>}
-        </div>
+        <IconChip
+          iconType="PICTO"
+          iconName="info"
+          text={helper}
+          type="MULTI_LINE"
+        />
       )}
     </div>
   )

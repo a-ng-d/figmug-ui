@@ -1,7 +1,6 @@
 import React from 'react'
-import Tooltip from '@components/tags/tooltip/Tooltip'
+import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
-import Icon from '@components/assets/icon/Icon'
 import Knob from '@components/actions/knob/Knob'
 import { doClassnames, doMap, Easing } from '@a_ng_d/figmug-utils'
 import { doScale } from '@a_ng_d/figmug-utils'
@@ -55,7 +54,6 @@ interface SliderProps {
 
 interface SliderStates {
   isTooltipDisplay: Array<boolean>
-  isWarningVisible: boolean
   activeKnobId: string | null
 }
 
@@ -79,7 +77,6 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     super(props)
     this.state = {
       isTooltipDisplay: Array(props.stops.list.length).fill(false),
-      isWarningVisible: false,
       activeKnobId: null,
     }
   }
@@ -400,41 +397,18 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
   // Templates
   Status = () => {
     const { warning, isBlocked, isNew } = this.props
-    const { isWarningVisible } = this.state
 
     if (warning || isBlocked || isNew)
       return (
         <div className="multiple-slider__status">
           {warning !== undefined && (
-            <div
-              style={{
-                position: 'relative',
-                pointerEvents: 'auto',
-              }}
-              onMouseEnter={() =>
-                this.setState({
-                  isWarningVisible: true,
-                })
-              }
-              onMouseLeave={() =>
-                this.setState({
-                  isWarningVisible: false,
-                })
-              }
-            >
-              <Icon
-                type="PICTO"
-                iconName="warning"
-              />
-              {isWarningVisible && (
-                <Tooltip
-                  pin={warning?.pin}
-                  type={warning?.type}
-                >
-                  {warning?.label}
-                </Tooltip>
-              )}
-            </div>
+            <IconChip
+              iconType="PICTO"
+              iconName="warning"
+              text={warning.label}
+              pin={warning.pin}
+              type={warning.type}
+            />
           )}
           {(isBlocked || isNew) && <Chip isSolo>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>

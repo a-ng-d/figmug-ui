@@ -1,5 +1,6 @@
 import React from 'react'
 import Tooltip from '@components/tags/tooltip/Tooltip'
+import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
 import Icon from '@components/assets/icon/Icon'
 import Button from '@components/actions/button/Button'
@@ -56,7 +57,6 @@ export interface InputProps {
 export interface InputStates {
   inputValue: string
   isTooltipVisible: boolean
-  isWarningVisible: boolean
 }
 
 export default class Input extends React.Component<InputProps, InputStates> {
@@ -84,7 +84,6 @@ export default class Input extends React.Component<InputProps, InputStates> {
     this.state = {
       inputValue: props.value,
       isTooltipVisible: false,
-      isWarningVisible: false,
     }
     this.startValue = props.value
     this.inputRef = React.createRef()
@@ -312,41 +311,18 @@ export default class Input extends React.Component<InputProps, InputStates> {
   // Templates
   Status = () => {
     const { warning, preview, isBlocked, isNew } = this.props
-    const { isWarningVisible } = this.state
 
     if (warning || isBlocked || isNew)
       return (
         <div className="input__status">
           {warning !== undefined && (
-            <div
-              style={{
-                position: 'relative',
-                pointerEvents: 'auto',
-              }}
-              onMouseEnter={() =>
-                this.setState({
-                  isWarningVisible: true,
-                })
-              }
-              onMouseLeave={() =>
-                this.setState({
-                  isWarningVisible: false,
-                })
-              }
-            >
-              <Icon
-                type="PICTO"
-                iconName="warning"
-              />
-              {isWarningVisible && (
-                <Tooltip
-                  pin={warning?.pin}
-                  type={warning?.type}
-                >
-                  {warning?.label}
-                </Tooltip>
-              )}
-            </div>
+            <IconChip
+              iconType="PICTO"
+              iconName="warning"
+              text={warning.label}
+              pin={warning.pin}
+              type={warning.type}
+            />
           )}
           {(isBlocked || isNew) && (
             <Chip

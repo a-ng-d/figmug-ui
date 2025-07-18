@@ -1,6 +1,6 @@
 import React from 'react'
 import texts from '@styles/texts/texts.module.scss'
-import Tooltip from '@components/tags/tooltip/Tooltip'
+import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
 import ActionsList from '@components/lists/actions-list/ActionsList'
 import Icon from '@components/assets/icon/Icon'
@@ -32,11 +32,13 @@ export interface DropdownProps {
 
 export interface DropdownStates {
   isMenuOpen: boolean
-  isWarningVisible: boolean
   listShouldScroll: boolean
 }
 
-export default class Dropdown extends React.Component<DropdownProps, DropdownStates> {
+export default class Dropdown extends React.Component<
+  DropdownProps,
+  DropdownStates
+> {
   private selectMenuRef: React.RefObject<HTMLDivElement>
   private buttonRef: React.RefObject<HTMLButtonElement>
   private listRef: React.RefObject<HTMLDivElement>
@@ -55,7 +57,6 @@ export default class Dropdown extends React.Component<DropdownProps, DropdownSta
     super(props)
     this.state = {
       isMenuOpen: false,
-      isWarningVisible: false,
       listShouldScroll: false,
     }
     this.selectMenuRef = React.createRef()
@@ -186,41 +187,18 @@ export default class Dropdown extends React.Component<DropdownProps, DropdownSta
   // Template
   Status = () => {
     const { warning, preview, isBlocked, isNew } = this.props
-    const { isWarningVisible } = this.state
 
     if (warning || isBlocked || isNew)
       return (
         <div className="select-menu__status">
           {warning !== undefined && (
-            <div
-              style={{
-                position: 'relative',
-                pointerEvents: 'auto',
-              }}
-              onMouseEnter={() =>
-                this.setState({
-                  isWarningVisible: true,
-                })
-              }
-              onMouseLeave={() =>
-                this.setState({
-                  isWarningVisible: false,
-                })
-              }
-            >
-              <Icon
-                type="PICTO"
-                iconName="warning"
-              />
-              {isWarningVisible && (
-                <Tooltip
-                  pin={warning?.pin}
-                  type={warning?.type}
-                >
-                  {warning?.label}
-                </Tooltip>
-              )}
-            </div>
+            <IconChip
+              iconType="PICTO"
+              iconName="warning"
+              text={warning.label}
+              pin={warning.pin}
+              type={warning.type}
+            />
           )}
           {(isBlocked || isNew) && (
             <Chip

@@ -1,0 +1,13 @@
+@import 'figma-ui2';
+@import 'figma-ui3';
+@import 'penpot';
+@import 'sketch';
+
+.icon-chip {
+  position: relative;
+  flex: none;
+  cursor: default;
+  width: var(--icon-chip-width);
+  height: var(--icon-chip-height);
+  user-select: none;
+}
