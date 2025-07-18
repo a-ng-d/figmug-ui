@@ -30,12 +30,14 @@
   --sketch-color-foreground-error: #d40000;
   --sketch-color-foreground-inverted: #ffffff;
   --sketch-color-foreground-disabled: #a0a0a0;
+  --sketch-color-foreground-onaccent: #ffffff;
 
   --sketch-color-border-default: #e0e0e0;
   --sketch-color-border-primary: #e0e0e0;
   --sketch-color-border-secondary: #c8c8c8;
   --sketch-color-border-tertiary: #494949;
   --sketch-color-border-disabled: #ebebeb;
+  --sketch-color-border-onaccent: #ffffff7d;
 
   --sketch-color-overlay-default: #ffffffbf;
 }
@@ -72,6 +74,8 @@
   --sketch-color-foreground-error: #ff1f1f;
   --sketch-color-foreground-inverted: #202022;
   --sketch-color-foreground-disabled: #9a9a9b;
+  --sketch-color-foreground-onaccent: #ffffff;
+  --sketch-color-foreground-onaccent-disabled: #ffffffca;
 
   --sketch-color-border-default: #303032;
   --sketch-color-border-primary: #303032;

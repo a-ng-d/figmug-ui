@@ -1,7 +1,7 @@
 :root[data-theme='sketch'] {
   --popin-breakpoint: 460px;
   --popin-shadow: var(--elevation-500-modal-window);
-  --popin-shadow-panel: none;
+  --popin-shadow-panel: var(--elevation-500-modal-window);
   --popin-radius: var(--border-radius-xxxlarge);
   --popin-width-panel: 400px;
   --popin-min-width: 460px;

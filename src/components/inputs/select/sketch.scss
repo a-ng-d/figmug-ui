@@ -35,7 +35,7 @@
   --select-box-tick-width: var(--size-medium);
   --select-box-tick-height: var(--size-medium);
   --select-box-tick-margin: 0 0 0 var(--size-neg-xxsmall);
-  --select-box-tick-color: var(--sketch-color-foreground-primary);
+  --select-box-tick-color: var(--sketch-color-foreground-onaccent);
 
   --select-box-background-color-checked: var(--sketch-color-accent-primary);
   --select-box-border-checked: var(--size-unit) solid
@@ -60,7 +60,7 @@
   );
   --select-box-border-checked-disabled: var(--size-unit) solid
     var(--sketch-color-accent-disabled);
-  --select-box-tick-color-disabled: var(--sketch-color-background-disabled);
+  --select-box-tick-color-disabled: var(--sketch-color-foreground-onaccent-disabled);
 
   /* Switch */
   --select-switch-height: var(--size-medium);
@@ -95,7 +95,7 @@
   --select-toggle-knob-transform-checked: translateX(var(--size-xxsmall))
     translateY(var(--size-xunit));
   --select-toggle-knob-background-color-checked: var(
-    --sketch-color-foreground-primary
+    --sketch-color-foreground-onaccent
   );
 
   --select-toggle-border-color-secondary-focus: var(
@@ -123,7 +123,7 @@
     --sketch-color-foreground-disabled
   );
   --select-toggle-knob-background-color-checked-disabled: var(
-    --sketch-color-foreground-disabled
+    --sketch-color-foreground-onaccent-disabled
   );
 
   /* Radio */
@@ -140,7 +140,7 @@
     var(--size-neg-xxsmall);
   --select-button-inner-top: var(--size-xxxsmall);
   --select-button-inner-left: 5px;
-  --select-button-icon-color: var(--sketch-color-foreground-primary);
+  --select-button-icon-color: var(--sketch-color-foreground-onaccent);
   --select-button-background-color: var(--sketch-color-background-primary);
   --select-button-border: var(--size-unit) solid
     var(--sketch-color-border-secondary);
@@ -173,5 +173,5 @@
   );
   --select-button-border-checked-disabled: var(--size-unit) solid
     var(--sketch-color-accent-disabled);
-  --select-button-icon-color-disabled: var(--sketch-color-foreground-disabled);
+  --select-button-icon-color-disabled: var(--sketch-color-foreground-onaccent-disabled);
 }
