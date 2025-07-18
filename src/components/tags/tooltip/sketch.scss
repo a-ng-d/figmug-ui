@@ -5,9 +5,9 @@
   --tooltip-radius: var(--border-radius-xlarge);
   --tooltip-padding: var(--size-xmsmall) var(--size-xxsmall);
   --tooltip-background-color: var(--sketch-color-background-primary);
-  --tooltip-border-color: var(--sketch-color-border-disabled);
-  --tooltip-border-width: var(--size-unit);
-  --tooltip-border-offset: var(--size-neg-unit);
+  --tooltip-border-color: transparent;
+  --tooltip-border-width: 0;
+  --tooltip-border-offset: 0;
   --tooltip-text-color: var(--sketch-color-foreground-primary);
   --tooltip-shadow: var(--elevation-300-tooltip);
 
