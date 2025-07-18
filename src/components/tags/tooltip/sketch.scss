@@ -1,19 +1,19 @@
-:root[data-theme='figma-ui2'] {
+:root[data-theme='sketch'] {
   --tooltip-min-width: 172px;
   --tooltip-max-width: 200px;
   --tooltip-gap: var(--size-xxsmall);
-  --tooltip-radius: var(--border-radius-small);
-  --tooltip-padding: var(--size-xxxsmall) var(--size-xxsmall);
-  --tooltip-background-color: var(--grey-1000);
-  --tooltip-border-color: var(--grey-800);
+  --tooltip-radius: var(--border-radius-xlarge);
+  --tooltip-padding: var(--size-xmsmall) var(--size-xxsmall);
+  --tooltip-background-color: var(--sketch-color-background-primary);
+  --tooltip-border-color: var(--sketch-color-border-disabled);
   --tooltip-border-width: var(--size-unit);
   --tooltip-border-offset: var(--size-neg-unit);
-  --tooltip-text-color: var(--grey-0);
-  --tooltip-shadow: var(--shadow-hud);
-  
+  --tooltip-text-color: var(--sketch-color-foreground-primary);
+  --tooltip-shadow: var(--elevation-300-tooltip);
+
   --tooltip-arrow-size: var(--size-xxsmall);
-  --tooltip-arrow-background-color: var(--grey-1000);
-  
+  --tooltip-arrow-background-color: transparent;
+
   --tooltip-image-width: 96px;
   --tooltip-image-height: 96px;
   --tooltip-image-radius: var(--border-radius-med);

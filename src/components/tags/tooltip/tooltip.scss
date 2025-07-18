@@ -1,6 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
+@import 'sketch';
 
 .tooltip {
   position: absolute;
@@ -28,7 +29,7 @@
 
     &:after {
       bottom: -14px;
-      border-top-color: var(--tooltip-background-color);
+      border-top-color: var(--tooltip-arrow-background-color);
       border-right-color: transparent;
       border-bottom-color: transparent;
       border-left-color: transparent;
@@ -42,7 +43,7 @@
       top: -14px;
       border-top-color: transparent;
       border-right-color: transparent;
-      border-bottom-color: var(--tooltip-background-color);
+      border-bottom-color: var(--tooltip-arrow-background-color);
       border-left-color: transparent;
     }
   }

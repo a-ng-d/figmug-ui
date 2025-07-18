@@ -4,13 +4,15 @@
   --tooltip-gap: var(--size-xxsmall);
   --tooltip-radius: var(--border-radius-med);
   --tooltip-padding: var(--size-xxxsmall) var(--size-xxsmall);
-  --tooltip-arrow-size: var(--size-xxsmall);
   --tooltip-background-color: var(--grey-1000);
   --tooltip-border-color: transparent;
   --tooltip-border-width: 0;
   --tooltip-border-offset: 0;
   --tooltip-text-color: var(--grey-0);
   --tooltip-shadow: var(--elevation-300-tooltip);
+  
+  --tooltip-arrow-size: var(--size-xxsmall);
+  --tooltip-arrow-background-color: var(--grey-1000);
 
   --tooltip-image-width: 96px;
   --tooltip-image-height: 96px;
