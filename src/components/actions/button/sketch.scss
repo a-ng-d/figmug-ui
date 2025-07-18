@@ -345,31 +345,31 @@
   );
   --icon-button-background-color-focus: var(--sketch-color-background-primary);
   --icon-button-background-color-disabled: var(
-    --sketch-color-background-secondary
+    --sketch-color-background-primary
   );
 
-  --icon-button-border-width: var(--size-unit);
-  --icon-button-border-width-hover: var(--size-unit);
-  --icon-button-border-width-pressed: var(--size-unit);
+  --icon-button-border-width: 0;
+  --icon-button-border-width-hover: 0;
+  --icon-button-border-width-pressed: 0;
   --icon-button-border-width-focus: var(--size-unit);
-  --icon-button-border-width-disabled: var(--size-unit);
+  --icon-button-border-width-disabled: 0;
 
-  --icon-button-border-offset: var(--size-neg-unit);
-  --icon-button-border-offset-hover: var(--size-neg-unit);
-  --icon-button-border-offset-pressed: var(--size-neg-unit);
+  --icon-button-border-offset: 0;
+  --icon-button-border-offset-hover: 0;
+  --icon-button-border-offset-pressed: 0;
   --icon-button-border-offset-focus: var(--size-neg-unit);
-  --icon-button-border-offset-disabled: var(--size-neg-unit);
+  --icon-button-border-offset-disabled: 0;
 
-  --icon-button-border-color: var(--sketch-color-border-primary);
-  --icon-button-border-color-hover: var(--sketch-color-border-primary);
-  --icon-button-border-color-pressed: var(--sketch-color-border-primary);
+  --icon-button-border-color: transparent;
+  --icon-button-border-color-hover: transparent;
+  --icon-button-border-color-pressed: transparent;
   --icon-button-border-color-focus: var(--sketch-color-accent-primary);
-  --icon-button-border-color-disabled: var(--sketch-color-border-disabled);
+  --icon-button-border-color-disabled: transparent;
 
-  --icon-button-icon-color: var(--sketch-color-foreground-secondary);
-  --icon-button-icon-color-hover: var(--sketch-color-foreground-secondary);
-  --icon-button-icon-color-pressed: var(--sketch-color-foreground-secondary);
-  --icon-button-icon-color-focus: var(--sketch-color-foreground-secondary);
+  --icon-button-icon-color: var(--sketch-color-foreground-tertiary);
+  --icon-button-icon-color-hover: var(--sketch-color-foreground-primary);
+  --icon-button-icon-color-pressed: var(--sketch-color-foreground-primary);
+  --icon-button-icon-color-focus: var(--sketch-color-foreground-primary);
   --icon-button-icon-color-disabled: var(--sketch-color-foreground-disabled);
 
   --icon-button-notification-background-color: var(
