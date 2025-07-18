@@ -1,10 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <g clip-path="url(#a)">
-    <path fill="#000" fill-rule="evenodd" d="M11.165 4.53a.5.5 0 0 1-.404.58A7 7 0 1 0 19 12a.5.5 0 0 1 1 0 8 8 0 1 1-9.416-7.874.5.5 0 0 1 .58.404Z" clip-rule="evenodd"/>
-  </g>
-  <defs>
-    <clipPath id="a">
-      <path fill="#000" d="M0 0h24v24H0z"/>
-    </clipPath>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+  <style>
+    @keyframes translater {
+      to { transform: translateY(-5px); }
+    }
+    #spinner-penpot {
+      transform-origin: center;
+      animation: translater 1s linear infinite;
+    }
+  </style>
+  <path fill="#000" d="M5.313 9.011 1 12.001l4.313 3.014L23 15.003V9l-17.687.011ZM6 10l16.011-.011v4.025L6 14.027V10Zm-1 .321v3.384l-1.535-1.159V11.47L5 10.321Z"/>
+  <path id="spinner-penpot" fill="#000" d="M6 14h16v1H6v-1Z"/>
 </svg>
+

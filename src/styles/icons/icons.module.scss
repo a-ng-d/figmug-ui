@@ -519,7 +519,6 @@
   &--spinner {
     mask-image: var(--icon-spinner);
     -webkit-mask-image: var(--icon-spinner);
-    animation: rotating 1s linear infinite;
   }
 
   &--upward {
@@ -535,14 +534,5 @@
   &--target {
     mask-image: var(--icon-target);
     -webkit-mask-image: var(--icon-target);
-  }
-}
-
-@keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

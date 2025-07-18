@@ -1,3 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
-  <path fill="#000" fill-rule="evenodd" d="M15.165 8.53a.5.5 0 0 1-.404.58A7 7 0 1 0 23 16a.5.5 0 0 1 1 0 8 8 0 1 1-9.416-7.874.5.5 0 0 1 .58.404Z" clip-rule="evenodd"/>
+  <style>
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    #spinner-figma-ui2 {
+      transform-origin: center;
+      animation: spin 1s linear infinite;
+    }
+  </style>
+  <path id="spinner-figma-ui2" fill="#000" fill-rule="evenodd" d="M15.165 8.53a.5.5 0 0 1-.404.58A7 7 0 1 0 23 16a.5.5 0 0 1 1 0 8 8 0 1 1-9.416-7.874.5.5 0 0 1 .58.404Z" clip-rule="evenodd"/>
 </svg>
