@@ -1,0 +1,20 @@
+:root[data-theme='sketch'] {
+  --accordion-padding: var(--size-xxxsmall) 0;
+  --accordion-border: 0 solid transparent;
+
+  --accordion-row-gap: var(--size-xsmall);
+  --accordion-row-height: var(--size-medium);
+  --accordion-row-padding: 0 var(--size-xsmall);
+
+  --accordion-text-color: var(--sketch-color-foreground-secondary);
+  --accordion-icon-color: var(--sketch-color-foreground-secondary);
+
+  --accordion-text-color-hover: var(--sketch-color-foreground-primary);
+  --accordion-icon-color-hover: var(--sketch-color-foreground-primary);
+
+  --accordion-icon-color-expanded: var(--sketch-color-foreground-primary);
+  --accordion-text-color-expanded: var(--sketch-color-foreground-primary);
+
+  --accordion-icon-color-disabled: var(--sketch-color-foreground-disabled);
+  --accordion-text-color-disabled: var(--sketch-color-foreground-disabled);
+}

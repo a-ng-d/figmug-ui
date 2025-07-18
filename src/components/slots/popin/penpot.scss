@@ -17,7 +17,7 @@
   --popin-header-gap: var(--size-xxsmall);
   --popin-header-padding: var(--size-medium) var(--size-medium) 0
     var(--size-medium);
-  --popin-header-border: var(--size-unit) solid transparent;
+  --popin-header-border: none;
   --popin-header-text-transform: uppercase;
 
   --popin-content-padding-empty: var(--size-medium) var(--size-medium);
@@ -25,6 +25,7 @@
   --popin-footer-padding: var(--size-xxsmall) var(--size-medium)
     var(--size-medium);
   --popin-footer-gap: var(--size-xxsmall);
+  --popin-footer-border: none;
 
   --popin-actions-gap: var(--size-xxsmall);
 }

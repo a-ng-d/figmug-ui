@@ -1,0 +1,15 @@
+:root[data-theme='sketch'] {
+  --draggable-window-width: 296px;
+  --draggable-window-radius: var(--border-radius-xxxlarge);
+  --draggable-window-shadow: var(--elevation-500-modal-window);
+  --draggable-window-background-color: var(--sketch-color-background-primary);
+  --draggable-window-border-color: var(--sketch-color-border-primary);
+  --draggable-window-border-width: var(--size-unit);
+  --draggable-window-border-offset: var(--size-neg-unit);
+
+  --draggable-window-header-border: var(--size-unit) solid
+    var(--sketch-color-border-disabled);
+
+  --draggable-window-content-padding: var(--size-xxsmall);
+  --draggable-window-content-gap: var(--size-xxxsmall);
+}

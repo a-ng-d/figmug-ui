@@ -1,0 +1,11 @@
+:root[data-theme='sketch'] {
+  --bar-min-height: var(--size-large);
+  --bar-gap: var(--size-xxsmall);
+  --bar-padding: 0 var(--size-xsmall);
+  --bar-background-color: transparent;
+  --bar-border: var(--size-unit) solid var(--sketch-color-border-primary);
+
+  --bar-height-compact: var(--size-medium);
+
+  --bar-padding-mobile: var(--size-xxxsmall);
+}

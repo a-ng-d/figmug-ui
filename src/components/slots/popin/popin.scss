@@ -1,6 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
+@import 'sketch';
 
 .popin {
   display: flex;
@@ -64,6 +65,7 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--popin-footer-padding);
+    border-top: var(--popin-footer-border);
   }
 
   .popin__actions {

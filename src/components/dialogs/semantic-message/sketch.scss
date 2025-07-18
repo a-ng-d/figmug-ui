@@ -1,0 +1,44 @@
+:root[data-theme='sketch'] {
+  --semantic-message-gap: var(--size-xxsmall);
+  --semantic-message-padding: var(--size-xxsmall) var(--size-xsmall)
+    var(--size-xxsmall) 0;
+  --semantic-message-radius: var(--border-radius-xlarge);
+  --semantic-message-background-color: var(--sketch-color-background-primary);
+  --semantic-message-border-color: var(--sketch-color-border-secondary);
+  --semantic-message-border-width: var(--size-unit);
+  --semantic-message-border-offset: var(--size-neg-unit);
+
+  --semantic-message-background-color-info: var(--sketch-color-background-info);
+  --semantic-message-background-color-info-accent: #00000030;
+  --semantic-message-background-color-error: var(
+    --sketch-color-background-error
+  );
+  --semantic-message-background-color-error-accent: #00000030;
+  --semantic-message-background-color-success: var(
+    --sketch-color-background-success
+  );
+  --semantic-message-background-color-success-accent: #00000030;
+  --semantic-message-background-color-warning: var(
+    --sketch-color-background-warning
+  );
+  --semantic-message-background-color-warning-accent: #00000030;
+
+  --semantic-message-border-color-info: var(--sketch-color-accent-info);
+  --semantic-message-border-color-error: var(--sketch-color-accent-error);
+  --semantic-message-border-color-success: var(--sketch-color-accent-success);
+  --semantic-message-border-color-warning: var(--sketch-color-accent-warning);
+  --semantic-message-border-width-info: var(--size-unit);
+  --semantic-message-border-width-error: var(--size-unit);
+  --semantic-message-border-width-success: var(--size-unit);
+  --semantic-message-border-width-warning: var(--size-unit);
+  --semantic-message-border-offset-info: var(--size-neg-unit);
+  --semantic-message-border-offset-error: var(--size-neg-unit);
+  --semantic-message-border-offset-success: var(--size-neg-unit);
+  --semantic-message-border-offset-warning: var(--size-neg-unit);
+
+  --semantic-message-padding-anchored: var(--size-small) var(--size-xsmall)
+    var(--size-small) 0;
+  --semantic-message-padding-vertical: var(--size-xsmall) var(--size-xxxsmall);
+  --semantic-message-padding-anchored-vertical: var(--size-xsmall)
+    var(--size-xxxsmall);
+}

@@ -1,0 +1,47 @@
+:root[data-theme='sketch'] {
+  /* Base */
+  --dropdown-height: var(--size-medium);
+  --dropdown-padding: var(--size-xxsmall);
+  --dropdown-radius: var(--border-radius-large);
+  --dropdown-gap: var(--size-xxxsmall);
+
+  --dropdown-background-color: var(--sketch-color-background-tertiary);
+
+  --dropdown-border-color: transparent;
+  --dropdown-border-width: 0;
+  --dropdown-border-offset: 0;
+
+  --dropdown-text-color: var(--sketch-color-foreground-primary);
+
+  --dropdown-caret-width: var(--size-xsmall);
+  --dropdown-caret-height: var(--size-xsmall);
+  --dropdown-caret-color: var(--sketch-color-foreground-tertiary);
+
+  --dropdown-status-gap: var(--size-xxsmall);
+  --dropdown-status-height: var(--size-medium);
+  --dropdown-status-margin: 0 0 0 var(--size-xxsmall);
+
+  /* States */
+  --dropdown-background-color-hover: var(--sketch-color-background-secondary);
+  --dropdown-border-color-hover: transparent;
+  --dropdown-border-width-hover: 0;
+  --dropdown-border-offset-hover: 0;
+  --dropdown-caret-color-hover: var(--sketch-color-foreground-tertiary);
+  --dropdown-text-color-hover: var(--sketch-color-foreground-primary);
+
+  --dropdown-background-color-focus: var(--sketch-color-background-tertiary);
+  --dropdown-border-color-focus: var(--sketch-color-accent-primary);
+  --dropdown-border-width-focus: var(--size-unit);
+  --dropdown-border-offset-focus: var(--size--neg-unit);
+  --dropdown-caret-color-focus: var(--sketch-color-foreground-tertiary);
+  --dropdown-text-color-focus: var(--sketch-color-foreground-primary);
+
+  --dropdown-background-color-disabled: var(
+    --sketch-color-background-secondary
+  );
+  --dropdown-border-color-disabled: transparent;
+  --dropdown-border-width-disabled: 0;
+  --dropdown-border-offset-disabled: 0;
+  --dropdown-caret-color-disabled: var(--sketch-color-foreground-disabled);
+  --dropdown-text-color-disabled: var(--sketch-color-foreground-disabled);
+}

@@ -35,7 +35,7 @@
   --knob-graduation-background-color: var(--sketch-color-border-secondary);
 
   --knob-input-top: var(--size-neg-xxsmall);
-  --knob-input-shadow: var(--shadow-floating-window);
+  --knob-input-shadow: var(--elevation-300-tooltip);
   --knob-input-border-color: var(--sketch-color-border-secondary);
   --knob-input-border-width: var(--size-unit);
   --knob-input-border-offset: var(--size-neg-unit);
@@ -59,6 +59,8 @@
   --knob-label-background-color-disabled: var(
     --sketch-color-background-disabled
   );
+  --knob-label-border-color-disabled: var(--sketch-color-border-disabled);
+  --knob-label-text-color-disabled: var(--sketch-color-foreground-disabled);
 
   --knob-label-arrow-stroke-border-color-disabled: transparent;
   --knob-label-arrow-fill-border-color-disabled: transparent;

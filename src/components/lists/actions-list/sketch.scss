@@ -4,9 +4,9 @@
   --actions-list-padding: var(--size-xxsmall) var(--size-xxsmall);
   --actions-list-radius: var(--border-radius-xxlarge);
   --actions-list-background-color: var(--sketch-color-background-primary);
-  --actions-list-border-color: var(--sketch-color-border-disabled);
-  --actions-list-border-width: var(--size-unit);
-  --actions-list-border-offset: var(--size-neg-unit);
+  --actions-list-border-color: transparent;
+  --actions-list-border-width: 0;
+  --actions-list-border-offset: 0;
   --actions-list-shadow: var(--elevation-300-tooltip);
 
   --actions-list-item-height: var(--size-medium);

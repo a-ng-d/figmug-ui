@@ -1,0 +1,33 @@
+:root[data-theme='sketch'] {
+  --popin-breakpoint: 460px;
+  --popin-shadow: var(--elevation-500-modal-window);
+  --popin-shadow-panel: none;
+  --popin-radius: var(--border-radius-xxxlarge);
+  --popin-width-panel: 400px;
+  --popin-min-width: 460px;
+  --popin-max-width: 576px;
+  --popin-min-height: 136px;
+  --popin-background-color: var(--sketch-color-background-primary);
+  --popin-text-color: var(--sketch-color-foreground-primary);
+  --popin-border-color: transparent;
+  --popin-border-width: 0;
+  --popin-border-offset: 0;
+
+  --popin-header-height: var(--size-large);
+  --popin-header-gap: var(--size-xxsmall);
+  --popin-header-padding: var(--size-medium) var(--size-medium) 0
+    var(--size-medium);
+  --popin-header-border: var(--size-unit) solid
+    var(--sketch-color-border-primary);
+  --popin-header-text-transform: none;
+
+  --popin-content-padding-empty: var(--size-medium) var(--size-medium);
+
+  --popin-footer-padding: var(--size-xsmall) var(--size-medium)
+    var(--size-medium);
+  --popin-footer-gap: var(--size-xxsmall);
+  --popin-footer-border: var(--size-unit) solid
+    var(--sketch-color-border-primary);
+
+  --popin-actions-gap: var(--size-xxsmall);
+}
