@@ -39,7 +39,6 @@
   --sketch-color-accent-primary: #f26726;
   --sketch-color-accent-secondary: #ce5820;
   --sketch-color-accent-tertiary: #f267264d;
-  --sketch-color-accent-quaternary: #f267261a;
   --sketch-color-accent-default: ;
   --sketch-color-accent-info: #84d7cf;
   --sketch-color-accent-success: #13be3e;
@@ -47,11 +46,11 @@
   --sketch-color-accent-error: #cc0000;
   --sketch-color-accent-overlay: ;
   --sketch-color-accent-select: #180a04;
+  --sketch-color-accent-disabled: #f267261a;
 
   --sketch-color-background-primary: #202022;
   --sketch-color-background-secondary: #2d2d2f;
   --sketch-color-background-tertiary: #454545;
-  --sketch-color-background-quaternary: #ffffff22;
   --sketch-color-background-default: ;
   --sketch-color-background-info: #f267264d;
   --sketch-color-background-success: #84d7cf4d;
@@ -62,7 +61,6 @@
   --sketch-color-foreground-primary: #ffffff;
   --sketch-color-foreground-secondary: #d9d9d9;
   --sketch-color-foreground-tertiary: #b3b3b3;
-  --sketch-color-foreground-quaternary: #ffffff8c;
   --sketch-color-foreground-info: #84d7cf;
   --sketch-color-foreground-success: #13be3e;
   --sketch-color-foreground-warning: #d4910c;
@@ -71,8 +69,9 @@
   --sketch-color-foreground-disabled: #ffffff8c;
 
   --sketch-color-border-primary: #ffffff12;
-  --sketch-color-border-secondary: #d9d9d9;
-  --sketch-color-border-disabled: #ffffff0b;
+  --sketch-color-border-secondary: #454545;
+  --sketch-color-border-tertiary: #d9d9d9;
+  --sketch-color-border-disabled: #ffffff12;
 
   --color-shadow-dark: ;
   --color-overlay-default: ;

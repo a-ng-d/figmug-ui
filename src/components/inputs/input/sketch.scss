@@ -63,7 +63,7 @@
   );
 
   --input-background-color-empty-hover: var(
-    --sketch-color-background-quaternary
+    --sketch-color-background-disabled
   );
   --input-border-width-empty-hover: 0;
   --input-border-offset-empty-hover: 0;
@@ -82,7 +82,7 @@
     --sketch-color-foreground-secondary
   );
 
-  --input-background-color-hover: var(--sketch-color-background-quaternary);
+  --input-background-color-hover: var(--sketch-color-background-disabled);
   --input-border-width-hover: 0;
   --input-border-offset-hover: 0;
   --input-border-color-hover: transparent;
@@ -111,7 +111,7 @@
   );
 
   --input-background-color-empty-error-hover: var(
-    --sketch-color-background-quaternary
+    --sketch-color-background-disabled
   );
   --input-border-width-empty-error-hover: var(--size-unit);
   --input-border-offset-empty-error-hover: var(--size-neg-unit);
@@ -142,7 +142,7 @@
   );
 
   --input-background-color-error-hover: var(
-    --sketch-color-background-quaternary
+    --sketch-color-background-disabled
   );
   --input-border-width-error-hover: var(--size-unit);
   --input-border-offset-error-hover: var(--size-neg-unit);
