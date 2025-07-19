@@ -23,7 +23,8 @@
   --select-box-radius: var(--border-radius-medium);
   --select-box-margin: var(--size-neg-unit) var(--size-xxsmall) 0
     var(--size-neg-xxsmall);
-  --select-box-border: var(--size-unit) solid var(--penpot-color-foreground-secondary);
+  --select-box-border: var(--size-unit) solid
+    var(--penpot-color-foreground-secondary);
   --select-box-background-color: var(--penpot-color-background-tertiary);
   --select-box-border-color-secondary: transparent;
   --select-box-border-width-secondary: 0;
@@ -49,7 +50,9 @@
   --select-box-border-width-secondary-checked-focus: var(--size-unit);
   --select-box-border-offset-secondary-checked-focus: var(--size-unit);
 
-  --select-box-background-color-disabled: var(--penpot-color-background-primary);
+  --select-box-background-color-disabled: var(
+    --penpot-color-background-primary
+  );
   --select-box-border-disabled: var(--size-unit) solid
     var(--penpot-color-background-quaternary);
   --select-box-background-color-checked-disabled: var(
@@ -95,7 +98,9 @@
     --penpot-color-background-primary
   );
 
-  --select-toggle-border-color-secondary-focus: var(--penpot-color-accent-primary);
+  --select-toggle-border-color-secondary-focus: var(
+    --penpot-color-accent-primary
+  );
   --select-toggle-border-width-secondary-focus: var(--size-unit);
   --select-toggle-border-offset-secondary-focus: var(--size-unit);
   --select-toggle-border-color-secondary-checked-focus: var(
@@ -104,7 +109,9 @@
   --select-toggle-border-width-secondary-checked-focus: var(--size-unit);
   --select-toggle-border-offset-secondary-checked-focus: var(--size-unit);
 
-  --select-toggle-background-color-disabled: var(--penpot-color-background-primary);
+  --select-toggle-background-color-disabled: var(
+    --penpot-color-background-primary
+  );
   --select-toggle-border-disabled: var(--size-unit) solid
     var(--penpot-color-background-quaternary);
   --select-toggle-background-color-checked-disabled: var(
@@ -145,7 +152,9 @@
   --select-button-border-checked: var(--size-unit) solid
     var(--penpot-color-accent-primary);
 
-  --select-button-border-color-secondary-focus: var(--penpot-color-accent-primary);
+  --select-button-border-color-secondary-focus: var(
+    --penpot-color-accent-primary
+  );
   --select-button-border-width-secondary-focus: var(--size-unit);
   --select-button-border-offset-secondary-focus: var(--size-unit);
   --select-button-border-color-secondary-checked-focus: var(
@@ -154,7 +163,9 @@
   --select-button-border-width-secondary-checked-focus: var(--size-unit);
   --select-button-border-offset-secondary-checked-focus: var(--size-unit);
 
-  --select-button-background-color-disabled: var(--penpot-color-background-primary);
+  --select-button-background-color-disabled: var(
+    --penpot-color-background-primary
+  );
   --select-button-border-disabled: var(--size-unit) solid
     var(--penpot-color-background-quaternary);
   --select-button-background-color-checked-disabled: var(

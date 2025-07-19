@@ -9,8 +9,12 @@
   --draggable-item-ghost-height: var(--size-xunit);
   --draggable-item-ghost-inset: var(--size-neg-unit);
 
-  --draggable-item-background-color-selected: var(--penpot-color-accent-primary-muted);
-  --draggable-item-background-color-pressed: var(--penpot-color-accent-primary-muted);
+  --draggable-item-background-color-selected: var(
+    --penpot-color-accent-primary-muted
+  );
+  --draggable-item-background-color-pressed: var(
+    --penpot-color-accent-primary-muted
+  );
 
   --draggable-item-param-width-compact: 112px;
   --draaggagle-item-param-width-square: var(--size-medium);

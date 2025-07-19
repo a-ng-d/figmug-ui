@@ -64,8 +64,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--popin-footer-padding);
     border-top: var(--popin-footer-border);
+    padding: var(--popin-footer-padding);
   }
 
   .popin__actions {

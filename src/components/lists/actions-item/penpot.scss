@@ -17,10 +17,16 @@
   --actions-item-actions-gap: var(--size-xxsmall);
 
   /* States */
-  --actions-item-background-color-hover: var(--penpot-color-background-quaternary);
+  --actions-item-background-color-hover: var(
+    --penpot-color-background-quaternary
+  );
 
-  --actions-item-background-color-focus: var(--penpot-color-accent-primary-muted);
+  --actions-item-background-color-focus: var(
+    --penpot-color-accent-primary-muted
+  );
   --actions-item-border-secondary-width-focus: var(--size-unit);
   --actions-item-border-secondary-offset-focus: var(--size-neg-unit);
-  --actions-item-border-secondary-color-focus: var(--penpot-color-accent-primary);
+  --actions-item-border-secondary-color-focus: var(
+    --penpot-color-accent-primary
+  );
 }

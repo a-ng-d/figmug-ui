@@ -60,7 +60,9 @@
   );
   --select-box-border-checked-disabled: var(--size-unit) solid
     var(--sketch-color-accent-disabled);
-  --select-box-tick-color-disabled: var(--sketch-color-foreground-onaccent-disabled);
+  --select-box-tick-color-disabled: var(
+    --sketch-color-foreground-onaccent-disabled
+  );
 
   /* Switch */
   --select-switch-height: var(--size-medium);
@@ -173,5 +175,7 @@
   );
   --select-button-border-checked-disabled: var(--size-unit) solid
     var(--sketch-color-accent-disabled);
-  --select-button-icon-color-disabled: var(--sketch-color-foreground-onaccent-disabled);
+  --select-button-icon-color-disabled: var(
+    --sketch-color-foreground-onaccent-disabled
+  );
 }

@@ -29,8 +29,12 @@
     --knob-label-border-width: var(--knob-label-border-width-focus);
     --knob-label-arrow-stroke-inset: var(--knob-label-arrow-stroke-inset-focus);
     --knob-label-arrow-stroke-width: var(--knob-label-arrow-stroke-width-focus);
-    --knob-label-arrow-stroke-border-color: var(--knob-label-arrow-stroke-border-color-focus);
-    --knob-label-arrow-fill-border-color: var(--knob-label-arrow-fill-border-color-focus);
+    --knob-label-arrow-stroke-border-color: var(
+      --knob-label-arrow-stroke-border-color-focus
+    );
+    --knob-label-arrow-fill-border-color: var(
+      --knob-label-arrow-fill-border-color-focus
+    );
   }
 
   &:focus,
@@ -45,8 +49,12 @@
     --knob-label-background-color: var(--knob-label-background-color-disabled);
     --knob-label-border-color: var(--knob-label-border-color-disabled);
     --knob-label-text-color: var(--knob-label-text-color-disabled);
-    --knob-label-arrow-stroke-border-color: var(--knob-label-arrow-stroke-border-color-disabled);
-    --knob-label-arrow-fill-border-color: var(--knob-label-arrow-fill-border-color-disabled);
+    --knob-label-arrow-stroke-border-color: var(
+      --knob-label-arrow-stroke-border-color-disabled
+    );
+    --knob-label-arrow-fill-border-color: var(
+      --knob-label-arrow-fill-border-color-disabled
+    );
   }
 }
 

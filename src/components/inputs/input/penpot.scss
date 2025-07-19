@@ -44,7 +44,9 @@
   --input-textarea-border-offset: 0;
   --input-textarea-border-color: transparent;
   --input-textarea-text-color: var(--penpot-color-foreground-primary);
-  --input-text-textarea-placeholder-color: var(--penpot-color-foreground-secondary);
+  --input-text-textarea-placeholder-color: var(
+    --penpot-color-foreground-secondary
+  );
 
   --input-status-height: var(--size-medium);
   --input-status-height-long-text: var(--size-medium);
@@ -56,35 +58,47 @@
   --input-border-offset-empty: 0;
   --input-border-color-empty: transparent;
   --input-text-color-empty: var(--penpot-color-foreground-primary);
-  --input-text-placeholder-color-empty: var(--penpot-color-foreground-secondary);
+  --input-text-placeholder-color-empty: var(
+    --penpot-color-foreground-secondary
+  );
 
-  --input-background-color-empty-hover: var(--penpot-color-background-quaternary);
+  --input-background-color-empty-hover: var(
+    --penpot-color-background-quaternary
+  );
   --input-border-width-empty-hover: 0;
   --input-border-offset-empty-hover: 0;
   --input-border-color-empty-hover: transparent;
   --input-text-color-empty-hover: var(--penpot-color-foreground-primary);
-  --input-text-placeholder-color-empty-hover: var(--penpot-color-foreground-secondary);
+  --input-text-placeholder-color-empty-hover: var(
+    --penpot-color-foreground-secondary
+  );
 
   --input-background-color-empty-focus: var(--penpot-color-background-tertiary);
   --input-border-width-empty-focus: var(--size-unit);
   --input-border-offset-empty-focus: var(--size-unit);
   --input-border-color-empty-focus: var(--penpot-color-accent-primary);
   --input-text-color-empty-focus: var(--penpot-color-foreground-primary);
-  --input-text-placeholder-color-empty-focus: var(--penpot-color-foreground-secondary);
+  --input-text-placeholder-color-empty-focus: var(
+    --penpot-color-foreground-secondary
+  );
 
   --input-background-color-hover: var(--penpot-color-background-quaternary);
   --input-border-width-hover: 0;
   --input-border-offset-hover: 0;
   --input-border-color-hover: transparent;
   --input-text-color-hover: var(--penpot-color-foreground-primary);
-  --input-text-placeholder-color-hover: var(--penpot-color-foreground-secondary);
+  --input-text-placeholder-color-hover: var(
+    --penpot-color-foreground-secondary
+  );
 
   --input-background-color-focus: var(--penpot-color-background-tertiary);
   --input-border-width-focus: var(--size-unit);
   --input-border-offset-focus: var(--size-unit);
   --input-border-color-focus: var(--penpot-color-accent-primary);
   --input-text-color-focus: var(--penpot-color-foreground-primary);
-  --input-text-placeholder-color-focus: var(--penpot-color-foreground-secondary);
+  --input-text-placeholder-color-focus: var(
+    --penpot-color-foreground-secondary
+  );
 
   /* Error */
   --input-background-color-empty-error: var(--penpot-color-background-tertiary);
@@ -92,7 +106,9 @@
   --input-border-offset-empty-error: var(--size-unit);
   --input-border-color-empty-error: var(--penpot-color-accent-error);
   --input-text-color-empty-error: var(--penpot-color-foreground-primary);
-  --input-text-placeholder-color-empty-error: var(--penpot-color-foreground-secondary);
+  --input-text-placeholder-color-empty-error: var(
+    --penpot-color-foreground-secondary
+  );
 
   --input-background-color-empty-error-hover: var(
     --penpot-color-background-quaternary
@@ -105,7 +121,9 @@
     --penpot-color-foreground-secondary
   );
 
-  --input-background-color-empty-error-focus: var(--penpot-color-background-tertiary);
+  --input-background-color-empty-error-focus: var(
+    --penpot-color-background-tertiary
+  );
   --input-border-width-empty-error-focus: var(--size-unit);
   --input-border-offset-empty-error-focus: var(--size-unit);
   --input-border-color-empty-error-focus: var(--penpot-color-foreground-error);
@@ -119,21 +137,29 @@
   --input-border-offset-error: var(--size-unit);
   --input-border-color-error: var(--penpot-color-accent-error);
   --input-text-color-error: var(--penpot-color-foreground-primary);
-  --input-text-placeholder-color-error: var(--penpot-color-foreground-secondary);
+  --input-text-placeholder-color-error: var(
+    --penpot-color-foreground-secondary
+  );
 
-  --input-background-color-error-hover: var(--penpot-color-background-quaternary);
+  --input-background-color-error-hover: var(
+    --penpot-color-background-quaternary
+  );
   --input-border-width-error-hover: var(--size-unit);
   --input-border-offset-error-hover: var(--size-unit);
   --input-border-color-error-hover: var(--penpot-color-accent-error);
   --input-text-color-error-hover: var(--penpot-color-foreground-primary);
-  --input-text-placeholder-color-error-hover: var(--penpot-color-foreground-secondary);
+  --input-text-placeholder-color-error-hover: var(
+    --penpot-color-foreground-secondary
+  );
 
   --input-background-color-error-focus: var(--penpot-color-background-tertiary);
   --input-border-width-error-focus: var(--size-unit);
   --input-border-offset-error-focus: var(--size-unit);
   --input-border-color-error-focus: var(--penpot-color-foreground-error);
   --input-text-color-error-focus: var(--penpot-color-foreground-primary);
-  --input-text-placeholder-color-error-focus: var(--penpot-color-foreground-secondary);
+  --input-text-placeholder-color-error-focus: var(
+    --penpot-color-foreground-secondary
+  );
 
   /* Disabled */
   --input-background-color-disabled: var(--penpot-color-background-primary);
@@ -141,7 +167,9 @@
   --input-border-offset-disabled: var(--size-unit);
   --input-border-color-disabled: var(--penpot-color-background-quaternary);
   --input-text-color-disabled: var(--penpot-color-foreground-secondary);
-  --input-text-placeholder-color-disabled: var(--penpot-color-foreground-disabled);
+  --input-text-placeholder-color-disabled: var(
+    --penpot-color-foreground-disabled
+  );
   --input-color-chip-opacity-disabled: 0.5;
 
   /* On Selected */
@@ -149,7 +177,9 @@
   --input-border-color-onselected: var(--penpot-color-accent-primary);
   --input-border-width-onselected: var(--size-unit);
   --input-border-offset-onselected: var(--size-unit);
-  --input-background-color-onselected-hover: var(--penpot-color-background-tertiary);
+  --input-background-color-onselected-hover: var(
+    --penpot-color-background-tertiary
+  );
   --input-border-color-onselected-hover: var(--penpot-color-accent-primary);
   --input-border-width-onselected-hover: var(--size-unit);
   --input-border-offset-onselected-hover: var(--size-unit);

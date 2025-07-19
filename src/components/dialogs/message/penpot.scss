@@ -10,7 +10,9 @@
   --message-ticker-max-width: 640px;
   --message-ticker-gap: var(--size-medium);
   --message-ticker-padding: 0 var(--size-xsmall);
-  --message-ticker-mask-background-color: var(--penpot-color-background-primary);
+  --message-ticker-mask-background-color: var(
+    --penpot-color-background-primary
+  );
   --message-ticker-mask-width: var(--size-xsmall);
 
   --message-text-color-disabled: var(--penpot-color-foreground-disabled);

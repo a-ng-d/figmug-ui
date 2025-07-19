@@ -20,10 +20,10 @@
   &__status {
     display: flex;
     align-items: center;
+    align-self: start;
     gap: var(--select-status-gap);
     margin: var(--select-status-margin);
     height: var(--select-status-height);
-    align-self: start;
   }
 }
 

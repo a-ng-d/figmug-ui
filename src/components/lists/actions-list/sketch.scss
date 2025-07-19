@@ -42,8 +42,10 @@
   --actions-list-caret-height: var(--size-xsmall);
   --actions-list-caret-color: var(--sketch-color-foreground-primary);
 
-  --actions-list-submenu-inset-right: var(--size-neg-xxsmall) var(--size-neg-xxsmall) auto auto;
-  --actions-list-submenu-inset-left: var(--size-neg-xxsmall) auto auto var(--size-neg-xxsmall);
+  --actions-list-submenu-inset-right: var(--size-neg-xxsmall)
+    var(--size-neg-xxsmall) auto auto;
+  --actions-list-submenu-inset-left: var(--size-neg-xxsmall) auto auto
+    var(--size-neg-xxsmall);
 
   --actions-list-title-text-transform: uppercase;
 

@@ -96,7 +96,9 @@
   --button-text-color-primary-hover: var(--sketch-color-foreground-onaccent);
   --button-text-color-primary-pressed: var(--sketch-color-foreground-onaccent);
   --button-text-color-primary-focus: var(--sketch-color-foreground-onaccent);
-  --button-text-color-primary-disabled: var(--sketch-color-foreground-onaccent-disabled);
+  --button-text-color-primary-disabled: var(
+    --sketch-color-foreground-onaccent-disabled
+  );
 
   --button-text-decoration-primary: none;
   --button-text-decoration-primary-hover: none;
@@ -108,7 +110,9 @@
   --button-icon-color-primary-hover: var(--sketch-color-foreground-onaccent);
   --button-icon-color-primary-pressed: var(--sketch-color-foreground-onaccent);
   --button-icon-color-primary-focus: var(--sketch-color-foreground-onaccent);
-  --button-icon-color-primary-disabled: var(--sketch-color-foreground-onaccent-disabled);
+  --button-icon-color-primary-disabled: var(
+    --sketch-color-foreground-onaccent-disabled
+  );
 
   /* Secondary */
   --button-background-color-secondary: var(--sketch-color-background-primary);
@@ -158,15 +162,11 @@
   --button-text-decoration-secondary-disabled: none;
 
   --button-icon-color-secondary: var(--sketch-color-foreground-tertiary);
-  --button-icon-color-secondary-hover: var(
-    --sketch-color-foreground-tertiary
-  );
+  --button-icon-color-secondary-hover: var(--sketch-color-foreground-tertiary);
   --button-icon-color-secondary-pressed: var(
     --sketch-color-foreground-tertiary
   );
-  --button-icon-color-secondary-focus: var(
-    --sketch-color-foreground-tertiary
-  );
+  --button-icon-color-secondary-focus: var(--sketch-color-foreground-tertiary);
   --button-icon-color-secondary-disabled: var(
     --sketch-color-foreground-disabled
   );
@@ -259,10 +259,18 @@
   --button-border-color-destructive-disabled: transparent;
 
   --button-text-color-destructive: var(--sketch-color-foreground-onaccent);
-  --button-text-color-destructive-hover: var(--sketch-color-foreground-onaccent);
-  --button-text-color-destructive-pressed: var(--sketch-color-foreground-onaccent);
-  --button-text-color-destructive-focus: var(--sketch-color-foreground-onaccent);
-  --button-text-color-destructive-disabled: var(--sketch-color-foreground-onaccent-disabled);
+  --button-text-color-destructive-hover: var(
+    --sketch-color-foreground-onaccent
+  );
+  --button-text-color-destructive-pressed: var(
+    --sketch-color-foreground-onaccent
+  );
+  --button-text-color-destructive-focus: var(
+    --sketch-color-foreground-onaccent
+  );
+  --button-text-color-destructive-disabled: var(
+    --sketch-color-foreground-onaccent-disabled
+  );
 
   --button-text-decoration-destructive: none;
   --button-text-decoration-destructive-hover: none;
@@ -271,10 +279,18 @@
   --button-text-decoration-destructive-disabled: none;
 
   --button-icon-color-destructive: var(--sketch-color-foreground-onaccent);
-  --button-icon-color-destructive-hover: var(--sketch-color-foreground-onaccent);
-  --button-icon-color-destructive-pressed: var(--sketch-color-foreground-onaccent);
-  --button-icon-color-destructive-focus: var(--sketch-color-foreground-onaccent);
-  --button-icon-color-destructive-disabled: var(--sketch-color-foreground-onaccent-disabled);
+  --button-icon-color-destructive-hover: var(
+    --sketch-color-foreground-onaccent
+  );
+  --button-icon-color-destructive-pressed: var(
+    --sketch-color-foreground-onaccent
+  );
+  --button-icon-color-destructive-focus: var(
+    --sketch-color-foreground-onaccent
+  );
+  --button-icon-color-destructive-disabled: var(
+    --sketch-color-foreground-onaccent-disabled
+  );
 
   /* Alternative */
   --button-background-color-alternative: var(--sketch-color-accent-disabled);
@@ -404,9 +420,7 @@
   );
 
   /* Icon Button - Selected */
-  --icon-button-background-color-selected: var(
-    --sketch-color-accent-disabled
-  );
+  --icon-button-background-color-selected: var(--sketch-color-accent-disabled);
   --icon-button-background-color-selected-hover: var(
     --sketch-color-accent-tertiary
   );

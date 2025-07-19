@@ -10,7 +10,9 @@
 
   --simple-item-background-color-hover: var(--penpot-color-background-tertiary);
 
-  --simple-item-background-color-focus: var(--penpot-color-accent-primary-muted);
+  --simple-item-background-color-focus: var(
+    --penpot-color-accent-primary-muted
+  );
   --simple-item-border-width-focus: var(--size-unit);
   --simple-item-border-offset-focus: var(--size-neg-unit);
   --simple-item-border-color-focus: var(--penpot-color-accent-primary);

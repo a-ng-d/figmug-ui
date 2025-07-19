@@ -68,8 +68,12 @@
   /* Primary */
   --button-background-color-primary: var(--penpot-color-accent-primary);
   --button-background-color-primary-hover: var(--penpot-color-accent-tertiary);
-  --button-background-color-primary-pressed: var(--penpot-color-background-secondary);
-  --button-background-color-primary-focus: var(--penpot-color-background-tertiary);
+  --button-background-color-primary-pressed: var(
+    --penpot-color-background-secondary
+  );
+  --button-background-color-primary-focus: var(
+    --penpot-color-background-tertiary
+  );
   --button-background-color-primary-disabled: var(
     --penpot-color-background-quaternary
   );
@@ -112,11 +116,15 @@
 
   /* Secondary */
   --button-background-color-secondary: var(--penpot-color-background-tertiary);
-  --button-background-color-secondary-hover: var(--penpot-color-background-quaternary);
+  --button-background-color-secondary-hover: var(
+    --penpot-color-background-quaternary
+  );
   --button-background-color-secondary-pressed: var(
     --penpot-color-background-secondary
   );
-  --button-background-color-secondary-focus: var(--penpot-color-background-tertiary);
+  --button-background-color-secondary-focus: var(
+    --penpot-color-background-tertiary
+  );
   --button-background-color-secondary-disabled: var(
     --penpot-color-background-quaternary
   );
@@ -135,7 +143,9 @@
 
   --button-border-color-secondary: transparent;
   --button-border-color-secondary-hover: transparent;
-  --button-border-color-secondary-pressed: var(--penpot-color-background-quaternary);
+  --button-border-color-secondary-pressed: var(
+    --penpot-color-background-quaternary
+  );
   --button-border-color-secondary-focus: var(--penpot-color-accent-primary);
   --button-border-color-secondary-disabled: transparent;
 
@@ -143,7 +153,9 @@
   --button-text-color-secondary-hover: var(--penpot-color-accent-primary);
   --button-text-color-secondary-pressed: var(--penpot-color-accent-primary);
   --button-text-color-secondary-focus: var(--penpot-color-foreground-secondary);
-  --button-text-color-secondary-disabled: var(--penpot-color-foreground-disabled);
+  --button-text-color-secondary-disabled: var(
+    --penpot-color-foreground-disabled
+  );
 
   --button-text-decoration-secondary: none;
   --button-text-decoration-secondary-hover: none;
@@ -155,17 +167,27 @@
   --button-icon-color-secondary-hover: var(--penpot-color-accent-primary);
   --button-icon-color-secondary-pressed: var(--penpot-color-accent-primary);
   --button-icon-color-secondary-focus: var(--penpot-color-foreground-secondary);
-  --button-icon-color-secondary-disabled: var(--penpot-color-foreground-disabled);
+  --button-icon-color-secondary-disabled: var(
+    --penpot-color-foreground-disabled
+  );
 
   /* Tertiary */
   --button-text-font-size-tertiary: var(--font-size-small);
   --button-padding-tertiary: 0;
 
   --button-background-color-tertiary: var(--penpot-color-background-primary);
-  --button-background-color-tertiary-hover: var(--penpot-color-background-primary);
-  --button-background-color-tertiary-pressed: var(--penpot-color-background-primary);
-  --button-background-color-tertiary-focus: var(--penpot-color-background-primary);
-  --button-background-color-tertiary-disabled: var(--penpot-color-background-primary);
+  --button-background-color-tertiary-hover: var(
+    --penpot-color-background-primary
+  );
+  --button-background-color-tertiary-pressed: var(
+    --penpot-color-background-primary
+  );
+  --button-background-color-tertiary-focus: var(
+    --penpot-color-background-primary
+  );
+  --button-background-color-tertiary-disabled: var(
+    --penpot-color-background-primary
+  );
 
   --button-border-width-tertiary: 0;
   --button-border-width-tertiary-hover: 0;
@@ -189,7 +211,9 @@
   --button-text-color-tertiary-hover: var(--penpot-color-accent-primary);
   --button-text-color-tertiary-pressed: var(--penpot-color-accent-primary);
   --button-text-color-tertiary-focus: var(--penpot-color-accent-primary);
-  --button-text-color-tertiary-disabled: var(--penpot-color-foreground-disabled);
+  --button-text-color-tertiary-disabled: var(
+    --penpot-color-foreground-disabled
+  );
 
   --button-text-decoration-tertiary: none;
   --button-text-decoration-tertiary-hover: none;
@@ -201,16 +225,24 @@
   --button-icon-color-tertiary-hover: var(--penpot-color-accent-primary);
   --button-icon-color-tertiary-pressed: var(--penpot-color-accent-primary);
   --button-icon-color-tertiary-focus: var(--penpot-color-accent-primary);
-  --button-icon-color-tertiary-disabled: var(--penpot-color-foreground-disabled);
+  --button-icon-color-tertiary-disabled: var(
+    --penpot-color-foreground-disabled
+  );
 
   /* Destructive */
   --button-background-color-destructive: var(--penpot-color-accent-error);
-  --button-background-color-destructive-hover: var(--penpot-color-foreground-error);
+  --button-background-color-destructive-hover: var(
+    --penpot-color-foreground-error
+  );
   --button-background-color-destructive-pressed: var(
     --penpot-color-background-secondary
   );
-  --button-background-color-destructive-focus: var(--penpot-color-background-tertiary);
-  --button-background-color-destructive-disabled: var(--penpot-color-background-error);
+  --button-background-color-destructive-focus: var(
+    --penpot-color-background-tertiary
+  );
+  --button-background-color-destructive-disabled: var(
+    --penpot-color-background-error
+  );
 
   --button-border-width-destructive: 0;
   --button-border-width-destructive-hover: 0;
@@ -233,8 +265,12 @@
   --button-text-color-destructive: var(--penpot-color-foreground-primary);
   --button-text-color-destructive-hover: var(--penpot-color-foreground-primary);
   --button-text-color-destructive-pressed: var(--penpot-color-accent-error);
-  --button-text-color-destructive-focus: var(--penpot-color-foreground-secondary);
-  --button-text-color-destructive-disabled: var(--penpot-color-foreground-disabled);
+  --button-text-color-destructive-focus: var(
+    --penpot-color-foreground-secondary
+  );
+  --button-text-color-destructive-disabled: var(
+    --penpot-color-foreground-disabled
+  );
 
   --button-text-decoration-destructive: none;
   --button-text-decoration-destructive-hover: none;
@@ -245,16 +281,26 @@
   --button-icon-color-destructive: var(--penpot-color-foreground-primary);
   --button-icon-color-destructive-hover: var(--penpot-color-foreground-primary);
   --button-icon-color-destructive-pressed: var(--penpot-color-accent-error);
-  --button-icon-color-destructive-focus: var(--penpot-color-foreground-secondary);
-  --button-icon-color-destructive-disabled: var(--penpot-color-foreground-disabled);
+  --button-icon-color-destructive-focus: var(
+    --penpot-color-foreground-secondary
+  );
+  --button-icon-color-destructive-disabled: var(
+    --penpot-color-foreground-disabled
+  );
 
   /* Alternative */
-  --button-background-color-alternative: var(--penpot-color-accent-primary-muted);
-  --button-background-color-alternative-hover: var(--penpot-color-accent-tertiary);
+  --button-background-color-alternative: var(
+    --penpot-color-accent-primary-muted
+  );
+  --button-background-color-alternative-hover: var(
+    --penpot-color-accent-tertiary
+  );
   --button-background-color-alternative-pressed: var(
     --penpot-color-background-secondary
   );
-  --button-background-color-alternative-focus: var(--penpot-color-background-tertiary);
+  --button-background-color-alternative-focus: var(
+    --penpot-color-background-tertiary
+  );
   --button-background-color-alternative-disabled: var(
     --penpot-color-background-quaternary
   );
@@ -281,7 +327,9 @@
   --button-text-color-alternative-hover: var(--penpot-color-foreground-primary);
   --button-text-color-alternative-pressed: var(--penpot-color-accent-tertiary);
   --button-text-color-alternative-focus: var(--penpot-color-accent-tertiary);
-  --button-text-color-alternative-disabled: var(--penpot-color-foreground-disabled);
+  --button-text-color-alternative-disabled: var(
+    --penpot-color-foreground-disabled
+  );
 
   --button-text-decoration-alternative: none;
   --button-text-decoration-alternative-hover: none;
@@ -293,14 +341,20 @@
   --button-icon-color-alternative-hover: var(--penpot-color-foreground-primary);
   --button-icon-color-alternative-pressed: var(--penpot-color-accent-tertiary);
   --button-icon-color-alternative-focus: var(--penpot-color-accent-tertiary);
-  --button-icon-color-alternative-disabled: var(--penpot-color-foreground-disabled);
+  --button-icon-color-alternative-disabled: var(
+    --penpot-color-foreground-disabled
+  );
 
   /* Icon Button - Default */
   --icon-button-background-color: var(--penpot-color-background-primary);
   --icon-button-background-color-hover: var(--penpot-color-background-tertiary);
-  --icon-button-background-color-pressed: var(--penpot-color-background-secondary);
+  --icon-button-background-color-pressed: var(
+    --penpot-color-background-secondary
+  );
   --icon-button-background-color-focus: var(--penpot-color-background-tertiary);
-  --icon-button-background-color-disabled: var(--penpot-color-background-quaternary);
+  --icon-button-background-color-disabled: var(
+    --penpot-color-background-quaternary
+  );
 
   --icon-button-border-width: 0;
   --icon-button-border-width-hover: 0;
@@ -326,7 +380,9 @@
   --icon-button-icon-color-focus: var(--penpot-color-foreground-primary);
   --icon-button-icon-color-disabled: var(--penpot-color-foreground-disabled);
 
-  --icon-button-notification-background-color: var(--penpot-color-accent-primary);
+  --icon-button-notification-background-color: var(
+    --penpot-color-accent-primary
+  );
   --icon-button-notification-background-color-hover: var(
     --penpot-color-accent-primary
   );
@@ -340,7 +396,9 @@
     --penpot-color-accent-primary-muted
   );
 
-  --icon-button-notification-border-color: var(--penpot-color-background-primary);
+  --icon-button-notification-border-color: var(
+    --penpot-color-background-primary
+  );
   --icon-button-notification-border-color-hover: var(
     --penpot-color-background-tertiary
   );
@@ -354,13 +412,17 @@
     --penpot-color-background-quaternary
   );
 
-  --icon-button-background-color-onselected: var(--penpot-color-accent-primary-muted);
+  --icon-button-background-color-onselected: var(
+    --penpot-color-accent-primary-muted
+  );
   --icon-button-background-color-onselected-hover: var(
     --penpot-color-accent-primary-muted
   );
 
   /* Icon Button - Selected */
-  --icon-button-background-color-selected: var(--penpot-color-background-tertiary);
+  --icon-button-background-color-selected: var(
+    --penpot-color-background-tertiary
+  );
   --icon-button-background-color-selected-hover: var(
     --penpot-color-background-tertiary
   );
@@ -396,7 +458,9 @@
   --icon-button-icon-color-selected-hover: var(--penpot-color-accent-primary);
   --icon-button-icon-color-selected-pressed: var(--penpot-color-accent-primary);
   --icon-button-icon-color-selected-focus: var(--penpot-color-accent-primary);
-  --icon-button-icon-color-selected-disabled: var(--penpot-color-accent-primary-muted);
+  --icon-button-icon-color-selected-disabled: var(
+    --penpot-color-accent-primary-muted
+  );
 
   --icon-button-notification-background-color-selected: var(
     --penpot-color-accent-primary

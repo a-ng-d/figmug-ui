@@ -10,11 +10,17 @@
 
   --semantic-message-background-color-info: var(--penpot-color-background-info);
   --semantic-message-background-color-info-accent: #00000030;
-  --semantic-message-background-color-error: var(--penpot-color-background-error);
+  --semantic-message-background-color-error: var(
+    --penpot-color-background-error
+  );
   --semantic-message-background-color-error-accent: #00000030;
-  --semantic-message-background-color-success: var(--penpot-color-background-success);
+  --semantic-message-background-color-success: var(
+    --penpot-color-background-success
+  );
   --semantic-message-background-color-success-accent: #00000030;
-  --semantic-message-background-color-warning: var(--penpot-color-background-warning);
+  --semantic-message-background-color-warning: var(
+    --penpot-color-background-warning
+  );
   --semantic-message-background-color-warning-accent: #00000030;
 
   --semantic-message-border-color-info: var(--penpot-color-accent-info);
