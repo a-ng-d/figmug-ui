@@ -93,6 +93,10 @@
     height: var(--button-large-height);
   }
 
+  .icon-chip {
+    pointer-events: auto;
+  }
+
   &--primary {
     --button-background-color: var(--button-background-color-primary);
     --button-border-color: var(--button-border-color-primary);
@@ -101,6 +105,7 @@
     --button-text-color: var(--button-text-color-primary);
     --button-icon-color: var(--button-icon-color-primary);
     --button-text-decoration: var(--button-text-decoration-primary);
+    --icon-picto-color: var(--button-icon-color-primary);
 
     &:enabled:hover {
       --button-background-color: var(--button-background-color-primary-hover);
@@ -153,6 +158,7 @@
     --button-text-color: var(--button-text-color-secondary);
     --button-icon-color: var(--button-icon-color-secondary);
     --button-text-decoration: var(--button-text-decoration-secondary);
+    --icon-picto-color: var(--button-icon-color-secondary);
 
     &:enabled:hover {
       --button-background-color: var(--button-background-color-secondary-hover);
@@ -265,6 +271,7 @@
     --button-text-color: var(--button-text-color-destructive);
     --button-icon-color: var(--button-icon-color-destructive);
     --button-text-decoration: var(--button-text-decoration-destructive);
+    --icon-picto-color: var(--button-icon-color-destructive);
 
     &:enabled:hover {
       --button-background-color: var(
@@ -327,6 +334,7 @@
     --button-text-color: var(--button-text-color-alternative);
     --button-icon-color: var(--button-icon-color-alternative);
     --button-text-decoration: var(--button-text-decoration-alternative);
+    --icon-picto-color: var(--button-icon-color-alternative);
 
     &:enabled:hover {
       --button-background-color: var(
