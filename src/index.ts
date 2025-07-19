@@ -1,3 +1,5 @@
+import sketchTypes from '@styles/tokens/modules/sketch-types.module.scss'
+import sketchColors from '@styles/tokens/modules/sketch-colors.module.scss'
 import penpotTypes from '@styles/tokens/modules/penpot-types.module.scss'
 import penpotColors from '@styles/tokens/modules/penpot-colors.module.scss'
 import globals from '@styles/tokens/modules/globals.module.scss'
@@ -78,4 +80,6 @@ export {
   figmaTypes,
   penpotColors,
   penpotTypes,
+  sketchColors,
+  sketchTypes,
 }
