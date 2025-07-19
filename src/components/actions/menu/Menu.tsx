@@ -151,17 +151,8 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
       const option = activeOptions[0]
       return (
         <Button
-          type={type === 'ICON' ? 'icon' : 'primary'}
-          label={type === 'ICON' ? undefined : option.label}
-          icon={type === 'ICON' ? icon : undefined}
-          customIcon={type === 'ICON' ? customIcon : undefined}
-          helper={
-            type === 'ICON' && option.label
-              ? {
-                  label: option.label,
-                }
-              : undefined
-          }
+          type={type === 'ICON' ? 'secondary' : 'primary'}
+          label={option.label}
           isLoading={state === 'LOADING'}
           isDisabled={state === 'DISABLED' || isBlocked}
           isBlocked={activeOptions[0].isBlocked}
