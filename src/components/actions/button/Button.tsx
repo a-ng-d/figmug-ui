@@ -114,6 +114,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           if (e.key === 'Escape') (e.target as HTMLElement).blur()
         }}
         onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
+        tabIndex={0}
         ref={this.buttonRef}
       >
         {icon !== undefined && (
@@ -181,6 +182,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         data-feature={feature}
         ref={this.buttonRef}
         aria-label={label}
+        tabIndex={0}
       >
         <a
           href={url}
@@ -249,6 +251,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         onBlur={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: false })
         }}
+        tabIndex={0}
         ref={this.buttonRef}
       >
         {customIcon === undefined ? (

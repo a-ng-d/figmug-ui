@@ -129,6 +129,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           checked={isChecked}
           disabled={isDisabled || isBlocked}
           onChange={action}
+          tabIndex={0}
           ref={this.inputRef}
           aria-label={label}
         />
@@ -173,6 +174,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           checked={isChecked}
           disabled={isDisabled || isBlocked}
           onChange={action}
+          tabIndex={0}
           ref={this.inputRef}
           aria-label={label}
         />
@@ -215,6 +217,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           checked={isChecked}
           disabled={isDisabled || isBlocked}
           onChange={action}
+          tabIndex={0}
           ref={this.inputRef}
           aria-label={label}
         />

@@ -262,6 +262,7 @@ export default class Dropdown extends React.Component<
             return null
           }}
           onMouseDown={!(isDisabled || isBlocked) ? this.onOpenMenu : undefined}
+          tabIndex={0}
           ref={this.buttonRef}
         >
           <span
