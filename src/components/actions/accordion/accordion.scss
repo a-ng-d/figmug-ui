@@ -22,11 +22,16 @@
     --icon-picto-color: var(--accordion-icon-color);
     --icon-button-icon-color: var(--accordion-icon-color);
 
-    &:hover {
+    &:hover, &:focus-within {
       --section-title-text-color: var(--accordion-text-color-hover);
       --text-color-primary: var(--accordion-text-color-hover);
       --icon-picto-color: var(--accordion-icon-color-hover);
       --icon-button-icon-color: var(--accordion-icon-color-hover);
+    }
+
+    &:focus-within {
+      --section-title-text-color: var(--accordion-text-color-hover);
+      --text-color-primary: var(--accordion-text-color-hover);
     }
   }
 
