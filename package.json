@@ -20,7 +20,8 @@
     "format:fix": "prettier --write .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "create-theme": "node scripts/create-theme.js"
   },
   "dependencies": {
     "@a_ng_d/figmug-utils": "^0.6.0",
