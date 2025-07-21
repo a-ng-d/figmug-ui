@@ -21,6 +21,7 @@ export { default as Icon } from '@components/assets/icon/Icon'
 export { default as Avatar } from '@components/assets/avatar/Avatar'
 export { default as SectionTitle } from '@components/assets/section-title/SectionTitle'
 export { default as Thumbnail } from '@components/assets/thumbnail/Thumbnail'
+export { default as Text } from '@components/assets/text/Text'
 
 // Dialogs
 export { default as Consent } from '@components/dialogs/consent/Consent'
