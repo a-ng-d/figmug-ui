@@ -13,15 +13,15 @@
   --text-default-letter-spacing: var(--font-letter-spacing-pos-xsmall);
 
   --text-small-font-size: var(--font-size-small);
-  --text-small-letter-spacing: var(--font-letter-spacing-pos-small);
+  --text-small-letter-spacing: 0;
 
   --text-large-font-size: var(--font-size-medlum);
   --text-large-line-height: var(--font-line-height-large);
-  --text-large-letter-spacing: var(--font-letter-spacing-pos-large);
+  --text-large-letter-spacing: var(--font-letter-spacing-medium);
 
   --text-xlarge-font-size: var(--font-size-large);
   --text-xlarge-line-height: var(--font-line-height-large);
-  --text-xlarge-letter-spacing: var(--font-letter-spacing-pos-xlarge);
+  --text-xlarge-letter-spacing: var(--font-letter-spacing-pos-xsmall);
 
   --text-link-color: var(--figma-color-text-brand);
   --text-link-decoration: none;

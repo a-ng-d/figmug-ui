@@ -32,14 +32,14 @@
   --font-line-height-large: 20px;
 
   /* Letterspacing */
-  --font-letter-spacing-neg-xlarge: -0.001em;
-  --font-letter-spacing-neg-large: -0.0025em;
-  --font-letter-spacing-neg-small: -0.005em;
-  --font-letter-spacing-neg-xsmall: -0.01em;
-  --font-letter-spacing-pos-xsmall: 0.005em;
-  --font-letter-spacing-pos-small: 0;
-  --font-letter-spacing-pos-large: 0.0025em;
-  --font-letter-spacing-pos-xlarge: 0.001em;
+  --font-letter-spacing-neg-xlarge: -0.01em;
+  --font-letter-spacing-neg-large: -0.005em;
+  --font-letter-spacing-neg-medium: -0.0025em;
+  --font-letter-spacing-neg-small: -0.001em;
+  --font-letter-spacing-pos-small: 0.001em;
+  --font-letter-spacing-pos-medium: 0.0025em;
+  --font-letter-spacing-pos-large: 0.005em;
+  --font-letter-spacing-pos-xlarge: 0.01em;
 
   /* Border Radius */
   --border-radius-xsmall: 1px;
