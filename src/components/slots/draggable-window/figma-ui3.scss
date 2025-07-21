@@ -1,15 +1,15 @@
 :root[data-theme='figma-ui3'] {
-  --draggable-window-width: 296px;
-  --draggable-window-radius: var(--border-radius-xxlarge);
-  --draggable-window-shadow: var(--elevation-500-modal-window);
-  --draggable-window-background-color: var(--figma-color-bg);
-  --draggable-window-border-color: transparent;
-  --draggable-window-border-width: 0;
-  --draggable-window-border-offset: 0;
+  --draggable_window-width: 296px;
+  --draggable_window-radius: var(--border-radius-xxlarge);
+  --draggable_window-shadow: var(--elevation-500-modal-window);
+  --draggable_window-background-color: var(--figma-color-bg);
+  --draggable_window-border-color: transparent;
+  --draggable_window-border-width: 0;
+  --draggable_window-border-offset: 0;
 
-  --draggable-window-header-border: var(--size-pos-unit) solid
+  --draggable_window-header-border: var(--size-pos-unit) solid
     var(--figma-color-border);
 
-  --draggable-window-content-padding: var(--size-pos-xxsmall);
-  --draggable-window-content-gap: var(--size-pos-xxxsmall);
+  --draggable_window-content-padding: var(--size-pos-xxsmall);
+  --draggable_window-content-gap: var(--size-pos-xxxsmall);
 }

@@ -1,20 +1,20 @@
 {
   "activity": {},
   "announcedBuild": {
-    "id": "686cfe3f7c827b64c3eedcb9",
-    "number": 381,
+    "id": "687eadedf82dd4fdef597bf6",
+    "number": 402,
     "status": "PUBLISHED",
     "autoAcceptChanges": false,
     "app": {
       "id": "663a220bcc5dda79791c430e",
       "turboSnapAvailability": "UNUSED"
     },
-    "storybookUrl": "https://663a220bcc5dda79791c430e-lroczunazr.chromatic.com/"
+    "storybookUrl": "https://663a220bcc5dda79791c430e-pakqrolbiu.chromatic.com/"
   },
   "build": {
-    "id": "686cfe3f7c827b64c3eedcb9",
-    "number": 381,
-    "status": "PASSED",
+    "id": "687eadedf82dd4fdef597bf6",
+    "number": 402,
+    "status": "PENDING",
     "autoAcceptChanges": false,
     "app": {
       "manageUrl": "https://www.chromatic.com/manage?appId=663a220bcc5dda79791c430e",
@@ -28,17 +28,17 @@
         "provider": "github"
       }
     },
-    "storybookUrl": "https://663a220bcc5dda79791c430e-lroczunazr.chromatic.com/",
-    "specCount": 79,
-    "componentCount": 34,
-    "testCount": 79,
-    "changeCount": 0,
+    "storybookUrl": "https://663a220bcc5dda79791c430e-pakqrolbiu.chromatic.com/",
+    "specCount": 98,
+    "componentCount": 37,
+    "testCount": 98,
+    "changeCount": 17,
     "errorCount": 0,
-    "actualTestCount": 79,
-    "actualCaptureCount": 79,
+    "actualTestCount": 98,
+    "actualCaptureCount": 98,
     "inheritedCaptureCount": 0,
     "interactionTestFailuresCount": 0,
-    "webUrl": "https://www.chromatic.com/build?appId=663a220bcc5dda79791c430e&number=381",
+    "webUrl": "https://www.chromatic.com/build?appId=663a220bcc5dda79791c430e&number=402",
     "browsers": [
       {
         "browser": "chrome"
@@ -153,6 +153,70 @@
           "component": {
             "name": "Components/Actions/Button",
             "displayName": "Button"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Default",
+          "component": {
+            "name": "Components/Actions/Card",
+            "displayName": "Card"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Without Actions",
+          "component": {
+            "name": "Components/Actions/Card",
+            "displayName": "Card"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Without Title",
+          "component": {
+            "name": "Components/Actions/Card",
+            "displayName": "Card"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Filled",
+          "component": {
+            "name": "Components/Actions/Card",
+            "displayName": "Card"
           }
         },
         "parameters": {
@@ -329,6 +393,246 @@
           "component": {
             "name": "Components/Assets/Thumbnail",
             "displayName": "Thumbnail"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Default",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Small",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Large",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "X Large",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Medium",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Bold",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Secondary",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Tertiary",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Inverse",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Truncated",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "All Styles",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "All Sizes",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "All Weights",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "All Colors",
+          "component": {
+            "name": "Components/Assets/Text",
+            "displayName": "Text"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Typography Showcase",
+          "component": {
+            "name": "Components/Assets/Typography",
+            "displayName": "Typography"
           }
         },
         "parameters": {
@@ -1317,9 +1621,9 @@
       }
     ],
     "inProgressCount": 0,
-    "completedAt": 1751973490428
+    "completedAt": 1753132587273
   },
-  "buildCommand": "npm run build-storybook -- --output-dir=/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--14489-UdbMDcwda7zV",
+  "buildCommand": "npm run build-storybook -- --output-dir=/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--65381-dShcm44VZk8S",
   "buildLogFile": "/Users/a_ng_d/DEV/figmug-ui/build-storybook.log",
   "configuration": {
     "configFile": "chromatic.config.json",
@@ -1354,454 +1658,494 @@
         "knownAs": "addon-visual-tests-assets/visual-test-illustration.mp4"
       },
       {
-        "pathname": "assets/Accordion-BiLk7OZF.css",
-        "contentLength": 3672,
-        "knownAs": "assets/Accordion-BiLk7OZF.css"
+        "pathname": "assets/Accordion-D8TWxhN0.css",
+        "contentLength": 4772,
+        "knownAs": "assets/Accordion-D8TWxhN0.css"
       },
       {
-        "pathname": "assets/Accordion.stories-DYyg7P27.js",
-        "contentLength": 3236,
-        "knownAs": "assets/Accordion.stories-DYyg7P27.js"
+        "pathname": "assets/Accordion.stories-UiWbmBm8.js",
+        "contentLength": 3267,
+        "knownAs": "assets/Accordion.stories-UiWbmBm8.js"
       },
       {
-        "pathname": "assets/ActionsItem-8T9WtjQF.js",
+        "pathname": "assets/ActionsItem-5PBP0Nfq.js",
         "contentLength": 1468,
-        "knownAs": "assets/ActionsItem-8T9WtjQF.js"
+        "knownAs": "assets/ActionsItem-5PBP0Nfq.js"
       },
       {
-        "pathname": "assets/ActionsItem-C-MZ7mOu.css",
-        "contentLength": 4378,
-        "knownAs": "assets/ActionsItem-C-MZ7mOu.css"
+        "pathname": "assets/ActionsItem-DKcA33e2.css",
+        "contentLength": 5641,
+        "knownAs": "assets/ActionsItem-DKcA33e2.css"
       },
       {
-        "pathname": "assets/ActionsItem.stories-Q9MZzWga.js",
-        "contentLength": 5328,
-        "knownAs": "assets/ActionsItem.stories-Q9MZzWga.js"
+        "pathname": "assets/ActionsItem.stories-OqJ9X9VM.js",
+        "contentLength": 5367,
+        "knownAs": "assets/ActionsItem.stories-OqJ9X9VM.js"
       },
       {
-        "pathname": "assets/Avatar-baT8biNs.js",
+        "pathname": "assets/Avatar-GRFy4woR.css",
+        "contentLength": 916,
+        "knownAs": "assets/Avatar-GRFy4woR.css"
+      },
+      {
+        "pathname": "assets/Avatar-ZiXdnE4P.js",
         "contentLength": 651,
-        "knownAs": "assets/Avatar-baT8biNs.js"
+        "knownAs": "assets/Avatar-ZiXdnE4P.js"
       },
       {
-        "pathname": "assets/Avatar-tEDaSJ4J.css",
-        "contentLength": 735,
-        "knownAs": "assets/Avatar-tEDaSJ4J.css"
-      },
-      {
-        "pathname": "assets/Avatar.stories-Lcf5vXUq.js",
+        "pathname": "assets/Avatar.stories-CtMRWlzg.js",
         "contentLength": 1256,
-        "knownAs": "assets/Avatar.stories-Lcf5vXUq.js"
+        "knownAs": "assets/Avatar.stories-CtMRWlzg.js"
       },
       {
-        "pathname": "assets/Bar-Bu5T73PS.css",
-        "contentLength": 1637,
-        "knownAs": "assets/Bar-Bu5T73PS.css"
-      },
-      {
-        "pathname": "assets/Bar-CwChfQ8g.js",
+        "pathname": "assets/Bar-BRcNBou9.js",
         "contentLength": 1147,
-        "knownAs": "assets/Bar-CwChfQ8g.js"
+        "knownAs": "assets/Bar-BRcNBou9.js"
       },
       {
-        "pathname": "assets/Bar.stories-CxMFt7jc.js",
+        "pathname": "assets/Bar-CS3Gmdvg.css",
+        "contentLength": 2049,
+        "knownAs": "assets/Bar-CS3Gmdvg.css"
+      },
+      {
+        "pathname": "assets/Bar.stories-Dp970AVI.js",
         "contentLength": 762,
-        "knownAs": "assets/Bar.stories-CxMFt7jc.js"
+        "knownAs": "assets/Bar.stories-Dp970AVI.js"
       },
       {
-        "pathname": "assets/Button-D4R_cguY.css",
-        "contentLength": 72168,
-        "knownAs": "assets/Button-D4R_cguY.css"
+        "pathname": "assets/Button-BJm3DFVd.css",
+        "contentLength": 91889,
+        "knownAs": "assets/Button-BJm3DFVd.css"
       },
       {
-        "pathname": "assets/Button-MjdjayvU.js",
-        "contentLength": 3466,
-        "knownAs": "assets/Button-MjdjayvU.js"
+        "pathname": "assets/Button-CtmkHb43.js",
+        "contentLength": 3259,
+        "knownAs": "assets/Button-CtmkHb43.js"
       },
       {
-        "pathname": "assets/Button.stories-BV6iOmOH.js",
-        "contentLength": 8706,
-        "knownAs": "assets/Button.stories-BV6iOmOH.js"
+        "pathname": "assets/Button.stories-CAnlyrBc.js",
+        "contentLength": 8737,
+        "knownAs": "assets/Button.stories-CAnlyrBc.js"
       },
       {
-        "pathname": "assets/Chip-4HLznoGI.js",
+        "pathname": "assets/Card-SxPZ6MVz.css",
+        "contentLength": 4760,
+        "knownAs": "assets/Card-SxPZ6MVz.css"
+      },
+      {
+        "pathname": "assets/Card.stories-CV689Z24.js",
+        "contentLength": 5426,
+        "knownAs": "assets/Card.stories-CV689Z24.js"
+      },
+      {
+        "pathname": "assets/Chip-C2-F3NyH.js",
         "contentLength": 1873,
-        "knownAs": "assets/Chip-4HLznoGI.js"
+        "knownAs": "assets/Chip-C2-F3NyH.js"
       },
       {
-        "pathname": "assets/Chip-C4UvADsg.css",
-        "contentLength": 6634,
-        "knownAs": "assets/Chip-C4UvADsg.css"
+        "pathname": "assets/Chip-CiTm2KcL.css",
+        "contentLength": 8088,
+        "knownAs": "assets/Chip-CiTm2KcL.css"
       },
       {
-        "pathname": "assets/Chip.stories-Du1lH0-V.js",
+        "pathname": "assets/Chip.stories-CC3nuQtH.js",
         "contentLength": 1741,
-        "knownAs": "assets/Chip.stories-Du1lH0-V.js"
+        "knownAs": "assets/Chip.stories-CC3nuQtH.js"
       },
       {
-        "pathname": "assets/ColorChip-CNR_w8YN.css",
-        "contentLength": 1032,
-        "knownAs": "assets/ColorChip-CNR_w8YN.css"
+        "pathname": "assets/ColorChip-CE1045_n.css",
+        "contentLength": 1169,
+        "knownAs": "assets/ColorChip-CE1045_n.css"
       },
       {
-        "pathname": "assets/ColorChip-DL5YiNmQ.js",
+        "pathname": "assets/ColorChip-CU70klGg.js",
         "contentLength": 679,
-        "knownAs": "assets/ColorChip-DL5YiNmQ.js"
+        "knownAs": "assets/ColorChip-CU70klGg.js"
       },
       {
-        "pathname": "assets/ColorItem-DvtIebWG.css",
-        "contentLength": 843,
-        "knownAs": "assets/ColorItem-DvtIebWG.css"
+        "pathname": "assets/ColorItem-DXLIpKDh.css",
+        "contentLength": 1073,
+        "knownAs": "assets/ColorItem-DXLIpKDh.css"
       },
       {
-        "pathname": "assets/ColorItem.stories-CXAfDe0F.js",
-        "contentLength": 1557,
-        "knownAs": "assets/ColorItem.stories-CXAfDe0F.js"
+        "pathname": "assets/ColorItem.stories-Bs39dMU0.js",
+        "contentLength": 1583,
+        "knownAs": "assets/ColorItem.stories-Bs39dMU0.js"
       },
       {
-        "pathname": "assets/Consent-DbWMJZwF.css",
-        "contentLength": 2372,
-        "knownAs": "assets/Consent-DbWMJZwF.css"
+        "pathname": "assets/Consent-B14sZ6PJ.css",
+        "contentLength": 2946,
+        "knownAs": "assets/Consent-B14sZ6PJ.css"
       },
       {
-        "pathname": "assets/Consent.stories-2lTbP1Ol.js",
-        "contentLength": 10902,
-        "knownAs": "assets/Consent.stories-2lTbP1Ol.js"
+        "pathname": "assets/Consent.stories-DbOSWvdt.js",
+        "contentLength": 10949,
+        "knownAs": "assets/Consent.stories-DbOSWvdt.js"
       },
       {
-        "pathname": "assets/Dialog-C-KzA0tl.css",
-        "contentLength": 6992,
-        "knownAs": "assets/Dialog-C-KzA0tl.css"
+        "pathname": "assets/Dialog-CqfKx66v.css",
+        "contentLength": 9074,
+        "knownAs": "assets/Dialog-CqfKx66v.css"
       },
       {
-        "pathname": "assets/Dialog.stories-Hs8tMEtk.js",
-        "contentLength": 10177,
-        "knownAs": "assets/Dialog.stories-Hs8tMEtk.js"
+        "pathname": "assets/Dialog.stories-D5xU_7N5.js",
+        "contentLength": 10208,
+        "knownAs": "assets/Dialog.stories-D5xU_7N5.js"
       },
       {
-        "pathname": "assets/DraggableItem-B9h_hvJW.css",
-        "contentLength": 7182,
-        "knownAs": "assets/DraggableItem-B9h_hvJW.css"
+        "pathname": "assets/DraggableItem-DFomwElo.css",
+        "contentLength": 8740,
+        "knownAs": "assets/DraggableItem-DFomwElo.css"
       },
       {
-        "pathname": "assets/DraggableItem-lipl0d9c.js",
-        "contentLength": 4217,
-        "knownAs": "assets/DraggableItem-lipl0d9c.js"
+        "pathname": "assets/DraggableItem-itwve_nf.js",
+        "contentLength": 4221,
+        "knownAs": "assets/DraggableItem-itwve_nf.js"
       },
       {
-        "pathname": "assets/DraggableItem.stories-DOFewEox.js",
-        "contentLength": 4423,
-        "knownAs": "assets/DraggableItem.stories-DOFewEox.js"
+        "pathname": "assets/DraggableItem.stories-PaYLEsDS.js",
+        "contentLength": 4454,
+        "knownAs": "assets/DraggableItem.stories-PaYLEsDS.js"
       },
       {
-        "pathname": "assets/Drawer-DRsIairj.css",
-        "contentLength": 1332,
-        "knownAs": "assets/Drawer-DRsIairj.css"
+        "pathname": "assets/Drawer-cyLFoY9S.css",
+        "contentLength": 1633,
+        "knownAs": "assets/Drawer-cyLFoY9S.css"
       },
       {
-        "pathname": "assets/Drawer.stories-DwuA2Tsh.js",
-        "contentLength": 5834,
-        "knownAs": "assets/Drawer.stories-DwuA2Tsh.js"
+        "pathname": "assets/Drawer.stories-B20t-hWG.js",
+        "contentLength": 5865,
+        "knownAs": "assets/Drawer.stories-B20t-hWG.js"
       },
       {
-        "pathname": "assets/Dropdown-BL0lmSeC.css",
-        "contentLength": 8467,
-        "knownAs": "assets/Dropdown-BL0lmSeC.css"
+        "pathname": "assets/Dropdown-BZ_I86SP.css",
+        "contentLength": 9661,
+        "knownAs": "assets/Dropdown-BZ_I86SP.css"
       },
       {
-        "pathname": "assets/Dropdown.stories-Cf8ANHSO.js",
-        "contentLength": 13183,
-        "knownAs": "assets/Dropdown.stories-Cf8ANHSO.js"
+        "pathname": "assets/Dropdown.stories-DIjCP5dZ.js",
+        "contentLength": 12970,
+        "knownAs": "assets/Dropdown.stories-DIjCP5dZ.js"
       },
       {
-        "pathname": "assets/Dropzone--VjUAUjB.css",
-        "contentLength": 2976,
-        "knownAs": "assets/Dropzone--VjUAUjB.css"
+        "pathname": "assets/Dropzone-B6f-2gdF.css",
+        "contentLength": 3800,
+        "knownAs": "assets/Dropzone-B6f-2gdF.css"
       },
       {
-        "pathname": "assets/Dropzone.stories-CizBASeC.js",
-        "contentLength": 4487,
-        "knownAs": "assets/Dropzone.stories-CizBASeC.js"
+        "pathname": "assets/Dropzone.stories-D63jXcZ4.js",
+        "contentLength": 4518,
+        "knownAs": "assets/Dropzone.stories-D63jXcZ4.js"
       },
       {
-        "pathname": "assets/FormItem-CfFmwCPZ.css",
-        "contentLength": 2386,
-        "knownAs": "assets/FormItem-CfFmwCPZ.css"
+        "pathname": "assets/FormItem-Dd3XMvRs.css",
+        "contentLength": 3054,
+        "knownAs": "assets/FormItem-Dd3XMvRs.css"
       },
       {
-        "pathname": "assets/FormItem-Dwqy1va1.js",
+        "pathname": "assets/FormItem-DrSJ-zOO.js",
         "contentLength": 966,
-        "knownAs": "assets/FormItem-Dwqy1va1.js"
+        "knownAs": "assets/FormItem-DrSJ-zOO.js"
       },
       {
-        "pathname": "assets/Formitem.stories-CXmZVujx.js",
-        "contentLength": 1370,
-        "knownAs": "assets/Formitem.stories-CXmZVujx.js"
+        "pathname": "assets/Formitem.stories-By6EJTMz.js",
+        "contentLength": 1401,
+        "knownAs": "assets/Formitem.stories-By6EJTMz.js"
       },
       {
-        "pathname": "assets/Icon-BBZvmbO6.css",
-        "contentLength": 200833,
-        "knownAs": "assets/Icon-BBZvmbO6.css"
+        "pathname": "assets/Icon-B9TnxUot.css",
+        "contentLength": 307788,
+        "knownAs": "assets/Icon-B9TnxUot.css"
       },
       {
-        "pathname": "assets/Icon-V8UNgYGt.js",
-        "contentLength": 5807,
-        "knownAs": "assets/Icon-V8UNgYGt.js"
+        "pathname": "assets/Icon-CAlsgZsQ.js",
+        "contentLength": 5774,
+        "knownAs": "assets/Icon-CAlsgZsQ.js"
       },
       {
-        "pathname": "assets/Icon.stories-D1aJDqzs.js",
-        "contentLength": 3692,
-        "knownAs": "assets/Icon.stories-D1aJDqzs.js"
+        "pathname": "assets/Icon.stories-Dfpl83Sj.js",
+        "contentLength": 3705,
+        "knownAs": "assets/Icon.stories-Dfpl83Sj.js"
       },
       {
-        "pathname": "assets/Input-CmX_dBpH.js",
-        "contentLength": 10394,
-        "knownAs": "assets/Input-CmX_dBpH.js"
+        "pathname": "assets/IconChip-BzXdOIeg.js",
+        "contentLength": 728,
+        "knownAs": "assets/IconChip-BzXdOIeg.js"
       },
       {
-        "pathname": "assets/Input-X1uI0Q60.css",
-        "contentLength": 30226,
-        "knownAs": "assets/Input-X1uI0Q60.css"
+        "pathname": "assets/IconChip-DUu8sVAK.css",
+        "contentLength": 572,
+        "knownAs": "assets/IconChip-DUu8sVAK.css"
       },
       {
-        "pathname": "assets/Input.stories-CUC1PZSQ.js",
-        "contentLength": 9292,
-        "knownAs": "assets/Input.stories-CUC1PZSQ.js"
+        "pathname": "assets/Input-xoDCSGti.js",
+        "contentLength": 10184,
+        "knownAs": "assets/Input-xoDCSGti.js"
       },
       {
-        "pathname": "assets/InputsBar-BeTMdZy8.css",
-        "contentLength": 2324,
-        "knownAs": "assets/InputsBar-BeTMdZy8.css"
+        "pathname": "assets/Input-yLBSNCX2.css",
+        "contentLength": 38582,
+        "knownAs": "assets/Input-yLBSNCX2.css"
       },
       {
-        "pathname": "assets/InputsBar.stories-Clfd_Jyk.js",
-        "contentLength": 1276,
-        "knownAs": "assets/InputsBar.stories-Clfd_Jyk.js"
+        "pathname": "assets/Input.stories--81l0gPb.js",
+        "contentLength": 9323,
+        "knownAs": "assets/Input.stories--81l0gPb.js"
       },
       {
-        "pathname": "assets/KeyboardShortcutItem-h20X3iWU.css",
-        "contentLength": 3781,
-        "knownAs": "assets/KeyboardShortcutItem-h20X3iWU.css"
+        "pathname": "assets/InputsBar-D7-faB1F.css",
+        "contentLength": 2927,
+        "knownAs": "assets/InputsBar-D7-faB1F.css"
       },
       {
-        "pathname": "assets/KeyboardShortcutItem.stories-c6mhkiNi.js",
+        "pathname": "assets/InputsBar.stories-C_6W2hIR.js",
+        "contentLength": 1307,
+        "knownAs": "assets/InputsBar.stories-C_6W2hIR.js"
+      },
+      {
+        "pathname": "assets/KeyboardShortcutItem-DAU3Q4Gg.css",
+        "contentLength": 4879,
+        "knownAs": "assets/KeyboardShortcutItem-DAU3Q4Gg.css"
+      },
+      {
+        "pathname": "assets/KeyboardShortcutItem.stories-BH1ACs6D.js",
         "contentLength": 2234,
-        "knownAs": "assets/KeyboardShortcutItem.stories-c6mhkiNi.js"
+        "knownAs": "assets/KeyboardShortcutItem.stories-BH1ACs6D.js"
       },
       {
-        "pathname": "assets/Knob-BluWT-21.js",
+        "pathname": "assets/Knob-Ct38yA4r.css",
+        "contentLength": 15389,
+        "knownAs": "assets/Knob-Ct38yA4r.css"
+      },
+      {
+        "pathname": "assets/Knob-CtTxuUSG.js",
         "contentLength": 2829,
-        "knownAs": "assets/Knob-BluWT-21.js"
+        "knownAs": "assets/Knob-CtTxuUSG.js"
       },
       {
-        "pathname": "assets/Knob-CY7cFZKp.css",
-        "contentLength": 10616,
-        "knownAs": "assets/Knob-CY7cFZKp.css"
+        "pathname": "assets/List-CTjhor6V.css",
+        "contentLength": 23504,
+        "knownAs": "assets/List-CTjhor6V.css"
       },
       {
-        "pathname": "assets/List-Bc7GqhjT.css",
-        "contentLength": 18059,
-        "knownAs": "assets/List-Bc7GqhjT.css"
+        "pathname": "assets/List-D6vrmi5w.css",
+        "contentLength": 1315,
+        "knownAs": "assets/List-D6vrmi5w.css"
       },
       {
-        "pathname": "assets/List-CxQWa0vv.css",
-        "contentLength": 1270,
-        "knownAs": "assets/List-CxQWa0vv.css"
+        "pathname": "assets/List.stories-Be-HR0js.js",
+        "contentLength": 14501,
+        "knownAs": "assets/List.stories-Be-HR0js.js"
       },
       {
-        "pathname": "assets/List.stories-BipY0ooJ.js",
-        "contentLength": 5157,
-        "knownAs": "assets/List.stories-BipY0ooJ.js"
+        "pathname": "assets/List.stories-N3A2ApAa.js",
+        "contentLength": 5188,
+        "knownAs": "assets/List.stories-N3A2ApAa.js"
       },
       {
-        "pathname": "assets/List.stories-DIpPRziA.js",
-        "contentLength": 14184,
-        "knownAs": "assets/List.stories-DIpPRziA.js"
+        "pathname": "assets/MembersList-C3spy_7m.css",
+        "contentLength": 2040,
+        "knownAs": "assets/MembersList-C3spy_7m.css"
       },
       {
-        "pathname": "assets/MembersList-D-O1G57w.css",
-        "contentLength": 1639,
-        "knownAs": "assets/MembersList-D-O1G57w.css"
-      },
-      {
-        "pathname": "assets/MembersList.stories-7oYq0FpB.js",
+        "pathname": "assets/MembersList.stories-CUTwVqeX.js",
         "contentLength": 3047,
-        "knownAs": "assets/MembersList.stories-7oYq0FpB.js"
+        "knownAs": "assets/MembersList.stories-CUTwVqeX.js"
       },
       {
-        "pathname": "assets/Menu-D0Gn-hXO.css",
-        "contentLength": 1231,
-        "knownAs": "assets/Menu-D0Gn-hXO.css"
+        "pathname": "assets/Menu-2C5Xladq.css",
+        "contentLength": 1532,
+        "knownAs": "assets/Menu-2C5Xladq.css"
       },
       {
-        "pathname": "assets/Menu.stories-D42W_KoK.js",
-        "contentLength": 7946,
-        "knownAs": "assets/Menu.stories-D42W_KoK.js"
+        "pathname": "assets/Menu.stories-DvWtZs9C.js",
+        "contentLength": 7902,
+        "knownAs": "assets/Menu.stories-DvWtZs9C.js"
       },
       {
-        "pathname": "assets/Message-Bf9zcvii.js",
+        "pathname": "assets/Message-CHRUaaPc.js",
         "contentLength": 1826,
-        "knownAs": "assets/Message-Bf9zcvii.js"
+        "knownAs": "assets/Message-CHRUaaPc.js"
       },
       {
-        "pathname": "assets/Message-DdHkGw2T.css",
-        "contentLength": 3433,
-        "knownAs": "assets/Message-DdHkGw2T.css"
+        "pathname": "assets/Message-DUPSB1l7.css",
+        "contentLength": 4357,
+        "knownAs": "assets/Message-DUPSB1l7.css"
       },
       {
-        "pathname": "assets/Message.stories-ClgQSHle.js",
+        "pathname": "assets/Message.stories-D1ixFlhG.js",
         "contentLength": 1930,
-        "knownAs": "assets/Message.stories-ClgQSHle.js"
+        "knownAs": "assets/Message.stories-D1ixFlhG.js"
       },
       {
-        "pathname": "assets/MultipleSlider-CrFmPjgE.css",
-        "contentLength": 2166,
-        "knownAs": "assets/MultipleSlider-CrFmPjgE.css"
+        "pathname": "assets/MultipleSlider-7PVSE9u6.css",
+        "contentLength": 2855,
+        "knownAs": "assets/MultipleSlider-7PVSE9u6.css"
       },
       {
-        "pathname": "assets/MultipleSlider.stories-CbHOq7CM.js",
-        "contentLength": 12793,
-        "knownAs": "assets/MultipleSlider.stories-CbHOq7CM.js"
+        "pathname": "assets/MultipleSlider.stories-5CPBbiNV.js",
+        "contentLength": 12613,
+        "knownAs": "assets/MultipleSlider.stories-5CPBbiNV.js"
       },
       {
-        "pathname": "assets/Notification-BtLQ2wqs.css",
-        "contentLength": 626,
-        "knownAs": "assets/Notification-BtLQ2wqs.css"
+        "pathname": "assets/Notification-BTgIoICp.css",
+        "contentLength": 750,
+        "knownAs": "assets/Notification-BTgIoICp.css"
       },
       {
-        "pathname": "assets/Notification.stories-CuPfu5Dp.js",
-        "contentLength": 1761,
-        "knownAs": "assets/Notification.stories-CuPfu5Dp.js"
+        "pathname": "assets/Notification.stories-DjRA-YKK.js",
+        "contentLength": 1792,
+        "knownAs": "assets/Notification.stories-DjRA-YKK.js"
       },
       {
-        "pathname": "assets/Section-rXYRDUtG.css",
-        "contentLength": 1587,
-        "knownAs": "assets/Section-rXYRDUtG.css"
+        "pathname": "assets/Section-C8ntXsig.css",
+        "contentLength": 2093,
+        "knownAs": "assets/Section-C8ntXsig.css"
       },
       {
-        "pathname": "assets/Section.stories-BnaNV3KK.js",
-        "contentLength": 2408,
-        "knownAs": "assets/Section.stories-BnaNV3KK.js"
+        "pathname": "assets/Section.stories-DUuy0Qzr.js",
+        "contentLength": 2439,
+        "knownAs": "assets/Section.stories-DUuy0Qzr.js"
       },
       {
-        "pathname": "assets/SectionTitle-BSOZZLkr.js",
-        "contentLength": 775,
-        "knownAs": "assets/SectionTitle-BSOZZLkr.js"
+        "pathname": "assets/SectionTitle-BMQDBwWd.js",
+        "contentLength": 555,
+        "knownAs": "assets/SectionTitle-BMQDBwWd.js"
       },
       {
-        "pathname": "assets/SectionTitle-DjAfJvYB.css",
-        "contentLength": 2816,
-        "knownAs": "assets/SectionTitle-DjAfJvYB.css"
+        "pathname": "assets/SectionTitle-D3cJq0Wj.css",
+        "contentLength": 3608,
+        "knownAs": "assets/SectionTitle-D3cJq0Wj.css"
       },
       {
-        "pathname": "assets/SectionTitle.stories-BRH7x4p-.js",
-        "contentLength": 960,
-        "knownAs": "assets/SectionTitle.stories-BRH7x4p-.js"
+        "pathname": "assets/SectionTitle.stories-Cycsz-qg.js",
+        "contentLength": 991,
+        "knownAs": "assets/SectionTitle.stories-Cycsz-qg.js"
       },
       {
-        "pathname": "assets/Select-BtIFXuko.js",
-        "contentLength": 2548,
-        "knownAs": "assets/Select-BtIFXuko.js"
+        "pathname": "assets/Select-B25q_Sx3.js",
+        "contentLength": 2581,
+        "knownAs": "assets/Select-B25q_Sx3.js"
       },
       {
-        "pathname": "assets/Select-CF6f_yuw.css",
-        "contentLength": 29295,
-        "knownAs": "assets/Select-CF6f_yuw.css"
+        "pathname": "assets/Select-D37uIHO-.css",
+        "contentLength": 37272,
+        "knownAs": "assets/Select-D37uIHO-.css"
       },
       {
-        "pathname": "assets/Select.stories-ChaAmAe-.js",
+        "pathname": "assets/Select.stories-B2RPngG_.js",
         "contentLength": 9063,
-        "knownAs": "assets/Select.stories-ChaAmAe-.js"
+        "knownAs": "assets/Select.stories-B2RPngG_.js"
       },
       {
-        "pathname": "assets/SemanticMessage-9dXuLdUg.css",
-        "contentLength": 11219,
-        "knownAs": "assets/SemanticMessage-9dXuLdUg.css"
+        "pathname": "assets/SemanticMessage-7_-RcFxr.css",
+        "contentLength": 13575,
+        "knownAs": "assets/SemanticMessage-7_-RcFxr.css"
       },
       {
-        "pathname": "assets/SemanticMessage-DmdxkYXI.js",
+        "pathname": "assets/SemanticMessage-PKzp-yWT.js",
         "contentLength": 867,
-        "knownAs": "assets/SemanticMessage-DmdxkYXI.js"
+        "knownAs": "assets/SemanticMessage-PKzp-yWT.js"
       },
       {
-        "pathname": "assets/SemanticMessage.stories-BWkhI9hT.js",
-        "contentLength": 1776,
-        "knownAs": "assets/SemanticMessage.stories-BWkhI9hT.js"
+        "pathname": "assets/SemanticMessage.stories-JsRk7-zf.js",
+        "contentLength": 1807,
+        "knownAs": "assets/SemanticMessage.stories-JsRk7-zf.js"
       },
       {
-        "pathname": "assets/SimpleItem-Dx9NFwfI.js",
+        "pathname": "assets/SimpleItem-BZDZwYLB.js",
         "contentLength": 1373,
-        "knownAs": "assets/SimpleItem-Dx9NFwfI.js"
+        "knownAs": "assets/SimpleItem-BZDZwYLB.js"
       },
       {
-        "pathname": "assets/SimpleItem-x7hV4h9w.css",
-        "contentLength": 4090,
-        "knownAs": "assets/SimpleItem-x7hV4h9w.css"
+        "pathname": "assets/SimpleItem-C_Rk_Ygt.css",
+        "contentLength": 5132,
+        "knownAs": "assets/SimpleItem-C_Rk_Ygt.css"
       },
       {
-        "pathname": "assets/SimpleItem.stories-BAwJkONd.js",
-        "contentLength": 1213,
-        "knownAs": "assets/SimpleItem.stories-BAwJkONd.js"
+        "pathname": "assets/SimpleItem.stories-Bps3iqDN.js",
+        "contentLength": 1244,
+        "knownAs": "assets/SimpleItem.stories-Bps3iqDN.js"
       },
       {
-        "pathname": "assets/SimpleSlider-CVZDOJMM.css",
-        "contentLength": 1991,
-        "knownAs": "assets/SimpleSlider-CVZDOJMM.css"
+        "pathname": "assets/SimpleSlider-BZ___SuM.css",
+        "contentLength": 2590,
+        "knownAs": "assets/SimpleSlider-BZ___SuM.css"
       },
       {
-        "pathname": "assets/SimpleSlider.stories-BNXDQBsD.js",
-        "contentLength": 4692,
-        "knownAs": "assets/SimpleSlider.stories-BNXDQBsD.js"
+        "pathname": "assets/SimpleSlider.stories-DO1thsrl.js",
+        "contentLength": 4458,
+        "knownAs": "assets/SimpleSlider.stories-DO1thsrl.js"
       },
       {
-        "pathname": "assets/SortableList-FcMMIPG0.css",
-        "contentLength": 791,
-        "knownAs": "assets/SortableList-FcMMIPG0.css"
+        "pathname": "assets/SortableList-DGVFULl5.css",
+        "contentLength": 1011,
+        "knownAs": "assets/SortableList-DGVFULl5.css"
       },
       {
-        "pathname": "assets/SortableList.stories-CCwkiJXJ.js",
-        "contentLength": 10178,
-        "knownAs": "assets/SortableList.stories-CCwkiJXJ.js"
+        "pathname": "assets/SortableList.stories-DzbdguQs.js",
+        "contentLength": 10209,
+        "knownAs": "assets/SortableList.stories-DzbdguQs.js"
       },
       {
-        "pathname": "assets/Tabs-BeAwV0yA.css",
-        "contentLength": 20050,
-        "knownAs": "assets/Tabs-BeAwV0yA.css"
+        "pathname": "assets/Tabs-DNE2Fgcf.css",
+        "contentLength": 26552,
+        "knownAs": "assets/Tabs-DNE2Fgcf.css"
       },
       {
-        "pathname": "assets/Tabs.stories-CPUO_Mt9.js",
+        "pathname": "assets/Tabs.stories-BjxKvmz5.js",
         "contentLength": 4606,
-        "knownAs": "assets/Tabs.stories-CPUO_Mt9.js"
+        "knownAs": "assets/Tabs.stories-BjxKvmz5.js"
       },
       {
-        "pathname": "assets/Thumbnail-4t136AtU.css",
-        "contentLength": 1659,
-        "knownAs": "assets/Thumbnail-4t136AtU.css"
+        "pathname": "assets/Text-BTjD4Bry.css",
+        "contentLength": 330,
+        "knownAs": "assets/Text-BTjD4Bry.css"
       },
       {
-        "pathname": "assets/Thumbnail-DL10DGca.js",
+        "pathname": "assets/Text-Db9M-Q_w.js",
+        "contentLength": 420,
+        "knownAs": "assets/Text-Db9M-Q_w.js"
+      },
+      {
+        "pathname": "assets/Text.stories-CPqyN1Xv.js",
+        "contentLength": 7807,
+        "knownAs": "assets/Text.stories-CPqyN1Xv.js"
+      },
+      {
+        "pathname": "assets/Thumbnail-CEkGVPi2.js",
         "contentLength": 760,
-        "knownAs": "assets/Thumbnail-DL10DGca.js"
+        "knownAs": "assets/Thumbnail-CEkGVPi2.js"
       },
       {
-        "pathname": "assets/Thumbnail.stories-DtTPCJhc.js",
+        "pathname": "assets/Thumbnail-CHOHlQzK.css",
+        "contentLength": 2160,
+        "knownAs": "assets/Thumbnail-CHOHlQzK.css"
+      },
+      {
+        "pathname": "assets/Thumbnail.stories-D605JPy9.js",
         "contentLength": 883,
-        "knownAs": "assets/Thumbnail.stories-DtTPCJhc.js"
+        "knownAs": "assets/Thumbnail.stories-D605JPy9.js"
       },
       {
-        "pathname": "assets/Tooltip-95qOz2ti.css",
-        "contentLength": 3998,
-        "knownAs": "assets/Tooltip-95qOz2ti.css"
+        "pathname": "assets/Tooltip-BjbyBKRh.css",
+        "contentLength": 5183,
+        "knownAs": "assets/Tooltip-BjbyBKRh.css"
       },
       {
-        "pathname": "assets/Tooltip-DWuflnk9.js",
+        "pathname": "assets/Tooltip-eK0RXsnw.js",
         "contentLength": 884,
-        "knownAs": "assets/Tooltip-DWuflnk9.js"
+        "knownAs": "assets/Tooltip-eK0RXsnw.js"
       },
       {
-        "pathname": "assets/axe-CRdWuFXM.js",
+        "pathname": "assets/Typography.stories-CqqNDc4v.js",
+        "contentLength": 9648,
+        "knownAs": "assets/Typography.stories-CqqNDc4v.js"
+      },
+      {
+        "pathname": "assets/axe-CU5yp1Rq.js",
         "contentLength": 572189,
-        "knownAs": "assets/axe-CRdWuFXM.js"
+        "knownAs": "assets/axe-CU5yp1Rq.js"
       },
       {
         "pathname": "assets/chunk-2WNKQWTL-BojUnj9C.js",
@@ -1809,14 +2153,14 @@
         "knownAs": "assets/chunk-2WNKQWTL-BojUnj9C.js"
       },
       {
-        "pathname": "assets/do-classnames-CStnmS_I.css",
-        "contentLength": 6561,
-        "knownAs": "assets/do-classnames-CStnmS_I.css"
+        "pathname": "assets/do-classnames-9NZd4X8K.css",
+        "contentLength": 8188,
+        "knownAs": "assets/do-classnames-9NZd4X8K.css"
       },
       {
-        "pathname": "assets/do-classnames-XCFI27ga.js",
+        "pathname": "assets/do-classnames-CW-DYZe3.js",
         "contentLength": 498,
-        "knownAs": "assets/do-classnames-XCFI27ga.js"
+        "knownAs": "assets/do-classnames-CW-DYZe3.js"
       },
       {
         "pathname": "assets/do-map-LnAUJFLK.js",
@@ -1824,9 +2168,9 @@
         "knownAs": "assets/do-map-LnAUJFLK.js"
       },
       {
-        "pathname": "assets/iframe-BCs7LJU2.js",
-        "contentLength": 1283113,
-        "knownAs": "assets/iframe-BCs7LJU2.js"
+        "pathname": "assets/iframe-BV3W5Nu2.js",
+        "contentLength": 1284008,
+        "knownAs": "assets/iframe-BV3W5Nu2.js"
       },
       {
         "pathname": "assets/matchers-7Z3WT2CE-DM6fYTiH.js",
@@ -1834,9 +2178,9 @@
         "knownAs": "assets/matchers-7Z3WT2CE-DM6fYTiH.js"
       },
       {
-        "pathname": "assets/react-18-BdQS6wT2.js",
+        "pathname": "assets/react-18-Ot9l-Ypt.js",
         "contentLength": 134636,
-        "knownAs": "assets/react-18-BdQS6wT2.js"
+        "knownAs": "assets/react-18-Ot9l-Ypt.js"
       },
       {
         "pathname": "components/actions/accordion/Accordion.d.ts",
@@ -1850,22 +2194,22 @@
       },
       {
         "pathname": "components/actions/button/Button.d.ts",
-        "contentLength": 1596,
+        "contentLength": 1565,
         "knownAs": "components/actions/button/Button.d.ts"
       },
       {
         "pathname": "components/actions/button/Button.d.ts.map",
-        "contentLength": 1662,
+        "contentLength": 1634,
         "knownAs": "components/actions/button/Button.d.ts.map"
       },
       {
         "pathname": "components/actions/card/Card.d.ts",
-        "contentLength": 343,
+        "contentLength": 397,
         "knownAs": "components/actions/card/Card.d.ts"
       },
       {
         "pathname": "components/actions/card/Card.d.ts.map",
-        "contentLength": 511,
+        "contentLength": 583,
         "knownAs": "components/actions/card/Card.d.ts.map"
       },
       {
@@ -1917,6 +2261,16 @@
         "pathname": "components/assets/section-title/SectionTitle.d.ts.map",
         "contentLength": 453,
         "knownAs": "components/assets/section-title/SectionTitle.d.ts.map"
+      },
+      {
+        "pathname": "components/assets/text/Text.d.ts",
+        "contentLength": 713,
+        "knownAs": "components/assets/text/Text.d.ts"
+      },
+      {
+        "pathname": "components/assets/text/Text.d.ts.map",
+        "contentLength": 675,
+        "knownAs": "components/assets/text/Text.d.ts.map"
       },
       {
         "pathname": "components/assets/thumbnail/Thumbnail.d.ts",
@@ -1980,12 +2334,12 @@
       },
       {
         "pathname": "components/inputs/dropdown/Dropdown.d.ts",
-        "contentLength": 1452,
+        "contentLength": 1421,
         "knownAs": "components/inputs/dropdown/Dropdown.d.ts"
       },
       {
         "pathname": "components/inputs/dropdown/Dropdown.d.ts.map",
-        "contentLength": 1474,
+        "contentLength": 1446,
         "knownAs": "components/inputs/dropdown/Dropdown.d.ts.map"
       },
       {
@@ -2000,12 +2354,12 @@
       },
       {
         "pathname": "components/inputs/input/Input.d.ts",
-        "contentLength": 3443,
+        "contentLength": 3412,
         "knownAs": "components/inputs/input/Input.d.ts"
       },
       {
         "pathname": "components/inputs/input/Input.d.ts.map",
-        "contentLength": 3096,
+        "contentLength": 3068,
         "knownAs": "components/inputs/input/Input.d.ts.map"
       },
       {
@@ -2020,12 +2374,12 @@
       },
       {
         "pathname": "components/inputs/multiple-slider/MultipleSlider.d.ts",
-        "contentLength": 2694,
+        "contentLength": 2663,
         "knownAs": "components/inputs/multiple-slider/MultipleSlider.d.ts"
       },
       {
         "pathname": "components/inputs/multiple-slider/MultipleSlider.d.ts.map",
-        "contentLength": 2272,
+        "contentLength": 2244,
         "knownAs": "components/inputs/multiple-slider/MultipleSlider.d.ts.map"
       },
       {
@@ -2080,12 +2434,12 @@
       },
       {
         "pathname": "components/inputs/simple-slider/SimpleSlider.d.ts",
-        "contentLength": 1419,
+        "contentLength": 1388,
         "knownAs": "components/inputs/simple-slider/SimpleSlider.d.ts"
       },
       {
         "pathname": "components/inputs/simple-slider/SimpleSlider.d.ts.map",
-        "contentLength": 1394,
+        "contentLength": 1366,
         "knownAs": "components/inputs/simple-slider/SimpleSlider.d.ts.map"
       },
       {
@@ -2279,6 +2633,16 @@
         "knownAs": "components/tags/color-chip/ColorChip.d.ts.map"
       },
       {
+        "pathname": "components/tags/icon-chip/IconChip.d.ts",
+        "contentLength": 652,
+        "knownAs": "components/tags/icon-chip/IconChip.d.ts"
+      },
+      {
+        "pathname": "components/tags/icon-chip/IconChip.d.ts.map",
+        "contentLength": 734,
+        "knownAs": "components/tags/icon-chip/IconChip.d.ts.map"
+      },
+      {
         "pathname": "components/tags/tooltip/Tooltip.d.ts",
         "contentLength": 342,
         "knownAs": "components/tags/tooltip/Tooltip.d.ts"
@@ -2300,12 +2664,12 @@
       },
       {
         "pathname": "index.d.ts",
-        "contentLength": 4163,
+        "contentLength": 4515,
         "knownAs": "index.d.ts"
       },
       {
         "pathname": "index.d.ts.map",
-        "contentLength": 2815,
+        "contentLength": 3007,
         "knownAs": "index.d.ts.map"
       },
       {
@@ -2315,7 +2679,7 @@
       },
       {
         "pathname": "index.json",
-        "contentLength": 25802,
+        "contentLength": 31325,
         "knownAs": "index.json"
       },
       {
@@ -2445,114 +2809,122 @@
       },
       {
         "pathname": "types/list.types.d.ts",
-        "contentLength": 450,
+        "contentLength": 460,
         "knownAs": "types/list.types.d.ts"
       },
       {
         "pathname": "types/list.types.d.ts.map",
-        "contentLength": 633,
+        "contentLength": 643,
         "knownAs": "types/list.types.d.ts.map"
       }
     ],
     "paths": [
       "addon-visual-tests-assets/visual-test-illustration.mp4",
-      "assets/Accordion-BiLk7OZF.css",
-      "assets/Accordion.stories-DYyg7P27.js",
-      "assets/ActionsItem-8T9WtjQF.js",
-      "assets/ActionsItem-C-MZ7mOu.css",
-      "assets/ActionsItem.stories-Q9MZzWga.js",
-      "assets/Avatar-baT8biNs.js",
-      "assets/Avatar-tEDaSJ4J.css",
-      "assets/Avatar.stories-Lcf5vXUq.js",
-      "assets/Bar-Bu5T73PS.css",
-      "assets/Bar-CwChfQ8g.js",
-      "assets/Bar.stories-CxMFt7jc.js",
-      "assets/Button-D4R_cguY.css",
-      "assets/Button-MjdjayvU.js",
-      "assets/Button.stories-BV6iOmOH.js",
-      "assets/Chip-4HLznoGI.js",
-      "assets/Chip-C4UvADsg.css",
-      "assets/Chip.stories-Du1lH0-V.js",
-      "assets/ColorChip-CNR_w8YN.css",
-      "assets/ColorChip-DL5YiNmQ.js",
-      "assets/ColorItem-DvtIebWG.css",
-      "assets/ColorItem.stories-CXAfDe0F.js",
-      "assets/Consent-DbWMJZwF.css",
-      "assets/Consent.stories-2lTbP1Ol.js",
-      "assets/Dialog-C-KzA0tl.css",
-      "assets/Dialog.stories-Hs8tMEtk.js",
-      "assets/DraggableItem-B9h_hvJW.css",
-      "assets/DraggableItem-lipl0d9c.js",
-      "assets/DraggableItem.stories-DOFewEox.js",
-      "assets/Drawer-DRsIairj.css",
-      "assets/Drawer.stories-DwuA2Tsh.js",
-      "assets/Dropdown-BL0lmSeC.css",
-      "assets/Dropdown.stories-Cf8ANHSO.js",
-      "assets/Dropzone--VjUAUjB.css",
-      "assets/Dropzone.stories-CizBASeC.js",
-      "assets/FormItem-CfFmwCPZ.css",
-      "assets/FormItem-Dwqy1va1.js",
-      "assets/Formitem.stories-CXmZVujx.js",
-      "assets/Icon-BBZvmbO6.css",
-      "assets/Icon-V8UNgYGt.js",
-      "assets/Icon.stories-D1aJDqzs.js",
-      "assets/Input-CmX_dBpH.js",
-      "assets/Input-X1uI0Q60.css",
-      "assets/Input.stories-CUC1PZSQ.js",
-      "assets/InputsBar-BeTMdZy8.css",
-      "assets/InputsBar.stories-Clfd_Jyk.js",
-      "assets/KeyboardShortcutItem-h20X3iWU.css",
-      "assets/KeyboardShortcutItem.stories-c6mhkiNi.js",
-      "assets/Knob-BluWT-21.js",
-      "assets/Knob-CY7cFZKp.css",
-      "assets/List-Bc7GqhjT.css",
-      "assets/List-CxQWa0vv.css",
-      "assets/List.stories-BipY0ooJ.js",
-      "assets/List.stories-DIpPRziA.js",
-      "assets/MembersList-D-O1G57w.css",
-      "assets/MembersList.stories-7oYq0FpB.js",
-      "assets/Menu-D0Gn-hXO.css",
-      "assets/Menu.stories-D42W_KoK.js",
-      "assets/Message-Bf9zcvii.js",
-      "assets/Message-DdHkGw2T.css",
-      "assets/Message.stories-ClgQSHle.js",
-      "assets/MultipleSlider-CrFmPjgE.css",
-      "assets/MultipleSlider.stories-CbHOq7CM.js",
-      "assets/Notification-BtLQ2wqs.css",
-      "assets/Notification.stories-CuPfu5Dp.js",
-      "assets/Section-rXYRDUtG.css",
-      "assets/Section.stories-BnaNV3KK.js",
-      "assets/SectionTitle-BSOZZLkr.js",
-      "assets/SectionTitle-DjAfJvYB.css",
-      "assets/SectionTitle.stories-BRH7x4p-.js",
-      "assets/Select-BtIFXuko.js",
-      "assets/Select-CF6f_yuw.css",
-      "assets/Select.stories-ChaAmAe-.js",
-      "assets/SemanticMessage-9dXuLdUg.css",
-      "assets/SemanticMessage-DmdxkYXI.js",
-      "assets/SemanticMessage.stories-BWkhI9hT.js",
-      "assets/SimpleItem-Dx9NFwfI.js",
-      "assets/SimpleItem-x7hV4h9w.css",
-      "assets/SimpleItem.stories-BAwJkONd.js",
-      "assets/SimpleSlider-CVZDOJMM.css",
-      "assets/SimpleSlider.stories-BNXDQBsD.js",
-      "assets/SortableList-FcMMIPG0.css",
-      "assets/SortableList.stories-CCwkiJXJ.js",
-      "assets/Tabs-BeAwV0yA.css",
-      "assets/Tabs.stories-CPUO_Mt9.js",
-      "assets/Thumbnail-4t136AtU.css",
-      "assets/Thumbnail-DL10DGca.js",
-      "assets/Thumbnail.stories-DtTPCJhc.js",
-      "assets/Tooltip-95qOz2ti.css",
-      "assets/Tooltip-DWuflnk9.js",
-      "assets/axe-CRdWuFXM.js",
+      "assets/Accordion-D8TWxhN0.css",
+      "assets/Accordion.stories-UiWbmBm8.js",
+      "assets/ActionsItem-5PBP0Nfq.js",
+      "assets/ActionsItem-DKcA33e2.css",
+      "assets/ActionsItem.stories-OqJ9X9VM.js",
+      "assets/Avatar-GRFy4woR.css",
+      "assets/Avatar-ZiXdnE4P.js",
+      "assets/Avatar.stories-CtMRWlzg.js",
+      "assets/Bar-BRcNBou9.js",
+      "assets/Bar-CS3Gmdvg.css",
+      "assets/Bar.stories-Dp970AVI.js",
+      "assets/Button-BJm3DFVd.css",
+      "assets/Button-CtmkHb43.js",
+      "assets/Button.stories-CAnlyrBc.js",
+      "assets/Card-SxPZ6MVz.css",
+      "assets/Card.stories-CV689Z24.js",
+      "assets/Chip-C2-F3NyH.js",
+      "assets/Chip-CiTm2KcL.css",
+      "assets/Chip.stories-CC3nuQtH.js",
+      "assets/ColorChip-CE1045_n.css",
+      "assets/ColorChip-CU70klGg.js",
+      "assets/ColorItem-DXLIpKDh.css",
+      "assets/ColorItem.stories-Bs39dMU0.js",
+      "assets/Consent-B14sZ6PJ.css",
+      "assets/Consent.stories-DbOSWvdt.js",
+      "assets/Dialog-CqfKx66v.css",
+      "assets/Dialog.stories-D5xU_7N5.js",
+      "assets/DraggableItem-DFomwElo.css",
+      "assets/DraggableItem-itwve_nf.js",
+      "assets/DraggableItem.stories-PaYLEsDS.js",
+      "assets/Drawer-cyLFoY9S.css",
+      "assets/Drawer.stories-B20t-hWG.js",
+      "assets/Dropdown-BZ_I86SP.css",
+      "assets/Dropdown.stories-DIjCP5dZ.js",
+      "assets/Dropzone-B6f-2gdF.css",
+      "assets/Dropzone.stories-D63jXcZ4.js",
+      "assets/FormItem-Dd3XMvRs.css",
+      "assets/FormItem-DrSJ-zOO.js",
+      "assets/Formitem.stories-By6EJTMz.js",
+      "assets/Icon-B9TnxUot.css",
+      "assets/Icon-CAlsgZsQ.js",
+      "assets/Icon.stories-Dfpl83Sj.js",
+      "assets/IconChip-BzXdOIeg.js",
+      "assets/IconChip-DUu8sVAK.css",
+      "assets/Input-xoDCSGti.js",
+      "assets/Input-yLBSNCX2.css",
+      "assets/Input.stories--81l0gPb.js",
+      "assets/InputsBar-D7-faB1F.css",
+      "assets/InputsBar.stories-C_6W2hIR.js",
+      "assets/KeyboardShortcutItem-DAU3Q4Gg.css",
+      "assets/KeyboardShortcutItem.stories-BH1ACs6D.js",
+      "assets/Knob-Ct38yA4r.css",
+      "assets/Knob-CtTxuUSG.js",
+      "assets/List-CTjhor6V.css",
+      "assets/List-D6vrmi5w.css",
+      "assets/List.stories-Be-HR0js.js",
+      "assets/List.stories-N3A2ApAa.js",
+      "assets/MembersList-C3spy_7m.css",
+      "assets/MembersList.stories-CUTwVqeX.js",
+      "assets/Menu-2C5Xladq.css",
+      "assets/Menu.stories-DvWtZs9C.js",
+      "assets/Message-CHRUaaPc.js",
+      "assets/Message-DUPSB1l7.css",
+      "assets/Message.stories-D1ixFlhG.js",
+      "assets/MultipleSlider-7PVSE9u6.css",
+      "assets/MultipleSlider.stories-5CPBbiNV.js",
+      "assets/Notification-BTgIoICp.css",
+      "assets/Notification.stories-DjRA-YKK.js",
+      "assets/Section-C8ntXsig.css",
+      "assets/Section.stories-DUuy0Qzr.js",
+      "assets/SectionTitle-BMQDBwWd.js",
+      "assets/SectionTitle-D3cJq0Wj.css",
+      "assets/SectionTitle.stories-Cycsz-qg.js",
+      "assets/Select-B25q_Sx3.js",
+      "assets/Select-D37uIHO-.css",
+      "assets/Select.stories-B2RPngG_.js",
+      "assets/SemanticMessage-7_-RcFxr.css",
+      "assets/SemanticMessage-PKzp-yWT.js",
+      "assets/SemanticMessage.stories-JsRk7-zf.js",
+      "assets/SimpleItem-BZDZwYLB.js",
+      "assets/SimpleItem-C_Rk_Ygt.css",
+      "assets/SimpleItem.stories-Bps3iqDN.js",
+      "assets/SimpleSlider-BZ___SuM.css",
+      "assets/SimpleSlider.stories-DO1thsrl.js",
+      "assets/SortableList-DGVFULl5.css",
+      "assets/SortableList.stories-DzbdguQs.js",
+      "assets/Tabs-DNE2Fgcf.css",
+      "assets/Tabs.stories-BjxKvmz5.js",
+      "assets/Text-BTjD4Bry.css",
+      "assets/Text-Db9M-Q_w.js",
+      "assets/Text.stories-CPqyN1Xv.js",
+      "assets/Thumbnail-CEkGVPi2.js",
+      "assets/Thumbnail-CHOHlQzK.css",
+      "assets/Thumbnail.stories-D605JPy9.js",
+      "assets/Tooltip-BjbyBKRh.css",
+      "assets/Tooltip-eK0RXsnw.js",
+      "assets/Typography.stories-CqqNDc4v.js",
+      "assets/axe-CU5yp1Rq.js",
       "assets/chunk-2WNKQWTL-BojUnj9C.js",
-      "assets/do-classnames-CStnmS_I.css",
-      "assets/do-classnames-XCFI27ga.js",
+      "assets/do-classnames-9NZd4X8K.css",
+      "assets/do-classnames-CW-DYZe3.js",
       "assets/do-map-LnAUJFLK.js",
-      "assets/iframe-BCs7LJU2.js",
+      "assets/iframe-BV3W5Nu2.js",
       "assets/matchers-7Z3WT2CE-DM6fYTiH.js",
-      "assets/react-18-BdQS6wT2.js",
+      "assets/react-18-Ot9l-Ypt.js",
       "components/actions/accordion/Accordion.d.ts",
       "components/actions/accordion/Accordion.d.ts.map",
       "components/actions/button/Button.d.ts",
@@ -2569,6 +2941,8 @@
       "components/assets/icon/Icon.d.ts.map",
       "components/assets/section-title/SectionTitle.d.ts",
       "components/assets/section-title/SectionTitle.d.ts.map",
+      "components/assets/text/Text.d.ts",
+      "components/assets/text/Text.d.ts.map",
       "components/assets/thumbnail/Thumbnail.d.ts",
       "components/assets/thumbnail/Thumbnail.d.ts.map",
       "components/dialogs/consent/Consent.d.ts",
@@ -2641,6 +3015,8 @@
       "components/tags/chip/Chip.d.ts.map",
       "components/tags/color-chip/ColorChip.d.ts",
       "components/tags/color-chip/ColorChip.d.ts.map",
+      "components/tags/icon-chip/IconChip.d.ts",
+      "components/tags/icon-chip/IconChip.d.ts.map",
       "components/tags/tooltip/Tooltip.d.ts",
       "components/tags/tooltip/Tooltip.d.ts.map",
       "favicon.svg",
@@ -2678,122 +3054,132 @@
       "types/list.types.d.ts.map"
     ],
     "statsPath": "",
-    "total": 6941884,
+    "total": 7165516,
     "hashes": {
       "addon-visual-tests-assets/visual-test-illustration.mp4": "94d2af4dd76f0574",
-      "assets/Accordion-BiLk7OZF.css": "cf32b74dca3c95f6",
-      "assets/Accordion.stories-DYyg7P27.js": "39abcbb2ac044e35",
-      "assets/ActionsItem-8T9WtjQF.js": "c2af811f03c07049",
-      "assets/ActionsItem-C-MZ7mOu.css": "1df87308b6fae62a",
-      "assets/ActionsItem.stories-Q9MZzWga.js": "a0a03dc21d47192d",
-      "assets/Avatar-baT8biNs.js": "e1e11b651f8abc2f",
-      "assets/Avatar-tEDaSJ4J.css": "02e99e8d6350721d",
-      "assets/Avatar.stories-Lcf5vXUq.js": "368f8cffc44ab27f",
-      "assets/Bar-Bu5T73PS.css": "5310a146bd013062",
-      "assets/Bar-CwChfQ8g.js": "eb6df4edaffc193c",
-      "assets/Bar.stories-CxMFt7jc.js": "db839cc4e49c0f3d",
-      "assets/Button-D4R_cguY.css": "ba7d1f619e264b9b",
-      "assets/Button-MjdjayvU.js": "09cdd487a307575c",
-      "assets/Button.stories-BV6iOmOH.js": "dd0c753aeba051fc",
-      "assets/Chip-4HLznoGI.js": "cd1679ea13603336",
-      "assets/Chip-C4UvADsg.css": "d492df95e21ac590",
-      "assets/Chip.stories-Du1lH0-V.js": "49c95245105f9681",
-      "assets/ColorChip-CNR_w8YN.css": "eefd23949f10c563",
-      "assets/ColorChip-DL5YiNmQ.js": "ff5d4af8f1515c51",
-      "assets/ColorItem-DvtIebWG.css": "8ccbee3ad62c5f03",
-      "assets/ColorItem.stories-CXAfDe0F.js": "5d675c2b8ec0e655",
-      "assets/Consent-DbWMJZwF.css": "e62a5f0b11c352af",
-      "assets/Consent.stories-2lTbP1Ol.js": "feda827b19ab9555",
-      "assets/Dialog-C-KzA0tl.css": "660730e8d1d709ee",
-      "assets/Dialog.stories-Hs8tMEtk.js": "066ec674298fb45c",
-      "assets/DraggableItem-B9h_hvJW.css": "a7005a356bfd4a66",
-      "assets/DraggableItem-lipl0d9c.js": "2cc9910a7d89883e",
-      "assets/DraggableItem.stories-DOFewEox.js": "0d81227c7553c6b2",
-      "assets/Drawer-DRsIairj.css": "8bd9d9be3f2b1161",
-      "assets/Drawer.stories-DwuA2Tsh.js": "22b2f990ec35d1c0",
-      "assets/Dropdown-BL0lmSeC.css": "613e7b7acbf9e893",
-      "assets/Dropdown.stories-Cf8ANHSO.js": "62778cb4ada8e5ce",
-      "assets/Dropzone--VjUAUjB.css": "29384a42141e015d",
-      "assets/Dropzone.stories-CizBASeC.js": "1efc307190d816b6",
-      "assets/FormItem-CfFmwCPZ.css": "94ed48e8669e0ae3",
-      "assets/FormItem-Dwqy1va1.js": "5495a172c00a5a2c",
-      "assets/Formitem.stories-CXmZVujx.js": "5335b469171d5b18",
-      "assets/Icon-BBZvmbO6.css": "025a4af8f0f1c0d5",
-      "assets/Icon-V8UNgYGt.js": "5e0d3c88ad31bce6",
-      "assets/Icon.stories-D1aJDqzs.js": "e982ba99c2db8937",
-      "assets/Input-CmX_dBpH.js": "9cc6071185a136a7",
-      "assets/Input-X1uI0Q60.css": "e26a7e6ff94d03c1",
-      "assets/Input.stories-CUC1PZSQ.js": "245f7ad72f0e9cbc",
-      "assets/InputsBar-BeTMdZy8.css": "a95fb69f722190b8",
-      "assets/InputsBar.stories-Clfd_Jyk.js": "c47911f2d5b8cfd3",
-      "assets/KeyboardShortcutItem-h20X3iWU.css": "ac5414ca6f549acb",
-      "assets/KeyboardShortcutItem.stories-c6mhkiNi.js": "9060f16ee4a66c27",
-      "assets/Knob-BluWT-21.js": "6a3f762f7fa48b55",
-      "assets/Knob-CY7cFZKp.css": "9f8c3e17fc235ffe",
-      "assets/List-Bc7GqhjT.css": "6889962df82539f8",
-      "assets/List-CxQWa0vv.css": "3aab46a8aec2d996",
-      "assets/List.stories-BipY0ooJ.js": "026c9d71d6a53c34",
-      "assets/List.stories-DIpPRziA.js": "1c8ccf4a835bc3c2",
-      "assets/MembersList-D-O1G57w.css": "00cba9e5b88280c8",
-      "assets/MembersList.stories-7oYq0FpB.js": "b58009b5f0a8c82b",
-      "assets/Menu-D0Gn-hXO.css": "09ec54254603498e",
-      "assets/Menu.stories-D42W_KoK.js": "73cd6f5de19a8834",
-      "assets/Message-Bf9zcvii.js": "da2adf3b76139a35",
-      "assets/Message-DdHkGw2T.css": "07869fcc1b207ec8",
-      "assets/Message.stories-ClgQSHle.js": "5ec591f597f79f4d",
-      "assets/MultipleSlider-CrFmPjgE.css": "c155dc7854c0b0cd",
-      "assets/MultipleSlider.stories-CbHOq7CM.js": "dde27dcbcc1c4665",
-      "assets/Notification-BtLQ2wqs.css": "e7a894f0515d8789",
-      "assets/Notification.stories-CuPfu5Dp.js": "0722a08721d5bd46",
-      "assets/Section-rXYRDUtG.css": "480a6f50ca271868",
-      "assets/Section.stories-BnaNV3KK.js": "6a05d930469fa0fb",
-      "assets/SectionTitle-BSOZZLkr.js": "1b2a5f237a079d27",
-      "assets/SectionTitle-DjAfJvYB.css": "406037037e55a5ed",
-      "assets/SectionTitle.stories-BRH7x4p-.js": "10ba72654b7a5835",
-      "assets/Select-BtIFXuko.js": "543bb1efe73efa0e",
-      "assets/Select-CF6f_yuw.css": "5d08735dc51506f2",
-      "assets/Select.stories-ChaAmAe-.js": "381b45318257f52f",
-      "assets/SemanticMessage-9dXuLdUg.css": "e7103977345a6766",
-      "assets/SemanticMessage-DmdxkYXI.js": "066e38f2f9094a03",
-      "assets/SemanticMessage.stories-BWkhI9hT.js": "bb098516cfa47386",
-      "assets/SimpleItem-Dx9NFwfI.js": "06c06cc2587a6a04",
-      "assets/SimpleItem-x7hV4h9w.css": "b3dfdc4fd95f4fee",
-      "assets/SimpleItem.stories-BAwJkONd.js": "5d03abaef9b9c7de",
-      "assets/SimpleSlider-CVZDOJMM.css": "35bc68d5a21cd6f5",
-      "assets/SimpleSlider.stories-BNXDQBsD.js": "f2114408763b003e",
-      "assets/SortableList-FcMMIPG0.css": "0112348aff87929e",
-      "assets/SortableList.stories-CCwkiJXJ.js": "ec7a8e3bd137e867",
-      "assets/Tabs-BeAwV0yA.css": "61b0acb08af87042",
-      "assets/Tabs.stories-CPUO_Mt9.js": "3db8aa6cb0dbb04a",
-      "assets/Thumbnail-4t136AtU.css": "6bc30ee95f2f41ea",
-      "assets/Thumbnail-DL10DGca.js": "5ac05db6426e706c",
-      "assets/Thumbnail.stories-DtTPCJhc.js": "4deff3787c2f13bc",
-      "assets/Tooltip-95qOz2ti.css": "5e41de0521c7a8b6",
-      "assets/Tooltip-DWuflnk9.js": "8bea42ab5a2a9b80",
-      "assets/axe-CRdWuFXM.js": "ee9b738e74e3459d",
+      "assets/Accordion-D8TWxhN0.css": "6825e4144df99edf",
+      "assets/Accordion.stories-UiWbmBm8.js": "8a874d74b454c9be",
+      "assets/ActionsItem-5PBP0Nfq.js": "2a5d15bc9bff34f0",
+      "assets/ActionsItem-DKcA33e2.css": "a8c072a28c6ccc88",
+      "assets/ActionsItem.stories-OqJ9X9VM.js": "82159aa2708a185a",
+      "assets/Avatar-GRFy4woR.css": "8da246bf71754ec1",
+      "assets/Avatar-ZiXdnE4P.js": "42fcde8ec01b79f3",
+      "assets/Avatar.stories-CtMRWlzg.js": "ced4353a49f570a8",
+      "assets/Bar-BRcNBou9.js": "1b25c0bf60691ba5",
+      "assets/Bar-CS3Gmdvg.css": "aa966b0834561452",
+      "assets/Bar.stories-Dp970AVI.js": "c03941b2b0fa3d42",
+      "assets/Button-BJm3DFVd.css": "8d924529f4538ccf",
+      "assets/Button-CtmkHb43.js": "c3f19855c8c3012b",
+      "assets/Button.stories-CAnlyrBc.js": "57e935ed916071a1",
+      "assets/Card-SxPZ6MVz.css": "cc7bb4c9187299b8",
+      "assets/Card.stories-CV689Z24.js": "d565d66dc874ab35",
+      "assets/Chip-C2-F3NyH.js": "7cbc9049c5e73c1d",
+      "assets/Chip-CiTm2KcL.css": "6542b65aecfe0834",
+      "assets/Chip.stories-CC3nuQtH.js": "aa3b615dd47a8353",
+      "assets/ColorChip-CE1045_n.css": "5c3447b48784b4ea",
+      "assets/ColorChip-CU70klGg.js": "ad978ff6b387cee0",
+      "assets/ColorItem-DXLIpKDh.css": "3fb1302f80d8dc8e",
+      "assets/ColorItem.stories-Bs39dMU0.js": "0791820a6077cc9e",
+      "assets/Consent-B14sZ6PJ.css": "56427dc1caccf62f",
+      "assets/Consent.stories-DbOSWvdt.js": "e1ca1d31a69efc2e",
+      "assets/Dialog-CqfKx66v.css": "9adc2ad551273854",
+      "assets/Dialog.stories-D5xU_7N5.js": "dfba813f6bdad74a",
+      "assets/DraggableItem-DFomwElo.css": "d70993b56b1ffc8e",
+      "assets/DraggableItem-itwve_nf.js": "da68f6eaed13be3a",
+      "assets/DraggableItem.stories-PaYLEsDS.js": "2b8ab1a32e249106",
+      "assets/Drawer-cyLFoY9S.css": "1c708ed251671be7",
+      "assets/Drawer.stories-B20t-hWG.js": "bb795b80a18ced7e",
+      "assets/Dropdown-BZ_I86SP.css": "9224de3077202780",
+      "assets/Dropdown.stories-DIjCP5dZ.js": "e3e9f74d393c227c",
+      "assets/Dropzone-B6f-2gdF.css": "505b8baabeb4de6e",
+      "assets/Dropzone.stories-D63jXcZ4.js": "2ce81478e104ff6d",
+      "assets/FormItem-Dd3XMvRs.css": "53836596b58505ac",
+      "assets/FormItem-DrSJ-zOO.js": "317189b474805c11",
+      "assets/Formitem.stories-By6EJTMz.js": "8974f1ed377352d2",
+      "assets/Icon-B9TnxUot.css": "eb6d7b62d17711ed",
+      "assets/Icon-CAlsgZsQ.js": "88b32d748bbbb535",
+      "assets/Icon.stories-Dfpl83Sj.js": "3a2a3badab2bf990",
+      "assets/IconChip-BzXdOIeg.js": "238c8edba9ede74f",
+      "assets/IconChip-DUu8sVAK.css": "0d7f56dc8e9ebf0b",
+      "assets/Input-xoDCSGti.js": "fa99d782b87e1235",
+      "assets/Input-yLBSNCX2.css": "bae9891ef9e99562",
+      "assets/Input.stories--81l0gPb.js": "d2c95befbf0fce81",
+      "assets/InputsBar-D7-faB1F.css": "cd0266100c6991cd",
+      "assets/InputsBar.stories-C_6W2hIR.js": "8a697efd004b69ce",
+      "assets/KeyboardShortcutItem-DAU3Q4Gg.css": "450a155a6d198ffd",
+      "assets/KeyboardShortcutItem.stories-BH1ACs6D.js": "1c00434c74021a1e",
+      "assets/Knob-Ct38yA4r.css": "b0bd5d9b10a6a6c1",
+      "assets/Knob-CtTxuUSG.js": "5fdf423490c7821e",
+      "assets/List-CTjhor6V.css": "8b7d62cfd1d631ad",
+      "assets/List-D6vrmi5w.css": "4a3d611e1e8878f5",
+      "assets/List.stories-Be-HR0js.js": "1deccd38ef7a9a77",
+      "assets/List.stories-N3A2ApAa.js": "df5ca8ddf838458c",
+      "assets/MembersList-C3spy_7m.css": "b711e30a24034d36",
+      "assets/MembersList.stories-CUTwVqeX.js": "c755291842b8c796",
+      "assets/Menu-2C5Xladq.css": "fa46f26b92c6b4d2",
+      "assets/Menu.stories-DvWtZs9C.js": "22f27cab7fcefecd",
+      "assets/Message-CHRUaaPc.js": "feba8b8373201b55",
+      "assets/Message-DUPSB1l7.css": "85f8d852744e3560",
+      "assets/Message.stories-D1ixFlhG.js": "1c1b3e0114a02040",
+      "assets/MultipleSlider-7PVSE9u6.css": "fce9b1200efbb394",
+      "assets/MultipleSlider.stories-5CPBbiNV.js": "30697db5b58003d1",
+      "assets/Notification-BTgIoICp.css": "36f907f66e3e191a",
+      "assets/Notification.stories-DjRA-YKK.js": "4975aeaa7584ae4b",
+      "assets/Section-C8ntXsig.css": "191104a29f697f89",
+      "assets/Section.stories-DUuy0Qzr.js": "5804e52e3a15bc3d",
+      "assets/SectionTitle-BMQDBwWd.js": "637ceb8892e0780c",
+      "assets/SectionTitle-D3cJq0Wj.css": "6f987b4ab521aea0",
+      "assets/SectionTitle.stories-Cycsz-qg.js": "ef02f5a3fbb1ebbe",
+      "assets/Select-B25q_Sx3.js": "85ba8a298f1e5ec2",
+      "assets/Select-D37uIHO-.css": "5f321db14f0b820b",
+      "assets/Select.stories-B2RPngG_.js": "3f9792e46457ff9d",
+      "assets/SemanticMessage-7_-RcFxr.css": "bb27e64937c7d734",
+      "assets/SemanticMessage-PKzp-yWT.js": "4c4a0e206402150f",
+      "assets/SemanticMessage.stories-JsRk7-zf.js": "79b2ac5aba72d41c",
+      "assets/SimpleItem-BZDZwYLB.js": "cb46c7fbc19ae362",
+      "assets/SimpleItem-C_Rk_Ygt.css": "bab9538843dec661",
+      "assets/SimpleItem.stories-Bps3iqDN.js": "e779721c07248977",
+      "assets/SimpleSlider-BZ___SuM.css": "4cff4da52068dc87",
+      "assets/SimpleSlider.stories-DO1thsrl.js": "53af8810791df633",
+      "assets/SortableList-DGVFULl5.css": "ff1e885406aa994b",
+      "assets/SortableList.stories-DzbdguQs.js": "1e16b9a119592013",
+      "assets/Tabs-DNE2Fgcf.css": "d42bdd64c4904228",
+      "assets/Tabs.stories-BjxKvmz5.js": "678b90d67a91f1d1",
+      "assets/Text-BTjD4Bry.css": "f049e926138a45ca",
+      "assets/Text-Db9M-Q_w.js": "c55f213cd35b2271",
+      "assets/Text.stories-CPqyN1Xv.js": "c86a2c16d7304d72",
+      "assets/Thumbnail-CEkGVPi2.js": "2da11bf58e708f6d",
+      "assets/Thumbnail-CHOHlQzK.css": "96e4f880ce0c8a43",
+      "assets/Thumbnail.stories-D605JPy9.js": "7551475f87424148",
+      "assets/Tooltip-BjbyBKRh.css": "a2da12a81fb01435",
+      "assets/Tooltip-eK0RXsnw.js": "e5b58e12f848b746",
+      "assets/Typography.stories-CqqNDc4v.js": "da741f36bfa6e77d",
+      "assets/axe-CU5yp1Rq.js": "2e611d82fe206808",
       "assets/chunk-2WNKQWTL-BojUnj9C.js": "9ea4d9344f834479",
-      "assets/do-classnames-CStnmS_I.css": "4043820fb14b22e6",
-      "assets/do-classnames-XCFI27ga.js": "5fc2a5717e4dd9c3",
+      "assets/do-classnames-9NZd4X8K.css": "b99ee07b6efc2166",
+      "assets/do-classnames-CW-DYZe3.js": "4a4adf9b291d19ee",
       "assets/do-map-LnAUJFLK.js": "a1d857a09bd1088d",
-      "assets/iframe-BCs7LJU2.js": "990d4965f2921e0f",
+      "assets/iframe-BV3W5Nu2.js": "aea89a2d63e80389",
       "assets/matchers-7Z3WT2CE-DM6fYTiH.js": "4f29295831283b17",
-      "assets/react-18-BdQS6wT2.js": "8b5f6ecac331f9c2",
+      "assets/react-18-Ot9l-Ypt.js": "8b838f39f95d38e0",
       "components/actions/accordion/Accordion.d.ts": "a3ff1aa3b73aa358",
       "components/actions/accordion/Accordion.d.ts.map": "bf6b84703bd4cfdc",
-      "components/actions/button/Button.d.ts": "6e4181665fc650b7",
-      "components/actions/button/Button.d.ts.map": "7434bb170bb172fa",
-      "components/actions/card/Card.d.ts": "ddcc2e2f876bea0d",
-      "components/actions/card/Card.d.ts.map": "58ab49940ca7b0a5",
+      "components/actions/button/Button.d.ts": "1a0635ec0e16d992",
+      "components/actions/button/Button.d.ts.map": "a80d331174c745f1",
+      "components/actions/card/Card.d.ts": "c3fe16a1216b3206",
+      "components/actions/card/Card.d.ts.map": "95342fb0c43b014a",
       "components/actions/knob/Knob.d.ts": "d8a271b3e86b098c",
       "components/actions/knob/Knob.d.ts.map": "3f54c5698573cbbf",
       "components/actions/menu/Menu.d.ts": "6b028f18174c1c9e",
-      "components/actions/menu/Menu.d.ts.map": "216a05037ca87dd8",
+      "components/actions/menu/Menu.d.ts.map": "5739361622e849ab",
       "components/assets/avatar/Avatar.d.ts": "646f5890c531eb53",
       "components/assets/avatar/Avatar.d.ts.map": "b364634757933fb1",
       "components/assets/icon/Icon.d.ts": "2301980af7f2dd21",
       "components/assets/icon/Icon.d.ts.map": "d5b5b5948f3780e2",
       "components/assets/section-title/SectionTitle.d.ts": "42c532da8a105a5b",
-      "components/assets/section-title/SectionTitle.d.ts.map": "30a00465c8cd5c78",
+      "components/assets/section-title/SectionTitle.d.ts.map": "5fa33d17307c2049",
+      "components/assets/text/Text.d.ts": "3ff841ef562f784e",
+      "components/assets/text/Text.d.ts.map": "7b8c6ae3d633bcd4",
       "components/assets/thumbnail/Thumbnail.d.ts": "ec370fa6a60be205",
       "components/assets/thumbnail/Thumbnail.d.ts.map": "9cebca263d522c0d",
       "components/dialogs/consent/Consent.d.ts": "852944c608a2efd4",
@@ -2806,16 +3192,16 @@
       "components/dialogs/notification/Notification.d.ts.map": "57ef770f5f7ccb5f",
       "components/dialogs/semantic-message/SemanticMessage.d.ts": "6a6f0c1d94247ed8",
       "components/dialogs/semantic-message/SemanticMessage.d.ts.map": "dc142cb20acc8684",
-      "components/inputs/dropdown/Dropdown.d.ts": "40c9edf78a60ff54",
-      "components/inputs/dropdown/Dropdown.d.ts.map": "d057d57e834d1a1c",
+      "components/inputs/dropdown/Dropdown.d.ts": "081c1fbbf752ab59",
+      "components/inputs/dropdown/Dropdown.d.ts.map": "4bf45a84123e90f2",
       "components/inputs/dropzone/Dropzone.d.ts": "eab6a49ad6b213b9",
       "components/inputs/dropzone/Dropzone.d.ts.map": "47ab7da1a364fa1e",
-      "components/inputs/input/Input.d.ts": "a59f3c39f4627f56",
-      "components/inputs/input/Input.d.ts.map": "3b83de7af5a2484f",
+      "components/inputs/input/Input.d.ts": "4fe7d496c73e1583",
+      "components/inputs/input/Input.d.ts.map": "9a9d19a97aa09494",
       "components/inputs/inputs-bar/InputsBar.d.ts": "a0bad6bf08b44fab",
       "components/inputs/inputs-bar/InputsBar.d.ts.map": "2f49b05551f6d93a",
-      "components/inputs/multiple-slider/MultipleSlider.d.ts": "0befcdddb70e496d",
-      "components/inputs/multiple-slider/MultipleSlider.d.ts.map": "110b062c0b62636c",
+      "components/inputs/multiple-slider/MultipleSlider.d.ts": "d74303dde480f656",
+      "components/inputs/multiple-slider/MultipleSlider.d.ts.map": "c4d19752b3936601",
       "components/inputs/multiple-slider/actions/addStop.d.ts": "089ad74cc00f12ab",
       "components/inputs/multiple-slider/actions/addStop.d.ts.map": "784d594b1d90b9ea",
       "components/inputs/multiple-slider/actions/deleteStop.d.ts": "d2e69ffc3ae70e65",
@@ -2825,13 +3211,13 @@
       "components/inputs/multiple-slider/actions/shiftRightStop.d.ts": "da74a3f6ab876f89",
       "components/inputs/multiple-slider/actions/shiftRightStop.d.ts.map": "b72bbff585573aa7",
       "components/inputs/select/Select.d.ts": "c9ed844aa6d320c8",
-      "components/inputs/select/Select.d.ts.map": "e5872ba63ee9c56c",
-      "components/inputs/simple-slider/SimpleSlider.d.ts": "a1d7c0ebb007be43",
-      "components/inputs/simple-slider/SimpleSlider.d.ts.map": "46c61393959d864d",
+      "components/inputs/select/Select.d.ts.map": "556bb6687d160012",
+      "components/inputs/simple-slider/SimpleSlider.d.ts": "307708a06aa51184",
+      "components/inputs/simple-slider/SimpleSlider.d.ts.map": "62b59521871e9baf",
       "components/lists/actions-item/ActionsItem.d.ts": "f1655fa333d550af",
       "components/lists/actions-item/ActionsItem.d.ts.map": "c0bd773a48c08e5f",
       "components/lists/actions-list/ActionsList.d.ts": "091a3ad239947326",
-      "components/lists/actions-list/ActionsList.d.ts.map": "725f60d16135fd07",
+      "components/lists/actions-list/ActionsList.d.ts.map": "5954efdb8941cef3",
       "components/lists/color-item/ColorItem.d.ts": "c89763dbff9bf83d",
       "components/lists/color-item/ColorItem.d.ts.map": "6fc2aa818f3a30bf",
       "components/lists/draggable-item/DraggableItem.d.ts": "ffa7a163f0289adb",
@@ -2866,19 +3252,21 @@
       "components/tags/chip/Chip.d.ts.map": "13741b8a537141b2",
       "components/tags/color-chip/ColorChip.d.ts": "9dce4a8bf147f24b",
       "components/tags/color-chip/ColorChip.d.ts.map": "32c49d44371b3fcf",
+      "components/tags/icon-chip/IconChip.d.ts": "1f8603b5ed323381",
+      "components/tags/icon-chip/IconChip.d.ts.map": "a1fb8782d807ac39",
       "components/tags/tooltip/Tooltip.d.ts": "c99feedd8428c5f8",
       "components/tags/tooltip/Tooltip.d.ts.map": "292152d2ec9d35ee",
       "favicon.svg": "293aff65db45e6c4",
-      "iframe.html": "03172995fe426f9f",
-      "index.d.ts": "28ceab566e4ab3ae",
-      "index.d.ts.map": "fc7e1d18718523cd",
+      "iframe.html": "de0a61eba3c621b8",
+      "index.d.ts": "aa0f6499604ad337",
+      "index.d.ts.map": "1c4c7eacef55a0d1",
       "index.html": "21f65813d6957b36",
-      "index.json": "cb851d2376fd3053",
+      "index.json": "7ad0a22430407630",
       "nunito-sans-bold-italic.woff2": "d64464b3594b3fb9",
       "nunito-sans-bold.woff2": "0bd5b61b7fb7f7d5",
       "nunito-sans-italic.woff2": "b7807d9de055e9a0",
       "nunito-sans-regular.woff2": "6687b7be04c2debe",
-      "project.json": "6bc90dbaeb1f72b9",
+      "project.json": "4dd804245f405fe2",
       "sb-addons/a11y-3/manager-bundle.js": "23968f2f1083fab1",
       "sb-addons/chromatic-com-storybook-2/manager-bundle.js": "5016923c01e62c02",
       "sb-addons/chromatic-com-storybook-2/manager-bundle.js.LEGAL.txt": "285dd9e1dc6c7408",
@@ -2899,8 +3287,8 @@
       "types/consent.types.d.ts.map": "44fc69c5cf994a88",
       "types/icon.types.d.ts": "24517dc7cdd3ce29",
       "types/icon.types.d.ts.map": "93fe0bc387d4f1fd",
-      "types/list.types.d.ts": "5efff6129ea3bbbb",
-      "types/list.types.d.ts.map": "a45b8300b4f05242"
+      "types/list.types.d.ts": "7e3c4c96ef04b024",
+      "types/list.types.d.ts.map": "6f725a26331fb7b7"
     }
   },
   "flags": {
@@ -2909,16 +3297,18 @@
   "git": {
     "version": "2.39.5",
     "gitUserEmail": "a.grimaud@involt.io",
-    "uncommittedHash": "8d7213b805434b94b74b2b8db9b4b11e6cc23b36",
+    "uncommittedHash": "b4468d54c3c5383b40ebaf47acaabaddf9992c38",
     "rootPath": "/Users/a_ng_d/DEV/figmug-ui",
-    "commit": "80bb27f5b13715d2b426e46e2fdb9dd3264b6fc2",
-    "committedAt": 1751973180000,
+    "commit": "b191892c9a32c1548bdde33f41c2d618b57d7e6f",
+    "committedAt": 1753110145000,
     "committerEmail": "a.grimaud@involt.io",
     "committerName": "@a-ng-d",
     "branch": "main",
     "slug": "a-ng-d/figmug-ui",
     "fromCI": false,
-    "parentCommits": ["15918159a1f30e89a43b87c6ac3ea565f0fcc2a0"]
+    "parentCommits": [
+      "b191892c9a32c1548bdde33f41c2d618b57d7e6f"
+    ]
   },
   "input": [],
   "isOnboarding": false,
@@ -2951,9 +3341,11 @@
   },
   "packageJson": {
     "name": "@a_ng_d/figmug-ui",
-    "version": "1.12.8",
+    "version": "1.15.1",
     "type": "module",
-    "files": ["dist"],
+    "files": [
+      "dist"
+    ],
     "exports": "./dist/index.js",
     "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -2969,7 +3361,8 @@
       "format:fix": "prettier --write .",
       "preview": "vite preview",
       "storybook": "storybook dev -p 6006",
-      "build-storybook": "storybook build"
+      "build-storybook": "storybook build",
+      "create-theme": "node scripts/create-theme.js"
     },
     "dependencies": {
       "@a_ng_d/figmug-utils": "^0.6.0",
@@ -3021,7 +3414,11 @@
       "type": "git",
       "url": "git+https://github.com/a-ng-d/figmug-ui.git"
     },
-    "keywords": ["library", "ui", "figma-ui"],
+    "keywords": [
+      "library",
+      "ui",
+      "figma-ui"
+    ],
     "author": "Aurélien Grimaud",
     "license": "MIT",
     "bugs": {
@@ -3047,19 +3444,19 @@
     "packageManagerVersion": "10.5.0"
   },
   "sentinelUrls": [
-    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-lroczunazr/.chromatic/files-copied.3026007072.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20250708%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250708T111727Z&X-Amz-Expires=1800&X-Amz-Signature=1ac92257251de6155dfc7bee0c57f158264e26bf5680824a648f151b0fa6c993&X-Amz-SignedHeaders=host&x-id=GetObject",
-    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-lroczunazr/.chromatic/zip-unpacked.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20250708%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250708T111727Z&X-Amz-Expires=1980&X-Amz-Signature=3a967db633cf10618f71ca98fe0579375169c00f1d816fe0ecf79b9df22f49dc&X-Amz-SignedHeaders=host&x-id=GetObject"
+    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-pakqrolbiu/.chromatic/files-copied.3041892439.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20250721%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250721T211542Z&X-Amz-Expires=1800&X-Amz-Signature=c3b54ce720ced77cef3c5185254f941b20bf73b1797cb806ad2b1c650de8d23e&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-pakqrolbiu/.chromatic/zip-unpacked.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20250721%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250721T211542Z&X-Amz-Expires=1980&X-Amz-Signature=589cfc5f1466eaaf70c112b41a4061e35c460b2869d5777722218ff764708fd7&X-Amz-SignedHeaders=host&x-id=GetObject"
   ],
-  "sessionId": "c2798650-4e17-43db-af6c-538c26d0f9ee",
-  "sourceDir": "/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--14489-UdbMDcwda7zV",
-  "startedAt": 1751973457139,
+  "sessionId": "52c113c2-1f16-4aa0-8c78-dad938d5a389",
+  "sourceDir": "/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--65381-dShcm44VZk8S",
+  "startedAt": 1753132552242,
   "storybook": {
     "version": "9.0.6",
     "baseDir": "."
   },
-  "storybookUrl": "https://663a220bcc5dda79791c430e-lroczunazr.chromatic.com/",
+  "storybookUrl": "https://663a220bcc5dda79791c430e-pakqrolbiu.chromatic.com/",
   "task": "snapshot",
-  "uploadedBytes": 657652,
-  "uploadedFiles": 76,
+  "uploadedBytes": 644772,
+  "uploadedFiles": 63,
   "userError": false
 }

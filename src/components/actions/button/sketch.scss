@@ -14,10 +14,10 @@
 
   --button-text-color: var(--sketch-color-foreground-primary);
   --button-text-font-family: var(--font-stack);
-  --button-text-font-size: var(--font-size-medlum);
-  --button-text-font-weight: var(--font-weight-bold);
-  --button-text-letter-spacing: var(--font-letter-spacing-small);
-  --button-text-line-height: var(--font-line-height);
+  --button-text-font_size: var(--font-size-medlum);
+  --button-text-font_weight: var(--font-weight-bold);
+  --button-text-letter_spacing: var(--font-letter_spacing-small);
+  --button-text-line_height: var(--font-line_height);
   --button-text-decoration: none;
   --button-text-transform: none;
 
@@ -35,35 +35,35 @@
   --button-large-padding: 0 var(--size-pos-xmsmall);
 
   /* Icon Button */
-  --icon-button-width: var(--size-pos-large);
-  --icon-button-height: var(--size-pos-medium);
-  --icon-button-radius: var(--border-radius-large);
-  --icon-button-padding: 0;
+  --icon_button-width: var(--size-pos-large);
+  --icon_button-height: var(--size-pos-medium);
+  --icon_button-radius: var(--border-radius-large);
+  --icon_button-padding: 0;
 
-  --icon-button-background-color: transparent;
+  --icon_button-background-color: transparent;
 
-  --icon-button-border-color: transparent;
-  --icon-button-border-width: 0;
-  --icon-button-border-offset: 0;
+  --icon_button-border-color: transparent;
+  --icon_button-border-width: 0;
+  --icon_button-border-offset: 0;
 
-  --icon-button-text-color: var(--sketch-color-background-secondary);
+  --icon_button-text-color: var(--sketch-color-background-secondary);
 
-  --icon-button-icon-color: var(--sketch-color-background-secondary);
-  --icon-button-icon-width: var(--size-pos-small);
-  --icon-button-icon-height: var(--size-pos-small);
+  --icon_button-icon-color: var(--sketch-color-background-secondary);
+  --icon_button-icon-width: var(--size-pos-small);
+  --icon_button-icon-height: var(--size-pos-small);
 
-  --icon-button-notification-width: var(--size-pos-xxxsmall);
-  --icon-button-notification-height: var(--size-pos-xxxsmall);
-  --icon-button-notification-radius: var(--border-radius-full);
-  --icon-button-notification-top: var(--size-pos-xxxsmall);
-  --icon-button-notification-right: var(--size-pos-xxxsmall);
-  --icon-button-notification-border-width: var(--size-pos-xunit);
-  --icon-button-notification-border-offset: 0;
+  --icon_button-notification-width: var(--size-pos-xxxsmall);
+  --icon_button-notification-height: var(--size-pos-xxxsmall);
+  --icon_button-notification-radius: var(--border-radius-full);
+  --icon_button-notification-top: var(--size-pos-xxxsmall);
+  --icon_button-notification-right: var(--size-pos-xxxsmall);
+  --icon_button-notification-border-width: var(--size-pos-xunit);
+  --icon_button-notification-border-offset: 0;
 
-  --icon-button-small-width: var(--size-pos-medium);
-  --icon-button-small-height: var(--size-pos-small);
-  --icon-button-large-width: var(--size-pos-xlarge);
-  --icon-button-large-height: var(--size-pos-large);
+  --icon_button-small-width: var(--size-pos-medium);
+  --icon_button-small-height: var(--size-pos-small);
+  --icon_button-large-width: var(--size-pos-xlarge);
+  --icon_button-large-height: var(--size-pos-large);
 
   /* Primary */
   --button-background-color-primary: var(--sketch-color-accent-secondary);
@@ -172,7 +172,7 @@
   );
 
   /* Tertiary */
-  --button-text-font-size-tertiary: var(--font-size-small);
+  --button-text-font_size-tertiary: var(--font-size-small);
   --button-padding-tertiary: 0;
 
   --button-background-color-tertiary: var(--sketch-color-background-primary);
@@ -344,151 +344,151 @@
   --button-icon-color-alternative-disabled: var(--sketch-color-accent-tertiary);
 
   /* Icon Button - Default */
-  --icon-button-background-color: var(--sketch-color-background-primary);
-  --icon-button-background-color-hover: var(
+  --icon_button-background-color: var(--sketch-color-background-primary);
+  --icon_button-background-color-hover: var(
     --sketch-color-background-secondary
   );
-  --icon-button-background-color-pressed: var(
+  --icon_button-background-color-pressed: var(
     --sketch-color-background-secondary
   );
-  --icon-button-background-color-focus: var(--sketch-color-background-primary);
-  --icon-button-background-color-disabled: var(
+  --icon_button-background-color-focus: var(--sketch-color-background-primary);
+  --icon_button-background-color-disabled: var(
     --sketch-color-background-primary
   );
 
-  --icon-button-border-width: 0;
-  --icon-button-border-width-hover: 0;
-  --icon-button-border-width-pressed: 0;
-  --icon-button-border-width-focus: var(--size-pos-unit);
-  --icon-button-border-width-disabled: 0;
+  --icon_button-border-width: 0;
+  --icon_button-border-width-hover: 0;
+  --icon_button-border-width-pressed: 0;
+  --icon_button-border-width-focus: var(--size-pos-unit);
+  --icon_button-border-width-disabled: 0;
 
-  --icon-button-border-offset: 0;
-  --icon-button-border-offset-hover: 0;
-  --icon-button-border-offset-pressed: 0;
-  --icon-button-border-offset-focus: var(--size-neg-unit);
-  --icon-button-border-offset-disabled: 0;
+  --icon_button-border-offset: 0;
+  --icon_button-border-offset-hover: 0;
+  --icon_button-border-offset-pressed: 0;
+  --icon_button-border-offset-focus: var(--size-neg-unit);
+  --icon_button-border-offset-disabled: 0;
 
-  --icon-button-border-color: transparent;
-  --icon-button-border-color-hover: transparent;
-  --icon-button-border-color-pressed: transparent;
-  --icon-button-border-color-focus: var(--sketch-color-accent-primary);
-  --icon-button-border-color-disabled: transparent;
+  --icon_button-border-color: transparent;
+  --icon_button-border-color-hover: transparent;
+  --icon_button-border-color-pressed: transparent;
+  --icon_button-border-color-focus: var(--sketch-color-accent-primary);
+  --icon_button-border-color-disabled: transparent;
 
-  --icon-button-icon-color: var(--sketch-color-foreground-tertiary);
-  --icon-button-icon-color-hover: var(--sketch-color-foreground-primary);
-  --icon-button-icon-color-pressed: var(--sketch-color-foreground-primary);
-  --icon-button-icon-color-focus: var(--sketch-color-foreground-primary);
-  --icon-button-icon-color-disabled: var(--sketch-color-foreground-disabled);
+  --icon_button-icon-color: var(--sketch-color-foreground-tertiary);
+  --icon_button-icon-color-hover: var(--sketch-color-foreground-primary);
+  --icon_button-icon-color-pressed: var(--sketch-color-foreground-primary);
+  --icon_button-icon-color-focus: var(--sketch-color-foreground-primary);
+  --icon_button-icon-color-disabled: var(--sketch-color-foreground-disabled);
 
-  --icon-button-notification-background-color: var(
+  --icon_button-notification-background-color: var(
     --sketch-color-accent-primary
   );
-  --icon-button-notification-background-color-hover: var(
+  --icon_button-notification-background-color-hover: var(
     --sketch-color-accent-primary
   );
-  --icon-button-notification-background-color-pressed: var(
+  --icon_button-notification-background-color-pressed: var(
     --sketch-color-accent-primary
   );
-  --icon-button-notification-background-color-focus: var(
+  --icon_button-notification-background-color-focus: var(
     --sketch-color-accent-primary
   );
-  --icon-button-notification-background-color-disabled: var(
+  --icon_button-notification-background-color-disabled: var(
     --sketch-color-accent-tertiary
   );
 
-  --icon-button-notification-border-color: var(
+  --icon_button-notification-border-color: var(
     --sketch-color-background-primary
   );
-  --icon-button-notification-border-color-hover: var(
+  --icon_button-notification-border-color-hover: var(
     --sketch-color-background-tertiary
   );
-  --icon-button-notification-border-color-pressed: var(
+  --icon_button-notification-border-color-pressed: var(
     --sketch-color-background-tertiary
   );
-  --icon-button-notification-border-color-focus: var(
+  --icon_button-notification-border-color-focus: var(
     --sketch-color-background-primary
   );
-  --icon-button-notification-border-color-disabled: var(
+  --icon_button-notification-border-color-disabled: var(
     --sketch-color-background-secondary
   );
 
-  --icon-button-background-color-onselected: var(
+  --icon_button-background-color-onselected: var(
     --sketch-color-accent-primary-tertiary
   );
-  --icon-button-background-color-onselected-hover: var(
+  --icon_button-background-color-onselected-hover: var(
     --sketch-color-accent-primary-tertiary
   );
 
   /* Icon Button - Selected */
-  --icon-button-background-color-selected: var(--sketch-color-accent-disabled);
-  --icon-button-background-color-selected-hover: var(
+  --icon_button-background-color-selected: var(--sketch-color-accent-disabled);
+  --icon_button-background-color-selected-hover: var(
     --sketch-color-accent-tertiary
   );
-  --icon-button-background-color-selected-pressed: var(
+  --icon_button-background-color-selected-pressed: var(
     --sketch-color-accent-tertiary
   );
-  --icon-button-background-color-selected-focus: var(
+  --icon_button-background-color-selected-focus: var(
     --sketch-color-accent-disabled
   );
-  --icon-button-background-color-selected-disabled: var(
+  --icon_button-background-color-selected-disabled: var(
     --sketch-color-accent-disabled
   );
 
-  --icon-button-border-width-selected: 0;
-  --icon-button-border-width-selected-hover: 0;
-  --icon-button-border-width-selected-pressed: 0;
-  --icon-button-border-width-selected-focus: var(--size-pos-unit);
-  --icon-button-border-width-selected-disabled: 0;
+  --icon_button-border-width-selected: 0;
+  --icon_button-border-width-selected-hover: 0;
+  --icon_button-border-width-selected-pressed: 0;
+  --icon_button-border-width-selected-focus: var(--size-pos-unit);
+  --icon_button-border-width-selected-disabled: 0;
 
-  --icon-button-border-offset-selected: 0;
-  --icon-button-border-offset-selected-hover: 0;
-  --icon-button-border-offset-selected-pressed: 0;
-  --icon-button-border-offset-selected-focus: var(--size-neg-unit);
-  --icon-button-border-offset-selected-disabled: 0;
+  --icon_button-border-offset-selected: 0;
+  --icon_button-border-offset-selected-hover: 0;
+  --icon_button-border-offset-selected-pressed: 0;
+  --icon_button-border-offset-selected-focus: var(--size-neg-unit);
+  --icon_button-border-offset-selected-disabled: 0;
 
-  --icon-button-border-color-selected: transparent;
-  --icon-button-border-color-selected-hover: transparent;
-  --icon-button-border-color-selected-pressed: transparent;
-  --icon-button-border-color-selected-focus: var(--sketch-color-accent-primary);
-  --icon-button-border-color-selected-disabled: transparent;
+  --icon_button-border-color-selected: transparent;
+  --icon_button-border-color-selected-hover: transparent;
+  --icon_button-border-color-selected-pressed: transparent;
+  --icon_button-border-color-selected-focus: var(--sketch-color-accent-primary);
+  --icon_button-border-color-selected-disabled: transparent;
 
-  --icon-button-icon-color-selected: var(--sketch-color-accent-primary);
-  --icon-button-icon-color-selected-hover: var(--sketch-color-accent-primary);
-  --icon-button-icon-color-selected-pressed: var(--sketch-color-accent-primary);
-  --icon-button-icon-color-selected-focus: var(--sketch-color-accent-primary);
-  --icon-button-icon-color-selected-disabled: var(
+  --icon_button-icon-color-selected: var(--sketch-color-accent-primary);
+  --icon_button-icon-color-selected-hover: var(--sketch-color-accent-primary);
+  --icon_button-icon-color-selected-pressed: var(--sketch-color-accent-primary);
+  --icon_button-icon-color-selected-focus: var(--sketch-color-accent-primary);
+  --icon_button-icon-color-selected-disabled: var(
     --sketch-color-accent-tertiary
   );
 
-  --icon-button-notification-background-color-selected: var(
+  --icon_button-notification-background-color-selected: var(
     --sketch-color-accent-primary
   );
-  --icon-button-notification-background-color-selected-hover: var(
+  --icon_button-notification-background-color-selected-hover: var(
     --sketch-color-accent-primary
   );
-  --icon-button-notification-background-color-selected-pressed: var(
+  --icon_button-notification-background-color-selected-pressed: var(
     --sketch-color-accent-primary
   );
-  --icon-button-notification-background-color-selected-focus: var(
+  --icon_button-notification-background-color-selected-focus: var(
     --sketch-color-accent-primary
   );
-  --icon-button-notification-background-color-selected-disabled: var(
+  --icon_button-notification-background-color-selected-disabled: var(
     --sketch-color-accent-tertiary
   );
 
-  --icon-button-notification-border-color-selected: var(
+  --icon_button-notification-border-color-selected: var(
     --sketch-color-accent-disabled
   );
-  --icon-button-notification-border-color-selected-hover: var(
+  --icon_button-notification-border-color-selected-hover: var(
     --sketch-color-accent-tertiary
   );
-  --icon-button-notification-border-color-selected-pressed: var(
+  --icon_button-notification-border-color-selected-pressed: var(
     --sketch-color-accent-tertiary
   );
-  --icon-button-notification-border-color-selected-focus: var(
+  --icon_button-notification-border-color-selected-focus: var(
     --sketch-color-accent-disabled
   );
-  --icon-button-notification-border-color-selected-disabled: var(
+  --icon_button-notification-border-color-selected-disabled: var(
     --sketch-color-accent-disabled
   );
 }

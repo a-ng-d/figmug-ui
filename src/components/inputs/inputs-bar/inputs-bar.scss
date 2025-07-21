@@ -6,8 +6,8 @@
 .inputs {
   display: flex;
   align-items: center;
-  gap: var(--inputs-bar-gap);
-  --input-radius: var(--inputs-bar-input-radius);
+  gap: var(--inputs_bar-gap);
+  --input-radius: var(--inputs_bar-input-radius);
 
   &:hover {
     --input-border-width: var(--input-border-width-hover);
@@ -18,15 +18,15 @@
   .inputs__bar {
     display: flex;
     position: relative;
-    gap: var(--inputs-bar-gap-inner);
-    border-radius: var(--inputs-bar-radius);
-    padding: var(--inputs-bar-padding);
+    gap: var(--inputs_bar-gap-inner);
+    border-radius: var(--inputs_bar-radius);
+    padding: var(--inputs_bar-padding);
     overflow: hidden;
-    --input-number-width: var(--inputs-bar-width);
-    --input-color-width: var(--inputs-bar-width);
+    --input-number-width: var(--inputs_bar-width);
+    --input-color-width: var(--inputs_bar-width);
 
     & .input {
-      margin: var(--inputs-bar-margin);
+      margin: var(--inputs_bar-margin);
 
       input:focus {
         --input-border-width: var(--input-border-width-hover);
@@ -44,9 +44,9 @@
         position: absolute;
         z-index: 2;
         inset: 0 0 0 0;
-        box-shadow: inset 0 0 0 var(--inputs-bar-border-width)
-          var(--inputs-bar-border-color);
-        border-radius: var(--inputs-bar-radius);
+        box-shadow: inset 0 0 0 var(--inputs_bar-border-width)
+          var(--inputs_bar-border-color);
+        border-radius: var(--inputs_bar-radius);
         pointer-events: none;
         content: '';
       }

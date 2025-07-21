@@ -130,11 +130,11 @@
     height: var(--input-height);
     overflow: visible;
     color: var(--input-text-color);
-    font-weight: var(--input-text-font-weight);
-    font-size: var(--input-text-font-size);
-    line-height: var(--input-text-line-height);
+    font-weight: var(--input-text-font_weight);
+    font-size: var(--input-text-font_size);
+    line-height: var(--input-text-line_height);
     font-family: var(--input-text-font-family);
-    letter-spacing: var(--input-text-letterspacing);
+    letter-spacing: var(--input-text-letter_spacing);
 
     &::placeholder {
       color: var(--input-text-placeholder-color);
@@ -327,15 +327,15 @@
   cursor: inherit;
   padding: var(--input-textarea-padding);
   width: 100%;
-  min-height: var(--input-textarea-min-height);
+  min-height: var(--input-textarea-min_height);
   overflow: visible;
   overflow-y: auto;
   resize: none;
-  font-weight: var(--input-text-font-weight);
-  font-size: var(--input-text-font-size);
-  line-height: var(--input-text-line-height);
+  font-weight: var(--input-text-font_weight);
+  font-size: var(--input-text-font_size);
+  line-height: var(--input-text-line_height);
   font-family: var(--input-text-font-family);
-  letter-spacing: var(--input-text-letterspacing);
+  letter-spacing: var(--input-text-letter_spacing);
 
   --input-border-width: var(--input-border-width-empty);
   --input-border-offset: var(--input-border-offset-empty);

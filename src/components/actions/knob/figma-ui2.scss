@@ -1,6 +1,6 @@
 :root[data-theme='figma-ui2'] {
   /* Base */
-  --knob-min-width: var(--size-pos-medium);
+  --knob-min_width: var(--size-pos-medium);
   --knob-height: var(--size-pos-xxlarge);
   --knob-top: 0;
 
@@ -25,7 +25,7 @@
 
   --knob-tooltip-top: var(--size-neg-xsmall);
   --knob-tooltip-padding: var(--size-pos-xxxsmall);
-  --knob-tooltip-min-width: var(--size-pos-small);
+  --knob-tooltip-min_width: var(--size-pos-small);
   --knob-tooltip-radius: 0;
   --knob-tooltip-background-color: var(--figma-color-bg-inverse);
   --knob-tooltip-text-color: var(--figma-color-text-oninverse);

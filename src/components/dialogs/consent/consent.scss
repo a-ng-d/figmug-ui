@@ -22,11 +22,11 @@
     background-color: var(--consent-banner-background-color);
     padding: var(--consent-banner-padding);
     width: 100%;
-    max-height: var(--consent-banner-max-height);
+    max-height: var(--consent-banner-max_height);
     pointer-events: all;
 
     &__message {
-      max-width: var(--consent-banner-max-width);
+      max-width: var(--consent-banner-max_width);
       overflow-y: auto;
     }
 
@@ -46,7 +46,7 @@
     }
 
     &__item__description {
-      max-width: var(--consent-list-max-width);
+      max-width: var(--consent-list-max_width);
     }
 
     & > .bar {

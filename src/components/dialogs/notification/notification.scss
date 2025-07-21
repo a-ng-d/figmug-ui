@@ -4,7 +4,7 @@
 @import 'sketch';
 
 .notification {
-  --semantic-message-max-width: var(--notification-message-max-width);
+  --semantic_message-max_width: var(--notification-message-max_width);
   display: flex;
   position: absolute;
   justify-content: end;

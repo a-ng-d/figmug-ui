@@ -70,11 +70,11 @@
   padding: var(--button-padding);
   height: var(--button-height);
   color: var(--button-text-color);
-  font-weight: var(--button-text-font-weight);
-  font-size: var(--button-text-font-size);
-  line-height: var(--button-text-line-height);
+  font-weight: var(--button-text-font_weight);
+  font-size: var(--button-text-font_size);
+  line-height: var(--button-text-line_height);
   font-family: var(--button-text-font-family);
-  letter-spacing: var(--button-text-letter-spacing);
+  letter-spacing: var(--button-text-letter_spacing);
   text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
 
@@ -208,7 +208,7 @@
   }
 
   &--tertiary {
-    --button-text-font-size: var(--button-text-font-size-tertiary);
+    --button-text-font_size: var(--button-text-font_size-tertiary);
     --button-padding: var(--button-padding-tertiary);
     --button-background-color: var(--button-background-color-tertiary);
     --button-border-color: var(--button-border-color-tertiary);
@@ -391,42 +391,42 @@
 }
 
 .icon-button {
-  outline: var(--icon-button-border-width) solid var(--icon-button-border-color);
-  outline-offset: var(--icon-button-border-offset);
+  outline: var(--icon_button-border-width) solid var(--icon_button-border-color);
+  outline-offset: var(--icon_button-border-offset);
   border: none;
-  border-radius: var(--icon-button-radius);
-  background-color: var(--icon-button-background-color);
-  padding: var(--icon-button-padding);
-  width: var(--icon-button-width);
-  height: var(--icon-button-height);
+  border-radius: var(--icon_button-radius);
+  background-color: var(--icon_button-background-color);
+  padding: var(--icon_button-padding);
+  width: var(--icon_button-width);
+  height: var(--icon_button-height);
 
   .icon-box {
-    background-color: var(--icon-button-icon-color);
-    width: var(--icon-button-icon-width);
-    height: var(--icon-button-icon-height);
+    background-color: var(--icon_button-icon-color);
+    width: var(--icon_button-icon-width);
+    height: var(--icon_button-icon-height);
   }
 
   &--small {
-    width: var(--icon-button-small-width);
-    height: var(--icon-button-small-height);
+    width: var(--icon_button-small-width);
+    height: var(--icon_button-small-height);
   }
 
   &--large {
-    width: var(--icon-button-large-width);
-    height: var(--icon-button-large-height);
+    width: var(--icon_button-large-width);
+    height: var(--icon_button-large-height);
   }
 
   &--new:after {
     position: absolute;
-    top: var(--icon-button-notification-top);
-    right: var(--icon-button-notification-right);
-    outline: var(--icon-button-notification-border-width) solid
-      var(--icon-button-notification-border-color);
-    outline-offset: var(--icon-button-notification-border-offset);
-    border-radius: var(--icon-button-notification-radius);
-    background-color: var(--icon-button-notification-background-color);
-    width: var(--icon-button-notification-width);
-    height: var(--icon-button-notification-height);
+    top: var(--icon_button-notification-top);
+    right: var(--icon_button-notification-right);
+    outline: var(--icon_button-notification-border-width) solid
+      var(--icon_button-notification-border-color);
+    outline-offset: var(--icon_button-notification-border-offset);
+    border-radius: var(--icon_button-notification-radius);
+    background-color: var(--icon_button-notification-background-color);
+    width: var(--icon_button-notification-width);
+    height: var(--icon_button-notification-height);
     content: '';
   }
 
@@ -435,163 +435,163 @@
   }
 
   &:enabled:hover {
-    --icon-button-background-color: var(--icon-button-background-color-hover);
-    --icon-button-border-color: var(--icon-button-border-color-hover);
-    --icon-button-border-width: var(--icon-button-border-width-hover);
-    --icon-button-border-offset: var(--icon-button-border-offset-hover);
-    --icon-button-icon-color: var(--icon-button-icon-color-hover);
-    --icon-button-notification-background-color: var(
-      --icon-button-notification-background-color-hover
+    --icon_button-background-color: var(--icon_button-background-color-hover);
+    --icon_button-border-color: var(--icon_button-border-color-hover);
+    --icon_button-border-width: var(--icon_button-border-width-hover);
+    --icon_button-border-offset: var(--icon_button-border-offset-hover);
+    --icon_button-icon-color: var(--icon_button-icon-color-hover);
+    --icon_button-notification-background-color: var(
+      --icon_button-notification-background-color-hover
     );
-    --icon-button-notification-border-color: var(
-      --icon-button-notification-border-color-hover
+    --icon_button-notification-border-color: var(
+      --icon_button-notification-border-color-hover
     );
   }
 
   &:enabled:focus {
-    --icon-button-background-color: var(--icon-button-background-color-focus);
-    --icon-button-border-color: var(--icon-button-border-color-focus);
-    --icon-button-border-width: var(--icon-button-border-width-focus);
-    --icon-button-border-offset: var(--icon-button-border-offset-focus);
-    --icon-button-icon-color: var(--icon-button-icon-color-focus);
-    --icon-button-notification-background-color: var(
-      --icon-button-notification-background-color-focus
+    --icon_button-background-color: var(--icon_button-background-color-focus);
+    --icon_button-border-color: var(--icon_button-border-color-focus);
+    --icon_button-border-width: var(--icon_button-border-width-focus);
+    --icon_button-border-offset: var(--icon_button-border-offset-focus);
+    --icon_button-icon-color: var(--icon_button-icon-color-focus);
+    --icon_button-notification-background-color: var(
+      --icon_button-notification-background-color-focus
     );
-    --icon-button-notification-border-color: var(
-      --icon-button-notification-border-color-focus
+    --icon_button-notification-border-color: var(
+      --icon_button-notification-border-color-focus
     );
   }
 
   &:enabled:active {
-    --icon-button-background-color: var(--icon-button-background-color-pressed);
-    --icon-button-border-color: var(--icon-button-border-color-pressed);
-    --icon-button-border-width: var(--icon-button-border-width-pressed);
-    --icon-button-border-offset: var(--icon-button-border-offset-pressed);
-    --icon-button-icon-color: var(--icon-button-icon-color-pressed);
-    --icon-button-notification-background-color: var(
-      --icon-button-notification-background-color-pressed
+    --icon_button-background-color: var(--icon_button-background-color-pressed);
+    --icon_button-border-color: var(--icon_button-border-color-pressed);
+    --icon_button-border-width: var(--icon_button-border-width-pressed);
+    --icon_button-border-offset: var(--icon_button-border-offset-pressed);
+    --icon_button-icon-color: var(--icon_button-icon-color-pressed);
+    --icon_button-notification-background-color: var(
+      --icon_button-notification-background-color-pressed
     );
-    --icon-button-notification-border-color: var(
-      --icon-button-notification-border-color-pressed
+    --icon_button-notification-border-color: var(
+      --icon_button-notification-border-color-pressed
     );
   }
 
   &:disabled {
-    --icon-button-background-color: var(
-      --icon-button-background-color-disabled
+    --icon_button-background-color: var(
+      --icon_button-background-color-disabled
     );
-    --icon-button-border-color: var(--icon-button-border-color-disabled);
-    --icon-button-border-width: var(--icon-button-border-width-disabled);
-    --icon-button-border-offset: var(--icon-button-border-offset-disabled);
-    --icon-button-icon-color: var(--icon-button-icon-color-disabled);
-    --icon-button-notification-background-color: var(
-      --icon-button-notification-background-color-disabled
+    --icon_button-border-color: var(--icon_button-border-color-disabled);
+    --icon_button-border-width: var(--icon_button-border-width-disabled);
+    --icon_button-border-offset: var(--icon_button-border-offset-disabled);
+    --icon_button-icon-color: var(--icon_button-icon-color-disabled);
+    --icon_button-notification-background-color: var(
+      --icon_button-notification-background-color-disabled
     );
-    --icon-button-notification-border-color: var(
-      --icon-button-notification-border-color-disabled
+    --icon_button-notification-border-color: var(
+      --icon_button-notification-border-color-disabled
     );
   }
 
   &--selected {
-    --icon-button-background-color: var(
-      --icon-button-background-color-selected
+    --icon_button-background-color: var(
+      --icon_button-background-color-selected
     );
-    --icon-button-border-color: var(--icon-button-border-color-selected);
-    --icon-button-border-width: var(--icon-button-border-width-selected);
-    --icon-button-border-offset: var(--icon-button-border-offset-selected);
-    --icon-button-icon-color: var(--icon-button-icon-color-selected);
-    --icon-button-notification-background-color: var(
-      --icon-button-notification-background-color-selected
+    --icon_button-border-color: var(--icon_button-border-color-selected);
+    --icon_button-border-width: var(--icon_button-border-width-selected);
+    --icon_button-border-offset: var(--icon_button-border-offset-selected);
+    --icon_button-icon-color: var(--icon_button-icon-color-selected);
+    --icon_button-notification-background-color: var(
+      --icon_button-notification-background-color-selected
     );
-    --icon-button-notification-border-color: var(
-      --icon-button-notification-border-color-selected
+    --icon_button-notification-border-color: var(
+      --icon_button-notification-border-color-selected
     );
 
     &:enabled:hover {
-      --icon-button-background-color: var(
-        --icon-button-background-color-selected-hover
+      --icon_button-background-color: var(
+        --icon_button-background-color-selected-hover
       );
-      --icon-button-border-color: var(
-        --icon-button-border-color-selected-hover
+      --icon_button-border-color: var(
+        --icon_button-border-color-selected-hover
       );
-      --icon-button-border-width: var(
-        --icon-button-border-width-selected-hover
+      --icon_button-border-width: var(
+        --icon_button-border-width-selected-hover
       );
-      --icon-button-border-offset: var(
-        --icon-button-border-offset-selected-hover
+      --icon_button-border-offset: var(
+        --icon_button-border-offset-selected-hover
       );
-      --icon-button-icon-color: var(--icon-button-icon-color-selected-hover);
-      --icon-button-notification-background-color: var(
-        --icon-button-notification-background-color-selected-hover
+      --icon_button-icon-color: var(--icon_button-icon-color-selected-hover);
+      --icon_button-notification-background-color: var(
+        --icon_button-notification-background-color-selected-hover
       );
-      --icon-button-notification-border-color: var(
-        --icon-button-notification-border-color-selected-hover
+      --icon_button-notification-border-color: var(
+        --icon_button-notification-border-color-selected-hover
       );
     }
 
     &:enabled:focus {
-      --icon-button-background-color: var(
-        --icon-button-background-color-selected-focus
+      --icon_button-background-color: var(
+        --icon_button-background-color-selected-focus
       );
-      --icon-button-border-color: var(
-        --icon-button-border-color-selected-focus
+      --icon_button-border-color: var(
+        --icon_button-border-color-selected-focus
       );
-      --icon-button-border-width: var(
-        --icon-button-border-width-selected-focus
+      --icon_button-border-width: var(
+        --icon_button-border-width-selected-focus
       );
-      --icon-button-border-offset: var(
-        --icon-button-border-offset-selected-focus
+      --icon_button-border-offset: var(
+        --icon_button-border-offset-selected-focus
       );
-      --icon-button-icon-color: var(--icon-button-icon-color-selected-focus);
-      --icon-button-notification-background-color: var(
-        --icon-button-notification-background-color-selected-focus
+      --icon_button-icon-color: var(--icon_button-icon-color-selected-focus);
+      --icon_button-notification-background-color: var(
+        --icon_button-notification-background-color-selected-focus
       );
-      --icon-button-notification-border-color: var(
-        --icon-button-notification-border-color-selected-focus
+      --icon_button-notification-border-color: var(
+        --icon_button-notification-border-color-selected-focus
       );
     }
 
     &:enabled:active {
-      --icon-button-background-color: var(
-        --icon-button-background-color-selected-pressed
+      --icon_button-background-color: var(
+        --icon_button-background-color-selected-pressed
       );
-      --icon-button-border-color: var(
-        --icon-button-border-color-selected-pressed
+      --icon_button-border-color: var(
+        --icon_button-border-color-selected-pressed
       );
-      --icon-button-border-width: var(
-        --icon-button-border-width-selected-pressed
+      --icon_button-border-width: var(
+        --icon_button-border-width-selected-pressed
       );
-      --icon-button-border-offset: var(
-        --icon-button-border-offset-selected-pressed
+      --icon_button-border-offset: var(
+        --icon_button-border-offset-selected-pressed
       );
-      --icon-button-icon-color: var(--icon-button-icon-color-selected-pressed);
-      --icon-button-notification-background-color: var(
-        --icon-button-notification-background-color-selected-pressed
+      --icon_button-icon-color: var(--icon_button-icon-color-selected-pressed);
+      --icon_button-notification-background-color: var(
+        --icon_button-notification-background-color-selected-pressed
       );
-      --icon-button-notification-border-color: var(
-        --icon-button-notification-border-color-selected-pressed
+      --icon_button-notification-border-color: var(
+        --icon_button-notification-border-color-selected-pressed
       );
     }
 
     &:disabled {
-      --icon-button-background-color: var(
-        --icon-button-background-color-selected-disabled
+      --icon_button-background-color: var(
+        --icon_button-background-color-selected-disabled
       );
-      --icon-button-border-color: var(
-        --icon-button-border-color-selected-disabled
+      --icon_button-border-color: var(
+        --icon_button-border-color-selected-disabled
       );
-      --icon-button-border-width: var(
-        --icon-button-border-width-selected-disabled
+      --icon_button-border-width: var(
+        --icon_button-border-width-selected-disabled
       );
-      --icon-button-border-offset: var(
-        --icon-button-border-offset-selected-disabled
+      --icon_button-border-offset: var(
+        --icon_button-border-offset-selected-disabled
       );
-      --icon-button-icon-color: var(--icon-button-icon-color-selected-disabled);
-      --icon-button-notification-background-color: var(
-        --icon-button-notification-background-color-selected-disabled
+      --icon_button-icon-color: var(--icon_button-icon-color-selected-disabled);
+      --icon_button-notification-background-color: var(
+        --icon_button-notification-background-color-selected-disabled
       );
-      --icon-button-notification-border-color: var(
-        --icon-button-notification-border-color-selected-disabled
+      --icon_button-notification-border-color: var(
+        --icon_button-notification-border-color-selected-disabled
       );
     }
   }

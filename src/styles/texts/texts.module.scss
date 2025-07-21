@@ -5,35 +5,35 @@
 
 .type {
   color: var(--text-color-primary);
-  font-weight: var(--text-default-font-weight);
-  font-size: var(--text-default-font-size);
-  line-height: var(--text-default-line-height);
+  font-weight: var(--text-default-font_weight);
+  font-size: var(--text-default-font_size);
+  line-height: var(--text-default-line_height);
   font-family: var(--text-font-family);
-  letter-spacing: var(--text-default-letter-spacing);
+  letter-spacing: var(--text-default-letter_spacing);
 
   &--small {
-    font-size: var(--text-small-font-size);
-    letter-spacing: var(--text-small-letter-spacing);
+    font-size: var(--text-small-font_size);
+    letter-spacing: var(--text-small-letter_spacing);
   }
 
   &--large {
-    font-size: var(--text-large-font-size);
-    line-height: var(--text-large-line-height);
-    letter-spacing: var(--text-large-letter-spacing);
+    font-size: var(--text-large-font_size);
+    line-height: var(--text-large-line_height);
+    letter-spacing: var(--text-large-letter_spacing);
   }
 
   &--xlarge {
-    font-size: var(--text-xlarge-font-size);
-    line-height: var(--text-xlarge-line-height);
-    letter-spacing: var(--text-xlarge-letter-spacing);
+    font-size: var(--text-xlarge-font_size);
+    line-height: var(--text-xlarge-line_height);
+    letter-spacing: var(--text-xlarge-letter_spacing);
   }
 
   &--medium {
-    font-weight: var(--text-font-weight-medium);
+    font-weight: var(--text-font_weight-medium);
   }
 
   &--bold {
-    font-weight: var(--text-font-weight-bold);
+    font-weight: var(--text-font_weight-bold);
   }
 
   &--truncated {
@@ -73,10 +73,10 @@
   padding: var(--text-label-padding);
   height: var(--text-label-height);
   color: var(--text-label-color);
-  font-weight: var(--text-label-font-weight);
-  font-size: var(--text-label-font-size);
-  line-height: var(--text-label-line-height);
+  font-weight: var(--text-label-font_weight);
+  font-size: var(--text-label-font_size);
+  line-height: var(--text-label-line_height);
   font-family: var(--text-font-family);
-  letter-spacing: var(--text-label-letter-spacing);
+  letter-spacing: var(--text-label-letter_spacing);
   user-select: none;
 }

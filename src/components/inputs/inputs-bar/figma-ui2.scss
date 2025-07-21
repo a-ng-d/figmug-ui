@@ -1,13 +1,13 @@
 :root[data-theme='figma-ui2'] {
-  --inputs-bar-gap: var(--size-pos-xxsmall);
-  --inputs-bar-gap-inner: 0;
-  --inputs-bar-width: var(--size-pos-xlarge);
-  --inputs-bar-padding: 0 var(--size-pos-unit);
-  --inputs-bar-margin: 0 var(--size-neg-unit);
-  --inputs-bar-radius: var(--border-radius-small);
+  --inputs_bar-gap: var(--size-pos-xxsmall);
+  --inputs_bar-gap-inner: 0;
+  --inputs_bar-width: var(--size-pos-xlarge);
+  --inputs_bar-padding: 0 var(--size-pos-unit);
+  --inputs_bar-margin: 0 var(--size-neg-unit);
+  --inputs_bar-radius: var(--border-radius-small);
 
-  --inputs-bar-border-color: var(--figma-color-border-selected);
-  --inputs-bar-border-width: var(--size-pos-xunit);
+  --inputs_bar-border-color: var(--figma-color-border-selected);
+  --inputs_bar-border-width: var(--size-pos-xunit);
 
-  --inputs-bar-input-radius: 0;
+  --inputs_bar-input-radius: 0;
 }

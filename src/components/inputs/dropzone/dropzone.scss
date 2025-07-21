@@ -16,12 +16,12 @@
   border-radius: var(--dropzone-radius);
   background-color: var(--dropzone-background-color);
   padding: var(--dropzone-padding);
-  min-width: var(--dropzone-min-width);
-  min-height: var(--dropzone-min-height);
+  min-width: var(--dropzone-min_width);
+  min-height: var(--dropzone-min_height);
   user-select: none;
 
   &--dragged-over {
-    --semantic-message-background-color: var(--dropzone-background-color-over);
+    --semantic_message-background-color: var(--dropzone-background-color-over);
     --dropzone-border-width: var(--dropzone-border-width-over);
     --dropzone-border-offset: var(--dropzone-border-offset-over);
     --dropzone-border-style: var(--dropzone-border-style-over);

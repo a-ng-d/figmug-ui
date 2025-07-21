@@ -14,7 +14,7 @@
   z-index: 1;
   cursor: ew-resize;
   background: transparent;
-  min-width: var(--knob-min-width);
+  min-width: var(--knob-min_width);
   height: var(--knob-height);
 
   &:hover {
@@ -112,7 +112,7 @@
   border-radius: var(--knob-tooltip-radius);
   background-color: var(--knob-tooltip-background-color);
   padding: var(--knob-tooltip-padding);
-  min-width: var(--knob-tooltip-min-width);
+  min-width: var(--knob-tooltip-min_width);
   pointer-events: none;
   color: var(--knob-tooltip-text-color);
   user-select: none;

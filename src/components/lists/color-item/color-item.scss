@@ -7,8 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--color-item-padding);
-  height: var(--color-item-height);
+  padding: var(--color_item-padding);
+  height: var(--color_item-height);
 
   .color-item__left,
   .color-item__right {
@@ -18,7 +18,7 @@
   .color-item__info {
     display: flex;
     align-items: center;
-    gap: var(--color-item-gap);
+    gap: var(--color_item-gap);
     max-width: 100%;
     white-space: nowrap;
   }

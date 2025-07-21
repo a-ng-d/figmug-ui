@@ -6,30 +6,30 @@
 .form-item {
   display: flex;
   flex-direction: column;
-  --text-color-primary: var(--form-item-text-color);
-  --message-padding: var(--form-item-helper-padding);
+  --text-color-primary: var(--form_item-text-color);
+  --message-padding: var(--form_item-helper-padding);
 
   &__row {
     display: inline-flex;
     position: relative;
     align-items: start;
-    gap: var(--form-item-gap);
+    gap: var(--form_item-gap);
     cursor: default;
-    padding: var(--form-item-padding);
+    padding: var(--form_item-padding);
     user-select: none;
 
     .form-item__label {
-      margin: var(--form-item-label-margin);
+      margin: var(--form_item-label-margin);
     }
   }
 
   &--multiline {
-    --form-item-label-margin: var(--form-item-label-margin-multiline);
+    --form_item-label-margin: var(--form_item-label-margin-multiline);
   }
 
   &--fill {
     .form-item__label {
-      flex: 0 1 var(--form-item-label-width);
+      flex: 0 1 var(--form_item-label-width);
     }
 
     .form-item__input {
@@ -44,8 +44,8 @@
 
   &--blocked {
     pointer-events: none;
-    --text-color-primary: var(--form-item-text-color-disabled);
-    --message-text-color: var(--form-item-text-color-disabled);
-    --message-icon-color: var(--form-item-text-color-disabled);
+    --text-color-primary: var(--form_item-text-color-disabled);
+    --message-text-color: var(--form_item-text-color-disabled);
+    --message-icon-color: var(--form_item-text-color-disabled);
   }
 }

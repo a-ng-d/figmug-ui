@@ -1,23 +1,23 @@
 :root[data-theme='figma-ui2'] {
-  --simple-item-gap: var(--size-pos-xxsmall);
-  --simple-item-padding: var(--size-pos-xunit) var(--size-pos-xsmall);
-  --simple-item-min-height: var(--size-pos-medium);
-  --simple-item-border-radius: var(--border-radius-small);
-  --simple-item-background-color: var(--figma-color-bg);
-  --simple-item-border-width: 0;
-  --simple-item-border-offset: 0;
-  --simple-item-border-color: transparent;
+  --simple_item-gap: var(--size-pos-xxsmall);
+  --simple_item-padding: var(--size-pos-xunit) var(--size-pos-xsmall);
+  --simple_item-min_height: var(--size-pos-medium);
+  --simple_item-border-radius: var(--border-radius-small);
+  --simple_item-background-color: var(--figma-color-bg);
+  --simple_item-border-width: 0;
+  --simple_item-border-offset: 0;
+  --simple_item-border-color: transparent;
 
-  --simple-item-background-color-hover: var(--figma-color-bg-hover);
+  --simple_item-background-color-hover: var(--figma-color-bg-hover);
 
-  --simple-item-background-color-focus: var(--figma-color-bg-selected);
-  --simple-item-border-width-focus: var(--size-pos-xunit);
-  --simple-item-border-offset-focus: var(--size-neg-xunit);
-  --simple-item-border-color-focus: var(--figma-color-border-selected);
+  --simple_item-background-color-focus: var(--figma-color-bg-selected);
+  --simple_item-border-width-focus: var(--size-pos-xunit);
+  --simple_item-border-offset-focus: var(--size-neg-xunit);
+  --simple_item-border-color-focus: var(--figma-color-border-selected);
 
-  --simple-item-min-width-compact: 112px;
-  --simple-item-width-compact: 112px;
+  --simple_item-min_width-compact: 112px;
+  --simple_item-width-compact: 112px;
 
-  --simple-item-min-width-square: var(--size-pos-medium);
-  --simple-item-width-square: var(--size-pos-medium);
+  --simple_item-min_width-square: var(--size-pos-medium);
+  --simple_item-width-square: var(--size-pos-medium);
 }

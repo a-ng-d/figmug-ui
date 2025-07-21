@@ -1,10 +1,10 @@
 :root[data-theme='figma-ui2'] {
   /* Base */
   --select-text-font-family: var(--font-stack);
-  --select-text-font-size: var(--font-size-xsmall);
-  --select-text-font-weight: var(--font-weight-normal);
-  --select-text-line-height: var(--font-line-height);
-  --select-text-letter-spacing: var(--font-letter-spacing-pos-xsmall);
+  --select-text-font_size: var(--font-size-xsmall);
+  --select-text-font_weight: var(--font-weight-normal);
+  --select-text-line_height: var(--font-line_height);
+  --select-text-letter_spacing: var(--font-letter_spacing-pos-xsmall);
   --select-text-color: var(--figma-color-text);
 
   --select-text-color-disabled: var(--figma-color-text-disabled);

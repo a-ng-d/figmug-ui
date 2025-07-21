@@ -17,10 +17,10 @@
   --input-border-offset: 0;
   --input-border-color: transparent;
   --input-text-font-family: var(--font-stack);
-  --input-text-font-size: var(--font-size-small);
-  --input-text-font-weight: var(--font-weight-normal);
-  --input-text-letterspacing: var(--font-letter-spacing-neg-xsmall);
-  --input-text-line-height: var(--font-line-height);
+  --input-text-font_size: var(--font-size-small);
+  --input-text-font_weight: var(--font-weight-normal);
+  --input-text-letter_spacing: var(--font-letter_spacing-neg-xsmall);
+  --input-text-line_height: var(--font-line_height);
   --input-text-color: var(--penpot-color-foreground-primary);
   --input-text-placeholder-color: var(--penpot-color-foreground-secondary);
 
@@ -37,14 +37,14 @@
   --input-icon-height: var(--size-pos-medium);
   --input-icon-color: var(--penpot-color-icon-default);
 
-  --input-textarea-min-height: var(--size-pos-xxlarge);
+  --input-textarea-min_height: var(--size-pos-xxlarge);
   --input-textarea-padding: var(--size-pos-xxsmall);
   --input-textarea-background-color: var(--penpot-color-background-tertiary);
   --input-textarea-border-width: 0;
   --input-textarea-border-offset: 0;
   --input-textarea-border-color: transparent;
   --input-textarea-text-color: var(--penpot-color-foreground-primary);
-  --input-text-textarea-placeholder-color: var(
+  --input-textarea-text-placeholder-color: var(
     --penpot-color-foreground-secondary
   );
 

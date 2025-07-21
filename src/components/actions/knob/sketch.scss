@@ -1,6 +1,6 @@
 :root[data-theme='sketch'] {
   /* Base */
-  --knob-min-width: var(--size-pos-medium);
+  --knob-min_width: var(--size-pos-medium);
   --knob-height: 48px;
   --knob-top: var(--size-neg-xunit);
 
@@ -22,7 +22,7 @@
 
   --knob-tooltip-top: var(--size-neg-xxsmall);
   --knob-tooltip-padding: var(--size-pos-xunit) var(--size-pos-xxxsmall);
-  --knob-tooltip-min-width: var(--size-pos-small);
+  --knob-tooltip-min_width: var(--size-pos-small);
   --knob-tooltip-radius: var(--border-radius-medium);
   --knob-tooltip-background-color: var(--sketch-color-foreground-primary);
   --knob-tooltip-text-color: var(--sketch-color-background-primary);

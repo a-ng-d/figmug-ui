@@ -9,13 +9,13 @@
   list-style-type: none;
 
   &--scrollable {
-    padding: var(--sortable-list-padding);
+    padding: var(--sortable_list-padding);
     height: 100%;
     overflow-y: auto;
   }
 
   &--top-border {
-    border-top: var(--sortable-list-border-width) solid
-      var(--sortable-list-border-color);
+    border-top: var(--sortable_list-border-width) solid
+      var(--sortable_list-border-color);
   }
 }

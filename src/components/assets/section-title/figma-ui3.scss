@@ -1,15 +1,15 @@
 :root[data-theme='figma-ui3'] {
-  --section-title-height: var(--size-pos-medium);
-  --section-title-gap: var(--size-pos-xxxsmall);
-  --section-title-padding: 0 var(--size-pos-xxxsmall) 0 var(--size-pos-xxsmall);
-  --section-title-text-font-family: var(--font-stack);
-  --section-title-text-font-size: var(--font-size-xsmall);
-  --section-title-text-font-weight: var(--font-weight-bold);
-  --section-title-text-letter-spacing: var(--font-letter-spacing-pos-xsmall);
-  --section-title-text-line-height: var(--font-line-height);
-  --section-title-text-color: var(--figma-color-text);
-  --section-title-text-transform: none;
+  --section_title-height: var(--size-pos-medium);
+  --section_title-gap: var(--size-pos-xxxsmall);
+  --section_title-padding: 0 var(--size-pos-xxxsmall) 0 var(--size-pos-xxsmall);
+  --section_title-text-font-family: var(--font-stack);
+  --section_title-text-font_size: var(--font-size-xsmall);
+  --section_title-text-font_weight: var(--font-weight-bold);
+  --section_title-text-letter_spacing: var(--font-letter_spacing-pos-xsmall);
+  --section_title-text-line_height: var(--font-line_height);
+  --section_title-text-color: var(--figma-color-text);
+  --section_title-text-transform: none;
 
-  --section-title-info-icon-width: var(--size-pos-medium);
-  --section-title-info-icon-height: var(--size-pos-medium);
+  --section_title-info-icon-width: var(--size-pos-medium);
+  --section_title-info-icon-height: var(--size-pos-medium);
 }

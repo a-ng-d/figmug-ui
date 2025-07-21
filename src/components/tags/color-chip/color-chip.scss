@@ -7,12 +7,12 @@
   position: relative;
   flex: none;
   cursor: default;
-  outline: var(--color-chip-border-width) solid var(--color-chip-border-color);
-  outline-offset: var(--color-chip-border-offset);
-  border-radius: var(--color-chip-radius);
+  outline: var(--color_chip-border-width) solid var(--color_chip-border-color);
+  outline-offset: var(--color_chip-border-offset);
+  border-radius: var(--color_chip-radius);
   user-select: none;
 
   &--rounded {
-    border-radius: var(--color-chip-radius-full);
+    --color_chip-radius: var(--border-radius-full);
   }
 }

@@ -1,15 +1,15 @@
 :root[data-theme='sketch'] {
-  --draggable-window-width: 296px;
-  --draggable-window-radius: var(--border-radius-xxxlarge);
-  --draggable-window-shadow: var(--elevation-500-modal-window);
-  --draggable-window-background-color: var(--sketch-color-background-primary);
-  --draggable-window-border-color: var(--sketch-color-border-primary);
-  --draggable-window-border-width: var(--size-pos-unit);
-  --draggable-window-border-offset: var(--size-neg-unit);
+  --draggable_window-width: 296px;
+  --draggable_window-radius: var(--border-radius-xxxlarge);
+  --draggable_window-shadow: var(--elevation-500-modal-window);
+  --draggable_window-background-color: var(--sketch-color-background-primary);
+  --draggable_window-border-color: var(--sketch-color-border-primary);
+  --draggable_window-border-width: var(--size-pos-unit);
+  --draggable_window-border-offset: var(--size-neg-unit);
 
-  --draggable-window-header-border: var(--size-pos-unit) solid
+  --draggable_window-header-border: var(--size-pos-unit) solid
     var(--sketch-color-border-disabled);
 
-  --draggable-window-content-padding: var(--size-pos-xxsmall);
-  --draggable-window-content-gap: var(--size-pos-xxxsmall);
+  --draggable_window-content-padding: var(--size-pos-xxsmall);
+  --draggable_window-content-gap: var(--size-pos-xxxsmall);
 }

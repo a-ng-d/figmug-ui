@@ -1,14 +1,14 @@
 :root[data-theme='penpot'] {
-  --draggable-window-width: 296px;
-  --draggable-window-radius: var(--border-radius-xxlarge);
-  --draggable-window-shadow: none;
-  --draggable-window-background-color: var(--penpot-color-background-primary);
-  --draggable-window-border-color: var(--penpot-color-background-quaternary);
-  --draggable-window-border-width: var(--size-pos-unit);
-  --draggable-window-border-offset: var(--size-neg-unit);
+  --draggable_window-width: 296px;
+  --draggable_window-radius: var(--border-radius-xxlarge);
+  --draggable_window-shadow: none;
+  --draggable_window-background-color: var(--penpot-color-background-primary);
+  --draggable_window-border-color: var(--penpot-color-background-quaternary);
+  --draggable_window-border-width: var(--size-pos-unit);
+  --draggable_window-border-offset: var(--size-neg-unit);
 
-  --draggable-window-header-border: 0 solid transparent;
+  --draggable_window-header-border: 0 solid transparent;
 
-  --draggable-window-content-padding: var(--size-pos-xxsmall);
-  --draggable-window-content-gap: var(--size-pos-xxxsmall);
+  --draggable_window-content-padding: var(--size-pos-xxsmall);
+  --draggable_window-content-gap: var(--size-pos-xxxsmall);
 }

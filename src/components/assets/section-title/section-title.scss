@@ -6,22 +6,22 @@
 .section-title {
   display: flex;
   align-items: center;
-  gap: var(--section-title-gap);
+  gap: var(--section_title-gap);
   cursor: default;
   box-sizing: border-box;
-  padding: var(--section-title-padding);
+  padding: var(--section_title-padding);
   width: 100%;
-  height: var(--section-title-height);
-  color: var(--section-title-text-color);
-  font-weight: var(--section-title-text-font-weight);
-  font-size: var(--section-title-text-font-size);
-  line-height: var(--section-title-text-line-height);
-  font-family: var(--section-title-text-font-family);
-  letter-spacing: var(--section-title-text-letter-spacing);
+  height: var(--section_title-height);
+  color: var(--section_title-text-color);
+  font-weight: var(--section_title-text-font_weight);
+  font-size: var(--section_title-text-font_size);
+  line-height: var(--section_title-text-line_height);
+  font-family: var(--section_title-text-font-family);
+  letter-spacing: var(--section_title-text-letter_spacing);
   user-select: none;
 
   &__title {
-    text-transform: var(--section-title-text-transform);
+    text-transform: var(--section_title-text-transform);
   }
 
   .section-title__tooltip {
@@ -29,7 +29,7 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    width: var(--section-title-info-icon-width);
-    height: var(--section-title-info-icon-height);
+    width: var(--section_title-info-icon-width);
+    height: var(--section_title-info-icon-height);
   }
 }

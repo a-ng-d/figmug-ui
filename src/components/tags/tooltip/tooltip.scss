@@ -9,8 +9,8 @@
   transform: translateX(-50%) translateY(0);
   z-index: 3;
   width: auto;
-  min-width: var(--tooltip-min-width);
-  max-width: var(--tooltip-max-width);
+  min-width: var(--tooltip-min_width);
+  max-width: var(--tooltip-max_width);
   pointer-events: none;
   user-select: none;
 
@@ -81,7 +81,7 @@
   }
 
   &--withimage {
-    --tooltip-min-width: var(--tooltip-withimage-min-width);
+    --tooltip-min_width: var(--tooltip-withimage-min_width);
     --tooltip-padding: var(--tooltip-withimage-padding);
 
     .tooltip__text {

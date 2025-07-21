@@ -1,14 +1,14 @@
 :root[data-theme='sketch'] {
-  --form-item-gap: var(--size-pos-xxsmall);
-  --form-item-padding: var(--size-pos-xxxsmall) 0 var(--size-pos-xxxsmall)
+  --form_item-gap: var(--size-pos-xxsmall);
+  --form_item-padding: var(--size-pos-xxxsmall) 0 var(--size-pos-xxxsmall)
     var(--size-pos-xxsmall);
-  --form-item-text-color: var(--sketch-color-foreground-primary);
-  --form-item-label-width: 112px;
-  --form-item-helper-padding: 0 var(--size-pos-xxsmall);
+  --form_item-text-color: var(--sketch-color-foreground-primary);
+  --form_item-label-width: 112px;
+  --form_item-helper-padding: 0 var(--size-pos-xxsmall);
 
-  --form-item-label-margin: var(--size-pos-xxsmall) 0 0;
-  --form-item-label-margin-multiline: var(--size-pos-xxsmall) 0 0;
+  --form_item-label-margin: var(--size-pos-xxsmall) 0 0;
+  --form_item-label-margin-multiline: var(--size-pos-xxsmall) 0 0;
 
-  --form-item-text-color-disabled: var(--sketch-color-foreground-disabled);
-  --form-item-icon-color-disabled: var(--sketch-color-foreground-disabled);
+  --form_item-text-color-disabled: var(--sketch-color-foreground-disabled);
+  --form_item-icon-color-disabled: var(--sketch-color-foreground-disabled);
 }
