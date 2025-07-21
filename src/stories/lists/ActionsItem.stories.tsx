@@ -99,7 +99,7 @@ export const WithoutActionNorThumbnail: Story = {
         <div
           style={{
             display: 'flex',
-            gap: 'var(--size-xxsmall)',
+            gap: 'var(--size-pos-xxsmall)',
           }}
         >
           <div

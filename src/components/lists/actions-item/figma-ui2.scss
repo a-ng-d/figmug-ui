@@ -1,26 +1,26 @@
 :root[data-theme='figma-ui2'] {
   /* Base */
-  --actions-item-gap: var(--size-xsmall);
-  --actions-item-padding: var(--size-xsmall) var(--size-xsmall)
-    var(--size-xsmall) var(--size-small);
+  --actions-item-gap: var(--size-pos-xsmall);
+  --actions-item-padding: var(--size-pos-xsmall) var(--size-pos-xsmall)
+    var(--size-pos-xsmall) var(--size-pos-small);
   --actions-item-border-color: var(--figma-color-border-disabled);
-  --actions-item-border-width: var(--size-unit);
+  --actions-item-border-width: var(--size-pos-unit);
   --actions-item-background-color: var(--figma-color-bg);
   --actions-item-border-secondary-width: 0;
   --actions-item-border-secondary-offset: 0;
   --actions-item-border-secondary-color: transparent;
 
-  --actions-item-asset-min-width: var(--size-xxxlarge);
-  --actions-item-asset-height: var(--size-xxxlarge);
+  --actions-item-asset-min-width: var(--size-pos-xxxlarge);
+  --actions-item-asset-height: var(--size-pos-xxxlarge);
 
-  --actions-item-content-gap: var(--size-xxsmall);
-  --actions-item-actions-gap: var(--size-xxsmall);
+  --actions-item-content-gap: var(--size-pos-xxsmall);
+  --actions-item-actions-gap: var(--size-pos-xxsmall);
 
   /* States */
   --actions-item-background-color-hover: var(--figma-color-bg-hover);
 
   --actions-item-background-color-focus: var(--figma-color-bg-selected);
-  --actions-item-border-secondary-width-focus: var(--size-xunit);
+  --actions-item-border-secondary-width-focus: var(--size-pos-xunit);
   --actions-item-border-secondary-offset-focus: var(--size-neg-xunit);
   --actions-item-border-secondary-color-focus: var(
     --figma-color-border-selected

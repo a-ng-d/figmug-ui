@@ -1,17 +1,17 @@
 :root[data-theme='figma-ui2'] {
   /* Base */
   --actions-list-min-width: 224px;
-  --actions-list-padding: var(--size-xxsmall) var(--size-unit);
+  --actions-list-padding: var(--size-pos-xxsmall) var(--size-pos-unit);
   --actions-list-radius: var(--border-radius-xsmall);
   --actions-list-background-color: var(--grey-1000);
   --actions-list-border-color: var(--grey-800);
-  --actions-list-border-width: var(--size-unit);
+  --actions-list-border-width: var(--size-pos-unit);
   --actions-list-border-offset: var(--size-neg-unit);
   --actions-list-shadow: var(--shadow-floating-window);
 
-  --actions-list-item-height: var(--size-small);
-  --actions-list-item-padding: 0 var(--size-xsmall) 0 var(--size-medium);
-  --actions-list-item-gap: var(--size-xxsmall);
+  --actions-list-item-height: var(--size-pos-small);
+  --actions-list-item-padding: 0 var(--size-pos-xsmall) 0 var(--size-pos-medium);
+  --actions-list-item-gap: var(--size-pos-xxsmall);
   --actions-list-item-radius: 0;
   --actions-list-item-background-color: transparent;
   --actions-list-item-text-font-family: var(--font-stack);
@@ -25,21 +25,21 @@
   --actions-list-patch-left: 0;
   --actions-list-patch-width: 0;
 
-  --actions-list-spot-height: var(--size-xsmall);
+  --actions-list-spot-height: var(--size-pos-xsmall);
   --actions-list-spot-radius: var(--border-radius-xsmall);
   --actions-list-spot-background-color: var(--grey-1000);
   --actions-list-spot-icon-color: var(--grey-0);
-  --actions-list-spot-inset-top: 0 var(--size-unit) auto var(--size-unit);
-  --actions-list-spot-inset-bottom: auto var(--size-unit) 0 var(--size-unit);
-  --actions-list-spot-border-width: var(--size-unit);
+  --actions-list-spot-inset-top: 0 var(--size-pos-unit) auto var(--size-pos-unit);
+  --actions-list-spot-inset-bottom: auto var(--size-pos-unit) 0 var(--size-pos-unit);
+  --actions-list-spot-border-width: var(--size-pos-unit);
   --actions-list-spot-border-color: var(--grey-800);
 
-  --actions-list-tick-width: var(--size-xsmall);
-  --actions-list-tick-height: var(--size-xsmall);
+  --actions-list-tick-width: var(--size-pos-xsmall);
+  --actions-list-tick-height: var(--size-pos-xsmall);
   --actions-list-tick-color: var(--grey-0);
 
-  --actions-list-caret-width: var(--size-xsmall);
-  --actions-list-caret-height: var(--size-xsmall);
+  --actions-list-caret-width: var(--size-pos-xsmall);
+  --actions-list-caret-height: var(--size-pos-xsmall);
   --actions-list-caret-color: var(--grey-0);
 
   --actions-list-submenu-inset-right: var(--size-neg-xxsmall)
@@ -49,8 +49,8 @@
 
   --actions-list-title-text-transform: none;
 
-  --actions-list-divider-margin: 11px 0 var(--size-xmsmall) 0;
-  --actions-list-divider-height: var(--size-unit);
+  --actions-list-divider-margin: 11px 0 var(--size-pos-xmsmall) 0;
+  --actions-list-divider-height: var(--size-pos-unit);
   --actions-list-divider-background-color: var(--grey-900);
 
   /* States */
@@ -68,15 +68,15 @@
   --actions-list-tick-color-focus: var(--grey-0);
   --actions-list-caret-color-focus: var(--grey-0);
 
-  --actions-list-item-padding-selected: 0 var(--size-xsmall) 0
-    var(--size-xxsmall);
+  --actions-list-item-padding-selected: 0 var(--size-pos-xsmall) 0
+    var(--size-pos-xxsmall);
   --actions-list-item-background-color-selected: transparent;
   --actions-list-item-text-color-selected: var(--grey-0);
   --actions-list-tick-color-selected: var(--grey-0);
   --actions-list-caret-color-selected: var(--grey-0);
 
-  --actions-list-item-padding-selected-hover: 0 var(--size-xsmall) 0
-    var(--size-xxsmall);
+  --actions-list-item-padding-selected-hover: 0 var(--size-pos-xsmall) 0
+    var(--size-pos-xxsmall);
   --actions-list-item-background-color-selected-hover: var(
     --figma-color-bg-selected-strong
   );
@@ -84,8 +84,8 @@
   --actions-list-tick-color-selected-hover: var(--grey-0);
   --actions-list-caret-color-selected-hover: var(--grey-0);
 
-  --actions-list-item-padding-selected-focus: 0 var(--size-xsmall) 0
-    var(--size-xxsmall);
+  --actions-list-item-padding-selected-focus: 0 var(--size-pos-xsmall) 0
+    var(--size-pos-xxsmall);
   --actions-list-item-background-color-selected-focus: var(
     --figma-color-bg-selected-strong
   );

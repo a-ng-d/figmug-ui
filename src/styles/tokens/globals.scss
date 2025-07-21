@@ -32,14 +32,14 @@
   --font-line-height-large: 20px;
 
   /* Letterspacing */
-  --font-letter-spacing-pos-xsmall: 0.005em;
-  --font-letter-spacing-neg-xsmall: 0.01em;
-  --font-letter-spacing-pos-small: 0;
-  --font-letter-spacing-neg-small: 0.005em;
-  --font-letter-spacing-pos-large: -0.0025em;
-  --font-letter-spacing-neg-large: 0.0025em;
-  --font-letter-spacing-pos-xlarge: -0.001em;
   --font-letter-spacing-neg-xlarge: -0.001em;
+  --font-letter-spacing-neg-large: -0.0025em;
+  --font-letter-spacing-neg-small: -0.005em;
+  --font-letter-spacing-neg-xsmall: -0.01em;
+  --font-letter-spacing-pos-xsmall: 0.005em;
+  --font-letter-spacing-pos-small: 0;
+  --font-letter-spacing-pos-large: 0.0025em;
+  --font-letter-spacing-pos-xlarge: 0.001em;
 
   /* Border Radius */
   --border-radius-xsmall: 1px;
@@ -57,30 +57,12 @@
   --elevation-100-canvas: 0px 0px 0.5px rgba(0, 0, 0, 0.5),
     0px 1px 3px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.1),
     inset 0px 0px 1px rgba(255, 255, 255, 0.3);
-  --elevation-100-canvas-drop-shadow: drop-shadow(
-      0px 0px 0.5px rgba(0, 0, 0, 0.5)
-    )
-    drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.4))
-    drop-shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.1))
-    drop-shadow(inset 0px 0px 1px rgba(255, 255, 255, 0.3));
   --elevation-200-canvas: 0px 3px 8px rgba(0, 0, 0, 0.35),
     0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.08),
     inset 0px 0px 1px rgba(255, 255, 255, 0.3);
-  --elevation-200-canvas-drop-shadow: drop-shadow(
-      0px 1px 3px rgba(0, 0, 0, 0.5)
-    )
-    drop-shadow(inset 0px 0px 0.5px rgba(255, 255, 255, 0.3))
-    drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.35))
-    drop-shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.08));
   --elevation-300-tooltip: 0px 5px 12px rgba(0, 0, 0, 0.35),
     0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.08),
     inset 0px 0px 1px rgba(255, 255, 255, 0.3);
-  --elevation-300-tooltip-drop-shadow: drop-shadow(
-      0px 1px 3px rgba(0, 0, 0, 0.5)
-    )
-    drop-shadow(inset 0px 0px 0.5px rgba(255, 255, 255, 0.3))
-    drop-shadow(0px 5px 12px rgba(0, 0, 0, 0.35))
-    drop-shadow(inset 0px 1px 0px rgba(255, 255, 255, 0.08));
   --elevation-400-menu-panel: 0px 10px 16px rgba(0, 0, 0, 0.35),
     0px 2px 5px rgba(0, 0, 0, 0.35), inset 0px 1px 0px rgba(255, 255, 255, 0.08),
     inset 0px 0px 1px rgba(255, 255, 255, 0.35);
@@ -101,16 +83,16 @@
   --size-neg-xxxsmall: -4px;
   --size-neg-xunit: -2px;
   --size-neg-unit: -1px;
-  --size-unit: 1px;
-  --size-xunit: 2px;
-  --size-xxxsmall: 4px;
-  --size-xxsmall: 8px;
-  --size-xmsmall: 12px;
-  --size-xsmall: 16px;
-  --size-small: 24px;
-  --size-medium: 32px;
-  --size-large: 40px;
-  --size-xlarge: 48px;
-  --size-xxlarge: 64px;
-  --size-xxxlarge: 80px;
+  --size-pos-unit: 1px;
+  --size-pos-xunit: 2px;
+  --size-pos-xxxsmall: 4px;
+  --size-pos-xxsmall: 8px;
+  --size-pos-xmsmall: 12px;
+  --size-pos-xsmall: 16px;
+  --size-pos-small: 24px;
+  --size-pos-medium: 32px;
+  --size-pos-large: 40px;
+  --size-pos-xlarge: 48px;
+  --size-pos-xxlarge: 64px;
+  --size-pos-xxxlarge: 80px;
 }

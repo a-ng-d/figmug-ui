@@ -1,13 +1,13 @@
 :root[data-theme='sketch'] {
-  --inputs-bar-gap: var(--size-xxsmall);
-  --inputs-bar-gap-inner: var(--size-xunit);
-  --inputs-bar-width: var(--size-xlarge);
-  --inputs-bar-padding: 0 var(--size-unit);
+  --inputs-bar-gap: var(--size-pos-xxsmall);
+  --inputs-bar-gap-inner: var(--size-pos-xunit);
+  --inputs-bar-width: var(--size-pos-xlarge);
+  --inputs-bar-padding: 0 var(--size-pos-unit);
   --inputs-bar-margin: 0 var(--size-neg-unit);
   --inputs-bar-radius: var(--border-radius-large);
 
   --inputs-bar-border-color: var(--sketch-color-accent-primary);
-  --inputs-bar-border-width: var(--size-unit);
+  --inputs-bar-border-width: var(--size-pos-unit);
 
   --inputs-bar-input-radius: 0;
 }

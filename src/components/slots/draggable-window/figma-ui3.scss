@@ -7,9 +7,9 @@
   --draggable-window-border-width: 0;
   --draggable-window-border-offset: 0;
 
-  --draggable-window-header-border: var(--size-unit) solid
+  --draggable-window-header-border: var(--size-pos-unit) solid
     var(--figma-color-border);
 
-  --draggable-window-content-padding: var(--size-xxsmall);
-  --draggable-window-content-gap: var(--size-xxxsmall);
+  --draggable-window-content-padding: var(--size-pos-xxsmall);
+  --draggable-window-content-gap: var(--size-pos-xxxsmall);
 }

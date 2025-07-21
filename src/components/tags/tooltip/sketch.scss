@@ -1,9 +1,9 @@
 :root[data-theme='sketch'] {
   --tooltip-min-width: 172px;
   --tooltip-max-width: 200px;
-  --tooltip-gap: var(--size-xxsmall);
+  --tooltip-gap: var(--size-pos-xxsmall);
   --tooltip-radius: var(--border-radius-xlarge);
-  --tooltip-padding: var(--size-xmsmall) var(--size-xxsmall);
+  --tooltip-padding: var(--size-pos-xmsmall) var(--size-pos-xxsmall);
   --tooltip-background-color: var(--sketch-color-background-primary);
   --tooltip-border-color: transparent;
   --tooltip-border-width: 0;
@@ -11,7 +11,7 @@
   --tooltip-text-color: var(--sketch-color-foreground-primary);
   --tooltip-shadow: var(--elevation-300-tooltip);
 
-  --tooltip-arrow-size: var(--size-xxsmall);
+  --tooltip-arrow-size: var(--size-pos-xxsmall);
   --tooltip-arrow-background-color: transparent;
 
   --tooltip-image-width: 96px;
@@ -19,6 +19,6 @@
   --tooltip-image-radius: var(--border-radius-medium);
 
   --tooltip-withimage-min-width: 248px;
-  --tooltip-withimage-padding: var(--size-xxxsmall) var(--size-xxsmall)
-    var(--size-xxxsmall) var(--size-xxxsmall);
+  --tooltip-withimage-padding: var(--size-pos-xxxsmall) var(--size-pos-xxsmall)
+    var(--size-pos-xxxsmall) var(--size-pos-xxxsmall);
 }

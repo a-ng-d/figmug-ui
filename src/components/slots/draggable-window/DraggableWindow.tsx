@@ -106,7 +106,7 @@ const DraggableWindow = (props: DraggableWindowProps) => {
               action={onClose}
             />
           }
-          padding="0 var(--size-xxsmall)"
+          padding="0 var(--size-pos-xxsmall)"
           isCompact
           shouldReflow={false}
           border={['BOTTOM']}

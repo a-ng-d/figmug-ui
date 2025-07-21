@@ -1,6 +1,6 @@
 :root[data-theme='sketch'] {
   --drawer-background-color: var(--sketch-color-background-primary);
-  --drawer-border: var(--size-unit) solid var(--sketch-color-border-primary);
-  --drawer-knob-size: var(--size-xxsmall);
+  --drawer-border: var(--size-pos-unit) solid var(--sketch-color-border-primary);
+  --drawer-knob-size: var(--size-pos-xxsmall);
   --drawer-knob-position: var(--size-neg-xxxsmall);
 }

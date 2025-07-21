@@ -1,9 +1,9 @@
 :root[data-theme='sketch'] {
   /* Base */
-  --dropdown-height: var(--size-medium);
-  --dropdown-padding: var(--size-xxsmall);
+  --dropdown-height: var(--size-pos-medium);
+  --dropdown-padding: var(--size-pos-xxsmall);
   --dropdown-radius: var(--border-radius-large);
-  --dropdown-gap: var(--size-xxxsmall);
+  --dropdown-gap: var(--size-pos-xxxsmall);
 
   --dropdown-background-color: var(--sketch-color-background-tertiary);
 
@@ -13,13 +13,13 @@
 
   --dropdown-text-color: var(--sketch-color-foreground-primary);
 
-  --dropdown-caret-width: var(--size-xsmall);
-  --dropdown-caret-height: var(--size-xsmall);
+  --dropdown-caret-width: var(--size-pos-xsmall);
+  --dropdown-caret-height: var(--size-pos-xsmall);
   --dropdown-caret-color: var(--sketch-color-foreground-tertiary);
 
-  --dropdown-status-gap: var(--size-xxsmall);
-  --dropdown-status-height: var(--size-medium);
-  --dropdown-status-margin: 0 0 0 var(--size-xxsmall);
+  --dropdown-status-gap: var(--size-pos-xxsmall);
+  --dropdown-status-height: var(--size-pos-medium);
+  --dropdown-status-margin: 0 0 0 var(--size-pos-xxsmall);
 
   /* States */
   --dropdown-background-color-hover: var(--sketch-color-background-secondary);
@@ -31,7 +31,7 @@
 
   --dropdown-background-color-focus: var(--sketch-color-background-tertiary);
   --dropdown-border-color-focus: var(--sketch-color-accent-primary);
-  --dropdown-border-width-focus: var(--size-unit);
+  --dropdown-border-width-focus: var(--size-pos-unit);
   --dropdown-border-offset-focus: var(--size--neg-unit);
   --dropdown-caret-color-focus: var(--sketch-color-foreground-tertiary);
   --dropdown-text-color-focus: var(--sketch-color-foreground-primary);

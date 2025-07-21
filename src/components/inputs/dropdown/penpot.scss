@@ -1,9 +1,9 @@
 :root[data-theme='penpot'] {
   /* Base */
-  --dropdown-height: var(--size-medium);
-  --dropdown-padding: var(--size-xxsmall);
+  --dropdown-height: var(--size-pos-medium);
+  --dropdown-padding: var(--size-pos-xxsmall);
   --dropdown-radius: var(--border-radius-medium);
-  --dropdown-gap: var(--size-xxxsmall);
+  --dropdown-gap: var(--size-pos-xxxsmall);
 
   --dropdown-background-color: var(--penpot-color-background-tertiary);
 
@@ -13,13 +13,13 @@
 
   --dropdown-text-color: var(--penpot-color-foreground-primary);
 
-  --dropdown-caret-width: var(--size-xsmall);
-  --dropdown-caret-height: var(--size-xsmall);
+  --dropdown-caret-width: var(--size-pos-xsmall);
+  --dropdown-caret-height: var(--size-pos-xsmall);
   --dropdown-caret-color: var(--penpot-color-icon-default);
 
-  --dropdown-status-gap: var(--size-xxsmall);
-  --dropdown-status-height: var(--size-medium);
-  --dropdown-status-margin: 0 0 0 var(--size-xxsmall);
+  --dropdown-status-gap: var(--size-pos-xxsmall);
+  --dropdown-status-height: var(--size-pos-medium);
+  --dropdown-status-margin: 0 0 0 var(--size-pos-xxsmall);
 
   /* States */
   --dropdown-background-color-hover: var(--penpot-color-background-quaternary);
@@ -31,15 +31,15 @@
 
   --dropdown-background-color-focus: var(--penpot-color-background-tertiary);
   --dropdown-border-color-focus: var(--penpot-color-accent-primary);
-  --dropdown-border-width-focus: var(--size-unit);
-  --dropdown-border-offset-focus: var(--size-unit);
+  --dropdown-border-width-focus: var(--size-pos-unit);
+  --dropdown-border-offset-focus: var(--size-pos-unit);
   --dropdown-caret-color-focus: var(--penpot-color-icon-default);
   --dropdown-text-color-focus: var(--penpot-color-foreground-primary);
 
   --dropdown-background-color-disabled: var(--penpot-color-background-primary);
   --dropdown-border-color-disabled: var(--penpot-color-background-quaternary);
-  --dropdown-border-width-disabled: var(--size-unit);
-  --dropdown-border-offset-disabled: var(--size-unit);
+  --dropdown-border-width-disabled: var(--size-pos-unit);
+  --dropdown-border-offset-disabled: var(--size-pos-unit);
   --dropdown-caret-color-disabled: var(--penpot-color-icon-default);
   --dropdown-text-color-disabled: var(--penpot-color-foreground-secondary);
 }

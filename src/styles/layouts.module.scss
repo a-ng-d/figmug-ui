@@ -4,17 +4,17 @@
 
   &--tight {
     @extend .snackbar;
-    gap: var(--size-xxxsmall);
+    gap: var(--size-pos-xxxsmall);
   }
 
   &--medium {
     @extend .snackbar;
-    gap: var(--size-xxsmall);
+    gap: var(--size-pos-xxsmall);
   }
 
   &--large {
     @extend .snackbar;
-    gap: var(--size-xsmall);
+    gap: var(--size-pos-xsmall);
   }
 
   &--start {
@@ -41,17 +41,17 @@
 
   &--tight {
     @extend .stackbar;
-    gap: var(--size-xxxsmall);
+    gap: var(--size-pos-xxxsmall);
   }
 
   &--medium {
     @extend .stackbar;
-    gap: var(--size-xxsmall);
+    gap: var(--size-pos-xxsmall);
   }
 
   &--large {
     @extend .stackbar;
-    gap: var(--size-xsmall);
+    gap: var(--size-pos-xsmall);
   }
 
   &--centered {

@@ -1,7 +1,7 @@
 :root[data-theme='penpot'] {
-  --simple-item-gap: var(--size-xxsmall);
-  --simple-item-padding: var(--size-xunit) var(--size-xsmall);
-  --simple-item-min-height: var(--size-medium);
+  --simple-item-gap: var(--size-pos-xxsmall);
+  --simple-item-padding: var(--size-pos-xunit) var(--size-pos-xsmall);
+  --simple-item-min-height: var(--size-pos-medium);
   --simple-item-border-radius: var(--border-radius-small);
   --simple-item-background-color: var(--penpot-color-background-primary);
   --simple-item-border-width: 0;
@@ -13,13 +13,13 @@
   --simple-item-background-color-focus: var(
     --penpot-color-accent-primary-muted
   );
-  --simple-item-border-width-focus: var(--size-unit);
+  --simple-item-border-width-focus: var(--size-pos-unit);
   --simple-item-border-offset-focus: var(--size-neg-unit);
   --simple-item-border-color-focus: var(--penpot-color-accent-primary);
 
   --simple-item-min-width-compact: 112px;
   --simple-item-width-compact: 112px;
 
-  --simple-item-min-width-square: var(--size-medium);
-  --simple-item-width-square: var(--size-medium);
+  --simple-item-min-width-square: var(--size-pos-medium);
+  --simple-item-width-square: var(--size-pos-medium);
 }

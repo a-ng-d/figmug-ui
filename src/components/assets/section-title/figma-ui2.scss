@@ -1,7 +1,7 @@
 :root[data-theme='figma-ui2'] {
-  --section-title-height: var(--size-medium);
-  --section-title-gap: var(--size-xxxsmall);
-  --section-title-padding: 0 var(--size-xxxsmall) 0 var(--size-xxsmall);
+  --section-title-height: var(--size-pos-medium);
+  --section-title-gap: var(--size-pos-xxxsmall);
+  --section-title-padding: 0 var(--size-pos-xxxsmall) 0 var(--size-pos-xxsmall);
   --section-title-text-font-family: var(--font-stack);
   --section-title-text-font-size: var(--font-size-xsmall);
   --section-title-text-font-weight: var(--font-weight-bold);
@@ -10,6 +10,6 @@
   --section-title-text-color: var(--figma-color-text);
   --section-title-text-transform: none;
 
-  --section-title-info-icon-width: var(--size-medium);
-  --section-title-info-icon-height: var(--size-medium);
+  --section-title-info-icon-width: var(--size-pos-medium);
+  --section-title-info-icon-height: var(--size-pos-medium);
 }

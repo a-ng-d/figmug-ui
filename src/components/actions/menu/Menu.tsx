@@ -114,11 +114,12 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
 
           if (diffTop < 16) {
             this.listRef.current.style.top =
-              'calc(var(--size-medium) + var(--size-xxsmall))'
+              'calc(var(--size-pos-medium) + var(--size-pos-xxsmall))'
             this.listRef.current.style.transform = 'none'
           }
           if (diffBottom > -16) {
-            this.listRef.current.style.top = 'calc(var(--size-xxsmall) * -1)'
+            this.listRef.current.style.top =
+              'calc(var(--size-pos-xxsmall) * -1)'
             this.listRef.current.style.transform = 'translateY(-100%)'
           }
         }

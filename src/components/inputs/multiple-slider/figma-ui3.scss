@@ -1,12 +1,12 @@
 :root[data-theme='figma-ui3'] {
-  --multiple-slider-margin: var(--size-small) 0 0;
-  --multiple-slider-padding: 0 var(--size-medium);
-  --multiple-slider-height: var(--size-xmsmall);
+  --multiple-slider-margin: var(--size-pos-small) 0 0;
+  --multiple-slider-padding: 0 var(--size-pos-medium);
+  --multiple-slider-height: var(--size-pos-xmsmall);
   --multiple-slider-radius: var(--border-radius-large);
   --multiple-slider-border-color: var(--figma-color-border-disabled-strong);
-  --multiple-slider-border-width: var(--size-unit);
+  --multiple-slider-border-width: var(--size-pos-unit);
 
-  --multiple-slider-status-gap: var(--size-xxsmall);
-  --multiple-slider-status-margin: 0 0 0 var(--size-xxsmall);
-  --multiple-slider-status-height: var(--size-xmsmall);
+  --multiple-slider-status-gap: var(--size-pos-xxsmall);
+  --multiple-slider-status-margin: 0 0 0 var(--size-pos-xxsmall);
+  --multiple-slider-status-height: var(--size-pos-xmsmall);
 }

@@ -1,11 +1,11 @@
 :root[data-theme='figma-ui2'] {
-  --layout-block-padding: var(--size-xxsmall) 0;
-  --layout-block-border: var(--size-unit) solid var(--figma-color-border);
+  --layout-block-padding: var(--size-pos-xxsmall) 0;
+  --layout-block-border: var(--size-pos-unit) solid var(--figma-color-border);
   --layout-background-color: var(--figma-color-bg);
 
-  --layout-list-padding: var(--size-xxsmall) 0 0 0;
+  --layout-list-padding: var(--size-pos-xxsmall) 0 0 0;
 
-  --layout-centered-padding: var(--size-small);
+  --layout-centered-padding: var(--size-pos-small);
 
-  --layout-distributed-gap: var(--size-small);
+  --layout-distributed-gap: var(--size-pos-small);
 }

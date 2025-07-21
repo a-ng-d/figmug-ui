@@ -1,7 +1,7 @@
 :root[data-theme='penpot'] {
   --tabs-gap: 0;
   --tabs-radius: var(--border-radius-xlarge);
-  --tabs-padding: var(--size-xunit);
+  --tabs-padding: var(--size-pos-xunit);
   --tabs-background-color: var(--penpot-color-background-secondary);
 
   --tabs-gap-vertical: 0;
@@ -9,10 +9,10 @@
   --tabs-padding-vertical: 0;
   --tabs-background-color-vertical: var(--penpot-color-background-primary);
 
-  --tabs-tab-gap: var(--size-xxsmall);
-  --tabs-tab-padding: 0 var(--size-xmsmall);
+  --tabs-tab-gap: var(--size-pos-xxsmall);
+  --tabs-tab-padding: 0 var(--size-pos-xmsmall);
   --tabs-tab-radius: var(--border-radius-medium);
-  --tabs-tab-height: var(--size-medium);
+  --tabs-tab-height: var(--size-pos-medium);
   --tabs-tab-background-color: var(--penpot-color-background-secondary);
   --tabs-tab-border-color: transparent;
   --tabs-tab-border-width: 0;
@@ -21,16 +21,16 @@
   --tabs-tab-text-color: var(--penpot-color-foreground-secondary);
   --tabs-tab-text-weight: var(--font-weight-medium);
   --tabs-tab-text-transform: uppercase;
-  --tabs-tab-icon-width: var(--size-xsmall);
-  --tabs-tab-icon-height: var(--size-xsmall);
+  --tabs-tab-icon-width: var(--size-pos-xsmall);
+  --tabs-tab-icon-height: var(--size-pos-xsmall);
   --tabs-tab-icon-color: var(--penpot-color-foreground-secondary);
 
-  --tabs-tab-padding-with-icon: 0 var(--size-xmsmall);
+  --tabs-tab-padding-with-icon: 0 var(--size-pos-xmsmall);
 
-  --tabs-tab-gap-alternative: var(--size-xxsmall);
-  --tabs-tab-padding-alternative: 0 var(--size-xmsmall);
+  --tabs-tab-gap-alternative: var(--size-pos-xxsmall);
+  --tabs-tab-padding-alternative: 0 var(--size-pos-xmsmall);
   --tabs-tab-radius-alternative: 0;
-  --tabs-tab-height-alternative: var(--size-medium);
+  --tabs-tab-height-alternative: var(--size-pos-medium);
   --tabs-tab-background-color-alternative: var(
     --penpot-color-background-primary
   );
@@ -38,22 +38,22 @@
   --tabs-tab-text-color-alternative: var(--penpot-color-foreground-secondary);
   --tabs-tab-text-weight-alternative: var(--font-weight-medium);
   --tabs-tab-text-transform-alternative: uppercase;
-  --tabs-tab-icon-width-alternative: var(--size-xsmall);
-  --tabs-tab-icon-height-alternative: var(--size-xsmall);
+  --tabs-tab-icon-width-alternative: var(--size-pos-xsmall);
+  --tabs-tab-icon-height-alternative: var(--size-pos-xsmall);
   --tabs-tab-icon-color-alternative: var(--penpot-color-foreground-secondary);
 
-  --tabs-tab-padding-with-icon-alternative: 0 var(--size-xmsmall);
+  --tabs-tab-padding-with-icon-alternative: 0 var(--size-pos-xmsmall);
 
-  --tabs-tab-notification-inset: var(--size-xxxsmall) var(--size-xxxsmall) auto
+  --tabs-tab-notification-inset: var(--size-pos-xxxsmall) var(--size-pos-xxxsmall) auto
     auto;
-  --tabs-tab-notification-width: var(--size-xxsmall);
-  --tabs-tab-notification-height: var(--size-xxsmall);
+  --tabs-tab-notification-width: var(--size-pos-xxsmall);
+  --tabs-tab-notification-height: var(--size-pos-xxsmall);
   --tabs-tab-notification-radius: var(--border-radius-full);
   --tabs-tab-notification-background-color: var(--penpot-color-accent-primary);
   --tabs-tab-notification-border-color: var(
     --penpot-color-background-secondary
   );
-  --tabs-tab-notification-border-width: var(--size-xunit);
+  --tabs-tab-notification-border-width: var(--size-pos-xunit);
   --tabs-tab-notification-border-offset: 0;
 
   --tabs-tab-background-color-hover: var(--penpot-color-background-secondary);
@@ -69,7 +69,7 @@
 
   --tabs-tab-background-color-focus: var(--penpot-color-background-tertiary);
   --tabs-tab-border-color-focus: var(--penpot-color-accent-primary);
-  --tabs-tab-border-width-focus: var(--size-unit);
+  --tabs-tab-border-width-focus: var(--size-pos-unit);
   --tabs-tab-border-offset-focus: var(--size-neg-unit);
   --tabs-tab-text-color-focus: var(--penpot-color-foreground-primary);
   --tabs-tab-text-weight-focus: var(--font-weight-medium);
@@ -99,7 +99,7 @@
     --penpot-color-background-tertiary
   );
   --tabs-tab-border-color-alternative-focus: var(--penpot-color-accent-primary);
-  --tabs-tab-border-width-alternative-focus: var(--size-unit);
+  --tabs-tab-border-width-alternative-focus: var(--size-pos-unit);
   --tabs-tab-border-offset-alternative-focus: var(--size-neg-unit);
   --tabs-tab-text-color-alternative-focus: var(
     --penpot-color-foreground-primary

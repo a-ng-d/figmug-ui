@@ -1,10 +1,10 @@
 :root[data-theme='sketch'] {
-  --accordion-padding: var(--size-xxxsmall) 0;
+  --accordion-padding: var(--size-pos-xxxsmall) 0;
   --accordion-border: 0 solid transparent;
 
-  --accordion-row-gap: var(--size-xsmall);
-  --accordion-row-height: var(--size-medium);
-  --accordion-row-padding: 0 var(--size-xsmall);
+  --accordion-row-gap: var(--size-pos-xsmall);
+  --accordion-row-height: var(--size-pos-medium);
+  --accordion-row-padding: 0 var(--size-pos-xsmall);
 
   --accordion-text-color: var(--sketch-color-foreground-secondary);
   --accordion-icon-color: var(--sketch-color-foreground-secondary);

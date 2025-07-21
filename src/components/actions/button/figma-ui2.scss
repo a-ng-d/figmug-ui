@@ -1,10 +1,10 @@
 :root[data-theme='figma-ui2'] {
   /* Base */
   /* Text Button */
-  --button-height: var(--size-medium);
-  --button-gap: var(--size-xxxsmall);
+  --button-height: var(--size-pos-medium);
+  --button-gap: var(--size-pos-xxxsmall);
   --button-radius: var(--border-radius-large);
-  --button-padding: 0 var(--size-xsmall);
+  --button-padding: 0 var(--size-pos-xsmall);
 
   --button-background-color: transparent;
 
@@ -22,21 +22,21 @@
   --button-text-transform: none;
 
   --button-icon-color: var(--figma-color-icon);
-  --button-icon-width: var(--size-small);
-  --button-icon-height: var(--size-small);
+  --button-icon-width: var(--size-pos-small);
+  --button-icon-height: var(--size-pos-small);
 
-  --button-caret-width: var(--size-xsmall);
-  --button-caret-height: var(--size-small);
+  --button-caret-width: var(--size-pos-xsmall);
+  --button-caret-height: var(--size-pos-small);
 
-  --button-small-height: var(--size-small);
-  --button-small-padding: 0 var(--size-xxsmall);
+  --button-small-height: var(--size-pos-small);
+  --button-small-padding: 0 var(--size-pos-xxsmall);
 
-  --button-large-height: var(--size-large);
-  --button-large-padding: 0 var(--size-medium);
+  --button-large-height: var(--size-pos-large);
+  --button-large-padding: 0 var(--size-pos-medium);
 
   /* Icon Button */
-  --icon-button-width: var(--size-medium);
-  --icon-button-height: var(--size-medium);
+  --icon-button-width: var(--size-pos-medium);
+  --icon-button-height: var(--size-pos-medium);
   --icon-button-radius: var(--border-radius-small);
   --icon-button-padding: 0;
 
@@ -49,22 +49,22 @@
   --icon-button-text-color: var(--figma-color-text);
 
   --icon-button-icon-color: var(--figma-color-icon);
-  --icon-button-icon-width: var(--size-medium);
-  --icon-button-icon-height: var(--size-medium);
+  --icon-button-icon-width: var(--size-pos-medium);
+  --icon-button-icon-height: var(--size-pos-medium);
 
-  --icon-button-notification-width: var(--size-xxxsmall);
-  --icon-button-notification-height: var(--size-xxxsmall);
+  --icon-button-notification-width: var(--size-pos-xxxsmall);
+  --icon-button-notification-height: var(--size-pos-xxxsmall);
   --icon-button-notification-radius: var(--border-radius-full);
-  --icon-button-notification-top: var(--size-xunit);
-  --icon-button-notification-right: var(--size-xunit);
+  --icon-button-notification-top: var(--size-pos-xunit);
+  --icon-button-notification-right: var(--size-pos-xunit);
   --icon-button-notification-background-color: var(--figma-color-icon);
   --icon-button-notification-border-width: 0;
   --icon-button-notification-border-offset: 0;
 
-  --icon-button-small-width: var(--size-small);
-  --icon-button-small-height: var(--size-small);
-  --icon-button-large-width: var(--size-large);
-  --icon-button-large-height: var(--size-large);
+  --icon-button-small-width: var(--size-pos-small);
+  --icon-button-small-height: var(--size-pos-small);
+  --icon-button-large-width: var(--size-pos-large);
+  --icon-button-large-height: var(--size-pos-large);
 
   /* Primary */
   --button-background-color-primary: var(--figma-color-bg-brand);
@@ -78,7 +78,7 @@
   --button-border-width-primary: 0;
   --button-border-width-primary-hover: 0;
   --button-border-width-primary-pressed: 0;
-  --button-border-width-primary-focus: var(--size-xunit);
+  --button-border-width-primary-focus: var(--size-pos-xunit);
   --button-border-width-primary-disabled: 0;
 
   --button-border-offset-primary: 0;
@@ -118,11 +118,11 @@
   --button-background-color-secondary-focus: var(--figma-color-bg);
   --button-background-color-secondary-disabled: var(--figma-color-bg);
 
-  --button-border-width-secondary: var(--size-unit);
-  --button-border-width-secondary-hover: var(--size-unit);
-  --button-border-width-secondary-pressed: var(--size-unit);
-  --button-border-width-secondary-focus: var(--size-xunit);
-  --button-border-width-secondary-disabled: var(--size-unit);
+  --button-border-width-secondary: var(--size-pos-unit);
+  --button-border-width-secondary-hover: var(--size-pos-unit);
+  --button-border-width-secondary-pressed: var(--size-pos-unit);
+  --button-border-width-secondary-focus: var(--size-pos-xunit);
+  --button-border-width-secondary-disabled: var(--size-pos-unit);
 
   --button-border-offset-secondary: var(--size-neg-unit);
   --button-border-offset-secondary-hover: var(--size-neg-unit);
@@ -216,7 +216,7 @@
   --button-border-width-destructive: 0;
   --button-border-width-destructive-hover: 0;
   --button-border-width-destructive-pressed: 0;
-  --button-border-width-destructive-focus: var(--size-xunit);
+  --button-border-width-destructive-focus: var(--size-pos-xunit);
   --button-border-width-destructive-disabled: 0;
 
   --button-border-offset-destructive: 0;
@@ -267,7 +267,7 @@
   --button-border-width-alternative: 0;
   --button-border-width-alternative-hover: 0;
   --button-border-width-alternative-pressed: 0;
-  --button-border-width-alternative-focus: var(--size-xunit);
+  --button-border-width-alternative-focus: var(--size-pos-xunit);
   --button-border-width-alternative-disabled: 0;
 
   --button-border-offset-alternative: 0;
@@ -312,7 +312,7 @@
   --icon-button-border-width: 0;
   --icon-button-border-width-hover: 0;
   --icon-button-border-width-pressed: 0;
-  --icon-button-border-width-focus: var(--size-xunit);
+  --icon-button-border-width-focus: var(--size-pos-xunit);
   --icon-button-border-width-disabled: 0;
 
   --icon-button-border-offset: 0;
@@ -374,7 +374,7 @@
   --icon-button-border-width-selected: 0;
   --icon-button-border-width-selected-hover: 0;
   --icon-button-border-width-selected-pressed: 0;
-  --icon-button-border-width-selected-focus: var(--size-xunit);
+  --icon-button-border-width-selected-focus: var(--size-pos-xunit);
   --icon-button-border-width-selected-disabled: 0;
 
   --icon-button-border-offset-selected: 0;

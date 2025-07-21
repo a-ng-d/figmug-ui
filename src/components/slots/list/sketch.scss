@@ -1,7 +1,7 @@
 :root[data-theme='sketch'] {
   --list-background-color: var(--sketch-color-background-primary);
-  --list-padding: var(--size-unit) 0;
-  --list-border-width: var(--size-unit);
+  --list-padding: var(--size-pos-unit) 0;
+  --list-border-width: var(--size-pos-unit);
   --list-border-color: var(--sketch-color-border-primary);
   --list-alternate-background-color: var(--sketch-color-background-secondary);
 }

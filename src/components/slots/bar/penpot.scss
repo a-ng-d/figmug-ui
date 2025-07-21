@@ -1,11 +1,11 @@
 :root[data-theme='penpot'] {
-  --bar-min-height: var(--size-large);
-  --bar-gap: var(--size-xxsmall);
-  --bar-padding: 0 var(--size-xsmall);
+  --bar-min-height: var(--size-pos-large);
+  --bar-gap: var(--size-pos-xxsmall);
+  --bar-padding: 0 var(--size-pos-xsmall);
   --bar-background-color: transparent;
   --bar-border: none;
 
-  --bar-height-compact: var(--size-medium);
+  --bar-height-compact: var(--size-pos-medium);
 
-  --bar-padding-mobile: var(--size-xxxsmall);
+  --bar-padding-mobile: var(--size-pos-xxxsmall);
 }

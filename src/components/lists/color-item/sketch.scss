@@ -1,5 +1,5 @@
 :root[data-theme='sketch'] {
-  --color-item-padding: 0 var(--size-xsmall) 0 var(--size-small);
-  --color-item-height: var(--size-medium);
-  --color-item-gap: var(--size-xxsmall);
+  --color-item-padding: 0 var(--size-pos-xsmall) 0 var(--size-pos-small);
+  --color-item-height: var(--size-pos-medium);
+  --color-item-gap: var(--size-pos-xxsmall);
 }

@@ -1,7 +1,7 @@
 :root[data-theme='sketch'] {
   /* Base */
   --actions-list-min-width: 224px;
-  --actions-list-padding: var(--size-xxsmall) var(--size-xxsmall);
+  --actions-list-padding: var(--size-pos-xxsmall) var(--size-pos-xxsmall);
   --actions-list-radius: var(--border-radius-xxlarge);
   --actions-list-background-color: var(--sketch-color-background-primary);
   --actions-list-border-color: transparent;
@@ -9,9 +9,9 @@
   --actions-list-border-offset: 0;
   --actions-list-shadow: var(--elevation-300-tooltip);
 
-  --actions-list-item-height: var(--size-medium);
-  --actions-list-item-padding: 0 var(--size-xxsmall) 0 var(--size-medium);
-  --actions-list-item-gap: var(--size-xxsmall);
+  --actions-list-item-height: var(--size-pos-medium);
+  --actions-list-item-padding: 0 var(--size-pos-xxsmall) 0 var(--size-pos-medium);
+  --actions-list-item-gap: var(--size-pos-xxsmall);
   --actions-list-item-radius: var(--border-radius-large);
   --actions-list-item-background-color: transparent;
   --actions-list-item-text-font-family: var(--font-stack);
@@ -23,23 +23,23 @@
 
   --actions-list-patch-right: var(--size-neg-xxsmall);
   --actions-list-patch-left: var(--size-neg-xxsmall);
-  --actions-list-patch-width: var(--size-xxsmall);
+  --actions-list-patch-width: var(--size-pos-xxsmall);
 
-  --actions-list-spot-height: var(--size-xsmall);
+  --actions-list-spot-height: var(--size-pos-xsmall);
   --actions-list-spot-radius: var(--border-radius-xlarge);
   --actions-list-spot-background-color: var(--sketch-color-background-primary);
   --actions-list-spot-icon-color: var(--sketch-color-foreground-primary);
-  --actions-list-spot-inset-top: 0 var(--size-unit) auto var(--size-unit);
-  --actions-list-spot-inset-bottom: auto var(--size-unit) 0 var(--size-unit);
+  --actions-list-spot-inset-top: 0 var(--size-pos-unit) auto var(--size-pos-unit);
+  --actions-list-spot-inset-bottom: auto var(--size-pos-unit) 0 var(--size-pos-unit);
   --actions-list-spot-border-width: 0;
   --actions-list-spot-border-color: transparent;
 
-  --actions-list-tick-width: var(--size-xsmall);
-  --actions-list-tick-height: var(--size-xsmall);
+  --actions-list-tick-width: var(--size-pos-xsmall);
+  --actions-list-tick-height: var(--size-pos-xsmall);
   --actions-list-tick-color: var(--sketch-color-foreground-primary);
 
-  --actions-list-caret-width: var(--size-xsmall);
-  --actions-list-caret-height: var(--size-xsmall);
+  --actions-list-caret-width: var(--size-pos-xsmall);
+  --actions-list-caret-height: var(--size-pos-xsmall);
   --actions-list-caret-color: var(--sketch-color-foreground-primary);
 
   --actions-list-submenu-inset-right: var(--size-neg-xxsmall)
@@ -49,8 +49,8 @@
 
   --actions-list-title-text-transform: uppercase;
 
-  --actions-list-divider-margin: 11px 0 var(--size-xmsmall) 0;
-  --actions-list-divider-height: var(--size-unit);
+  --actions-list-divider-margin: 11px 0 var(--size-pos-xmsmall) 0;
+  --actions-list-divider-height: var(--size-pos-unit);
   --actions-list-divider-background-color: var(--sketch-color-border-primary);
 
   /* States */
@@ -68,8 +68,8 @@
   --actions-list-tick-color-focus: var(--sketch-color-foreground-primary);
   --actions-list-caret-color-focus: var(--sketch-color-foreground-primary);
 
-  --actions-list-item-padding-selected: 0 var(--size-xsmall) 0
-    var(--size-xxsmall);
+  --actions-list-item-padding-selected: 0 var(--size-pos-xsmall) 0
+    var(--size-pos-xxsmall);
   --actions-list-item-background-color-selected: var(
     --sketch-color-background-primary
   );
@@ -77,8 +77,8 @@
   --actions-list-tick-color-selected: var(--sketch-color-accent-primary);
   --actions-list-caret-color-selected: var(--sketch-color-accent-primary);
 
-  --actions-list-item-padding-selected-hover: 0 var(--size-xsmall) 0
-    var(--size-xxsmall);
+  --actions-list-item-padding-selected-hover: 0 var(--size-pos-xsmall) 0
+    var(--size-pos-xxsmall);
   --actions-list-item-background-color-selected-hover: var(
     --sketch-color-background-disabled
   );
@@ -88,8 +88,8 @@
   --actions-list-tick-color-selected-hover: var(--sketch-color-accent-primary);
   --actions-list-caret-color-selected-hover: var(--sketch-color-accent-primary);
 
-  --actions-list-item-padding-selected-focus: 0 var(--size-xsmall) 0
-    var(--size-xxsmall);
+  --actions-list-item-padding-selected-focus: 0 var(--size-pos-xsmall) 0
+    var(--size-pos-xxsmall);
   --actions-list-item-background-color-selected-focus: var(
     --sketch-color-background-disabled
   );

@@ -10,20 +10,20 @@
   --popin-background-color: var(--figma-color-bg);
   --popin-text-color: var(--figma-color-text);
   --popin-border-color: var(--figma-color-border);
-  --popin-border-width: var(--size-unit);
+  --popin-border-width: var(--size-pos-unit);
   --popin-border-offset: var(--size-neg-unit);
 
-  --popin-header-height: var(--size-xlarge);
-  --popin-header-gap: var(--size-xxsmall);
-  --popin-header-padding: 0 var(--size-xxsmall);
-  --popin-header-border: var(--size-unit) solid var(--figma-color-border);
+  --popin-header-height: var(--size-pos-xlarge);
+  --popin-header-gap: var(--size-pos-xxsmall);
+  --popin-header-padding: 0 var(--size-pos-xxsmall);
+  --popin-header-border: var(--size-pos-unit) solid var(--figma-color-border);
   --popin-header-text-transform: none;
 
-  --popin-content-padding-empty: var(--size-small);
+  --popin-content-padding-empty: var(--size-pos-small);
 
-  --popin-footer-padding: var(--size-xsmall) var(--size-xsmall);
-  --popin-footer-gap: var(--size-xxsmall);
+  --popin-footer-padding: var(--size-pos-xsmall) var(--size-pos-xsmall);
+  --popin-footer-gap: var(--size-pos-xxsmall);
   --popin-footer-border: none;
 
-  --popin-actions-gap: var(--size-xxsmall);
+  --popin-actions-gap: var(--size-pos-xxsmall);
 }

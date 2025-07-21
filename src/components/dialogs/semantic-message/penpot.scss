@@ -1,11 +1,11 @@
 :root[data-theme='penpot'] {
-  --semantic-message-gap: var(--size-xxsmall);
-  --semantic-message-padding: var(--size-xxsmall) var(--size-xxsmall)
-    var(--size-xxsmall) 0;
+  --semantic-message-gap: var(--size-pos-xxsmall);
+  --semantic-message-padding: var(--size-pos-xxsmall) var(--size-pos-xxsmall)
+    var(--size-pos-xxsmall) 0;
   --semantic-message-radius: var(--border-radius-xlarge);
   --semantic-message-background-color: var(--penpot-color-background-primary);
   --semantic-message-border-color: var(--penpot-color-background-secondary);
-  --semantic-message-border-width: var(--size-unit);
+  --semantic-message-border-width: var(--size-pos-unit);
   --semantic-message-border-offset: var(--size-neg-unit);
 
   --semantic-message-background-color-info: var(--penpot-color-background-info);
@@ -27,18 +27,18 @@
   --semantic-message-border-color-error: var(--penpot-color-accent-error);
   --semantic-message-border-color-success: var(--penpot-color-accent-success);
   --semantic-message-border-color-warning: var(--penpot-color-accent-warning);
-  --semantic-message-border-width-info: var(--size-unit);
-  --semantic-message-border-width-error: var(--size-unit);
-  --semantic-message-border-width-success: var(--size-unit);
-  --semantic-message-border-width-warning: var(--size-unit);
+  --semantic-message-border-width-info: var(--size-pos-unit);
+  --semantic-message-border-width-error: var(--size-pos-unit);
+  --semantic-message-border-width-success: var(--size-pos-unit);
+  --semantic-message-border-width-warning: var(--size-pos-unit);
   --semantic-message-border-offset-info: var(--size-neg-unit);
   --semantic-message-border-offset-error: var(--size-neg-unit);
   --semantic-message-border-offset-success: var(--size-neg-unit);
   --semantic-message-border-offset-warning: var(--size-neg-unit);
 
-  --semantic-message-padding-anchored: var(--size-small) var(--size-xsmall)
-    var(--size-small) 0;
-  --semantic-message-padding-vertical: var(--size-xsmall) var(--size-xxxsmall);
-  --semantic-message-padding-anchored-vertical: var(--size-xsmall)
-    var(--size-xxxsmall);
+  --semantic-message-padding-anchored: var(--size-pos-small) var(--size-pos-xsmall)
+    var(--size-pos-small) 0;
+  --semantic-message-padding-vertical: var(--size-pos-xsmall) var(--size-pos-xxxsmall);
+  --semantic-message-padding-anchored-vertical: var(--size-pos-xsmall)
+    var(--size-pos-xxxsmall);
 }

@@ -6,7 +6,7 @@
 .user {
   display: flex;
   align-items: center;
-  gap: var(--size-xxsmall);
+  gap: var(--size-pos-xxsmall);
 
   &--inverted {
     flex-direction: row-reverse;

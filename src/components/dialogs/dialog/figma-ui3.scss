@@ -1,15 +1,15 @@
 :root[data-theme='figma-ui3'] {
-  --dialog-padding: var(--size-medium);
+  --dialog-padding: var(--size-pos-medium);
   --dialog-background-color: rgba(0, 0, 0, 0.5);
 
   --dialog-cover-width: 248px;
-  --dialog-cover-padding: var(--size-xsmall);
+  --dialog-cover-padding: var(--size-pos-xsmall);
   --dialog-cover-ratio: 8 / 5;
 
-  --dialog-text-gap: var(--size-xxsmall);
-  --dialog-text-padding: var(--size-xsmall);
+  --dialog-text-gap: var(--size-pos-xxsmall);
+  --dialog-text-padding: var(--size-pos-xsmall);
 
-  --dialog-form-gap: var(--size-xxxsmall);
-  --dialog-form-padding: var(--size-xxsmall) var(--size-xsmall)
-    var(--size-xxsmall) var(--size-xxsmall);
+  --dialog-form-gap: var(--size-pos-xxxsmall);
+  --dialog-form-padding: var(--size-pos-xxsmall) var(--size-pos-xsmall)
+    var(--size-pos-xxsmall) var(--size-pos-xxsmall);
 }

@@ -1,17 +1,17 @@
 :root[data-theme='penpot'] {
   --tooltip-min-width: 172px;
   --tooltip-max-width: 200px;
-  --tooltip-gap: var(--size-xxsmall);
+  --tooltip-gap: var(--size-pos-xxsmall);
   --tooltip-radius: var(--border-radius-xlarge);
-  --tooltip-padding: var(--size-xxxsmall) var(--size-xxsmall);
+  --tooltip-padding: var(--size-pos-xxxsmall) var(--size-pos-xxsmall);
   --tooltip-background-color: var(--penpot-color-background-primary);
   --tooltip-border-color: var(--penpot-color-background-quaternary);
-  --tooltip-border-width: var(--size-unit);
+  --tooltip-border-width: var(--size-pos-unit);
   --tooltip-border-offset: var(--size-neg-unit);
   --tooltip-text-color: var(--penpot-color-foreground-primary);
   --tooltip-shadow: none;
 
-  --tooltip-arrow-size: var(--size-xxsmall);
+  --tooltip-arrow-size: var(--size-pos-xxsmall);
   --tooltip-arrow-background-color: var(--penpot-color-background-primary);
 
   --tooltip-image-width: 96px;
@@ -19,6 +19,6 @@
   --tooltip-image-radius: var(--border-radius-medium);
 
   --tooltip-withimage-min-width: 248px;
-  --tooltip-withimage-padding: var(--size-xxxsmall) var(--size-xxsmall)
-    var(--size-xxxsmall) var(--size-xxxsmall);
+  --tooltip-withimage-padding: var(--size-pos-xxxsmall) var(--size-pos-xxsmall)
+    var(--size-pos-xxxsmall) var(--size-pos-xxxsmall);
 }

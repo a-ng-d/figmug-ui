@@ -1,7 +1,7 @@
 :root[data-theme='figma-ui2'] {
-  --simple-item-gap: var(--size-xxsmall);
-  --simple-item-padding: var(--size-xunit) var(--size-xsmall);
-  --simple-item-min-height: var(--size-medium);
+  --simple-item-gap: var(--size-pos-xxsmall);
+  --simple-item-padding: var(--size-pos-xunit) var(--size-pos-xsmall);
+  --simple-item-min-height: var(--size-pos-medium);
   --simple-item-border-radius: var(--border-radius-small);
   --simple-item-background-color: var(--figma-color-bg);
   --simple-item-border-width: 0;
@@ -11,13 +11,13 @@
   --simple-item-background-color-hover: var(--figma-color-bg-hover);
 
   --simple-item-background-color-focus: var(--figma-color-bg-selected);
-  --simple-item-border-width-focus: var(--size-xunit);
+  --simple-item-border-width-focus: var(--size-pos-xunit);
   --simple-item-border-offset-focus: var(--size-neg-xunit);
   --simple-item-border-color-focus: var(--figma-color-border-selected);
 
   --simple-item-min-width-compact: 112px;
   --simple-item-width-compact: 112px;
 
-  --simple-item-min-width-square: var(--size-medium);
-  --simple-item-width-square: var(--size-medium);
+  --simple-item-min-width-square: var(--size-pos-medium);
+  --simple-item-width-square: var(--size-pos-medium);
 }

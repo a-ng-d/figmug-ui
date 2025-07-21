@@ -1,16 +1,16 @@
 :root[data-theme='sketch'] {
-  --dialog-padding: var(--size-medium);
+  --dialog-padding: var(--size-pos-medium);
   --dialog-background-color: var(--sketch-color-overlay-default);
 
   --dialog-cover-width: 248px;
-  --dialog-cover-padding: var(--size-xsmall) 0 var(--size-xsmall)
-    var(--size-medium);
+  --dialog-cover-padding: var(--size-pos-xsmall) 0 var(--size-pos-xsmall)
+    var(--size-pos-medium);
   --dialog-cover-ratio: 8 / 5;
 
-  --dialog-text-gap: var(--size-xxsmall);
-  --dialog-text-padding: var(--size-xsmall) var(--size-medium);
+  --dialog-text-gap: var(--size-pos-xxsmall);
+  --dialog-text-padding: var(--size-pos-xsmall) var(--size-pos-medium);
 
-  --dialog-form-gap: var(--size-xxxsmall);
-  --dialog-form-padding: var(--size-xxsmall) var(--size-medium)
-    var(--size-xxsmall) var(--size-small);
+  --dialog-form-gap: var(--size-pos-xxxsmall);
+  --dialog-form-padding: var(--size-pos-xxsmall) var(--size-pos-medium)
+    var(--size-pos-xxsmall) var(--size-pos-small);
 }

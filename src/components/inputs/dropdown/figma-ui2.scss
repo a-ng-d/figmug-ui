@@ -1,9 +1,9 @@
 :root[data-theme='figma-ui2'] {
   /* Base */
-  --dropdown-height: var(--size-medium);
-  --dropdown-padding: 0 var(--size-xxxsmall) 0 var(--size-xxsmall);
+  --dropdown-height: var(--size-pos-medium);
+  --dropdown-padding: 0 var(--size-pos-xxxsmall) 0 var(--size-pos-xxsmall);
   --dropdown-radius: var(--border-radius-small);
-  --dropdown-gap: var(--size-xxxsmall);
+  --dropdown-gap: var(--size-pos-xxxsmall);
 
   --dropdown-background-color: var(--figma-color-bg);
 
@@ -13,25 +13,25 @@
 
   --dropdown-text-color: var(--figma-color-text);
 
-  --dropdown-caret-width: var(--size-xsmall);
-  --dropdown-caret-height: var(--size-xsmall);
+  --dropdown-caret-width: var(--size-pos-xsmall);
+  --dropdown-caret-height: var(--size-pos-xsmall);
   --dropdown-caret-color: var(--figma-color-icon-disabled);
 
-  --dropdown-status-gap: var(--size-xxsmall);
-  --dropdown-status-height: var(--size-medium);
-  --dropdown-status-margin: 0 0 0 var(--size-xxsmall);
+  --dropdown-status-gap: var(--size-pos-xxsmall);
+  --dropdown-status-height: var(--size-pos-medium);
+  --dropdown-status-margin: 0 0 0 var(--size-pos-xxsmall);
 
   /* States */
   --dropdown-background-color-hover: var(--figma-color-bg);
   --dropdown-border-color-hover: var(--figma-color-border);
-  --dropdown-border-width-hover: var(--size-unit);
+  --dropdown-border-width-hover: var(--size-pos-unit);
   --dropdown-border-offset-hover: var(--size-neg-unit);
   --dropdown-caret-color-hover: var(--figma-color-icon);
   --dropdown-text-color-hover: var(--figma-color-text);
 
   --dropdown-background-color-focus: var(--figma-color-bg);
   --dropdown-border-color-focus: var(--figma-color-border-selected);
-  --dropdown-border-width-focus: var(--size-xunit);
+  --dropdown-border-width-focus: var(--size-pos-xunit);
   --dropdown-border-offset-focus: var(--size-neg-xunit);
   --dropdown-caret-color-focus: var(--figma-color-icon);
   --dropdown-text-color-focus: var(--figma-color-text);

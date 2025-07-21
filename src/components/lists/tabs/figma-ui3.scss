@@ -1,18 +1,18 @@
 :root[data-theme='figma-ui3'] {
-  --tabs-gap: var(--size-xxxsmall);
+  --tabs-gap: var(--size-pos-xxxsmall);
   --tabs-radius: 0;
   --tabs-padding: 0;
   --tabs-background-color: var(--figma-color-bg);
 
-  --tabs-gap-vertical: var(--size-xxsmall);
+  --tabs-gap-vertical: var(--size-pos-xxsmall);
   --tabs-radius-vertical: 0;
-  --tabs-padding-vertical: var(--size-xxsmall);
+  --tabs-padding-vertical: var(--size-pos-xxsmall);
   --tabs-background-color-vertical: var(--figma-color-bg);
 
-  --tabs-tab-gap: var(--size-xunit);
-  --tabs-tab-padding: 0 var(--size-xxsmall);
+  --tabs-tab-gap: var(--size-pos-xunit);
+  --tabs-tab-padding: 0 var(--size-pos-xxsmall);
   --tabs-tab-radius: var(--border-radius-medium);
-  --tabs-tab-height: var(--size-small);
+  --tabs-tab-height: var(--size-pos-small);
   --tabs-tab-background-color: var(--figma-color-bg);
   --tabs-tab-border-color: transparent;
   --tabs-tab-border-width: 0;
@@ -21,34 +21,34 @@
   --tabs-tab-text-color: var(--figma-color-text-secondary);
   --tabs-tab-text-weight: var(--font-weight-semi);
   --tabs-tab-text-transform: none;
-  --tabs-tab-icon-width: var(--size-small);
-  --tabs-tab-icon-height: var(--size-small);
+  --tabs-tab-icon-width: var(--size-pos-small);
+  --tabs-tab-icon-height: var(--size-pos-small);
   --tabs-tab-icon-color: var(--figma-color-text-secondary);
 
-  --tabs-tab-padding-with-icon: 0 var(--size-xxsmall) 0 0;
+  --tabs-tab-padding-with-icon: 0 var(--size-pos-xxsmall) 0 0;
 
-  --tabs-tab-gap-alternative: var(--size-xunit);
-  --tabs-tab-padding-alternative: 0 var(--size-xxsmall);
+  --tabs-tab-gap-alternative: var(--size-pos-xunit);
+  --tabs-tab-padding-alternative: 0 var(--size-pos-xxsmall);
   --tabs-tab-radius-alternative: var(--border-radius-medium);
-  --tabs-tab-height-alternative: var(--size-small);
+  --tabs-tab-height-alternative: var(--size-pos-small);
   --tabs-tab-background-color-alternative: var(--figma-color-bg);
   --tabs-tab-text-size-alternative: var(--font-size-xsmall);
   --tabs-tab-text-color-alternative: var(--figma-color-text-secondary);
   --tabs-tab-text-weight-alternative: var(--font-weight-semi);
   --tabs-tab-text-transform-alternative: none;
-  --tabs-tab-icon-width-alternative: var(--size-small);
-  --tabs-tab-icon-height-alternative: var(--size-small);
+  --tabs-tab-icon-width-alternative: var(--size-pos-small);
+  --tabs-tab-icon-height-alternative: var(--size-pos-small);
   --tabs-tab-icon-color-alternative: var(--figma-color-text-secondary);
 
-  --tabs-tab-padding-with-icon-alternative: 0 var(--size-xxsmall) 0 0;
+  --tabs-tab-padding-with-icon-alternative: 0 var(--size-pos-xxsmall) 0 0;
 
-  --tabs-tab-notification-inset: var(--size-xunit) var(--size-xunit) auto auto;
-  --tabs-tab-notification-width: var(--size-xxsmall);
-  --tabs-tab-notification-height: var(--size-xxsmall);
+  --tabs-tab-notification-inset: var(--size-pos-xunit) var(--size-pos-xunit) auto auto;
+  --tabs-tab-notification-width: var(--size-pos-xxsmall);
+  --tabs-tab-notification-height: var(--size-pos-xxsmall);
   --tabs-tab-notification-radius: var(--border-radius-full);
   --tabs-tab-notification-background-color: var(--figma-color-bg-brand);
   --tabs-tab-notification-border-color: var(--figma-color-bg);
-  --tabs-tab-notification-border-width: var(--size-xunit);
+  --tabs-tab-notification-border-width: var(--size-pos-xunit);
   --tabs-tab-notification-border-offset: 0;
 
   --tabs-tab-background-color-hover: var(--figma-color-bg-hover);
@@ -62,7 +62,7 @@
 
   --tabs-tab-background-color-focus: var(--figma-color-bg-hover);
   --tabs-tab-border-color-focus: var(--figma-color-border-selected);
-  --tabs-tab-border-width-focus: var(--size-unit);
+  --tabs-tab-border-width-focus: var(--size-pos-unit);
   --tabs-tab-border-offset-focus: var(--size-neg-unit);
   --tabs-tab-text-color-focus: var(--figma-color-text);
   --tabs-tab-text-weight-focus: var(--font-weight-semi);
@@ -82,7 +82,7 @@
 
   --tabs-tab-background-color-alternative-focus: var(--figma-color-bg-hover);
   --tabs-tab-border-color-alternative-focus: var(--figma-color-border-selected);
-  --tabs-tab-border-width-alternative-focus: var(--size-unit);
+  --tabs-tab-border-width-alternative-focus: var(--size-pos-unit);
   --tabs-tab-border-offset-alternative-focus: var(--size-neg-unit);
   --tabs-tab-text-color-alternative-focus: var(--figma-color-text);
   --tabs-tab-text-weight-alternative-focus: var(--font-weight-semi);
