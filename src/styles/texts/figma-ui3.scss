@@ -10,7 +10,7 @@
   --text-default-font_size: var(--font-size-xsmall);
   --text-default-font_weight: var(--font-weight-normal);
   --text-default-line_height: var(--font-line_height);
-  --text-default-letter_spacing: var(--font-letter_spacing-pos-xsmall);
+  --text-default-letter_spacing: var(--font-letter_spacing-pos-small);
 
   --text-small-font_size: var(--font-size-small);
   --text-small-letter_spacing: 0;
@@ -21,7 +21,7 @@
 
   --text-xlarge-font_size: var(--font-size-large);
   --text-xlarge-line_height: var(--font-line_height-large);
-  --text-xlarge-letter_spacing: var(--font-letter_spacing-pos-xsmall);
+  --text-xlarge-letter_spacing: var(--font-letter_spacing-pos-small);
 
   --text-link-color: var(--figma-color-text-brand);
   --text-link-decoration: none;
@@ -31,7 +31,7 @@
   --text-label-color: var(--figma-color-text-tertiary);
   --text-label-font_size: var(--font-size-xsmall);
   --text-label-font_weight: var(--font-weight-normal);
-  --text-label-letter_spacing: var(--font-letter_spacing-pos-xsmall);
+  --text-label-letter_spacing: var(--font-letter_spacing-pos-small);
   --text-label-line_height: var(--font-line_height);
   --text-label-height: var(--size-pos-medium);
   --text-label-padding: 0 var(--size-pos-xxxsmall) 0 var(--size-pos-xxsmall);
