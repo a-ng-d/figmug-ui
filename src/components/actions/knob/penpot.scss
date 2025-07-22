@@ -6,7 +6,7 @@
 
   --knob-label-height: 20px;
   --knob-label-padding: var(--size-pos-xunit) var(--size-pos-xxxsmall);
-  --knob-label-radius: var(--border-radius-medium);
+  --knob-label-radius: var(--border-radius-large);
   --knob-label-background-color: var(--penpot-color-background-primary);
   --knob-label-border-color: var(--penpot-color-background-quaternary);
   --knob-label-border-width: var(--size-pos-unit);
@@ -26,7 +26,7 @@
   --knob-tooltip-top: var(--size-neg-xxsmall);
   --knob-tooltip-padding: var(--size-pos-xunit) var(--size-pos-xxxsmall);
   --knob-tooltip-min_width: var(--size-pos-small);
-  --knob-tooltip-radius: var(--border-radius-medium);
+  --knob-tooltip-radius: var(--border-radius-large);
   --knob-tooltip-background-color: var(--penpot-color-foreground-primary);
   --knob-tooltip-text-color: var(--penpot-color-background-primary);
 
