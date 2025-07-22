@@ -1,6 +1,6 @@
 :root[data-theme='penpot'] {
   --tabs-gap: 0;
-  --tabs-radius: var(--border-radius-xlarge);
+  --tabs-radius: calc(var(--border-radius-xlarge) + var(--size-pos-xunit));
   --tabs-padding: var(--size-pos-xunit);
   --tabs-background-color: var(--penpot-color-background-secondary);
 
@@ -11,7 +11,7 @@
 
   --tabs-tab-gap: var(--size-pos-xxsmall);
   --tabs-tab-padding: 0 var(--size-pos-xmsmall);
-  --tabs-tab-radius: var(--border-radius-medium);
+  --tabs-tab-radius: var(--border-radius-xlarge);
   --tabs-tab-height: var(--size-pos-medium);
   --tabs-tab-background-color: var(--penpot-color-background-secondary);
   --tabs-tab-border-color: transparent;
