@@ -42,7 +42,8 @@
 
   --tabs-tab-padding-with-icon-alternative: 0 var(--size-pos-xxsmall) 0 0;
 
-  --tabs-tab-notification-inset: var(--size-pos-unit) var(--size-pos-unit) auto auto;
+  --tabs-tab-notification-inset: var(--size-pos-unit) var(--size-pos-unit) auto
+    auto;
   --tabs-tab-notification-width: var(--size-pos-xxxsmall);
   --tabs-tab-notification-height: var(--size-pos-xxxsmall);
   --tabs-tab-notification-radius: var(--border-radius-full);

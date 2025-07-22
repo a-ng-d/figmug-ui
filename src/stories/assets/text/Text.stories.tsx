@@ -80,7 +80,8 @@ export const Inverse: Story = {
 
 export const Truncated: Story = {
   args: {
-    children: 'This text is very long and will be truncated if necessary with an ellipsis at the end',
+    children:
+      'This text is very long and will be truncated if necessary with an ellipsis at the end',
     truncate: true,
   },
   parameters: {
@@ -106,7 +107,10 @@ export const AllStyles: Story = {
         <Text color="inverse">Inverse text</Text>
       </div>
       <div style={{ width: '200px' }}>
-        <Text truncate>This text is very long and will be truncated with an ellipsis at the end</Text>
+        <Text truncate>
+          This text is very long and will be truncated with an ellipsis at the
+          end
+        </Text>
       </div>
     </div>
   ),
@@ -121,7 +125,9 @@ export const AllSizes: Story = {
       <Text size="small">Small text (small): {getSizeInfo('small')}</Text>
       <Text>Default text (default): {getSizeInfo('default')}</Text>
       <Text size="large">Large text (large): {getSizeInfo('large')}</Text>
-      <Text size="xlarge">Extra large text (xlarge): {getSizeInfo('xlarge')}</Text>
+      <Text size="xlarge">
+        Extra large text (xlarge): {getSizeInfo('xlarge')}
+      </Text>
     </div>
   ),
 }

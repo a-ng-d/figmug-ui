@@ -71,7 +71,8 @@
   --select-toggle-margin: var(--size-pos-xunit) var(--size-pos-xxsmall) 0
     var(--size-neg-xxsmall);
   --select-toggle-background-color: var(--figma-color-bg-disabled);
-  --select-toggle-border: var(--size-pos-unit) solid var(--figma-color-bg-disabled);
+  --select-toggle-border: var(--size-pos-unit) solid
+    var(--figma-color-bg-disabled);
   --select-toggle-border-color-secondary: transparent;
   --select-toggle-border-width-secondary: 0;
   --select-toggle-border-offset-secondary: 0;
@@ -143,7 +144,8 @@
   --select-button-border-offset-secondary: 0;
 
   --select-button-background-color-checked: var(--figma-color-bg);
-  --select-button-border-checked: var(--size-pos-unit) solid var(--figma-color-icon);
+  --select-button-border-checked: var(--size-pos-unit) solid
+    var(--figma-color-icon);
 
   --select-button-border-color-secondary-focus: var(
     --figma-color-border-selected-strong

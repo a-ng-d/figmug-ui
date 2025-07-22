@@ -38,9 +38,10 @@
   --semantic_message-border-offset-success: 0;
   --semantic_message-border-offset-warning: 0;
 
-  --semantic_message-padding-anchored: var(--size-pos-small) var(--size-pos-xsmall)
-    var(--size-pos-small) 0;
-  --semantic_message-padding-vertical: var(--size-pos-xsmall) var(--size-pos-xxxsmall);
+  --semantic_message-padding-anchored: var(--size-pos-small)
+    var(--size-pos-xsmall) var(--size-pos-small) 0;
+  --semantic_message-padding-vertical: var(--size-pos-xsmall)
+    var(--size-pos-xxxsmall);
   --semantic_message-padding-anchored-vertical: var(--size-pos-xsmall)
     var(--size-pos-xxxsmall);
 }

@@ -10,14 +10,17 @@
   --actions_list-shadow: var(--elevation-400-menu-panel);
 
   --actions_list-item-height: var(--size-pos-small);
-  --actions_list-item-padding: 0 var(--size-pos-xxsmall) 0 var(--size-pos-medium);
+  --actions_list-item-padding: 0 var(--size-pos-xxsmall) 0
+    var(--size-pos-medium);
   --actions_list-item-gap: var(--size-pos-xxsmall);
   --actions_list-item-radius: var(--border-radius-large);
   --actions_list-item-background-color: transparent;
   --actions_list-item-text-font-family: var(--font-stack);
   --actions_list-item-text-font_size: var(--font-size-small);
   --actions_list-item-text-font_weight: var(--font-weight-normal);
-  --actions_list-item-text-letter_spacing: var(--font-letter_spacing-neg-xsmall);
+  --actions_list-item-text-letter_spacing: var(
+    --font-letter_spacing-neg-xsmall
+  );
   --actions_list-item-text-line_height: var(--font-line_height);
   --actions_list-item-text-color: var(--grey-0);
 
@@ -29,8 +32,10 @@
   --actions_list-spot-radius: var(--border-radius-xlarge);
   --actions_list-spot-background-color: var(--grey-1000);
   --actions_list-spot-icon-color: var(--grey-0);
-  --actions_list-spot-inset-top: 0 var(--size-pos-unit) auto var(--size-pos-unit);
-  --actions_list-spot-inset-bottom: auto var(--size-pos-unit) 0 var(--size-pos-unit);
+  --actions_list-spot-inset-top: 0 var(--size-pos-unit) auto
+    var(--size-pos-unit);
+  --actions_list-spot-inset-bottom: auto var(--size-pos-unit) 0
+    var(--size-pos-unit);
   --actions_list-spot-border-width: 0;
   --actions_list-spot-border-color: transparent;
 

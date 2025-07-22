@@ -25,7 +25,8 @@
   --tabs-tab-icon-height: var(--size-pos-small);
   --tabs-tab-icon-color: var(--sketch-color-foreground-secondary);
 
-  --tabs-tab-padding-with-icon: 0 var(--size-pos-xmsmall) 0 var(--size-pos-xxxsmall);
+  --tabs-tab-padding-with-icon: 0 var(--size-pos-xmsmall) 0
+    var(--size-pos-xxxsmall);
 
   --tabs-tab-gap-alternative: var(--size-pos-xunit);
   --tabs-tab-padding-alternative: 0 var(--size-pos-xmsmall);
@@ -45,8 +46,8 @@
   --tabs-tab-padding-with-icon-alternative: 0 var(--size-pos-xxsmall) 0
     var(--size-pos-xxxsmall);
 
-  --tabs-tab-notification-inset: var(--size-pos-xxxsmall) var(--size-pos-xxxsmall) auto
-    auto;
+  --tabs-tab-notification-inset: var(--size-pos-xxxsmall)
+    var(--size-pos-xxxsmall) auto auto;
   --tabs-tab-notification-width: var(--size-pos-xxxsmall);
   --tabs-tab-notification-height: var(--size-pos-xxxsmall);
   --tabs-tab-notification-radius: var(--border-radius-full);

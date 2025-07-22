@@ -1,6 +1,7 @@
 :root[data-theme='figma-ui3'] {
   --accordion-padding: var(--size-pos-xxxsmall) 0;
-  --accordion-border: var(--size-pos-unit) solid var(--figma-color-border-disabled);
+  --accordion-border: var(--size-pos-unit) solid
+    var(--figma-color-border-disabled);
 
   --accordion-row-gap: var(--size-pos-xsmall);
   --accordion-row-height: var(--size-pos-medium);

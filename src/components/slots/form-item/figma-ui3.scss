@@ -1,6 +1,7 @@
 :root[data-theme='figma-ui3'] {
   --form_item-gap: var(--size-pos-xxsmall);
-  --form_item-padding: var(--size-pos-xunit) 0 var(--size-pos-xunit) var(--size-pos-xxsmall);
+  --form_item-padding: var(--size-pos-xunit) 0 var(--size-pos-xunit)
+    var(--size-pos-xxsmall);
   --form_item-text-color: var(--figma-color-text);
   --form_item-label-width: 96px;
   --form_item-helper-padding: 0 var(--size-pos-xxxsmall);
