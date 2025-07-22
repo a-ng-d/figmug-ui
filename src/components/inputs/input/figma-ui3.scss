@@ -57,28 +57,28 @@
   --input-border-offset-empty: 0;
   --input-border-color-empty: transparent;
   --input-text-color-empty: var(--figma-color-text);
-  --input-text-placeholder-color-empty: var(--figma-color-text-secondary);
+  --input-placeholder-text-color-empty: var(--figma-color-text-secondary);
 
   --input-background-color-empty-hover: var(--figma-color-bg-secondary);
   --input-border-width-empty-hover: var(--size-pos-unit);
   --input-border-offset-empty-hover: var(--size-neg-unit);
   --input-border-color-empty-hover: var(--figma-color-border);
   --input-text-color-empty-hover: var(--figma-color-text);
-  --input-text-placeholder-color-empty-hover: var(--figma-color-text-secondary);
+  --input-placeholder-text-color-empty-hover: var(--figma-color-text-secondary);
 
   --input-background-color-empty-focus: var(--figma-color-bg-secondary);
   --input-border-width-empty-focus: var(--size-pos-unit);
   --input-border-offset-empty-focus: var(--size-neg-unit);
   --input-border-color-empty-focus: var(--figma-color-border-selected);
   --input-text-color-empty-focus: var(--figma-color-text);
-  --input-text-placeholder-color-empty-focus: var(--figma-color-text-secondary);
+  --input-placeholder-text-color-empty-focus: var(--figma-color-text-secondary);
 
   --input-background-color-hover: var(--figma-color-bg-secondary);
   --input-border-width-hover: var(--size-pos-unit);
   --input-border-offset-hover: var(--size-neg-unit);
   --input-border-color-hover: var(--figma-color-border);
   --input-text-color-hover: var(--figma-color-text);
-  --input-text-placeholder-color-hover: var(--figma-color-text-secondary);
+  --input-placeholder-text-color-hover: var(--figma-color-text-secondary);
 
   --input-background-color-focus: var(--figma-color-bg-secondary);
   --input-border-width-focus: var(--size-pos-unit);
@@ -93,14 +93,14 @@
   --input-border-offset-empty-error: var(--size-neg-unit);
   --input-border-color-empty-error: var(--figma-color-border-danger);
   --input-text-color-empty-error: var(--figma-color-text);
-  --input-text-placeholder-color-empty-error: var(--figma-color-text-secondary);
+  --input-placeholder-text-color-empty-error: var(--figma-color-text-secondary);
 
   --input-background-color-empty-error-hover: var(--figma-color-bg-secondary);
   --input-border-width-empty-error-hover: var(--size-pos-unit);
   --input-border-offset-empty-error-hover: var(--size-neg-unit);
   --input-border-color-empty-error-hover: var(--figma-color-border-danger);
   --input-text-color-empty-error-hover: var(--figma-color-text);
-  --input-text-placeholder-color-empty-error-hover: var(
+  --input-placeholder-text-color-empty-error-hover: var(
     --figma-color-text-secondary
   );
 
@@ -111,7 +111,7 @@
     --figma-color-border-danger-strong
   );
   --input-text-color-empty-error-focus: var(--figma-color-text);
-  --input-text-placeholder-color-empty-error-focus: var(
+  --input-placeholder-text-color-empty-error-focus: var(
     --figma-color-text-secondary
   );
 
@@ -120,21 +120,21 @@
   --input-border-offset-error: var(--size-neg-unit);
   --input-border-color-error: var(--figma-color-border-danger);
   --input-text-color-error: var(--figma-color-text);
-  --input-text-placeholder-color-error: var(--figma-color-text-secondary);
+  --input-placeholder-text-color-error: var(--figma-color-text-secondary);
 
   --input-background-color-error-hover: var(--figma-color-bg-secondary);
   --input-border-width-error-hover: var(--size-pos-unit);
   --input-border-offset-error-hover: var(--size-neg-unit);
   --input-border-color-error-hover: var(--figma-color-border-danger);
   --input-text-color-error-hover: var(--figma-color-text);
-  --input-text-placeholder-color-error-hover: var(--figma-color-text-secondary);
+  --input-placeholder-text-color-error-hover: var(--figma-color-text-secondary);
 
   --input-background-color-error-focus: var(--figma-color-bg-secondary);
   --input-border-width-error-focus: var(--size-pos-unit);
   --input-border-offset-error-focus: var(--size-neg-unit);
   --input-border-color-error-focus: var(--figma-color-border-danger-strong);
   --input-text-color-error-focus: var(--figma-color-text);
-  --input-text-placeholder-color-error-focus: var(--figma-color-text-secondary);
+  --input-placeholder-text-color-error-focus: var(--figma-color-text-secondary);
 
   /* Disabled */
   --input-background-color-disabled: var(--figma-color-bg-tertiary);
@@ -142,7 +142,7 @@
   --input-border-offset-disabled: var(--size-neg-unit);
   --input-border-color-disabled: var(--figma-color-border-disabled);
   --input-text-color-disabled: var(--figma-color-text-disabled);
-  --input-text-placeholder-color-disabled: var(--figma-color-text-tertiary);
+  --input-placeholder-text-color-disabled: var(--figma-color-text-tertiary);
   --input-color-chip-opacity-disabled: 0.5;
 
   /* On Selected */

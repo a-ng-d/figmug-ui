@@ -22,7 +22,7 @@
   --input-text-letter_spacing: var(--font-letter_spacing-neg-xsmall);
   --input-text-line_height: var(--font-line_height);
   --input-text-color: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color: var(--sketch-color-foreground-secondary);
+  --input-text-placeholder-color: var(--sketch-color-foreground-tertiary);
 
   --input-color-chip-width: var(--size-pos-xsmall);
   --input-color-chip-height: var(--size-pos-xsmall);
@@ -45,7 +45,7 @@
   --input-textarea-border-color: transparent;
   --input-textarea-text-color: var(--sketch-color-foreground-primary);
   --input-textarea-text-placeholder-color: var(
-    --sketch-color-foreground-secondary
+    --sketch-color-foreground-tertiary
   );
 
   --input-status-height: var(--size-pos-medium);
@@ -58,8 +58,8 @@
   --input-border-offset-empty: 0;
   --input-border-color-empty: transparent;
   --input-text-color-empty: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color-empty: var(
-    --sketch-color-foreground-secondary
+  --input-placeholder-text-color-empty: var(
+    --sketch-color-foreground-tertiary
   );
 
   --input-background-color-empty-hover: var(--sketch-color-background-disabled);
@@ -67,8 +67,8 @@
   --input-border-offset-empty-hover: 0;
   --input-border-color-empty-hover: transparent;
   --input-text-color-empty-hover: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color-empty-hover: var(
-    --sketch-color-foreground-secondary
+  --input-placeholder-text-color-empty-hover: var(
+    --sketch-color-foreground-tertiary
   );
 
   --input-background-color-empty-focus: var(--sketch-color-background-tertiary);
@@ -76,8 +76,8 @@
   --input-border-offset-empty-focus: var(--size-neg-unit);
   --input-border-color-empty-focus: var(--sketch-color-accent-primary);
   --input-text-color-empty-focus: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color-empty-focus: var(
-    --sketch-color-foreground-secondary
+  --input-placeholder-text-color-empty-focus: var(
+    --sketch-color-foreground-tertiary
   );
 
   --input-background-color-hover: var(--sketch-color-background-disabled);
@@ -85,8 +85,8 @@
   --input-border-offset-hover: 0;
   --input-border-color-hover: transparent;
   --input-text-color-hover: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color-hover: var(
-    --sketch-color-foreground-secondary
+  --input-placeholder-text-color-hover: var(
+    --sketch-color-foreground-tertiary
   );
 
   --input-background-color-focus: var(--sketch-color-background-tertiary);
@@ -95,7 +95,7 @@
   --input-border-color-focus: var(--sketch-color-accent-primary);
   --input-text-color-focus: var(--sketch-color-foreground-primary);
   --input-text-placeholder-color-focus: var(
-    --sketch-color-foreground-secondary
+    --sketch-color-foreground-tertiary
   );
 
   /* Error */
@@ -104,8 +104,8 @@
   --input-border-offset-empty-error: var(--size-neg-unit);
   --input-border-color-empty-error: var(--sketch-color-accent-error);
   --input-text-color-empty-error: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color-empty-error: var(
-    --sketch-color-foreground-secondary
+  --input-placeholder-text-color-empty-error: var(
+    --sketch-color-foreground-tertiary
   );
 
   --input-background-color-empty-error-hover: var(
@@ -115,8 +115,8 @@
   --input-border-offset-empty-error-hover: var(--size-neg-unit);
   --input-border-color-empty-error-hover: var(--sketch-color-accent-error);
   --input-text-color-empty-error-hover: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color-empty-error-hover: var(
-    --sketch-color-foreground-secondary
+  --input-placeholder-text-color-empty-error-hover: var(
+    --sketch-color-foreground-tertiary
   );
 
   --input-background-color-empty-error-focus: var(
@@ -126,8 +126,8 @@
   --input-border-offset-empty-error-focus: var(--size-neg-unit);
   --input-border-color-empty-error-focus: var(--sketch-color-foreground-error);
   --input-text-color-empty-error-focus: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color-empty-error-focus: var(
-    --sketch-color-foreground-secondary
+  --input-placeholder-text-color-empty-error-focus: var(
+    --sketch-color-foreground-tertiary
   );
 
   --input-background-color-error: var(--sketch-color-background-tertiary);
@@ -135,8 +135,8 @@
   --input-border-offset-error: var(--size-neg-unit);
   --input-border-color-error: var(--sketch-color-accent-error);
   --input-text-color-error: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color-error: var(
-    --sketch-color-foreground-secondary
+  --input-placeholder-text-color-error: var(
+    --sketch-color-foreground-tertiary
   );
 
   --input-background-color-error-hover: var(--sketch-color-background-disabled);
@@ -144,8 +144,8 @@
   --input-border-offset-error-hover: var(--size-neg-unit);
   --input-border-color-error-hover: var(--sketch-color-accent-error);
   --input-text-color-error-hover: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color-error-hover: var(
-    --sketch-color-foreground-secondary
+  --input-placeholder-text-color-error-hover: var(
+    --sketch-color-foreground-tertiary
   );
 
   --input-background-color-error-focus: var(--sketch-color-background-tertiary);
@@ -153,8 +153,8 @@
   --input-border-offset-error-focus: var(--size-neg-unit);
   --input-border-color-error-focus: var(--sketch-color-foreground-error);
   --input-text-color-error-focus: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color-error-focus: var(
-    --sketch-color-foreground-secondary
+  --input-placeholder-text-color-error-focus: var(
+    --sketch-color-foreground-tertiary
   );
 
   /* Disabled */
@@ -163,7 +163,7 @@
   --input-border-offset-disabled: var(--size-neg-unit);
   --input-border-color-disabled: var(--sketch-color-border-disabled);
   --input-text-color-disabled: var(--sketch-color-foreground-tertiary);
-  --input-text-placeholder-color-disabled: var(
+  --input-placeholder-text-color-disabled: var(
     --sketch-color-foreground-disabled
   );
   --input-color-chip-opacity-disabled: 0.5;
