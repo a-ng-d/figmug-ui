@@ -21,7 +21,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "create-theme": "node scripts/create-theme.js"
+    "create-theme": "node scripts/create-theme.js",
+    "generate-tokens": "node scripts/generate-tokens.js"
   },
   "dependencies": {
     "@a_ng_d/figmug-utils": "^0.6.0",

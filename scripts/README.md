@@ -1,8 +1,23 @@
-# Figmug UI Theme Generator
+# Figmug-UI Scripts
+
+This directory contains utility scripts for managing and generating resources for the Figmug-UI design system.
+
+## Available Scripts
+
+### [Token Generation](./generate-tokens-README.md)
+
+A script to generate design tokens in a format compatible with Token Studio. This script extracts CSS variables from SCSS files and converts them to a structured token format.
+
+```bash
+# Run the token generation script
+node generate-tokens.js
+```
+
+### [Theme Generator](./create-theme-README.md)
 
 This script allows you to easily generate a new UI theme for figmug-ui, based on existing themes (figma-ui2, figma-ui3, penpot, sketch).
 
-## Features
+## Theme Generator Features
 
 The script automates the creation of the following elements:
 
@@ -36,18 +51,22 @@ The script will ask you to enter a name for your new theme, then create all the 
 - `src/icons/[theme-name]/`: Icons directory
 - Theme-specific SCSS files for each component
 
+## Documentation
+
+For detailed information about each script, refer to the dedicated documentation:
+
+- [Token Generation Documentation](./generate-tokens-README.md)
+- [Token Format Documentation](./token-format-README.md)
+- [Theme Generator Documentation](./create-theme-README.md)
+
 ## Next Steps
 
-After generating your theme, you will need to:
+After creating a new theme with the theme generator, you'll need to:
 
-1. Customize color tokens in `src/styles/tokens/[theme-name]-colors.scss`
-2. Customize typography tokens in `src/styles/tokens/[theme-name]-types.scss`
-3. Adapt component SCSS files if necessary
+1. Customize the tokens for your new theme
+2. Generate design tokens using the token generation script
+3. Adapt component styles as needed
 4. Update your application to include the new theme
-
-## Reference Source
-
-The script uses `figma-ui3` theme as reference for all elements:
 
 - Colors: `figma-ui3`
 - Typography: `figma-ui3`
