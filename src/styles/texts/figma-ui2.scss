@@ -10,10 +10,11 @@
   --text-default-font_size: var(--font-size-xsmall);
   --text-default-font_weight: var(--font-weight-normal);
   --text-default-line_height: var(--font-line_height);
-  --text-default-letter_spacing: var(--font-letter_spacing-pos-large);
+  --text-default-letter_spacing: var(--font-letter_spacing-pos-xlarge);
 
   --text-small-font_size: var(--font-size-small);
-  --text-small-letter_spacing: 0;
+  --text-small-line_height: var(--font-line_height);
+  --text-small-letter_spacing: var(--font-letter_spacing-pos-large);
 
   --text-large-font_size: var(--font-size-medlum);
   --text-large-line_height: var(--font-line_height-large);
