@@ -38,7 +38,7 @@
 
   --select-box-background-color-checked: var(--figma-color-bg-selected-strong);
   --select-box-border-checked: var(--size-pos-unit) solid
-    var(--figma-color-bg-brand);
+    var(--figma-color-border-selected-strong);
 
   --select-box-border-color-secondary-focus: var(--figma-color-border-selected);
   --select-box-border-width-secondary-focus: var(--size-pos-unit);
@@ -46,7 +46,7 @@
   --select-box-border-color-secondary-checked-focus: var(
     --figma-color-border-selected-strong
   );
-  --select-box-border-width-secondary-checked-focus: var(--size-pos-unit);
+  --select-box-border-width-secondary-checked-focus: var(--size-pos-xunit);
   --select-box-border-offset-secondary-checked-focus: var(--size-neg-unit);
 
   --select-box-background-color-disabled: var(--figma-color-bg);
