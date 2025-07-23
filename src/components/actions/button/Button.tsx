@@ -267,6 +267,11 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
             style={{
               opacity: isDisabled || isBlocked ? 0.5 : 1,
               pointerEvents: 'none',
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             {customIcon}
