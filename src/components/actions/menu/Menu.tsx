@@ -156,7 +156,6 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
     const activeOptions = flattenOptions(options).filter(
       (option) => option.isActive !== false
     )
-    console.log('activeOptions', activeOptions)
 
     if (activeOptions.length === 0) return null
     if (activeOptions.length === 1 && activeOptions[0].children === undefined) {
