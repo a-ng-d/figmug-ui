@@ -143,9 +143,20 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
     } = this.props
     const { isMenuOpen } = this.state
 
-    const activeOptions = options.filter(
-      (option) => option.isActive !== false && option.type === 'OPTION'
+    const flattenOptions = (options: DropdownOption[]): DropdownOption[] => {
+      const flat: DropdownOption[] = []
+      options.forEach((option) => {
+        flat.push(option)
+        if (Array.isArray(option.children) && option.children.length > 0)
+          flat.push(...flattenOptions(option.children))
+      })
+      return flat
+    }
+
+    const activeOptions = flattenOptions(options).filter(
+      (option) => option.isActive !== false
     )
+    console.log('activeOptions', activeOptions)
 
     if (activeOptions.length === 0) return null
     if (activeOptions.length === 1 && activeOptions[0].children === undefined) {
@@ -156,8 +167,8 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
           label={option.label}
           isLoading={state === 'LOADING'}
           isDisabled={state === 'DISABLED' || isBlocked}
-          isBlocked={activeOptions[0].isBlocked}
-          isNew={activeOptions[0].isNew}
+          isBlocked={option.isBlocked}
+          isNew={option.isNew}
           action={
             !(state === 'DISABLED' || isBlocked)
               ? (e: React.MouseEvent<Element> | React.KeyboardEvent<Element>) =>

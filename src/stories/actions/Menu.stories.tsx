@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/internal/test'
 import { useArgs } from '@storybook/client-api'
 import * as ListStories from '@stories/lists/List.stories.tsx'
 import Menu from '@components/actions/menu/Menu'
@@ -20,7 +21,52 @@ export const DropdownIcon: Story = {
     type: 'ICON',
     icon: 'adjust',
     state: 'DEFAULT',
-    options: { ...ListStories.FourOptionsList.args.options },
+    options: [
+      {
+        label: 'Option 1',
+        value: 'OPTION_1',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Option 2',
+        value: 'OPTION_2',
+        type: 'GROUP',
+        children: [
+          {
+            label: 'Option 2.1',
+            value: 'OPTION_2.1',
+            type: 'OPTION',
+            action: fn(),
+          },
+          {
+            label: 'Option 2.2',
+            value: 'OPTION_2.2',
+            type: 'OPTION',
+            action: fn(),
+          },
+        ],
+      },
+      {
+        label: 'Option 3',
+        value: 'OPTION_3',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        type: 'SEPARATOR',
+      },
+      {
+        label: 'Title',
+        type: 'TITLE',
+      },
+      {
+        label: 'Option 4',
+        value: 'OPTION_4',
+        type: 'OPTION',
+        action: fn(),
+      },
+    ],
     selected: 'OPTION_1',
     alignment: 'BOTTOM_LEFT',
     isBlocked: false,
