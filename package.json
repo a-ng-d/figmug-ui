@@ -68,7 +68,7 @@
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.6.0"
   },
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "description": "Figmug UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/a-ng-d/figmug-ui.git"
