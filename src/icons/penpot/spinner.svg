@@ -1,11 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <style>
     @keyframes translater {
-      to { transform: translateY(-5px); }
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-5px); }
     }
     #spinner-penpot {
       transform-origin: center;
       animation: translater 1s linear infinite;
+      animation-play-state: running !important;
+      will-change: transform;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
     }
   </style>
   <path fill="#000" d="M5.313 9.011 1 12.001l4.313 3.014L23 15.003V9l-17.687.011ZM6 10l16.011-.011v4.025L6 14.027V10Zm-1 .321v3.384l-1.535-1.159V11.47L5 10.321Z"/>

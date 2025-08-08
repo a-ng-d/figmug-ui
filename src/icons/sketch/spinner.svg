@@ -1,11 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <style>
     @keyframes back-and-forth {
-      to { transform: translateX(8px); }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(8px); }
     }
     #spinner-sketch {
       transform-origin: center;
       animation: back-and-forth 0.5s linear infinite alternate;
+      animation-play-state: running !important;
+      will-change: transform;
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
     }
   </style>
   <path fill="#000" d="M4 12a2 2 0 0 1 2-2h12a2 2 0 1 1 0 4H6a2 2 0 0 1-2-2Z" opacity=".2"/>
