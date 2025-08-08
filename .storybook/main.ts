@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     '@storybook/addon-docs',
     '@storybook/addon-a11y',
   ],
+  staticDirs: ['../src/styles'],
   framework: {
     name: '@storybook/react-vite',
     options: {},

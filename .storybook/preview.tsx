@@ -1,16 +1,7 @@
 import type { Preview, Decorator } from '@storybook/react'
 import React from 'react'
 
-import '@styles/tokens/modules/figma-colors.module.scss'
-import '@styles/tokens/modules/figma-types.module.scss'
-
-import '@styles/tokens/modules/penpot-colors.module.scss'
-import '@styles/tokens/modules/penpot-types.module.scss'
-
-import '@styles/tokens/modules/sketch-colors.module.scss'
-import '@styles/tokens/modules/sketch-types.module.scss'
-
-import '@styles/tokens/modules/globals.module.scss'
+import './theme-styles.scss'
 
 const withTheme: Decorator = (Story, context) => {
   React.useEffect(() => {
