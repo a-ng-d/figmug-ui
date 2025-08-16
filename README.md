@@ -3,7 +3,7 @@
 
 # Figmug UI
 
-Figmug UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.
+Figmug UI is a comprehensive library of UI components designed specifically for building Figma, Penpot, and Sketch plugins. It leverages modern tools and frameworks to ensure a seamless development experience.
 
 ## Features
 
