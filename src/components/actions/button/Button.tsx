@@ -91,80 +91,89 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
     } = this.props
 
     return (
-      <button
-        role="button"
-        className={doClassnames([
-          'button',
-          `button--${type}`,
-          `button--${size}`,
-          isLoading && 'button--loading',
-          isBlocked && 'button--blocked',
-        ])}
-        data-feature={feature}
-        disabled={isDisabled || isBlocked}
-        aria-label={label}
-        aria-disabled={isDisabled || isBlocked}
-        aria-busy={isLoading}
-        onKeyDown={(e) => {
-          if (
-            (e.key === ' ' || e.key === 'Enter') &&
-            (!isDisabled || !isBlocked)
-          )
-            action?.(e)
-          if (e.key === 'Escape') (e.target as HTMLElement).blur()
-        }}
-        onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
-        tabIndex={0}
-        ref={this.buttonRef}
-      >
-        {icon !== undefined && (
-          <span
-            className="button__icon"
-            aria-hidden="true"
-          >
-            <Icon
-              type="PICTO"
-              iconName={icon}
+      <div className="button__wrapper">
+        <button
+          role="button"
+          className={doClassnames([
+            'button',
+            `button--${type}`,
+            `button--${size}`,
+            isLoading && 'button--loading',
+            isBlocked && 'button--blocked',
+          ])}
+          data-feature={feature}
+          disabled={isDisabled || isBlocked}
+          aria-label={label}
+          aria-disabled={isDisabled || isBlocked}
+          aria-busy={isLoading}
+          onKeyDown={(e) => {
+            if (
+              (e.key === ' ' || e.key === 'Enter') &&
+              (!isDisabled || !isBlocked)
+            )
+              action?.(e)
+            if (e.key === 'Escape') (e.target as HTMLElement).blur()
+          }}
+          onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
+          tabIndex={0}
+          ref={this.buttonRef}
+        >
+          {icon !== undefined && (
+            <span
+              className="button__icon"
+              aria-hidden="true"
+            >
+              <Icon
+                type="PICTO"
+                iconName={icon}
+              />
+            </span>
+          )}
+          <span className="button__label">{label}</span>
+          {isLoading && (
+            <div
+              className="button__loader"
+              aria-hidden="true"
+            >
+              <Icon
+                type="PICTO"
+                iconName="spinner"
+                customClassName="button__spinner"
+              />
+            </div>
+          )}
+          {hasMultipleActions && (
+            <span
+              className="button__caret"
+              aria-hidden="true"
+            >
+              <Icon
+                type="PICTO"
+                iconName="chevron-down"
+              />
+            </span>
+          )}
+        </button>
+        <div className="button__status">
+          {warning !== undefined && (
+            <IconChip
+              iconType="PICTO"
+              iconName="warning"
+              text={warning.label}
+              pin={warning.pin}
+              type={warning.type}
             />
-          </span>
-        )}
-        <span className="button__label">{label}</span>
-        {isLoading && (
-          <div
-            className="button__loader"
-            aria-hidden="true"
-          >
-            <Icon
-              type="PICTO"
-              iconName="spinner"
-              customClassName="button__spinner"
-            />
-          </div>
-        )}
-        {hasMultipleActions && (
-          <span
-            className="button__caret"
-            aria-hidden="true"
-          >
-            <Icon
-              type="PICTO"
-              iconName="chevron-down"
-            />
-          </span>
-        )}
-        {warning !== undefined && (
-          <IconChip
-            iconType="PICTO"
-            iconName="warning"
-            text={warning.label}
-            pin={warning.pin}
-            type={warning.type}
-          />
-        )}
-        {(isBlocked || isNew) && (
-          <Chip preview={preview}>{isNew ? 'New' : 'Pro'}</Chip>
-        )}
-      </button>
+          )}
+          {(isBlocked || isNew) && (
+            <Chip
+              preview={preview}
+              isSolo
+            >
+              {isNew ? 'New' : 'Pro'}
+            </Chip>
+          )}
+        </div>
+      </div>
     )
   }
 

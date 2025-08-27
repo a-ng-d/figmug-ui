@@ -3,6 +3,13 @@
 @import 'penpot';
 @import 'sketch';
 
+.button__status, .button__wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--button-status-gap);
+  height: var(--button-status-height);
+}
+
 .button,
 .icon-button {
   display: flex;
@@ -115,6 +122,7 @@
       --button-text-color: var(--button-text-color-primary-hover);
       --button-icon-color: var(--button-icon-color-primary-hover);
       --button-text-decoration: var(--button-text-decoration-primary-hover);
+      --icon-picto-color: var(--button-icon-color-primary-hover);
     }
 
     &:enabled:focus {
@@ -125,6 +133,7 @@
       --button-text-color: var(--button-text-color-primary-focus);
       --button-icon-color: var(--button-icon-color-primary-focus);
       --button-text-decoration: var(--button-text-decoration-primary-focus);
+      --icon-picto-color: var(--button-icon-color-primary-focus);
     }
 
     &:enabled:active {
@@ -135,6 +144,7 @@
       --button-text-color: var(--button-text-color-primary-pressed);
       --button-icon-color: var(--button-icon-color-primary-pressed);
       --button-text-decoration: var(--button-text-decoration-primary-pressed);
+      --icon-picto-color: var(--button-icon-color-primary-pressed);
     }
 
     &:disabled {
@@ -147,6 +157,7 @@
       --button-text-color: var(--button-text-color-primary-disabled);
       --button-icon-color: var(--button-icon-color-primary-disabled);
       --button-text-decoration: var(--button-text-decoration-primary-disabled);
+      --icon-picto-color: var(--button-icon-color-primary-disabled);
     }
   }
 
@@ -168,6 +179,7 @@
       --button-text-color: var(--button-text-color-secondary-hover);
       --button-icon-color: var(--button-icon-color-secondary-hover);
       --button-text-decoration: var(--button-text-decoration-secondary-hover);
+      --icon-picto-color: var(--button-icon-color-secondary-hover);
     }
 
     &:enabled:focus {
@@ -178,6 +190,7 @@
       --button-text-color: var(--button-text-color-secondary-focus);
       --button-icon-color: var(--button-icon-color-secondary-focus);
       --button-text-decoration: var(--button-text-decoration-secondary-focus);
+      --icon-picto-color: var(--button-icon-color-secondary-focus);
     }
 
     &:enabled:active {
@@ -190,6 +203,7 @@
       --button-text-color: var(--button-text-color-secondary-pressed);
       --button-icon-color: var(--button-icon-color-secondary-pressed);
       --button-text-decoration: var(--button-text-decoration-secondary-pressed);
+      --icon-picto-color: var(--button-icon-color-secondary-pressed);
     }
 
     &:disabled {
@@ -204,6 +218,7 @@
       --button-text-decoration: var(
         --button-text-decoration-secondary-disabled
       );
+      --icon-picto-color: var(--button-icon-color-secondary-disabled);
     }
   }
 
@@ -217,6 +232,7 @@
     --button-text-color: var(--button-text-color-tertiary);
     --button-icon-color: var(--button-icon-color-tertiary);
     --button-text-decoration: var(--button-text-decoration-tertiary);
+    --icon-picto-color: var(--button-icon-color-tertiary);
 
     &:enabled:hover {
       --button-background-color: var(--button-background-color-tertiary-hover);
@@ -226,6 +242,7 @@
       --button-text-color: var(--button-text-color-tertiary-hover);
       --button-icon-color: var(--button-icon-color-tertiary-hover);
       --button-text-decoration: var(--button-text-decoration-tertiary-hover);
+      --icon-picto-color: var(--button-icon-color-tertiary-hover);
     }
 
     &:enabled:focus {
@@ -236,6 +253,7 @@
       --button-text-color: var(--button-text-color-tertiary-focus);
       --button-icon-color: var(--button-icon-color-tertiary-focus);
       --button-text-decoration: var(--button-text-decoration-tertiary-focus);
+      --icon-picto-color: var(--button-icon-color-tertiary-focus);
     }
 
     &:enabled:active {
@@ -248,6 +266,7 @@
       --button-text-color: var(--button-text-color-tertiary-pressed);
       --button-icon-color: var(--button-icon-color-tertiary-pressed);
       --button-text-decoration: var(--button-text-decoration-tertiary-pressed);
+      --icon-picto-color: var(--button-icon-color-tertiary-pressed);
     }
 
     &:disabled {
@@ -260,6 +279,7 @@
       --button-text-color: var(--button-text-color-tertiary-disabled);
       --button-icon-color: var(--button-icon-color-tertiary-disabled);
       --button-text-decoration: var(--button-text-decoration-tertiary-disabled);
+      --icon-picto-color: var(--button-icon-color-tertiary-disabled); 
     }
   }
 
@@ -283,6 +303,7 @@
       --button-text-color: var(--button-text-color-destructive-hover);
       --button-icon-color: var(--button-icon-color-destructive-hover);
       --button-text-decoration: var(--button-text-decoration-destructive-hover);
+      --icon-picto-color: var(--button-icon-color-destructive-hover);
     }
 
     &:enabled:focus {
@@ -295,6 +316,7 @@
       --button-text-color: var(--button-text-color-destructive-focus);
       --button-icon-color: var(--button-icon-color-destructive-focus);
       --button-text-decoration: var(--button-text-decoration-destructive-focus);
+      --icon-picto-color: var(--button-icon-color-destructive-focus);
     }
 
     &:enabled:active {
@@ -309,6 +331,7 @@
       --button-text-decoration: var(
         --button-text-decoration-destructive-pressed
       );
+      --icon-picto-color: var(--button-icon-color-destructive-pressed);
     }
 
     &:disabled {
@@ -323,6 +346,7 @@
       --button-text-decoration: var(
         --button-text-decoration-destructive-disabled
       );
+      --icon-picto-color: var(--button-icon-color-destructive-disabled);
     }
   }
 
@@ -346,6 +370,7 @@
       --button-text-color: var(--button-text-color-alternative-hover);
       --button-icon-color: var(--button-icon-color-alternative-hover);
       --button-text-decoration: var(--button-text-decoration-alternative-hover);
+      --icon-picto-color: var(--button-icon-color-alternative-hover);
     }
 
     &:enabled:focus {
@@ -358,6 +383,7 @@
       --button-text-color: var(--button-text-color-alternative-focus);
       --button-icon-color: var(--button-icon-color-alternative-focus);
       --button-text-decoration: var(--button-text-decoration-alternative-focus);
+      --icon-picto-color: var(--button-icon-color-alternative-focus);
     }
 
     &:enabled:active {
@@ -372,6 +398,7 @@
       --button-text-decoration: var(
         --button-text-decoration-alternative-pressed
       );
+      --icon-picto-color: var(--button-icon-color-alternative-pressed);
     }
 
     &:disabled {
@@ -386,6 +413,7 @@
       --button-text-decoration: var(
         --button-text-decoration-alternative-disabled
       );
+      --icon-picto-color: var(--button-icon-color-alternative-disabled);
     }
   }
 }
