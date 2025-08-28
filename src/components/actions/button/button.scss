@@ -3,7 +3,8 @@
 @import 'penpot';
 @import 'sketch';
 
-.button__status, .button__wrapper {
+.button__status,
+.button__wrapper {
   display: flex;
   align-items: center;
   gap: var(--button-status-gap);
@@ -279,7 +280,7 @@
       --button-text-color: var(--button-text-color-tertiary-disabled);
       --button-icon-color: var(--button-icon-color-tertiary-disabled);
       --button-text-decoration: var(--button-text-decoration-tertiary-disabled);
-      --icon-picto-color: var(--button-icon-color-tertiary-disabled); 
+      --icon-picto-color: var(--button-icon-color-tertiary-disabled);
     }
   }
 

@@ -58,9 +58,7 @@
   --input-border-offset-empty: 0;
   --input-border-color-empty: transparent;
   --input-text-color-empty: var(--sketch-color-foreground-primary);
-  --input-placeholder-text-color-empty: var(
-    --sketch-color-foreground-tertiary
-  );
+  --input-placeholder-text-color-empty: var(--sketch-color-foreground-tertiary);
 
   --input-background-color-empty-hover: var(--sketch-color-background-disabled);
   --input-border-width-empty-hover: 0;
@@ -85,18 +83,14 @@
   --input-border-offset-hover: 0;
   --input-border-color-hover: transparent;
   --input-text-color-hover: var(--sketch-color-foreground-primary);
-  --input-placeholder-text-color-hover: var(
-    --sketch-color-foreground-tertiary
-  );
+  --input-placeholder-text-color-hover: var(--sketch-color-foreground-tertiary);
 
   --input-background-color-focus: var(--sketch-color-background-tertiary);
   --input-border-width-focus: var(--size-pos-unit);
   --input-border-offset-focus: var(--size-neg-unit);
   --input-border-color-focus: var(--sketch-color-accent-primary);
   --input-text-color-focus: var(--sketch-color-foreground-primary);
-  --input-text-placeholder-color-focus: var(
-    --sketch-color-foreground-tertiary
-  );
+  --input-text-placeholder-color-focus: var(--sketch-color-foreground-tertiary);
 
   /* Error */
   --input-background-color-empty-error: var(--sketch-color-background-tertiary);
@@ -135,9 +129,7 @@
   --input-border-offset-error: var(--size-neg-unit);
   --input-border-color-error: var(--sketch-color-accent-error);
   --input-text-color-error: var(--sketch-color-foreground-primary);
-  --input-placeholder-text-color-error: var(
-    --sketch-color-foreground-tertiary
-  );
+  --input-placeholder-text-color-error: var(--sketch-color-foreground-tertiary);
 
   --input-background-color-error-hover: var(--sketch-color-background-disabled);
   --input-border-width-error-hover: var(--size-pos-unit);
