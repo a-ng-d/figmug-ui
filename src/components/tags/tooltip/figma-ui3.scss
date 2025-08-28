@@ -12,7 +12,10 @@
   --tooltip-shadow: var(--elevation-300-tooltip);
 
   --tooltip-arrow-size: var(--size-pos-xxsmall);
+  --tooltip-arrow-radius: 0;
   --tooltip-arrow-background-color: var(--grey-1000);
+  --tooltip-arrow-border-color: var(--grey-900);
+  --tooltip-arrow-border-width: var(--size-pos-unit);
 
   --tooltip-image-width: 96px;
   --tooltip-image-height: 96px;
