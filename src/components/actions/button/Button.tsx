@@ -1,4 +1,5 @@
 import React from 'react'
+import layouts from '@styles/layouts.module.scss'
 import Tooltip from '@components/tags/tooltip/Tooltip'
 import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
@@ -73,25 +74,49 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
   }
 
   // Templates
+  Status = () => {
+    const { warning, preview, isBlocked, isNew } = this.props
+
+    if (warning || isBlocked || isNew)
+      return (
+        <div className="button__status">
+          {warning !== undefined && (
+            <IconChip
+              iconType="PICTO"
+              iconName="warning"
+              text={warning.label}
+              pin={warning.pin}
+              type={warning.type}
+            />
+          )}
+          {(isBlocked || isNew) && (
+            <Chip
+              preview={preview}
+              isSolo
+            >
+              {isNew ? 'New' : 'Pro'}
+            </Chip>
+          )}
+        </div>
+      )
+  }
+
   Button = () => {
     const {
       type,
       icon,
       size,
-      preview,
-      warning,
       isBlocked,
       feature,
       hasMultipleActions,
       isLoading,
       isDisabled,
-      isNew,
       action,
       label,
     } = this.props
 
     return (
-      <div className="button__wrapper">
+      <div className={layouts['snackbar--medium']}>
         <button
           role="button"
           className={doClassnames([
@@ -154,25 +179,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
             </span>
           )}
         </button>
-        <div className="button__status">
-          {warning !== undefined && (
-            <IconChip
-              iconType="PICTO"
-              iconName="warning"
-              text={warning.label}
-              pin={warning.pin}
-              type={warning.type}
-            />
-          )}
-          {(isBlocked || isNew) && (
-            <Chip
-              preview={preview}
-              isSolo
-            >
-              {isNew ? 'New' : 'Pro'}
-            </Chip>
-          )}
-        </div>
+        {this.Status()}
       </div>
     )
   }

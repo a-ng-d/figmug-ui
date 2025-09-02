@@ -3,8 +3,7 @@
 @import 'penpot';
 @import 'sketch';
 
-.button__status,
-.button__wrapper {
+.button__status {
   display: flex;
   align-items: center;
   gap: var(--button-status-gap);
