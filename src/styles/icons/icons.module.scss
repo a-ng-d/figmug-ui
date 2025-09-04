@@ -186,6 +186,11 @@
     -webkit-mask-image: var(--icon-group);
   }
 
+  &--help {
+    mask-image: var(--icon-help);
+    -webkit-mask-image: var(--icon-help);
+  }
+
   &--hidden {
     mask-image: var(--icon-hidden);
     -webkit-mask-image: var(--icon-hidden);

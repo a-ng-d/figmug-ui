@@ -41,6 +41,7 @@ const icons: Array<IconList> = [
   'forward',
   'frame',
   'group',
+  'help',
   'hidden',
   'horizontal-padding',
   'hyperlink',

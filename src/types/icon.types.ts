@@ -59,6 +59,7 @@ export type IconList =
   | 'forward'
   | 'frame'
   | 'group'
+  | 'help'
   | 'hidden'
   | 'horizontal-padding'
   | 'hyperlink'
