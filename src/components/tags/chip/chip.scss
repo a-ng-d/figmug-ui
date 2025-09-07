@@ -20,7 +20,7 @@
   height: var(--chip-height);
   user-select: none;
 
-  &--preview {
+  &--interactive {
     pointer-events: auto;
 
     &:hover, &:focus {

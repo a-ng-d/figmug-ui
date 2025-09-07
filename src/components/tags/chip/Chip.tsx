@@ -30,7 +30,7 @@ const Chip = (props: ChipProps) => {
         state === 'INACTIVE' && 'chip--inactive',
         state === 'ON_BACKGROUND' && 'chip--on-background',
         isSolo && 'chip--solo',
-        preview !== undefined && 'chip--preview',
+        action !== undefined && 'chip--interactive',
       ])}
       onMouseDown={(e) => {
         if (action) action(e)
