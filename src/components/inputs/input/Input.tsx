@@ -396,8 +396,8 @@ export default class Input extends React.Component<InputProps, InputStates> {
           />
           {isTooltipVisible && helper !== undefined && (
             <Tooltip
-              pin={helper?.pin}
-              type={helper?.type}
+              pin={helper?.pin || 'BOTTOM'}
+              type={helper?.type || 'SINGLE_LINE'}
             >
               {helper?.label}
             </Tooltip>
@@ -508,8 +508,8 @@ export default class Input extends React.Component<InputProps, InputStates> {
           )}
           {isTooltipVisible && helper !== undefined && (
             <Tooltip
-              pin={helper?.pin}
-              type={helper?.type}
+              pin={helper?.pin || 'BOTTOM'}
+              type={helper?.type || 'SINGLE_LINE'}
             >
               {helper?.label}
             </Tooltip>
@@ -609,8 +609,8 @@ export default class Input extends React.Component<InputProps, InputStates> {
             )}
           {isTooltipVisible && helper !== undefined && (
             <Tooltip
-              pin={helper?.pin}
-              type={helper?.type}
+              pin={helper?.pin || 'BOTTOM'}
+              type={helper?.type || 'SINGLE_LINE'}
             >
               {helper?.label}
             </Tooltip>
@@ -671,8 +671,8 @@ export default class Input extends React.Component<InputProps, InputStates> {
           />
           {isTooltipVisible && helper !== undefined && (
             <Tooltip
-              pin={helper?.pin}
-              type={helper?.type}
+              pin={helper?.pin || 'BOTTOM'}
+              type={helper?.type || 'SINGLE_LINE'}
             >
               {helper?.label}
             </Tooltip>

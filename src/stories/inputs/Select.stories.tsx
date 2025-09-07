@@ -186,6 +186,7 @@ export const MultipleChoices: Story = {
           id="option-1"
           label="Option 1"
           name="option-1"
+          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.optionA}
           action={action}
         />
@@ -194,6 +195,7 @@ export const MultipleChoices: Story = {
           id="option-2"
           label="Option 2"
           name="option-2"
+          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.optionB}
           action={action}
         />
@@ -202,6 +204,7 @@ export const MultipleChoices: Story = {
           id="option-3"
           label="Option 3"
           name="option-3"
+          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.optionC}
           action={action}
         />
@@ -255,6 +258,7 @@ export const SingleChoice: Story = {
           label="Option 1"
           name="option-1"
           value="option-1"
+          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.value === 'option-1'}
           action={action}
         />
@@ -264,6 +268,7 @@ export const SingleChoice: Story = {
           label="Option 2"
           name="option-2"
           value="option-2"
+          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.value === 'option-2'}
           action={action}
         />
@@ -273,6 +278,7 @@ export const SingleChoice: Story = {
           label="Option 3"
           name="option-3"
           value="option-3"
+          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.value === 'option-3'}
           action={action}
         />

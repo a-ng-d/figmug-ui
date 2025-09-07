@@ -249,7 +249,6 @@ export const Icon: Story = {
     icon: 'adjust',
     helper: {
       label: 'Adjust the parameters',
-      pin: 'BOTTOM',
     },
     feature: 'ACTION',
     isLoading: false,

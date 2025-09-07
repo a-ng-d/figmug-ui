@@ -27,6 +27,9 @@ export const ColorPicker: Story = {
     type: 'COLOR',
     value: '#87ebe7',
     feature: 'PICK_COLOR',
+    helper: {
+      label: 'Pick a color',
+    },
     isAutoFocus: false,
     isBlocked: false,
     isDisabled: false,
@@ -82,6 +85,9 @@ export const NumericStepper: Story = {
     step: '1',
     feature: 'ADJUST_NUMBER',
     state: 'DEFAULT',
+    helper: {
+      label: 'Adjust the number',
+    },
     isAutoFocus: false,
     isBlocked: false,
     isDisabled: false,
@@ -137,6 +143,9 @@ export const ShortText: Story = {
     charactersLimit: 64,
     feature: 'TYPE_SHORT_TEXT',
     state: 'DEFAULT',
+    helper: {
+      label: 'You can type up to 64 characters',
+    },
     isAutoFocus: false,
     isClearable: false,
     isFramed: true,
@@ -186,6 +195,9 @@ export const LongText: Story = {
     value: '',
     feature: 'TYPE_SHORT_TEXT',
     state: 'DEFAULT',
+    helper: {
+      label: 'You can type up to 500 characters',
+    },
     isGrowing: false,
     isAutoFocus: false,
     isBlocked: false,

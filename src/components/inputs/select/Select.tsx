@@ -11,6 +11,11 @@ export interface SelectProps {
   label?: string
   name?: string
   value?: string
+  helper?: {
+    label: string
+    pin?: 'TOP' | 'BOTTOM'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE'
+  }
   preview?: {
     image: string
     text: string
@@ -31,6 +36,7 @@ export interface SelectProps {
 
 export interface SelectStates {
   isWarningVisible: boolean
+  isTooltipVisible: boolean
 }
 
 export default class Select extends React.Component<SelectProps, SelectStates> {
@@ -47,6 +53,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
     super(props)
     this.state = {
       isWarningVisible: false,
+      isTooltipVisible: false,
     }
   }
 
@@ -106,12 +113,14 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       id,
       label,
       name,
+      helper,
       feature,
       isChecked,
       isDisabled,
       isBlocked,
       action,
     } = this.props
+    const { isTooltipVisible } = this.state
 
     return (
       <div
@@ -119,6 +128,12 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         role="checkbox"
         aria-checked={isChecked}
         aria-disabled={isDisabled || isBlocked}
+        onMouseEnter={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onMouseLeave={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
       >
         <input
           data-feature={feature}
@@ -140,6 +155,14 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           {label}
         </label>
         {this.Status('checkbox')}
+        {isTooltipVisible && helper !== undefined && (
+          <Tooltip
+            pin={helper?.pin || 'BOTTOM'}
+            type={helper?.type || 'SINGLE_LINE'}
+          >
+            {helper?.label}
+          </Tooltip>
+        )}
       </div>
     )
   }
@@ -150,12 +173,14 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       label,
       name,
       value,
+      helper,
       feature,
       isChecked,
       isDisabled,
       isBlocked,
       action,
     } = this.props
+    const { isTooltipVisible } = this.state
 
     return (
       <div
@@ -163,6 +188,12 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         role="radio"
         aria-checked={isChecked}
         aria-disabled={isDisabled || isBlocked}
+        onMouseEnter={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onMouseLeave={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
       >
         <input
           data-feature={feature}
@@ -185,6 +216,14 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           {label}
         </label>
         {this.Status('radio')}
+        {isTooltipVisible && helper !== undefined && (
+          <Tooltip
+            pin={helper?.pin || 'BOTTOM'}
+            type={helper?.type || 'SINGLE_LINE'}
+          >
+            {helper?.label}
+          </Tooltip>
+        )}
       </div>
     )
   }
@@ -194,12 +233,14 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       id,
       label,
       name,
+      helper,
       feature,
       isChecked,
       isDisabled,
       isBlocked,
       action,
     } = this.props
+    const { isTooltipVisible } = this.state
 
     return (
       <div
@@ -207,6 +248,12 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         role="switch"
         aria-checked={isChecked}
         aria-disabled={isDisabled || isBlocked}
+        onMouseEnter={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onMouseLeave={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
       >
         <input
           data-feature={feature}
@@ -228,6 +275,14 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           {label}
         </label>
         {this.Status('switch')}
+        {isTooltipVisible && helper !== undefined && (
+          <Tooltip
+            pin={helper?.pin || 'BOTTOM'}
+            type={helper?.type || 'SINGLE_LINE'}
+          >
+            {helper?.label}
+          </Tooltip>
+        )}
       </div>
     )
   }

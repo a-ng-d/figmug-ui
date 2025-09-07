@@ -95,6 +95,9 @@ export const SingleSelection: Story = {
           },
         ]}
         selected={argsState.selected}
+        helper={{
+          label: 'Select an option',
+        }}
       />
     )
   },

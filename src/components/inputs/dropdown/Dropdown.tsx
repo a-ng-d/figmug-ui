@@ -1,5 +1,6 @@
 import React from 'react'
 import texts from '@styles/texts/texts.module.scss'
+import Tooltip from '@components/tags/tooltip/Tooltip'
 import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
 import ActionsList from '@components/lists/actions-list/ActionsList'
@@ -15,6 +16,11 @@ export interface DropdownProps {
   containerId?: string
   alignment?: 'RIGHT' | 'LEFT' | 'FILL'
   pin?: 'NONE' | 'TOP' | 'BOTTOM'
+  helper?: {
+    label: string
+    pin?: 'TOP' | 'BOTTOM'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE'
+  }
   preview?: {
     image: string
     text: string
@@ -33,6 +39,7 @@ export interface DropdownProps {
 export interface DropdownStates {
   isMenuOpen: boolean
   listShouldScroll: boolean
+  isTooltipVisible: boolean
 }
 
 export default class Dropdown extends React.Component<
@@ -58,6 +65,7 @@ export default class Dropdown extends React.Component<
     this.state = {
       isMenuOpen: false,
       listShouldScroll: false,
+      isTooltipVisible: false,
     }
     this.selectMenuRef = React.createRef()
     this.buttonRef = React.createRef()
@@ -219,11 +227,12 @@ export default class Dropdown extends React.Component<
       alignment,
       options,
       selected,
+      helper,
       containerId,
       isDisabled,
       isBlocked,
     } = this.props
-    const { isMenuOpen, listShouldScroll } = this.state
+    const { isMenuOpen, listShouldScroll, isTooltipVisible } = this.state
 
     return (
       <div
@@ -262,6 +271,12 @@ export default class Dropdown extends React.Component<
             return null
           }}
           onMouseDown={!(isDisabled || isBlocked) ? this.onOpenMenu : undefined}
+          onMouseEnter={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: true })
+          }}
+          onMouseLeave={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          }}
           tabIndex={0}
           ref={this.buttonRef}
         >
@@ -280,6 +295,14 @@ export default class Dropdown extends React.Component<
               iconName="chevron-down"
             />
           </span>
+          {isTooltipVisible && helper !== undefined && (
+            <Tooltip
+              pin={helper?.pin || 'BOTTOM'}
+              type={helper?.type || 'SINGLE_LINE'}
+            >
+              {helper?.label}
+            </Tooltip>
+          )}
         </button>
         {this.Status()}
         {(() => {

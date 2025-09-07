@@ -39,6 +39,7 @@
     padding: var(--dropdown-padding);
     width: auto;
     height: var(--dropdown-height);
+    position: relative;
 
     &:hover {
       --dropdown-background-color: var(--dropdown-background-color-hover);
