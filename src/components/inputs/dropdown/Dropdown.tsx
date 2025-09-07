@@ -34,6 +34,7 @@ export interface DropdownProps {
   isDisabled?: boolean
   isBlocked?: boolean
   isNew?: boolean
+  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface DropdownStates {
@@ -212,6 +213,7 @@ export default class Dropdown extends React.Component<
             <Chip
               preview={preview}
               isSolo
+              action={isBlocked ? this.props.onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>

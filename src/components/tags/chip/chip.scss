@@ -23,7 +23,7 @@
   &--preview {
     pointer-events: auto;
 
-    &:hover {
+    &:hover, &:focus {
       --chip-background-color: var(--chip-background-color-hover);
       --chip-border-color: var(--chip-border-color-hover);
       --chip-border-offset: var(--chip-border-offset-hover);

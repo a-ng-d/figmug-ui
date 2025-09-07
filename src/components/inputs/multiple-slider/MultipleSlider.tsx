@@ -50,6 +50,7 @@ interface SliderProps {
     },
     feature?: string
   ) => void
+  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 interface SliderStates {
@@ -410,7 +411,14 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
               type={warning.type}
             />
           )}
-          {(isBlocked || isNew) && <Chip isSolo>{isNew ? 'New' : 'Pro'}</Chip>}
+          {(isBlocked || isNew) && (
+            <Chip
+              isSolo
+              action={isBlocked ? this.props.onUnblock : undefined}
+            >
+              {isNew ? 'New' : 'Pro'}
+            </Chip>
+          )}
         </div>
       )
   }

@@ -46,6 +46,7 @@ export interface ButtonProps {
   isDisabled?: boolean
   isNew?: boolean
   action?: React.MouseEventHandler & React.KeyboardEventHandler
+  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 interface ButtonStates {
@@ -93,6 +94,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
             <Chip
               preview={preview}
               isSolo
+              action={isBlocked ? this.props.onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>

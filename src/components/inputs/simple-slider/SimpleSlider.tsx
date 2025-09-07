@@ -25,6 +25,7 @@ export interface SimpleSliderProps {
   isDisabled?: boolean
   isNew?: boolean
   onChange: (feature: string, state: string, value: number) => void
+  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface SimpleSliderStates {
@@ -152,7 +153,14 @@ export default class SimpleSlider extends React.Component<
               type={warning.type}
             />
           )}
-          {(isBlocked || isNew) && <Chip isSolo>{isNew ? 'New' : 'Pro'}</Chip>}
+          {(isBlocked || isNew) && (
+            <Chip
+              isSolo
+              action={isBlocked ? this.props.onUnblock : undefined}
+            >
+              {isNew ? 'New' : 'Pro'}
+            </Chip>
+          )}
         </div>
       )
   }

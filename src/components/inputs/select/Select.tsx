@@ -32,6 +32,7 @@ export interface SelectProps {
   isBlocked?: boolean
   isNew?: boolean
   action: React.ChangeEventHandler<HTMLInputElement>
+  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface SelectStates {
@@ -82,6 +83,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
             <Chip
               preview={preview}
               isSolo
+              action={isBlocked ? this.props.onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>

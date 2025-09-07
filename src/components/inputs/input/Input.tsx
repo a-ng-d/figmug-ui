@@ -52,6 +52,7 @@ export interface InputProps {
   onClear?: (value: string) => void
   onSlide?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onValid?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface InputStates {
@@ -328,6 +329,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
             <Chip
               preview={preview}
               isSolo
+              action={isBlocked ? this.props.onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>
