@@ -60,6 +60,9 @@ export const SingleVendor: Story = {
         isConsented: false,
       },
     ],
+    canBeClosed: true,
+    closeLabel: 'Continue without accepting',
+    onClose: mock,
   },
 }
 
@@ -126,6 +129,9 @@ export const SeveralVendors: Story = {
         action: mock,
       },
     ],
+    canBeClosed: true,
+    closeLabel: 'Continue without accepting',
+    onClose: mock,
   },
   argTypes: {},
 }

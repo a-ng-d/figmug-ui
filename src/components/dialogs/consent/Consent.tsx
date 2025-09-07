@@ -34,6 +34,9 @@ export interface ConsentProps {
   }
   validVendor: ConsentConfiguration
   vendorsList: Array<ConsentConfiguration>
+  canBeClosed?: boolean
+  closeLabel?: string
+  onClose?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface ConsentStates {
@@ -160,6 +163,18 @@ export default class Consent extends React.Component<
                 action={this.onConsentAll}
                 aria-label={consentActions.consent.label}
               />
+              {this.props.canBeClosed && (
+                <Button
+                  type="icon"
+                  icon="close"
+                  helper={
+                    this.props.closeLabel !== undefined
+                      ? { label: this.props.closeLabel, pin: 'TOP' }
+                      : undefined
+                  }
+                  action={this.props.onClose}
+                />
+              )}
             </div>
           }
           padding="0"
@@ -350,6 +365,18 @@ export default class Consent extends React.Component<
                 action={this.onPartialConsent}
                 aria-label={consentActions.save.label}
               />
+              {this.props.canBeClosed && (
+                <Button
+                  type="icon"
+                  icon="close"
+                  helper={
+                    this.props.closeLabel !== undefined
+                      ? { label: this.props.closeLabel, pin: 'TOP' }
+                      : undefined
+                  }
+                  action={this.props.onClose}
+                />
+              )}
             </div>
           }
           padding="0"
