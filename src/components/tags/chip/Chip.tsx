@@ -30,7 +30,7 @@ const Chip = (props: ChipProps) => {
         state === 'INACTIVE' && 'chip--inactive',
         state === 'ON_BACKGROUND' && 'chip--on-background',
         isSolo && 'chip--solo',
-        action !== undefined && 'chip--interactive',
+        (action !== undefined || preview !== undefined) && 'chip--interactive',
       ])}
       onMouseDown={(e) => {
         if (action) action(e)
@@ -50,7 +50,7 @@ const Chip = (props: ChipProps) => {
       onBlur={() => {
         if (preview !== undefined) setIsPreviewVisible(false)
       }}
-      tabIndex={preview !== undefined ? 0 : -1}
+      tabIndex={action !== undefined || preview !== undefined ? 0 : -1}
       aria-pressed={state === 'ACTIVE'}
       aria-disabled={state === 'INACTIVE'}
       aria-live="polite"
