@@ -42,6 +42,7 @@ export interface InputProps {
   isFlex?: boolean
   isClearable?: boolean
   isFramed?: boolean
+  canBeEmpty?: boolean
   isBlocked?: boolean
   isDisabled?: boolean
   isNew?: boolean
@@ -58,6 +59,7 @@ export interface InputProps {
 export interface InputStates {
   inputValue: string
   isTooltipVisible: boolean
+  lastValidValue: string
 }
 
 export default class Input extends React.Component<InputProps, InputStates> {
@@ -72,6 +74,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
     shouldBlur: false,
     isClearable: false,
     isFramed: true,
+    canBeEmpty: true,
     isBlocked: false,
     isDisabled: false,
     isNew: false,
@@ -85,6 +88,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
     this.state = {
       inputValue: props.value,
       isTooltipVisible: false,
+      lastValidValue: props.value,
     }
     this.startValue = props.value
     this.inputRef = React.createRef()
@@ -113,6 +117,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
     if (prevProps.value !== value)
       this.setState({
         inputValue: value,
+        lastValidValue: value.trim() !== '' ? value : this.state.lastValidValue,
       })
 
     if (prevProps.type === 'CODE' && this.textareaRef.current !== null)
@@ -172,16 +177,32 @@ export default class Input extends React.Component<InputProps, InputStates> {
   }
 
   onFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { value, onFocus } = this.props
+    const { value, onFocus, canBeEmpty, type } = this.props
 
     this.startValue = value
 
-    if (onFocus) onFocus(e)
+    const shouldPreventEvent =
+      (type === 'TEXT' || type === 'LONG_TEXT') &&
+      !canBeEmpty &&
+      value.trim() === ''
+
+    if (onFocus && !shouldPreventEvent) onFocus(e)
   }
 
   onBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { shouldBlur, onBlur } = this.props
-    const { inputValue } = this.state
+    const { shouldBlur, onBlur, canBeEmpty, type } = this.props
+    const { inputValue, lastValidValue } = this.state
+
+    const isEmpty = inputValue.trim() === ''
+    const shouldPreventEvent =
+      (type === 'TEXT' || type === 'LONG_TEXT') && !canBeEmpty && isEmpty
+
+    if (shouldPreventEvent) {
+      this.setState({
+        inputValue: lastValidValue,
+      })
+      return
+    }
 
     if ((inputValue !== this.startValue && onBlur) || (onBlur && shouldBlur))
       onBlur(e)
