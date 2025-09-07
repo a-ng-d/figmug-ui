@@ -136,6 +136,7 @@ export const MultipleChoices: Story = {
     type: 'CHECK_BOX',
     name: 'check-input',
     feature: 'CHECK_INPUT',
+    helper: { label: 'Many options to select' },
     isChecked: false,
     isBlocked: false,
     isDisabled: false,
@@ -186,7 +187,6 @@ export const MultipleChoices: Story = {
           id="option-1"
           label="Option 1"
           name="option-1"
-          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.optionA}
           action={action}
         />
@@ -195,7 +195,6 @@ export const MultipleChoices: Story = {
           id="option-2"
           label="Option 2"
           name="option-2"
-          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.optionB}
           action={action}
         />
@@ -204,7 +203,6 @@ export const MultipleChoices: Story = {
           id="option-3"
           label="Option 3"
           name="option-3"
-          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.optionC}
           action={action}
         />
@@ -220,6 +218,7 @@ export const SingleChoice: Story = {
     name: 'radio-input',
     value: 'option-1',
     feature: 'RADIO_INPUT',
+    helper: { label: 'Only one option to select' },
     isChecked: false,
     isBlocked: false,
     isDisabled: false,
@@ -258,7 +257,6 @@ export const SingleChoice: Story = {
           label="Option 1"
           name="option-1"
           value="option-1"
-          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.value === 'option-1'}
           action={action}
         />
@@ -268,7 +266,6 @@ export const SingleChoice: Story = {
           label="Option 2"
           name="option-2"
           value="option-2"
-          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.value === 'option-2'}
           action={action}
         />
@@ -278,7 +275,6 @@ export const SingleChoice: Story = {
           label="Option 3"
           name="option-3"
           value="option-3"
-          helper={{ label: 'This is a helper text' }}
           isChecked={argsState.value === 'option-3'}
           action={action}
         />

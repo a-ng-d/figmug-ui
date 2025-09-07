@@ -23,6 +23,9 @@ export const SingleSelection: Story = {
     selected: 'OPTION_1',
     alignment: 'LEFT',
     pin: 'NONE',
+    helper: {
+      label: 'Select an option',
+    },
     isNew: false,
     isBlocked: false,
     isDisabled: false,
@@ -95,9 +98,6 @@ export const SingleSelection: Story = {
           },
         ]}
         selected={argsState.selected}
-        helper={{
-          label: 'Select an option',
-        }}
       />
     )
   },
@@ -126,6 +126,9 @@ export const ManyOptionsSelection: Story = {
     selected: 'OPTION_1',
     alignment: 'LEFT',
     pin: 'NONE',
+    helper: {
+      label: 'Select an option',
+    },
     isNew: false,
     isBlocked: false,
     isDisabled: false,
@@ -234,6 +237,10 @@ export const MultipleSelection: Story = {
     options: { ...ListStories.FourOptionsList.args.options },
     selected: 'ANY',
     alignment: 'LEFT',
+    pin: 'NONE',
+    helper: {
+      label: 'Select several options',
+    },
     isNew: false,
     isDisabled: false,
   },
