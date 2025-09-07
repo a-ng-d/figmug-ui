@@ -29,6 +29,7 @@
 
   .select-menu__button {
     display: flex;
+    position: relative;
     align-items: center;
     gap: var(--dropdown-gap);
     outline: var(--dropdown-border-width) solid var(--dropdown-border-color);
@@ -39,7 +40,6 @@
     padding: var(--dropdown-padding);
     width: auto;
     height: var(--dropdown-height);
-    position: relative;
 
     &:hover {
       --dropdown-background-color: var(--dropdown-background-color-hover);
