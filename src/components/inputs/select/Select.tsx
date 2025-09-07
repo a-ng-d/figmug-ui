@@ -1,7 +1,7 @@
 import React from 'react'
 import Tooltip from '@components/tags/tooltip/Tooltip'
+import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
-import Icon from '@components/assets/icon/Icon'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import './select.scss'
 
@@ -35,7 +35,6 @@ export interface SelectProps {
 }
 
 export interface SelectStates {
-  isWarningVisible: boolean
   isTooltipVisible: boolean
 }
 
@@ -52,7 +51,6 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
   constructor(props: SelectProps) {
     super(props)
     this.state = {
-      isWarningVisible: false,
       isTooltipVisible: false,
     }
   }
@@ -60,7 +58,6 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
   // Templates
   Status = (type: 'checkbox' | 'radio' | 'switch') => {
     const { warning, preview, isBlocked, isNew } = this.props
-    const { isWarningVisible } = this.state
 
     if (warning || isBlocked || isNew)
       return (
@@ -71,29 +68,14 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
                 position: 'relative',
                 pointerEvents: 'auto',
               }}
-              onMouseEnter={() =>
-                this.setState({
-                  isWarningVisible: true,
-                })
-              }
-              onMouseLeave={() =>
-                this.setState({
-                  isWarningVisible: false,
-                })
-              }
             >
-              <Icon
-                type="PICTO"
+              <IconChip
+                iconType="PICTO"
                 iconName="warning"
+                text={warning.label}
+                pin={warning.pin}
+                type={warning.type}
               />
-              {isWarningVisible && (
-                <Tooltip
-                  pin={warning?.pin}
-                  type={warning?.type}
-                >
-                  {warning?.label}
-                </Tooltip>
-              )}
             </div>
           )}
           {(isBlocked || isNew) && (
