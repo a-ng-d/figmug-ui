@@ -553,6 +553,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
       helper,
       feature,
       isClearable,
+      isFlex,
       isFramed,
       isBlocked,
       isDisabled,
@@ -566,6 +567,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
           'input',
           'input--short-text',
           icon !== undefined && 'input--with-icon',
+          isFlex && 'input__field--flex',
           isBlocked && 'input--blocked',
         ])}
         role="group"
