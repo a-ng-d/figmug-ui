@@ -51,6 +51,18 @@
       border-radius: var(--input-color-chip-radius);
     }
 
+    @media (prefers-color-scheme: dark) {
+      &[type='color' i] {
+        color-scheme: dark;
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      &[type='color' i] {
+        color-scheme: light;
+      }
+    }
+
     &[type='color' i]:focus {
       --input-color-chip-border: var(--input-color-chip-border-focus);
     }
