@@ -1,4 +1,6 @@
 :root[data-theme='sketch'] {
+  --consent-background-color: var(--sketch-color-overlay-default);
+
   --consent-banner-gap: var(--size-pos-xxsmall);
   --consent-banner-padding: var(--size-pos-xxsmall) var(--size-pos-xsmall);
   --consent-banner-max_height: calc(100% - var(--size-pos-large));

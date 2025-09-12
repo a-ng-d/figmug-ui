@@ -13,6 +13,7 @@
   inset: 0 0 0 0;
   pointer-events: none;
   user-select: none;
+  background-color: var(--consent-background-color);
 
   .consent__banner {
     display: flex;
