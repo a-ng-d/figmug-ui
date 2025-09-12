@@ -40,7 +40,10 @@ const FormSample = () => {
           id="type-fullname"
           shouldFill
         >
-          <Input type="TEXT" />
+          <Input
+            type="TEXT"
+            isAutoFocus
+          />
         </FormItem>
       </div>
       <div className="dialog__form__item">
@@ -85,10 +88,12 @@ export const SingleMessage: Story = {
     actions: {
       primary: {
         label: 'Continue',
+        isAutofocus: true,
         action: fn(),
       },
       secondary: {
         label: 'Learn more',
+        isAutofocus: false,
         action: fn(),
       },
     },
@@ -141,6 +146,7 @@ export const MultipleMessage: Story = {
     actions: {
       primary: {
         label: 'Next',
+        isAutofocus: true,
         action: fn(),
       },
       secondary: {
@@ -180,7 +186,7 @@ export const Form: Story = {
   },
 }
 
-export const SimpleDialog: Story = {
+export const DeleteDialog: Story = {
   args: {
     title: 'Are you sure to delete?',
     actions: {
@@ -190,6 +196,7 @@ export const SimpleDialog: Story = {
       },
       secondary: {
         label: 'Cancel',
+        isAutofocus: true,
         action: fn(),
       },
     },

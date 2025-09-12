@@ -15,6 +15,7 @@ export interface PopInProps {
     primary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+      isAutofocus?: boolean
       feature?: string
       action: React.MouseEventHandler & React.KeyboardEventHandler
     }
@@ -22,12 +23,14 @@ export interface PopInProps {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
       feature?: string
+      isAutofocus?: boolean
       action: React.ReactEventHandler | (() => void)
     }
     secondary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
       feature?: string
+      isAutofocus?: boolean
       action: React.MouseEventHandler & React.KeyboardEventHandler
     }
   }
@@ -154,6 +157,11 @@ const PopIn = (props: PopInProps) => {
                     ? 'SECONDARY_ACTION'
                     : actions.secondary.feature
                 }
+                isAutofocus={
+                  actions.secondary.isAutofocus === undefined
+                    ? false
+                    : actions.secondary.isAutofocus
+                }
                 action={actions.secondary.action}
               />
             )}
@@ -168,6 +176,11 @@ const PopIn = (props: PopInProps) => {
                     ? 'DESTRUCTIVE_ACTION'
                     : actions.destructive.feature
                 }
+                isAutofocus={
+                  actions.destructive.isAutofocus === undefined
+                    ? false
+                    : actions.destructive.isAutofocus
+                }
                 action={actions.destructive.action}
               />
             )}
@@ -181,6 +194,11 @@ const PopIn = (props: PopInProps) => {
                   actions.primary.feature === undefined
                     ? 'PRIMARY_ACTION'
                     : actions.primary.feature
+                }
+                isAutofocus={
+                  actions.primary.isAutofocus === undefined
+                    ? false
+                    : actions.primary.isAutofocus
                 }
                 action={actions.primary.action}
               />

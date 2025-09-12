@@ -162,6 +162,7 @@ export default class Consent extends React.Component<
                 label={consentActions.consent.label}
                 action={this.onConsentAll}
                 aria-label={consentActions.consent.label}
+                isAutofocus
               />
               {this.props.canBeClosed && (
                 <Button
@@ -364,6 +365,7 @@ export default class Consent extends React.Component<
                 label={consentActions.save.label}
                 action={this.onPartialConsent}
                 aria-label={consentActions.save.label}
+                isAutofocus
               />
               {this.props.canBeClosed && (
                 <Button
@@ -391,14 +393,14 @@ export default class Consent extends React.Component<
 
     if (isVendorsOpen)
       return (
-        <div className="consent">
+        <dialog className="consent">
           <this.DetailedVendorsList />
-        </div>
+        </dialog>
       )
     return (
-      <div className="consent">
+      <dialog className="consent">
         <this.WelcomeScreen />
-      </div>
+      </dialog>
     )
   }
 }

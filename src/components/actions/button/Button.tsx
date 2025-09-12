@@ -41,6 +41,7 @@ export interface ButtonProps {
   feature?: string
   hasMultipleActions?: boolean
   isLink?: boolean
+  isAutofocus?: boolean
   isLoading?: boolean
   isBlocked?: boolean
   isDisabled?: boolean
@@ -59,8 +60,9 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
   static defaultProps: Partial<ButtonProps> = {
     size: 'default',
     state: 'default',
-    isLink: false,
     hasMultipleActions: false,
+    isLink: false,
+    isAutofocus: false,
     isLoading: false,
     isBlocked: false,
     isDisabled: false,
@@ -133,6 +135,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           aria-label={label}
           aria-disabled={isDisabled || isBlocked}
           aria-busy={isLoading}
+          autoFocus={this.props.isAutofocus}
           onKeyDown={(e) => {
             if (
               (e.key === ' ' || e.key === 'Enter') &&
@@ -198,6 +201,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           `button--${size}`,
         ])}
         data-feature={feature}
+        autoFocus={this.props.isAutofocus}
         ref={this.buttonRef}
         aria-label={label}
         tabIndex={0}
@@ -244,6 +248,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           isLoading && 'button--loading',
         ])}
         disabled={isDisabled || isBlocked}
+        autoFocus={this.props.isAutofocus}
         aria-label={helper?.label || icon}
         aria-disabled={isDisabled || isBlocked}
         aria-pressed={state === 'selected'}
