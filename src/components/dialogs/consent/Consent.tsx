@@ -162,7 +162,6 @@ export default class Consent extends React.Component<
                 label={consentActions.consent.label}
                 action={this.onConsentAll}
                 aria-label={consentActions.consent.label}
-                isAutofocus
               />
               {this.props.canBeClosed && (
                 <Button
