@@ -52,20 +52,26 @@ export const ColorPicker: Story = {
       value: string
     }>()
 
-    const onChange = (
-      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
+    const onBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
       updateArgs({
         value: e?.target.value,
       })
-      args.onChange?.(e)
+      args.onBlur?.(e)
+    }
+
+    const onPick = (e: React.ChangeEvent<HTMLInputElement>) => {
+      updateArgs({
+        value: e?.target.value,
+      })
+      args.onPick?.(e)
     }
 
     return (
       <Input
         {...args}
         value={argsState.value}
-        onChange={onChange}
+        onBlur={onBlur}
+        onPick={onPick}
       />
     )
   },
@@ -105,13 +111,13 @@ export const NumericStepper: Story = {
       value: string
     }>()
 
-    const onChange = (
+    const onBlur = (
       e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
       updateArgs({
         value: e?.target.value,
       })
-      args.onChange?.(e)
+      args.onBlur?.(e)
     }
 
     const onSlide = (
@@ -120,14 +126,14 @@ export const NumericStepper: Story = {
       updateArgs({
         value: e?.target.value,
       })
-      args.onChange?.(e)
+      args.onSlide?.(e)
     }
 
     return (
       <Input
         {...args}
         value={argsState.value}
-        onChange={onChange}
+        onBlur={onBlur}
         onSlide={onSlide}
       />
     )
@@ -168,20 +174,20 @@ export const ShortText: Story = {
       value: string
     }>()
 
-    const onChange = (
+    const onBlur = (
       e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
       updateArgs({
         value: e?.target.value,
       })
-      args.onChange?.(e)
+      args.onBlur?.(e)
     }
 
     return (
       <Input
         {...args}
         value={argsState.value}
-        onChange={onChange}
+        onBlur={onBlur}
       />
     )
   },
@@ -219,20 +225,20 @@ export const LongText: Story = {
       value: string
     }>()
 
-    const onChange = (
+    const onBlur = (
       e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
       updateArgs({
         value: e?.target.value,
       })
-      args.onChange?.(e)
+      args.onBlur?.(e)
     }
 
     return (
       <Input
         {...args}
         value={argsState.value}
-        onChange={onChange}
+        onBlur={onBlur}
       />
     )
   },
@@ -259,27 +265,5 @@ export const CodeSnippet: Story = {
     min: { control: false },
     max: { control: false },
     step: { control: false },
-  },
-  render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      value: string
-    }>()
-
-    const onChange = (
-      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
-      updateArgs({
-        value: e?.target.value,
-      })
-      args.onChange?.(e)
-    }
-
-    return (
-      <Input
-        {...args}
-        value={argsState.value}
-        onChange={onChange}
-      />
-    )
   },
 }
