@@ -209,6 +209,11 @@ export default class Input extends React.Component<InputProps, InputStates> {
         })
       } else transformedValue = inputValue
 
+      this.setState({
+        inputValue: transformedValue ?? inputValue,
+        lastValidValue: transformedValue ?? inputValue,
+      })
+
       if (
         (transformedValue !== lastValidValue && onBlur) ||
         (shouldBlur && onBlur)
@@ -219,32 +224,29 @@ export default class Input extends React.Component<InputProps, InputStates> {
           currentTarget: { ...e.currentTarget, value: transformedValue },
         } as React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>)
 
-        this.setState({
-          inputValue: transformedValue ?? inputValue,
-          lastValidValue: transformedValue ?? inputValue,
-        })
+        return
       }
-
-      return
     }
 
     if (type === 'COLOR') {
       const transformedValue = this.transformColorCode(e.target.value)
+      console.log(transformedValue, lastValidColorValue)
+
+      this.setState({
+        inputValue: transformedValue,
+        colorValue: transformedValue,
+        lastValidColorValue: transformedValue,
+      })
 
       if (
-        (transformedValue !== lastValidColorValue && onBlur) ||
-        (shouldBlur && onBlur)
+        (transformedValue !== lastValidColorValue && onBlur !== undefined) ||
+        (shouldBlur && onBlur !== undefined)
       ) {
         onBlur({
           ...e,
           target: { ...e.target, value: transformedValue },
           currentTarget: { ...e.currentTarget, value: transformedValue },
         } as React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>)
-
-        this.setState({
-          colorValue: transformedValue,
-          lastValidColorValue: transformedValue,
-        })
 
         return
       }
@@ -262,12 +264,12 @@ export default class Input extends React.Component<InputProps, InputStates> {
         return
       }
 
+      this.setState({
+        lastValidValue: inputValue,
+      })
+
       if ((inputValue !== lastValidValue && onBlur) || (shouldBlur && onBlur)) {
         onBlur(e)
-
-        this.setState({
-          lastValidValue: inputValue,
-        })
 
         return
       }
