@@ -1,11 +1,7 @@
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import React from 'react'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import DraggableItem from '../draggable-item/DraggableItem'
 import './sortable-list.scss'
-
-export interface SortableListRef {
-  autoSelectElement: (id: string) => void
-}
 
 interface SelectedColor {
   id: string | undefined
@@ -50,10 +46,9 @@ export interface SortableListStates {
   hasTopBorder: boolean
 }
 
-class SortableListComponent<T extends DefaultData> extends React.Component<
-  SortableListProps<T>,
-  SortableListStates
-> {
+export default class SortableList<
+  T extends DefaultData,
+> extends React.Component<SortableListProps<T>, SortableListStates> {
   private listRef: React.RefObject<HTMLUListElement>
 
   static defaultProps: Partial<SortableListProps> = {
@@ -215,29 +210,6 @@ class SortableListComponent<T extends DefaultData> extends React.Component<
     else this.setState({ hasTopBorder: false })
   }
 
-  autoSelectElement = (id: string) => {
-    this.setState(
-      {
-        selectedElement: {
-          id: id,
-          position: this.state.selectedElement.position,
-        },
-      },
-      () => {
-        if (this.listRef.current) {
-          const selectedDomElement = this.listRef.current.querySelector(
-            `[data-id="${id}"]`
-          )
-          if (selectedDomElement)
-            selectedDomElement.scrollIntoView({
-              behavior: 'smooth',
-              block: 'nearest',
-            })
-        }
-      }
-    )
-  }
-
   // Render
   render() {
     const {
@@ -310,27 +282,3 @@ class SortableListComponent<T extends DefaultData> extends React.Component<
     )
   }
 }
-
-const SortableList = forwardRef(
-  <T extends DefaultData>(
-    props: SortableListProps<T>,
-    ref: React.ForwardedRef<SortableListRef>
-  ) => {
-    const componentRef = useRef<SortableListComponent<T>>(null)
-
-    useImperativeHandle(ref, () => ({
-      autoSelectElement: (id: string) => {
-        componentRef.current?.autoSelectElement(id)
-      },
-    }))
-
-    return (
-      <SortableListComponent
-        ref={componentRef}
-        {...props}
-      />
-    )
-  }
-)
-
-export default SortableList
