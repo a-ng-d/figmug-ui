@@ -210,6 +210,15 @@ export default class SortableList<
     else this.setState({ hasTopBorder: false })
   }
 
+  autoSelectElement = (id: string) => {
+    this.setState({
+      selectedElement: {
+        id: id,
+        position: this.state.selectedElement.position,
+      },
+    })
+  }
+
   // Render
   render() {
     const {
