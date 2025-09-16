@@ -223,14 +223,28 @@ export default class Input extends React.Component<InputProps, InputStates> {
           target: {
             ...e.target,
             value: transformedValue,
-            // Préserver les méthodes DOM natives
             closest: e.target.closest?.bind(e.target),
             getAttribute: e.target.getAttribute?.bind(e.target),
             querySelector: e.target.querySelector?.bind(e.target),
+            querySelectorAll: e.target.querySelectorAll?.bind(e.target),
+            matches: e.target.matches?.bind(e.target),
+            contains: e.target.contains?.bind(e.target),
+            classList: e.target.classList,
+            dataset: e.target.dataset,
           },
           currentTarget: {
             ...e.currentTarget,
             value: transformedValue,
+            closest: e.currentTarget.closest?.bind(e.currentTarget),
+            getAttribute: e.currentTarget.getAttribute?.bind(e.currentTarget),
+            querySelector: e.currentTarget.querySelector?.bind(e.currentTarget),
+            querySelectorAll: e.currentTarget.querySelectorAll?.bind(
+              e.currentTarget
+            ),
+            matches: e.currentTarget.matches?.bind(e.currentTarget),
+            contains: e.currentTarget.contains?.bind(e.currentTarget),
+            classList: e.currentTarget.classList,
+            dataset: e.currentTarget.dataset,
           },
         }
 
@@ -265,10 +279,25 @@ export default class Input extends React.Component<InputProps, InputStates> {
             closest: e.target.closest?.bind(e.target),
             getAttribute: e.target.getAttribute?.bind(e.target),
             querySelector: e.target.querySelector?.bind(e.target),
+            querySelectorAll: e.target.querySelectorAll?.bind(e.target),
+            matches: e.target.matches?.bind(e.target),
+            contains: e.target.contains?.bind(e.target),
+            classList: e.target.classList,
+            dataset: e.target.dataset,
           },
           currentTarget: {
             ...e.currentTarget,
             value: transformedValue,
+            closest: e.currentTarget.closest?.bind(e.currentTarget),
+            getAttribute: e.currentTarget.getAttribute?.bind(e.currentTarget),
+            querySelector: e.currentTarget.querySelector?.bind(e.currentTarget),
+            querySelectorAll: e.currentTarget.querySelectorAll?.bind(
+              e.currentTarget
+            ),
+            matches: e.currentTarget.matches?.bind(e.currentTarget),
+            contains: e.currentTarget.contains?.bind(e.currentTarget),
+            classList: e.currentTarget.classList,
+            dataset: e.currentTarget.dataset,
           },
         }
 
