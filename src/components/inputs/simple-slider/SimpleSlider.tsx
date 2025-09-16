@@ -11,6 +11,7 @@ export interface SimpleSliderProps {
   value: number
   min: number
   max: number
+  step?: number
   colors: {
     min: string
     max: string
@@ -42,6 +43,7 @@ export default class SimpleSlider extends React.Component<
     isBlocked: false,
     isDisabled: false,
     isNew: false,
+    step: 1,
   }
 
   constructor(props: SimpleSliderProps) {
@@ -64,12 +66,17 @@ export default class SimpleSlider extends React.Component<
       | React.FocusEvent<HTMLInputElement>
       | React.KeyboardEvent<HTMLInputElement>
   ) => {
-    const { min, max, feature, onChange } = this.props
+    const { min, max, feature, onChange, step = 1 } = this.props
     const target = e.target as HTMLInputElement
-    if (target.value !== '')
-      if (parseFloat(target.value) < min) onChange(feature, 'TYPED', min)
-      else if (parseFloat(target.value) > max) onChange(feature, 'TYPED', max)
-      else onChange(feature, 'TYPED', parseFloat(target.value))
+    if (target.value !== '') {
+      const parsedValue = parseFloat(target.value)
+      if (parsedValue < min) onChange(feature, 'TYPED', min)
+      else if (parsedValue > max) onChange(feature, 'TYPED', max)
+      else {
+        const roundedValue = this.roundToStep(parsedValue, step)
+        onChange(feature, 'TYPED', roundedValue)
+      }
+    }
   }
 
   // Direct Actions
@@ -91,6 +98,10 @@ export default class SimpleSlider extends React.Component<
     document.onmouseup = () => this.onRelease(stop)
   }
 
+  roundToStep = (value: number, step: number): number => {
+    return Math.round(value / step) * step
+  }
+
   onSlide = (
     e: MouseEvent,
     slider: HTMLElement,
@@ -98,7 +109,7 @@ export default class SimpleSlider extends React.Component<
     shift: number,
     rangeWidth: number
   ) => {
-    const { min, max, feature, onChange } = this.props
+    const { min, max, feature, onChange, step = 0.1 } = this.props
     const sliderPadding: number = parseFloat(
       window.getComputedStyle(slider, null).getPropertyValue('padding-left')
     )
@@ -111,7 +122,13 @@ export default class SimpleSlider extends React.Component<
     else if (offset >= limitMax) offset = limitMax
 
     stop.style.left = doMap(offset, 0, rangeWidth, 0, 100).toFixed(1) + '%'
-    this.value = Math.floor(doMap(offset, 0, rangeWidth, min, max))
+
+    const rawValue = doMap(offset, 0, rangeWidth, min, max)
+
+    this.value = this.roundToStep(rawValue, step)
+
+    if (this.value < min) this.value = min
+    if (this.value > max) this.value = max
 
     this.setState({
       isTooltipDisplay: true,
@@ -211,24 +228,24 @@ export default class SimpleSlider extends React.Component<
             isBlocked={isBlocked}
             isDisabled={isDisabled}
             onShiftRight={(e) => {
-              if (e.shiftKey)
-                onChange(
-                  feature,
-                  'SHIFTED',
-                  value + 10 > max ? max : value + 10
-                )
-              else
-                onChange(feature, 'SHIFTED', value + 1 > max ? max : value + 1)
+              const { step = 1 } = this.props
+              if (e.shiftKey) {
+                const newValue = this.roundToStep(value + 10, step)
+                onChange(feature, 'SHIFTED', newValue > max ? max : newValue)
+              } else {
+                const newValue = this.roundToStep(value + step, step)
+                onChange(feature, 'SHIFTED', newValue > max ? max : newValue)
+              }
             }}
             onShiftLeft={(e) => {
-              if (e.shiftKey)
-                onChange(
-                  feature,
-                  'SHIFTED',
-                  value - 10 < min ? min : value - 10
-                )
-              else
-                onChange(feature, 'SHIFTED', value - 1 < min ? min : value - 1)
+              const { step = 1 } = this.props
+              if (e.shiftKey) {
+                const newValue = this.roundToStep(value - 10, step)
+                onChange(feature, 'SHIFTED', newValue < min ? min : newValue)
+              } else {
+                const newValue = this.roundToStep(value - step, step)
+                onChange(feature, 'SHIFTED', newValue < min ? min : newValue)
+              }
             }}
             onMouseDown={(e: React.MouseEvent<HTMLElement>) => {
               this.onGrab(e)

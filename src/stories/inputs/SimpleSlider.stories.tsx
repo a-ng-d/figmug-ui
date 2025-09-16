@@ -33,6 +33,7 @@ export const AgeSelect: Story = {
     value: 25,
     min: 10,
     max: 90,
+    step: 1,
     colors: {
       min: 'var(--figma-color-bg-tertiary)',
       max: 'var(--figma-color-bg-tertiary)',
