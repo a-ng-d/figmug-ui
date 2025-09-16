@@ -27,13 +27,13 @@ export interface ActionsListStates {
   listScrollOffset: number
   listScrollAmount: number
   listClientHeight?: number
+  shift: number
+  isVisible: boolean
 }
 
-export default class ActionsList extends React.Component<
-  ActionsListProps,
-  ActionsListStates
-> {
+export default class ActionsList extends React.Component<ActionsListProps, ActionsListStates> {
   private scrollInterval: number | null
+  private subMenuContainerRef: React.RefObject<HTMLDivElement>
 
   static defaultProps: Partial<ActionsListProps> = {
     direction: 'RIGHT',
@@ -48,11 +48,17 @@ export default class ActionsList extends React.Component<
       listScrollOffset: 0,
       listScrollAmount: 1,
       listClientHeight: 1,
+      shift: 0,
+      isVisible: true,
     }
     this.scrollInterval = null
+    this.subMenuContainerRef = React.createRef<HTMLDivElement>()
   }
 
-  componentDidUpdate(prevProps: Readonly<ActionsListProps>) {
+  componentDidUpdate(
+    prevProps: Readonly<ActionsListProps>,
+    prevState: Readonly<ActionsListStates>
+  ) {
     const { shouldScroll } = this.props
     const list = document.getElementsByClassName(
       'select-menu__menu'
@@ -64,6 +70,19 @@ export default class ActionsList extends React.Component<
         listScrollAmount: list.scrollHeight - list.clientHeight,
         listClientHeight: list.clientHeight,
       })
+
+    if (prevState.openedGroup !== this.state.openedGroup) {
+      const subMenuElement = this.subMenuContainerRef.current
+      if (subMenuElement) {
+        const rect = subMenuElement.getBoundingClientRect()
+        if (rect.x < 0) this.setState({ shift: -rect.x + 8 })
+        if (rect.x + rect.width > window.innerWidth)
+          this.setState({
+            shift: window.innerWidth - rect.x - rect.width - 8,
+          })
+        this.setState({ isVisible: true })
+      }
+    }
   }
 
   // Direct Actions
@@ -108,16 +127,25 @@ export default class ActionsList extends React.Component<
   // Template
   SubMenu = (options: Array<DropdownOption> | undefined) => {
     const { subMenuRef } = this.props
+    const { shift, isVisible } = this.state
 
     return (
       <div
         className="select-menu__submenu"
         role="menu"
+        style={{
+          visibility: isVisible ? 'visible' : 'hidden',
+        }}
+        aria-hidden={!isVisible}
+        ref={this.subMenuContainerRef}
       >
         <ul
           className="select-menu__menu select-menu__menu--active"
           ref={subMenuRef}
           role="menu"
+          style={{
+            transform: `translateX(${shift}px)`,
+          }}
         >
           {options?.map((option, index) => {
             const isActive =
@@ -261,6 +289,9 @@ export default class ActionsList extends React.Component<
           'select-menu__item',
           option.isBlocked && ' select-menu__item--blocked',
         ])}
+        style={{
+          zIndex: openedGroup === option.value ? 2 : 'auto',
+        }}
         data-is-blocked={option.isBlocked}
         data-role={'GROUP'}
         tabIndex={option.isBlocked ? -1 : 0}
@@ -299,10 +330,7 @@ export default class ActionsList extends React.Component<
             iconName="caret-right"
           />
         </span>
-        {(() => {
-          if (openedGroup === option.value) return this.SubMenu(option.children)
-          return null
-        })()}
+        {openedGroup === option.value && this.SubMenu(option.children)}
       </li>
     )
   }
