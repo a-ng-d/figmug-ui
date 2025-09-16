@@ -218,28 +218,41 @@ export default class Input extends React.Component<InputProps, InputStates> {
         (transformedValue !== lastValidValue && onBlur) ||
         (shouldBlur && onBlur)
       ) {
-        const target = e.target
-        const currentTarget = e.currentTarget
+        const nativeEvent = e.nativeEvent
 
-        const syntheticEvent = Object.create(e, {
-          target: {
-            get: () =>
-              Object.create(target, {
-                value: { value: transformedValue },
-              }),
+        const targetWrapper = {
+          ...e.target,
+          get value() {
+            return transformedValue
           },
-          currentTarget: {
-            get: () =>
-              Object.create(currentTarget, {
-                value: { value: transformedValue },
-              }),
+        }
+
+        const currentTargetWrapper = {
+          ...e.currentTarget,
+          get value() {
+            return transformedValue
           },
-        })
+        }
+
+        const newEvent = {
+          ...e,
+          nativeEvent,
+          target: targetWrapper,
+          currentTarget: currentTargetWrapper,
+          preventDefault: e.preventDefault.bind(e),
+          stopPropagation: e.stopPropagation.bind(e),
+          persist: e.persist ? e.persist.bind(e) : undefined,
+          type: e.type,
+          bubbles: e.bubbles,
+          cancelable: e.cancelable,
+          defaultPrevented: e.defaultPrevented,
+          eventPhase: e.eventPhase,
+          isTrusted: e.isTrusted,
+          timeStamp: e.timeStamp,
+        }
 
         onBlur(
-          syntheticEvent as React.FocusEvent<
-            HTMLInputElement | HTMLTextAreaElement
-          >
+          newEvent as React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
         )
         return
       }
@@ -258,28 +271,41 @@ export default class Input extends React.Component<InputProps, InputStates> {
         (transformedValue !== lastValidColorValue && onBlur !== undefined) ||
         (shouldBlur && onBlur !== undefined)
       ) {
-        const target = e.target
-        const currentTarget = e.currentTarget
+        const nativeEvent = e.nativeEvent
 
-        const syntheticEvent = Object.create(e, {
-          target: {
-            get: () =>
-              Object.create(target, {
-                value: { value: transformedValue },
-              }),
+        const targetWrapper = {
+          ...e.target,
+          get value() {
+            return transformedValue
           },
-          currentTarget: {
-            get: () =>
-              Object.create(currentTarget, {
-                value: { value: transformedValue },
-              }),
+        }
+
+        const currentTargetWrapper = {
+          ...e.currentTarget,
+          get value() {
+            return transformedValue
           },
-        })
+        }
+
+        const newEvent = {
+          ...e,
+          nativeEvent,
+          target: targetWrapper,
+          currentTarget: currentTargetWrapper,
+          preventDefault: e.preventDefault.bind(e),
+          stopPropagation: e.stopPropagation.bind(e),
+          persist: e.persist ? e.persist.bind(e) : undefined,
+          type: e.type,
+          bubbles: e.bubbles,
+          cancelable: e.cancelable,
+          defaultPrevented: e.defaultPrevented,
+          eventPhase: e.eventPhase,
+          isTrusted: e.isTrusted,
+          timeStamp: e.timeStamp,
+        }
 
         onBlur(
-          syntheticEvent as React.FocusEvent<
-            HTMLInputElement | HTMLTextAreaElement
-          >
+          newEvent as React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
         )
         return
       }
