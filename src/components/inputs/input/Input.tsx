@@ -218,19 +218,35 @@ export default class Input extends React.Component<InputProps, InputStates> {
         (transformedValue !== lastValidValue && onBlur) ||
         (shouldBlur && onBlur)
       ) {
-        onBlur({
-          ...e,
-          target: { ...e.target, value: transformedValue },
-          currentTarget: { ...e.currentTarget, value: transformedValue },
-        } as React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>)
+        const target = e.target
+        const currentTarget = e.currentTarget
 
+        const syntheticEvent = Object.create(e, {
+          target: {
+            get: () =>
+              Object.create(target, {
+                value: { value: transformedValue },
+              }),
+          },
+          currentTarget: {
+            get: () =>
+              Object.create(currentTarget, {
+                value: { value: transformedValue },
+              }),
+          },
+        })
+
+        onBlur(
+          syntheticEvent as React.FocusEvent<
+            HTMLInputElement | HTMLTextAreaElement
+          >
+        )
         return
       }
     }
 
     if (type === 'COLOR') {
       const transformedValue = this.transformColorCode(e.target.value)
-      console.log(transformedValue, lastValidColorValue)
 
       this.setState({
         inputValue: transformedValue,
@@ -242,12 +258,29 @@ export default class Input extends React.Component<InputProps, InputStates> {
         (transformedValue !== lastValidColorValue && onBlur !== undefined) ||
         (shouldBlur && onBlur !== undefined)
       ) {
-        onBlur({
-          ...e,
-          target: { ...e.target, value: transformedValue },
-          currentTarget: { ...e.currentTarget, value: transformedValue },
-        } as React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>)
+        const target = e.target
+        const currentTarget = e.currentTarget
 
+        const syntheticEvent = Object.create(e, {
+          target: {
+            get: () =>
+              Object.create(target, {
+                value: { value: transformedValue },
+              }),
+          },
+          currentTarget: {
+            get: () =>
+              Object.create(currentTarget, {
+                value: { value: transformedValue },
+              }),
+          },
+        })
+
+        onBlur(
+          syntheticEvent as React.FocusEvent<
+            HTMLInputElement | HTMLTextAreaElement
+          >
+        )
         return
       }
     }
