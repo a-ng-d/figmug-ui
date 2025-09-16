@@ -55,11 +55,16 @@ export default class ActionsList extends React.Component<ActionsListProps, Actio
     this.subMenuContainerRef = React.createRef<HTMLDivElement>()
   }
 
+  componentDidMount() {
+    this.focusFirstMenuItem()
+  }
+
   componentDidUpdate(
     prevProps: Readonly<ActionsListProps>,
     prevState: Readonly<ActionsListStates>
   ) {
     const { shouldScroll } = this.props
+    const { openedGroup } = this.state
     const list = document.getElementsByClassName(
       'select-menu__menu'
     )[0] as HTMLElement
@@ -71,7 +76,7 @@ export default class ActionsList extends React.Component<ActionsListProps, Actio
         listClientHeight: list.clientHeight,
       })
 
-    if (prevState.openedGroup !== this.state.openedGroup) {
+    if (prevState.openedGroup !== openedGroup) {
       const subMenuElement = this.subMenuContainerRef.current
       if (subMenuElement) {
         const rect = subMenuElement.getBoundingClientRect()
@@ -81,11 +86,37 @@ export default class ActionsList extends React.Component<ActionsListProps, Actio
             shift: window.innerWidth - rect.x - rect.width - 8,
           })
         this.setState({ isVisible: true })
+
+        if (openedGroup !== 'EMPTY') this.focusFirstSubMenuItem()
       }
     }
   }
 
   // Direct Actions
+  focusFirstMenuItem = () => {
+    setTimeout(() => {
+      const menuElement = this.props.menuRef?.current
+      if (menuElement) {
+        const firstItem = menuElement.querySelector(
+          'li[tabindex="0"]:not([data-is-blocked="true"])'
+        ) as HTMLElement
+        if (firstItem) firstItem.focus()
+      }
+    }, 0)
+  }
+
+  focusFirstSubMenuItem = () => {
+    setTimeout(() => {
+      const subMenuElement = this.props.subMenuRef?.current
+      if (subMenuElement) {
+        const firstItem = subMenuElement.querySelector(
+          'li[tabindex="0"]:not([data-is-blocked="true"])'
+        ) as HTMLElement
+        if (firstItem) firstItem.focus()
+      }
+    }, 0)
+  }
+
   onScroll = (e: React.UIEvent<HTMLUListElement>) => {
     const target = e.target as HTMLElement
     this.setState({
