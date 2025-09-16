@@ -96,6 +96,7 @@ export const FiveTabs: Story = {
         label: 'Section 3',
         id: 'SECTION_3',
         isUpdated: false,
+        isNew: true,
       },
       {
         label: 'Section 4',

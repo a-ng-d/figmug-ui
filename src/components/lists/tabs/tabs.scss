@@ -87,7 +87,7 @@
     }
   }
 
-  & .tabs__tab--new:after {
+  & .tabs__tab--updated:after {
     position: absolute;
     inset: var(--tabs-tab-notification-inset);
     outline: var(--tabs-tab-notification-border-width) solid

@@ -1,6 +1,7 @@
 import './tabs.scss'
 import { IconList } from '@tps/icon.types'
 import texts from '@styles/texts/texts.module.scss'
+import Chip from '@components/tags/chip/Chip'
 import Icon from '@components/assets/icon/Icon'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 
@@ -13,6 +14,7 @@ export interface TabsProps {
       name: IconList
     }
     isUpdated: boolean
+    isNew?: boolean
   }>
   active: string
   direction?: 'HORIZONTAL' | 'VERTICAL'
@@ -46,7 +48,7 @@ const Tabs = (props: TabsProps) => {
             className={doClassnames([
               'tabs__tab',
               active === tab.id && 'tabs__tab--active',
-              tab.isUpdated && 'tabs__tab--new',
+              tab.isUpdated && 'tabs__tab--updated',
               tab.icon !== undefined && 'tabs__tab--with-icon',
               isFlex && 'tabs__tab--flex',
             ])}
@@ -73,6 +75,7 @@ const Tabs = (props: TabsProps) => {
             >
               {tab.label}
             </span>
+            {tab.isNew && <Chip>New</Chip>}
           </div>
         ))}
       </div>
