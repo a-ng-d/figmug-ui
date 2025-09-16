@@ -139,7 +139,7 @@ export default class SimpleSlider extends React.Component<
 
   // Templates
   Status = () => {
-    const { warning, isBlocked, isNew } = this.props
+    const { warning, isBlocked, isNew, onUnblock } = this.props
 
     if (warning || isBlocked || isNew)
       return (
@@ -156,7 +156,7 @@ export default class SimpleSlider extends React.Component<
           {(isBlocked || isNew) && (
             <Chip
               isSolo
-              action={isBlocked ? this.props.onUnblock : undefined}
+              action={isBlocked ? onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>

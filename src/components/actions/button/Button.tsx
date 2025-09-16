@@ -78,7 +78,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
 
   // Templates
   Status = () => {
-    const { warning, preview, isBlocked, isNew } = this.props
+    const { warning, preview, isBlocked, isNew, onUnblock } = this.props
 
     if (warning || isBlocked || isNew)
       return (
@@ -96,7 +96,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
             <Chip
               preview={preview}
               isSolo
-              action={isBlocked ? this.props.onUnblock : undefined}
+              action={isBlocked ? onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>
@@ -113,6 +113,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
       isBlocked,
       feature,
       hasMultipleActions,
+      isAutofocus,
       isLoading,
       isDisabled,
       action,
@@ -135,7 +136,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           aria-label={label}
           aria-disabled={isDisabled || isBlocked}
           aria-busy={isLoading}
-          autoFocus={this.props.isAutofocus}
+          autoFocus={isAutofocus}
           onKeyDown={(e) => {
             if (
               (e.key === ' ' || e.key === 'Enter') &&
@@ -190,7 +191,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
   }
 
   LinkButton = () => {
-    const { type, size, feature, label, url } = this.props
+    const { type, size, feature, label, url, isAutofocus } = this.props
 
     return (
       <button
@@ -201,7 +202,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           `button--${size}`,
         ])}
         data-feature={feature}
-        autoFocus={this.props.isAutofocus}
+        autoFocus={isAutofocus}
         ref={this.buttonRef}
         aria-label={label}
         tabIndex={0}
@@ -228,6 +229,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
       feature,
       state,
       helper,
+      isAutofocus,
       isLoading,
       isDisabled,
       isBlocked,
@@ -248,7 +250,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           isLoading && 'button--loading',
         ])}
         disabled={isDisabled || isBlocked}
-        autoFocus={this.props.isAutofocus}
+        autoFocus={isAutofocus}
         aria-label={helper?.label || icon}
         aria-disabled={isDisabled || isBlocked}
         aria-pressed={state === 'selected'}

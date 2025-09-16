@@ -195,7 +195,7 @@ export default class Dropdown extends React.Component<
 
   // Template
   Status = () => {
-    const { warning, preview, isBlocked, isNew } = this.props
+    const { warning, preview, isBlocked, isNew, onUnblock } = this.props
 
     if (warning || isBlocked || isNew)
       return (
@@ -213,7 +213,7 @@ export default class Dropdown extends React.Component<
             <Chip
               preview={preview}
               isSolo
-              action={isBlocked ? this.props.onUnblock : undefined}
+              action={isBlocked ? onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>

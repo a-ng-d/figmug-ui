@@ -106,8 +106,15 @@ export default class Consent extends React.Component<
 
   // Templates
   WelcomeScreen = () => {
-    const { welcomeMessage, privacyPolicy, moreDetailsLabel, consentActions } =
-      this.props
+    const {
+      welcomeMessage,
+      privacyPolicy,
+      moreDetailsLabel,
+      consentActions,
+      canBeClosed,
+      closeLabel,
+      onClose,
+    } = this.props
 
     const { isVendorsOpen } = this.state
 
@@ -163,16 +170,16 @@ export default class Consent extends React.Component<
                 action={this.onConsentAll}
                 aria-label={consentActions.consent.label}
               />
-              {this.props.canBeClosed && (
+              {canBeClosed && (
                 <Button
                   type="icon"
                   icon="close"
                   helper={
-                    this.props.closeLabel !== undefined
-                      ? { label: this.props.closeLabel, pin: 'TOP' }
+                    closeLabel !== undefined
+                      ? { label: closeLabel, pin: 'TOP' }
                       : undefined
                   }
-                  action={this.props.onClose}
+                  action={onClose}
                 />
               )}
             </div>
@@ -190,6 +197,9 @@ export default class Consent extends React.Component<
       validVendor,
       vendorsList,
       consentActions,
+      canBeClosed,
+      closeLabel,
+      onClose,
     } = this.props
 
     const { isVendorsOpen, vendorsConsent } = this.state
@@ -366,16 +376,16 @@ export default class Consent extends React.Component<
                 aria-label={consentActions.save.label}
                 isAutofocus
               />
-              {this.props.canBeClosed && (
+              {canBeClosed && (
                 <Button
                   type="icon"
                   icon="close"
                   helper={
-                    this.props.closeLabel !== undefined
-                      ? { label: this.props.closeLabel, pin: 'TOP' }
+                    closeLabel !== undefined
+                      ? { label: closeLabel, pin: 'TOP' }
                       : undefined
                   }
-                  action={this.props.onClose}
+                  action={onClose}
                 />
               )}
             </div>

@@ -120,6 +120,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
       max,
       offset,
       helper,
+      style,
       isDisplayed,
       isBlocked,
       isDisabled,
@@ -138,7 +139,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
         style={{
           left: `${offset}%`,
           zIndex: isTooltipOpen ? '2' : '1',
-          ...this.props.style,
+          ...style,
         }}
         data-id={id}
         data-value={value}

@@ -58,7 +58,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
 
   // Templates
   Status = (type: 'checkbox' | 'radio' | 'switch') => {
-    const { warning, preview, isBlocked, isNew } = this.props
+    const { warning, preview, isBlocked, isNew, onUnblock } = this.props
 
     if (warning || isBlocked || isNew)
       return (
@@ -83,7 +83,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
             <Chip
               preview={preview}
               isSolo
-              action={isBlocked ? this.props.onUnblock : undefined}
+              action={isBlocked ? onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>
