@@ -112,7 +112,10 @@ const meta: Meta<typeof Button> = {
   parameters: {
     layout: 'centered',
   },
-  args: { action: mock },
+  args: { isAutofocus: false, action: mock },
+  argTypes: {
+    action: { control: false },
+  },
 } satisfies Meta<typeof Button>
 
 export default meta
