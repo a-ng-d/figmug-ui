@@ -58,8 +58,10 @@ export interface InputProps {
 
 export interface InputStates {
   inputValue: string
-  isTooltipVisible: boolean
   lastValidValue: string
+  lastValidColorValue: string
+  colorValue: string
+  isTooltipVisible: boolean
 }
 
 export default class Input extends React.Component<InputProps, InputStates> {
@@ -87,8 +89,10 @@ export default class Input extends React.Component<InputProps, InputStates> {
     super(props)
     this.state = {
       inputValue: props.value,
-      isTooltipVisible: false,
       lastValidValue: props.value,
+      colorValue: props.value,
+      lastValidColorValue: props.value,
+      isTooltipVisible: false,
     }
     this.startValue = props.value
     this.inputRef = React.createRef()
@@ -134,11 +138,64 @@ export default class Input extends React.Component<InputProps, InputStates> {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { onChange } = this.props
+    const value = e.target.value
 
     this.setState({
-      inputValue: e.target.value,
+      inputValue: value,
+      colorValue: value,
+      lastValidColorValue: value,
     })
     if (onChange) onChange(e)
+  }
+
+  transformColorCode = (colorCode: string): string => {
+    const { lastValidColorValue } = this.state
+
+    const inputWithoutHash = colorCode.startsWith('#')
+      ? colorCode.substring(1)
+      : colorCode
+
+    const validChars = inputWithoutHash
+      .toLowerCase()
+      .split('')
+      .filter((char) => /[0-9a-f]/i.test(char))
+
+    console.log(validChars, lastValidColorValue)
+
+    if (validChars.length === 0) return lastValidColorValue
+
+    if (validChars.length >= 6) return `#${validChars.slice(0, 6).join('')}`
+
+    let result = ''
+
+    switch (validChars.length) {
+      case 1:
+        result = validChars[0].repeat(6)
+        break
+
+      case 2:
+        result = `${validChars.join('')}`.repeat(3)
+        break
+
+      case 3:
+        result = `${validChars[0]}${validChars[0]}${validChars[1]}${validChars[1]}${validChars[2]}${validChars[2]}`
+        break
+
+      case 4:
+        result = `${validChars[0]}${validChars[0]}${validChars[1]}${validChars[1]}${validChars[2]}${validChars[2]}`
+        break
+
+      case 5:
+        result = `${validChars[0]}${validChars[0]}${validChars[1]}${validChars[1]}${validChars[2]}${validChars[2]}`
+        break
+
+      default:
+        result = validChars.slice(0, 6).join('')
+    }
+
+    result.indexOf('#') !== 0 && (result = `#${result}`)
+
+    return result
   }
 
   onChangeColorValue = (
@@ -146,12 +203,10 @@ export default class Input extends React.Component<InputProps, InputStates> {
   ) => {
     const { onChange } = this.props
 
-    if (/^[0-9a-fA-F]{6}$/i.test(e.target.value)) {
-      this.setState({
-        inputValue: `#${e.target.value}`,
-      })
-      if (onChange) onChange(e)
-    }
+    this.setState({
+      inputValue: e.target.value,
+    })
+    if (onChange) onChange(e)
   }
 
   onChangeNumber = (
@@ -286,6 +341,18 @@ export default class Input extends React.Component<InputProps, InputStates> {
     }
   }
 
+  onValidColor = (
+    e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { onValid } = this.props
+    const target = e.target as HTMLInputElement
+
+    if (e.key === 'Enter') {
+      if (onValid !== undefined) onValid(e)
+      target.blur()
+    } else if (e.key === 'Escape') target.blur()
+  }
+
   doClear = () => this.setState({ inputValue: '' })
 
   onGrab = () => {
@@ -361,7 +428,8 @@ export default class Input extends React.Component<InputProps, InputStates> {
 
   Color = () => {
     const { id, feature, helper, isBlocked, isDisabled } = this.props
-    const { inputValue, isTooltipVisible } = this.state
+    const { inputValue, colorValue, lastValidColorValue, isTooltipVisible } =
+      this.state
 
     return (
       <div
@@ -388,7 +456,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
             data-feature={feature}
             type="color"
             className="input__color"
-            value={inputValue}
+            value={colorValue}
             disabled={isDisabled || isBlocked}
             aria-disabled={isDisabled || isBlocked}
             onChange={
@@ -405,7 +473,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
             type="input"
             className="input__field"
             value={inputValue.toUpperCase().replace('#', '')}
-            maxLength={6}
+            maxLength={7}
             disabled={isDisabled || isBlocked}
             onChange={
               !(isDisabled || isBlocked) ? this.onChangeColorValue : undefined
@@ -414,7 +482,29 @@ export default class Input extends React.Component<InputProps, InputStates> {
               e.target.select()
               this.onFocus(e)
             }}
-            onBlur={!(isDisabled || isBlocked) ? this.onBlur : undefined}
+            onKeyDown={
+              !(isDisabled || isBlocked) ? this.onValidColor : undefined
+            }
+            onBlur={(e) => {
+              if (!(isDisabled || isBlocked)) {
+                const rawValue = e.target.value
+
+                const transformedValue = this.transformColorCode(rawValue)
+
+                this.setState({
+                  inputValue: transformedValue,
+                  colorValue: transformedValue,
+                  lastValidColorValue: transformedValue,
+                })
+
+                const newEvent = {
+                  ...e,
+                  target: { ...e.target, value: transformedValue },
+                } as React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+
+                if (inputValue !== lastValidColorValue) this.onBlur(newEvent)
+              }
+            }}
             ref={this.inputRef}
           />
           {isTooltipVisible && helper !== undefined && (
