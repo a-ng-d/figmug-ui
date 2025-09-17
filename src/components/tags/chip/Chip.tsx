@@ -65,16 +65,18 @@ const Chip = (props: ChipProps) => {
           {props.leftSlot}
         </div>
       )}
-      <div
-        className={doClassnames([
-          'chip__text',
-          texts.type,
-          texts['type--truncated'],
-        ])}
-        role="presentation"
-      >
-        {children !== undefined ? children : null}
-      </div>
+      {children !== undefined && (
+        <div
+          className={doClassnames([
+            'chip__text',
+            texts.type,
+            texts['type--truncated'],
+          ])}
+          role="presentation"
+        >
+          {children}
+        </div>
+      )}
       {props.rightSlot && (
         <div
           className="chip__right-slot"

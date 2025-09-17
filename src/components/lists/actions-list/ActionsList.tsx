@@ -31,7 +31,10 @@ export interface ActionsListStates {
   isVisible: boolean
 }
 
-export default class ActionsList extends React.Component<ActionsListProps, ActionsListStates> {
+export default class ActionsList extends React.Component<
+  ActionsListProps,
+  ActionsListStates
+> {
   private scrollInterval: number | null
   private subMenuContainerRef: React.RefObject<HTMLDivElement>
 
