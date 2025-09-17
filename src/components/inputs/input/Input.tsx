@@ -120,6 +120,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
     if (prevProps.value !== value)
       this.setState({
         inputValue: value,
+        colorValue: value,
       })
 
     if (prevProps.type === 'CODE' && this.textareaRef.current !== null)
