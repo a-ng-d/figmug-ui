@@ -9,7 +9,7 @@ export interface ChipProps {
   state?: 'ACTIVE' | 'INACTIVE' | 'ON_BACKGROUND'
   leftSlot?: React.ReactElement
   rightSlot?: React.ReactElement
-  children: React.ReactNode
+  children?: React.ReactNode
   isSolo?: boolean
   preview?: {
     image: string
@@ -73,7 +73,7 @@ const Chip = (props: ChipProps) => {
         ])}
         role="presentation"
       >
-        {children}
+        {children !== undefined ? children : null}
       </div>
       {props.rightSlot && (
         <div
