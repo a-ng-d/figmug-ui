@@ -35,6 +35,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
   private selectMenuRef: React.RefObject<HTMLDivElement>
   buttonRef: React.RefObject<Button>
   private listRef: React.RefObject<HTMLDivElement>
+  private actionsListRef: React.RefObject<ActionsList>
   private menuRef: React.RefObject<HTMLUListElement>
   private subMenuRef: React.RefObject<HTMLUListElement>
 
@@ -56,6 +57,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
     this.selectMenuRef = React.createRef()
     this.buttonRef = React.createRef()
     this.listRef = React.createRef()
+    this.actionsListRef = React.createRef()
     this.menuRef = React.createRef()
     this.subMenuRef = React.createRef()
     this.handleClickOutside = this.handleClickOutside.bind(this)
@@ -91,7 +93,9 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
       })
   }
 
-  onOpenMenu = () => {
+  onOpenMenu = (
+    e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+  ) => {
     const { parentClassName } = this.props
     const { isMenuOpen } = this.state
 
@@ -123,7 +127,9 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
             this.listRef.current.style.transform = 'translateY(-100%)'
           }
         }
-      }, 1)
+      }, 0)
+    if (e.type === 'keydown')
+      setTimeout(() => this.actionsListRef.current?.focusFirstMenuItem(), 0)
   }
 
   render() {
@@ -204,8 +210,10 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
             isDisabled={state === 'DISABLED' || isBlocked}
             isNew={isNew}
             ref={this.buttonRef}
-            action={
-              !(state === 'DISABLED' || isBlocked) ? this.onOpenMenu : undefined
+            action={(e) =>
+              !(state === 'DISABLED' || isBlocked)
+                ? this.onOpenMenu(e)
+                : undefined
             }
             aria-label={label}
             aria-haspopup="true"
@@ -221,8 +229,10 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
             isDisabled={state === 'DISABLED' || isBlocked}
             isNew={isNew}
             ref={this.buttonRef}
-            action={
-              !(state === 'DISABLED' || isBlocked) ? this.onOpenMenu : undefined
+            action={(e) =>
+              !(state === 'DISABLED' || isBlocked)
+                ? this.onOpenMenu(e)
+                : undefined
             }
             aria-label={label}
             aria-haspopup="true"
@@ -249,6 +259,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
                   selected={selected}
                   direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
                   onCancellation={() => this.setState({ isMenuOpen: false })}
+                  ref={this.actionsListRef}
                   menuRef={this.menuRef}
                   subMenuRef={this.subMenuRef}
                 />

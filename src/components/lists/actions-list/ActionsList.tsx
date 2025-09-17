@@ -58,10 +58,6 @@ export default class ActionsList extends React.Component<
     this.subMenuContainerRef = React.createRef<HTMLDivElement>()
   }
 
-  componentDidMount() {
-    this.focusFirstMenuItem()
-  }
-
   componentDidUpdate(
     prevProps: Readonly<ActionsListProps>,
     prevState: Readonly<ActionsListStates>
@@ -89,16 +85,16 @@ export default class ActionsList extends React.Component<
             shift: window.innerWidth - rect.x - rect.width - 8,
           })
         this.setState({ isVisible: true })
-
-        if (openedGroup !== 'EMPTY') this.focusFirstSubMenuItem()
       }
     }
   }
 
   // Direct Actions
   focusFirstMenuItem = () => {
+    const { menuRef } = this.props
+
     setTimeout(() => {
-      const menuElement = this.props.menuRef?.current
+      const menuElement = menuRef?.current
       if (menuElement) {
         const firstItem = menuElement.querySelector(
           'li[tabindex="0"]:not([data-is-blocked="true"])'
@@ -109,8 +105,10 @@ export default class ActionsList extends React.Component<
   }
 
   focusFirstSubMenuItem = () => {
+    const { subMenuRef } = this.props
+
     setTimeout(() => {
-      const subMenuElement = this.props.subMenuRef?.current
+      const subMenuElement = subMenuRef?.current
       if (subMenuElement) {
         const firstItem = subMenuElement.querySelector(
           'li[tabindex="0"]:not([data-is-blocked="true"])'
@@ -269,18 +267,18 @@ export default class ActionsList extends React.Component<
         aria-disabled={option.isBlocked}
         aria-label={option.label}
         onKeyDown={(e) => {
+          e.stopPropagation()
           if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
             option.action && option.action(e)
-            if (typeof onCancellation === 'function') onCancellation()
+            onCancellation?.()
           }
-          if (e.key === 'Escape')
-            if (typeof onCancellation === 'function') onCancellation()
+          if (e.key === 'Escape') onCancellation?.()
 
           return null
         }}
         onMouseDown={(e) => {
           !option.isBlocked ? option.action?.(e) : undefined
-          if (typeof onCancellation === 'function') onCancellation()
+          onCancellation?.()
         }}
         onFocus={() => null}
         onBlur={() => null}
@@ -312,7 +310,7 @@ export default class ActionsList extends React.Component<
   }
 
   MenuGroup = (option: DropdownOption, index: number) => {
-    const { preview } = this.props
+    const { preview, onCancellation } = this.props
     const { openedGroup } = this.state
 
     return (
@@ -334,9 +332,13 @@ export default class ActionsList extends React.Component<
         aria-label={option.label}
         aria-haspopup="true"
         onKeyDown={(e) => {
+          e.stopPropagation()
           if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked)
-            return this.setState({ openedGroup: option.value ?? 'EMPTY' })
-          if (e.key === 'Escape') return this.setState({ openedGroup: 'EMPTY' })
+            return this.setState({ openedGroup: option.value ?? 'EMPTY' }, () =>
+              this.focusFirstSubMenuItem()
+            )
+          if (e.key === 'Escape') onCancellation?.()
+
           return null
         }}
         onMouseEnter={() =>
@@ -394,11 +396,15 @@ export default class ActionsList extends React.Component<
         aria-disabled={option.isBlocked}
         aria-label={option.label}
         onKeyDown={(e) => {
+          e.stopPropagation()
           if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
             option.action && option.action(e)
-            if (typeof onCancellation === 'function') onCancellation()
+            onCancellation?.()
           }
-          if (e.key === 'Escape') this.setState({ openedGroup: 'EMPTY' })
+          if (e.key === 'Escape')
+            this.setState({ openedGroup: 'EMPTY' }, () =>
+              this.focusFirstMenuItem()
+            )
 
           return null
         }}

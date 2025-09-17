@@ -43,13 +43,11 @@ export interface DropdownStates {
   isTooltipVisible: boolean
 }
 
-export default class Dropdown extends React.Component<
-  DropdownProps,
-  DropdownStates
-> {
+export default class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   private selectMenuRef: React.RefObject<HTMLDivElement>
   private buttonRef: React.RefObject<HTMLButtonElement>
   private listRef: React.RefObject<HTMLDivElement>
+  private actionsListRef: React.RefObject<ActionsList>
   private menuRef: React.RefObject<HTMLUListElement>
   private subMenuRef: React.RefObject<HTMLUListElement>
 
@@ -71,6 +69,7 @@ export default class Dropdown extends React.Component<
     this.selectMenuRef = React.createRef()
     this.buttonRef = React.createRef()
     this.listRef = React.createRef()
+    this.actionsListRef = React.createRef()
     this.menuRef = React.createRef()
     this.subMenuRef = React.createRef()
     this.handleClickOutside = this.handleClickOutside.bind(this)
@@ -267,8 +266,13 @@ export default class Dropdown extends React.Component<
             if (
               e.key === ' ' ||
               (e.key === 'Enter' && !(isDisabled || isBlocked))
-            )
-              return this.onOpenMenu?.()
+            ) {
+              this.onOpenMenu()
+              setTimeout(
+                () => this.actionsListRef.current?.focusFirstMenuItem(),
+                0
+              )
+            }
             if (e.key === 'Escape') return (e.target as HTMLElement).blur()
             return null
           }}
@@ -339,6 +343,7 @@ export default class Dropdown extends React.Component<
                   shouldScroll={listShouldScroll}
                   containerId={containerId}
                   onCancellation={() => this.setState({ isMenuOpen: false })}
+                  ref={this.actionsListRef}
                   menuRef={this.menuRef}
                   subMenuRef={this.subMenuRef}
                 />
