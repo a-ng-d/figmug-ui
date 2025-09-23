@@ -1,0 +1,104 @@
+{
+  "size": {
+    "neg": {
+      "xxxlarge": {
+        "$type": "dimension",
+        "$value": "-80px"
+      },
+      "xxlarge": {
+        "$type": "dimension",
+        "$value": "-64px"
+      },
+      "xlarge": {
+        "$type": "dimension",
+        "$value": "-48px"
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "-40px"
+      },
+      "medium": {
+        "$type": "dimension",
+        "$value": "-32px"
+      },
+      "small": {
+        "$type": "dimension",
+        "$value": "-24px"
+      },
+      "xsmall": {
+        "$type": "dimension",
+        "$value": "-16px"
+      },
+      "xmsmall": {
+        "$type": "dimension",
+        "$value": "-12px"
+      },
+      "xxsmall": {
+        "$type": "dimension",
+        "$value": "-8px"
+      },
+      "xxxsmall": {
+        "$type": "dimension",
+        "$value": "-4px"
+      },
+      "xunit": {
+        "$type": "dimension",
+        "$value": "-2px"
+      },
+      "unit": {
+        "$type": "dimension",
+        "$value": "-1px"
+      }
+    },
+    "pos": {
+      "unit": {
+        "$type": "dimension",
+        "$value": "1px"
+      },
+      "xunit": {
+        "$type": "dimension",
+        "$value": "2px"
+      },
+      "xxxsmall": {
+        "$type": "dimension",
+        "$value": "4px"
+      },
+      "xxsmall": {
+        "$type": "dimension",
+        "$value": "8px"
+      },
+      "xmsmall": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "xsmall": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "small": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "medium": {
+        "$type": "dimension",
+        "$value": "32px"
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "40px"
+      },
+      "xlarge": {
+        "$type": "dimension",
+        "$value": "48px"
+      },
+      "xxlarge": {
+        "$type": "dimension",
+        "$value": "64px"
+      },
+      "xxxlarge": {
+        "$type": "dimension",
+        "$value": "80px"
+      }
+    }
+  }
+}

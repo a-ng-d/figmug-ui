@@ -1,0 +1,101 @@
+{
+  "font": {
+    "$type": "typography",
+    "size": {
+      "xxxsmall": {
+        "$type": "dimension",
+        "$value": "9px"
+      },
+      "xxsmall": {
+        "$type": "dimension",
+        "$value": "10px"
+      },
+      "xsmall": {
+        "$type": "dimension",
+        "$value": "11px"
+      },
+      "small": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "medium": {
+        "$type": "dimension",
+        "$value": "13px"
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "14px"
+      }
+    },
+    "weight": {
+      "normal": {
+        "$type": "fontWeight",
+        "$value": 400
+      },
+      "accent": {
+        "$type": "fontWeight",
+        "$value": 450
+      },
+      "medium": {
+        "$type": "fontWeight",
+        "$value": 500
+      },
+      "semi": {
+        "$type": "fontWeight",
+        "$value": 550
+      },
+      "bold": {
+        "$type": "fontWeight",
+        "$value": 600
+      }
+    },
+    "lineHeight": {
+      "default": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "20px"
+      }
+    },
+    "letterSpacing": {
+      "neg": {
+        "xlarge": {
+          "$type": "dimension",
+          "$value": "-0.01em"
+        },
+        "large": {
+          "$type": "dimension",
+          "$value": "-0.005em"
+        },
+        "medium": {
+          "$type": "dimension",
+          "$value": "-0.0025em"
+        },
+        "small": {
+          "$type": "dimension",
+          "$value": "-0.001em"
+        }
+      },
+      "pos": {
+        "small": {
+          "$type": "dimension",
+          "$value": "0.001em"
+        },
+        "medium": {
+          "$type": "dimension",
+          "$value": "0.0025em"
+        },
+        "large": {
+          "$type": "dimension",
+          "$value": "0.005em"
+        },
+        "xlarge": {
+          "$type": "dimension",
+          "$value": "0.01em"
+        }
+      }
+    }
+  }
+}
