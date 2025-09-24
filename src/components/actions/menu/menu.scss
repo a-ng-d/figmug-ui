@@ -7,26 +7,26 @@
   position: relative;
 
   &.menu--top-right > .floating-menu {
-    top: var(--menu-top-right);
+    top: var(--menu-position-top-right);
     right: 0;
     left: unset;
     transform: translateY(-100%);
   }
 
   &.menu--top-left > .floating-menu {
-    top: var(--menu-top-left);
+    top: var(--menu-position-top-left);
     left: 0;
     transform: translateY(-100%);
   }
 
   &.menu--bottom-right > .floating-menu {
-    top: var(--menu-bottom-right);
+    top: var(--menu-position-bottom-right);
     right: 0;
     left: unset;
   }
 
   &.menu--bottom-left > .floating-menu {
-    top: var(--menu-bottom-left);
+    top: var(--menu-position-bottom-left);
     left: 0;
   }
 }
