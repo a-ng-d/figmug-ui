@@ -1,6 +1,6 @@
 {
   "knob": {
-    "min-width": {
+    "minWidth": {
       "$value": "{size.pos.medium}",
       "$type": "dimension"
     },
@@ -111,18 +111,20 @@
               "$type": "dimension"
             }
           },
-          "border-color": {
-            "default": {
-              "$value": "transparent",
-              "$type": "string"
-            },
-            "focus": {
-              "$value": "transparent",
-              "$type": "string"
-            },
-            "disabled": {
-              "$value": "transparent",
-              "$type": "string"
+          "border": {
+            "color": {
+              "default": {
+                "$value": "transparent",
+                "$type": "string"
+              },
+              "focus": {
+                "$value": "transparent",
+                "$type": "string"
+              },
+              "disabled": {
+                "$value": "transparent",
+                "$type": "string"
+              }
             }
           }
         },
@@ -135,18 +137,20 @@
             "$value": "{size.null}",
             "$type": "dimension"
           },
-          "border-color": {
-            "default": {
-              "$value": "transparent",
-              "$type": "string"
-            },
-            "focus": {
-              "$value": "transparent",
-              "$type": "string"
-            },
-            "disabled": {
-              "$value": "transparent",
-              "$type": "string"
+          "border": {
+            "color": {
+              "default": {
+                "$value": "transparent",
+                "$type": "string"
+              },
+              "focus": {
+                "$value": "transparent",
+                "$type": "string"
+              },
+              "disabled": {
+                "$value": "transparent",
+                "$type": "string"
+              }
             }
           }
         }
@@ -167,7 +171,7 @@
           "$type": "dimension"
         }
       },
-      "min-width": {
+      "minXidth": {
         "$value": "{size.pos.small}",
         "$type": "dimension"
       },

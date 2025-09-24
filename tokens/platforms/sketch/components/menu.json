@@ -1,19 +1,19 @@
 {
   "menu": {
     "position": {
-      "top-right": {
+      "topRight": {
         "$value": "{size.neg.xxsmall}",
         "$type": "dimension"
       },
-      "top-left": {
+      "topLeft": {
         "$value": "{size.neg.xxsmall}",
         "$type": "dimension"
       },
-      "bottom-right": {
+      "bottomRight": {
         "$value": "{size.pos.large}",
         "$type": "dimension"
       },
-      "bottom-left": {
+      "bottomLeft": {
         "$value": "{size.pos.large}",
         "$type": "dimension"
       }

@@ -1,5 +1,5 @@
 {
-  "icon-chip": {
+  "iconChip": {
     "width": {
       "$value": "{size.pos.small}",
       "$type": "dimension"

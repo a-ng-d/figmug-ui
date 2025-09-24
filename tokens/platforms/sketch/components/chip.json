@@ -54,7 +54,7 @@
           "$value": "{sketch.color.foreground.inverted}",
           "$type": "color"
         },
-        "on-background": {
+        "onBackground": {
           "$value": "{grey.1000}",
           "$type": "color"
         }
@@ -64,7 +64,7 @@
           "$value": "{font.weight.medium}",
           "$type": "fontWeight"
         },
-        "on-background": {
+        "onBackground": {
           "$value": "{font.weight.normal}",
           "$type": "fontWeight"
         }
@@ -73,7 +73,7 @@
         "$value": "{font.size.xsmall}",
         "$type": "dimension"
       },
-      "letter-spacing": {
+      "letterSpacing": {
         "$value": "{font.letterSpacing.pos.xlarge}",
         "$type": "dimension"
       },
@@ -96,7 +96,7 @@
           "$value": "{sketch.color.accent.secondary}",
           "$type": "color"
         },
-        "on-background": {
+        "onBackground": {
           "$value": "rgba(255, 255, 255, 0.4)",
           "$type": "color"
         }
@@ -116,7 +116,7 @@
           "$value": "transparent",
           "$type": "string"
         },
-        "on-background": {
+        "onBackground": {
           "$value": "transparent",
           "$type": "string"
         }
@@ -134,7 +134,7 @@
           "$value": "{size.null}",
           "$type": "dimension"
         },
-        "on-background": {
+        "onBackground": {
           "$value": "{size.null}",
           "$type": "dimension"
         }
@@ -152,7 +152,7 @@
           "$value": "{size.null}",
           "$type": "dimension"
         },
-        "on-background": {
+        "onBackground": {
           "$value": "{size.null}",
           "$type": "dimension"
         }

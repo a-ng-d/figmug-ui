@@ -62,11 +62,11 @@
             "$type": "fontWeight"
           }
         },
-        "letter-spacing": {
+        "letterSpacing": {
           "$value": "{font.letterSpacing.pos.small}",
           "$type": "dimension"
         },
-        "line-height": {
+        "lineHeight": {
           "$value": "{font.lineHeight.default}",
           "$type": "dimension"
         },
@@ -911,7 +911,7 @@
       }
     }
   },
-  "icon-button": {
+  "iconButton": {
     "base": {
       "width": {
         "$value": "{size.pos.large}",
@@ -1045,11 +1045,11 @@
             "$value": "{sketch.color.background.primary}",
             "$type": "color"
           },
-          "on-selected": {
+          "onSelected": {
             "$value": "{sketch.color.accent.tertiary}",
             "$type": "color"
           },
-          "on-selected-hover": {
+          "onSelectedHover": {
             "$value": "{sketch.color.accent.tertiary}",
             "$type": "color"
           }

@@ -1,5 +1,5 @@
 {
-  "color-chip": {
+  "colorChip": {
     "radius": {
       "$value": "{border.radius.small}",
       "$type": "dimension"

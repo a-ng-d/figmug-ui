@@ -1,6 +1,6 @@
 {
   "text": {
-    "font-family": {
+    "fontFamily": {
       "$value": "{font.stack}",
       "$type": "fontFamily"
     },
@@ -101,11 +101,11 @@
         "$value": "none",
         "$type": "string"
       },
-      "border-focus": {
+      "borderFocus": {
         "$value": "none",
         "$type": "string"
       },
-      "decoration-focus": {
+      "decorationFocus": {
         "$value": "underline",
         "$type": "string"
       }

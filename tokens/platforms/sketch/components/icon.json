@@ -19,7 +19,7 @@
         "$value": "{sketch.color.foreground.tertiary}",
         "$type": "color"
       },
-      "text-size": {
+      "textSize": {
         "$value": "{font.size.small}",
         "$type": "dimension"
       }
