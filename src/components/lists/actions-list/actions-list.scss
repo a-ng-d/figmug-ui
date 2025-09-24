@@ -1,11 +1,11 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .select-menu {
   position: relative;
-  border-radius: var(--actions_list-radius);
+  border-radius: var(--actions-list-radius);
 
   .select-menu__spot {
     display: flex;
@@ -13,21 +13,23 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-    border-radius: var(--actions_list-spot-radius);
-    background-color: var(--actions_list-spot-background-color);
-    height: var(--actions_list-spot-height);
-    --icon-picto-color: var(--actions_list-spot-icon-color);
+    border-radius: var(--actions-list-spot-radius);
+    background-color: var(--actions-list-spot-background-color);
+    height: var(--actions-list-spot-height);
+    --icon-picto-color: var(--actions-list-spot-icon-color);
 
     &--top {
-      inset: var(--actions_list-spot-inset-top);
-      border-top: var(--actions_list-spot-border-width) solid
-        var(--actions_list-spot-border-color);
+      inset: var(--actions-list-spot-inset-top-top) var(--actions-list-spot-inset-top-right)
+        var(--actions-list-spot-inset-top-bottom) var(--actions-list-spot-inset-top-left);
+      border-top: var(--actions-list-spot-border-width) solid
+        var(--actions-list-spot-border-color);
     }
 
     &--bottom {
-      inset: var(--actions_list-spot-inset-bottom);
-      border-bottom: var(--actions_list-spot-border-width) solid
-        var(--actions_list-spot-border-color);
+      inset: var(--actions-list-spot-inset-bottom-top) var(--actions-list-spot-inset-bottom-right)
+        var(--actions-list-spot-inset-bottom-bottom) var(--actions-list-spot-inset-bottom-left);
+      border-bottom: var(--actions-list-spot-border-width) solid
+        var(--actions-list-spot-border-color);
     }
   }
 
@@ -37,15 +39,15 @@
     cursor: default;
     box-sizing: border-box;
     margin: 0;
-    outline: var(--actions_list-border-width) solid
-      var(--actions_list-border-color);
-    outline-offset: var(--actions_list-border-offset);
-    box-shadow: var(--actions_list-shadow);
-    border-radius: var(--actions_list-radius);
-    background-color: var(--actions_list-background-color);
-    padding: var(--actions_list-padding);
+    outline: var(--actions-list-border-width) solid
+      var(--actions-list-border-color);
+    outline-offset: var(--actions-list-border-offset);
+    box-shadow: var(--actions-list-shadow);
+    border-radius: var(--actions-list-radius);
+    background-color: var(--actions-list-background-color);
+    padding: var(--actions-list-padding-vertical) var(--actions-list-padding-horizontal);
     width: 100%;
-    min-width: var(--actions_list-min_width);
+    min-width: var(--actions-list-min-width);
     overflow: visible;
     user-select: none;
 
@@ -57,12 +59,12 @@
 
     &--left .select-menu__submenu {
       transform: translateX(-100%);
-      inset: var(--actions_list-submenu-inset-left);
+      inset: var(--actions-list-submenu-inset-left-top) var(--actions-list-submenu-inset-left-right) var(--actions-list-submenu-inset-left-bottom) var(--actions-list-submenu-inset-left-left);
     }
 
     &--right .select-menu__submenu {
       transform: translateX(100%);
-      inset: var(--actions_list-submenu-inset-right);
+      inset: var(--actions-list-submenu-inset-right-top) var(--actions-list-submenu-inset-right-right) var(--actions-list-submenu-inset-right-bottom) var(--actions-list-submenu-inset-right-left);
     }
   }
 
@@ -70,33 +72,33 @@
     display: flex;
     position: relative;
     align-items: center;
-    gap: var(--actions_list-item-gap);
+    gap: var(--actions-list-item-gap);
     cursor: default;
     outline: none;
-    border-radius: var(--actions_list-item-radius);
-    background-color: var(--actions_list-item-background-color);
-    padding: var(--actions_list-item-padding);
-    height: var(--actions_list-item-height);
+    border-radius: var(--actions-list-item-radius);
+    background-color: var(--actions-list-item-background-color);
+    padding: var(--actions-list-item-padding);
+    height: var(--actions-list-item-height);
     user-select: none;
-    --text-color-primary: var(--actions_list-item-text-color);
+    --text-color-primary: var(--actions-list-item-text-color);
 
     &[data-role='TITLE'] {
-      text-transform: var(--actions_list-title-text-transform);
+      text-transform: var(--actions-list-title-text-transform);
     }
 
     &:before {
       position: absolute;
-      inset: 0 auto 0 var(--actions_list-patch-left);
+      inset: 0 auto 0 var(--actions-list-patch-left);
       background-color: transparent;
-      width: var(--actions_list-patch-width);
+      width: var(--actions-list-patch-width);
       content: '';
     }
 
     &:after {
       position: absolute;
-      inset: 0 var(--actions_list-patch-right) 0 auto;
+      inset: 0 var(--actions-list-patch-right) 0 auto;
       background-color: transparent;
-      width: var(--actions_list-patch-width);
+      width: var(--actions-list-patch-width);
       content: '';
     }
 
@@ -104,10 +106,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: var(--actions_list-caret-width);
-      height: var(--actions_list-caret-height);
+      width: var(--actions-list-caret-width);
+      height: var(--actions-list-caret-height);
       pointer-events: none;
-      --icon-picto-color: var(--actions_list-tick-color);
+      --icon-picto-color: var(--actions-list-tick-color);
     }
 
     &__label {
@@ -120,86 +122,104 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: var(--actions_list-caret-width);
-      height: var(--actions_list-caret-height);
+      width: var(--actions-list-caret-width);
+      height: var(--actions-list-caret-height);
       pointer-events: none;
-      --icon-picto-color: var(--actions_list-caret-color);
+      --icon-picto-color: var(--actions-list-caret-color);
+    }
+
+    & {
+      --actions-list-item-padding: var(--actions-list-item-padding-default-vertical)
+        var(--actions-list-item-padding-default-right)
+        var(--actions-list-item-padding-default-vertical)
+        var(--actions-list-item-padding-default-left);
+      --actions-list-item-background-color: var(
+        --actions-list-item-background-color-default
+      );
+      --actions-list-item-text-color: var(--actions-list-item-text-color-default);
+      --actions-list-tick-color: var(--actions-list-tick-color-default);
+      --actions-list-caret-color: var(--actions-list-caret-color-default);
     }
 
     &:hover {
-      --actions_list-item-background-color: var(
-        --actions_list-item-background-color-hover
+      --actions-list-item-background-color: var(
+        --actions-list-item-background-color-hover
       );
-      --actions_list-item-text-color: var(--actions_list-item-text-color-hover);
-      --actions_list-tick-color: var(--actions_list-tick-color-hover);
-      --actions_list-caret-color: var(--actions_list-caret-color-hover);
+      --actions-list-item-text-color: var(--actions-list-item-text-color-hover);
+      --actions-list-tick-color: var(--actions-list-tick-color-hover);
+      --actions-list-caret-color: var(--actions-list-caret-color-hover);
 
       .select-menu__submenu {
-        --actions_list-item-background-color: var(
-          --actions_list-item-background-color
+        --actions-list-item-background-color: var(
+          --actions-list-item-background-color-default
         );
       }
     }
 
     &:focus {
-      --actions_list-item-background-color: var(
-        --actions_list-item-background-color-focus
+      --actions-list-item-background-color: var(
+        --actions-list-item-background-color-focus
       );
-      --actions_list-item-text-color: var(--actions_list-item-text-color-focus);
-      --actions_list-tick-color: var(--actions_list-tick-color-focus);
-      --actions_list-caret-color: var(--actions_list-caret-color-focus);
+      --actions-list-item-text-color: var(--actions-list-item-text-color-focus);
+      --actions-list-tick-color: var(--actions-list-tick-color-focus);
+      --actions-list-caret-color: var(--actions-list-caret-color-focus);
 
       .select-menu__submenu {
-        --actions_list-item-background-color: var(
-          --actions_list-item-background-color
+        --actions-list-item-background-color: var(
+          --actions-list-item-background-color-default
         );
       }
     }
 
     &--selected {
-      --actions_list-item-padding: var(--actions_list-item-padding-selected);
-      --actions_list-item-background-color: var(
-        --actions_list-item-background-color-selected
+      --actions-list-item-padding: var(--actions-list-item-padding-selected-vertical)
+        var(--actions-list-item-padding-selected-right)
+        var(--actions-list-item-padding-selected-vertical)
+        var(--actions-list-item-padding-selected-left);
+      --actions-list-item-background-color: var(
+        --actions-list-item-background-color-selected
       );
-      --actions_list-item-text-color: var(
-        --actions_list-item-text-color-selected
+      --actions-list-item-text-color: var(
+        --actions-list-item-text-color-selected
       );
-      --actions_list-tick-color: var(--actions_list-tick-color-selected);
-      --actions_list-caret-color: var(--actions_list-caret-color-selected);
+      --actions-list-tick-color: var(--actions-list-tick-color-selected);
+      --actions-list-caret-color: var(--actions-list-caret-color-selected);
 
       &:hover {
-        --actions_list-item-padding: var(
-          --actions_list-item-padding-selected-hover
+        --actions-list-item-padding: var(--actions-list-item-padding-selected-hover-vertical)
+        var(--actions-list-item-padding-selected-hover-right)
+        var(--actions-list-item-padding-selected-hover-vertical)
+        var(--actions-list-item-padding-selected-hover-left);
+        --actions-list-item-background-color: var(
+          --actions-list-item-background-color-selected-hover
         );
-        --actions_list-item-background-color: var(
-          --actions_list-item-background-color-selected-hover
+        --actions-list-item-text-color: var(
+          --actions-list-item-text-color-selected-hover
         );
-        --actions_list-item-text-color: var(
-          --actions_list-item-text-color-selected-hover
+        --actions-list-tick-color: var(
+          --actions-list-tick-color-selected-hover
         );
-        --actions_list-tick-color: var(
-          --actions_list-tick-color-selected-hover
-        );
-        --actions_list-caret-color: var(
-          --actions_list-caret-color-selected-hover
+        --actions-list-caret-color: var(
+          --actions-list-caret-color-selected-hover
         );
       }
 
       &:focus {
-        --actions_list-item-padding: var(
-          --actions_list-item-padding-selected-focus
+        --actions-list-item-padding: var(--actions-list-item-padding-selected-focus-vertical)
+        var(--actions-list-item-padding-selected-focus-right)
+        var(--actions-list-item-padding-selected-focus-vertical)
+        var(--actions-list-item-padding-selected-focus-left);
+        --actions-list-item-background-color: var(
+          --actions-list-item-background-color-selected-focus
         );
-        --actions_list-item-background-color: var(
-          --actions_list-item-background-color-selected-focus
+        --actions-list-item-text-color: var(
+          --actions-list-item-text-color-selected-focus
         );
-        --actions_list-item-text-color: var(
-          --actions_list-item-text-color-selected-focus
+        --actions-list-tick-color: var(
+          --actions-list-tick-color-selected-focus
         );
-        --actions_list-tick-color: var(
-          --actions_list-tick-color-selected-focus
-        );
-        --actions_list-caret-color: var(
-          --actions_list-caret-color-selected-focus
+        --actions-list-caret-color: var(
+          --actions-list-caret-color-selected-focus
         );
       }
     }
@@ -207,31 +227,32 @@
     &--blocked,
     &--disabled {
       pointer-events: none;
-      --actions_list-item-background-color: var(
-        --actions_list-item-background-color-disabled
+      --actions-list-item-background-color: var(
+        --actions-list-item-background-color-disabled
       );
-      --actions_list-item-text-color: var(
-        --actions_list-item-text-color-disabled
+      --actions-list-item-text-color: var(
+        --actions-list-item-text-color-disabled
       );
-      --actions_list-tick-color: var(--actions_list-tick-color-disabled);
-      --actions_list-caret-color: var(--actions_list-caret-color-disabled);
+      --actions-list-tick-color: var(--actions-list-tick-color-disabled);
+      --actions-list-caret-color: var(--actions-list-caret-color-disabled);
 
       .select-menu__submenu {
-        --actions_list-item-background-color: var(
-          --actions_list-item-background-color
+        --actions-list-item-background-color: var(
+          --actions-list-item-background-color
         );
-        --actions_list-item-text-color: var(--actions_list-item-text-color);
-        --actions_list-tick-color: var(--actions_list-tick-color);
-        --actions_list-caret-color: var(--actions_list-caret-color);
+        --actions-list-item-text-color: var(--actions-list-item-text-color);
+        --actions-list-tick-color: var(--actions-list-tick-color);
+        --actions-list-caret-color: var(--actions-list-caret-color);
       }
     }
   }
 
   hr {
-    margin: var(--actions_list-divider-margin);
+    margin: var(--actions-list-divider-margin-top) var(--actions-list-divider-margin-right)
+      var(--actions-list-divider-margin-bottom) var(--actions-list-divider-margin-left);
     border: none;
-    background-color: var(--actions_list-divider-background-color);
-    height: var(--actions_list-divider-height);
+    background-color: var(--actions-list-divider-background-color);
+    height: var(--actions-list-divider-height);
   }
 
   &__submenu {

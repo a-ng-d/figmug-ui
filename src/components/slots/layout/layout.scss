@@ -1,7 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .layout {
   display: flex;
@@ -24,12 +24,14 @@
     flex: 1;
     flex-direction: column;
     justify-content: start;
-    padding: var(--layout-block-padding);
+    padding: var(--layout-block-padding-vertical)
+      var(--layout-block-padding-horizontal);
     overflow-x: hidden;
     overflow-y: auto;
 
     &--list {
-      padding: var(--layout-list-padding);
+      padding: var(--layout-list-padding-top) var(--layout-list-padding-right)
+        var(--layout-list-padding-bottom) var(--layout-list-padding-left);
     }
 
     &--distributed {
@@ -56,6 +58,7 @@
   }
 
   & > div + div {
-    border-left: var(--layout-block-border);
+    border-left: var(--layout-block-border-width) solid
+      var(--layout-block-border-color);
   }
 }

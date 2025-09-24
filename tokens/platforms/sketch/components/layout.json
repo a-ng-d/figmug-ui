@@ -1,0 +1,64 @@
+{
+  "layout": {
+    "block": {
+      "padding": {
+        "vertical": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "horizontal": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "border": {
+        "width": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{sketch.color.border.primary}",
+          "$type": "color"
+        }
+      }
+    },
+    "background": {
+      "color": {
+        "$value": "{sketch.color.background.primary}",
+        "$type": "color"
+      }
+    },
+    "list": {
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "centered": {
+      "padding": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      }
+    },
+    "distributed": {
+      "gap": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

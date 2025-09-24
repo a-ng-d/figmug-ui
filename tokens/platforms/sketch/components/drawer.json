@@ -1,0 +1,30 @@
+{
+  "drawer": {
+    "background": {
+      "color": {
+        "$value": "{sketch.color.background.primary}",
+        "$type": "color"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{sketch.color.border.primary}",
+        "$type": "color"
+      }
+    },
+    "knob": {
+      "size": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "position": {
+        "$value": "{size.neg.xxxsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

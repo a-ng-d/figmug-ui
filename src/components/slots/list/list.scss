@@ -4,8 +4,8 @@
 
 .list {
   box-sizing: border-box;
-  background-color: var(--list-background-color);
-  padding: var(--list-padding);
+  background-color: var(--list-background-color-default);
+  padding: var(--list-padding-vertical) var(--list-padding-horizontal);
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -31,7 +31,7 @@
 
   &--alternate {
     & > *:nth-child(even) {
-      background-color: var(--list-alternate-background-color);
+      background-color: var(--list-alternate-background-color-alternate);
     }
   }
 }
