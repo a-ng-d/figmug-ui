@@ -1,0 +1,84 @@
+{
+  "accordion": {
+    "padding": {
+      "vertical": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "horizontal": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "transparent",
+        "$type": "string"
+      }
+    },
+    "row": {
+      "gap": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "vertical": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "horizontal": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "text": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.foreground.secondary}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{sketch.color.foreground.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "icon": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.foreground.secondary}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{sketch.color.foreground.disabled}",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}

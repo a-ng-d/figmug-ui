@@ -1,7 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .tooltip {
   position: absolute;
@@ -9,8 +9,8 @@
   transform: translateX(-50%) translateY(0);
   z-index: 3;
   width: auto;
-  min-width: var(--tooltip-min_width);
-  max-width: var(--tooltip-max_width);
+  min-width: var(--tooltip-min-width);
+  max-width: var(--tooltip-max-width);
   pointer-events: none;
   user-select: none;
 
@@ -75,7 +75,7 @@
     box-shadow: var(--tooltip-shadow);
     border-radius: var(--tooltip-radius);
     background-color: var(--tooltip-background-color);
-    padding: var(--tooltip-padding);
+    padding: var(--tooltip-padding-vertical) var(--tooltip-padding-horizontal);
   }
 
   &__text {
@@ -99,8 +99,14 @@
   }
 
   &--withimage {
-    --tooltip-min_width: var(--tooltip-withimage-min_width);
-    --tooltip-padding: var(--tooltip-withimage-padding);
+    --tooltip-min-width: var(--tooltip-with-image-min-width);
+
+    .tooltip__block {
+      padding: var(--tooltip-with-image-padding-top)
+        var(--tooltip-with-image-padding-right)
+        var(--tooltip-with-image-padding-bottom)
+        var(--tooltip-with-image-padding-left);
+    }
 
     .tooltip__text {
       text-align: left;

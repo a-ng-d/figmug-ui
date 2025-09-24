@@ -15,7 +15,7 @@
       },
       "padding": {
         "vertical": {
-          "$value": "0px",
+          "$value": "{size.null}",
           "$type": "dimension"
         },
         "horizontal": {
@@ -35,11 +35,11 @@
           "$type": "string"
         },
         "width": {
-          "$value": "0px",
+          "$value": "{size.null}",
           "$type": "dimension"
         },
         "offset": {
-          "$value": "0px",
+          "$value": "{size.null}",
           "$type": "dimension"
         }
       },
@@ -111,7 +111,7 @@
       },
       "padding": {
         "vertical": {
-          "$value": "0px",
+          "$value": "{size.null}",
           "$type": "dimension"
         },
         "horizontal": {
@@ -127,7 +127,7 @@
       },
       "padding": {
         "vertical": {
-          "$value": "0px",
+          "$value": "{size.null}",
           "$type": "dimension"
         },
         "horizontal": {
@@ -174,15 +174,15 @@
       "border": {
         "width": {
           "default": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "hover": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "pressed": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "focus": {
@@ -190,21 +190,21 @@
             "$type": "dimension"
           },
           "disabled": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
         "offset": {
           "default": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "hover": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "pressed": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "focus": {
@@ -212,7 +212,7 @@
             "$type": "dimension"
           },
           "disabled": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
@@ -528,7 +528,7 @@
         }
       },
       "padding": {
-        "$value": "0px",
+        "$value": "{size.null}",
         "$type": "dimension"
       },
       "background": {
@@ -558,23 +558,23 @@
       "border": {
         "width": {
           "default": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "hover": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "pressed": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "focus": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "disabled": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
@@ -654,15 +654,15 @@
       "border": {
         "width": {
           "default": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "hover": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "pressed": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "focus": {
@@ -670,21 +670,21 @@
             "$type": "dimension"
           },
           "disabled": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
         "offset": {
           "default": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "hover": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "pressed": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "focus": {
@@ -692,7 +692,7 @@
             "$type": "dimension"
           },
           "disabled": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
@@ -796,15 +796,15 @@
       "border": {
         "width": {
           "default": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "hover": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "pressed": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "focus": {
@@ -812,21 +812,21 @@
             "$type": "dimension"
           },
           "disabled": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
         "offset": {
           "default": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "hover": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "pressed": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "focus": {
@@ -834,7 +834,7 @@
             "$type": "dimension"
           },
           "disabled": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
@@ -926,7 +926,7 @@
         "$type": "dimension"
       },
       "padding": {
-        "$value": "0px",
+        "$value": "{size.null}",
         "$type": "dimension"
       },
       "background": {
@@ -941,11 +941,11 @@
           "$type": "string"
         },
         "width": {
-          "$value": "0px",
+          "$value": "{size.null}",
           "$type": "dimension"
         },
         "offset": {
-          "$value": "0px",
+          "$value": "{size.null}",
           "$type": "dimension"
         }
       },
@@ -996,7 +996,7 @@
             "$type": "dimension"
           },
           "offset": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         }
@@ -1058,15 +1058,15 @@
       "border": {
         "width": {
           "default": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "hover": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "pressed": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "focus": {
@@ -1074,21 +1074,21 @@
             "$type": "dimension"
           },
           "disabled": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
         "offset": {
           "default": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "hover": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "pressed": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "focus": {
@@ -1096,7 +1096,7 @@
             "$type": "dimension"
           },
           "disabled": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
@@ -1226,15 +1226,15 @@
       "border": {
         "width": {
           "default": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "hover": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "pressed": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "focus": {
@@ -1242,21 +1242,21 @@
             "$type": "dimension"
           },
           "disabled": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
         "offset": {
           "default": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "hover": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "pressed": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "focus": {
@@ -1264,7 +1264,7 @@
             "$type": "dimension"
           },
           "disabled": {
-            "$value": "0px",
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },

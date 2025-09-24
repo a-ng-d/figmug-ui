@@ -3,35 +3,35 @@
     "radius": {
       "xsmall": {
         "$type": "dimension",
-        "$value": "1px"
+        "$value": { "value": 1, "unit": "px" }
       },
       "small": {
         "$type": "dimension",
-        "$value": "2px"
+        "$value": { "value": 2, "unit": "px" }
       },
       "medium": {
         "$type": "dimension",
-        "$value": "4px"
+        "$value": { "value": 4, "unit": "px" }
       },
       "large": {
         "$type": "dimension",
-        "$value": "6px"
+        "$value": { "value": 6, "unit": "px" }
       },
       "xlarge": {
         "$type": "dimension",
-        "$value": "8px"
+        "$value": { "value": 8, "unit": "px" }
       },
       "xxlarge": {
         "$type": "dimension",
-        "$value": "12px"
+        "$value": { "value": 12, "unit": "px" }
       },
       "xxxlarge": {
         "$type": "dimension",
-        "$value": "16px"
+        "$value": { "value": 16, "unit": "px" }
       },
       "full": {
         "$type": "dimension",
-        "$value": "100px"
+        "$value": { "value": 100, "unit": "px" }
       }
     }
   }

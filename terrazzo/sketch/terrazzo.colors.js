@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [
     css({
       filename: 'sketch-colors.scss',
+      legacyHex: true,
       modeSelectors: [
         {
           mode: 'light',

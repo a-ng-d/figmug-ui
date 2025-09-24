@@ -1,7 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .card {
   display: flex;
@@ -17,6 +17,13 @@
 
   &--fill {
     width: 100%;
+  }
+
+  & {
+    --card-background-color: var(--card-background-color-default);
+    --card-border-width: var(--card-border-width-default);
+    --card-border-color: var(--card-border-color-default);
+    --card-border-offset: var(--card-border-offset-default);
   }
 
   &:hover {

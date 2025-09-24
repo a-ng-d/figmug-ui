@@ -1,0 +1,260 @@
+{
+  "knob": {
+    "min-width": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
+    "height": {
+      "$value": "{size.pos.xlarge}",
+      "$type": "dimension"
+    },
+    "top": {
+      "$value": "{size.neg.xunit}",
+      "$type": "dimension"
+    },
+    "label": {
+      "height": {
+        "$value": { "value": 20, "unit": "px" },
+        "$type": "dimension"
+      },
+      "padding": {
+        "vertical": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "horizontal": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "radius": {
+        "$value": "{border.radius.medium}",
+        "$type": "dimension"
+      },
+      "background": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.background.tertiary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.background.disabled}",
+            "$type": "color"
+          }
+        }
+      },
+      "border": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.border.secondary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.border.disabled}",
+            "$type": "color"
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          }
+        }
+      },
+      "text": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.foreground.disabled}",
+            "$type": "color"
+          }
+        }
+      },
+      "arrow": {
+        "stroke": {
+          "inset": {
+            "default": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            }
+          },
+          "width": {
+            "default": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            }
+          },
+          "border-color": {
+            "default": {
+              "$value": "transparent",
+              "$type": "string"
+            },
+            "focus": {
+              "$value": "transparent",
+              "$type": "string"
+            },
+            "disabled": {
+              "$value": "transparent",
+              "$type": "string"
+            }
+          }
+        },
+        "fill": {
+          "inset": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "width": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "border-color": {
+            "default": {
+              "$value": "transparent",
+              "$type": "string"
+            },
+            "focus": {
+              "$value": "transparent",
+              "$type": "string"
+            },
+            "disabled": {
+              "$value": "transparent",
+              "$type": "string"
+            }
+          }
+        }
+      }
+    },
+    "tooltip": {
+      "top": {
+        "$value": "{size.neg.xxsmall}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "vertical": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "horizontal": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "min-width": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "radius": {
+        "$value": "{border.radius.medium}",
+        "$type": "dimension"
+      },
+      "background": {
+        "color": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        }
+      },
+      "text": {
+        "color": {
+          "$value": "{sketch.color.background.primary}",
+          "$type": "color"
+        }
+      },
+      "arrow": {
+        "inset": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "width": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "graduation": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "background": {
+        "color": {
+          "$value": "{sketch.color.border.secondary}",
+          "$type": "color"
+        }
+      }
+    },
+    "input": {
+      "top": {
+        "$value": "{size.neg.xxsmall}",
+        "$type": "dimension"
+      },
+      "shadow": {
+        "$value": "{elevation.300Tooltip}",
+        "$type": "shadow"
+      },
+      "border": {
+        "color": {
+          "$value": "{sketch.color.border.secondary}",
+          "$type": "color"
+        },
+        "width": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "offset": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        }
+      },
+      "radius": {
+        "$value": { "value": 10, "unit": "px" },
+        "$type": "dimension"
+      },
+      "background": {
+        "color": {
+          "$value": "{sketch.color.background.primary}",
+          "$type": "color"
+        }
+      },
+      "padding": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "width": {
+        "$value": "{size.pos.xxlarge}",
+        "$type": "dimension"
+      }
+    }
+  }
+}
