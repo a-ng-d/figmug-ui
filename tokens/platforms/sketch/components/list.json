@@ -1,0 +1,36 @@
+{
+  "list": {
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.background.primary}",
+          "$type": "color"
+        },
+        "alternate": {
+          "$value": "{sketch.color.background.secondary}",
+          "$type": "color"
+        }
+      }
+    },
+    "padding": {
+      "vertical": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "horizontal": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{sketch.color.border.primary}",
+        "$type": "color"
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "bar": {
+    "minHeight": {
+      "$value": "{size.pos.large}",
+      "$type": "dimension"
+    },
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "default": {
+        "vertical": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "horizontal": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      },
+      "mobile": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      }
+    },
+    "background": {
+      "color": {
+        "$value": "transparent",
+        "$type": "color"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{sketch.color.border.primary}",
+        "$type": "color"
+      }
+    },
+    "height": {
+      "compact": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

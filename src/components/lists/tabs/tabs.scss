@@ -1,7 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .tabs {
   display: flex;
@@ -38,13 +38,39 @@
       text-transform: var(--tabs-tab-text-transform);
     }
 
-    &--with-icon {
-      --tabs-tab-padding: var(--tabs-tab-padding-with-icon);
-    }
-
     &--flex {
       flex: 1;
       overflow: hidden;
+    }
+
+    & {
+      --tabs-tab-padding: var(--tabs-tab-padding-default-vertical) var(--tabs-tab-padding-default-horizontal);
+      --tabs-tab-gap: var(--tabs-tab-gap-default);
+      --tabs-tab-radius: var(--tabs-tab-radius-default);
+      --tabs-tab-height: var(--tabs-tab-height-default);
+      --tabs-tab-icon-width: var(--tabs-tab-icon-width-default);
+      --tabs-tab-icon-height: var(--tabs-tab-icon-height-default);
+      --tabs-tab-text-size: var(--tabs-tab-text-size-default);
+      --tabs-tab-text-transform: var(--tabs-tab-text-transform-default);
+
+      &--with-icon {
+        --tabs-tab-padding: var(--tabs-tab-padding-with-icon-vertical)
+          var(--tabs-tab-padding-with-icon-right) var(--tabs-tab-padding-with-icon-vertical)
+          var(--tabs-tab-padding-with-icon-left);
+      }
+    }
+
+    &:not(&--active) {
+      --tabs-tab-background-color: var(--tabs-tab-background-color-default);
+      --tabs-tab-border-color: var(--tabs-tab-border-color-default);
+      --tabs-tab-border-width: var(--tabs-tab-border-width-default);
+      --tabs-tab-border-offset: var(--tabs-tab-border-offset-default);
+      --tabs-tab-text-color: var(--tabs-tab-text-color-default);
+      --tabs-tab-text-weight: var(--tabs-tab-text-weight-default);
+      --tabs-tab-icon-color: var(--tabs-tab-icon-color-default);
+      --tabs-tab-notification-border-color: var(
+        --tabs-tab-notification-border-color-default
+      );
     }
 
     &:hover:not(&--active) {
@@ -89,7 +115,8 @@
 
   & .tabs__tab--updated:after {
     position: absolute;
-    inset: var(--tabs-tab-notification-inset);
+    inset: var(--tabs-tab-notification-inset-top) var(--tabs-tab-notification-inset-right)
+      var(--tabs-tab-notification-inset-bottom) var(--tabs-tab-notification-inset-left);
     outline: var(--tabs-tab-notification-border-width) solid
       var(--tabs-tab-notification-border-color);
     outline-offset: var(--tabs-tab-notification-border-offset);
@@ -119,7 +146,9 @@
     --tabs-tab-icon-height: var(--tabs-tab-icon-width-alternative);
     --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative);
 
-    --tabs-tab-padding-with-icon: var(--tabs-tab-padding-with-icon-alternative);
+    --tabs-tab-padding: var(--tabs-tab-padding-alternative-with-icon-vertical)
+        var(--tabs-tab-padding-alternative-with-icon-right) var(--tabs-tab-padding-alternative-with-icon-vertical)
+        var(--tabs-tab-padding-alternative-with-icon-left);
 
     --tabs-tab-background-color-hover: var(
       --tabs-tab-background-color-alternative-hover

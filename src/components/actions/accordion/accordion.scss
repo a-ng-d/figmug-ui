@@ -1,12 +1,12 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .accordion {
   cursor: default;
-  border-bottom: var(--accordion-border);
-  padding: var(--accordion-padding);
+  border-bottom: var(--accordion-border-width) solid var(--accordion-border-color);
+  padding: var(--accordion-row-padding-vertical) var(--accordion-row-padding-horizontal);
   user-select: none;
 
   &__row {
@@ -14,13 +14,14 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--accordion-row-gap);
-    padding: var(--accordion-row-padding);
+    padding: var(--accordion-row-padding-vertical)
+      var(--accordion-row-padding-horizontal);
     height: var(--accordion-row-height);
 
-    --section_title-text-color: var(--accordion-text-color);
-    --text-color-primary: var(--accordion-text-color);
-    --icon-picto-color: var(--accordion-icon-color);
-    --icon_button-icon-color: var(--accordion-icon-color);
+    --section_title-text-color: var(--accordion-text-color-default);
+    --text-color-primary: var(--accordion-text-color-default);
+    --icon-picto-color: var(--accordion-icon-color-default);
+    --icon_button-icon-color: var(--accordion-icon-color-default);
 
     &:hover,
     &:focus-within {
