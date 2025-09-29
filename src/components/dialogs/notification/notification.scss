@@ -1,10 +1,10 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .notification {
-  --semantic_message-max_width: var(--notification-message-max_width);
+  --semantic_message-max_width: var(--notification-message-max-width);
   display: flex;
   position: absolute;
   justify-content: end;
