@@ -1,7 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .input {
   display: flex;
@@ -31,7 +31,7 @@
       left: var(--input-color-chip-left);
       transform: translateY(-50%);
       appearance: none;
-      opacity: var(--input-color-chip-opacity);
+      opacity: var(--input-color-chip-opacity-default);
       z-index: 1;
       outline: none;
       border: none;
@@ -137,16 +137,24 @@
     border: none;
     border-radius: var(--input-radius);
     background-color: var(--input-background-color);
-    padding: var(--input-padding);
+    padding: var(--input-padding-default);
     width: 100%;
     height: var(--input-height);
     overflow: visible;
     color: var(--input-text-color);
-    font-weight: var(--input-text-font_weight);
-    font-size: var(--input-text-font_size);
-    line-height: var(--input-text-line_height);
+    font-weight: var(--input-text-font-weight);
+    font-size: var(--input-text-font-size);
+    line-height: var(--input-text-line-height);
     font-family: var(--input-text-font-family);
-    letter-spacing: var(--input-text-letter_spacing);
+    letter-spacing: var(--input-text-letter-spacing);
+
+    & {
+      --input-border-width: var(--input-border-width-default);
+      --input-border-offset: var(--input-border-offset-default);
+      --input-border-color: var(--input-border-color-default);
+      --input-background-color: var(--input-background-color-default);
+      --input-text-color: var(--input-text-color-default);
+    }
 
     &::placeholder {
       color: var(--input-text-placeholder-color);
@@ -162,7 +170,7 @@
       --input-border-offset: var(--input-border-offset-empty);
       --input-border-color: var(--input-border-color-empty);
       --input-text-color: var(--input-text-color-empty);
-      --input-text-placeholder-color: var(--input-placeholder-text-color-empty);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-empty);
     }
 
     &:placeholder-shown:hover {
@@ -172,7 +180,7 @@
       --input-border-color: var(--input-border-color-empty-hover);
       --input-text-color: var(--input-text-color-empty-hover);
       --input-text-placeholder-color: var(
-        --input-placeholder-text-color-empty-hover
+        --input-text-placeholder-color-empty-hover
       );
     }
 
@@ -183,7 +191,7 @@
       --input-border-color: var(--input-border-color-empty-focus);
       --input-text-color: var(--input-text-color-empty-focus);
       --input-text-placeholder-color: var(
-        --input-placeholder-text-color-empty-focus
+        --input-text-placeholder-color-empty-focus
       );
     }
 
@@ -194,7 +202,7 @@
       --input-border-color: var(--input-border-color-empty-error);
       --input-text-color: var(--input-text-color-empty-error);
       --input-text-placeholder-color: var(
-        --input-placeholder-text-color-empty-error
+        --input-text-placeholder-color-empty-error
       );
     }
 
@@ -205,7 +213,7 @@
       --input-border-color: var(--input-border-color-empty-error-hover);
       --input-text-color: var(--input-text-color-empty-error-hover);
       --input-text-placeholder-color: var(
-        --input-placeholder-text-color-empty-error-hover
+        --input-text-placeholder-color-empty-error-hover
       );
     }
 
@@ -216,7 +224,7 @@
       --input-border-color: var(--input-border-color-empty-error-focus);
       --input-text-color: var(--input-text-color-empty-error-focus);
       --input-text-placeholder-color: var(
-        --input-placeholder-text-color-empty-error-focus
+        --input-text-placeholder-color-empty-error-focus
       );
     }
 
@@ -226,7 +234,7 @@
       --input-border-offset: var(--input-border-offset-hover);
       --input-border-color: var(--input-border-color-hover);
       --input-text-color: var(--input-text-color-hover);
-      --input-text-placeholder-color: var(--input-placeholder-text-color-hover);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-hover);
     }
 
     &:focus {
@@ -244,7 +252,7 @@
       --input-border-offset: var(--input-border-offset-error);
       --input-border-color: var(--input-border-color-error);
       --input-text-color: var(--input-text-color-error);
-      --input-text-placeholder-color: var(--input-placeholder-text-color-error);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-error);
     }
 
     &--error:hover {
@@ -254,7 +262,7 @@
       --input-border-color: var(--input-border-color-error-hover);
       --input-text-color: var(--input-text-color-error-hover);
       --input-text-placeholder-color: var(
-        --input-placeholder-text-color-error-hover
+        --input-text-placeholder-color-error-hover
       );
     }
 
@@ -265,7 +273,7 @@
       --input-border-color: var(--input-border-color-error-focus);
       --input-text-color: var(--input-text-color-error-focus);
       --input-text-placeholder-color: var(
-        --input-placeholder-text-color-error-focus
+        --input-text-placeholder-color-error-focus
       );
     }
 
@@ -276,7 +284,7 @@
       --input-border-color: var(--input-border-color-disabled);
       --input-text-color: var(--input-text-color-disabled);
       --input-text-placeholder-color: var(
-        --input-placeholder-text-color-disabled
+        --input-text-placeholder-color-disabled
       );
     }
 
@@ -306,7 +314,7 @@
       --input-border-offset: var(--input-border-offset-hover);
       --input-border-color: var(--input-border-color-hover);
       --input-text-color: var(--input-text-color-hover);
-      --input-text-placeholder-color: var(--input-placeholder-text-color-hover);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-hover);
     }
     &:disabled[type='color' i] {
       --input-color-chip-opacity: var(--input-color-chip-opacity-disabled);
@@ -325,6 +333,10 @@
     align-items: center;
     gap: var(--input-status-gap);
     height: var(--input-status-height);
+
+    & {
+      --input-status-height: var(--input-status-height-default);
+    }
   }
 
   &--long-text {
@@ -339,15 +351,15 @@
   cursor: inherit;
   padding: var(--input-textarea-padding);
   width: 100%;
-  min-height: var(--input-textarea-min_height);
+  min-height: var(--input-textarea-min-height);
   overflow: visible;
   overflow-y: auto;
   resize: none;
-  font-weight: var(--input-text-font_weight);
-  font-size: var(--input-text-font_size);
-  line-height: var(--input-text-line_height);
+  font-weight: var(--input-text-font-weight);
+  font-size: var(--input-text-font-size);
+  line-height: var(--input-text-line-height);
   font-family: var(--input-text-font-family);
-  letter-spacing: var(--input-text-letter_spacing);
+  letter-spacing: var(--input-text-letter-spacing);
 
   --input-border-width: var(--input-border-width-empty);
   --input-border-offset: var(--input-border-offset-empty);

@@ -10,4 +10,5 @@
   width: var(--icon-chip-width);
   height: var(--icon-chip-height);
   user-select: none;
+  pointer-events: auto;
 }

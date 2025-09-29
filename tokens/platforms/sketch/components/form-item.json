@@ -85,7 +85,10 @@
       "margin": {
         "default": {
           "top": {
-            "$value": "{size.pos.xxsmall}",
+            "$value": {
+              "value": 6,
+              "unit": "px"
+            },
             "$type": "dimension"
           },
           "right": {
@@ -103,7 +106,10 @@
         },
         "multiline": {
           "top": {
-            "$value": "{size.pos.xxsmall}",
+            "$value": {
+              "value": 6,
+              "unit": "px"
+            },
             "$type": "dimension"
           },
           "right": {
