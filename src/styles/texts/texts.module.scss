@@ -71,7 +71,7 @@
   align-items: center;
   gap: var(--text-label-gap);
   cursor: default;
-  padding: var(--text-label-padding);
+  padding: var(--text-label-padding-top) var(--text-label-padding-right) var(--text-label-padding-bottom) var(--text-label-padding-left);
   height: var(--text-label-height);
   color: var(--text-label-color);
   font-weight: var(--text-label-font-weight);
