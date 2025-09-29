@@ -1,7 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .members-list {
   display: inline-flex;
@@ -11,7 +11,7 @@
 
   &__member {
     position: relative;
-    margin-left: var(--members_list-gap);
+    margin-left: var(--members-list-gap);
   }
 
   &__member:first-child {
@@ -20,9 +20,9 @@
 
   &__avatar {
     flex: none;
-    border-radius: var(--members_list-avatar-radius);
-    width: var(--members_list-avatar-width);
-    height: var(--members_list-avatar-height);
+    border-radius: var(--members-list-avatar-radius);
+    width: var(--members-list-avatar-width);
+    height: var(--members-list-avatar-height);
     overflow: hidden;
 
     img {
@@ -35,13 +35,14 @@
     display: flex;
     position: relative;
     align-items: center;
-    padding: var(--members_list-more-padding);
-    height: var(--members_list-avatar-height);
+    padding: var(--members-list-more-padding-top) var(--members-list-more-padding-right)
+      var(--members-list-more-padding-bottom) var(--members-list-more-padding-left);
+    height: var(--members-list-avatar-height);
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    --text-color-primary: var(--members_list-text-color);
+    --text-color-primary: var(--members-list-text-color);
   }
 }
