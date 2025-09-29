@@ -1,7 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .sortable-list {
   margin: 0;
@@ -9,13 +9,13 @@
   list-style-type: none;
 
   &--scrollable {
-    padding: var(--sortable_list-padding);
+    padding: var(--sortable-list-padding-vertical) var(--sortable-list-padding-horizontal);
     height: 100%;
     overflow-y: auto;
   }
 
   &--top-border {
-    border-top: var(--sortable_list-border-width) solid
-      var(--sortable_list-border-color);
+    border-top: var(--sortable-list-border-width) solid
+      var(--sortable-list-border-color);
   }
 }

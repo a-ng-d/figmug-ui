@@ -1,0 +1,24 @@
+{
+  "sortable-list": {
+    "padding": {
+      "horizontal": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "vertical": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{sketch.color.border.primary}",
+        "$type": "color"
+      }
+    }
+  }
+}
