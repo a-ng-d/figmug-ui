@@ -324,8 +324,8 @@
 
   &__clear {
     position: absolute;
-    top: var(--input-top-clearable);
-    right: var(--input-right-clearable);
+    top: var(--input-clearable-top);
+    right: var(--input-clearable-right);
   }
 
   &__status {

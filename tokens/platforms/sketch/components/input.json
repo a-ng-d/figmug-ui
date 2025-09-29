@@ -54,10 +54,7 @@
     },
     "clearable": {
       "top": {
-        "$value": {
-          "value": 5,
-          "unit": "px"
-        },
+        "$value": "{size.pos.xxxsmall}",
         "$type": "dimension"
       },
       "right": {
