@@ -1,7 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .dialog {
   display: flex;
@@ -36,7 +36,7 @@
     overflow: hidden;
 
     &--padding {
-      padding: var(--dialog-cover-padding);
+      padding: var(--dialog-cover-padding-top) var(--dialog-cover-padding-right) var(--dialog-cover-padding-bottom) var(--dialog-cover-padding-left);
     }
   }
 
@@ -46,7 +46,7 @@
     flex-direction: column;
     gap: var(--dialog-text-gap);
     margin: 0;
-    padding: var(--dialog-text-padding);
+    padding: var(--dialog-text-padding-vertical) var(--dialog-text-padding-horizontal);
 
     p {
       margin: 0;
@@ -59,7 +59,7 @@
     flex-direction: column;
     gap: var(--dialog-form-gap);
     margin: 0;
-    padding: var(--dialog-form-padding);
+    padding: var(--dialog-form-padding-top) var(--dialog-form-padding-right) var(--dialog-form-padding-bottom) var(--dialog-form-padding-left);
   }
 }
 
