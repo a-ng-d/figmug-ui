@@ -1,0 +1,17 @@
+{
+  "notification": {
+    "padding": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
+    "message": {
+      "max-width": {
+        "$value": {
+          "value": 400,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      }
+    }
+  }
+}
