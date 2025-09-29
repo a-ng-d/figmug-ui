@@ -173,6 +173,11 @@
   --button-tertiary-border-color-focus: transparent;
   --button-tertiary-border-color-hover: transparent;
   --button-tertiary-border-color-pressed: transparent;
+  --button-tertiary-border-offset-default: var(--size-null);
+  --button-tertiary-border-offset-disabled: var(--size-null);
+  --button-tertiary-border-offset-focus: var(--size-null);
+  --button-tertiary-border-offset-hover: var(--size-null);
+  --button-tertiary-border-offset-pressed: var(--size-null);
   --button-tertiary-border-width-default: var(--size-null);
   --button-tertiary-border-width-disabled: var(--size-null);
   --button-tertiary-border-width-focus: var(--size-null);

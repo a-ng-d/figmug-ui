@@ -578,6 +578,28 @@
             "$type": "dimension"
           }
         },
+        "offset": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
         "color": {
           "default": {
             "$value": "transparent",
