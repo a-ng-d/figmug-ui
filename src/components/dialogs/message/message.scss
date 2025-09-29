@@ -1,17 +1,17 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .message {
   display: flex;
   align-items: start;
   gap: var(--message-gap);
   cursor: default;
-  padding: var(--message-padding);
+  padding: var(--message-padding-top) var(--message-padding-right) var(--message-padding-bottom) var(--message-padding-left);
   user-select: none;
-  --icon-picto-color: var(--message-icon-color);
-  --text-color-primary: var(--message-text-color);
+  --icon-picto-color: var(--message-icon-color-default);
+  --text-color-primary: var(--message-text-color-default);
 
   &--blocked {
     --icon-picto-color: var(--message-icon-color-disabled);
@@ -23,7 +23,7 @@
   }
 
   &__msg {
-    padding: var(--message-message-padding);
+    padding: var(--message-message-padding-vertical) var(--message-message-padding-horizontal);
   }
 
   /* Tips ticker */
@@ -35,8 +35,9 @@
     height: var(--message-ticker-height);
     overflow: hidden;
 
-    &__msg {
-      padding: var(--message-message-padding);
+    .message__msg {
+      padding: var(--message-message-padding-vertical) var(--message-message-padding-horizontal);
+      white-space: nowrap;
     }
 
     &:before,
