@@ -1,24 +1,24 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .section {
   display: flex;
   flex-direction: column;
   gap: var(--section-gap);
   background-color: var(--section-background-color);
-  padding: var(--section-padding);
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
 
   &__child {
-    padding: var(--section-child-padding);
+    padding: var(--section-child-padding-default-top) var(--section-child-padding-default-right) var(--section-child-padding-default-bottom) var(--section-child-padding-default-left);
 
     &--large {
-      padding: var(--section-child-padding-large);
+      padding: var(--section-child-padding-large-top) var(--section-child-padding-large-right) var(--section-child-padding-large-bottom) var(--section-child-padding-large-left);
     }
 
     &--tight {
-      padding: var(--section-child-padding-tight);
+      padding: var(--section-child-padding-tight-top) var(--section-child-padding-tight-right) var(--section-child-padding-tight-bottom) var(--section-child-padding-tight-left);
     }
 
     &--none {
