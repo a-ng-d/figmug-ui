@@ -1,7 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .dropzone {
   display: flex;
@@ -16,9 +16,17 @@
   border-radius: var(--dropzone-radius);
   background-color: var(--dropzone-background-color);
   padding: var(--dropzone-padding);
-  min-width: var(--dropzone-min_width);
-  min-height: var(--dropzone-min_height);
+  min-width: var(--dropzone-min-width);
+  min-height: var(--dropzone-min-height);
   user-select: none;
+
+  & {
+    --dropzone-border-color: var(--dropzone-border-color-default);
+    --dropzone-border-width: var(--dropzone-border-width-default);
+    --dropzone-border-offset: var(--dropzone-border-offset-default);
+    --dropzone-border-style: var(--dropzone-border-style-default);
+    --dropzone-background-color: var(--dropzone-background-color-default);
+  }
 
   &--dragged-over {
     --semantic_message-background-color: var(--dropzone-background-color-over);
