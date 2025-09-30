@@ -1,7 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .select-menu {
   display: flex;
@@ -40,6 +40,15 @@
     padding: var(--dropdown-padding);
     width: auto;
     height: var(--dropdown-height);
+
+    & {
+      --dropdown-background-color: var(--dropdown-background-color-default);
+      --dropdown-border-color: var(--dropdown-border-color-default);
+      --dropdown-border-width: var(--dropdown-border-width-default);
+      --dropdown-border-offset: var(--dropdown-border-offset-default);
+      --dropdown-caret-color: var(--dropdown-caret-color-default);
+      --dropdown-text-color: var(--dropdown-text-color-default);
+    }
 
     &:hover {
       --dropdown-background-color: var(--dropdown-background-color-hover);
@@ -92,7 +101,10 @@
     display: flex;
     align-items: center;
     gap: var(--dropdown-status-gap);
-    margin: var(--dropdown-status-margin);
+    margin: var(--dropdown-status-margin-top)
+      var(--dropdown-status-margin-right)
+      var(--dropdown-status-margin-bottom)
+      var(--dropdown-status-margin-left);
     height: var(--dropdown-status-height);
   }
 
