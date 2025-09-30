@@ -14,8 +14,27 @@
   z-index: 1;
   cursor: ew-resize;
   background: transparent;
-  min-width: var(--knob-min_width);
+  min-width: var(--knob-min-width);
   height: var(--knob-height);
+
+  & {
+    --knob-label-background-color: var(--knob-label-background-color-default);
+    --knob-label-border-color: var(--knob-label-border-color-default);
+    --knob-label-border-width: var(--knob-label-border-width-default);
+    --knob-label-text-color: var(--knob-label-text-color-default);
+    --knob-label-arrow-stroke-inset: var(
+      --knob-label-arrow-stroke-inset-default
+    );
+    --knob-label-arrow-stroke-width: var(
+      --knob-label-arrow-stroke-width-default
+    );
+    --knob-label-arrow-stroke-border-color: var(
+      --knob-label-arrow-stroke-border-color-default
+    );
+    --knob-label-arrow-fill-border-color: var(
+      --knob-label-arrow-fill-border-color-default
+    );
+  }
 
   &:hover {
     --knob-label-background-color: var(--knob-label-background-color-hover);
@@ -67,7 +86,7 @@
     var(--knob-label-border-color);
   border-radius: var(--knob-label-radius);
   background: var(--knob-label-background-color);
-  padding: var(--knob-label-padding);
+  padding: var(--knob-label-padding-vertical) var(--knob-label-padding-horizontal);
   width: 100%;
   height: var(--knob-label-height);
   pointer-events: none;
@@ -111,8 +130,8 @@
   transform: translateX(-50%) translateY(-100%);
   border-radius: var(--knob-tooltip-radius);
   background-color: var(--knob-tooltip-background-color);
-  padding: var(--knob-tooltip-padding);
-  min-width: var(--knob-tooltip-min_width);
+  padding: var(--knob-tooltip-padding-vertical) var(--knob-tooltip-padding-horizontal);
+  min-width: var(--knob-tooltip-min-width);
   pointer-events: none;
   color: var(--knob-tooltip-text-color);
   user-select: none;
