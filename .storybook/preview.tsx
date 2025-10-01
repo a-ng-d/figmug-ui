@@ -24,7 +24,7 @@ const withTheme: Decorator = (Story, context) => {
         'sketch-dark': '#202022',
       }
 
-      const bgValue = backgroundMap[modes]
+      const bgValue = backgroundMap[modes as keyof typeof backgroundMap]
       document.documentElement.style.backgroundColor = bgValue
 
       if (context.globals.backgrounds) {

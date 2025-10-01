@@ -7,6 +7,7 @@ import readline from 'readline'
 import process from 'process'
 import path from 'path'
 import fs from 'fs'
+import chalk from 'chalk'
 
 const readdir = promisify(fs.readdir)
 const readFile = promisify(fs.readFile)
@@ -25,24 +26,45 @@ const __dirname = path.dirname(__filename)
 const rootDir = path.join(__dirname, '..')
 
 // Directories
-const STYLES_TOKEN_DIR = path.join(rootDir, 'src', 'styles', 'tokens')
-const STYLES_TOKEN_MODULES_DIR = path.join(STYLES_TOKEN_DIR, 'modules')
-const ICONS_DIR = path.join(rootDir, 'src', 'icons')
-const COMPONENTS_DIR = path.join(rootDir, 'src', 'components')
+const TERRAZZO_DIR = path.join(rootDir, 'terrazzo')
+const TOKENS_PLATFORMS_DIR = path.join(rootDir, 'tokens', 'platforms')
 
-// Source theme to copy from - using figma-ui3 for everything
-const SOURCE_COLOR_THEME = 'figma-ui3'
-const SOURCE_TYPE_THEME = 'figma-ui3'
-const SOURCE_ICONS = 'figma-ui3'
+// Source theme to copy from - using sketch for everything
+const SOURCE_COLOR_THEME = 'sketch'
+
+/**
+ * Utility functions for colorful logging
+ * @type {{
+ *  info: (message: string) => void,
+ *  success: (message: string) => void,
+ *  warn: (message: string) => void,
+ *  error: (message: string) => void,
+ *  title: (message: string) => void,
+ *  step: (message: string) => void,
+ *  highlight: (text: string) => string,
+ *  path: (text: string) => string
+ * }}
+ */
+const log = {
+  info: (message) => console.log(chalk.blue('ℹ ') + message),
+  success: (message) => console.log(chalk.green('✅ ') + message),
+  warn: (message) => console.log(chalk.yellow('⚠ ') + message),
+  error: (message) => console.error(chalk.red('❌ ') + message),
+  title: (message) => console.log(chalk.bold.cyan('\n' + message)),
+  step: (message) => console.log(chalk.magenta('→ ') + message),
+  highlight: (text) => chalk.bold.cyan(text),
+  path: (text) => chalk.italic.yellow(text)
+}
 
 /**
  * Ask user for theme name
+ * @returns {Promise<string>} The theme name
  */
 function askThemeName() {
   return new Promise((resolve) => {
-    rl.question('Enter the name for your new theme: ', (answer) => {
+    rl.question(chalk.bold.blue('Enter the name for your new theme: '), (answer) => {
       if (!answer.trim()) {
-        console.log('Theme name cannot be empty. Please try again.')
+        log.warn('Theme name cannot be empty. Please try again.')
         return askThemeName().then(resolve)
       }
       resolve(answer.trim().toLowerCase())
@@ -52,581 +74,37 @@ function askThemeName() {
 
 /**
  * Create directories if they don't exist
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
  */
 async function ensureDirectories(themeName) {
-  const iconDir = path.join(ICONS_DIR, themeName)
+  // No need to create icon directories anymore as we're not copying icons
+  const tokenDir = path.join(TOKENS_PLATFORMS_DIR, themeName)
+  const terrazzoDir = path.join(TERRAZZO_DIR, themeName)
 
   try {
-    if (!fs.existsSync(iconDir)) {
-      await mkdir(iconDir, { recursive: true })
-      console.log(`Created icons directory for ${themeName}`)
+    // Create tokens platform directory if it doesn't exist
+    if (!fs.existsSync(tokenDir)) {
+      await mkdir(tokenDir, { recursive: true })
+      log.success(`Created tokens platform directory for ${log.highlight(themeName)}`)
+    }
+
+    // Create terrazzo directory if it doesn't exist
+    if (!fs.existsSync(terrazzoDir)) {
+      await mkdir(terrazzoDir, { recursive: true })
+      log.success(`Created terrazzo directory for ${log.highlight(themeName)}`)
     }
   } catch (err) {
-    console.error(`Error creating directories: ${err.message}`)
-    throw err
+    const error = err instanceof Error ? err : new Error(String(err))
+    log.error(`Error creating directories: ${error.message}`)
+    throw error
   }
-}
-
-/**
- * Create color tokens files
- */
-async function createColorTokens(themeName) {
-  const sourceColorPath = path.join(
-    STYLES_TOKEN_DIR,
-    `${SOURCE_COLOR_THEME}-colors.scss`
-  )
-  const targetColorPath = path.join(
-    STYLES_TOKEN_DIR,
-    `${themeName}-colors.scss`
-  )
-  const sourceModuleColorPath = path.join(
-    STYLES_TOKEN_MODULES_DIR,
-    `${SOURCE_COLOR_THEME}-colors.module.scss`
-  )
-  const targetModuleColorPath = path.join(
-    STYLES_TOKEN_MODULES_DIR,
-    `${themeName}-colors.module.scss`
-  )
-
-  try {
-    // Read source color file
-    let colorContent = await readFile(sourceColorPath, 'utf8')
-
-    // Replace all instances of source theme name with new theme name
-    colorContent = colorContent
-      // Handle variable names
-      .replace(
-        new RegExp(`${SOURCE_COLOR_THEME}-color`, 'g'),
-        `${themeName}-color`
-      )
-      // Handle data-theme with double quotes
-      .replace(
-        new RegExp(`\\[data-theme="${SOURCE_COLOR_THEME}"\\]`, 'g'),
-        `[data-theme="${themeName}"]`
-      )
-      // Handle data-theme with single quotes
-      .replace(
-        new RegExp(`\\[data-theme='${SOURCE_COLOR_THEME}'\\]`, 'g'),
-        `[data-theme='${themeName}']`
-      )
-      // Handle data-mode
-      .replace(
-        new RegExp(`\\[data-mode='${SOURCE_COLOR_THEME}-light'\\]`, 'g'),
-        `[data-mode='${themeName}-light']`
-      )
-      .replace(
-        new RegExp(`\\[data-mode='${SOURCE_COLOR_THEME}-dark'\\]`, 'g'),
-        `[data-mode='${themeName}-dark']`
-      )
-      .replace(
-        new RegExp(`\\[data-mode="${SOURCE_COLOR_THEME}-light"\\]`, 'g'),
-        `[data-mode="${themeName}-light"]`
-      )
-      .replace(
-        new RegExp(`\\[data-mode="${SOURCE_COLOR_THEME}-dark"\\]`, 'g'),
-        `[data-mode="${themeName}-dark"]`
-      )
-      // Handle direct references to theme-colors
-      .replace(
-        new RegExp(`${SOURCE_COLOR_THEME}-colors`, 'g'),
-        `${themeName}-colors`
-      )
-
-    // Write new color file
-    await writeFile(targetColorPath, colorContent)
-    console.log(`Created color tokens file: ${targetColorPath}`)
-
-    // Check if module file exists and create it if it does
-    if (fs.existsSync(sourceModuleColorPath)) {
-      let moduleColorContent = await readFile(sourceModuleColorPath, 'utf8')
-      moduleColorContent = moduleColorContent
-        // Handle variable names
-        .replace(
-          new RegExp(`${SOURCE_COLOR_THEME}-color`, 'g'),
-          `${themeName}-color`
-        )
-        // Handle data-theme with double quotes
-        .replace(
-          new RegExp(`\\[data-theme="${SOURCE_COLOR_THEME}"\\]`, 'g'),
-          `[data-theme="${themeName}"]`
-        )
-        // Handle data-theme with single quotes
-        .replace(
-          new RegExp(`\\[data-theme='${SOURCE_COLOR_THEME}'\\]`, 'g'),
-          `[data-theme='${themeName}']`
-        )
-        // Handle data-mode
-        .replace(
-          new RegExp(`\\[data-mode='${SOURCE_COLOR_THEME}-light'\\]`, 'g'),
-          `[data-mode='${themeName}-light']`
-        )
-        .replace(
-          new RegExp(`\\[data-mode='${SOURCE_COLOR_THEME}-dark'\\]`, 'g'),
-          `[data-mode='${themeName}-dark']`
-        )
-        .replace(
-          new RegExp(`\\[data-mode="${SOURCE_COLOR_THEME}-light"\\]`, 'g'),
-          `[data-mode="${themeName}-light"]`
-        )
-        .replace(
-          new RegExp(`\\[data-mode="${SOURCE_COLOR_THEME}-dark"\\]`, 'g'),
-          `[data-mode="${themeName}-dark"]`
-        )
-        // Handle import paths
-        .replace(
-          new RegExp(`\\.\\./${SOURCE_COLOR_THEME}-colors\\.scss`, 'g'),
-          `../${themeName}-colors.scss`
-        )
-        // Handle module export names
-        .replace(
-          new RegExp(`module: '${SOURCE_COLOR_THEME}-colors'`, 'g'),
-          `module: '${themeName}-colors'`
-        )
-        .replace(
-          new RegExp(`'${SOURCE_COLOR_THEME}-colors'`, 'g'),
-          `'${themeName}-colors'`
-        )
-        .replace(
-          new RegExp(`"${SOURCE_COLOR_THEME}-colors"`, 'g'),
-          `"${themeName}-colors"`
-        )
-
-      await writeFile(targetModuleColorPath, moduleColorContent)
-      console.log(`Created color module file: ${targetModuleColorPath}`)
-    }
-  } catch (err) {
-    console.error(`Error creating color tokens: ${err.message}`)
-    throw err
-  }
-}
-
-/**
- * Create type tokens files
- */
-async function createTypeTokens(themeName) {
-  const sourceTypePath = path.join(
-    STYLES_TOKEN_DIR,
-    `${SOURCE_TYPE_THEME}-types.scss`
-  )
-  const targetTypePath = path.join(STYLES_TOKEN_DIR, `${themeName}-types.scss`)
-  const sourceModuleTypePath = path.join(
-    STYLES_TOKEN_MODULES_DIR,
-    `${SOURCE_TYPE_THEME}-types.module.scss`
-  )
-  const targetModuleTypePath = path.join(
-    STYLES_TOKEN_MODULES_DIR,
-    `${themeName}-types.module.scss`
-  )
-
-  try {
-    // Read source type file
-    let typeContent = await readFile(sourceTypePath, 'utf8')
-
-    // Replace all instances of source theme name with new theme name
-    typeContent = typeContent
-      // Handle data-theme with single quotes
-      .replace(
-        new RegExp(`\\[data-theme='${SOURCE_TYPE_THEME}'\\]`, 'g'),
-        `[data-theme='${themeName}']`
-      )
-      // Handle data-theme with double quotes
-      .replace(
-        new RegExp(`\\[data-theme="${SOURCE_TYPE_THEME}"\\]`, 'g'),
-        `[data-theme="${themeName}"]`
-      )
-      // Handle direct references to theme-types
-      .replace(
-        new RegExp(`${SOURCE_TYPE_THEME}-types`, 'g'),
-        `${themeName}-types`
-      )
-
-    // Write new type file
-    await writeFile(targetTypePath, typeContent)
-    console.log(`Created type tokens file: ${targetTypePath}`)
-
-    // Check if module file exists and create it if it does
-    if (fs.existsSync(sourceModuleTypePath)) {
-      let moduleTypeContent = await readFile(sourceModuleTypePath, 'utf8')
-      moduleTypeContent = moduleTypeContent
-        // Handle data-theme
-        .replace(
-          new RegExp(`\\[data-theme='${SOURCE_TYPE_THEME}'\\]`, 'g'),
-          `[data-theme='${themeName}']`
-        )
-        .replace(
-          new RegExp(`\\[data-theme="${SOURCE_TYPE_THEME}"\\]`, 'g'),
-          `[data-theme="${themeName}"]`
-        )
-        // Handle import paths
-        .replace(
-          new RegExp(`\\.\\./${SOURCE_TYPE_THEME}-types\\.scss`, 'g'),
-          `../${themeName}-types.scss`
-        )
-        // Handle module export names
-        .replace(
-          new RegExp(`module: '${SOURCE_TYPE_THEME}-types'`, 'g'),
-          `module: '${themeName}-types'`
-        )
-        .replace(
-          new RegExp(`'${SOURCE_TYPE_THEME}-types'`, 'g'),
-          `'${themeName}-types'`
-        )
-        .replace(
-          new RegExp(`"${SOURCE_TYPE_THEME}-types"`, 'g'),
-          `"${themeName}-types"`
-        )
-
-      await writeFile(targetModuleTypePath, moduleTypeContent)
-      console.log(`Created type module file: ${targetModuleTypePath}`)
-    }
-
-    // Create the text SCSS file
-    await createTextsScss(themeName)
-  } catch (err) {
-    console.error(`Error creating type tokens: ${err.message}`)
-    throw err
-  }
-}
-
-/**
- * Create texts SCSS file and update the main texts module
- */
-async function createTextsScss(themeName) {
-  const stylesTextsDir = path.join(rootDir, 'src', 'styles', 'texts')
-  const sourceTextsScssPath = path.join(
-    stylesTextsDir,
-    `${SOURCE_TYPE_THEME}.scss`
-  )
-  const targetTextsScssPath = path.join(stylesTextsDir, `${themeName}.scss`)
-  const textsModulePath = path.join(stylesTextsDir, 'texts.module.scss')
-
-  try {
-    // Read source texts SCSS file
-    let textsScssContent = await readFile(sourceTextsScssPath, 'utf8')
-
-    // Replace all references to the source theme with the new theme
-    textsScssContent = textsScssContent
-      // Replace data-theme attributes
-      .replace(
-        new RegExp(`\\[data-theme='${SOURCE_TYPE_THEME}'\\]`, 'g'),
-        `[data-theme='${themeName}']`
-      )
-      .replace(
-        new RegExp(`\\[data-theme="${SOURCE_TYPE_THEME}"\\]`, 'g'),
-        `[data-theme="${themeName}"]`
-      )
-      // Replace color variable references
-      .replace(
-        new RegExp(`--${SOURCE_TYPE_THEME}-color-`, 'g'),
-        `--${themeName}-color-`
-      )
-
-    // Write to the new file
-    await writeFile(targetTextsScssPath, textsScssContent)
-    console.log(`Created texts SCSS file: ${targetTextsScssPath}`)
-
-    // Update the texts.module.scss file to import the new theme
-    let textsModuleContent = await readFile(textsModulePath, 'utf8')
-
-    // Check if the import already exists
-    const importRegex = new RegExp(`@import ['"]${themeName}['"];`, 'g')
-    if (!importRegex.test(textsModuleContent)) {
-      // Add the import at the top with other imports
-      textsModuleContent = textsModuleContent.replace(
-        /(@import ['"][^'"]+['"];[\r\n]+)+/,
-        (match) => `${match}@import '${themeName}';\n`
-      )
-
-      await writeFile(textsModulePath, textsModuleContent)
-      console.log(
-        `Updated texts module to import the new theme: ${textsModulePath}`
-      )
-    }
-  } catch (err) {
-    console.error(`Error creating texts SCSS file: ${err.message}`)
-    throw err
-  }
-}
-
-/**
- * Copy icons from source theme
- */
-async function copyIcons(themeName) {
-  const sourceIconsDir = path.join(ICONS_DIR, SOURCE_ICONS)
-  const targetIconsDir = path.join(ICONS_DIR, themeName)
-
-  try {
-    const icons = await readdir(sourceIconsDir)
-
-    for (const icon of icons) {
-      const sourceIconPath = path.join(sourceIconsDir, icon)
-      const targetIconPath = path.join(targetIconsDir, icon)
-
-      // Only copy files (not directories)
-      if (fs.statSync(sourceIconPath).isFile())
-        await copyFile(sourceIconPath, targetIconPath)
-    }
-
-    console.log(
-      `Copied ${icons.length} icons from ${SOURCE_ICONS} to ${themeName}`
-    )
-
-    // Create the icon SCSS file
-    await createIconsScss(themeName)
-  } catch (err) {
-    console.error(`Error copying icons: ${err.message}`)
-    throw err
-  }
-}
-
-/**
- * Create icons SCSS file and update the main icons module
- */
-async function createIconsScss(themeName) {
-  const stylesIconsDir = path.join(rootDir, 'src', 'styles', 'icons')
-  const sourceIconsScssPath = path.join(
-    stylesIconsDir,
-    `${SOURCE_COLOR_THEME}.scss`
-  )
-  const targetIconsScssPath = path.join(stylesIconsDir, `${themeName}.scss`)
-  const iconsModulePath = path.join(stylesIconsDir, 'icons.module.scss')
-
-  try {
-    // Read source icons SCSS file
-    let iconsScssContent = await readFile(sourceIconsScssPath, 'utf8')
-
-    // Replace all references to the source theme with the new theme
-    iconsScssContent = iconsScssContent
-      .replace(
-        new RegExp(`\\[data-theme='${SOURCE_COLOR_THEME}'\\]`, 'g'),
-        `[data-theme='${themeName}']`
-      )
-      .replace(
-        new RegExp(`\\[data-theme="${SOURCE_COLOR_THEME}"\\]`, 'g'),
-        `[data-theme="${themeName}"]`
-      )
-
-    // Write to the new file
-    await writeFile(targetIconsScssPath, iconsScssContent)
-    console.log(`Created icons SCSS file: ${targetIconsScssPath}`)
-
-    // Update the icons.module.scss file to import the new theme
-    let iconsModuleContent = await readFile(iconsModulePath, 'utf8')
-
-    // Check if the import already exists
-    const importRegex = new RegExp(`@import ['"]${themeName}['"];`, 'g')
-    if (!importRegex.test(iconsModuleContent)) {
-      // Add the import at the top with other imports
-      iconsModuleContent = iconsModuleContent.replace(
-        /(@import ['"][^'"]+['"];[\r\n]+)+/,
-        (match) => `${match}@import '${themeName}';\n`
-      )
-
-      await writeFile(iconsModulePath, iconsModuleContent)
-      console.log(
-        `Updated icons module to import the new theme: ${iconsModulePath}`
-      )
-    }
-  } catch (err) {
-    console.error(`Error creating icons SCSS file: ${err.message}`)
-    throw err
-  }
-}
-
-/**
- * Create SCSS files for components
- */
-async function createComponentScssFiles(themeName) {
-  try {
-    // Get all component folders recursively
-    const componentFolders = await getComponentFolders(COMPONENTS_DIR)
-    let fileCount = 0
-    let importCount = 0
-
-    for (const folder of componentFolders) {
-      // Check if there's a component scss file to determine if we should create a theme file
-      const componentFiles = await readdir(folder)
-
-      // Check if this component has any theme-specific SCSS files
-      const hasThemeFiles = componentFiles.some(
-        (file) =>
-          file.endsWith('.scss') &&
-          (file.includes('figma-ui') ||
-            file.includes('sketch') ||
-            file.includes('penpot'))
-      )
-
-      if (hasThemeFiles) {
-        const targetScssPath = path.join(folder, `${themeName}.scss`)
-
-        // Find a reference file to copy from
-        const referenceFileName = componentFiles.find((file) =>
-          file.includes(`${SOURCE_COLOR_THEME}.scss`)
-        )
-
-        if (referenceFileName) {
-          const referenceFilePath = path.join(folder, referenceFileName)
-          let scssContent = await readFile(referenceFilePath, 'utf8')
-
-          // Replace theme-specific class names and attributes
-          scssContent = scssContent
-            // Handle data-theme with double quotes
-            .replace(
-              new RegExp(`\\[data-theme="${SOURCE_COLOR_THEME}"\\]`, 'g'),
-              `[data-theme="${themeName}"]`
-            )
-            // Handle data-theme with single quotes (which is more common in SCSS)
-            .replace(
-              new RegExp(`\\[data-theme='${SOURCE_COLOR_THEME}'\\]`, 'g'),
-              `[data-theme='${themeName}']`
-            )
-            // Handle data-mode for light/dark themes
-            .replace(
-              new RegExp(`\\[data-mode="${SOURCE_COLOR_THEME}-light"\\]`, 'g'),
-              `[data-mode="${themeName}-light"]`
-            )
-            .replace(
-              new RegExp(`\\[data-mode='${SOURCE_COLOR_THEME}-light'\\]`, 'g'),
-              `[data-mode='${themeName}-light']`
-            )
-            .replace(
-              new RegExp(`\\[data-mode="${SOURCE_COLOR_THEME}-dark"\\]`, 'g'),
-              `[data-mode="${themeName}-dark"]`
-            )
-            .replace(
-              new RegExp(`\\[data-mode='${SOURCE_COLOR_THEME}-dark'\\]`, 'g'),
-              `[data-mode='${themeName}-dark']`
-            )
-            // Handle variable references
-            .replace(
-              new RegExp(`var\\(--${SOURCE_COLOR_THEME}-color-`, 'g'),
-              `var(--${themeName}-color-`
-            )
-            // Replace color variable references
-            .replace(
-              new RegExp(`--${SOURCE_COLOR_THEME}-color-`, 'g'),
-              `--${themeName}-color-`
-            )
-            // Replace any remaining instances of theme name in class names or IDs
-            .replace(
-              new RegExp(`\\.${SOURCE_COLOR_THEME}-`, 'g'),
-              `.${themeName}-`
-            )
-            .replace(
-              new RegExp(`#${SOURCE_COLOR_THEME}-`, 'g'),
-              `#${themeName}-`
-            )
-
-          await writeFile(targetScssPath, scssContent)
-          fileCount++
-
-          // Find the main SCSS file for the component (if it exists)
-          // Look for the most appropriate main SCSS file
-          // First try to find one without theme names
-          let mainScssFileName = componentFiles.find(
-            (file) =>
-              file.endsWith('.scss') &&
-              !file.includes('figma') &&
-              (file === 'styles.scss' || file === 'style.scss')
-          )
-
-          // If not found, try to find the one named after the component folder or with the component name
-          if (!mainScssFileName) {
-            const folderName = path.basename(folder)
-            mainScssFileName = componentFiles.find(
-              (file) =>
-                file.endsWith('.scss') &&
-                !file.includes('figma') &&
-                (file.includes(folderName) || file === 'index.scss')
-            )
-          }
-
-          // If still not found, just get any scss file that's not theme-specific
-          if (!mainScssFileName)
-            mainScssFileName = componentFiles.find(
-              (file) => file.endsWith('.scss') && !file.includes('figma')
-            )
-
-          if (mainScssFileName) {
-            const mainScssPath = path.join(folder, mainScssFileName)
-            let mainScssContent = await readFile(mainScssPath, 'utf8')
-
-            // Check if the import already exists
-            const importRegex = new RegExp(`@import ['"]${themeName}['"];`, 'g')
-            if (!importRegex.test(mainScssContent)) {
-              // If there are existing imports, add our import to them
-              if (mainScssContent.includes('@import ')) {
-                // Find the last import statement and add ours after it
-                const importMatches = mainScssContent.match(
-                  /@import\s+['"][^'"]+['"];/g
-                )
-                if (importMatches && importMatches.length > 0) {
-                  const lastImport = importMatches[importMatches.length - 1]
-                  mainScssContent = mainScssContent.replace(
-                    lastImport,
-                    `${lastImport}\n@import '${themeName}';`
-                  )
-                }
-                // Fallback if regex failed but we know imports exist
-                else
-                  mainScssContent = `@import '${themeName}';\n${mainScssContent}`
-              }
-              // No imports found, add at the beginning
-              else
-                mainScssContent = `@import '${themeName}';\n${mainScssContent}`
-
-              await writeFile(mainScssPath, mainScssContent)
-              importCount++
-              console.log(
-                `Added ${themeName} import to ${path.relative(rootDir, mainScssPath)}`
-              )
-            } else
-              console.log(
-                `Import for ${themeName} already exists in ${path.relative(rootDir, mainScssPath)}`
-              )
-          }
-        }
-      }
-    }
-
-    console.log(
-      `Created ${fileCount} component SCSS files for the ${themeName} theme`
-    )
-    console.log(`Added ${importCount} imports to main SCSS component files`)
-  } catch (err) {
-    console.error(`Error creating component SCSS files: ${err.message}`)
-    throw err
-  }
-}
-
-/**
- * Get all component folders recursively
- */
-async function getComponentFolders(dir) {
-  const folders = []
-  const entries = await readdir(dir, { withFileTypes: true })
-
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name)
-
-    if (entry.isDirectory()) {
-      // Check if it's a component folder (has .tsx files)
-      const files = await readdir(fullPath)
-      const hasTsxFiles = files.some((file) => file.endsWith('.tsx'))
-
-      if (hasTsxFiles) folders.push(fullPath)
-
-      // Recursively get subfolders
-      const subfolders = await getComponentFolders(fullPath)
-      folders.push(...subfolders)
-    }
-  }
-
-  return folders
 }
 
 /**
  * Update Storybook preview configuration to include the new theme
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
  */
 async function updateStorybookPreview(themeName) {
   const previewPath = path.join(rootDir, '.storybook', 'preview.tsx')
@@ -635,28 +113,7 @@ async function updateStorybookPreview(themeName) {
     // Read the preview file
     let previewContent = await readFile(previewPath, 'utf8')
 
-    // 1. Add import statements for the new theme modules after the existing imports
-    // Find the last import statement for modules and add after it
-    const importRegex =
-      /(import '@styles\/tokens\/modules\/.*?-types\.module\.scss'.*?\n)/gs
-    const matches = [...previewContent.matchAll(importRegex)]
-    const lastImportStatement =
-      matches.length > 0 ? matches[matches.length - 1][0] : null
-
-    if (lastImportStatement) {
-      // Find position of the last import and add our imports after it
-      const lastImportIndex =
-        previewContent.lastIndexOf(lastImportStatement) +
-        lastImportStatement.length
-      const beforeLastImport = previewContent.substring(0, lastImportIndex)
-      const afterLastImport = previewContent.substring(lastImportIndex)
-
-      // Add our imports right after the last one
-      const importStatements = `\nimport '@styles/tokens/modules/${themeName}-colors.module.scss'\nimport '@styles/tokens/modules/${themeName}-types.module.scss'`
-      previewContent = beforeLastImport + importStatements + afterLastImport
-    }
-
-    // 2. Add the new theme to the toolbar items list
+    // 1. Add the new theme to the toolbar items list
     const themesItemsRegex = /(items: \[.*?'sketch'.*?)(\],)/
     const updatedThemesItems = `$1, '${themeName}'$2`
     previewContent = previewContent.replace(
@@ -664,12 +121,12 @@ async function updateStorybookPreview(themeName) {
       updatedThemesItems
     )
 
-    // 3. Add the light and dark modes for the new theme with proper indentation
+    // 2. Add the light and dark modes for the new theme with proper indentation
     const modesItemsRegex = /(items: \[\s*.*?'sketch-dark',\s*)/s
     const updatedModesItems = `$1  '${themeName}-light',\n          '${themeName}-dark',\n        `
     previewContent = previewContent.replace(modesItemsRegex, updatedModesItems)
 
-    // 4. Add background colors for the new theme modes with proper indentation
+    // 3. Add background colors for the new theme modes with proper indentation
     const backgroundMapRegex =
       /(const backgroundMap = \{.*?'sketch-dark': '#202022',\s*)/s
     const updatedBackgroundMap = `$1  '${themeName}-light': '#ffffff',\n        '${themeName}-dark': '#202022',\n      `
@@ -680,48 +137,488 @@ async function updateStorybookPreview(themeName) {
 
     // Write the updated content back to the file
     await writeFile(previewPath, previewContent)
-    console.log(
-      `✅ Updated Storybook preview configuration for ${themeName} theme`
+    log.success(
+      `Updated Storybook preview.tsx with configuration for ${log.highlight(themeName)}`
     )
   } catch (err) {
-    console.error(`Error updating Storybook preview: ${err.message}`)
-    throw err
+    const error = err instanceof Error ? err : new Error(String(err))
+    log.error(`Error updating Storybook preview: ${error.message}`)
+    throw error
   }
 }
 
 /**
  * Main function
  */
+/**
+ * Create Terrazzo configuration files for the new theme
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
+ */
+async function createTerrazzoFiles(themeName) {
+  const sourceTerrazzoDir = path.join(TERRAZZO_DIR, SOURCE_COLOR_THEME)
+  const targetTerrazzoDir = path.join(TERRAZZO_DIR, themeName)
+
+  try {
+    // Create the target directory if it doesn't exist
+    if (!fs.existsSync(targetTerrazzoDir)) {
+      await mkdir(targetTerrazzoDir, { recursive: true })
+      console.log(`Created Terrazzo directory for ${themeName}`)
+    }
+
+    // Create the components directory if needed
+    const targetComponentsDir = path.join(targetTerrazzoDir, 'components')
+    if (!fs.existsSync(targetComponentsDir)) {
+      await mkdir(targetComponentsDir, { recursive: true })
+      console.log(`Created Terrazzo components directory for ${themeName}`)
+    }
+
+    // Process root Terrazzo configuration files
+    const terrazzFiles = await readdir(sourceTerrazzoDir)
+
+    for (const file of terrazzFiles) {
+      const sourceFilePath = path.join(sourceTerrazzoDir, file)
+      const targetFilePath = path.join(targetTerrazzoDir, file)
+
+      // Only copy files (not directories) that are JavaScript files
+      if (fs.statSync(sourceFilePath).isFile() && file.endsWith('.js')) {
+        // Read the source file content
+        let content = await readFile(sourceFilePath, 'utf8')
+
+        // Replace all instances of source theme name with new theme name
+        content = content
+          .replace(
+            new RegExp(`\\[data-theme="${SOURCE_COLOR_THEME}"\\]`, 'g'),
+            `[data-theme="${themeName}"]`
+          )
+          .replace(
+            new RegExp(`\\[data-theme='${SOURCE_COLOR_THEME}'\\]`, 'g'),
+            `[data-theme='${themeName}']`
+          )
+          .replace(
+            new RegExp(`\\[data-mode="${SOURCE_COLOR_THEME}-light"\\]`, 'g'),
+            `[data-mode="${themeName}-light"]`
+          )
+          .replace(
+            new RegExp(`\\[data-mode="${SOURCE_COLOR_THEME}-dark"\\]`, 'g'),
+            `[data-mode="${themeName}-dark"]`
+          )
+          .replace(
+            new RegExp(`\\[data-mode='${SOURCE_COLOR_THEME}-light'\\]`, 'g'),
+            `[data-mode='${themeName}-light']`
+          )
+          .replace(
+            new RegExp(`\\[data-mode='${SOURCE_COLOR_THEME}-dark'\\]`, 'g'),
+            `[data-mode='${themeName}-dark']`
+          )
+          .replace(
+            new RegExp(`filename: 'styles/${SOURCE_COLOR_THEME}.scss'`, 'g'),
+            `filename: 'styles/${themeName}.scss'`
+          )
+          .replace(
+            new RegExp(`filename: '${SOURCE_COLOR_THEME}-`, 'g'),
+            `filename: '${themeName}-`
+          )
+          .replace(
+            new RegExp(`'./tokens/platforms/${SOURCE_COLOR_THEME}/`, 'g'),
+            `'./tokens/platforms/${themeName}/`
+          )
+          // Update root selectors with data-theme
+          .replace(
+            new RegExp(`:root\\[data-theme="${SOURCE_COLOR_THEME}"\\]`, 'g'),
+            `:root[data-theme="${themeName}"]`
+          )
+          .replace(
+            new RegExp(`:root\\[data-theme='${SOURCE_COLOR_THEME}'\\]`, 'g'),
+            `:root[data-theme='${themeName}']`
+          )
+          // Enable @import 'styles/{theme}' by replacing the old theme name
+          .replace(
+            new RegExp(`@import 'styles/${SOURCE_COLOR_THEME}'`, 'g'),
+            `@import 'styles/${themeName}'`
+          )
+          .replace(
+            new RegExp(`@import "styles/${SOURCE_COLOR_THEME}"`, 'g'),
+            `@import "styles/${themeName}"`
+          )
+          // Update theme in modeSelectors configuration
+          .replace(
+            new RegExp(`theme: ['"']${SOURCE_COLOR_THEME}['"']`, 'g'),
+            `theme: '${themeName}'`
+          )
+          .replace(
+            new RegExp(`theme: ${SOURCE_COLOR_THEME}`, 'g'),
+            `theme: ${themeName}`
+          )
+
+        // For text and colors terrazzo files, ensure icon.json is included but icon tokens are excluded
+        if (file === 'terrazzo.colors.js' || file === 'terrazzo.text.js') {
+          // Check if icon.json is already included in the tokens array
+          if (!content.includes(`./tokens/platforms/${themeName}/icon.json`))
+            // Add icon.json to the tokens array
+            content = content.replace(
+              /tokens: \[([\s\S]*?)\]/,
+              (match, tokensContent) => {
+                return `tokens: [${tokensContent}${tokensContent.endsWith(',') ? '' : ','}\n    './tokens/platforms/${themeName}/icon.json',\n  ]`
+              }
+            )
+
+          // Add exclude pattern for icon.* tokens if needed
+          if (!content.includes(`'${themeName}.icon.*'`))
+            content = content.replace(
+              /exclude: \[([\s\S]*?)\]/,
+              (match, excludeContent) => {
+                return `exclude: [${excludeContent}${excludeContent.endsWith(',') ? '' : ','}\n        '${themeName}.icon.*',\n      ]`
+              }
+            )
+        }
+
+        // Write the updated content to the target file
+        await writeFile(targetFilePath, content)
+        log.step(`Created Terrazzo configuration file: ${log.path(path.relative(rootDir, targetFilePath))}`)
+      }
+    }
+
+    // Process component Terrazzo configuration files
+    const sourceComponentsDir = path.join(sourceTerrazzoDir, 'components')
+
+    if (fs.existsSync(sourceComponentsDir)) {
+      const componentFiles = await readdir(sourceComponentsDir)
+
+      for (const file of componentFiles) {
+        const sourceFilePath = path.join(sourceComponentsDir, file)
+        const targetFilePath = path.join(targetComponentsDir, file)
+
+        // Only copy files that are JavaScript files
+        if (fs.statSync(sourceFilePath).isFile() && file.endsWith('.js')) {
+          // Read the source file content
+          let content = await readFile(sourceFilePath, 'utf8')
+
+          // Replace all instances of source theme name with new theme name
+          content = content
+            .replace(
+              new RegExp(`./tokens/platforms/${SOURCE_COLOR_THEME}/`, 'g'),
+              `./tokens/platforms/${themeName}/`
+            )
+            .replace(
+              new RegExp(`filename: 'styles/${SOURCE_COLOR_THEME}.scss'`, 'g'),
+              `filename: 'styles/${themeName}.scss'`
+            )
+            // Update theme in modeSelectors configuration
+            .replace(
+              new RegExp(`theme: ['"']${SOURCE_COLOR_THEME}['"']`, 'g'),
+              `theme: '${themeName}'`
+            )
+            .replace(
+              new RegExp(`theme: ${SOURCE_COLOR_THEME}`, 'g'),
+              `theme: ${themeName}`
+            )
+            // Update root selectors with data-theme
+            .replace(
+              new RegExp(`:root\\[data-theme="${SOURCE_COLOR_THEME}"\\]`, 'g'),
+              `:root[data-theme="${themeName}"]`
+            )
+            .replace(
+              new RegExp(`:root\\[data-theme='${SOURCE_COLOR_THEME}'\\]`, 'g'),
+              `:root[data-theme='${themeName}']`
+            )
+            // Update baseSelector in plugins config
+            .replace(
+              new RegExp(
+                `baseSelector: ':root\\[data-theme="${SOURCE_COLOR_THEME}"\\]'`,
+                'g'
+              ),
+              `baseSelector: ':root[data-theme="${themeName}"]'`
+            )
+            .replace(
+              new RegExp(
+                `baseSelector: ':root\\[data-theme=\\'${SOURCE_COLOR_THEME}\\'\\]'`,
+                'g'
+              ),
+              `baseSelector: ':root[data-theme='${themeName}']'`
+            )
+            // Enable @import 'styles/{theme}' by replacing the old theme name
+            .replace(
+              new RegExp(`@import 'styles/${SOURCE_COLOR_THEME}'`, 'g'),
+              `@import 'styles/${themeName}'`
+            )
+            .replace(
+              new RegExp(`@import "styles/${SOURCE_COLOR_THEME}"`, 'g'),
+              `@import "styles/${themeName}"`
+            )
+
+          // Write the updated content to the target file
+          await writeFile(targetFilePath, content)
+          log.step(`Created Terrazzo component file: ${log.path(path.relative(rootDir, targetFilePath))}`)
+        }
+      }
+    }
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err))
+    console.error(
+      `Error creating Terrazzo configuration files: ${error.message}`
+    )
+    throw error
+  }
+}
+
+/**
+ * Copy platform tokens directory
+ */
+/**
+ * Update component and module SCSS imports
+ * This function will check for and update any import statements in the styles directory
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
+ */
+async function updateScssImports(themeName) {
+  try {
+    // Define paths to look for SCSS files
+    const stylesDir = path.join(rootDir, 'src', 'styles')
+    const componentDir = path.join(rootDir, 'src', 'components')
+
+    // Process files in src/styles
+    await processStylesDirectory(stylesDir, themeName)
+
+    // Process files in src/components recursively
+    await processComponentsDirectory(componentDir, themeName)
+
+    console.log(
+      `Updated SCSS imports for theme ${themeName} across the project`
+    )
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err))
+    console.error(`Error updating SCSS imports: ${error.message}`)
+    throw error
+  }
+}
+
+/**
+ * Process the styles directory to update imports
+ * @param {string} stylesDir - The path to the styles directory
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
+ */
+async function processStylesDirectory(stylesDir, themeName) {
+  try {
+    // Process each subdirectory in styles (tokens, icons, texts, etc.)
+    const entries = await readdir(stylesDir, { withFileTypes: true })
+
+    for (const entry of entries)
+      if (entry.isDirectory()) {
+        const dirPath = path.join(stylesDir, entry.name)
+        const files = await readdir(dirPath)
+
+        // Process each .scss file in the directory
+        for (const file of files)
+          if (file.endsWith('.scss') || file.endsWith('.module.scss')) {
+            const filePath = path.join(dirPath, file)
+            await updateImportsInFile(filePath, themeName)
+          }
+      }
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err))
+    console.error(`Error processing styles directory: ${error.message}`)
+    throw error
+  }
+}
+
+/**
+ * Process components directory recursively for SCSS imports
+ */
+/**
+ * Process the components directory to update imports
+ * @param {string} componentDir - The path to the components directory
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
+ */
+async function processComponentsDirectory(componentDir, themeName) {
+  try {
+    const entries = await readdir(componentDir, { withFileTypes: true })
+
+    for (const entry of entries) {
+      const fullPath = path.join(componentDir, entry.name)
+
+      if (entry.isDirectory()) {
+        // Check for styles directory or .scss files
+        const subEntries = await readdir(fullPath)
+
+        // Check if this component has a styles directory
+        const stylesDir = subEntries.find((item) => item === 'styles')
+        if (stylesDir) {
+          const stylesDirPath = path.join(fullPath, 'styles')
+          if (fs.existsSync(stylesDirPath)) {
+            const styleFiles = await readdir(stylesDirPath)
+            for (const file of styleFiles)
+              if (file.endsWith('.scss')) {
+                const filePath = path.join(stylesDirPath, file)
+                await updateImportsInFile(filePath, themeName)
+              }
+          }
+        }
+
+        // Check for scss files directly in the component directory
+        for (const file of subEntries)
+          if (file.endsWith('.scss')) {
+            const filePath = path.join(fullPath, file)
+            await updateImportsInFile(filePath, themeName)
+          }
+
+        // Recurse into subdirectories
+        await processComponentsDirectory(fullPath, themeName)
+      }
+    }
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err))
+    console.error(`Error processing components directory: ${error.message}`)
+    throw error
+  }
+}
+
+/**
+ * Update import statements in a file
+ * @param {string} filePath - The path to the file
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
+ */
+async function updateImportsInFile(filePath, themeName) {
+  try {
+    // Read file content
+    const content = await readFile(filePath, 'utf8')
+
+    // Check if the file has an import for the source theme
+    const sourceImportRegex = new RegExp(
+      `@import ['"](styles/)?${SOURCE_COLOR_THEME}['"];`,
+      'g'
+    )
+
+    if (sourceImportRegex.test(content)) {
+      // This file already imports the source theme
+      // Check if it already imports the new theme as well
+      const newThemeImportRegex = new RegExp(
+        `@import ['"](styles/)?${themeName}['"];`,
+        'g'
+      )
+
+      if (!newThemeImportRegex.test(content)) {
+        // Add import for the new theme after the source theme import
+        const updatedContent = content.replace(sourceImportRegex, (match) => {
+          return `${match}\n@import ${match.includes('styles/') ? `'styles/${themeName}'` : `'${themeName}'`};`
+        })
+
+        // Write the updated content back to the file
+        await writeFile(filePath, updatedContent)
+        console.log(
+          `Added ${themeName} import to ${path.relative(rootDir, filePath)}`
+        )
+      }
+    }
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err))
+    console.error(`Error updating imports in ${filePath}: ${error.message}`)
+  }
+}
+
+/**
+ * Copy platform tokens from source to new theme
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
+ */
+async function copyPlatformTokens(themeName) {
+  const sourceTokensDir = path.join(TOKENS_PLATFORMS_DIR, SOURCE_COLOR_THEME)
+  const targetTokensDir = path.join(TOKENS_PLATFORMS_DIR, themeName)
+
+  try {
+    // Create the target directory if it doesn't exist
+    if (!fs.existsSync(targetTokensDir)) {
+      await mkdir(targetTokensDir, { recursive: true })
+      console.log(`Created platform tokens directory for ${themeName}`)
+    }
+
+    // Copy all files from the source tokens directory
+    /**
+     * Copy files recursively from source to target
+     * @param {string} sourceDir - Source directory
+     * @param {string} targetDir - Target directory
+     * @returns {Promise<void>}
+     */
+    const copyFilesRecursively = async (sourceDir, targetDir) => {
+      const entries = await readdir(sourceDir, { withFileTypes: true })
+
+      for (const entry of entries) {
+        const sourcePath = path.join(sourceDir, entry.name)
+        const targetPath = path.join(targetDir, entry.name)
+
+        if (entry.isDirectory()) {
+          // Create directory and recurse into it
+          if (!fs.existsSync(targetPath))
+            await mkdir(targetPath, { recursive: true })
+
+          await copyFilesRecursively(sourcePath, targetPath)
+        } else if (entry.isFile()) {
+          // Copy the file
+          await copyFile(sourcePath, targetPath)
+          console.log(`Copied token file: ${targetPath}`)
+        }
+      }
+    }
+
+    await copyFilesRecursively(sourceTokensDir, targetTokensDir)
+    console.log(`Successfully copied all platform tokens for ${themeName}`)
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err))
+    console.error(`Error copying platform tokens: ${error.message}`)
+    throw error
+  }
+}
+
 async function main() {
   try {
-    console.log('Welcome to the Figmug UI Theme Generator!')
-    console.log(
+    log.title('Welcome to the Figmug UI Theme Generator!')
+    log.info(
       'This script will create a new theme based on the existing structure.'
     )
 
     const themeName = await askThemeName()
-    console.log(`Creating new theme: ${themeName}`)
+    log.step(`Creating new theme: ${log.highlight(themeName)}`)
 
-    // Execute all the theme creation tasks
+    // Execute only necessary tasks (tokens JSON and Terrazzo configs)
     await ensureDirectories(themeName)
-    await createColorTokens(themeName)
-    await createTypeTokens(themeName)
-    await copyIcons(themeName)
-    await createComponentScssFiles(themeName)
+    await createTerrazzoFiles(themeName)
+    await copyPlatformTokens(themeName)
+    await updateScssImports(themeName)
     await updateStorybookPreview(themeName)
+    // SCSS files will be generated from tokens using the build-scss.js script
 
-    console.log(`\n✅ Theme "${themeName}" has been successfully created!`)
-    console.log(`\nNext steps:`)
-    console.log(
-      `1. Review and customize the color tokens in src/styles/tokens/${themeName}-colors.scss`
+    log.success(`Theme "${log.highlight(themeName)}" has been successfully created!`)
+    
+    log.title('Next steps:')
+    log.info(
+      `1. Review the Terrazzo configuration files in ${log.path(`terrazzo/${themeName}/`)}`
     )
-    console.log(
-      `2. Review and customize the type tokens in src/styles/tokens/${themeName}-types.scss`
+    log.info(
+      `2. Review the Terrazzo component files in ${log.path(`terrazzo/${themeName}/components/`)}`
     )
-    console.log(`3. Check the component SCSS files and adjust as needed`)
-    console.log(`4. The theme has been added to Storybook configuration`)
+    log.info(
+      `3. Customize the token JSON files in ${log.path(`tokens/platforms/${themeName}/`)}`
+    )
+    log.info(
+      `4. Run ${log.path(`npm run scss:build:theme -- --theme=${themeName}`)} to build the theme tokens`
+    )
+    log.info(
+      `5. Launch Storybook to preview your new theme with ${log.path("npm run storybook")}`
+    )
+    log.info(
+      `6. If needed, customize the generated SCSS files in ${log.path('src/styles/tokens/')}`
+    )
+    log.info(
+      `7. ${log.highlight(`@import 'styles/${themeName}'`)} statements have been added to all relevant SCSS files`
+    )
   } catch (error) {
-    console.error(`Error creating theme: ${error}`)
+    log.error(
+      `Error creating theme: ${error instanceof Error ? error.message : error}`
+    )
+    process.exit(1)
   } finally {
     rl.close()
   }

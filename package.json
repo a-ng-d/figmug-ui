@@ -21,7 +21,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "create-theme": "node scripts/create-theme.js",
+    "create:theme": "node scripts/create-theme.js",
     "scss:list": "node scripts/build-scss.js",
     "scss:build": "node scripts/build-scss.js -- --build",
     "scss:build:theme": "node scripts/build-scss.js -- --build --theme",
