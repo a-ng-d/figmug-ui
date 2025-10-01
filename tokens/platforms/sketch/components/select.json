@@ -1,0 +1,747 @@
+{
+  "select": {
+    "text": {
+      "font": {
+        "family": {
+          "$value": "{font.stack}",
+          "$type": "fontFamily"
+        },
+        "size": {
+          "$value": "{font.size.small}",
+          "$type": "dimension"
+        },
+        "weight": {
+          "$value": "{font.weight.normal}",
+          "$type": "fontWeight"
+        }
+      },
+      "line-height": {
+        "$value": "{font.lineHeight.default}",
+        "$type": "dimension"
+      },
+      "letter-spacing": {
+        "$value": "{font.letterSpacing.pos.medium}",
+        "$type": "dimension"
+      },
+      "color": {
+        "default": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{sketch.color.foreground.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "status": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "margin": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      }
+    },
+    "checkbox": {
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "margin": {
+        "$value": "{size.neg.xsmall}",
+        "$type": "dimension"
+      }
+    },
+    "box": {
+      "height": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "width": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "radius": {
+        "$value": "{border.radius.small}",
+        "$type": "dimension"
+      },
+      "margin": {
+        "top": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.neg.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "border": {
+        "default": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.border.secondary}",
+            "$type": "color"
+          }
+        },
+        "checked": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          }
+        },
+        "disabled": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.border.disabled}",
+            "$type": "color"
+          }
+        },
+        "checked-disabled": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          }
+        },
+        "secondary": {
+          "color": {
+            "default": {
+              "$value": "transparent",
+              "$type": "string"
+            },
+            "focus": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "checked-focus": {
+              "$value": "{sketch.color.border.tertiary}",
+              "$type": "color"
+            }
+          },
+          "width": {
+            "default": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "checked-focus": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "offset": {
+            "default": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            },
+            "checked-focus": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            }
+          }
+        }
+      },
+      "background": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "checked": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "checked-disabled": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          }
+        }
+      },
+      "tick": {
+        "icon": {
+          "$value": "{icon.check}",
+          "$type": "link"
+        },
+        "position": {
+          "top": {
+            "$value": {
+              "value": -6,
+              "unit": "px"
+            },
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.neg.xxsmall}",
+            "$type": "dimension"
+          }
+        },
+        "width": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        },
+        "height": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        },
+        "margin": {
+          "top": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "right": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.neg.xxsmall}",
+            "$type": "dimension"
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.foreground.onaccent.disabled}",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "switch": {
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "margin": {
+        "$value": "{size.neg.xsmall}",
+        "$type": "dimension"
+      }
+    },
+    "toggle": {
+      "height": {
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "width": {
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "radius": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "margin": {
+        "top": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.neg.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "background": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "checked": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "checked-disabled": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          }
+        }
+      },
+      "border": {
+        "default": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.border.secondary}",
+            "$type": "color"
+          }
+        },
+        "checked": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          }
+        },
+        "disabled": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.border.disabled}",
+            "$type": "color"
+          }
+        },
+        "checked-disabled": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          }
+        },
+        "secondary": {
+          "color": {
+            "default": {
+              "$value": "transparent",
+              "$type": "string"
+            },
+            "focus": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "checked-focus": {
+              "$value": "{sketch.color.border.tertiary}",
+              "$type": "color"
+            }
+          },
+          "width": {
+            "default": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "checked-focus": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "offset": {
+            "default": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            },
+            "checked-focus": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            }
+          }
+        }
+      },
+      "transition": {
+        "$value": "background-color 0.2s ease-in-out",
+        "$type": "string"
+      },
+      "knob": {
+        "height": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        },
+        "width": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        },
+        "radius": {
+          "$value": "{border.radius.full}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": {
+            "value": 11,
+            "unit": "px"
+          },
+          "$type": "dimension"
+        },
+        "background": {
+          "color": {
+            "default": {
+              "$value": "{sketch.color.foreground.primary}",
+              "$type": "color"
+            },
+            "checked": {
+              "$value": "{sketch.color.foreground.onaccent}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.foreground.disabled}",
+              "$type": "color"
+            },
+            "checked-disabled": {
+              "$value": "{sketch.color.foreground.onaccent.disabled}",
+              "$type": "color"
+            }
+          }
+        },
+        "transform": {
+          "default": {
+            "translateX": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "translateY": {
+              "$value": "{size.pos.xunit}",
+              "$type": "dimension"
+            }
+          },
+          "checked": {
+            "translateX": {
+              "$value": "{size.pos.xxsmall}",
+              "$type": "dimension"
+            },
+            "translateY": {
+              "$value": "{size.pos.xunit}",
+              "$type": "dimension"
+            }
+          }
+        },
+        "transition": {
+          "backgroundColor": {
+            "$value": {
+              "duration": {
+                "value": 200,
+                "unit": "ms"
+              },
+              "timingFunction": [0.37, 0, 0.63, 1]
+            },
+            "$type": "transition"
+          },
+          "transform": {
+            "$value": {
+              "duration": {
+                "value": 200,
+                "unit": "ms"
+              },
+              "timingFunction": [0.37, 0, 0.63, 1]
+            },
+            "$type": "transition"
+          }
+        }
+      }
+    },
+    "radio": {
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "margin": {
+        "$value": "{size.neg.xsmall}",
+        "$type": "dimension"
+      }
+    },
+    "button": {
+      "height": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "width": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "inner": {
+        "height": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "width": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "top": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": {
+            "value": 5,
+            "unit": "px"
+          },
+          "$type": "dimension"
+        }
+      },
+      "radius": {
+        "$value": "{border.radius.full}",
+        "$type": "dimension"
+      },
+      "margin": {
+        "top": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.neg.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "icon": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.foreground.onaccent.disabled}",
+            "$type": "color"
+          }
+        }
+      },
+      "background": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "checked": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "checked-disabled": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          }
+        }
+      },
+      "border": {
+        "default": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.border.secondary}",
+            "$type": "color"
+          }
+        },
+        "checked": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          }
+        },
+        "disabled": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.border.disabled}",
+            "$type": "color"
+          }
+        },
+        "checked-disabled": {
+          "width": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "color": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          }
+        },
+        "secondary": {
+          "color": {
+            "default": {
+              "$value": "transparent",
+              "$type": "string"
+            },
+            "focus": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "checked-focus": {
+              "$value": "{sketch.color.border.tertiary}",
+              "$type": "color"
+            }
+          },
+          "width": {
+            "default": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "checked-focus": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "offset": {
+            "default": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            },
+            "checked-focus": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            }
+          }
+        }
+      }
+    }
+  }
+}

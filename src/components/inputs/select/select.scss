@@ -1,7 +1,7 @@
 @import 'figma-ui2';
 @import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
 
 .checkbox,
 .radio,
@@ -14,7 +14,7 @@
   user-select: none;
 
   &__label {
-    color: var(--select-text-color);
+    color: var(--select-text-color-default);
   }
 
   &__status {
@@ -22,7 +22,7 @@
     align-items: center;
     align-self: start;
     gap: var(--select-status-gap);
-    margin: var(--select-status-margin);
+    margin: var(--select-status-margin-top) var(--select-status-margin-right) var(--select-status-margin-bottom) var(--select-status-margin-left);
     height: var(--select-status-height);
   }
 }
@@ -35,26 +35,26 @@
     display: flex;
     align-items: start;
     margin-left: var(--select-checkbox-margin);
-    padding: var(--select-checkbox-padding);
+    padding: var(--select-checkbox-padding-top) var(--select-checkbox-padding-right) var(--select-checkbox-padding-bottom) var(--select-checkbox-padding-left);
     height: 100%;
-    color: var(--select-text-color);
-    font-weight: var(--select-text-font_weight);
-    font-size: var(--select-text-font_size);
-    line-height: var(--select-text-line_height);
+    color: var(--select-text-color-default);
+    font-weight: var(--select-text-font-weight);
+    font-size: var(--select-text-font-size);
+    line-height: var(--select-text-line-height);
     font-family: var(--select-text-font-family);
-    letter-spacing: var(--select-text-letter_spacing);
+    letter-spacing: var(--select-text-letter-spacing);
     user-select: none;
 
     &:before {
       display: block;
       flex: none;
-      margin: var(--select-box-margin);
-      outline: var(--select-box-border-width-secondary) solid
-        var(--select-box-border-color-secondary);
-      outline-offset: var(--select-box-border-offset-secondary);
-      border: var(--select-box-border);
+      margin: var(--select-box-margin-top) var(--select-box-margin-right) var(--select-box-margin-bottom) var(--select-box-margin-left);
+      outline: var(--select-box-border-secondary-width-default) solid
+        var(--select-box-border-secondary-color-default);
+      outline-offset: var(--select-box-border-secondary-offset-default);
+      border: var(--select-box-border-default-width) solid var(--select-box-border-default-color);
       border-radius: var(--select-box-radius);
-      background: var(--select-box-background-color);
+      background: var(--select-box-background-color-default);
       width: var(--select-box-width);
       height: var(--select-box-height);
       content: '';
@@ -66,12 +66,12 @@
       visibility: hidden;
       mask-image: var(--select-box-tick-icon);
       -webkit-mask-image: var(--select-box-tick-icon);
-      mask-position: var(--select-box-tick-position);
-      -webkit-mask-position: var(--select-box-tick-position);
+      mask-position: var(--select-box-tick-position-top) var(--select-box-tick-position-left);
+      -webkit-mask-position: var(--select-box-tick-position-top) var(--select-box-tick-position-left);
       mask-size: cover;
       -webkit-mask-size: cover;
-      margin: var(--select-box-tick-margin);
-      background-color: var(--select-box-tick-color);
+      margin: var(--select-box-tick-margin-top) var(--select-box-tick-margin-right) var(--select-box-tick-margin-bottom) var(--select-box-tick-margin-left);
+      background-color: var(--select-box-tick-color-default);
       width: var(--select-box-tick-width);
       height: var(--select-box-tick-height);
       pointer-events: none;
@@ -88,8 +88,8 @@
     height: var(--select-box-height);
 
     &:checked + .checkbox__label:before {
-      --select-box-background-color: var(--select-box-background-color-checked);
-      --select-box-border: var(--select-box-border-checked);
+      background: var(--select-box-background-color-checked);
+      border: var(--select-box-border-checked-width) solid var(--select-box-border-checked-color);
     }
 
     &:checked + .checkbox__label:after {
@@ -97,81 +97,65 @@
     }
 
     &:focus + .checkbox__label:before {
-      --select-box-border-width-secondary: var(
-        --select-box-border-width-secondary-focus
-      );
-      --select-box-border-offset-secondary: var(
-        --select-box-border-offset-secondary-focus
-      );
-      --select-box-border-color-secondary: var(
-        --select-box-border-color-secondary-focus
-      );
+      outline: var(--select-box-border-secondary-width-focus) solid
+        var(--select-box-border-secondary-color-focus);
+      outline-offset: var(--select-box-border-secondary-offset-focus);
     }
 
     &:focus:checked + .checkbox__label:before {
-      --select-box-border-width-secondary: var(
-        --select-box-border-width-secondary-checked-focus
-      );
-      --select-box-border-offset-secondary: var(
-        --select-box-border-offset-secondary-checked-focus
-      );
-      --select-box-border-color-secondary: var(
-        --select-box-border-color-secondary-checked-focus
-      );
+      outline: var(--select-box-border-secondary-width-checked-focus) solid
+        var(--select-box-border-secondary-color-checked-focus);
+      outline-offset: var(--select-box-border-secondary-offset-checked-focus);
     }
 
     &:disabled + .checkbox__label {
-      --select-text-color: var(--select-text-color-disabled);
+      color: var(--select-text-color-disabled);
     }
 
     &:disabled:checked + .checkbox__label:before {
-      --select-box-background-color: var(
-        --select-box-background-color-checked-disabled
-      );
-      --select-box-border: var(--select-box-border-checked-disabled);
+      background: var(--select-box-background-color-checked-disabled);
+      border: var(--select-box-border-checked-disabled-width) solid var(--select-box-border-checked-disabled-color);
     }
 
     &:disabled:checked + .checkbox__label:after {
-      --select-box-tick-color: var(--select-box-tick-color-disabled);
+      background-color: var(--select-box-tick-color-disabled);
     }
 
     &:disabled + .checkbox__label:before {
-      --select-box-background-color: var(
-        --select-box-background-color-disabled
-      );
-      --select-box-border: var(--select-box-border-disabled);
+      background: var(--select-box-background-color-disabled);
+      border: var(--select-box-border-disabled-width) solid var(--select-box-border-disabled-color);
     }
   }
 }
 
 .switch {
-  min-height: var(--select-radio-height);
+  min-height: var(--select-switch-height);
 
   &__label {
     display: flex;
     align-items: start;
-    margin-left: var(--select-radio-margin);
-    padding: var(--select-radio-padding);
+    margin-left: var(--select-switch-margin);
+    padding: var(--select-switch-padding-top) var(--select-switch-padding-right) var(--select-switch-padding-bottom) var(--select-switch-padding-left);
     height: 100%;
-    color: var(--select-text-color);
-    font-weight: var(--select-text-font_weight);
-    font-size: var(--select-text-font_size);
-    line-height: var(--select-text-line_height);
+    color: var(--select-text-color-default);
+    font-weight: var(--select-text-font-weight);
+    font-size: var(--select-text-font-size);
+    line-height: var(--select-text-line-height);
     font-family: var(--select-text-font-family);
-    letter-spacing: var(--select-text-letter_spacing);
+    letter-spacing: var(--select-text-letter-spacing);
     user-select: none;
 
     &:before {
       display: block;
       flex: none;
-      transition: var(--select-toggle-transition);
-      margin: var(--select-toggle-margin);
-      outline: var(--select-toggle-border-width-secondary) solid
-        var(--select-toggle-border-color-secondary);
-      outline-offset: var(--select-toggle-border-offset-secondary);
-      border: var(--select-toggle-border);
+      transition: background-color var(--select-toggle-knob-transition-background-color);
+      margin: var(--select-toggle-margin-top) var(--select-toggle-margin-right) var(--select-toggle-margin-bottom) var(--select-toggle-margin-left);
+      outline: var(--select-toggle-border-secondary-width-default) solid
+        var(--select-toggle-border-secondary-color-default);
+      outline-offset: var(--select-toggle-border-secondary-offset-default);
+      border: var(--select-toggle-border-default-width) solid var(--select-toggle-border-default-color);
       border-radius: var(--select-toggle-radius);
-      background-color: var(--select-toggle-background-color);
+      background-color: var(--select-toggle-background-color-default);
       width: var(--select-toggle-width);
       height: var(--select-toggle-height);
       content: '';
@@ -182,10 +166,10 @@
       position: absolute;
       left: var(--select-toggle-knob-left);
       flex: none;
-      transform: var(--select-toggle-knob-transform);
-      transition: var(--select-toggle-knob-transition);
+      transform: translateX(var(--select-toggle-knob-transform-default-translate-x)) translateY(var(--select-toggle-knob-transform-default-translate-y));
+      transition: transform var(--select-toggle-knob-transition-transform);
       border-radius: var(--select-toggle-knob-radius);
-      background-color: var(--select-toggle-knob-background-color);
+      background-color: var(--select-toggle-knob-background-color-default);
       width: var(--select-toggle-knob-width);
       height: var(--select-toggle-knob-height);
       content: '';
@@ -202,73 +186,47 @@
     height: var(--select-toggle-height);
 
     &:checked + .switch__label:before {
-      --select-toggle-background-color: var(
-        --select-toggle-background-color-checked
-      );
-      --select-toggle-border: var(--select-toggle-border-checked);
+      background-color: var(--select-toggle-background-color-checked);
+      border: var(--select-toggle-border-checked-width) solid var(--select-toggle-border-checked-color);
     }
 
     &:checked + .switch__label:after {
-      --select-toggle-knob-transform: var(
-        --select-toggle-knob-transform-checked
-      );
-      --select-toggle-knob-background-color: var(
-        --select-toggle-knob-background-color-checked
-      );
+      transform: translateX(var(--select-toggle-knob-transform-checked-translate-x)) translateY(var(--select-toggle-knob-transform-checked-translate-y));
+      background-color: var(--select-toggle-knob-background-color-checked);
     }
 
     &:focus + .switch__label:before {
-      --select-toggle-border-width-secondary: var(
-        --select-toggle-border-width-secondary-focus
-      );
-      --select-toggle-border-offset-secondary: var(
-        --select-toggle-border-offset-secondary-focus
-      );
-      --select-toggle-border-color-secondary: var(
-        --select-toggle-border-color-secondary-focus
-      );
+      outline: var(--select-toggle-border-secondary-width-focus) solid
+        var(--select-toggle-border-secondary-color-focus);
+      outline-offset: var(--select-toggle-border-secondary-offset-focus);
     }
 
     &:focus:checked + .switch__label:before {
-      --select-toggle-border-width-secondary: var(
-        --select-toggle-border-width-secondary-checked-focus
-      );
-      --select-toggle-border-offset-secondary: var(
-        --select-toggle-border-offset-secondary-checked-focus
-      );
-      --select-toggle-border-color-secondary: var(
-        --select-toggle-border-color-secondary-checked-focus
-      );
+      outline: var(--select-toggle-border-secondary-width-checked-focus) solid
+        var(--select-toggle-border-secondary-color-checked-focus);
+      outline-offset: var(--select-toggle-border-secondary-offset-checked-focus);
     }
 
     &:disabled + .switch__label {
-      --select-text-color: var(--select-text-color-disabled);
+      color: var(--select-text-color-disabled);
     }
 
     &:disabled + .switch__label:before {
-      --select-toggle-background-color: var(
-        --select-toggle-background-color-disabled
-      );
-      --select-toggle-border: var(--select-toggle-border-disabled);
+      background-color: var(--select-toggle-background-color-disabled);
+      border: var(--select-toggle-border-disabled-width) solid var(--select-toggle-border-disabled-color);
     }
 
     &:disabled + .switch__label:after {
-      --select-toggle-knob-background-color: var(
-        --select-toggle-knob-background-color-disabled
-      );
+      background-color: var(--select-toggle-knob-background-color-disabled);
     }
 
     &:disabled:checked + .switch__label:before {
-      --select-toggle-background-color: var(
-        --select-toggle-background-color-checked-disabled
-      );
-      --select-toggle-border: var(--select-toggle-border-checked-disabled);
+      background-color: var(--select-toggle-background-color-checked-disabled);
+      border: var(--select-toggle-border-checked-disabled-width) solid var(--select-toggle-border-checked-disabled-color);
     }
 
     &:disabled:checked + .switch__label:after {
-      --select-toggle-knob-background-color: var(
-        --select-toggle-knob-background-color-checked-disabled
-      );
+      background-color: var(--select-toggle-knob-background-color-checked-disabled);
     }
   }
 }
@@ -282,26 +240,26 @@
     position: relative;
     align-items: start;
     margin-left: var(--select-radio-margin);
-    padding: var(--select-radio-padding);
+    padding: var(--select-radio-padding-top) var(--select-radio-padding-right) var(--select-radio-padding-bottom) var(--select-radio-padding-left);
     height: 100%;
-    color: var(--select-text-color);
-    font-weight: var(--select-text-font_weight);
-    font-size: var(--select-text-font_size);
-    line-height: var(--select-text-line_height);
+    color: var(--select-text-color-default);
+    font-weight: var(--select-text-font-weight);
+    font-size: var(--select-text-font-size);
+    line-height: var(--select-text-line-height);
     font-family: var(--select-text-font-family);
-    letter-spacing: var(--select-text-letter_spacing);
+    letter-spacing: var(--select-text-letter-spacing);
     user-select: none;
 
     &:before {
       display: block;
       flex: none;
-      margin: var(--select-button-margin);
-      outline: var(--select-button-border-width-secondary) solid
-        var(--select-button-border-color-secondary);
-      outline-offset: var(--select-button-border-offset-secondary);
-      border: var(--select-button-border);
+      margin: var(--select-button-margin-top) var(--select-button-margin-right) var(--select-button-margin-bottom) var(--select-button-margin-left);
+      outline: var(--select-button-border-secondary-width-default) solid
+        var(--select-button-border-secondary-color-default);
+      outline-offset: var(--select-button-border-secondary-offset-default);
+      border: var(--select-button-border-default-width) solid var(--select-button-border-default-color);
       border-radius: var(--select-button-radius);
-      background: var(--select-button-background-color);
+      background: var(--select-button-background-color-default);
       width: var(--select-button-width);
       height: var(--select-button-height);
       content: '';
@@ -314,7 +272,7 @@
       left: var(--select-button-inner-left);
       visibility: hidden;
       border-radius: var(--select-button-radius);
-      background-color: var(--select-button-icon-color);
+      background-color: var(--select-button-icon-color-default);
       width: var(--select-button-inner-width);
       height: var(--select-button-inner-height);
       content: '';
@@ -330,10 +288,8 @@
     height: var(--select-button-height);
 
     &:checked + .radio__label:before {
-      --select-button-background-color: var(
-        --select-button-background-color-checked
-      );
-      --select-button-border: var(--select-button-border-checked);
+      background: var(--select-button-background-color-checked);
+      border: var(--select-button-border-checked-width) solid var(--select-button-border-checked-color);
     }
 
     &:checked + .radio__label:after {
@@ -341,49 +297,33 @@
     }
 
     &:focus + .radio__label:before {
-      --select-button-border-width-secondary: var(
-        --select-button-border-width-secondary-focus
-      );
-      --select-button-border-offset-secondary: var(
-        --select-button-border-offset-secondary-focus
-      );
-      --select-button-border-color-secondary: var(
-        --select-button-border-color-secondary-focus
-      );
+      outline: var(--select-button-border-secondary-width-focus) solid
+        var(--select-button-border-secondary-color-focus);
+      outline-offset: var(--select-button-border-secondary-offset-focus);
     }
 
     &:focus:checked + .radio__label:before {
-      --select-button-border-width-secondary: var(
-        --select-button-border-width-secondary-checked-focus
-      );
-      --select-button-border-offset-secondary: var(
-        --select-button-border-offset-secondary-checked-focus
-      );
-      --select-button-border-color-secondary: var(
-        --select-button-border-color-secondary-checked-focus
-      );
+      outline: var(--select-button-border-secondary-width-checked-focus) solid
+        var(--select-button-border-secondary-color-checked-focus);
+      outline-offset: var(--select-button-border-secondary-offset-checked-focus);
     }
 
     &:disabled + .radio__label {
-      --select-text-color: var(--select-text-color-disabled);
+      color: var(--select-text-color-disabled);
     }
 
     &:disabled:checked + .radio__label:before {
-      --select-button-background-color: var(
-        --select-button-background-color-checked-disabled
-      );
-      --select-button-border: var(--select-button-border-checked-disabled);
+      background: var(--select-button-background-color-checked-disabled);
+      border: var(--select-button-border-checked-disabled-width) solid var(--select-button-border-checked-disabled-color);
     }
 
     &:disabled:checked + .radio__label:after {
-      --select-button-icon-color: var(--select-button-icon-color-disabled);
+      background-color: var(--select-button-icon-color-disabled);
     }
 
     &:disabled + .radio__label:before {
-      --select-button-background-color: var(
-        --select-button-background-color-disabled
-      );
-      --select-button-border: var(--select-button-border-disabled);
+      background: var(--select-button-background-color-disabled);
+      border: var(--select-button-border-disabled-width) solid var(--select-button-border-disabled-color);
     }
   }
 }
