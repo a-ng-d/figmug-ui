@@ -163,14 +163,16 @@ async function createTerrazzoFiles(themeName) {
     // Create the target directory if it doesn't exist
     if (!fs.existsSync(targetTerrazzoDir)) {
       await mkdir(targetTerrazzoDir, { recursive: true })
-      console.log(`Created Terrazzo directory for ${themeName}`)
+      log.success(`Created Terrazzo directory for ${log.highlight(themeName)}`)
     }
 
     // Create the components directory if needed
     const targetComponentsDir = path.join(targetTerrazzoDir, 'components')
     if (!fs.existsSync(targetComponentsDir)) {
       await mkdir(targetComponentsDir, { recursive: true })
-      console.log(`Created Terrazzo components directory for ${themeName}`)
+      log.success(
+        `Created Terrazzo components directory for ${log.highlight(themeName)}`
+      )
     }
 
     // Process root Terrazzo configuration files
@@ -275,7 +277,9 @@ async function createTerrazzoFiles(themeName) {
 
         // Write the updated content to the target file
         await writeFile(targetFilePath, content)
-        log.step(`Created Terrazzo configuration file: ${log.path(path.relative(rootDir, targetFilePath))}`)
+        log.step(
+          `Created Terrazzo configuration file: ${log.path(path.relative(rootDir, targetFilePath))}`
+        )
       }
     }
 
@@ -349,15 +353,15 @@ async function createTerrazzoFiles(themeName) {
 
           // Write the updated content to the target file
           await writeFile(targetFilePath, content)
-          log.step(`Created Terrazzo component file: ${log.path(path.relative(rootDir, targetFilePath))}`)
+          log.step(
+            `Created Terrazzo component file: ${log.path(path.relative(rootDir, targetFilePath))}`
+          )
         }
       }
     }
   } catch (err) {
     const error = err instanceof Error ? err : new Error(String(err))
-    console.error(
-      `Error creating Terrazzo configuration files: ${error.message}`
-    )
+    log.error(`Error creating Terrazzo configuration files: ${error.message}`)
     throw error
   }
 }
@@ -383,12 +387,12 @@ async function updateScssImports(themeName) {
     // Process files in src/components recursively
     await processComponentsDirectory(componentDir, themeName)
 
-    console.log(
-      `Updated SCSS imports for theme ${themeName} across the project`
+    log.success(
+      `Updated SCSS imports for theme ${log.highlight(themeName)} across the project`
     )
   } catch (err) {
     const error = err instanceof Error ? err : new Error(String(err))
-    console.error(`Error updating SCSS imports: ${error.message}`)
+    log.error(`Error updating SCSS imports: ${error.message}`)
     throw error
   }
 }
@@ -418,7 +422,7 @@ async function processStylesDirectory(stylesDir, themeName) {
       }
   } catch (err) {
     const error = err instanceof Error ? err : new Error(String(err))
-    console.error(`Error processing styles directory: ${error.message}`)
+    log.error(`Error processing styles directory: ${error.message}`)
     throw error
   }
 }
@@ -470,7 +474,7 @@ async function processComponentsDirectory(componentDir, themeName) {
     }
   } catch (err) {
     const error = err instanceof Error ? err : new Error(String(err))
-    console.error(`Error processing components directory: ${error.message}`)
+    log.error(`Error processing components directory: ${error.message}`)
     throw error
   }
 }
@@ -508,14 +512,85 @@ async function updateImportsInFile(filePath, themeName) {
 
         // Write the updated content back to the file
         await writeFile(filePath, updatedContent)
-        console.log(
-          `Added ${themeName} import to ${path.relative(rootDir, filePath)}`
+        log.step(
+          `Added ${log.highlight(themeName)} import to ${log.path(path.relative(rootDir, filePath))}`
         )
       }
     }
   } catch (err) {
     const error = err instanceof Error ? err : new Error(String(err))
-    console.error(`Error updating imports in ${filePath}: ${error.message}`)
+    log.error(
+      `Error updating imports in ${log.path(filePath)}: ${error.message}`
+    )
+  }
+}
+
+/**
+ * Update the theme-styles.scss file in .storybook folder to include the new theme
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
+ */
+async function updateThemeStylesImports(themeName) {
+  const themeStylesPath = path.join(rootDir, '.storybook', 'theme-styles.scss')
+
+  try {
+    // Check if theme-styles.scss exists
+    if (!fs.existsSync(themeStylesPath)) {
+      log.warn(
+        `${log.path('.storybook/theme-styles.scss')} does not exist. Creating it with initial imports.`
+      )
+
+      // Create initial theme-styles.scss with imports for the new theme
+      const initialContent = `@import '../src/styles/tokens/modules/${themeName}-colors.module.scss';\n@import '../src/styles/tokens/modules/${themeName}-types.module.scss';\n`
+      await writeFile(themeStylesPath, initialContent)
+      log.success(
+        `Created ${log.path('.storybook/theme-styles.scss')} with ${log.highlight(themeName)} imports`
+      )
+      return
+    }
+
+    // Read the current content of theme-styles.scss
+    const themeStylesContent = await readFile(themeStylesPath, 'utf8')
+
+    // Check if the imports for this theme are already present
+    if (themeStylesContent.includes(`${themeName}-colors.module.scss`)) {
+      log.info(
+        `Imports for ${log.highlight(themeName)} already exist in theme-styles.scss`
+      )
+      return
+    }
+
+    // Look for the last import statement to add our imports after it
+    const lastImportIndex = themeStylesContent.lastIndexOf('@import')
+    if (lastImportIndex === -1)
+      throw new Error(
+        'Could not find any @import statements in theme-styles.scss'
+      )
+
+    // Find the end of the last import statement (the line ending)
+    const endOfLastImport = themeStylesContent.indexOf(';', lastImportIndex) + 1
+
+    // Create the new import statements for the new theme
+    const newImports = `
+
+@import '../src/styles/tokens/modules/${themeName}-colors.module.scss';
+@import '../src/styles/tokens/modules/${themeName}-types.module.scss';`
+
+    // Insert the new imports after the last import statement
+    const updatedContent =
+      themeStylesContent.slice(0, endOfLastImport) +
+      newImports +
+      themeStylesContent.slice(endOfLastImport)
+
+    // Write the updated content back to the file
+    await writeFile(themeStylesPath, updatedContent)
+    log.success(
+      `Added ${log.highlight(themeName)} imports to theme-styles.scss`
+    )
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err))
+    log.error(`Error updating theme-styles.scss: ${error.message}`)
+    throw error
   }
 }
 
@@ -532,7 +607,9 @@ async function copyPlatformTokens(themeName) {
     // Create the target directory if it doesn't exist
     if (!fs.existsSync(targetTokensDir)) {
       await mkdir(targetTokensDir, { recursive: true })
-      console.log(`Created platform tokens directory for ${themeName}`)
+      log.success(
+        `Created platform tokens directory for ${log.highlight(themeName)}`
+      )
     }
 
     // Copy all files from the source tokens directory
@@ -558,13 +635,17 @@ async function copyPlatformTokens(themeName) {
         } else if (entry.isFile()) {
           // Copy the file
           await copyFile(sourcePath, targetPath)
-          console.log(`Copied token file: ${targetPath}`)
+          log.step(
+            `Copied token file: ${log.path(path.relative(rootDir, targetPath))}`
+          )
         }
       }
     }
 
     await copyFilesRecursively(sourceTokensDir, targetTokensDir)
-    console.log(`Successfully copied all platform tokens for ${themeName}`)
+    log.success(
+      `Successfully copied all platform tokens for ${log.highlight(themeName)}`
+    )
   } catch (err) {
     const error = err instanceof Error ? err : new Error(String(err))
     console.error(`Error copying platform tokens: ${error.message}`)
@@ -588,10 +669,13 @@ async function main() {
     await copyPlatformTokens(themeName)
     await updateScssImports(themeName)
     await updateStorybookPreview(themeName)
+    await updateThemeStylesImports(themeName)
     // SCSS files will be generated from tokens using the build-scss.js script
 
-    log.success(`Theme "${log.highlight(themeName)}" has been successfully created!`)
-    
+    log.success(
+      `Theme "${log.highlight(themeName)}" has been successfully created!`
+    )
+
     log.title('Next steps:')
     log.info(
       `1. Review the Terrazzo configuration files in ${log.path(`terrazzo/${themeName}/`)}`
@@ -606,13 +690,16 @@ async function main() {
       `4. Run ${log.path(`npm run scss:build:theme -- --theme=${themeName}`)} to build the theme tokens`
     )
     log.info(
-      `5. Launch Storybook to preview your new theme with ${log.path("npm run storybook")}`
+      `5. Launch Storybook to preview your new theme with ${log.path('npm run storybook')}`
     )
     log.info(
       `6. If needed, customize the generated SCSS files in ${log.path('src/styles/tokens/')}`
     )
     log.info(
       `7. ${log.highlight(`@import 'styles/${themeName}'`)} statements have been added to all relevant SCSS files`
+    )
+    log.info(
+      `8. Module imports have been added to ${log.path('.storybook/theme-styles.scss')}`
     )
   } catch (error) {
     log.error(
