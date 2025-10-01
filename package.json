@@ -21,7 +21,11 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "create-theme": "node scripts/create-theme.js"
+    "create-theme": "node scripts/create-theme.js",
+    "scss:list": "node scripts/build-scss.js",
+    "scss:build": "node scripts/build-scss.js -- --build",
+    "scss:build:theme": "node scripts/build-scss.js -- --build --theme",
+    "scss:build:component": "node scripts/build-scss.js -- --build --component"
   },
   "dependencies": {
     "@a_ng_d/figmug-utils": "^0.6.0",
@@ -49,6 +53,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "@vitest/coverage-v8": "^1.6.0",
     "@vitest/ui": "^1.6.0",
+    "chalk": "^5.6.2",
     "chromatic": "^11.3.1",
     "dotenv-cli": "^7.4.2",
     "eslint": "^8.57.0",

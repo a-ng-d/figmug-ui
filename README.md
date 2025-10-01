@@ -11,6 +11,7 @@ Figmug UI is a comprehensive library of UI components designed specifically for 
 - **Bundled with Vite**: Fast and optimized build tool for modern web projects
 - **Tested with Jest and Vitest**: Ensures reliability and robustness of components
 - **Exposed with Storybook**: Interactive UI component explorer for easy development and testing
+- **Design tokens with Terrazzo**: Theme management using design tokens for consistent styling across platforms. [View Terrazzo Guide](./docs/terrazzo-guide.md)
 
 ## Installation
 
