@@ -526,6 +526,54 @@ async function updateImportsInFile(filePath, themeName) {
 }
 
 /**
+ * Create theme module SCSS files for the new theme
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
+ */
+async function createThemeModuleFiles(themeName) {
+  const tokensModulesDir = path.join(rootDir, 'src', 'styles', 'tokens', 'modules')
+  const typesModulePath = path.join(tokensModulesDir, `${themeName}-types.module.scss`)
+  const colorsModulePath = path.join(tokensModulesDir, `${themeName}-colors.module.scss`)
+
+  try {
+    // Ensure the modules directory exists
+    if (!fs.existsSync(tokensModulesDir)) {
+      await mkdir(tokensModulesDir, { recursive: true })
+      log.success(`Created tokens modules directory`)
+    }
+
+    // Create the types module file
+    const typesContent = `@import '../${themeName}-types.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:export {
+  module: '${themeName}-types';
+}
+`
+    await writeFile(typesModulePath, typesContent)
+    log.success(
+      `Created ${log.highlight(themeName)} types module at ${log.path(path.relative(rootDir, typesModulePath))}`
+    )
+
+    // Create the colors module file
+    const colorsContent = `@import '../${themeName}-colors.scss';
+
+:export {
+  module: '${themeName}-colors';
+}
+`
+    await writeFile(colorsModulePath, colorsContent)
+    log.success(
+      `Created ${log.highlight(themeName)} colors module at ${log.path(path.relative(rootDir, colorsModulePath))}`
+    )
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err))
+    log.error(`Error creating module files: ${error.message}`)
+    throw error
+  }
+}
+
+/**
  * Update the theme-styles.scss file in .storybook folder to include the new theme
  * @param {string} themeName - The name of the theme
  * @returns {Promise<void>}
@@ -669,6 +717,7 @@ async function main() {
     await copyPlatformTokens(themeName)
     await updateScssImports(themeName)
     await updateStorybookPreview(themeName)
+    await createThemeModuleFiles(themeName)
     await updateThemeStylesImports(themeName)
     // SCSS files will be generated from tokens using the build-scss.js script
 
@@ -699,7 +748,10 @@ async function main() {
       `7. ${log.highlight(`@import 'styles/${themeName}'`)} statements have been added to all relevant SCSS files`
     )
     log.info(
-      `8. Module imports have been added to ${log.path('.storybook/theme-styles.scss')}`
+      `8. Module files have been created at ${log.path(`src/styles/tokens/modules/${themeName}-types.module.scss`)} and ${log.path(`src/styles/tokens/modules/${themeName}-colors.module.scss`)}`
+    )
+    log.info(
+      `9. Module imports have been added to ${log.path('.storybook/theme-styles.scss')}`
     )
   } catch (error) {
     log.error(
