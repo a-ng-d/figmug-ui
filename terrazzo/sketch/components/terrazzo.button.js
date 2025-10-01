@@ -12,6 +12,7 @@ export default defineConfig({
     './tokens/platforms/sketch/color.json',
     './tokens/platforms/sketch/typography.json',
     './tokens/platforms/sketch/components/button.json',
+    './tokens/platforms/sketch/icon.json',
   ],
   outDir: './src/components/actions/button/',
   plugins: [
@@ -25,6 +26,7 @@ export default defineConfig({
         'border.*',
         'grey.*',
         'elevation.*',
+        'icon.*',
       ],
       baseSelector: ':root[data-theme="sketch"]',
     }),
