@@ -8,9 +8,9 @@
   --card-background-color-default: var(--sketch-color-background-primary);
   --card-background-color-focus: var(--sketch-color-accent-disabled);
   --card-background-color-hover: var(--sketch-color-background-secondary);
-  --card-border-color-default: color(srgb 0 0 0 / 0);
+  --card-border-color-default: transparent;
   --card-border-color-focus: var(--sketch-color-accent-primary);
-  --card-border-color-hover: color(srgb 0 0 0 / 0);
+  --card-border-color-hover: transparent;
   --card-border-offset-default: var(--size-null);
   --card-border-offset-focus: var(--size-neg-unit);
   --card-border-offset-hover: var(--size-null);
