@@ -254,9 +254,9 @@ async function createTerrazzoFiles(themeName) {
           )
 
         // For text and colors terrazzo files, ensure icon.json is included but icon tokens are excluded
-        if (file === 'terrazzo.colors.js' || file === 'terrazzo.text.js') {
-          // Check if icon.json is already included in the tokens array
+        if (file === 'terrazzo.colors.js' || file === 'terrazzo.text.js')
           if (!content.includes(`./tokens/platforms/${themeName}/icon.json`))
+            // Check if icon.json is already included in the tokens array
             // Add icon.json to the tokens array
             content = content.replace(
               /tokens: \[([\s\S]*?)\]/,
@@ -264,16 +264,6 @@ async function createTerrazzoFiles(themeName) {
                 return `tokens: [${tokensContent}${tokensContent.endsWith(',') ? '' : ','}\n    './tokens/platforms/${themeName}/icon.json',\n  ]`
               }
             )
-
-          // Add exclude pattern for icon.* tokens if needed
-          if (!content.includes(`'${themeName}.icon.*'`))
-            content = content.replace(
-              /exclude: \[([\s\S]*?)\]/,
-              (match, excludeContent) => {
-                return `exclude: [${excludeContent}${excludeContent.endsWith(',') ? '' : ','}\n        '${themeName}.icon.*',\n      ]`
-              }
-            )
-        }
 
         // Write the updated content to the target file
         await writeFile(targetFilePath, content)
