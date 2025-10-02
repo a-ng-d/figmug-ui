@@ -3,14 +3,14 @@
  * ------------------------------------------- */
 
 :root[data-theme="sketch"] {
-  --select-box-background-color-checked: var(--sketch-color-accent-primary);
+  --select-box-background-color-checked-default: var(--sketch-color-accent-primary);
   --select-box-background-color-checked-disabled: var(--sketch-color-accent-disabled);
   --select-box-background-color-default: var(--sketch-color-background-primary);
   --select-box-background-color-disabled: var(--sketch-color-background-primary);
-  --select-box-border-checked-color: var(--sketch-color-accent-primary);
+  --select-box-border-checked-default-color: var(--sketch-color-accent-primary);
+  --select-box-border-checked-default-width: var(--size-pos-unit);
   --select-box-border-checked-disabled-color: var(--sketch-color-accent-disabled);
   --select-box-border-checked-disabled-width: var(--size-pos-unit);
-  --select-box-border-checked-width: var(--size-pos-unit);
   --select-box-border-default-color: var(--sketch-color-border-secondary);
   --select-box-border-default-width: var(--size-pos-unit);
   --select-box-border-disabled-color: var(--sketch-color-border-disabled);
@@ -42,14 +42,14 @@
   --select-box-tick-position-top: -6px;
   --select-box-tick-width: var(--size-pos-medium);
   --select-box-width: var(--size-pos-xsmall);
-  --select-button-background-color-checked: var(--sketch-color-accent-primary);
+  --select-button-background-color-checked-default: var(--sketch-color-accent-primary);
   --select-button-background-color-checked-disabled: var(--sketch-color-accent-disabled);
   --select-button-background-color-default: var(--sketch-color-background-primary);
   --select-button-background-color-disabled: var(--sketch-color-background-primary);
-  --select-button-border-checked-color: var(--sketch-color-accent-primary);
+  --select-button-border-checked-default-color: var(--sketch-color-accent-primary);
+  --select-button-border-checked-default-width: var(--size-pos-unit);
   --select-button-border-checked-disabled-color: var(--sketch-color-accent-disabled);
   --select-button-border-checked-disabled-width: var(--size-pos-unit);
-  --select-button-border-checked-width: var(--size-pos-unit);
   --select-button-border-default-color: var(--sketch-color-border-secondary);
   --select-button-border-default-width: var(--size-pos-unit);
   --select-button-border-disabled-color: var(--sketch-color-border-disabled);
@@ -116,14 +116,14 @@
   --select-text-font-weight: var(--font-weight-normal);
   --select-text-letter-spacing: var(--font-letter-spacing-pos-medium);
   --select-text-line-height: var(--font-line-height-default);
-  --select-toggle-background-color-checked: var(--sketch-color-accent-primary);
+  --select-toggle-background-color-checked-default: var(--sketch-color-accent-primary);
   --select-toggle-background-color-checked-disabled: var(--sketch-color-accent-disabled);
   --select-toggle-background-color-default: var(--sketch-color-background-primary);
   --select-toggle-background-color-disabled: var(--sketch-color-background-primary);
-  --select-toggle-border-checked-color: var(--sketch-color-accent-primary);
+  --select-toggle-border-checked-default-color: var(--sketch-color-accent-primary);
+  --select-toggle-border-checked-default-width: var(--size-pos-unit);
   --select-toggle-border-checked-disabled-color: var(--sketch-color-accent-disabled);
   --select-toggle-border-checked-disabled-width: var(--size-pos-unit);
-  --select-toggle-border-checked-width: var(--size-pos-unit);
   --select-toggle-border-default-color: var(--sketch-color-border-secondary);
   --select-toggle-border-default-width: var(--size-pos-unit);
   --select-toggle-border-disabled-color: var(--sketch-color-border-disabled);
@@ -138,7 +138,7 @@
   --select-toggle-border-secondary-width-default: var(--size-null);
   --select-toggle-border-secondary-width-focus: var(--size-pos-unit);
   --select-toggle-height: 16px;
-  --select-toggle-knob-background-color-checked: var(--sketch-color-foreground-onaccent);
+  --select-toggle-knob-background-color-checked-default: var(--sketch-color-foreground-onaccent);
   --select-toggle-knob-background-color-checked-disabled: var(--sketch-color-foreground-onaccent-disabled);
   --select-toggle-knob-background-color-default: var(--sketch-color-foreground-primary);
   --select-toggle-knob-background-color-disabled: var(--sketch-color-foreground-disabled);

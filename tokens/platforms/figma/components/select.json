@@ -147,13 +147,25 @@
           }
         },
         "checked": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
+          "default": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{figma.color.border.selected.strong}",
+              "$type": "color"
+            }
           },
-          "color": {
-            "$value": "{figma.color.border.selected.strong}",
-            "$type": "color"
+          "disabled": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{figma.color.bg.selected}",
+              "$type": "color"
+            }
           }
         },
         "disabled": {
@@ -163,16 +175,6 @@
           },
           "color": {
             "$value": "{figma.color.border.disabled}",
-            "$type": "color"
-          }
-        },
-        "checked-disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
-            "$value": "{figma.color.bg.selected}",
             "$type": "color"
           }
         },
@@ -186,9 +188,11 @@
               "$value": "{figma.color.border.selected}",
               "$type": "color"
             },
-            "checked-focus": {
-              "$value": "{figma.color.border.selected.strong}",
-              "$type": "color"
+            "checked": {
+              "focus": {
+                "$value": "{figma.color.border.selected.strong}",
+                "$type": "color"
+              }
             }
           },
           "width": {
@@ -200,9 +204,11 @@
               "$value": "{size.pos.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.pos.unit}",
+                "$type": "dimension"
+              }
             }
           },
           "offset": {
@@ -214,9 +220,11 @@
               "$value": "{size.neg.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.neg.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.neg.unit}",
+                "$type": "dimension"
+              }
             }
           }
         }
@@ -228,15 +236,17 @@
             "$type": "color"
           },
           "checked": {
-            "$value": "{figma.color.bg.selected.strong}",
-            "$type": "color"
+            "default": {
+              "$value": "{figma.color.bg.selected.strong}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{figma.color.bg.selected}",
+              "$type": "color"
+            }
           },
           "disabled": {
             "$value": "{figma.color.bg}",
-            "$type": "color"
-          },
-          "checked-disabled": {
-            "$value": "{figma.color.bg.selected}",
             "$type": "color"
           }
         }
@@ -380,15 +390,17 @@
             "$type": "color"
           },
           "checked": {
-            "$value": "{figma.color.bg.selected.strong}",
-            "$type": "color"
+            "default": {
+              "$value": "{figma.color.bg.selected.strong}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{figma.color.bg.brand.secondary}",
+              "$type": "color"
+            }
           },
           "disabled": {
             "$value": "{figma.color.bg.disabled}",
-            "$type": "color"
-          },
-          "checked-disabled": {
-            "$value": "{figma.color.bg.brand.secondary}",
             "$type": "color"
           }
         }
@@ -405,13 +417,25 @@
           }
         },
         "checked": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
+          "default": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{figma.color.bg.selected.strong}",
+              "$type": "color"
+            }
           },
-          "color": {
-            "$value": "{figma.color.bg.selected.strong}",
-            "$type": "color"
+          "disabled": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{figma.color.bg.brand.secondary}",
+              "$type": "color"
+            }
           }
         },
         "disabled": {
@@ -421,16 +445,6 @@
           },
           "color": {
             "$value": "{figma.color.bg.disabled}",
-            "$type": "color"
-          }
-        },
-        "checked-disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
-            "$value": "{figma.color.bg.brand.secondary}",
             "$type": "color"
           }
         },
@@ -444,9 +458,11 @@
               "$value": "{figma.color.border.selected}",
               "$type": "color"
             },
-            "checked-focus": {
-              "$value": "{figma.color.border.selected.strong}",
-              "$type": "color"
+            "checked": {
+              "focus": {
+                "$value": "{figma.color.border.selected.strong}",
+                "$type": "color"
+              }
             }
           },
           "width": {
@@ -458,9 +474,11 @@
               "$value": "{size.pos.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.pos.unit}",
+                "$type": "dimension"
+              }
             }
           },
           "offset": {
@@ -472,9 +490,11 @@
               "$value": "{size.neg.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.neg.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.neg.unit}",
+                "$type": "dimension"
+              }
             }
           }
         }
@@ -516,15 +536,17 @@
               "$type": "color"
             },
             "checked": {
-              "$value": "{figma.color.icon.onbrand}",
-              "$type": "color"
+              "default": {
+                "$value": "{figma.color.icon.onbrand}",
+                "$type": "color"
+              },
+              "disabled": {
+                "$value": "{figma.color.icon.onbrand.secondary}",
+                "$type": "color"
+              }
             },
             "disabled": {
               "$value": "{figma.color.icon.ondisabled}",
-              "$type": "color"
-            },
-            "checked-disabled": {
-              "$value": "{figma.color.icon.onbrand.secondary}",
               "$type": "color"
             }
           }
@@ -694,14 +716,16 @@
             "$type": "color"
           },
           "checked": {
-            "$value": "{figma.color.bg}",
-            "$type": "color"
+            "default": {
+              "$value": "{figma.color.bg}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{figma.color.bg}",
+              "$type": "color"
+            }
           },
           "disabled": {
-            "$value": "{figma.color.bg}",
-            "$type": "color"
-          },
-          "checked-disabled": {
             "$value": "{figma.color.bg}",
             "$type": "color"
           }
@@ -719,13 +743,25 @@
           }
         },
         "checked": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
+          "default": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{figma.color.icon}",
+              "$type": "color"
+            }
           },
-          "color": {
-            "$value": "{figma.color.icon}",
-            "$type": "color"
+          "disabled": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{figma.color.bg.disabled}",
+              "$type": "color"
+            }
           }
         },
         "disabled": {
@@ -735,16 +771,6 @@
           },
           "color": {
             "$value": "{figma.color.icon.disabled}",
-            "$type": "color"
-          }
-        },
-        "checked-disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
-            "$value": "{figma.color.bg.disabled}",
             "$type": "color"
           }
         },
@@ -758,9 +784,11 @@
               "$value": "{figma.color.border.selected}",
               "$type": "color"
             },
-            "checked-focus": {
-              "$value": "{figma.color.border.selected}",
-              "$type": "color"
+            "checked": {
+              "focus": {
+                "$value": "{figma.color.border.selected}",
+                "$type": "color"
+              }
             }
           },
           "width": {
@@ -772,9 +800,11 @@
               "$value": "{size.pos.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.pos.unit}",
+                "$type": "dimension"
+              }
             }
           },
           "offset": {
@@ -786,9 +816,11 @@
               "$value": "{size.neg.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.neg.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.neg.unit}",
+                "$type": "dimension"
+              }
             }
           }
         }

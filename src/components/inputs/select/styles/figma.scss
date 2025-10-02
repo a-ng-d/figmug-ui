@@ -3,14 +3,14 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --select-box-background-color-checked: var(--figma-color-bg-selected-strong);
+  --select-box-background-color-checked-default: var(--figma-color-bg-selected-strong);
   --select-box-background-color-checked-disabled: var(--figma-color-bg-selected);
   --select-box-background-color-default: var(--figma-color-bg-secondary);
   --select-box-background-color-disabled: var(--figma-color-bg);
-  --select-box-border-checked-color: var(--figma-color-border-selected-strong);
+  --select-box-border-checked-default-color: var(--figma-color-border-selected-strong);
+  --select-box-border-checked-default-width: var(--size-pos-unit);
   --select-box-border-checked-disabled-color: var(--figma-color-bg-selected);
   --select-box-border-checked-disabled-width: var(--size-pos-unit);
-  --select-box-border-checked-width: var(--size-pos-unit);
   --select-box-border-default-color: var(--figma-color-border);
   --select-box-border-default-width: var(--size-pos-unit);
   --select-box-border-disabled-color: var(--figma-color-border-disabled);
@@ -42,14 +42,14 @@
   --select-box-tick-position-top: var(--size-pos-unit);
   --select-box-tick-width: var(--size-pos-medium);
   --select-box-width: var(--size-pos-xsmall);
-  --select-button-background-color-checked: var(--figma-color-bg);
+  --select-button-background-color-checked-default: var(--figma-color-bg);
   --select-button-background-color-checked-disabled: var(--figma-color-bg);
   --select-button-background-color-default: var(--figma-color-bg);
   --select-button-background-color-disabled: var(--figma-color-bg);
-  --select-button-border-checked-color: var(--figma-color-icon);
+  --select-button-border-checked-default-color: var(--figma-color-icon);
+  --select-button-border-checked-default-width: var(--size-pos-unit);
   --select-button-border-checked-disabled-color: var(--figma-color-bg-disabled);
   --select-button-border-checked-disabled-width: var(--size-pos-unit);
-  --select-button-border-checked-width: var(--size-pos-unit);
   --select-button-border-default-color: var(--figma-color-icon);
   --select-button-border-default-width: var(--size-pos-unit);
   --select-button-border-disabled-color: var(--figma-color-icon-disabled);
@@ -116,14 +116,14 @@
   --select-text-font-weight: var(--font-weight-normal);
   --select-text-letter-spacing: var(--font-letter-spacing-pos-medium);
   --select-text-line-height: var(--font-line-height-default);
-  --select-toggle-background-color-checked: var(--figma-color-bg-selected-strong);
+  --select-toggle-background-color-checked-default: var(--figma-color-bg-selected-strong);
   --select-toggle-background-color-checked-disabled: var(--figma-color-bg-brand-secondary);
   --select-toggle-background-color-default: var(--figma-color-bg-secondary);
   --select-toggle-background-color-disabled: var(--figma-color-bg-disabled);
-  --select-toggle-border-checked-color: var(--figma-color-bg-selected-strong);
+  --select-toggle-border-checked-default-color: var(--figma-color-bg-selected-strong);
+  --select-toggle-border-checked-default-width: var(--size-pos-unit);
   --select-toggle-border-checked-disabled-color: var(--figma-color-bg-brand-secondary);
   --select-toggle-border-checked-disabled-width: var(--size-pos-unit);
-  --select-toggle-border-checked-width: var(--size-pos-unit);
   --select-toggle-border-default-color: var(--figma-color-border);
   --select-toggle-border-default-width: var(--size-pos-unit);
   --select-toggle-border-disabled-color: var(--figma-color-bg-disabled);
@@ -138,7 +138,7 @@
   --select-toggle-border-secondary-width-default: var(--size-null);
   --select-toggle-border-secondary-width-focus: var(--size-pos-unit);
   --select-toggle-height: 10px;
-  --select-toggle-knob-background-color-checked: var(--figma-color-icon-onbrand);
+  --select-toggle-knob-background-color-checked-default: var(--figma-color-icon-onbrand);
   --select-toggle-knob-background-color-checked-disabled: var(--figma-color-icon-onbrand-secondary);
   --select-toggle-knob-background-color-default: var(--grey-0);
   --select-toggle-knob-background-color-disabled: var(--figma-color-icon-ondisabled);

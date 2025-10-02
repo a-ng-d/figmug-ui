@@ -147,13 +147,25 @@
           }
         },
         "checked": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
+          "default": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            }
           },
-          "color": {
-            "$value": "{sketch.color.accent.primary}",
-            "$type": "color"
+          "disabled": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{sketch.color.accent.disabled}",
+              "$type": "color"
+            }
           }
         },
         "disabled": {
@@ -163,16 +175,6 @@
           },
           "color": {
             "$value": "{sketch.color.border.disabled}",
-            "$type": "color"
-          }
-        },
-        "checked-disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
-            "$value": "{sketch.color.accent.disabled}",
             "$type": "color"
           }
         },
@@ -186,9 +188,11 @@
               "$value": "{sketch.color.accent.primary}",
               "$type": "color"
             },
-            "checked-focus": {
-              "$value": "{sketch.color.border.tertiary}",
-              "$type": "color"
+            "checked": {
+              "focus": {
+                "$value": "{sketch.color.border.tertiary}",
+                "$type": "color"
+              }
             }
           },
           "width": {
@@ -200,9 +204,11 @@
               "$value": "{size.pos.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.pos.unit}",
+                "$type": "dimension"
+              }
             }
           },
           "offset": {
@@ -214,9 +220,11 @@
               "$value": "{size.neg.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.neg.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.neg.unit}",
+                "$type": "dimension"
+              }
             }
           }
         }
@@ -228,15 +236,17 @@
             "$type": "color"
           },
           "checked": {
-            "$value": "{sketch.color.accent.primary}",
-            "$type": "color"
+            "default": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
+              "$type": "color"
+            }
           },
           "disabled": {
             "$value": "{sketch.color.background.primary}",
-            "$type": "color"
-          },
-          "checked-disabled": {
-            "$value": "{sketch.color.accent.disabled}",
             "$type": "color"
           }
         }
@@ -383,15 +393,17 @@
             "$type": "color"
           },
           "checked": {
-            "$value": "{sketch.color.accent.primary}",
-            "$type": "color"
+            "default": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
+              "$type": "color"
+            }
           },
           "disabled": {
             "$value": "{sketch.color.background.primary}",
-            "$type": "color"
-          },
-          "checked-disabled": {
-            "$value": "{sketch.color.accent.disabled}",
             "$type": "color"
           }
         }
@@ -408,13 +420,25 @@
           }
         },
         "checked": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
+          "default": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            }
           },
-          "color": {
-            "$value": "{sketch.color.accent.primary}",
-            "$type": "color"
+          "disabled": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{sketch.color.accent.disabled}",
+              "$type": "color"
+            }
           }
         },
         "disabled": {
@@ -424,16 +448,6 @@
           },
           "color": {
             "$value": "{sketch.color.border.disabled}",
-            "$type": "color"
-          }
-        },
-        "checked-disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
-            "$value": "{sketch.color.accent.disabled}",
             "$type": "color"
           }
         },
@@ -447,9 +461,11 @@
               "$value": "{sketch.color.accent.primary}",
               "$type": "color"
             },
-            "checked-focus": {
-              "$value": "{sketch.color.border.tertiary}",
-              "$type": "color"
+            "checked": {
+              "focus": {
+                "$value": "{sketch.color.border.tertiary}",
+                "$type": "color"
+              }
             }
           },
           "width": {
@@ -461,9 +477,11 @@
               "$value": "{size.pos.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.pos.unit}",
+                "$type": "dimension"
+              }
             }
           },
           "offset": {
@@ -475,9 +493,11 @@
               "$value": "{size.neg.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.neg.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.neg.unit}",
+                "$type": "dimension"
+              }
             }
           }
         }
@@ -513,15 +533,17 @@
               "$type": "color"
             },
             "checked": {
-              "$value": "{sketch.color.foreground.onaccent}",
-              "$type": "color"
+              "default": {
+                "$value": "{sketch.color.foreground.onaccent}",
+                "$type": "color"
+              },
+              "disabled": {
+                "$value": "{sketch.color.foreground.onaccent.disabled}",
+                "$type": "color"
+              }
             },
             "disabled": {
               "$value": "{sketch.color.foreground.disabled}",
-              "$type": "color"
-            },
-            "checked-disabled": {
-              "$value": "{sketch.color.foreground.onaccent.disabled}",
               "$type": "color"
             }
           }
@@ -685,15 +707,17 @@
             "$type": "color"
           },
           "checked": {
-            "$value": "{sketch.color.accent.primary}",
-            "$type": "color"
+            "default": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
+              "$type": "color"
+            }
           },
           "disabled": {
             "$value": "{sketch.color.background.primary}",
-            "$type": "color"
-          },
-          "checked-disabled": {
-            "$value": "{sketch.color.accent.disabled}",
             "$type": "color"
           }
         }
@@ -710,13 +734,25 @@
           }
         },
         "checked": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
+          "default": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            }
           },
-          "color": {
-            "$value": "{sketch.color.accent.primary}",
-            "$type": "color"
+          "disabled": {
+            "width": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "color": {
+              "$value": "{sketch.color.accent.disabled}",
+              "$type": "color"
+            }
           }
         },
         "disabled": {
@@ -726,16 +762,6 @@
           },
           "color": {
             "$value": "{sketch.color.border.disabled}",
-            "$type": "color"
-          }
-        },
-        "checked-disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
-            "$value": "{sketch.color.accent.disabled}",
             "$type": "color"
           }
         },
@@ -749,9 +775,11 @@
               "$value": "{sketch.color.accent.primary}",
               "$type": "color"
             },
-            "checked-focus": {
-              "$value": "{sketch.color.border.tertiary}",
-              "$type": "color"
+            "checked": {
+              "focus": {
+                "$value": "{sketch.color.border.tertiary}",
+                "$type": "color"
+              }
             }
           },
           "width": {
@@ -763,9 +791,11 @@
               "$value": "{size.pos.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.pos.unit}",
+                "$type": "dimension"
+              }
             }
           },
           "offset": {
@@ -777,9 +807,11 @@
               "$value": "{size.neg.unit}",
               "$type": "dimension"
             },
-            "checked-focus": {
-              "$value": "{size.neg.unit}",
-              "$type": "dimension"
+            "checked": {
+              "focus": {
+                "$value": "{size.neg.unit}",
+                "$type": "dimension"
+              }
             }
           }
         }

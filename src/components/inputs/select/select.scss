@@ -87,8 +87,8 @@
     height: var(--select-box-height);
 
     &:checked + .checkbox__label:before {
-      background: var(--select-box-background-color-checked);
-      border: var(--select-box-border-checked-width) solid var(--select-box-border-checked-color);
+      background: var(--select-box-background-color-checked-default);
+      border: var(--select-box-border-checked-default-width) solid var(--select-box-border-checked-default-color);
     }
 
     &:checked + .checkbox__label:after {
@@ -185,13 +185,13 @@
     height: var(--select-toggle-height);
 
     &:checked + .switch__label:before {
-      background-color: var(--select-toggle-background-color-checked);
-      border: var(--select-toggle-border-checked-width) solid var(--select-toggle-border-checked-color);
+      background-color: var(--select-toggle-background-color-checked-default);
+      border: var(--select-toggle-border-checked-default-width) solid var(--select-toggle-border-checked-default-color);
     }
 
     &:checked + .switch__label:after {
       transform: translateX(var(--select-toggle-knob-transform-checked-translate-x)) translateY(var(--select-toggle-knob-transform-checked-translate-y));
-      background-color: var(--select-toggle-knob-background-color-checked);
+      background-color: var(--select-toggle-knob-background-color-checked-default);
     }
 
     &:focus + .switch__label:before {
@@ -287,8 +287,8 @@
     height: var(--select-button-height);
 
     &:checked + .radio__label:before {
-      background: var(--select-button-background-color-checked);
-      border: var(--select-button-border-checked-width) solid var(--select-button-border-checked-color);
+      background: var(--select-button-background-color-checked-default);
+      border: var(--select-button-border-checked-default-width) solid var(--select-button-border-checked-default-color);
     }
 
     &:checked + .radio__label:after {
