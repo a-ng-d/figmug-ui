@@ -1,6 +1,14 @@
 {
   "extends": ["stylelint-config-standard"],
-  "ignoreFiles": ["**/figma.scss", "**/sketch.scss", "**/penpot.scss"],
+  "ignoreFiles": [
+    "**/figma.scss",
+    "**/sketch.scss",
+    "**/penpot.scss",
+    "**/globals.scss",
+    "**/*-colors.scss",
+    "**/*-types.scss",
+    "coverage/**"
+  ],
   "rules": {
     "property-no-unknown": [
       true,
@@ -9,11 +17,14 @@
       }
     ],
     "custom-property-no-missing-var-function": true,
-    "import-notation": false,
+    "import-notation": null,
     "selector-class-pattern": null,
-    "no-duplicate-selectors": false,
-    "selector-pseudo-class-no-unknown": false,
+    "no-duplicate-selectors": null,
+    "selector-pseudo-class-no-unknown": null,
     "block-no-redundant-nested-style-rules": null,
-    "custom-property-empty-line-before": null
+    "custom-property-empty-line-before": null,
+    "no-descending-specificity": null,
+    "property-no-vendor-prefix": null,
+    "at-rule-no-unknown": null
   }
 }
