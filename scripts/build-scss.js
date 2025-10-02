@@ -52,8 +52,8 @@ args.forEach((arg) => {
     BUILD_MODE = true // If component is specified, enable build mode
   }
 })
-// If component is specified but no theme, use sketch as default
-if (COMPONENT && !THEME) THEME = 'sketch'
+// If component is specified but no theme, build for all themes
+// This will be handled in the main function
 // Function to find all Terrazzo files
 function findTerrazzoFiles(dir) {
   let results = []
@@ -72,7 +72,7 @@ function groupFilesByTheme(files) {
   return files.reduce((acc, file) => {
     const relativePath = file.replace(projectRoot, '')
     const pathParts = relativePath.split('/')
-    const theme = pathParts[2] // Extract theme name (sketch, figma-ui2, etc.)
+    const theme = pathParts[2]
     const isComponent = pathParts.includes('components')
     const componentName = isComponent
       ? path.basename(file, '.js').replace('terrazzo.', '')
@@ -147,6 +147,10 @@ function displayTerrazzoFiles(groupedFiles) {
       'npm run scss:build -- --build --theme=sketch --component=button\n'
     )
   )
+  console.log(chalk.bold('Build a specific component for all themes:'))
+  console.log(chalk.cyan('npm run scss:build component=button\n'))
+  console.log(chalk.cyan('# or legacy syntax:'))
+  console.log(chalk.cyan('npm run scss:build -- --build --component=button\n'))
 }
 // Main function that executes the script
 async function main() {
@@ -160,7 +164,46 @@ async function main() {
       return
     }
     // Build mode
-    if (THEME) {
+    if (COMPONENT && !THEME) {
+      // Build a specific component for all themes
+      console.log(
+        chalk.blue(`\nBuilding component ${COMPONENT} for all themes...`)
+      )
+      let componentFound = false
+      let builtCount = 0
+
+      for (const [theme, files] of Object.entries(groupedFiles)) {
+        const componentFile = files.components.find((c) => c.name === COMPONENT)
+        if (componentFile) {
+          componentFound = true
+          await buildTerrazzoFile(componentFile.path)
+          builtCount++
+          console.log(
+            chalk.green(`✅ Built component ${COMPONENT} for theme ${theme}`)
+          )
+        } else
+          console.log(
+            chalk.yellow(
+              `⚠️  Component ${COMPONENT} not found in theme ${theme}`
+            )
+          )
+      }
+
+      if (!componentFound) {
+        console.error(
+          chalk.red(
+            `Component "${COMPONENT}" not found in any theme. Available components vary by theme.`
+          )
+        )
+        process.exit(1)
+      }
+
+      console.log(
+        chalk.green(
+          `\n✅ Successfully built component ${COMPONENT} for ${builtCount} theme(s)`
+        )
+      )
+    } else if (THEME) {
       const themeFiles = groupedFiles[THEME]
       if (!themeFiles) {
         console.error(
@@ -171,7 +214,7 @@ async function main() {
         process.exit(1)
       }
       if (COMPONENT) {
-        // Build a specific component
+        // Build a specific component for a specific theme
         const componentFile = themeFiles.components.find(
           (c) => c.name === COMPONENT
         )

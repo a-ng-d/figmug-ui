@@ -29,8 +29,8 @@ const rootDir = path.join(__dirname, '..')
 const TERRAZZO_DIR = path.join(rootDir, 'terrazzo')
 const TOKENS_PLATFORMS_DIR = path.join(rootDir, 'tokens', 'platforms')
 
-// Source theme to copy from - using sketch for everything
-const SOURCE_COLOR_THEME = 'sketch'
+// Source theme to copy from - using figma for everything
+const SOURCE_COLOR_THEME = 'figma'
 
 /**
  * Utility functions for colorful logging
