@@ -4,14 +4,14 @@
 
 :root[data-theme="figma"] {
   --semantic-message-background-color-default: var(--figma-color-bg);
-  --semantic-message-background-color-error: var(--figma-color-bg-danger-tertiary);
   --semantic-message-background-color-error-accent: color(srgb 0 0 0 / 0.18823529411764706);
-  --semantic-message-background-color-info: var(--figma-color-bg-brand-tertiary);
+  --semantic-message-background-color-error-default: var(--figma-color-bg-danger-tertiary);
   --semantic-message-background-color-info-accent: color(srgb 0 0 0 / 0.18823529411764706);
-  --semantic-message-background-color-success: var(--figma-color-bg-success-tertiary);
+  --semantic-message-background-color-info-default: var(--figma-color-bg-brand-tertiary);
   --semantic-message-background-color-success-accent: color(srgb 0 0 0 / 0.18823529411764706);
-  --semantic-message-background-color-warning: var(--figma-color-bg-warning-tertiary);
+  --semantic-message-background-color-success-default: var(--figma-color-bg-success-tertiary);
   --semantic-message-background-color-warning-accent: color(srgb 0 0 0 / 0.18823529411764706);
+  --semantic-message-background-color-warning-default: var(--figma-color-bg-warning-tertiary);
   --semantic-message-border-color-default: transparent;
   --semantic-message-border-color-error: transparent;
   --semantic-message-border-color-info: transparent;

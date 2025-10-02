@@ -23,7 +23,7 @@
 
   &--info {
     --semantic-message-background-color: var(
-      --semantic-message-background-color-info
+      --semantic-message-background-color-info-default
     );
     --semantic-message-border-width: var(--semantic-message-border-width-info);
     --semantic-message-border-color: var(--semantic-message-border-color-info);
@@ -54,7 +54,7 @@
 
   &--error {
     --semantic-message-background-color: var(
-      --semantic-message-background-color-error
+      --semantic-message-background-color-error-default
     );
     --semantic-message-border-width: var(
       --semantic-message-border-width-error
@@ -88,7 +88,7 @@
 
   &--success {
     --semantic-message-background-color: var(
-      --semantic-message-background-color-success
+      --semantic-message-background-color-success-default
     );
     --semantic-message-border-width: var(
       --semantic-message-border-width-success
@@ -124,7 +124,7 @@
 
   &--warning {
     --semantic-message-background-color: var(
-      --semantic-message-background-color-warning
+      --semantic-message-background-color-warning-default
     );
     --semantic-message-border-width: var(
       --semantic-message-border-width-warning

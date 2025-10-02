@@ -89,36 +89,44 @@
           "$type": "color"
         },
         "info": {
-          "$value": "{figma.color.bg.brand.tertiary}",
-          "$type": "color"
-        },
-        "info-accent": {
-          "$value": "#00000030",
-          "$type": "color"
+          "default": {
+            "$value": "{figma.color.bg.brand.tertiary}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
         },
         "error": {
-          "$value": "{figma.color.bg.danger.tertiary}",
-          "$type": "color"
-        },
-        "error-accent": {
-          "$value": "#00000030",
-          "$type": "color"
+          "default": {
+            "$value": "{figma.color.bg.danger.tertiary}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
         },
         "success": {
-          "$value": "{figma.color.bg.success.tertiary}",
-          "$type": "color"
-        },
-        "success-accent": {
-          "$value": "#00000030",
-          "$type": "color"
+          "default": {
+            "$value": "{figma.color.bg.success.tertiary}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
         },
         "warning": {
-          "$value": "{figma.color.bg.warning.tertiary}",
-          "$type": "color"
-        },
-        "warning-accent": {
-          "$value": "#00000030",
-          "$type": "color"
+          "default": {
+            "$value": "{figma.color.bg.warning.tertiary}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
         }
       }
     },

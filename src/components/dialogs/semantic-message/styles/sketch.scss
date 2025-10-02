@@ -4,14 +4,14 @@
 
 :root[data-theme="sketch"] {
   --semantic-message-background-color-default: var(--sketch-color-background-primary);
-  --semantic-message-background-color-error: var(--sketch-color-background-error);
   --semantic-message-background-color-error-accent: color(srgb 0 0 0 / 0.18823529411764706);
-  --semantic-message-background-color-info: var(--sketch-color-background-info);
+  --semantic-message-background-color-error-default: var(--sketch-color-background-error);
   --semantic-message-background-color-info-accent: color(srgb 0 0 0 / 0.18823529411764706);
-  --semantic-message-background-color-success: var(--sketch-color-background-success);
+  --semantic-message-background-color-info-default: var(--sketch-color-background-info);
   --semantic-message-background-color-success-accent: color(srgb 0 0 0 / 0.18823529411764706);
-  --semantic-message-background-color-warning: var(--sketch-color-background-warning);
+  --semantic-message-background-color-success-default: var(--sketch-color-background-success);
   --semantic-message-background-color-warning-accent: color(srgb 0 0 0 / 0.18823529411764706);
+  --semantic-message-background-color-warning-default: var(--sketch-color-background-warning);
   --semantic-message-border-color-default: var(--sketch-color-border-secondary);
   --semantic-message-border-color-error: var(--sketch-color-accent-error);
   --semantic-message-border-color-info: var(--sketch-color-accent-info);

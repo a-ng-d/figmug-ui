@@ -89,36 +89,44 @@
           "$type": "color"
         },
         "info": {
-          "$value": "{sketch.color.background.info}",
-          "$type": "color"
-        },
-        "info-accent": {
-          "$value": "#00000030",
-          "$type": "color"
+          "default": {
+            "$value": "{sketch.color.background.info}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
         },
         "error": {
-          "$value": "{sketch.color.background.error}",
-          "$type": "color"
-        },
-        "error-accent": {
-          "$value": "#00000030",
-          "$type": "color"
+          "default": {
+            "$value": "{sketch.color.background.error}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
         },
         "success": {
-          "$value": "{sketch.color.background.success}",
-          "$type": "color"
-        },
-        "success-accent": {
-          "$value": "#00000030",
-          "$type": "color"
+          "default": {
+            "$value": "{sketch.color.background.success}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
         },
         "warning": {
-          "$value": "{sketch.color.background.warning}",
-          "$type": "color"
-        },
-        "warning-accent": {
-          "$value": "#00000030",
-          "$type": "color"
+          "default": {
+            "$value": "{sketch.color.background.warning}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
         }
       }
     },
