@@ -11,7 +11,10 @@
   --knob-input-border-color: var(--figma-color-border);
   --knob-input-border-offset: var(--size-neg-unit);
   --knob-input-border-width: var(--size-pos-unit);
-  --knob-input-padding: var(--size-pos-xunit);
+  --knob-input-padding-bottom: var(--size-pos-xunit);
+  --knob-input-padding-left: var(--size-pos-xsmall);
+  --knob-input-padding-right: var(--size-pos-xsmall);
+  --knob-input-padding-top: var(--size-pos-xunit);
   --knob-input-radius: var(--border-radius-large);
   --knob-input-shadow: var(--elevation-300-tooltip);
   --knob-input-top: var(--size-neg-xxsmall);
@@ -38,8 +41,10 @@
   --knob-label-border-width-default: var(--size-pos-unit);
   --knob-label-border-width-focus: var(--size-pos-unit);
   --knob-label-height: 20px;
-  --knob-label-padding-horizontal: var(--size-pos-xxxsmall);
-  --knob-label-padding-vertical: var(--size-pos-xunit);
+  --knob-label-padding-bottom: var(--size-pos-xunit);
+  --knob-label-padding-left: var(--size-pos-xxxsmall);
+  --knob-label-padding-right: var(--size-pos-xxxsmall);
+  --knob-label-padding-top: var(--size-pos-xunit);
   --knob-label-radius: var(--border-radius-medium);
   --knob-label-text-color-default: var(--figma-color-text);
   --knob-label-text-color-disabled: var(--figma-color-text-ondisabled);
@@ -52,8 +57,10 @@
   --knob-tooltip-arrow-width: var(--size-pos-xxxsmall);
   --knob-tooltip-background-color: var(--figma-color-bg-inverse);
   --knob-tooltip-min-width: var(--size-pos-small);
-  --knob-tooltip-padding-horizontal: var(--size-pos-xxxsmall);
-  --knob-tooltip-padding-vertical: var(--size-pos-xunit);
+  --knob-tooltip-padding-bottom: var(--size-pos-xunit);
+  --knob-tooltip-padding-left: var(--size-pos-xxxsmall);
+  --knob-tooltip-padding-right: var(--size-pos-xxxsmall);
+  --knob-tooltip-padding-top: var(--size-pos-xunit);
   --knob-tooltip-radius: var(--border-radius-medium);
   --knob-tooltip-text-color: var(--figma-color-text-oninverse);
   --knob-tooltip-top: var(--size-neg-xxsmall);

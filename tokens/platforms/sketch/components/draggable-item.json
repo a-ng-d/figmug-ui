@@ -11,12 +11,20 @@
       }
     },
     "padding": {
-      "horizontal": {
+      "top": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "right": {
         "$value": "{size.pos.xsmall}",
         "$type": "dimension"
       },
-      "vertical": {
+      "bottom": {
         "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.xsmall}",
         "$type": "dimension"
       }
     },

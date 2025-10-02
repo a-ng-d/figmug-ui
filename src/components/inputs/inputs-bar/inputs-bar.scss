@@ -19,14 +19,14 @@
     position: relative;
     gap: var(--inputs-bar-gap-inner);
     border-radius: var(--inputs-bar-radius);
-    padding: var(--inputs-bar-padding-vertical)
-      var(--inputs-bar-padding-horizontal);
+    padding: var(--inputs-bar-padding-top) var(--inputs-bar-padding-right)
+      var(--inputs-bar-padding-bottom) var(--inputs-bar-padding-left);
     overflow: hidden;
     --input-number-width: var(--inputs-bar-width);
     --input-color-width: var(--inputs-bar-width);
 
     & .input {
-      margin: var(--inputs-bar-margin-vertical) var(--inputs-bar-margin-horizontal);
+      margin: var(--inputs-bar-margin-top) var(--inputs-bar-margin-right) var(--inputs-bar-margin-bottom) var(--inputs-bar-margin-left);
 
       input:focus {
         --input-border-width-focus: var(--input-border-width-hover);

@@ -5,12 +5,20 @@
       "$type": "dimension"
     },
     "padding": {
-      "horizontal": {
+      "top": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "right": {
         "$value": "{size.null}",
         "$type": "dimension"
       },
-      "vertical": {
+      "bottom": {
         "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
         "$type": "dimension"
       }
     },

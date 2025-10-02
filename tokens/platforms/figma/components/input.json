@@ -22,10 +22,6 @@
       "$value": "{size.pos.small}",
       "$type": "dimension"
     },
-    "margin": {
-      "$value": "{size.null}",
-      "$type": "dimension"
-    },
     "gap": {
       "$value": "{size.pos.xxsmall}",
       "$type": "dimension"
@@ -36,20 +32,76 @@
     },
     "padding": {
       "default": {
-        "$value": "{size.pos.xxsmall}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
       },
       "clearable": {
-        "$value": "{size.pos.medium}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        }
       },
       "unit": {
-        "$value": "{size.pos.small}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
       },
       "with-icon": {
-        "$value": "{size.pos.small}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
       }
     },
     "clearable": {
@@ -524,8 +576,22 @@
         "$type": "dimension"
       },
       "padding": {
-        "$value": "{size.pos.xxsmall}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
       },
       "background": {
         "color": {

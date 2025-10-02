@@ -15,9 +15,14 @@
   --dialog-form-padding-left: var(--size-pos-small);
   --dialog-form-padding-right: var(--size-pos-medium);
   --dialog-form-padding-top: var(--size-pos-xxsmall);
-  --dialog-padding: var(--size-pos-medium);
+  --dialog-padding-bottom: var(--size-pos-medium);
+  --dialog-padding-left: var(--size-pos-medium);
+  --dialog-padding-right: var(--size-pos-medium);
+  --dialog-padding-top: var(--size-pos-medium);
   --dialog-text-gap: var(--size-pos-xxsmall);
-  --dialog-text-padding-horizontal: var(--size-pos-medium);
-  --dialog-text-padding-vertical: var(--size-pos-xsmall);
+  --dialog-text-padding-bottom: var(--size-pos-xsmall);
+  --dialog-text-padding-left: var(--size-pos-medium);
+  --dialog-text-padding-right: var(--size-pos-medium);
+  --dialog-text-padding-top: var(--size-pos-xsmall);
 }
 

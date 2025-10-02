@@ -8,10 +8,14 @@
   --inputs-bar-gap-default: var(--size-pos-xxsmall);
   --inputs-bar-gap-inner: var(--size-pos-xunit);
   --inputs-bar-input-radius: var(--size-null);
-  --inputs-bar-margin-horizontal: var(--size-neg-unit);
-  --inputs-bar-margin-vertical: var(--size-null);
-  --inputs-bar-padding-horizontal: var(--size-pos-unit);
-  --inputs-bar-padding-vertical: var(--size-null);
+  --inputs-bar-margin-bottom: var(--size-null);
+  --inputs-bar-margin-left: var(--size-neg-unit);
+  --inputs-bar-margin-right: var(--size-neg-unit);
+  --inputs-bar-margin-top: var(--size-null);
+  --inputs-bar-padding-bottom: var(--size-null);
+  --inputs-bar-padding-left: var(--size-pos-unit);
+  --inputs-bar-padding-right: var(--size-pos-unit);
+  --inputs-bar-padding-top: var(--size-null);
   --inputs-bar-radius: var(--border-radius-large);
   --inputs-bar-width: var(--size-pos-xlarge);
 }

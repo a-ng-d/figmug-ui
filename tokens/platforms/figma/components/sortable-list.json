@@ -1,12 +1,20 @@
 {
   "sortable-list": {
     "padding": {
-      "horizontal": {
+      "top": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "right": {
         "$value": "{size.null}",
         "$type": "dimension"
       },
-      "vertical": {
+      "bottom": {
         "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
         "$type": "dimension"
       }
     },

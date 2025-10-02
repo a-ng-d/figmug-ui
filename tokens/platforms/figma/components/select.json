@@ -86,8 +86,22 @@
         }
       },
       "margin": {
-        "$value": "{size.neg.xsmall}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        }
       }
     },
     "box": {
@@ -304,8 +318,22 @@
         }
       },
       "margin": {
-        "$value": "{size.neg.xsmall}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        }
       }
     },
     "toggle": {
@@ -577,8 +605,22 @@
         }
       },
       "margin": {
-        "$value": "{size.neg.xsmall}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.neg.xsmall}",
+          "$type": "dimension"
+        }
       }
     },
     "button": {

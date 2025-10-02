@@ -8,8 +8,8 @@
   align-items: center;
   margin: var(--simple-slider-margin-top) var(--simple-slider-margin-right)
     var(--simple-slider-margin-bottom) var(--simple-slider-margin-left);
-  padding: var(--simple-slider-padding-vertical)
-    var(--simple-slider-padding-horizontal);
+  padding: var(--simple-slider-padding-top) var(--simple-slider-padding-right)
+    var(--simple-slider-padding-bottom) var(--simple-slider-padding-left);
 
   &__range {
     position: relative;

@@ -14,8 +14,8 @@
   min-height: var(--bar-min-height);
 
   & {
-    --bar-padding: var(--bar-padding-default-vertical)
-      var(--bar-padding-default-horizontal);
+    --bar-padding: var(--bar-padding-default-top) var(--bar-padding-default-right)
+      var(--bar-padding-default-bottom) var(--bar-padding-default-left);
   }
 
   &.bar--compact {

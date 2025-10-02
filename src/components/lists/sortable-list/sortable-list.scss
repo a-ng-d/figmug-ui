@@ -8,7 +8,7 @@
   list-style-type: none;
 
   &--scrollable {
-    padding: var(--sortable-list-padding-vertical) var(--sortable-list-padding-horizontal);
+    padding: var(--sortable-list-padding-top) var(--sortable-list-padding-right) var(--sortable-list-padding-bottom) var(--sortable-list-padding-left);
     height: 100%;
     overflow-y: auto;
   }

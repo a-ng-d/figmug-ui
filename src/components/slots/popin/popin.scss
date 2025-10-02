@@ -59,7 +59,9 @@
     &--message {
       justify-content: center;
       align-items: center;
-      padding: var(--popin-content-padding-empty);
+      padding: var(--popin-content-padding-empty-top) var(--popin-content-padding-empty-right)
+        var(--popin-content-padding-empty-bottom)
+        var(--popin-content-padding-empty-left) ;
     }
   }
 

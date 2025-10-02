@@ -26,7 +26,7 @@
     gap: var(--consent-banner-gap);
     border-top: var(--consent-banner-border-width) solid var(--consent-banner-border-color);
     background-color: var(--consent-banner-background-color);
-    padding: var(--consent-banner-padding-vertical) var(--consent-banner-padding-horizontal);
+    padding: var(--consent-banner-padding-top) var(--consent-banner-padding-right) var(--consent-banner-padding-bottom) var(--consent-banner-padding-left);
     width: 100%;
     max-height: 100%;
     pointer-events: all;

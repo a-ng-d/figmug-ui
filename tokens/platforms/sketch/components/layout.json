@@ -2,11 +2,19 @@
   "layout": {
     "block": {
       "padding": {
-        "vertical": {
+        "top": {
           "$value": "{size.pos.xxsmall}",
           "$type": "dimension"
         },
-        "horizontal": {
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
           "$value": "{size.null}",
           "$type": "dimension"
         }
@@ -50,8 +58,22 @@
     },
     "centered": {
       "padding": {
-        "$value": "{size.pos.small}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
       }
     },
     "distributed": {

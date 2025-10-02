@@ -19,6 +19,10 @@
   height: 100%;
   user-select: none;
 
+  & {
+    --dialog-padding: var(--dialog-padding-top) var(--dialog-padding-right) var(--dialog-padding-bottom) var(--dialog-padding-left);
+  }
+
   &--right {
     justify-content: end;
     align-items: start;
@@ -45,7 +49,7 @@
     flex-direction: column;
     gap: var(--dialog-text-gap);
     margin: 0;
-    padding: var(--dialog-text-padding-vertical) var(--dialog-text-padding-horizontal);
+    padding: var(--dialog-text-padding-top) var(--dialog-text-padding-right) var(--dialog-text-padding-bottom) var(--dialog-text-padding-left);
 
     p {
       margin: 0;

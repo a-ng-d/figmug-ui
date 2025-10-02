@@ -22,7 +22,7 @@
   }
 
   &__msg {
-    padding: var(--message-message-padding-vertical) var(--message-message-padding-horizontal);
+    padding: var(--message-message-padding-top) var(--message-message-padding-right) var(--message-message-padding-bottom) var(--message-message-padding-left);
   }
 
   /* Tips ticker */
@@ -35,7 +35,7 @@
     overflow: hidden;
 
     .message__msg {
-      padding: var(--message-message-padding-vertical) var(--message-message-padding-horizontal);
+      padding: var(--message-message-padding-top) var(--message-message-padding-right) var(--message-message-padding-bottom) var(--message-message-padding-left);
       white-space: nowrap;
     }
 

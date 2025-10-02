@@ -22,12 +22,40 @@
     },
     "padding": {
       "default": {
-        "$value": "{size.null}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
       },
       "vertical": {
-        "$value": "{size.pos.xxsmall}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
       }
     },
     "background": {
@@ -55,22 +83,34 @@
       },
       "padding": {
         "default": {
-          "vertical": {
+          "top": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
-          "horizontal": {
+          "right": {
+            "$value": "{size.pos.xxsmall}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
             "$value": "{size.pos.xxsmall}",
             "$type": "dimension"
           }
         },
         "withIcon": {
-          "vertical": {
+          "top": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
           "right": {
             "$value": "{size.pos.xmsmall}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "left": {
@@ -79,22 +119,34 @@
           }
         },
         "alternative": {
-          "vertical": {
+          "top": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
-          "horizontal": {
+          "right": {
+            "$value": "{size.pos.xmsmall}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
             "$value": "{size.pos.xmsmall}",
             "$type": "dimension"
           }
         },
         "alternativeWithIcon": {
-          "vertical": {
+          "top": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
           "right": {
             "$value": "{size.pos.xxsmall}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "left": {

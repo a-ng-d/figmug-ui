@@ -44,7 +44,7 @@
     box-shadow: var(--actions-list-shadow);
     border-radius: var(--actions-list-radius);
     background-color: var(--actions-list-background-color);
-    padding: var(--actions-list-padding-vertical) var(--actions-list-padding-horizontal);
+    padding: var(--actions-list-padding-top) var(--actions-list-padding-right) var(--actions-list-padding-bottom) var(--actions-list-padding-left);
     width: 100%;
     min-width: var(--actions-list-min-width);
     overflow: visible;
@@ -128,9 +128,9 @@
     }
 
     & {
-      --actions-list-item-padding: var(--actions-list-item-padding-default-vertical)
+      --actions-list-item-padding: var(--actions-list-item-padding-default-top)
         var(--actions-list-item-padding-default-right)
-        var(--actions-list-item-padding-default-vertical)
+        var(--actions-list-item-padding-default-bottom)
         var(--actions-list-item-padding-default-left);
       --actions-list-item-background-color: var(
         --actions-list-item-background-color-default
@@ -171,9 +171,9 @@
     }
 
     &--selected {
-      --actions-list-item-padding: var(--actions-list-item-padding-selected-vertical)
+      --actions-list-item-padding: var(--actions-list-item-padding-selected-top)
         var(--actions-list-item-padding-selected-right)
-        var(--actions-list-item-padding-selected-vertical)
+        var(--actions-list-item-padding-selected-bottom)
         var(--actions-list-item-padding-selected-left);
       --actions-list-item-background-color: var(
         --actions-list-item-background-color-selected
@@ -185,9 +185,9 @@
       --actions-list-caret-color: var(--actions-list-caret-color-selected);
 
       &:hover {
-        --actions-list-item-padding: var(--actions-list-item-padding-selected-hover-vertical)
+        --actions-list-item-padding: var(--actions-list-item-padding-selected-hover-top)
         var(--actions-list-item-padding-selected-hover-right)
-        var(--actions-list-item-padding-selected-hover-vertical)
+        var(--actions-list-item-padding-selected-hover-bottom)
         var(--actions-list-item-padding-selected-hover-left);
         --actions-list-item-background-color: var(
           --actions-list-item-background-color-selected-hover
@@ -204,9 +204,9 @@
       }
 
       &:focus {
-        --actions-list-item-padding: var(--actions-list-item-padding-selected-focus-vertical)
+        --actions-list-item-padding: var(--actions-list-item-padding-selected-focus-top)
         var(--actions-list-item-padding-selected-focus-right)
-        var(--actions-list-item-padding-selected-focus-vertical)
+        var(--actions-list-item-padding-selected-focus-bottom)
         var(--actions-list-item-padding-selected-focus-left);
         --actions-list-item-background-color: var(
           --actions-list-item-background-color-selected-focus

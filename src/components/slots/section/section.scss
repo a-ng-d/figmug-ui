@@ -7,7 +7,7 @@
   flex-direction: column;
   gap: var(--section-gap);
   background-color: var(--section-background-color);
-  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
+  padding: var(--section-padding-top) var(--section-padding-right) var(--section-padding-bottom) var(--section-padding-left);
 
   &__child {
     padding: var(--section-child-padding-default-top) var(--section-child-padding-default-right) var(--section-child-padding-default-bottom) var(--section-child-padding-default-left);

@@ -85,10 +85,7 @@
       "margin": {
         "default": {
           "top": {
-            "$value": {
-              "value": 6,
-              "unit": "px"
-            },
+            "$value": "{size.pos.xunit}",
             "$type": "dimension"
           },
           "right": {
@@ -106,10 +103,7 @@
         },
         "multiline": {
           "top": {
-            "$value": {
-              "value": 6,
-              "unit": "px"
-            },
+            "$value": "{size.pos.xunit}",
             "$type": "dimension"
           },
           "right": {
@@ -129,11 +123,19 @@
     },
     "helper": {
       "padding": {
-        "vertical": {
+        "top": {
           "$value": "{size.null}",
           "$type": "dimension"
         },
-        "horizontal": {
+        "right": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
           "$value": "{size.pos.xxxsmall}",
           "$type": "dimension"
         }

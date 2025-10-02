@@ -15,22 +15,38 @@
       "$type": "dimension"
     },
     "padding": {
-      "horizontal": {
+      "top": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "right": {
         "$value": "{size.pos.unit}",
         "$type": "dimension"
       },
-      "vertical": {
+      "bottom": {
         "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.unit}",
         "$type": "dimension"
       }
     },
     "margin": {
-      "horizontal": {
+      "top": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "right": {
         "$value": "{size.neg.unit}",
         "$type": "dimension"
       },
-      "vertical": {
+      "bottom": {
         "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.neg.unit}",
         "$type": "dimension"
       }
     },

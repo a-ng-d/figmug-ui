@@ -74,7 +74,7 @@
     box-shadow: var(--tooltip-shadow);
     border-radius: var(--tooltip-radius);
     background-color: var(--tooltip-background-color);
-    padding: var(--tooltip-padding-vertical) var(--tooltip-padding-horizontal);
+    padding: var(--tooltip-padding-top) var(--tooltip-padding-right) var(--tooltip-padding-bottom) var(--tooltip-padding-left);
   }
 
   &__text {

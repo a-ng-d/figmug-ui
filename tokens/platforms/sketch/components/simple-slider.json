@@ -19,12 +19,20 @@
       }
     },
     "padding": {
-      "horizontal": {
+      "top": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "right": {
         "$value": "{size.pos.medium}",
         "$type": "dimension"
       },
-      "vertical": {
+      "bottom": {
         "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.medium}",
         "$type": "dimension"
       }
     },

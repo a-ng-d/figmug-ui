@@ -8,11 +8,19 @@
       "$type": "dimension"
     },
     "padding": {
-      "vertical": {
+      "top": {
         "$value": "{size.pos.xxsmall}",
         "$type": "dimension"
       },
-      "horizontal": {
+      "right": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "left": {
         "$value": "{size.pos.xxsmall}",
         "$type": "dimension"
       }
@@ -52,12 +60,16 @@
       },
       "padding": {
         "default": {
-          "vertical": {
+          "top": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
           "right": {
             "$value": "{size.pos.xxsmall}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "left": {
@@ -66,12 +78,16 @@
           }
         },
         "selected": {
-          "vertical": {
+          "top": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
           "right": {
             "$value": "{size.pos.xxsmall}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "left": {
@@ -80,12 +96,16 @@
           }
         },
         "selectedHover": {
-          "vertical": {
+          "top": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
           "right": {
             "$value": "{size.pos.xsmall}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "left": {
@@ -94,12 +114,16 @@
           }
         },
         "selectedFocus": {
-          "vertical": {
+          "top": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
           "right": {
             "$value": "{size.pos.xsmall}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "left": {

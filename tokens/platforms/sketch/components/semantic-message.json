@@ -42,22 +42,38 @@
         }
       },
       "vertical": {
-        "horizontal": {
+        "top": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
           "$value": "{size.pos.xxxsmall}",
           "$type": "dimension"
         },
-        "vertical": {
+        "bottom": {
           "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxxsmall}",
           "$type": "dimension"
         }
       },
       "anchored-vertical": {
-        "horizontal": {
+        "top": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
           "$value": "{size.pos.xxxsmall}",
           "$type": "dimension"
         },
-        "vertical": {
+        "bottom": {
           "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxxsmall}",
           "$type": "dimension"
         }
       }

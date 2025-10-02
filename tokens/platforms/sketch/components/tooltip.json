@@ -17,11 +17,19 @@
       "$type": "dimension"
     },
     "padding": {
-      "vertical": {
+      "top": {
         "$value": "{size.pos.xmsmall}",
         "$type": "dimension"
       },
-      "horizontal": {
+      "right": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xmsmall}",
+        "$type": "dimension"
+      },
+      "left": {
         "$value": "{size.pos.xxsmall}",
         "$type": "dimension"
       }

@@ -6,8 +6,10 @@
   --message-gap: var(--size-pos-xxsmall);
   --message-icon-color-default: var(--figma-color-icon);
   --message-icon-color-disabled: var(--figma-color-icon-disabled);
-  --message-message-padding-horizontal: var(--size-null);
-  --message-message-padding-vertical: var(--size-pos-xxxsmall);
+  --message-message-padding-bottom: var(--size-pos-xxxsmall);
+  --message-message-padding-left: var(--size-null);
+  --message-message-padding-right: var(--size-null);
+  --message-message-padding-top: var(--size-pos-xxxsmall);
   --message-padding-bottom: var(--size-null);
   --message-padding-left: 20px;
   --message-padding-right: 20px;
@@ -19,7 +21,9 @@
   --message-ticker-mask-background-color: var(--figma-color-bg);
   --message-ticker-mask-width: var(--size-pos-xsmall);
   --message-ticker-max-width: 640px;
-  --message-ticker-padding-horizontal: var(--size-pos-xsmall);
-  --message-ticker-padding-vertical: var(--size-null);
+  --message-ticker-padding-bottom: var(--size-null);
+  --message-ticker-padding-left: var(--size-pos-xsmall);
+  --message-ticker-padding-right: var(--size-pos-xsmall);
+  --message-ticker-padding-top: var(--size-null);
 }
 

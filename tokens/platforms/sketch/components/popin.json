@@ -124,11 +124,19 @@
     "content": {
       "padding": {
         "empty": {
-          "horizontal": {
+          "top": {
             "$value": "{size.pos.medium}",
             "$type": "dimension"
           },
-          "vertical": {
+          "right": {
+            "$value": "{size.pos.medium}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.pos.medium}",
+            "$type": "dimension"
+          },
+          "left": {
             "$value": "{size.pos.medium}",
             "$type": "dimension"
           }

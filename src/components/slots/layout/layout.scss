@@ -23,8 +23,8 @@
     flex: 1;
     flex-direction: column;
     justify-content: start;
-    padding: var(--layout-block-padding-vertical)
-      var(--layout-block-padding-horizontal);
+    padding: var(--layout-block-padding-top) var(--layout-block-padding-right)
+      var(--layout-block-padding-bottom) var(--layout-block-padding-left);
     overflow-x: hidden;
     overflow-y: auto;
 
@@ -43,7 +43,9 @@
       flex: none;
       box-sizing: border-box;
       margin: auto;
-      padding: var(--layout-centered-padding);
+      padding: var(--layout-centered-padding-top) var(--layout-centered-padding-right)
+        var(--layout-centered-padding-bottom)
+        var(--layout-centered-padding-left);
       max-width: 100%;
     }
 

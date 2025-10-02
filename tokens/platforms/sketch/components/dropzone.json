@@ -1,8 +1,22 @@
 {
   "dropzone": {
     "padding": {
-      "$value": "{size.pos.small}",
-      "$type": "dimension"
+      "top": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      }
     },
     "gap": {
       "$value": "{size.pos.xxsmall}",

@@ -167,17 +167,17 @@
 
     &.semantic-message--vertical {
       --semantic-message-padding: var(
-        --semantic-message-padding-anchored-vertical-vertical
-      )
-        var(--semantic-message-padding-anchored-vertical-horizontal);
+        --semantic-message-padding-anchored-vertical-top
+      ) var(--semantic-message-padding-anchored-vertical-right)
+        var(--semantic-message-padding-anchored-vertical-bottom) var(--semantic-message-padding-anchored-vertical-left);
     }
   }
 
   &--vertical {
     flex-direction: column;
     align-items: center;
-    --semantic-message-padding: var(--semantic-message-padding-vertical-vertical)
-      var(--semantic-message-padding-vertical-horizontal);
+    --semantic-message-padding: var(--semantic-message-padding-vertical-top) var(--semantic-message-padding-vertical-right)
+      var(--semantic-message-padding-vertical-bottom) var(--semantic-message-padding-vertical-left);
   }
 
   &__body {

@@ -25,8 +25,10 @@
   --chip-margin-left: var(--size-pos-xxxsmall);
   --chip-margin-right: var(--size-null);
   --chip-margin-top: var(--size-null);
-  --chip-padding-horizontal: var(--size-pos-xxsmall);
-  --chip-padding-vertical: var(--size-null);
+  --chip-padding-bottom: var(--size-null);
+  --chip-padding-left: var(--size-pos-xxsmall);
+  --chip-padding-right: var(--size-pos-xxsmall);
+  --chip-padding-top: var(--size-null);
   --chip-radius: var(--border-radius-xlarge);
   --chip-text-color-default: var(--sketch-color-foreground-inverted);
   --chip-text-color-hover: var(--sketch-color-foreground-inverted);

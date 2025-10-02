@@ -15,7 +15,8 @@
   & {
     --tabs-gap: var(--tabs-gap-default);
     --tabs-radius: var(--tabs-radius-default);
-    --tabs-padding: var(--tabs-padding-default);
+    --tabs-padding: var(--tabs-padding-default-top) var(--tabs-padding-default-right)
+      var(--tabs-padding-default-bottom) var(--tabs-padding-default-left);
     --tabs-background-color: var(--tabs-background-color-default);
   }
 
@@ -50,7 +51,7 @@
     }
 
     & {
-      --tabs-tab-padding: var(--tabs-tab-padding-default-vertical) var(--tabs-tab-padding-default-horizontal);
+      --tabs-tab-padding: var(--tabs-tab-padding-default-top) var(--tabs-tab-padding-default-right) var(--tabs-tab-padding-default-bottom) var(--tabs-tab-padding-default-left);
       --tabs-tab-gap: var(--tabs-tab-gap-default);
       --tabs-tab-radius: var(--tabs-tab-radius-default);
       --tabs-tab-height: var(--tabs-tab-height-default);
@@ -60,8 +61,8 @@
       --tabs-tab-text-transform: var(--tabs-tab-text-transform-default);
 
       &--with-icon {
-        --tabs-tab-padding: var(--tabs-tab-padding-with-icon-vertical)
-          var(--tabs-tab-padding-with-icon-right) var(--tabs-tab-padding-with-icon-vertical)
+        --tabs-tab-padding: var(--tabs-tab-padding-with-icon-top)
+          var(--tabs-tab-padding-with-icon-right) var(--tabs-tab-padding-with-icon-bottom)
           var(--tabs-tab-padding-with-icon-left);
       }
     }
@@ -135,10 +136,10 @@
 
   &--vertical {
     flex-direction: column;
-    --tabs-gap: var(--tabs-gap-vertical);
-    --tabs-radius: var(--tabs-radius-vertical);
-    --tabs-padding: var(--tabs-padding-vertical);
-    --tabs-background-color: var(--tabs-background-color-vertical);
+    --tabs-gap: var(--tabs-gap-top);
+    --tabs-radius: var(--tabs-radius-top);
+    --tabs-padding: var(--tabs-padding-top);
+    --tabs-background-color: var(--tabs-background-color-top);
 
     --tabs-tab-gap: var(--tabs-tab-gap-alternative);
     --tabs-tab-padding: var(--tabs-tab-padding-alternative);
@@ -152,8 +153,8 @@
     --tabs-tab-icon-height: var(--tabs-tab-icon-width-alternative);
     --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative);
 
-    --tabs-tab-padding: var(--tabs-tab-padding-alternative-with-icon-vertical)
-        var(--tabs-tab-padding-alternative-with-icon-right) var(--tabs-tab-padding-alternative-with-icon-vertical)
+    --tabs-tab-padding: var(--tabs-tab-padding-alternative-with-icon-top)
+        var(--tabs-tab-padding-alternative-with-icon-right) var(--tabs-tab-padding-alternative-with-icon-bottom)
         var(--tabs-tab-padding-alternative-with-icon-left);
 
     --tabs-tab-background-color-hover: var(

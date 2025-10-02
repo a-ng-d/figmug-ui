@@ -10,11 +10,19 @@
     },
     "padding": {
       "default": {
-        "vertical": {
+        "top": {
           "$value": "{size.null}",
           "$type": "dimension"
         },
-        "horizontal": {
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
           "$value": "{size.pos.xsmall}",
           "$type": "dimension"
         }

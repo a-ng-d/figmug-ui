@@ -54,12 +54,20 @@
     },
     "message": {
       "padding": {
-        "horizontal": {
+        "top": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
           "$value": "{size.null}",
           "$type": "dimension"
         },
-        "vertical": {
+        "bottom": {
           "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
           "$type": "dimension"
         }
       }
@@ -81,12 +89,20 @@
         "$type": "dimension"
       },
       "padding": {
-        "horizontal": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
           "$value": "{size.pos.xsmall}",
           "$type": "dimension"
         },
-        "vertical": {
+        "bottom": {
           "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
           "$type": "dimension"
         }
       },

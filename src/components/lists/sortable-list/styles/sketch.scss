@@ -5,7 +5,9 @@
 :root[data-theme="sketch"] {
   --sortable-list-border-color: var(--sketch-color-border-primary);
   --sortable-list-border-width: var(--size-pos-unit);
-  --sortable-list-padding-horizontal: var(--size-null);
-  --sortable-list-padding-vertical: var(--size-pos-unit);
+  --sortable-list-padding-bottom: var(--size-pos-unit);
+  --sortable-list-padding-left: var(--size-null);
+  --sortable-list-padding-right: var(--size-null);
+  --sortable-list-padding-top: var(--size-pos-unit);
 }
 

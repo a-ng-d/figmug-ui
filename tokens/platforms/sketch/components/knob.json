@@ -18,11 +18,19 @@
         "$type": "dimension"
       },
       "padding": {
-        "vertical": {
+        "top": {
           "$value": "{size.pos.xunit}",
           "$type": "dimension"
         },
-        "horizontal": {
+        "right": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "left": {
           "$value": "{size.pos.xxsmall}",
           "$type": "dimension"
         }
@@ -154,11 +162,19 @@
         "$type": "dimension"
       },
       "padding": {
-        "vertical": {
+        "top": {
           "$value": "{size.pos.xunit}",
           "$type": "dimension"
         },
-        "horizontal": {
+        "right": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "left": {
           "$value": "{size.pos.xxxsmall}",
           "$type": "dimension"
         }
@@ -264,8 +280,22 @@
         }
       },
       "padding": {
-        "$value": "{size.pos.xunit}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        }
       },
       "width": {
         "$value": "{size.pos.xxlarge}",

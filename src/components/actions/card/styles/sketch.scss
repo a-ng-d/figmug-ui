@@ -4,7 +4,10 @@
 
 :root[data-theme="sketch"] {
   --card-actions-gap: var(--size-pos-xxsmall);
-  --card-actions-padding: var(--size-pos-xxsmall);
+  --card-actions-padding-bottom: var(--size-pos-xxsmall);
+  --card-actions-padding-left: var(--size-pos-xxsmall);
+  --card-actions-padding-right: var(--size-pos-xxsmall);
+  --card-actions-padding-top: var(--size-pos-xxsmall);
   --card-background-color-default: var(--sketch-color-background-primary);
   --card-background-color-focus: var(--sketch-color-accent-disabled);
   --card-background-color-hover: var(--sketch-color-background-secondary);
@@ -19,7 +22,10 @@
   --card-border-width-hover: var(--size-null);
   --card-content-gap: var(--size-pos-xxxsmall);
   --card-gap: var(--size-pos-xxsmall);
-  --card-padding: var(--size-pos-xxsmall);
+  --card-padding-bottom: var(--size-pos-xxsmall);
+  --card-padding-left: var(--size-pos-xxsmall);
+  --card-padding-right: var(--size-pos-xxsmall);
+  --card-padding-top: var(--size-pos-xxsmall);
   --card-radius: var(--size-pos-xsmall);
   --card-ratio: 2 / 1;
   --card-width: 200px;

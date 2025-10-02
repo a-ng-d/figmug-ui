@@ -67,7 +67,7 @@
     var(--knob-label-border-color);
   border-radius: var(--knob-label-radius);
   background: var(--knob-label-background-color);
-  padding: var(--knob-label-padding-vertical) var(--knob-label-padding-horizontal);
+  padding: var(--knob-label-padding-top) var(--knob-label-padding-right) var(--knob-label-padding-bottom) var(--knob-label-padding-left);
   width: 100%;
   height: var(--knob-label-height);
   pointer-events: none;
@@ -107,7 +107,7 @@
   transform: translateX(-50%) translateY(-100%);
   border-radius: var(--knob-tooltip-radius);
   background-color: var(--knob-tooltip-background-color);
-  padding: var(--knob-tooltip-padding-vertical) var(--knob-tooltip-padding-horizontal);
+  padding: var(--knob-tooltip-padding-top) var(--knob-tooltip-padding-right) var(--knob-tooltip-padding-bottom) var(--knob-tooltip-padding-left);
   min-width: var(--knob-tooltip-min-width);
   pointer-events: none;
   color: var(--knob-tooltip-text-color);
@@ -157,6 +157,6 @@
   box-shadow: var(--knob-input-shadow);
   border-radius: var(--knob-input-radius);
   background-color: var(--knob-input-background-color);
-  padding: var(--knob-input-padding);
+  padding: var(--knob-input-padding-top) var(--knob-input-padding-right) var(--knob-input-padding-bottom) var(--knob-input-padding-left);
   width: var(--knob-input-width);
 }

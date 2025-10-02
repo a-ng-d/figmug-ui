@@ -18,8 +18,10 @@
   --tooltip-image-width: 96px;
   --tooltip-max-width: 200px;
   --tooltip-min-width: 172px;
-  --tooltip-padding-horizontal: var(--size-pos-xxsmall);
-  --tooltip-padding-vertical: var(--size-pos-xmsmall);
+  --tooltip-padding-bottom: var(--size-pos-xmsmall);
+  --tooltip-padding-left: var(--size-pos-xxsmall);
+  --tooltip-padding-right: var(--size-pos-xxsmall);
+  --tooltip-padding-top: var(--size-pos-xmsmall);
   --tooltip-radius: var(--border-radius-xlarge);
   --tooltip-shadow: var(--elevation-300-tooltip);
   --tooltip-text-color: var(--sketch-color-foreground-primary);

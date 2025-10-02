@@ -13,11 +13,19 @@
       }
     },
     "padding": {
-      "vertical": {
+      "top": {
         "$value": "{size.pos.unit}",
         "$type": "dimension"
       },
-      "horizontal": {
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "left": {
         "$value": "{size.null}",
         "$type": "dimension"
       }

@@ -33,7 +33,7 @@
   &__label {
     display: flex;
     align-items: start;
-    margin-left: var(--select-checkbox-margin);
+    margin-left: var(--select-checkbox-margin-left);
     padding: var(--select-checkbox-padding-top) var(--select-checkbox-padding-right) var(--select-checkbox-padding-bottom) var(--select-checkbox-padding-left);
     height: 100%;
     color: var(--select-text-color-default);
@@ -133,7 +133,7 @@
   &__label {
     display: flex;
     align-items: start;
-    margin-left: var(--select-switch-margin);
+    margin-left: var(--select-switch-margin-left);
     padding: var(--select-switch-padding-top) var(--select-switch-padding-right) var(--select-switch-padding-bottom) var(--select-switch-padding-left);
     height: 100%;
     color: var(--select-text-color-default);
@@ -238,7 +238,7 @@
     display: flex;
     position: relative;
     align-items: start;
-    margin-left: var(--select-radio-margin);
+    margin-left: var(--select-radio-margin-left);
     padding: var(--select-radio-padding-top) var(--select-radio-padding-right) var(--select-radio-padding-bottom) var(--select-radio-padding-left);
     height: 100%;
     color: var(--select-text-color-default);

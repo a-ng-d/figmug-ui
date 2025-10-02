@@ -14,11 +14,19 @@
         "$type": "dimension"
       },
       "padding": {
-        "vertical": {
+        "top": {
           "$value": "{size.null}",
           "$type": "dimension"
         },
-        "horizontal": {
+        "right": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
           "$value": "{size.pos.xmsmall}",
           "$type": "dimension"
         }
@@ -110,11 +118,19 @@
         "$type": "dimension"
       },
       "padding": {
-        "vertical": {
+        "top": {
           "$value": "{size.null}",
           "$type": "dimension"
         },
-        "horizontal": {
+        "right": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
           "$value": "{size.pos.xxsmall}",
           "$type": "dimension"
         }
@@ -126,11 +142,19 @@
         "$type": "dimension"
       },
       "padding": {
-        "vertical": {
+        "top": {
           "$value": "{size.null}",
           "$type": "dimension"
         },
-        "horizontal": {
+        "right": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
           "$value": "{size.pos.small}",
           "$type": "dimension"
         }
@@ -478,7 +502,7 @@
       "text": {
         "font": {
           "size": {
-            "$value": "{font.size.small}",
+            "$value": "{font.size.medium}",
             "$type": "dimension"
           }
         },
@@ -528,8 +552,22 @@
         }
       },
       "padding": {
-        "$value": "{size.null}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
       },
       "background": {
         "color": {
@@ -763,6 +801,28 @@
             "$value": "{sketch.color.foreground.onaccent.disabled}",
             "$type": "color"
           }
+        },
+        "decoration": {
+          "default": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "disabled": {
+            "$value": "none",
+            "$type": "string"
+          }
         }
       },
       "icon": {
@@ -905,6 +965,28 @@
             "$value": "{sketch.color.accent.tertiary}",
             "$type": "color"
           }
+        },
+        "decoration": {
+          "default": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "disabled": {
+            "$value": "none",
+            "$type": "string"
+          }
         }
       },
       "icon": {
@@ -948,8 +1030,22 @@
         "$type": "dimension"
       },
       "padding": {
-        "$value": "{size.null}",
-        "$type": "dimension"
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
       },
       "background": {
         "color": {

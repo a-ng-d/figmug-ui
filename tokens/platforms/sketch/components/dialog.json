@@ -1,8 +1,22 @@
 {
   "dialog": {
     "padding": {
-      "$value": "{size.pos.medium}",
-      "$type": "dimension"
+      "top": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      }
     },
     "background": {
       "color": {
@@ -47,12 +61,20 @@
         "$type": "dimension"
       },
       "padding": {
-        "horizontal": {
+        "top": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
           "$value": "{size.pos.medium}",
           "$type": "dimension"
         },
-        "vertical": {
+        "bottom": {
           "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.medium}",
           "$type": "dimension"
         }
       }

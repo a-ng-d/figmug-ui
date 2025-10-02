@@ -16,7 +16,7 @@
 
   &--with-icon & {
     &__field {
-      padding-left: var(--input-padding-with-icon);
+      padding-left: var(--input-padding-with-icon-left);
     }
   }
 
@@ -130,13 +130,12 @@
     position: relative;
     align-items: center;
     box-sizing: border-box;
-    margin: var(--input-margin);
     outline: var(--input-border-width) solid var(--input-border-color);
     outline-offset: var(--input-border-offset);
     border: none;
     border-radius: var(--input-radius);
     background-color: var(--input-background-color);
-    padding: var(--input-padding-default);
+    padding: var(--input-padding-default-top) var(--input-padding-default-right) var(--input-padding-default-bottom) var(--input-padding-default-left);
     width: 100%;
     height: var(--input-height);
     overflow: visible;
@@ -298,11 +297,11 @@
     }
 
     &--clearable {
-      padding-right: var(--input-padding-clearable);
+      padding-right: var(--input-padding-clearable-right);
     }
 
     &--unit {
-      padding-right: var(--input-padding-unit);
+      padding-right: var(--input-padding-unit-right);
     }
   }
 
@@ -348,7 +347,7 @@
   position: relative;
   align-items: center;
   cursor: inherit;
-  padding: var(--input-textarea-padding);
+  padding: var(--input-textarea-padding-top) var(--input-textarea-padding-right) var(--input-textarea-padding-bottom) var(--input-textarea-padding-left);
   width: 100%;
   min-height: var(--input-textarea-min-height);
   overflow: visible;

@@ -73,7 +73,7 @@
   outline-offset: var(--button-base-border-offset);
   border-radius: var(--button-base-radius);
   background-color: var(--button-base-background-color);
-  padding: var(--button-base-padding-vertical) var(--button-base-padding-horizontal);
+  padding: var(--button-base-padding-top) var(--button-base-padding-right) var(--button-base-padding-bottom) var(--button-base-padding-left);
   height: var(--button-base-height);
   color: var(--button-base-text-color);
   font-weight: var(--button-base-text-font-weight);
@@ -90,12 +90,12 @@
   }
 
   &--small {
-    padding: var(--button-small-padding-vertical) var(--button-small-padding-horizontal);
+    padding: var(--button-small-padding-top) var(--button-small-padding-right) var(--button-small-padding-bottom) var(--button-small-padding-left);
     height: var(--button-small-height);
   }
 
   &--large {
-    padding: var(--button-large-padding-vertical) var(--button-large-padding-horizontal);
+    padding: var(--button-large-padding-top) var(--button-large-padding-right) var(--button-large-padding-bottom) var(--button-large-padding-left);
     height: var(--button-large-height);
   }
 
@@ -217,7 +217,7 @@
 
   &--tertiary {
     --button-base-text-font-size: var(--button-tertiary-text-font-size);
-    --button-base-padding: var(--button-tertiary-padding);
+    --button-base-padding: var(--button-tertiary-padding-top) var(--button-tertiary-padding-right) var(--button-tertiary-padding-bottom) var(--button-tertiary-padding-left);
     --button-base-background-color: var(--button-tertiary-background-color-default);
     --button-base-border-color: var(--button-tertiary-border-color-default);
     --button-base-border-width: var(--button-tertiary-border-width-default);
@@ -389,7 +389,7 @@
   border: none;
   border-radius: var(--icon-button-base-radius);
   background-color: var(--icon-button-base-background-color);
-  padding: var(--icon-button-base-padding);
+  padding: var(--icon-button-base-padding-top) var(--icon-button-base-padding-right) var(--icon-button-base-padding-bottom) var(--icon-button-base-padding-left);
   width: var(--icon-button-base-width);
   height: var(--icon-button-base-height);
 
