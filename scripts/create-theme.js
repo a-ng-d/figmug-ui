@@ -298,6 +298,10 @@ async function createTerrazzoFiles(themeName) {
               new RegExp(`filename: 'styles/${SOURCE_COLOR_THEME}.scss'`, 'g'),
               `filename: 'styles/${themeName}.scss'`
             )
+            .replace(
+              new RegExp(`${SOURCE_COLOR_THEME}.color.*`, 'g'),
+              `${themeName}.color.*`
+            )
             // Update theme in modeSelectors configuration
             .replace(
               new RegExp(`theme: ['"']${SOURCE_COLOR_THEME}['"']`, 'g'),
