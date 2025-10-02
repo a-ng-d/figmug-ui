@@ -121,16 +121,32 @@
           "$type": "color"
         },
         "empty": {
-          "$value": "{sketch.color.background.tertiary}",
-          "$type": "color"
-        },
-        "empty-hover": {
-          "$value": "{sketch.color.background.disabled}",
-          "$type": "color"
-        },
-        "empty-focus": {
-          "$value": "{sketch.color.background.tertiary}",
-          "$type": "color"
+          "default": {
+            "$value": "{sketch.color.background.tertiary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.background.disabled}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.background.tertiary}",
+            "$type": "color"
+          },
+          "error": {
+            "default": {
+              "$value": "{sketch.color.background.tertiary}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{sketch.color.background.disabled}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{sketch.color.background.tertiary}",
+              "$type": "color"
+            }
+          }
         },
         "hover": {
           "$value": "{sketch.color.background.disabled}",
@@ -140,41 +156,33 @@
           "$value": "{sketch.color.background.tertiary}",
           "$type": "color"
         },
-        "empty-error": {
-          "$value": "{sketch.color.background.tertiary}",
-          "$type": "color"
-        },
-        "empty-error-hover": {
-          "$value": "{sketch.color.background.disabled}",
-          "$type": "color"
-        },
-        "empty-error-focus": {
-          "$value": "{sketch.color.background.tertiary}",
-          "$type": "color"
-        },
         "error": {
-          "$value": "{sketch.color.background.tertiary}",
-          "$type": "color"
-        },
-        "error-hover": {
-          "$value": "{sketch.color.background.disabled}",
-          "$type": "color"
-        },
-        "error-focus": {
-          "$value": "{sketch.color.background.tertiary}",
-          "$type": "color"
+          "default": {
+            "$value": "{sketch.color.background.tertiary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.background.disabled}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.background.tertiary}",
+            "$type": "color"
+          }
         },
         "disabled": {
           "$value": "{sketch.color.background.primary}",
           "$type": "color"
         },
         "onselected": {
-          "$value": "{sketch.color.background.tertiary}",
-          "$type": "color"
-        },
-        "onselected-hover": {
-          "$value": "{sketch.color.background.tertiary}",
-          "$type": "color"
+          "default": {
+            "$value": "{sketch.color.background.tertiary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.background.tertiary}",
+            "$type": "color"
+          }
         }
       }
     },
@@ -185,16 +193,32 @@
           "$type": "dimension"
         },
         "empty": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "empty-hover": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "empty-focus": {
-          "$value": "{size.pos.unit}",
-          "$type": "dimension"
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "error": {
+            "default": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "hover": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          }
         },
         "hover": {
           "$value": "{size.null}",
@@ -204,41 +228,33 @@
           "$value": "{size.pos.unit}",
           "$type": "dimension"
         },
-        "empty-error": {
-          "$value": "{size.pos.unit}",
-          "$type": "dimension"
-        },
-        "empty-error-hover": {
-          "$value": "{size.pos.unit}",
-          "$type": "dimension"
-        },
-        "empty-error-focus": {
-          "$value": "{size.pos.unit}",
-          "$type": "dimension"
-        },
         "error": {
-          "$value": "{size.pos.unit}",
-          "$type": "dimension"
-        },
-        "error-hover": {
-          "$value": "{size.pos.unit}",
-          "$type": "dimension"
-        },
-        "error-focus": {
-          "$value": "{size.pos.unit}",
-          "$type": "dimension"
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          }
         },
         "disabled": {
           "$value": "{size.pos.unit}",
           "$type": "dimension"
         },
         "onselected": {
-          "$value": "{size.pos.unit}",
-          "$type": "dimension"
-        },
-        "onselected-hover": {
-          "$value": "{size.pos.unit}",
-          "$type": "dimension"
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          }
         }
       },
       "offset": {
@@ -247,16 +263,32 @@
           "$type": "dimension"
         },
         "empty": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "empty-hover": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "empty-focus": {
-          "$value": "{size.neg.unit}",
-          "$type": "dimension"
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "error": {
+            "default": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            },
+            "hover": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            }
+          }
         },
         "hover": {
           "$value": "{size.null}",
@@ -266,41 +298,33 @@
           "$value": "{size.neg.unit}",
           "$type": "dimension"
         },
-        "empty-error": {
-          "$value": "{size.neg.unit}",
-          "$type": "dimension"
-        },
-        "empty-error-hover": {
-          "$value": "{size.neg.unit}",
-          "$type": "dimension"
-        },
-        "empty-error-focus": {
-          "$value": "{size.neg.unit}",
-          "$type": "dimension"
-        },
         "error": {
-          "$value": "{size.neg.unit}",
-          "$type": "dimension"
-        },
-        "error-hover": {
-          "$value": "{size.neg.unit}",
-          "$type": "dimension"
-        },
-        "error-focus": {
-          "$value": "{size.neg.unit}",
-          "$type": "dimension"
+          "default": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          }
         },
         "disabled": {
           "$value": "{size.neg.unit}",
           "$type": "dimension"
         },
         "onselected": {
-          "$value": "{size.neg.unit}",
-          "$type": "dimension"
-        },
-        "onselected-hover": {
-          "$value": "{size.neg.unit}",
-          "$type": "dimension"
+          "default": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          }
         }
       },
       "color": {
@@ -309,16 +333,32 @@
           "$type": "string"
         },
         "empty": {
-          "$value": "transparent",
-          "$type": "string"
-        },
-        "empty-hover": {
-          "$value": "transparent",
-          "$type": "string"
-        },
-        "empty-focus": {
-          "$value": "{sketch.color.accent.primary}",
-          "$type": "color"
+          "default": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "error": {
+            "default": {
+              "$value": "{sketch.color.accent.error}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{sketch.color.accent.error}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{sketch.color.foreground.error}",
+              "$type": "color"
+            }
+          }
         },
         "hover": {
           "$value": "transparent",
@@ -328,41 +368,33 @@
           "$value": "{sketch.color.accent.primary}",
           "$type": "color"
         },
-        "empty-error": {
-          "$value": "{sketch.color.accent.error}",
-          "$type": "color"
-        },
-        "empty-error-hover": {
-          "$value": "{sketch.color.accent.error}",
-          "$type": "color"
-        },
-        "empty-error-focus": {
-          "$value": "{sketch.color.foreground.error}",
-          "$type": "color"
-        },
         "error": {
-          "$value": "{sketch.color.accent.error}",
-          "$type": "color"
-        },
-        "error-hover": {
-          "$value": "{sketch.color.accent.error}",
-          "$type": "color"
-        },
-        "error-focus": {
-          "$value": "{sketch.color.foreground.error}",
-          "$type": "color"
+          "default": {
+            "$value": "{sketch.color.accent.error}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.accent.error}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.foreground.error}",
+            "$type": "color"
+          }
         },
         "disabled": {
           "$value": "{sketch.color.border.disabled}",
           "$type": "color"
         },
         "onselected": {
-          "$value": "{sketch.color.accent.primary}",
-          "$type": "color"
-        },
-        "onselected-hover": {
-          "$value": "{sketch.color.accent.primary}",
-          "$type": "color"
+          "default": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          }
         }
       }
     },
@@ -395,16 +427,32 @@
           "$type": "color"
         },
         "empty": {
-          "$value": "{sketch.color.foreground.primary}",
-          "$type": "color"
-        },
-        "empty-hover": {
-          "$value": "{sketch.color.foreground.primary}",
-          "$type": "color"
-        },
-        "empty-focus": {
-          "$value": "{sketch.color.foreground.primary}",
-          "$type": "color"
+          "default": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "error": {
+            "default": {
+              "$value": "{sketch.color.foreground.primary}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{sketch.color.foreground.primary}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{sketch.color.foreground.primary}",
+              "$type": "color"
+            }
+          }
         },
         "hover": {
           "$value": "{sketch.color.foreground.primary}",
@@ -414,29 +462,19 @@
           "$value": "{sketch.color.foreground.primary}",
           "$type": "color"
         },
-        "empty-error": {
-          "$value": "{sketch.color.foreground.primary}",
-          "$type": "color"
-        },
-        "empty-error-hover": {
-          "$value": "{sketch.color.foreground.primary}",
-          "$type": "color"
-        },
-        "empty-error-focus": {
-          "$value": "{sketch.color.foreground.primary}",
-          "$type": "color"
-        },
         "error": {
-          "$value": "{sketch.color.foreground.primary}",
-          "$type": "color"
-        },
-        "error-hover": {
-          "$value": "{sketch.color.foreground.primary}",
-          "$type": "color"
-        },
-        "error-focus": {
-          "$value": "{sketch.color.foreground.primary}",
-          "$type": "color"
+          "default": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          }
         },
         "disabled": {
           "$value": "{sketch.color.foreground.tertiary}",
@@ -450,16 +488,32 @@
             "$type": "color"
           },
           "empty": {
-            "$value": "{sketch.color.foreground.tertiary}",
-            "$type": "color"
-          },
-          "empty-hover": {
-            "$value": "{sketch.color.foreground.tertiary}",
-            "$type": "color"
-          },
-          "empty-focus": {
-            "$value": "{sketch.color.foreground.tertiary}",
-            "$type": "color"
+            "default": {
+              "$value": "{sketch.color.foreground.tertiary}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{sketch.color.foreground.tertiary}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{sketch.color.foreground.tertiary}",
+              "$type": "color"
+            },
+            "error": {
+              "default": {
+                "$value": "{sketch.color.foreground.tertiary}",
+                "$type": "color"
+              },
+              "hover": {
+                "$value": "{sketch.color.foreground.tertiary}",
+                "$type": "color"
+              },
+              "focus": {
+                "$value": "{sketch.color.foreground.tertiary}",
+                "$type": "color"
+              }
+            }
           },
           "hover": {
             "$value": "{sketch.color.foreground.tertiary}",
@@ -469,29 +523,19 @@
             "$value": "{sketch.color.foreground.tertiary}",
             "$type": "color"
           },
-          "empty-error": {
-            "$value": "{sketch.color.foreground.tertiary}",
-            "$type": "color"
-          },
-          "empty-error-hover": {
-            "$value": "{sketch.color.foreground.tertiary}",
-            "$type": "color"
-          },
-          "empty-error-focus": {
-            "$value": "{sketch.color.foreground.tertiary}",
-            "$type": "color"
-          },
           "error": {
-            "$value": "{sketch.color.foreground.tertiary}",
-            "$type": "color"
-          },
-          "error-hover": {
-            "$value": "{sketch.color.foreground.tertiary}",
-            "$type": "color"
-          },
-          "error-focus": {
-            "$value": "{sketch.color.foreground.tertiary}",
-            "$type": "color"
+            "default": {
+              "$value": "{sketch.color.foreground.tertiary}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{sketch.color.foreground.tertiary}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{sketch.color.foreground.tertiary}",
+              "$type": "color"
+            }
           },
           "disabled": {
             "$value": "{sketch.color.foreground.disabled}",

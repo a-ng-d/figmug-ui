@@ -28,10 +28,10 @@
       --icon-button-default-background-color-onselected-hover
     );
     
-    --input-background-color-default: var(--input-background-color-onselected);
-    --input-border-color-default: var(--input-border-color-onselected);
-    --input-border-width-default: var(--input-border-width-onselected);
-    --input-border-offset-default: var(--input-border-offset-onselected);
+    --input-background-color-default: var(--input-background-color-onselected-default);
+    --input-border-color-default: var(--input-border-color-onselected-default);
+    --input-border-width-default: var(--input-border-width-onselected-default);
+    --input-border-offset-default: var(--input-border-offset-onselected-default);
     
     --input-background-color-default-hover: var(
       --input-background-color-onselected-hover

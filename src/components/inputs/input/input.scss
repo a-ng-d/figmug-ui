@@ -2,6 +2,32 @@
 @import 'styles/sketch';
 @import 'styles/figma';
 
+.textarea {
+  display: flex;
+  position: relative;
+  align-items: center;
+  cursor: inherit;
+  padding: var(--input-textarea-padding-top) var(--input-textarea-padding-right) var(--input-textarea-padding-bottom) var(--input-textarea-padding-left);
+  width: 100%;
+  min-height: var(--input-textarea-min-height);
+  overflow: visible;
+  overflow-y: auto;
+  resize: none;
+  font-weight: var(--input-text-font-weight);
+  font-size: var(--input-text-font-size);
+  line-height: var(--input-text-line-height);
+  font-family: var(--input-text-font-family);
+  letter-spacing: var(--input-text-letter-spacing);
+
+  --input-border-width: var(--input-border-width-empty-default);
+  --input-border-offset: var(--input-border-offset-empty-default);
+  --input-border-color: var(--input-border-color-empty-default);
+
+  &--monospace {
+    font-family: monospace;
+  }
+}
+
 .input {
   display: flex;
   position: relative;
@@ -163,12 +189,12 @@
     }
 
     &:placeholder-shown {
-      --input-background-color: var(--input-background-color-empty);
-      --input-border-width: var(--input-border-width-empty);
-      --input-border-offset: var(--input-border-offset-empty);
-      --input-border-color: var(--input-border-color-empty);
-      --input-text-color: var(--input-text-color-empty);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-empty);
+      --input-background-color: var(--input-background-color-empty-default);
+      --input-border-width: var(--input-border-width-empty-default);
+      --input-border-offset: var(--input-border-offset-empty-default);
+      --input-border-color: var(--input-border-color-empty-default);
+      --input-text-color: var(--input-text-color-empty-default);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-default);
     }
 
     &:placeholder-shown:hover {
@@ -194,13 +220,13 @@
     }
 
     &--error:placeholder-shown {
-      --input-background-color: var(--input-background-color-empty-error);
-      --input-border-width: var(--input-border-width-empty-error);
-      --input-border-offset: var(--input-border-offset-empty-error);
-      --input-border-color: var(--input-border-color-empty-error);
-      --input-text-color: var(--input-text-color-empty-error);
+      --input-background-color: var(--input-background-color-empty-error-default);
+      --input-border-width: var(--input-border-width-empty-error-default);
+      --input-border-offset: var(--input-border-offset-empty-error-default);
+      --input-border-color: var(--input-border-color-empty-error-default);
+      --input-text-color: var(--input-text-color-empty-error-default);
       --input-text-placeholder-color: var(
-        --input-text-placeholder-color-empty-error
+        --input-text-placeholder-color-empty-error-default
       );
     }
 
@@ -245,12 +271,12 @@
     }
 
     &--error {
-      --input-background-color: var(--input-background-color-error);
-      --input-border-width: var(--input-border-width-error);
-      --input-border-offset: var(--input-border-offset-error);
-      --input-border-color: var(--input-border-color-error);
-      --input-text-color: var(--input-text-color-error);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-error);
+      --input-background-color: var(--input-background-color-error-default);
+      --input-border-width: var(--input-border-width-error-default);
+      --input-border-offset: var(--input-border-offset-error-default);
+      --input-border-color: var(--input-border-color-error-default);
+      --input-text-color: var(--input-text-color-error-default);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-error-default);
     }
 
     &--error:hover {
@@ -339,31 +365,5 @@
 
   &--long-text {
     --input-status-height: var(--input-status-height-long-text);
-  }
-}
-
-.textarea {
-  display: flex;
-  position: relative;
-  align-items: center;
-  cursor: inherit;
-  padding: var(--input-textarea-padding-top) var(--input-textarea-padding-right) var(--input-textarea-padding-bottom) var(--input-textarea-padding-left);
-  width: 100%;
-  min-height: var(--input-textarea-min-height);
-  overflow: visible;
-  overflow-y: auto;
-  resize: none;
-  font-weight: var(--input-text-font-weight);
-  font-size: var(--input-text-font-size);
-  line-height: var(--input-text-line-height);
-  font-family: var(--input-text-font-family);
-  letter-spacing: var(--input-text-letter-spacing);
-
-  --input-border-width: var(--input-border-width-empty);
-  --input-border-offset: var(--input-border-offset-empty);
-  --input-border-color: var(--input-border-color-empty);
-
-  &--monospace {
-    font-family: monospace;
   }
 }
