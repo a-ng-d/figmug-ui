@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
 @import 'penpot';
 @import 'styles/sketch';
+@import 'styles/figma';
 
 .inputs {
   display: flex;
@@ -10,9 +9,9 @@
   --input-radius: var(--inputs-bar-input-radius);
 
   &:hover {
-    --input-border-width: var(--input-border-width-hover);
-    --input-border-offset: var(--input-border-offset-hover);
-    --input-border-color: var(--input-border-color-hover);
+    --input-border-width-default: var(--input-border-width-hover);
+    --input-border-offset-default: var(--input-border-offset-hover);
+    --input-border-color-default: var(--input-border-color-hover);
   }
 
   .inputs__bar {
@@ -30,16 +29,16 @@
       margin: var(--inputs-bar-margin-vertical) var(--inputs-bar-margin-horizontal);
 
       input:focus {
-        --input-border-width: var(--input-border-width-hover);
-        --input-border-offset: var(--input-border-offset-hover);
-        --input-border-color: var(--input-border-color-hover);
+        --input-border-width-focus: var(--input-border-width-hover);
+        --input-border-offset-focus: var(--input-border-offset-hover);
+        --input-border-color-focus: var(--input-border-color-hover);
       }
     }
 
     &:focus-within {
-      --input-border-width: var(--input-border-width-hover);
-      --input-border-offset: var(--input-border-offset-hover);
-      --input-border-color: var(--input-border-color-hover);
+      --input-border-width-default: var(--input-border-width-hover);
+      --input-border-offset-default: var(--input-border-offset-hover);
+      --input-border-color-default: var(--input-border-color-hover);
 
       &:before {
         position: absolute;

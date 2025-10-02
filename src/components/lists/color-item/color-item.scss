@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
 @import 'penpot';
 @import 'styles/sketch';
+@import 'styles/figma';
 
 .color-item {
   display: flex;
@@ -9,6 +8,8 @@
   align-items: center;
   padding: var(--color-item-padding-top) var(--color-item-padding-right) var(--color-item-padding-bottom) var(--color-item-padding-left);
   height: var(--color-item-height);
+  user-select: none;
+  cursor: default;
 
   .color-item__left,
   .color-item__right {

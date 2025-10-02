@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
 @import 'penpot';
 @import 'styles/sketch';
+@import 'styles/figma';
 
 .knob {
   display: flex;
@@ -22,22 +21,14 @@
     --knob-label-border-color: var(--knob-label-border-color-default);
     --knob-label-border-width: var(--knob-label-border-width-default);
     --knob-label-text-color: var(--knob-label-text-color-default);
-    --knob-label-arrow-stroke-inset: var(
-      --knob-label-arrow-stroke-inset-default
-    );
-    --knob-label-arrow-stroke-width: var(
-      --knob-label-arrow-stroke-width-default
-    );
-    --knob-label-arrow-stroke-border-color: var(
-      --knob-label-arrow-stroke-border-color-default
-    );
-    --knob-label-arrow-fill-border-color: var(
-      --knob-label-arrow-fill-border-color-default
-    );
+    --knob-label-arrow-background-color: var(--knob-label-arrow-background-color-default);
+    --knob-label-arrow-border-color: var(--knob-label-arrow-border-color-default);
   }
 
   &:hover {
     --knob-label-background-color: var(--knob-label-background-color-hover);
+    --knob-label-arrow-background-color: var(--knob-label-arrow-background-color-hover);
+    --knob-label-arrow-border-color: var(--knob-label-arrow-border-color-hover);
   }
 
   &:focus,
@@ -46,14 +37,8 @@
     --knob-label-background-color: var(--knob-label-background-color-focus);
     --knob-label-border-color: var(--knob-label-border-color-focus);
     --knob-label-border-width: var(--knob-label-border-width-focus);
-    --knob-label-arrow-stroke-inset: var(--knob-label-arrow-stroke-inset-focus);
-    --knob-label-arrow-stroke-width: var(--knob-label-arrow-stroke-width-focus);
-    --knob-label-arrow-stroke-border-color: var(
-      --knob-label-arrow-stroke-border-color-focus
-    );
-    --knob-label-arrow-fill-border-color: var(
-      --knob-label-arrow-fill-border-color-focus
-    );
+    --knob-label-arrow-background-color: var(--knob-label-arrow-background-color-focus);
+    --knob-label-arrow-border-color: var(--knob-label-arrow-border-color-focus);
   }
 
   &:focus,
@@ -68,12 +53,8 @@
     --knob-label-background-color: var(--knob-label-background-color-disabled);
     --knob-label-border-color: var(--knob-label-border-color-disabled);
     --knob-label-text-color: var(--knob-label-text-color-disabled);
-    --knob-label-arrow-stroke-border-color: var(
-      --knob-label-arrow-stroke-border-color-disabled
-    );
-    --knob-label-arrow-fill-border-color: var(
-      --knob-label-arrow-fill-border-color-disabled
-    );
+    --knob-label-arrow-background-color: var(--knob-label-arrow-background-color-disabled);
+    --knob-label-arrow-border-color: var(--knob-label-arrow-border-color-disabled);
   }
 }
 
@@ -94,32 +75,28 @@
   text-align: center;
   --text-color-primary: var(--knob-label-text-color);
 
-  &:before {
-    position: absolute;
-    inset: var(--knob-label-arrow-stroke-inset);
-    border-width: var(--knob-label-arrow-stroke-width);
-    border-style: solid;
-    border-top-color: var(--knob-label-arrow-stroke-border-color);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    width: 0;
-    height: 0;
-    content: '';
+  span {
+    z-index: 2;
   }
 
   &:after {
     position: absolute;
-    inset: var(--knob-label-arrow-fill-inset);
-    border-width: var(--knob-label-arrow-fill-width);
-    border-style: solid;
-    border-top-color: var(--knob-label-arrow-fill-border-color);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    width: 0;
-    height: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%) rotate(45deg);
+    transform-origin: 50% 50%;
+    border-top: transparent;
+    border-right: var(--knob-label-arrow-border-width) solid
+      var(--knob-label-arrow-border-color);
+    border-bottom: var(--knob-label-arrow-border-width) solid
+      var(--knob-label-arrow-border-color);
+    border-left: transparent;
+    border-radius: var(--knob-label-arrow-radius);
+    background-color: var(--knob-label-arrow-background-color);
+    width: var(--knob-label-arrow-width);
+    height: var(--knob-label-arrow-height);
     content: '';
+    z-index: 1;
   }
 }
 
@@ -137,18 +114,28 @@
   user-select: none;
   text-align: center;
 
+  span {
+    z-index: 2;
+  }
+
   &:after {
     position: absolute;
-    inset: var(--knob-tooltip-arrow-inset);
-    border-width: var(--knob-tooltip-arrow-width);
-    border-style: solid;
-    border-top-color: var(--knob-tooltip-background-color);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    width: 0;
-    height: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%) rotate(45deg);
+    transform-origin: 50% 50%;
+    border-top: transparent;
+    border-right: var(--knob-tooltip-arrow-border-width) solid
+      var(--knob-tooltip-arrow-border-color);
+    border-bottom: var(--knob-tooltip-arrow-border-width) solid
+      var(--knob-tooltip-arrow-border-color);
+    border-left: transparent;
+    border-radius: var(--knob-tooltip-arrow-radius);
+    background-color: var(--knob-tooltip-arrow-background-color);
+    width: var(--knob-tooltip-arrow-width);
+    height: var(--knob-tooltip-arrow-height);
     content: '';
+    z-index: 1;
   }
 }
 

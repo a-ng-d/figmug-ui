@@ -1,13 +1,12 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
 @import 'penpot';
 @import 'styles/sketch';
+@import 'styles/figma';
 
 .semantic-message {
   display: flex;
   justify-content: space-between;
   gap: var(--semantic-message-gap);
-  outline: var(--semaintic-message-border-width) solid
+  outline: var(--semantic-message-border-width) solid
     var(--semantic-message-border-color);
   outline-offset: var(--semantic-message-border-offset);
   border-radius: var(--semantic-message-radius);
@@ -26,36 +25,29 @@
     --semantic-message-background-color: var(
       --semantic-message-background-color-info
     );
-    --semaintic-message-border-width: var(--semantic-message-border-width-info);
+    --semantic-message-border-width: var(--semantic-message-border-width-info);
     --semantic-message-border-color: var(--semantic-message-border-color-info);
     --semantic-message-border-offset: var(
       --semantic-message-border-offset-info
     );
-    --button-background-color-secondary: var(
+    
+    --button-secondary-background-color-default: var(
       --semantic-message-background-color-info
     );
-    --button-background-color-secondary-hover: var(
+    --button-secondary-background-color-hover: var(
       --semantic-message-background-color-info-accent
     );
-    --button-background-color-secondary-pressed: var(
+
+    --button-secondary-border-color-default: var(
       --semantic-message-background-color-info-accent
     );
-    --button-background-color-secondary-focus: var(
+    --button-secondary-border-color-hover: var(
       --semantic-message-background-color-info-accent
     );
-    --button-border-color-secondary: var(
-      --semantic-message-background-color-info-accent
-    );
-    --icon-button-background-color: var(
+    --icon-button-default-background-color-default: var(
       --semantic-message-background-color-info
     );
-    --icon-button-background-color-hover: var(
-      --semantic-message-background-color-info-accent
-    );
-    --icon-button-background-color-pressed: var(
-      --semantic-message-background-color-info-accent
-    );
-    --icon-button-background-color-focus: var(
+    --icon-button-default-background-color-hover: var(
       --semantic-message-background-color-info-accent
     );
   }
@@ -64,38 +56,32 @@
     --semantic-message-background-color: var(
       --semantic-message-background-color-error
     );
-    --semaintic-message-border-width: var(
+    --semantic-message-border-width: var(
       --semantic-message-border-width-error
     );
     --semantic-message-border-color: var(--semantic-message-border-color-error);
     --semantic-message-border-offset: var(
       --semantic-message-border-offset-error
     );
-    --button-background-color-secondary: var(
+
+    --button-secondary-background-color-default: var(
       --semantic-message-background-color-error
     );
-    --button-background-color-secondary-hover: var(
+    --button-secondary-background-color-hover: var(
       --semantic-message-background-color-error-accent
     );
-    --button-background-color-secondary-pressed: var(
+
+    --button-secondary-border-color-default: var(
       --semantic-message-background-color-error-accent
     );
-    --button-background-color-secondary-focus: var(
+    --button-secondary-border-color-hover: var(
       --semantic-message-background-color-error-accent
     );
-    --button-border-color-secondary: var(
-      --semantic-message-background-color-error-accent
-    );
-    --icon-button-background-color: var(
+
+    --icon-button-default-background-color-default: var(
       --semantic-message-background-color-error
     );
-    --icon-button-background-color-hover: var(
-      --semantic-message-background-color-error-accent
-    );
-    --icon-button-background-color-pressed: var(
-      --semantic-message-background-color-error-accent
-    );
-    --icon-button-background-color-focus: var(
+    --icon-button-default-background-color-hover: var(
       --semantic-message-background-color-error-accent
     );
   }
@@ -104,7 +90,7 @@
     --semantic-message-background-color: var(
       --semantic-message-background-color-success
     );
-    --semaintic-message-border-width: var(
+    --semantic-message-border-width: var(
       --semantic-message-border-width-success
     );
     --semantic-message-border-color: var(
@@ -113,31 +99,25 @@
     --semantic-message-border-offset: var(
       --semantic-message-border-offset-success
     );
-    --button-background-color-secondary: var(
+
+    --button-secondary-background-color-default: var(
       --semantic-message-background-color-success
     );
-    --button-background-color-secondary-hover: var(
+    --button-secondary-background-color-hover: var(
       --semantic-message-background-color-success-accent
     );
-    --button-background-color-secondary-pressed: var(
+
+    --button-secondary-border-color-default: var(
       --semantic-message-background-color-success-accent
     );
-    --button-background-color-secondary-focus: var(
+    --button-secondary-border-color-hover: var(
       --semantic-message-background-color-success-accent
     );
-    --button-border-color-secondary: var(
-      --semantic-message-background-color-success-accent
-    );
-    --icon-button-background-color: var(
+
+    --icon-button-default-background-color-default: var(
       --semantic-message-background-color-success
     );
-    --icon-button-background-color-hover: var(
-      --semantic-message-background-color-success-accent
-    );
-    --icon-button-background-color-pressed: var(
-      --semantic-message-background-color-success-accent
-    );
-    --icon-button-background-color-focus: var(
+    --icon-button-default-background-color-hover: var(
       --semantic-message-background-color-success-accent
     );
   }
@@ -146,7 +126,7 @@
     --semantic-message-background-color: var(
       --semantic-message-background-color-warning
     );
-    --semaintic-message-border-width: var(
+    --semantic-message-border-width: var(
       --semantic-message-border-width-warning
     );
     --semantic-message-border-color: var(
@@ -155,31 +135,25 @@
     --semantic-message-border-offset: var(
       --semantic-message-border-offset-warning
     );
-    --button-background-color-secondary: var(
+    
+    --button-secondary-background-color-default: var(
       --semantic-message-background-color-warning
     );
-    --button-background-color-secondary-hover: var(
+    --button-secondary-background-color-hover: var(
       --semantic-message-background-color-warning-accent
     );
-    --button-background-color-secondary-pressed: var(
+
+    --button-secondary-border-color-default: var(
       --semantic-message-background-color-warning-accent
     );
-    --button-background-color-secondary-focus: var(
+    --button-secondary-border-color-hover: var(
       --semantic-message-background-color-warning-accent
     );
-    --button-border-color-secondary: var(
-      --semantic-message-background-color-warning-accent
-    );
-    --icon-button-background-color: var(
+
+    --icon-button-default-background-color-default: var(
       --semantic-message-background-color-warning
     );
-    --icon-button-background-color-hover: var(
-      --semantic-message-background-color-warning-accent
-    );
-    --icon-button-background-color-pressed: var(
-      --semantic-message-background-color-warning-accent
-    );
-    --icon-button-background-color-focus: var(
+    --icon-button-default-background-color-hover: var(
       --semantic-message-background-color-warning-accent
     );
   }

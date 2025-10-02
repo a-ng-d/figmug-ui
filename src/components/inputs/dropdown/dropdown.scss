@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
 @import 'penpot';
 @import 'styles/sketch';
+@import 'styles/figma';
 
 .select-menu {
   display: flex;
@@ -37,7 +36,8 @@
     border: none;
     border-radius: var(--dropdown-radius);
     background-color: var(--dropdown-background-color);
-    padding: var(--dropdown-padding);
+    padding: var(--dropdown-padding-top) var(--dropdown-padding-right)
+      var(--dropdown-padding-bottom) var(--dropdown-padding-left);
     width: auto;
     height: var(--dropdown-height);
 

@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
 @import 'penpot';
 @import 'styles/sketch';
+@import 'styles/figma';
 
 .tabs {
   display: flex;
@@ -12,6 +11,13 @@
   background-color: var(--tabs-background-color);
   padding: var(--tabs-padding);
   user-select: none;
+
+  & {
+    --tabs-gap: var(--tabs-gap-default);
+    --tabs-radius: var(--tabs-radius-default);
+    --tabs-padding: var(--tabs-padding-default);
+    --tabs-background-color: var(--tabs-background-color-default);
+  }
 
   & .tabs__tab {
     display: flex;

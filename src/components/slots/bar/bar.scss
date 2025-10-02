@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
 @import 'penpot';
-@import 'sketch';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .bar {
   display: flex;
@@ -12,7 +11,12 @@
   box-sizing: border-box;
   background-color: var(--bar-background-color);
   padding: var(--bar-padding);
-  min-height: var(--bar-min_height);
+  min-height: var(--bar-min-height);
+
+  & {
+    --bar-padding: var(--bar-padding-default-vertical)
+      var(--bar-padding-default-horizontal);
+  }
 
   &.bar--compact {
     height: var(--bar-height-compact);
