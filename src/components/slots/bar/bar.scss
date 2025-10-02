@@ -66,13 +66,14 @@
     .bar__left {
       flex: 0;
     }
+
     .bar__right {
       flex: 1;
     }
   }
 }
 
-@media (max-width: 460px) {
+@media (width <= 460px) {
   .bar--reflow {
     flex-direction: column;
     --bar-padding: var(--bar-padding-mobile);

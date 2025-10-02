@@ -60,7 +60,7 @@
     content: '';
   }
 
-  &--below:before {
+  &--below::before {
     position: absolute;
     bottom: var(--draggable-item-ghost-inset);
     left: 0;

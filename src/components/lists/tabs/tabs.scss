@@ -120,7 +120,7 @@
     }
   }
 
-  & .tabs__tab--updated:after {
+  & .tabs__tab--updated::after {
     position: absolute;
     inset: var(--tabs-tab-notification-inset-top) var(--tabs-tab-notification-inset-right)
       var(--tabs-tab-notification-inset-bottom) var(--tabs-tab-notification-inset-left);

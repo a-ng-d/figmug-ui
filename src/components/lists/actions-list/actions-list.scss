@@ -85,7 +85,7 @@
       text-transform: var(--actions-list-title-text-transform);
     }
 
-    &:before {
+    &::before {
       position: absolute;
       inset: 0 auto 0 var(--actions-list-patch-left);
       background-color: transparent;
@@ -93,7 +93,7 @@
       content: '';
     }
 
-    &:after {
+    &::after {
       position: absolute;
       inset: 0 var(--actions-list-patch-right) 0 auto;
       background-color: transparent;

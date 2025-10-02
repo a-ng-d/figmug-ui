@@ -79,7 +79,7 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (width <= 460px) {
   .popin {
     min-width: unset;
     max-width: unset;

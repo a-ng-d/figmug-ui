@@ -4,13 +4,14 @@
 
 .notification {
   --semantic-message-max-width: var(--notification-message-max-width);
+
   display: flex;
   position: absolute;
   justify-content: end;
   align-items: start;
   z-index: 4;
   cursor: default;
-  inset: 0 0 0 0;
+  inset: 0;
   padding: var(--notification-padding-top) var(--notification-padding-right) var(--notification-padding-bottom) var(--notification-padding-left);
   pointer-events: none;
   user-select: none;

@@ -39,8 +39,8 @@
       white-space: nowrap;
     }
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
       z-index: 2;
       width: var(--message-ticker-mask-width);
@@ -48,7 +48,7 @@
       content: '';
     }
 
-    &:before {
+    &::before {
       left: 0;
       background: linear-gradient(
         90deg,
@@ -57,7 +57,7 @@
       );
     }
 
-    &:after {
+    &::after {
       right: 0;
       background: linear-gradient(
         90deg,

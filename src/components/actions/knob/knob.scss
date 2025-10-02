@@ -79,7 +79,7 @@
     z-index: 2;
   }
 
-  &:after {
+  &::after {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -118,7 +118,7 @@
     z-index: 2;
   }
 
-  &:after {
+  &::after {
     position: absolute;
     bottom: 0;
     left: 50%;

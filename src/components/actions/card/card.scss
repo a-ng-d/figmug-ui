@@ -56,12 +56,11 @@
     display: flex;
     position: absolute;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+    place-content: center center;
     align-items: center;
     gap: var(--card-actions-gap);
     visibility: hidden;
-    inset: 0 0 0 0;
+    inset: 0;
     padding: var(--card-actions-padding-top) var(--card-actions-padding-right) var(--card-actions-padding-bottom) var(--card-actions-padding-left);
   }
 

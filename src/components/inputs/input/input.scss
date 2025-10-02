@@ -114,7 +114,7 @@
     }
 
     &[type='number'] {
-      -moz-appearance: textfield;
+      appearance: textfield;
     }
   }
 
@@ -340,8 +340,10 @@
       --input-text-color: var(--input-text-color-hover);
       --input-text-placeholder-color: var(--input-text-placeholder-color-hover);
     }
+
     &:disabled[type='color' i] {
       --input-color-chip-opacity: var(--input-color-chip-opacity-disabled);
+
       pointer-events: none;
     }
   }

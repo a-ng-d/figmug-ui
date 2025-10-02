@@ -409,7 +409,7 @@
     height: var(--icon-button-large-height);
   }
 
-  &--new:after {
+  &--new::after {
     position: absolute;
     top: var(--icon-button-base-notification-top);
     right: var(--icon-button-base-notification-right);

@@ -25,8 +25,7 @@
     justify-content: start;
     padding: var(--layout-block-padding-top) var(--layout-block-padding-right)
       var(--layout-block-padding-bottom) var(--layout-block-padding-left);
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden auto;
 
     &--list {
       padding: var(--layout-list-padding-top) var(--layout-list-padding-right)
