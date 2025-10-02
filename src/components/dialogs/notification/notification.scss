@@ -3,7 +3,7 @@
 @import 'styles/figma';
 
 .notification {
-  --semantic_message-max-width: var(--notification-message-max-width);
+  --semantic-message-max-width: var(--notification-message-max-width);
   display: flex;
   position: absolute;
   justify-content: end;

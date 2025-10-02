@@ -116,13 +116,13 @@
       border: var(--select-box-border-checked-disabled-width) solid var(--select-box-border-checked-disabled-color);
     }
 
-    &:disabled:checked + .checkbox__label:after {
-      background-color: var(--select-box-tick-color-disabled);
-    }
-
     &:disabled + .checkbox__label:before {
       background: var(--select-box-background-color-disabled);
       border: var(--select-box-border-disabled-width) solid var(--select-box-border-disabled-color);
+    }
+
+    &:disabled:checked + .checkbox__label:after {
+      background-color: var(--select-box-tick-color-disabled);
     }
   }
 }

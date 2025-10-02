@@ -31,6 +31,7 @@
       display: flex;
       justify-content: center;
     }
+
     & .bar__solo {
       display: flex;
       justify-content: center;
@@ -42,6 +43,7 @@
       display: flex;
       justify-content: center;
     }
+
     & .bar__solo {
       display: flex;
       justify-content: center;
@@ -51,9 +53,11 @@
   &__left {
     flex: 1;
   }
+
   &__right {
     flex: 0;
   }
+  
   &__solo {
     flex: 1;
   }

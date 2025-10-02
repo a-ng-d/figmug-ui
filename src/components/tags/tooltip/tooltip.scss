@@ -13,7 +13,7 @@
   pointer-events: none;
   user-select: none;
 
-  &:after {
+  &::after {
     position: absolute;
     left: calc(50% - var(--tooltip-arrow-size));
     border-width: var(--tooltip-arrow-size);
@@ -26,7 +26,7 @@
   &.tooltip--top {
     bottom: calc(100% + var(--tooltip-arrow-size));
 
-    &:after {
+    &::after {
       bottom: 0;
       left: 50%;
       transform: translateX(-50%) translateY(50%) rotate(45deg);
@@ -47,7 +47,7 @@
   &.tooltip--bottom {
     top: calc(100% + var(--tooltip-arrow-size));
 
-    &:after {
+    &::after {
       top: 1px;
       left: 50%;
       transform: translateX(-50%) translateY(-50%) rotate(45deg);
@@ -74,11 +74,13 @@
     box-shadow: var(--tooltip-shadow);
     border-radius: var(--tooltip-radius);
     background-color: var(--tooltip-background-color);
-    padding: var(--tooltip-padding-top) var(--tooltip-padding-right) var(--tooltip-padding-bottom) var(--tooltip-padding-left);
+    padding: var(--tooltip-padding-top) var(--tooltip-padding-right)
+      var(--tooltip-padding-bottom) var(--tooltip-padding-left);
   }
 
   &__text {
     --text-color-primary: var(--tooltip-text-color);
+
     text-align: center;
   }
 

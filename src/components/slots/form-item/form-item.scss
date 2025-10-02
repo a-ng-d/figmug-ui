@@ -66,9 +66,10 @@
   }
 
   &--blocked {
-    pointer-events: none;
     --text-color-primary: var(--form-item-text-color-disabled);
     --message-text-color: var(--form-item-text-color-disabled);
     --message-icon-color: var(--form-item-text-color-disabled);
+
+    pointer-events: none;
   }
 }
