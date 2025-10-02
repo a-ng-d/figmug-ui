@@ -8,14 +8,14 @@
       "$value": "{size.pos.xxsmall}",
       "$type": "dimension"
     },
-    "min-width": {
+    "minWidth": {
       "$value": {
         "value": 200,
         "unit": "px"
       },
       "$type": "dimension"
     },
-    "min-height": {
+    "minHeight": {
       "$value": {
         "value": 200,
         "unit": "px"

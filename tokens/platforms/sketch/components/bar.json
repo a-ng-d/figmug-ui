@@ -27,7 +27,7 @@
     "background": {
       "color": {
         "$value": "transparent",
-        "$type": "color"
+        "$type": "string"
       }
     },
     "border": {

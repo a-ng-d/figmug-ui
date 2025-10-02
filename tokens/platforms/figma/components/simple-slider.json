@@ -1,0 +1,78 @@
+{
+  "simple-slider": {
+    "margin": {
+      "top": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "padding": {
+      "horizontal": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "vertical": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "height": {
+      "$value": "{size.pos.xsmall}",
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{border.radius.small}",
+      "$type": "dimension"
+    },
+    "border": {
+      "color": {
+        "$value": "{figma.color.border.disabled.strong}",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      }
+    },
+    "status": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "margin": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "height": {
+        "$value": "{size.pos.xmsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

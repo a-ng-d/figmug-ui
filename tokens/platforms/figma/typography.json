@@ -1,0 +1,13 @@
+{
+  "font": {
+    "stack": {
+      "$type": "fontFamily",
+      "$value": ["Inter", "sans-serif"],
+      "$extensions": {
+        "theme": {
+          "figma": ["Inter", "sans-serif"]
+        }
+      }
+    }
+  }
+}

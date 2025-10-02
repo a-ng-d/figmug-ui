@@ -14,7 +14,7 @@ export default defineConfig({
     './tokens/platforms/sketch/icon.json',
     './tokens/platforms/sketch/components/bar.json',
   ],
-  outDir: './src/components/lists/bar/',
+  outDir: './src/components/slots/bar/',
   plugins: [
     css({
       filename: 'styles/sketch.scss',

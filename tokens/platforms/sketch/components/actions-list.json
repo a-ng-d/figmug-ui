@@ -1,7 +1,10 @@
 {
   "actionsList": {
     "minWidth": {
-      "$value": "224px",
+      "$value": {
+        "value": 224,
+        "unit": "px"
+      },
       "$type": "dimension"
     },
     "padding": {

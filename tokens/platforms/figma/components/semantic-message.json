@@ -1,0 +1,178 @@
+{
+  "semantic-message": {
+    "gap": {
+      "$value": "{size.pos.xxxsmall}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "default": {
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "anchored": {
+        "top": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "vertical": {
+        "horizontal": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "vertical": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      },
+      "anchored-vertical": {
+        "horizontal": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "vertical": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "radius": {
+      "$value": "{border.radius.xlarge}",
+      "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{figma.color.bg}",
+          "$type": "color"
+        },
+        "info": {
+          "$value": "{figma.color.bg.brand.tertiary}",
+          "$type": "color"
+        },
+        "info-accent": {
+          "$value": "#00000030",
+          "$type": "color"
+        },
+        "error": {
+          "$value": "{figma.color.bg.danger.tertiary}",
+          "$type": "color"
+        },
+        "error-accent": {
+          "$value": "#00000030",
+          "$type": "color"
+        },
+        "success": {
+          "$value": "{figma.color.bg.success.tertiary}",
+          "$type": "color"
+        },
+        "success-accent": {
+          "$value": "#00000030",
+          "$type": "color"
+        },
+        "warning": {
+          "$value": "{figma.color.bg.warning.tertiary}",
+          "$type": "color"
+        },
+        "warning-accent": {
+          "$value": "#00000030",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "color": {
+        "default": {
+          "$value": "transparent",
+          "$type": "string"
+        },
+        "info": {
+          "$value": "transparent",
+          "$type": "string"
+        },
+        "error": {
+          "$value": "transparent",
+          "$type": "string"
+        },
+        "success": {
+          "$value": "transparent",
+          "$type": "string"
+        },
+        "warning": {
+          "$value": "transparent",
+          "$type": "string"
+        }
+      },
+      "width": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "info": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "error": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "success": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "warning": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "offset": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "info": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "error": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "success": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "warning": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}

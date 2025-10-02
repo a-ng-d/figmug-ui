@@ -22,7 +22,7 @@
       "$value": "{size.pos.xxsmall}",
       "$type": "dimension"
     },
-    "min-height": {
+    "minHeight": {
       "$value": "{size.pos.medium}",
       "$type": "dimension"
     },
@@ -55,7 +55,7 @@
           "$type": "dimension"
         }
       },
-      "min-width": {
+      "minWidth": {
         "$value": "{size.pos.xxsmall}",
         "$type": "dimension"
       },

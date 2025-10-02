@@ -81,7 +81,7 @@
       }
     },
     "asset": {
-      "min-width": {
+      "minWidth": {
         "$value": "{size.pos.xxxlarge}",
         "$type": "dimension"
       },

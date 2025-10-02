@@ -8,15 +8,6 @@ export default defineConfig({
   plugins: [
     css({
       filename: 'styles/sketch.scss',
-      exclude: [
-        'sketch.color.*',
-        'font.*',
-        'size.*',
-        'shadow.*',
-        'border.*',
-        'grey.*',
-        'elevation.*',
-      ],
       baseSelector: ':root[data-theme="sketch"]',
     }),
   ],

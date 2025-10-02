@@ -1067,13 +1067,17 @@
             "$value": "{sketch.color.background.primary}",
             "$type": "color"
           },
-          "onSelected": {
+          "onselected": {
             "$value": "{sketch.color.accent.tertiary}",
-            "$type": "color"
-          },
-          "onSelectedHover": {
-            "$value": "{sketch.color.accent.tertiary}",
-            "$type": "color"
+            "$type": "color",
+            "hover": {
+              "$value": "{sketch.color.accent.tertiary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
+              "$type": "color"
+            }
           }
         }
       },

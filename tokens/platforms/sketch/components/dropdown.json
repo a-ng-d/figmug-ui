@@ -5,8 +5,22 @@
       "$type": "dimension"
     },
     "padding": {
-      "$value": "{size.pos.xxsmall}",
-      "$type": "dimension"
+      "top": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      }
     },
     "radius": {
       "$value": "{border.radius.large}",

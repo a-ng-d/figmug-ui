@@ -1,0 +1,107 @@
+{
+  "message": {
+    "padding": {
+      "top": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      }
+    },
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "text": {
+      "color": {
+        "default": {
+          "$value": "{figma.color.text}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{figma.color.text.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "icon": {
+      "color": {
+        "default": {
+          "$value": "{figma.color.icon}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{figma.color.icon.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "message": {
+      "padding": {
+        "horizontal": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "vertical": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "ticker": {
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "maxWidth": {
+        "$value": {
+          "value": 640,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "gap": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "horizontal": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "vertical": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "mask": {
+        "background": {
+          "color": {
+            "$value": "{figma.color.bg}",
+            "$type": "color"
+          }
+        },
+        "width": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}

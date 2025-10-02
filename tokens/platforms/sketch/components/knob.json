@@ -90,69 +90,61 @@
         }
       },
       "arrow": {
-        "stroke": {
-          "inset": {
+        "background": {
+          "color": {
             "default": {
-              "$value": "{size.null}",
-              "$type": "dimension"
+              "$value": "transparent",
+              "$type": "string"
+            },
+            "hover": {
+              "$value": "transparent",
+              "$type": "string"
             },
             "focus": {
-              "$value": "{size.null}",
-              "$type": "dimension"
-            }
-          },
-          "width": {
-            "default": {
-              "$value": "{size.null}",
-              "$type": "dimension"
+              "$value": "transparent",
+              "$type": "string"
             },
-            "focus": {
-              "$value": "{size.null}",
-              "$type": "dimension"
-            }
-          },
-          "border": {
-            "color": {
-              "default": {
-                "$value": "transparent",
-                "$type": "string"
-              },
-              "focus": {
-                "$value": "transparent",
-                "$type": "string"
-              },
-              "disabled": {
-                "$value": "transparent",
-                "$type": "string"
-              }
+            "disabled": {
+              "$value": "transparent",
+              "$type": "string"
             }
           }
         },
-        "fill": {
-          "inset": {
-            "$value": "{size.null}",
-            "$type": "dimension"
+        "border": {
+          "color": {
+            "default": {
+              "$value": "transparent",
+              "$type": "string"
+            },
+            "hover": {
+              "$value": "transparent",
+              "$type": "string"
+            },
+            "focus": {
+              "$value": "transparent",
+              "$type": "string"
+            },
+            "disabled": {
+              "$value": "transparent",
+              "$type": "string"
+            }
           },
           "width": {
             "$value": "{size.null}",
             "$type": "dimension"
-          },
-          "border": {
-            "color": {
-              "default": {
-                "$value": "transparent",
-                "$type": "string"
-              },
-              "focus": {
-                "$value": "transparent",
-                "$type": "string"
-              },
-              "disabled": {
-                "$value": "transparent",
-                "$type": "string"
-              }
-            }
           }
+        },
+        "radius": {
+          "$value": "{border.radius.null}",
+          "$type": "dimension"
+        },
+        "width": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "height": {
+          "$value": "{size.null}",
+          "$type": "dimension"
         }
       }
     },
@@ -171,7 +163,7 @@
           "$type": "dimension"
         }
       },
-      "minXidth": {
+      "minWidth": {
         "$value": "{size.pos.small}",
         "$type": "dimension"
       },
@@ -192,11 +184,31 @@
         }
       },
       "arrow": {
-        "inset": {
-          "$value": "{size.null}",
+        "background": {
+          "color": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          }
+        },
+        "border": {
+          "color": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "width": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "radius": {
+          "$value": "{border.radius.null}",
           "$type": "dimension"
         },
         "width": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "height": {
           "$value": "{size.null}",
           "$type": "dimension"
         }

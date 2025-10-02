@@ -1,6 +1,10 @@
 {
   "border": {
     "radius": {
+      "null": {
+        "$type": "dimension",
+        "$value": { "value": 0, "unit": "px" }
+      },
       "xsmall": {
         "$type": "dimension",
         "$value": { "value": 1, "unit": "px" }

@@ -69,7 +69,7 @@
         "$value": "{size.pos.medium}",
         "$type": "dimension"
       },
-      "max-width": {
+      "maxWidth": {
         "$value": {
           "value": 640,
           "unit": "px"

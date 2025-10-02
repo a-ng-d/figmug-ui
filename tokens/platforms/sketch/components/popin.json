@@ -30,21 +30,21 @@
         "$type": "dimension"
       }
     },
-    "min-width": {
+    "minWidth": {
       "$value": {
         "value": 460,
         "unit": "px"
       },
       "$type": "dimension"
     },
-    "max-width": {
+    "maxWidth": {
       "$value": {
         "value": 576,
         "unit": "px"
       },
       "$type": "dimension"
     },
-    "min-height": {
+    "minHeight": {
       "$value": {
         "value": 136,
         "unit": "px"

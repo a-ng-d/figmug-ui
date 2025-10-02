@@ -519,7 +519,7 @@
       }
     },
     "textarea": {
-      "min-height": {
+      "minHeight": {
         "$value": "{size.pos.xxlarge}",
         "$type": "dimension"
       },
