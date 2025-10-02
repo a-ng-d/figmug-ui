@@ -223,8 +223,9 @@
   --icon-button-default-background-color-disabled: var(--sketch-color-background-primary);
   --icon-button-default-background-color-focus: var(--sketch-color-background-primary);
   --icon-button-default-background-color-hover: var(--sketch-color-background-secondary);
-  --icon-button-default-background-color-on-selected: var(--sketch-color-accent-tertiary);
-  --icon-button-default-background-color-on-selected-hover: var(--sketch-color-accent-tertiary);
+  --icon-button-default-background-color-onselected: var(--sketch-color-accent-tertiary);
+  --icon-button-default-background-color-onselected-disabled: var(--sketch-color-accent-disabled);
+  --icon-button-default-background-color-onselected-hover: var(--sketch-color-accent-tertiary);
   --icon-button-default-background-color-pressed: var(--sketch-color-background-secondary);
   --icon-button-default-border-color-default: transparent;
   --icon-button-default-border-color-disabled: transparent;
