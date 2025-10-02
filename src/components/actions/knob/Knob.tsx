@@ -187,14 +187,14 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
       >
         {(isDisplayed || isTooltipOpen) && (
           <div
-            className={doClassnames([
-              texts.type,
-              texts['type--inverse'],
-              'knob__tooltip',
-            ])}
+            className={doClassnames(['knob__tooltip'])}
             role="status"
           >
-            {this.transformStopValue(value)}
+            <span
+              className={doClassnames([texts.type, texts['type--inverse']])}
+            >
+              {this.transformStopValue(value)}
+            </span>
           </div>
         )}
         {isStopInputOpen && (
@@ -226,11 +226,11 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
           </div>
         )}
         <div
-          className={doClassnames([texts.type, 'knob__label'])}
+          className={doClassnames(['knob__label'])}
           role="presentation"
           aria-hidden="true"
         >
-          {shortId}
+          <span className={doClassnames([texts.type])}>{shortId}</span>
         </div>
         <div
           className="knob__graduation"
