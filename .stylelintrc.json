@@ -1,0 +1,19 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "ignoreFiles": ["**/figma.scss", "**/sketch.scss", "**/penpot.scss"],
+  "rules": {
+    "property-no-unknown": [
+      true,
+      {
+        "checkPrefixed": true
+      }
+    ],
+    "custom-property-no-missing-var-function": true,
+    "import-notation": false,
+    "selector-class-pattern": null,
+    "no-duplicate-selectors": false,
+    "selector-pseudo-class-no-unknown": false,
+    "block-no-redundant-nested-style-rules": null,
+    "custom-property-empty-line-before": null
+  }
+}
