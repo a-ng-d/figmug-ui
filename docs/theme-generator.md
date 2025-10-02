@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Figmug UI Theme Generator is a tool that allows you to easily create new themes for the Figmug design system. It automates the creation and configuration of all necessary files to define a new theme, based on the existing Sketch theme structure.
+The Figmug UI Theme Generator is a tool that allows you to easily create new themes for the Figmug design system. It automates the creation and configuration of all necessary files to define a new theme, based on the existing Figma theme structure.
 
 ## Features
 
@@ -68,7 +68,7 @@ The script automatically configures Storybook to display the new theme in:
 
 The script:
 
-- Copies and adapts tokens from the Sketch theme
+- Copies and adapts tokens from the Figma theme
 - Updates all necessary SCSS imports
 - Handles references to icons and other assets
 - Configures CSS selectors to ensure proper theme isolation
@@ -77,7 +77,7 @@ The script:
 
 If you encounter issues:
 
-- Make sure the Sketch theme exists and is properly configured
+- Make sure the Figma theme exists and is properly configured
 - Check write permissions in the destination folders
 - Review log files for any possible errors
 
@@ -85,6 +85,6 @@ If you encounter issues:
 
 Areas for improvement for the theme generator:
 
-- Support for other source themes besides Sketch
+- Support for other source themes besides Figma
 - More advanced customization options during generation
 - Automatic validation of generated tokens

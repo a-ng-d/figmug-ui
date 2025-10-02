@@ -12,8 +12,8 @@ Figmug UI is a comprehensive library of UI components designed specifically for 
 - **Tested with Jest and Vitest**: Ensures reliability and robustness of components
 - **Exposed with Storybook**: Interactive UI component explorer for easy development and testing
 - **Design tokens with Terrazzo**: Theme management using design tokens for consistent styling across platforms. [View Terrazzo Guide](./docs/terrazzo-guide.md)
-- **Theme Generator**: Create custom themes easily with the [Theme Generator](./docs/theme-generator.md) tool
-- **SCSS Builder**: Generate theme-specific SCSS files from tokens using the build-scss script
+- **Theme Generator**: Create custom themes easily with the [Theme Generator](./docs/theme-generator.md) tool based on Figma theme structure
+- **SCSS Builder**: Generate theme-specific SCSS files from tokens using the build-scss script, with support for building components across all themes
 
 ## Installation
 
@@ -57,10 +57,13 @@ npm run scss:list
 npm run scss:build
 
 # Build SCSS for a specific theme
-npm run scss:build:theme -- --theme=themeName
+npm run scss:build theme=themeName
 
-# Build SCSS for a specific component
-npm run scss:build:component -- --component=componentName
+# Build SCSS for a specific component across all themes
+npm run scss:build component=componentName
+
+# Build SCSS for a specific component within a specific theme
+npm run scss:build theme=themeName component=componentName
 ```
 
 ## Usage

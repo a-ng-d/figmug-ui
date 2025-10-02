@@ -6,7 +6,7 @@ This directory contains utility scripts for Figmug UI theme development and main
 
 ### Theme Generator (`create-theme.js`)
 
-Creates a complete new theme for Figmug UI based on the Sketch theme.
+Creates a complete new theme for Figmug UI based on the Figma theme.
 
 **[📚 Detailed documentation available here](../docs/theme-generator.md)**
 
@@ -29,10 +29,13 @@ npm run scss:list
 npm run scss:build
 
 # Build SCSS for a specific theme
-npm run scss:build:theme -- --theme=themeName
+npm run scss:build theme=themeName
 
-# Build SCSS for a specific component
-npm run scss:build:component -- --component=componentName
+# Build SCSS for a specific component across all themes
+npm run scss:build component=componentName
+
+# Build SCSS for a specific component within a specific theme
+npm run scss:build theme=themeName component=componentName
 ```
 
 The SCSS Builder:
@@ -71,15 +74,15 @@ After generating your theme, you will need to:
 
 1. Review the Terrazzo configuration files in `terrazzo/[theme-name]/`
 2. Customize token JSON files in `tokens/platforms/[theme-name]/`
-3. Run `npm run scss:build:theme -- --theme=[theme-name]` to build the theme tokens
+3. Run `npm run scss:build theme=[theme-name]` to build the theme tokens
 4. Launch Storybook with `npm run storybook` to preview your new theme
 
 ## Reference Source
 
-The script now uses the `sketch` theme as reference for all elements:
+The script now uses the `figma` theme as reference for all elements:
 
-- Token JSON files: `sketch`
-- Terrazzo configuration: `sketch`
+- Token JSON files: `figma`
+- Terrazzo configuration: `figma`
 
 ## Contributing
 

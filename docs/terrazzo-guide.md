@@ -23,8 +23,7 @@ terrazzo/
   │       ├── terrazzo.button.js
   │       ├── terrazzo.select.js
   │       └── ...
-  ├── figma-ui2/               # Configuration for Figma UI 2 theme
-  ├── figma-ui3/               # Configuration for Figma UI 3 theme
+  ├── figma/                   # Configuration for Figma theme
   └── penpot/                  # Configuration for Penpot theme
 ```
 
@@ -77,8 +76,7 @@ npm run scss:build -- --build --theme=sketch
 Available themes are:
 
 - sketch
-- figma-ui2
-- figma-ui3
+- figma
 - penpot
 
 ### Build a Specific Component for a Theme
@@ -87,17 +85,22 @@ To generate CSS files for a specific component within a theme:
 
 ```bash
 # Modern syntax (recommended)
-npm run scss:build theme=sketch
+npm run scss:build theme=sketch component=button
 
 # Legacy syntax
 npm run scss:build -- --build --theme=sketch --component=button
 ```
 
-If you don't specify a theme, the `sketch` theme will be used by default:
+### Build a Specific Component for All Themes
+
+To generate CSS files for a specific component across all available themes:
 
 ```bash
-npm run scss:build component=button
+# Modern syntax (recommended)
+npm run scss:build component=button theme=figma
 ```
+
+This will build the specified component for every theme that contains it.
 
 ## Direct Script Usage
 
