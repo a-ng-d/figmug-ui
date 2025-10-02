@@ -142,7 +142,9 @@
     --tabs-background-color: var(--tabs-background-color-top);
 
     --tabs-tab-gap: var(--tabs-tab-gap-alternative);
-    --tabs-tab-padding: var(--tabs-tab-padding-alternative);
+    --tabs-tab-padding: var(--tabs-tab-padding-alternative-with-icon-top)
+        var(--tabs-tab-padding-alternative-with-icon-right) var(--tabs-tab-padding-alternative-with-icon-bottom)
+        var(--tabs-tab-padding-alternative-with-icon-left);
     --tabs-tab-radius: var(--tabs-tab-radius-alternative);
     --tabs-tab-height: var(--tabs-tab-height-alternative);
     --tabs-tab-background-color: var(--tabs-tab-background-color-alternative);
@@ -152,10 +154,6 @@
     --tabs-tab-icon-width: var(--tabs-tab-icon-width-alternative);
     --tabs-tab-icon-height: var(--tabs-tab-icon-width-alternative);
     --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative);
-
-    --tabs-tab-padding: var(--tabs-tab-padding-alternative-with-icon-top)
-        var(--tabs-tab-padding-alternative-with-icon-right) var(--tabs-tab-padding-alternative-with-icon-bottom)
-        var(--tabs-tab-padding-alternative-with-icon-left);
 
     --tabs-tab-background-color-hover: var(
       --tabs-tab-background-color-alternative-hover
