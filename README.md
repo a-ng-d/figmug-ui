@@ -38,6 +38,7 @@ npm run create:theme
 ```
 
 The Theme Generator automates the creation of all necessary files and configurations:
+
 - Tokens JSON files
 - Terrazzo configuration
 - Storybook integration

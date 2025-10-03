@@ -378,7 +378,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
               parseFloat(inputValue) +
               nudge * parseFloat(step === undefined ? '1' : step)
             ).toString()
-          : max ?? '100'
+          : (max ?? '100')
 
       this.setState({
         inputValue: v,
@@ -394,7 +394,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
               parseFloat(inputValue) -
               nudge * parseFloat(step === undefined ? '1' : step)
             ).toString()
-          : min ?? '0'
+          : (min ?? '0')
       this.setState({
         inputValue: v,
         lastValidValue: v,

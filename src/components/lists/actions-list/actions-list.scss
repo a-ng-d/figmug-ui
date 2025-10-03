@@ -18,15 +18,19 @@
     --icon-picto-color: var(--actions-list-spot-icon-color);
 
     &--top {
-      inset: var(--actions-list-spot-inset-top-top) var(--actions-list-spot-inset-top-right)
-        var(--actions-list-spot-inset-top-bottom) var(--actions-list-spot-inset-top-left);
+      inset: var(--actions-list-spot-inset-top-top)
+        var(--actions-list-spot-inset-top-right)
+        var(--actions-list-spot-inset-top-bottom)
+        var(--actions-list-spot-inset-top-left);
       border-top: var(--actions-list-spot-border-width) solid
         var(--actions-list-spot-border-color);
     }
 
     &--bottom {
-      inset: var(--actions-list-spot-inset-bottom-top) var(--actions-list-spot-inset-bottom-right)
-        var(--actions-list-spot-inset-bottom-bottom) var(--actions-list-spot-inset-bottom-left);
+      inset: var(--actions-list-spot-inset-bottom-top)
+        var(--actions-list-spot-inset-bottom-right)
+        var(--actions-list-spot-inset-bottom-bottom)
+        var(--actions-list-spot-inset-bottom-left);
       border-bottom: var(--actions-list-spot-border-width) solid
         var(--actions-list-spot-border-color);
     }
@@ -44,7 +48,8 @@
     box-shadow: var(--actions-list-shadow);
     border-radius: var(--actions-list-radius);
     background-color: var(--actions-list-background-color);
-    padding: var(--actions-list-padding-top) var(--actions-list-padding-right) var(--actions-list-padding-bottom) var(--actions-list-padding-left);
+    padding: var(--actions-list-padding-top) var(--actions-list-padding-right)
+      var(--actions-list-padding-bottom) var(--actions-list-padding-left);
     width: 100%;
     min-width: var(--actions-list-min-width);
     overflow: visible;
@@ -58,12 +63,18 @@
 
     &--left .select-menu__submenu {
       transform: translateX(-100%);
-      inset: var(--actions-list-submenu-inset-left-top) var(--actions-list-submenu-inset-left-right) var(--actions-list-submenu-inset-left-bottom) var(--actions-list-submenu-inset-left-left);
+      inset: var(--actions-list-submenu-inset-left-top)
+        var(--actions-list-submenu-inset-left-right)
+        var(--actions-list-submenu-inset-left-bottom)
+        var(--actions-list-submenu-inset-left-left);
     }
 
     &--right .select-menu__submenu {
       transform: translateX(100%);
-      inset: var(--actions-list-submenu-inset-right-top) var(--actions-list-submenu-inset-right-right) var(--actions-list-submenu-inset-right-bottom) var(--actions-list-submenu-inset-right-left);
+      inset: var(--actions-list-submenu-inset-right-top)
+        var(--actions-list-submenu-inset-right-right)
+        var(--actions-list-submenu-inset-right-bottom)
+        var(--actions-list-submenu-inset-right-left);
     }
   }
 
@@ -135,7 +146,9 @@
       --actions-list-item-background-color: var(
         --actions-list-item-background-color-default
       );
-      --actions-list-item-text-color: var(--actions-list-item-text-color-default);
+      --actions-list-item-text-color: var(
+        --actions-list-item-text-color-default
+      );
       --actions-list-tick-color: var(--actions-list-tick-color-default);
       --actions-list-caret-color: var(--actions-list-caret-color-default);
     }
@@ -185,10 +198,12 @@
       --actions-list-caret-color: var(--actions-list-caret-color-selected);
 
       &:hover {
-        --actions-list-item-padding: var(--actions-list-item-padding-selected-hover-top)
-        var(--actions-list-item-padding-selected-hover-right)
-        var(--actions-list-item-padding-selected-hover-bottom)
-        var(--actions-list-item-padding-selected-hover-left);
+        --actions-list-item-padding: var(
+            --actions-list-item-padding-selected-hover-top
+          )
+          var(--actions-list-item-padding-selected-hover-right)
+          var(--actions-list-item-padding-selected-hover-bottom)
+          var(--actions-list-item-padding-selected-hover-left);
         --actions-list-item-background-color: var(
           --actions-list-item-background-color-selected-hover
         );
@@ -204,10 +219,12 @@
       }
 
       &:focus {
-        --actions-list-item-padding: var(--actions-list-item-padding-selected-focus-top)
-        var(--actions-list-item-padding-selected-focus-right)
-        var(--actions-list-item-padding-selected-focus-bottom)
-        var(--actions-list-item-padding-selected-focus-left);
+        --actions-list-item-padding: var(
+            --actions-list-item-padding-selected-focus-top
+          )
+          var(--actions-list-item-padding-selected-focus-right)
+          var(--actions-list-item-padding-selected-focus-bottom)
+          var(--actions-list-item-padding-selected-focus-left);
         --actions-list-item-background-color: var(
           --actions-list-item-background-color-selected-focus
         );
@@ -247,8 +264,10 @@
   }
 
   hr {
-    margin: var(--actions-list-divider-margin-top) var(--actions-list-divider-margin-right)
-      var(--actions-list-divider-margin-bottom) var(--actions-list-divider-margin-left);
+    margin: var(--actions-list-divider-margin-top)
+      var(--actions-list-divider-margin-right)
+      var(--actions-list-divider-margin-bottom)
+      var(--actions-list-divider-margin-left);
     border: none;
     background-color: var(--actions-list-divider-background-color);
     height: var(--actions-list-divider-height);

@@ -7,17 +7,27 @@
   flex-direction: column;
   gap: var(--section-gap);
   background-color: var(--section-background-color);
-  padding: var(--section-padding-top) var(--section-padding-right) var(--section-padding-bottom) var(--section-padding-left);
+  padding: var(--section-padding-top) var(--section-padding-right)
+    var(--section-padding-bottom) var(--section-padding-left);
 
   &__child {
-    padding: var(--section-child-padding-default-top) var(--section-child-padding-default-right) var(--section-child-padding-default-bottom) var(--section-child-padding-default-left);
+    padding: var(--section-child-padding-default-top)
+      var(--section-child-padding-default-right)
+      var(--section-child-padding-default-bottom)
+      var(--section-child-padding-default-left);
 
     &--large {
-      padding: var(--section-child-padding-large-top) var(--section-child-padding-large-right) var(--section-child-padding-large-bottom) var(--section-child-padding-large-left);
+      padding: var(--section-child-padding-large-top)
+        var(--section-child-padding-large-right)
+        var(--section-child-padding-large-bottom)
+        var(--section-child-padding-large-left);
     }
 
     &--tight {
-      padding: var(--section-child-padding-tight-top) var(--section-child-padding-tight-right) var(--section-child-padding-tight-bottom) var(--section-child-padding-tight-left);
+      padding: var(--section-child-padding-tight-top)
+        var(--section-child-padding-tight-right)
+        var(--section-child-padding-tight-bottom)
+        var(--section-child-padding-tight-left);
     }
 
     &--none {

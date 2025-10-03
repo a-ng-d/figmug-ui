@@ -20,7 +20,8 @@
   user-select: none;
 
   & {
-    --dialog-padding: var(--dialog-padding-top) var(--dialog-padding-right) var(--dialog-padding-bottom) var(--dialog-padding-left);
+    --dialog-padding: var(--dialog-padding-top) var(--dialog-padding-right)
+      var(--dialog-padding-bottom) var(--dialog-padding-left);
   }
 
   &--right {
@@ -39,7 +40,8 @@
     overflow: hidden;
 
     &--padding {
-      padding: var(--dialog-cover-padding-top) var(--dialog-cover-padding-right) var(--dialog-cover-padding-bottom) var(--dialog-cover-padding-left);
+      padding: var(--dialog-cover-padding-top) var(--dialog-cover-padding-right)
+        var(--dialog-cover-padding-bottom) var(--dialog-cover-padding-left);
     }
   }
 
@@ -49,7 +51,8 @@
     flex-direction: column;
     gap: var(--dialog-text-gap);
     margin: 0;
-    padding: var(--dialog-text-padding-top) var(--dialog-text-padding-right) var(--dialog-text-padding-bottom) var(--dialog-text-padding-left);
+    padding: var(--dialog-text-padding-top) var(--dialog-text-padding-right)
+      var(--dialog-text-padding-bottom) var(--dialog-text-padding-left);
 
     p {
       margin: 0;
@@ -62,7 +65,8 @@
     flex-direction: column;
     gap: var(--dialog-form-gap);
     margin: 0;
-    padding: var(--dialog-form-padding-top) var(--dialog-form-padding-right) var(--dialog-form-padding-bottom) var(--dialog-form-padding-left);
+    padding: var(--dialog-form-padding-top) var(--dialog-form-padding-right)
+      var(--dialog-form-padding-bottom) var(--dialog-form-padding-left);
   }
 }
 

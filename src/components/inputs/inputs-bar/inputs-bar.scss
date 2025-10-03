@@ -26,7 +26,8 @@
     --input-color-width: var(--inputs-bar-width);
 
     & .input {
-      margin: var(--inputs-bar-margin-top) var(--inputs-bar-margin-right) var(--inputs-bar-margin-bottom) var(--inputs-bar-margin-left);
+      margin: var(--inputs-bar-margin-top) var(--inputs-bar-margin-right)
+        var(--inputs-bar-margin-bottom) var(--inputs-bar-margin-left);
 
       input:focus {
         --input-border-width-focus: var(--input-border-width-hover);

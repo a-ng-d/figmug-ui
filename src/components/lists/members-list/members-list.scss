@@ -34,8 +34,10 @@
     display: flex;
     position: relative;
     align-items: center;
-    padding: var(--members-list-more-padding-top) var(--members-list-more-padding-right)
-      var(--members-list-more-padding-bottom) var(--members-list-more-padding-left);
+    padding: var(--members-list-more-padding-top)
+      var(--members-list-more-padding-right)
+      var(--members-list-more-padding-bottom)
+      var(--members-list-more-padding-left);
     height: var(--members-list-avatar-height);
   }
 

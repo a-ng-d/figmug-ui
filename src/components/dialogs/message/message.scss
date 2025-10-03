@@ -7,7 +7,8 @@
   align-items: start;
   gap: var(--message-gap);
   cursor: default;
-  padding: var(--message-padding-top) var(--message-padding-right) var(--message-padding-bottom) var(--message-padding-left);
+  padding: var(--message-padding-top) var(--message-padding-right)
+    var(--message-padding-bottom) var(--message-padding-left);
   user-select: none;
   --icon-picto-color: var(--message-icon-color-default);
   --text-color-primary: var(--message-text-color-default);
@@ -22,7 +23,9 @@
   }
 
   &__msg {
-    padding: var(--message-message-padding-top) var(--message-message-padding-right) var(--message-message-padding-bottom) var(--message-message-padding-left);
+    padding: var(--message-message-padding-top)
+      var(--message-message-padding-right) var(--message-message-padding-bottom)
+      var(--message-message-padding-left);
   }
 
   /* Tips ticker */
@@ -35,7 +38,10 @@
     overflow: hidden;
 
     .message__msg {
-      padding: var(--message-message-padding-top) var(--message-message-padding-right) var(--message-message-padding-bottom) var(--message-message-padding-left);
+      padding: var(--message-message-padding-top)
+        var(--message-message-padding-right)
+        var(--message-message-padding-bottom)
+        var(--message-message-padding-left);
       white-space: nowrap;
     }
 

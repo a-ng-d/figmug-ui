@@ -21,13 +21,19 @@
     --knob-label-border-color: var(--knob-label-border-color-default);
     --knob-label-border-width: var(--knob-label-border-width-default);
     --knob-label-text-color: var(--knob-label-text-color-default);
-    --knob-label-arrow-background-color: var(--knob-label-arrow-background-color-default);
-    --knob-label-arrow-border-color: var(--knob-label-arrow-border-color-default);
+    --knob-label-arrow-background-color: var(
+      --knob-label-arrow-background-color-default
+    );
+    --knob-label-arrow-border-color: var(
+      --knob-label-arrow-border-color-default
+    );
   }
 
   &:hover {
     --knob-label-background-color: var(--knob-label-background-color-hover);
-    --knob-label-arrow-background-color: var(--knob-label-arrow-background-color-hover);
+    --knob-label-arrow-background-color: var(
+      --knob-label-arrow-background-color-hover
+    );
     --knob-label-arrow-border-color: var(--knob-label-arrow-border-color-hover);
   }
 
@@ -37,7 +43,9 @@
     --knob-label-background-color: var(--knob-label-background-color-focus);
     --knob-label-border-color: var(--knob-label-border-color-focus);
     --knob-label-border-width: var(--knob-label-border-width-focus);
-    --knob-label-arrow-background-color: var(--knob-label-arrow-background-color-focus);
+    --knob-label-arrow-background-color: var(
+      --knob-label-arrow-background-color-focus
+    );
     --knob-label-arrow-border-color: var(--knob-label-arrow-border-color-focus);
   }
 
@@ -53,8 +61,12 @@
     --knob-label-background-color: var(--knob-label-background-color-disabled);
     --knob-label-border-color: var(--knob-label-border-color-disabled);
     --knob-label-text-color: var(--knob-label-text-color-disabled);
-    --knob-label-arrow-background-color: var(--knob-label-arrow-background-color-disabled);
-    --knob-label-arrow-border-color: var(--knob-label-arrow-border-color-disabled);
+    --knob-label-arrow-background-color: var(
+      --knob-label-arrow-background-color-disabled
+    );
+    --knob-label-arrow-border-color: var(
+      --knob-label-arrow-border-color-disabled
+    );
   }
 }
 
@@ -67,7 +79,8 @@
     var(--knob-label-border-color);
   border-radius: var(--knob-label-radius);
   background: var(--knob-label-background-color);
-  padding: var(--knob-label-padding-top) var(--knob-label-padding-right) var(--knob-label-padding-bottom) var(--knob-label-padding-left);
+  padding: var(--knob-label-padding-top) var(--knob-label-padding-right)
+    var(--knob-label-padding-bottom) var(--knob-label-padding-left);
   width: 100%;
   height: var(--knob-label-height);
   pointer-events: none;
@@ -85,6 +98,7 @@
     left: 50%;
     transform: translateX(-50%) translateY(50%) rotate(45deg);
     transform-origin: 50% 50%;
+    z-index: 1;
     border-top: transparent;
     border-right: var(--knob-label-arrow-border-width) solid
       var(--knob-label-arrow-border-color);
@@ -96,7 +110,6 @@
     width: var(--knob-label-arrow-width);
     height: var(--knob-label-arrow-height);
     content: '';
-    z-index: 1;
   }
 }
 
@@ -107,7 +120,8 @@
   transform: translateX(-50%) translateY(-100%);
   border-radius: var(--knob-tooltip-radius);
   background-color: var(--knob-tooltip-background-color);
-  padding: var(--knob-tooltip-padding-top) var(--knob-tooltip-padding-right) var(--knob-tooltip-padding-bottom) var(--knob-tooltip-padding-left);
+  padding: var(--knob-tooltip-padding-top) var(--knob-tooltip-padding-right)
+    var(--knob-tooltip-padding-bottom) var(--knob-tooltip-padding-left);
   min-width: var(--knob-tooltip-min-width);
   pointer-events: none;
   color: var(--knob-tooltip-text-color);
@@ -124,6 +138,7 @@
     left: 50%;
     transform: translateX(-50%) translateY(50%) rotate(45deg);
     transform-origin: 50% 50%;
+    z-index: 1;
     border-top: transparent;
     border-right: var(--knob-tooltip-arrow-border-width) solid
       var(--knob-tooltip-arrow-border-color);
@@ -135,7 +150,6 @@
     width: var(--knob-tooltip-arrow-width);
     height: var(--knob-tooltip-arrow-height);
     content: '';
-    z-index: 1;
   }
 }
 
@@ -157,6 +171,7 @@
   box-shadow: var(--knob-input-shadow);
   border-radius: var(--knob-input-radius);
   background-color: var(--knob-input-background-color);
-  padding: var(--knob-input-padding-top) var(--knob-input-padding-right) var(--knob-input-padding-bottom) var(--knob-input-padding-left);
+  padding: var(--knob-input-padding-top) var(--knob-input-padding-right)
+    var(--knob-input-padding-bottom) var(--knob-input-padding-left);
   width: var(--knob-input-width);
 }

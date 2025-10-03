@@ -21,7 +21,8 @@
     align-items: center;
     align-self: start;
     gap: var(--select-status-gap);
-    margin: var(--select-status-margin-top) var(--select-status-margin-right) var(--select-status-margin-bottom) var(--select-status-margin-left);
+    margin: var(--select-status-margin-top) var(--select-status-margin-right)
+      var(--select-status-margin-bottom) var(--select-status-margin-left);
     height: var(--select-status-height);
   }
 }
@@ -34,7 +35,9 @@
     display: flex;
     align-items: start;
     margin-left: var(--select-checkbox-margin-left);
-    padding: var(--select-checkbox-padding-top) var(--select-checkbox-padding-right) var(--select-checkbox-padding-bottom) var(--select-checkbox-padding-left);
+    padding: var(--select-checkbox-padding-top)
+      var(--select-checkbox-padding-right) var(--select-checkbox-padding-bottom)
+      var(--select-checkbox-padding-left);
     height: 100%;
     color: var(--select-text-color-default);
     font-weight: var(--select-text-font-weight);
@@ -47,11 +50,13 @@
     &::before {
       display: block;
       flex: none;
-      margin: var(--select-box-margin-top) var(--select-box-margin-right) var(--select-box-margin-bottom) var(--select-box-margin-left);
+      margin: var(--select-box-margin-top) var(--select-box-margin-right)
+        var(--select-box-margin-bottom) var(--select-box-margin-left);
       outline: var(--select-box-border-secondary-width-default) solid
         var(--select-box-border-secondary-color-default);
       outline-offset: var(--select-box-border-secondary-offset-default);
-      border: var(--select-box-border-default-width) solid var(--select-box-border-default-color);
+      border: var(--select-box-border-default-width) solid
+        var(--select-box-border-default-color);
       border-radius: var(--select-box-radius);
       background: var(--select-box-background-color-default);
       width: var(--select-box-width);
@@ -65,11 +70,15 @@
       visibility: hidden;
       mask-image: var(--select-box-tick-icon);
       -webkit-mask-image: var(--select-box-tick-icon);
-      mask-position: var(--select-box-tick-position-top) var(--select-box-tick-position-left);
-      -webkit-mask-position: var(--select-box-tick-position-top) var(--select-box-tick-position-left);
+      mask-position: var(--select-box-tick-position-top)
+        var(--select-box-tick-position-left);
+      -webkit-mask-position: var(--select-box-tick-position-top)
+        var(--select-box-tick-position-left);
       mask-size: cover;
       -webkit-mask-size: cover;
-      margin: var(--select-box-tick-margin-top) var(--select-box-tick-margin-right) var(--select-box-tick-margin-bottom) var(--select-box-tick-margin-left);
+      margin: var(--select-box-tick-margin-top)
+        var(--select-box-tick-margin-right) var(--select-box-tick-margin-bottom)
+        var(--select-box-tick-margin-left);
       background-color: var(--select-box-tick-color-default);
       width: var(--select-box-tick-width);
       height: var(--select-box-tick-height);
@@ -87,8 +96,9 @@
     height: var(--select-box-height);
 
     &:checked + .checkbox__label::before {
+      border: var(--select-box-border-checked-default-width) solid
+        var(--select-box-border-checked-default-color);
       background: var(--select-box-background-color-checked-default);
-      border: var(--select-box-border-checked-default-width) solid var(--select-box-border-checked-default-color);
     }
 
     &:checked + .checkbox__label::after {
@@ -112,13 +122,15 @@
     }
 
     &:disabled:checked + .checkbox__label::before {
+      border: var(--select-box-border-checked-disabled-width) solid
+        var(--select-box-border-checked-disabled-color);
       background: var(--select-box-background-color-checked-disabled);
-      border: var(--select-box-border-checked-disabled-width) solid var(--select-box-border-checked-disabled-color);
     }
 
     &:disabled + .checkbox__label::before {
+      border: var(--select-box-border-disabled-width) solid
+        var(--select-box-border-disabled-color);
       background: var(--select-box-background-color-disabled);
-      border: var(--select-box-border-disabled-width) solid var(--select-box-border-disabled-color);
     }
 
     &:disabled:checked + .checkbox__label::after {
@@ -134,7 +146,8 @@
     display: flex;
     align-items: start;
     margin-left: var(--select-switch-margin-left);
-    padding: var(--select-switch-padding-top) var(--select-switch-padding-right) var(--select-switch-padding-bottom) var(--select-switch-padding-left);
+    padding: var(--select-switch-padding-top) var(--select-switch-padding-right)
+      var(--select-switch-padding-bottom) var(--select-switch-padding-left);
     height: 100%;
     color: var(--select-text-color-default);
     font-weight: var(--select-text-font-weight);
@@ -147,12 +160,15 @@
     &::before {
       display: block;
       flex: none;
-      transition: background-color var(--select-toggle-knob-transition-background-color);
-      margin: var(--select-toggle-margin-top) var(--select-toggle-margin-right) var(--select-toggle-margin-bottom) var(--select-toggle-margin-left);
+      transition: background-color
+        var(--select-toggle-knob-transition-background-color);
+      margin: var(--select-toggle-margin-top) var(--select-toggle-margin-right)
+        var(--select-toggle-margin-bottom) var(--select-toggle-margin-left);
       outline: var(--select-toggle-border-secondary-width-default) solid
         var(--select-toggle-border-secondary-color-default);
       outline-offset: var(--select-toggle-border-secondary-offset-default);
-      border: var(--select-toggle-border-default-width) solid var(--select-toggle-border-default-color);
+      border: var(--select-toggle-border-default-width) solid
+        var(--select-toggle-border-default-color);
       border-radius: var(--select-toggle-radius);
       background-color: var(--select-toggle-background-color-default);
       width: var(--select-toggle-width);
@@ -165,7 +181,10 @@
       position: absolute;
       left: var(--select-toggle-knob-left);
       flex: none;
-      transform: translateX(var(--select-toggle-knob-transform-default-translate-x)) translateY(var(--select-toggle-knob-transform-default-translate-y));
+      transform: translateX(
+          var(--select-toggle-knob-transform-default-translate-x)
+        )
+        translateY(var(--select-toggle-knob-transform-default-translate-y));
       transition: transform var(--select-toggle-knob-transition-transform);
       border-radius: var(--select-toggle-knob-radius);
       background-color: var(--select-toggle-knob-background-color-default);
@@ -185,13 +204,19 @@
     height: var(--select-toggle-height);
 
     &:checked + .switch__label::before {
+      border: var(--select-toggle-border-checked-default-width) solid
+        var(--select-toggle-border-checked-default-color);
       background-color: var(--select-toggle-background-color-checked-default);
-      border: var(--select-toggle-border-checked-default-width) solid var(--select-toggle-border-checked-default-color);
     }
 
     &:checked + .switch__label::after {
-      transform: translateX(var(--select-toggle-knob-transform-checked-translate-x)) translateY(var(--select-toggle-knob-transform-checked-translate-y));
-      background-color: var(--select-toggle-knob-background-color-checked-default);
+      transform: translateX(
+          var(--select-toggle-knob-transform-checked-translate-x)
+        )
+        translateY(var(--select-toggle-knob-transform-checked-translate-y));
+      background-color: var(
+        --select-toggle-knob-background-color-checked-default
+      );
     }
 
     &:focus + .switch__label::before {
@@ -203,7 +228,9 @@
     &:focus:checked + .switch__label::before {
       outline: var(--select-toggle-border-secondary-width-checked-focus) solid
         var(--select-toggle-border-secondary-color-checked-focus);
-      outline-offset: var(--select-toggle-border-secondary-offset-checked-focus);
+      outline-offset: var(
+        --select-toggle-border-secondary-offset-checked-focus
+      );
     }
 
     &:disabled + .switch__label {
@@ -211,8 +238,9 @@
     }
 
     &:disabled + .switch__label::before {
+      border: var(--select-toggle-border-disabled-width) solid
+        var(--select-toggle-border-disabled-color);
       background-color: var(--select-toggle-background-color-disabled);
-      border: var(--select-toggle-border-disabled-width) solid var(--select-toggle-border-disabled-color);
     }
 
     &:disabled + .switch__label::after {
@@ -220,12 +248,15 @@
     }
 
     &:disabled:checked + .switch__label::before {
+      border: var(--select-toggle-border-checked-disabled-width) solid
+        var(--select-toggle-border-checked-disabled-color);
       background-color: var(--select-toggle-background-color-checked-disabled);
-      border: var(--select-toggle-border-checked-disabled-width) solid var(--select-toggle-border-checked-disabled-color);
     }
 
     &:disabled:checked + .switch__label::after {
-      background-color: var(--select-toggle-knob-background-color-checked-disabled);
+      background-color: var(
+        --select-toggle-knob-background-color-checked-disabled
+      );
     }
   }
 }
@@ -239,7 +270,8 @@
     position: relative;
     align-items: start;
     margin-left: var(--select-radio-margin-left);
-    padding: var(--select-radio-padding-top) var(--select-radio-padding-right) var(--select-radio-padding-bottom) var(--select-radio-padding-left);
+    padding: var(--select-radio-padding-top) var(--select-radio-padding-right)
+      var(--select-radio-padding-bottom) var(--select-radio-padding-left);
     height: 100%;
     color: var(--select-text-color-default);
     font-weight: var(--select-text-font-weight);
@@ -252,11 +284,13 @@
     &::before {
       display: block;
       flex: none;
-      margin: var(--select-button-margin-top) var(--select-button-margin-right) var(--select-button-margin-bottom) var(--select-button-margin-left);
+      margin: var(--select-button-margin-top) var(--select-button-margin-right)
+        var(--select-button-margin-bottom) var(--select-button-margin-left);
       outline: var(--select-button-border-secondary-width-default) solid
         var(--select-button-border-secondary-color-default);
       outline-offset: var(--select-button-border-secondary-offset-default);
-      border: var(--select-button-border-default-width) solid var(--select-button-border-default-color);
+      border: var(--select-button-border-default-width) solid
+        var(--select-button-border-default-color);
       border-radius: var(--select-button-radius);
       background: var(--select-button-background-color-default);
       width: var(--select-button-width);
@@ -287,8 +321,9 @@
     height: var(--select-button-height);
 
     &:checked + .radio__label::before {
+      border: var(--select-button-border-checked-default-width) solid
+        var(--select-button-border-checked-default-color);
       background: var(--select-button-background-color-checked-default);
-      border: var(--select-button-border-checked-default-width) solid var(--select-button-border-checked-default-color);
     }
 
     &:checked + .radio__label::after {
@@ -304,7 +339,9 @@
     &:focus:checked + .radio__label::before {
       outline: var(--select-button-border-secondary-width-checked-focus) solid
         var(--select-button-border-secondary-color-checked-focus);
-      outline-offset: var(--select-button-border-secondary-offset-checked-focus);
+      outline-offset: var(
+        --select-button-border-secondary-offset-checked-focus
+      );
     }
 
     &:disabled + .radio__label {
@@ -312,8 +349,9 @@
     }
 
     &:disabled:checked + .radio__label::before {
+      border: var(--select-button-border-checked-disabled-width) solid
+        var(--select-button-border-checked-disabled-color);
       background: var(--select-button-background-color-checked-disabled);
-      border: var(--select-button-border-checked-disabled-width) solid var(--select-button-border-checked-disabled-color);
     }
 
     &:disabled:checked + .radio__label::after {
@@ -321,8 +359,9 @@
     }
 
     &:disabled + .radio__label::before {
+      border: var(--select-button-border-disabled-width) solid
+        var(--select-button-border-disabled-color);
       background: var(--select-button-background-color-disabled);
-      border: var(--select-button-border-disabled-width) solid var(--select-button-border-disabled-color);
     }
   }
 }

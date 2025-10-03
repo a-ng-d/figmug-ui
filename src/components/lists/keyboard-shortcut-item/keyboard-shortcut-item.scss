@@ -8,8 +8,10 @@
   align-items: center;
   gap: var(--keyboard-shortcut-item-gap);
   background-color: var(--keyboard-shortcut-item-background-color);
-  padding: var(--keyboard-shortcut-item-padding-top) var(--keyboard-shortcut-item-padding-right)
-    var(--keyboard-shortcut-item-padding-bottom) var(--keyboard-shortcut-item-padding-left);
+  padding: var(--keyboard-shortcut-item-padding-top)
+    var(--keyboard-shortcut-item-padding-right)
+    var(--keyboard-shortcut-item-padding-bottom)
+    var(--keyboard-shortcut-item-padding-left);
   min-height: var(--keyboard-shortcut-item-min-height);
   user-select: none;
 
@@ -28,15 +30,19 @@
     outline-offset: var(--keyboard-shortcut-item-key-border-offset);
     border-radius: var(--keyboard-shortcut-item-key-radius);
     background-color: var(--keyboard-shortcut-item-key-background-color);
-    padding: var(--keyboard-shortcut-item-key-padding-top) var(--keyboard-shortcut-item-key-padding-right)
-      var(--keyboard-shortcut-item-key-padding-bottom) var(--keyboard-shortcut-item-key-padding-left);
+    padding: var(--keyboard-shortcut-item-key-padding-top)
+      var(--keyboard-shortcut-item-key-padding-right)
+      var(--keyboard-shortcut-item-key-padding-bottom)
+      var(--keyboard-shortcut-item-key-padding-left);
     min-width: var(--keyboard-shortcut-item-key-min-width);
     height: var(--keyboard-shortcut-item-key-height);
     white-space: nowrap;
   }
 
   .keyboard-shortcut-item__separator {
-    padding: var(--keyboard-shortcut-item-separator-padding-top) var(--keyboard-shortcut-item-separator-padding-right)
-      var(--keyboard-shortcut-item-separator-padding-bottom) var(--keyboard-shortcut-item-separator-padding-left);
+    padding: var(--keyboard-shortcut-item-separator-padding-top)
+      var(--keyboard-shortcut-item-separator-padding-right)
+      var(--keyboard-shortcut-item-separator-padding-bottom)
+      var(--keyboard-shortcut-item-separator-padding-left);
   }
 }

@@ -11,7 +11,8 @@
   box-shadow: var(--card-border-offset);
   border-radius: var(--card-radius);
   background-color: var(--card-background-color);
-  padding: var(--card-padding-top) var(--card-padding-right) var(--card-padding-bottom) var(--card-padding-left);
+  padding: var(--card-padding-top) var(--card-padding-right)
+    var(--card-padding-bottom) var(--card-padding-left);
   width: var(--card-width);
 
   &--fill {
@@ -61,7 +62,8 @@
     gap: var(--card-actions-gap);
     visibility: hidden;
     inset: 0;
-    padding: var(--card-actions-padding-top) var(--card-actions-padding-right) var(--card-actions-padding-bottom) var(--card-actions-padding-left);
+    padding: var(--card-actions-padding-top) var(--card-actions-padding-right)
+      var(--card-actions-padding-bottom) var(--card-actions-padding-left);
   }
 
   &__text {

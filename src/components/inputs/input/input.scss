@@ -7,7 +7,8 @@
   position: relative;
   align-items: center;
   cursor: inherit;
-  padding: var(--input-textarea-padding-top) var(--input-textarea-padding-right) var(--input-textarea-padding-bottom) var(--input-textarea-padding-left);
+  padding: var(--input-textarea-padding-top) var(--input-textarea-padding-right)
+    var(--input-textarea-padding-bottom) var(--input-textarea-padding-left);
   width: 100%;
   min-height: var(--input-textarea-min-height);
   overflow: visible;
@@ -161,7 +162,8 @@
     border: none;
     border-radius: var(--input-radius);
     background-color: var(--input-background-color);
-    padding: var(--input-padding-default-top) var(--input-padding-default-right) var(--input-padding-default-bottom) var(--input-padding-default-left);
+    padding: var(--input-padding-default-top) var(--input-padding-default-right)
+      var(--input-padding-default-bottom) var(--input-padding-default-left);
     width: 100%;
     height: var(--input-height);
     overflow: visible;
@@ -194,7 +196,9 @@
       --input-border-offset: var(--input-border-offset-empty-default);
       --input-border-color: var(--input-border-color-empty-default);
       --input-text-color: var(--input-text-color-empty-default);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-empty-default);
+      --input-text-placeholder-color: var(
+        --input-text-placeholder-color-empty-default
+      );
     }
 
     &:placeholder-shown:hover {
@@ -220,7 +224,9 @@
     }
 
     &--error:placeholder-shown {
-      --input-background-color: var(--input-background-color-empty-error-default);
+      --input-background-color: var(
+        --input-background-color-empty-error-default
+      );
       --input-border-width: var(--input-border-width-empty-error-default);
       --input-border-offset: var(--input-border-offset-empty-error-default);
       --input-border-color: var(--input-border-color-empty-error-default);
@@ -276,7 +282,9 @@
       --input-border-offset: var(--input-border-offset-error-default);
       --input-border-color: var(--input-border-color-error-default);
       --input-text-color: var(--input-text-color-error-default);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-error-default);
+      --input-text-placeholder-color: var(
+        --input-text-placeholder-color-error-default
+      );
     }
 
     &--error:hover {

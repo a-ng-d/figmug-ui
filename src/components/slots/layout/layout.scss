@@ -42,7 +42,8 @@
       flex: none;
       box-sizing: border-box;
       margin: auto;
-      padding: var(--layout-centered-padding-top) var(--layout-centered-padding-right)
+      padding: var(--layout-centered-padding-top)
+        var(--layout-centered-padding-right)
         var(--layout-centered-padding-bottom)
         var(--layout-centered-padding-left);
       max-width: 100%;

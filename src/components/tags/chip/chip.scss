@@ -15,7 +15,8 @@
   outline-offset: var(--chip-border-offset);
   border-radius: var(--chip-radius);
   background-color: var(--chip-background-color);
-  padding: var(--chip-padding-top) var(--chip-padding-right) var(--chip-padding-bottom) var(--chip-padding-left);
+  padding: var(--chip-padding-top) var(--chip-padding-right)
+    var(--chip-padding-bottom) var(--chip-padding-left);
   max-width: 100%;
   height: var(--chip-height);
   user-select: none;

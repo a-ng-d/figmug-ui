@@ -11,7 +11,8 @@
   outline: var(--simple-item-border-width) solid var(--simple-item-border-color);
   outline-offset: var(--simple-item-border-offset);
   background-color: var(--simple-item-background-color);
-  padding: var(--simple-item-padding-top) var(--simple-item-padding-right) var(--simple-item-padding-bottom) var(--simple-item-padding-left);
+  padding: var(--simple-item-padding-top) var(--simple-item-padding-right)
+    var(--simple-item-padding-bottom) var(--simple-item-padding-left);
   min-height: var(--simple-item-min-height);
 
   & {

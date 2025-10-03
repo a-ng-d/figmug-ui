@@ -53,7 +53,7 @@ const log = {
   title: (message) => console.log(chalk.bold.cyan('\n' + message)),
   step: (message) => console.log(chalk.magenta('→ ') + message),
   highlight: (text) => chalk.bold.cyan(text),
-  path: (text) => chalk.italic.yellow(text)
+  path: (text) => chalk.italic.yellow(text),
 }
 
 /**
@@ -62,13 +62,16 @@ const log = {
  */
 function askThemeName() {
   return new Promise((resolve) => {
-    rl.question(chalk.bold.blue('Enter the name for your new theme: '), (answer) => {
-      if (!answer.trim()) {
-        log.warn('Theme name cannot be empty. Please try again.')
-        return askThemeName().then(resolve)
+    rl.question(
+      chalk.bold.blue('Enter the name for your new theme: '),
+      (answer) => {
+        if (!answer.trim()) {
+          log.warn('Theme name cannot be empty. Please try again.')
+          return askThemeName().then(resolve)
+        }
+        resolve(answer.trim().toLowerCase())
       }
-      resolve(answer.trim().toLowerCase())
-    })
+    )
   })
 }
 
@@ -86,7 +89,9 @@ async function ensureDirectories(themeName) {
     // Create tokens platform directory if it doesn't exist
     if (!fs.existsSync(tokenDir)) {
       await mkdir(tokenDir, { recursive: true })
-      log.success(`Created tokens platform directory for ${log.highlight(themeName)}`)
+      log.success(
+        `Created tokens platform directory for ${log.highlight(themeName)}`
+      )
     }
 
     // Create terrazzo directory if it doesn't exist
@@ -525,9 +530,21 @@ async function updateImportsInFile(filePath, themeName) {
  * @returns {Promise<void>}
  */
 async function createThemeModuleFiles(themeName) {
-  const tokensModulesDir = path.join(rootDir, 'src', 'styles', 'tokens', 'modules')
-  const typesModulePath = path.join(tokensModulesDir, `${themeName}-types.module.scss`)
-  const colorsModulePath = path.join(tokensModulesDir, `${themeName}-colors.module.scss`)
+  const tokensModulesDir = path.join(
+    rootDir,
+    'src',
+    'styles',
+    'tokens',
+    'modules'
+  )
+  const typesModulePath = path.join(
+    tokensModulesDir,
+    `${themeName}-types.module.scss`
+  )
+  const colorsModulePath = path.join(
+    tokensModulesDir,
+    `${themeName}-colors.module.scss`
+  )
 
   try {
     // Ensure the modules directory exists

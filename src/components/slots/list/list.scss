@@ -5,7 +5,8 @@
 .list {
   box-sizing: border-box;
   background-color: var(--list-background-color-default);
-  padding: var(--list-padding-top) var(--list-padding-right) var(--list-padding-bottom) var(--list-padding-left);
+  padding: var(--list-padding-top) var(--list-padding-right)
+    var(--list-padding-bottom) var(--list-padding-left);
   overflow: hidden auto;
 
   &--full-with {

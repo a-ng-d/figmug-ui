@@ -39,6 +39,7 @@ npm run scss:build theme=themeName component=componentName
 ```
 
 The SCSS Builder:
+
 - Converts JSON tokens to SCSS variables
 - Generates theme-specific color variables
 - Creates typography styles

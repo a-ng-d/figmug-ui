@@ -12,7 +12,8 @@
   z-index: 4;
   cursor: default;
   inset: 0;
-  padding: var(--notification-padding-top) var(--notification-padding-right) var(--notification-padding-bottom) var(--notification-padding-left);
+  padding: var(--notification-padding-top) var(--notification-padding-right)
+    var(--notification-padding-bottom) var(--notification-padding-left);
   pointer-events: none;
   user-select: none;
 
