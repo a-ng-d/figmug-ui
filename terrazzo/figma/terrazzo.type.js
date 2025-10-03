@@ -1,0 +1,23 @@
+import css from '@terrazzo/plugin-css'
+import { defineConfig } from '@terrazzo/cli'
+
+export default defineConfig({
+  tokens: ['./tokens/platforms/figma/typography.json'],
+  outDir: './src/styles/tokens/',
+  plugins: [
+    css({
+      filename: 'figma-types.scss',
+      modeSelectors: [
+        {
+          theme: 'figma',
+          selectors: ['[data-theme="figma"]'],
+        },
+      ],
+    }),
+  ],
+  lint: {
+    rules: {
+      // my lint rules
+    },
+  },
+})

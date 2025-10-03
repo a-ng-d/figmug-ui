@@ -24,7 +24,7 @@ const withTheme: Decorator = (Story, context) => {
         'sketch-dark': '#202022',
       }
 
-      const bgValue = backgroundMap[modes]
+      const bgValue = backgroundMap[modes as keyof typeof backgroundMap]
       document.documentElement.style.backgroundColor = bgValue
 
       if (context.globals.backgrounds) {
@@ -39,12 +39,12 @@ const withTheme: Decorator = (Story, context) => {
 const preview: Preview = {
   globalTypes: {
     themes: {
-      defaultValue: 'figma-ui3',
+      defaultValue: 'figma',
       description: 'Select the UI theme (Figma UI2, Figma UI3, Penpot)',
       toolbar: {
         title: 'UI Theme',
         icon: 'paintbrush',
-        items: ['figma-ui2', 'figma-ui3', 'penpot', 'sketch'],
+        items: ['figma', 'penpot', 'sketch'],
         dynamicTitle: true,
       },
     },

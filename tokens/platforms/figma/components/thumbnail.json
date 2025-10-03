@@ -1,0 +1,40 @@
+{
+  "thumbnail": {
+    "width": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
+    "height": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "$value": "{size.pos.xsmall}",
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{border.radius.medium}",
+      "$type": "dimension"
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "offset": {
+        "$value": "{size.neg.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{figma.color.border.disabled}",
+        "$type": "color"
+      }
+    },
+    "background": {
+      "color": {
+        "$value": "{figma.color.bg.secondary}",
+        "$type": "color"
+      }
+    }
+  }
+}

@@ -157,11 +157,11 @@ export default class Drawer extends React.Component<DrawerProps, DrawerState> {
     const minPixels =
       minSize.unit === 'PERCENT'
         ? ((minSize.value ?? 0) * parentSize) / 100
-        : minSize.value ?? 0
+        : (minSize.value ?? 0)
     const maxPixels =
       maxSize.unit === 'PERCENT'
         ? ((maxSize.value ?? 100) * parentSize) / 100
-        : maxSize.value ?? Infinity
+        : (maxSize.value ?? Infinity)
 
     delta = Math.max(minPixels, Math.min(delta, maxPixels))
 

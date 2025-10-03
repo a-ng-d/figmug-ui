@@ -1,0 +1,44 @@
+{
+  "list": {
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{figma.color.bg}",
+          "$type": "color"
+        },
+        "alternate": {
+          "$value": "{figma.color.bg.secondary}",
+          "$type": "color"
+        }
+      }
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{figma.color.border}",
+        "$type": "color"
+      }
+    }
+  }
+}

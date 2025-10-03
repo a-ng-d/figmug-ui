@@ -4,16 +4,19 @@
 
   &--tight {
     @extend .snackbar;
+
     gap: var(--size-pos-xxxsmall);
   }
 
   &--medium {
     @extend .snackbar;
+
     gap: var(--size-pos-xxsmall);
   }
 
   &--large {
     @extend .snackbar;
+
     gap: var(--size-pos-xsmall);
   }
 
@@ -41,16 +44,19 @@
 
   &--tight {
     @extend .stackbar;
+
     gap: var(--size-pos-xxxsmall);
   }
 
   &--medium {
     @extend .stackbar;
+
     gap: var(--size-pos-xxsmall);
   }
 
   &--large {
     @extend .stackbar;
+
     gap: var(--size-pos-xsmall);
   }
 

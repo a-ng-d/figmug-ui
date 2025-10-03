@@ -167,7 +167,11 @@ export const RichColors: Story = {
       },
     ] as Array<ListItem>,
     primarySlot: [<div></div>],
+    actionsSlot: [<div></div>],
+    emptySlot: [<div></div>],
+    canBeEmpty: true,
     isScrollable: false,
+    isBlocked: false,
     onChangeSortableList: mock,
   },
   argTypes: {
@@ -229,8 +233,15 @@ export const RichColors: Story = {
             ),
           }
         })}
+        emptySlot={
+          <Message
+            icon="info"
+            messages={['No colors available']}
+          />
+        }
         onChangeSortableList={onChange}
         onRemoveItem={onRemove}
+        onRefoldOptions={() => {}}
       />
     )
   },

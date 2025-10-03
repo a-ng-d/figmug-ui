@@ -3,3 +3,6 @@ node_modules
 coverage
 .github
 .changeset
+**/figma.scss
+**/sketch.scss
+**/penpot.scss

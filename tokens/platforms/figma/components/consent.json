@@ -1,0 +1,84 @@
+{
+  "consent": {
+    "background": {
+      "color": {
+        "$value": "rgba(0, 0, 0, 0.5)",
+        "$type": "color"
+      }
+    },
+    "banner": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      },
+      "maxWidth": {
+        "$value": {
+          "value": 400,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "background": {
+        "color": {
+          "$value": "{figma.color.bg}",
+          "$type": "color"
+        }
+      },
+      "border": {
+        "width": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{figma.color.border}",
+          "$type": "color"
+        }
+      }
+    },
+    "list": {
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      },
+      "maxWidth": {
+        "$value": {
+          "value": 400,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      }
+    }
+  }
+}

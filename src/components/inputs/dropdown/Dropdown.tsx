@@ -145,16 +145,53 @@ export default class Dropdown extends React.Component<
 
   setPosition = () => {
     const { options, selected } = this.props
-    let position = 0
+    if (!this.selectMenuRef.current) return '0px'
+    const computedStyle = getComputedStyle(this.selectMenuRef.current)
+    const itemHeight = parseInt(
+      computedStyle.getPropertyValue('--actions-list-item-height') || '32',
+      10
+    )
+    const dividerHeight = parseInt(
+      computedStyle.getPropertyValue('--actions-list-divider-height') || '1',
+      10
+    )
+    const dividerMarginTop = parseInt(
+      computedStyle.getPropertyValue('--actions-list-divider-margin-top') ||
+        '11',
+      10
+    )
+    const dividerMarginBottom = parseInt(
+      computedStyle.getPropertyValue('--actions-list-divider-margin-bottom') ||
+        '8',
+      10
+    )
+    const paddingVertical = parseInt(
+      computedStyle.getPropertyValue('--actions-list-padding-vertical') || '8',
+      10
+    )
 
-    options.forEach((option, index) => {
-      if (option.value === selected) position = index ?? 0
+    let totalHeight = paddingVertical
+
+    for (let i = 0; i < options.length; i++) {
+      const option = options[i]
+
       if (
+        option.value === selected ||
         option.children?.find((child) => child.value === selected) !== undefined
       )
-        position = index ?? 0
-    })
-    return `${position * -24 - 6}px`
+        break
+
+      if (option.type === 'SEPARATOR')
+        totalHeight += dividerHeight + dividerMarginTop + dividerMarginBottom
+      else if (
+        option.type === 'TITLE' ||
+        option.type === 'OPTION' ||
+        option.type === 'GROUP'
+      )
+        totalHeight += itemHeight
+    }
+
+    return `-${totalHeight}px`
   }
 
   handleClickOutside = (e: Event) => {

@@ -1,0 +1,100 @@
+{
+  "accordion": {
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{figma.color.border.disabled}",
+        "$type": "color"
+      }
+    },
+    "row": {
+      "gap": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "text": {
+      "color": {
+        "default": {
+          "$value": "{figma.color.text.secondary}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{figma.color.text}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{figma.color.text}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{figma.color.text.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "icon": {
+      "color": {
+        "default": {
+          "$value": "{figma.color.icon.secondary}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{figma.color.icon}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{figma.color.icon}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{figma.color.icon.disabled}",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}

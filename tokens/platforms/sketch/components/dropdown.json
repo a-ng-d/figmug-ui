@@ -1,0 +1,186 @@
+{
+  "dropdown": {
+    "height": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      }
+    },
+    "radius": {
+      "$value": "{border.radius.large}",
+      "$type": "dimension"
+    },
+    "gap": {
+      "$value": "{size.pos.xxxsmall}",
+      "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.background.tertiary}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{sketch.color.background.secondary}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{sketch.color.background.tertiary}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{sketch.color.background.secondary}",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "color": {
+        "default": {
+          "$value": "transparent",
+          "$type": "string"
+        },
+        "hover": {
+          "$value": "transparent",
+          "$type": "string"
+        },
+        "focus": {
+          "$value": "{sketch.color.accent.primary}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "transparent",
+          "$type": "string"
+        }
+      },
+      "width": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "hover": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "focus": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "disabled": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "offset": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "hover": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "focus": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "disabled": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "text": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{sketch.color.foreground.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "caret": {
+      "width": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "color": {
+        "default": {
+          "$value": "{sketch.color.foreground.tertiary}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{sketch.color.foreground.tertiary}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{sketch.color.foreground.tertiary}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{sketch.color.foreground.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "status": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "margin": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}

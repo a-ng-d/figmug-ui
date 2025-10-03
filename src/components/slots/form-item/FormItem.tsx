@@ -60,7 +60,14 @@ const FormItem = (props: FormItemProps) => {
         >
           {children}
         </div>
-        {isNew && <Chip>New</Chip>}
+        {isNew && (
+          <div
+            className="form-item__chip"
+            role="presentation"
+          >
+            <Chip>New</Chip>
+          </div>
+        )}
       </div>
       {helper !== undefined && (
         <div
