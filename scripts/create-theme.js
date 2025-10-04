@@ -162,6 +162,52 @@ async function updateStorybookPreview(themeName) {
  * Main function
  */
 /**
+ * Replace all theme names in content with the new theme name
+ * @param {string} content - The file content
+ * @param {string} newThemeName - The new theme name
+ * @returns {string} Updated content
+ */
+function replaceAllThemeNames(content, newThemeName) {
+  // List of all possible theme names to replace
+  const existingThemes = ['figma', 'penpot', 'sketch']
+  
+  let updatedContent = content
+  
+  for (const oldTheme of existingThemes) {
+    // Replace all patterns for each theme
+    updatedContent = updatedContent
+      // Data attributes with double quotes
+      .replace(new RegExp(`\\[data-theme="${oldTheme}"\\]`, 'g'), `[data-theme="${newThemeName}"]`)
+      .replace(new RegExp(`\\[data-theme='${oldTheme}'\\]`, 'g'), `[data-theme='${newThemeName}']`)
+      // Data mode attributes
+      .replace(new RegExp(`\\[data-mode="${oldTheme}-light"\\]`, 'g'), `[data-mode="${newThemeName}-light"]`)
+      .replace(new RegExp(`\\[data-mode="${oldTheme}-dark"\\]`, 'g'), `[data-mode="${newThemeName}-dark"]`)
+      .replace(new RegExp(`\\[data-mode='${oldTheme}-light'\\]`, 'g'), `[data-mode='${newThemeName}-light']`)
+      .replace(new RegExp(`\\[data-mode='${oldTheme}-dark'\\]`, 'g'), `[data-mode='${newThemeName}-dark']`)
+      // File paths and names
+      .replace(new RegExp(`filename: 'styles/${oldTheme}\\.scss'`, 'g'), `filename: 'styles/${newThemeName}.scss'`)
+      .replace(new RegExp(`filename: '${oldTheme}-`, 'g'), `filename: '${newThemeName}-`)
+      .replace(new RegExp(`'\\./tokens/platforms/${oldTheme}/`, 'g'), `'./tokens/platforms/${newThemeName}/`)
+      // Root selectors
+      .replace(new RegExp(`:root\\[data-theme="${oldTheme}"\\]`, 'g'), `:root[data-theme="${newThemeName}"]`)
+      .replace(new RegExp(`:root\\[data-theme='${oldTheme}'\\]`, 'g'), `:root[data-theme='${newThemeName}']`)
+      // Import statements
+      .replace(new RegExp(`@import 'styles/${oldTheme}'`, 'g'), `@import 'styles/${newThemeName}'`)
+      .replace(new RegExp(`@import "styles/${oldTheme}"`, 'g'), `@import "styles/${newThemeName}"`)
+      // Theme configuration
+      .replace(new RegExp(`theme: ['"']${oldTheme}['"']`, 'g'), `theme: '${newThemeName}'`)
+      .replace(new RegExp(`theme: ${oldTheme}`, 'g'), `theme: ${newThemeName}`)
+      // Base selectors in plugins
+      .replace(new RegExp(`baseSelector: ':root\\[data-theme="${oldTheme}"\\]'`, 'g'), `baseSelector: ':root[data-theme="${newThemeName}"]'`)
+      .replace(new RegExp(`baseSelector: ':root\\[data-theme=\\'${oldTheme}\\'\\]'`, 'g'), `baseSelector: ':root[data-theme='${newThemeName}']'`)
+      // Color references
+      .replace(new RegExp(`${oldTheme}\\.color.*`, 'g'), `${newThemeName}.color.*',`)
+  }
+  
+  return updatedContent
+}
+
+/**
  * Create Terrazzo configuration files for the new theme
  * @param {string} themeName - The name of the theme
  * @returns {Promise<void>}
@@ -198,71 +244,8 @@ async function createTerrazzoFiles(themeName) {
         // Read the source file content
         let content = await readFile(sourceFilePath, 'utf8')
 
-        // Replace all instances of source theme name with new theme name
-        content = content
-          .replace(
-            new RegExp(`\\[data-theme="${SOURCE_COLOR_THEME}"\\]`, 'g'),
-            `[data-theme="${themeName}"]`
-          )
-          .replace(
-            new RegExp(`\\[data-theme='${SOURCE_COLOR_THEME}'\\]`, 'g'),
-            `[data-theme='${themeName}']`
-          )
-          .replace(
-            new RegExp(`\\[data-mode="${SOURCE_COLOR_THEME}-light"\\]`, 'g'),
-            `[data-mode="${themeName}-light"]`
-          )
-          .replace(
-            new RegExp(`\\[data-mode="${SOURCE_COLOR_THEME}-dark"\\]`, 'g'),
-            `[data-mode="${themeName}-dark"]`
-          )
-          .replace(
-            new RegExp(`\\[data-mode='${SOURCE_COLOR_THEME}-light'\\]`, 'g'),
-            `[data-mode='${themeName}-light']`
-          )
-          .replace(
-            new RegExp(`\\[data-mode='${SOURCE_COLOR_THEME}-dark'\\]`, 'g'),
-            `[data-mode='${themeName}-dark']`
-          )
-          .replace(
-            new RegExp(`filename: 'styles/${SOURCE_COLOR_THEME}.scss'`, 'g'),
-            `filename: 'styles/${themeName}.scss'`
-          )
-          .replace(
-            new RegExp(`filename: '${SOURCE_COLOR_THEME}-`, 'g'),
-            `filename: '${themeName}-`
-          )
-          .replace(
-            new RegExp(`'./tokens/platforms/${SOURCE_COLOR_THEME}/`, 'g'),
-            `'./tokens/platforms/${themeName}/`
-          )
-          // Update root selectors with data-theme
-          .replace(
-            new RegExp(`:root\\[data-theme="${SOURCE_COLOR_THEME}"\\]`, 'g'),
-            `:root[data-theme="${themeName}"]`
-          )
-          .replace(
-            new RegExp(`:root\\[data-theme='${SOURCE_COLOR_THEME}'\\]`, 'g'),
-            `:root[data-theme='${themeName}']`
-          )
-          // Enable @import 'styles/{theme}' by replacing the old theme name
-          .replace(
-            new RegExp(`@import 'styles/${SOURCE_COLOR_THEME}'`, 'g'),
-            `@import 'styles/${themeName}'`
-          )
-          .replace(
-            new RegExp(`@import "styles/${SOURCE_COLOR_THEME}"`, 'g'),
-            `@import "styles/${themeName}"`
-          )
-          // Update theme in modeSelectors configuration
-          .replace(
-            new RegExp(`theme: ['"']${SOURCE_COLOR_THEME}['"']`, 'g'),
-            `theme: '${themeName}'`
-          )
-          .replace(
-            new RegExp(`theme: ${SOURCE_COLOR_THEME}`, 'g'),
-            `theme: ${themeName}`
-          )
+        // Replace all theme names with the new theme name
+        content = replaceAllThemeNames(content, themeName)
 
         // For text and colors terrazzo files, ensure icon.json is included but icon tokens are excluded
         if (file === 'terrazzo.colors.js' || file === 'terrazzo.text.js')
@@ -299,62 +282,8 @@ async function createTerrazzoFiles(themeName) {
           // Read the source file content
           let content = await readFile(sourceFilePath, 'utf8')
 
-          // Replace all instances of source theme name with new theme name
-          content = content
-            .replace(
-              new RegExp(`./tokens/platforms/${SOURCE_COLOR_THEME}/`, 'g'),
-              `./tokens/platforms/${themeName}/`
-            )
-            .replace(
-              new RegExp(`filename: 'styles/${SOURCE_COLOR_THEME}.scss'`, 'g'),
-              `filename: 'styles/${themeName}.scss'`
-            )
-            .replace(
-              new RegExp(`${SOURCE_COLOR_THEME}.color.*`, 'g'),
-              `${themeName}.color.*',`
-            )
-            // Update theme in modeSelectors configuration
-            .replace(
-              new RegExp(`theme: ['"']${SOURCE_COLOR_THEME}['"']`, 'g'),
-              `theme: '${themeName}'`
-            )
-            .replace(
-              new RegExp(`theme: ${SOURCE_COLOR_THEME}`, 'g'),
-              `theme: ${themeName}`
-            )
-            // Update root selectors with data-theme
-            .replace(
-              new RegExp(`:root\\[data-theme="${SOURCE_COLOR_THEME}"\\]`, 'g'),
-              `:root[data-theme="${themeName}"]`
-            )
-            .replace(
-              new RegExp(`:root\\[data-theme='${SOURCE_COLOR_THEME}'\\]`, 'g'),
-              `:root[data-theme='${themeName}']`
-            )
-            // Update baseSelector in plugins config
-            .replace(
-              new RegExp(
-                `baseSelector: ':root\\[data-theme="${SOURCE_COLOR_THEME}"\\]'`,
-                'g'
-              ),
-              `baseSelector: ':root[data-theme="${themeName}"]'`
-            )
-            .replace(
-              new RegExp(
-                `baseSelector: ':root\\[data-theme=\\'${SOURCE_COLOR_THEME}\\'\\]'`,
-                'g'
-              ),
-              `baseSelector: ':root[data-theme='${themeName}']'`
-            )
-            // Enable @import 'styles/{theme}' by replacing the old theme name
-            .replace(
-              new RegExp(`@import 'styles/${SOURCE_COLOR_THEME}'`, 'g'),
-              `@import 'styles/${themeName}'`
-            )
-            .replace(
-              new RegExp(`@import "styles/${SOURCE_COLOR_THEME}"`, 'g'),
-              `@import "styles/${themeName}"`
-            )
+          // Replace all theme names with the new theme name
+          content = replaceAllThemeNames(content, themeName)
 
           // Write the updated content to the target file
           await writeFile(targetFilePath, content)
@@ -714,17 +643,19 @@ async function updateIconPaths(themeName) {
   try {
     // Check if icon.json exists
     if (!fs.existsSync(iconJsonPath)) {
-      log.warn(`Icon JSON file ${log.path(iconJsonPath)} does not exist. Skipping icon paths update.`)
+      log.warn(
+        `Icon JSON file ${log.path(iconJsonPath)} does not exist. Skipping icon paths update.`
+      )
       return
     }
 
     // Read the icon.json file
     let iconContent = await readFile(iconJsonPath, 'utf8')
-    
+
     // Replace all icon paths from source theme to new theme
     const sourceIconPath = `/src/icons/${SOURCE_COLOR_THEME}/`
     const targetIconPath = `/src/icons/${themeName}/`
-    
+
     iconContent = iconContent.replace(
       new RegExp(sourceIconPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
       targetIconPath
@@ -732,7 +663,9 @@ async function updateIconPaths(themeName) {
 
     // Write the updated content back to the file
     await writeFile(iconJsonPath, iconContent)
-    log.success(`Updated icon paths in ${log.highlight('icon.json')} for theme ${log.highlight(themeName)}`)
+    log.success(
+      `Updated icon paths in ${log.highlight('icon.json')} for theme ${log.highlight(themeName)}`
+    )
   } catch (err) {
     const error = err instanceof Error ? err : new Error(String(err))
     log.error(`Error updating icon paths: ${error.message}`)
@@ -839,7 +772,7 @@ async function main() {
       `4. Customize the icons in ${log.path(`src/icons/${themeName}/`)} (copied from Figma theme, paths updated in icon.json)`
     )
     log.info(
-      `5. Run ${log.path(`npm run scss:build:theme -- --theme=${themeName}`)} to build the theme tokens`
+      `5. Run ${log.path(`npm run scss:build theme=${themeName}`)} to build the theme tokens`
     )
     log.info(
       `6. Launch Storybook to preview your new theme with ${log.path('npm run storybook')}`
