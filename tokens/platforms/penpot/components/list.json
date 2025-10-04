@@ -1,0 +1,44 @@
+{
+  "list": {
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{penpot.color.background.primary}",
+          "$type": "color"
+        },
+        "alternate": {
+          "$value": "{penpot.color.background.tertiary}",
+          "$type": "color"
+        }
+      }
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{penpot.color.background.quaternary}",
+        "$type": "color"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "drawer": {
+    "background": {
+      "color": {
+        "$value": "{penpot.color.background.primary}",
+        "$type": "color"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "style": {
+        "$value": "solid",
+        "$type": "string"
+      },
+      "color": {
+        "$value": "{penpot.color.background.quaternary}",
+        "$type": "color"
+      }
+    },
+    "knob": {
+      "size": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "position": {
+        "$value": "{size.neg.xxxsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}
