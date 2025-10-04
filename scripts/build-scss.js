@@ -47,7 +47,7 @@ args.forEach((arg) => {
   else if (arg === 'text') TOKEN_TYPE = 'text'
   else if (arg === 'icon') TOKEN_TYPE = 'icon'
   else if (arg === 'color') TOKEN_TYPE = 'color'
-  else if (arg === 'typography') TOKEN_TYPE = 'type'
+  else if (arg === 'type') TOKEN_TYPE = 'type'
 })
 // If component or token type is specified but no theme, build for all themes
 // Function to find all Terrazzo files
@@ -141,7 +141,7 @@ function displayTerrazzoFiles(groupedFiles) {
   console.log(chalk.cyan('npm run scss:build theme=sketch text'))
   console.log(chalk.cyan('npm run scss:build theme=penpot color\n'))
   console.log(chalk.bold('Build a specific token type for all themes:'))
-  console.log(chalk.cyan('npm run scss:build typography'))
+  console.log(chalk.cyan('npm run scss:build type'))
   console.log(chalk.cyan('npm run scss:build icon'))
   console.log(chalk.cyan('npm run scss:build color'))
   console.log(chalk.cyan('npm run scss:build text\n'))

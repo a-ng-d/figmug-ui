@@ -41,7 +41,7 @@ npm run scss:build theme=themeName component=componentName
 npm run scss:build text
 npm run scss:build color
 npm run scss:build icon
-npm run scss:build typography
+npm run scss:build type
 
 # Build specific token types for a specific theme
 npm run scss:build theme=themeName text
