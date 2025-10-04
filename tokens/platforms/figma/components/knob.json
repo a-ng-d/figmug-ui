@@ -285,7 +285,7 @@
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{size.pos.xunit}",
           "$type": "dimension"
         },
         "bottom": {
@@ -293,7 +293,7 @@
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{size.pos.xunit}",
           "$type": "dimension"
         }
       },
