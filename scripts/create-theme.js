@@ -305,7 +305,7 @@ async function createTerrazzoFiles(themeName) {
             )
             .replace(
               new RegExp(`${SOURCE_COLOR_THEME}.color.*`, 'g'),
-              `${themeName}.color.*`
+              `${themeName}.color.*',`
             )
             // Update theme in modeSelectors configuration
             .replace(
