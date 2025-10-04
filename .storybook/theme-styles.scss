@@ -1,8 +1,8 @@
-@import '../src/styles/tokens/figma-colors.scss';
-@import '../src/styles/tokens/figma-types.scss';
+@import '../src/styles/tokens/modules/figma-colors.module.scss';
+@import '../src/styles/tokens/modules/figma-types.module.scss';
 
-@import '../src/styles/tokens/penpot-colors.scss';
-@import '../src/styles/tokens/penpot-types.scss';
+@import '../src/styles/tokens/modules/penpot-colors.module.scss';
+@import '../src/styles/tokens/modules/penpot-types.module.scss';
 
 @import '../src/styles/tokens/modules/sketch-colors.module.scss';
 @import '../src/styles/tokens/modules/sketch-types.module.scss';
