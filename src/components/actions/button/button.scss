@@ -73,8 +73,7 @@
   outline-offset: var(--button-base-border-offset);
   border-radius: var(--button-base-radius);
   background-color: var(--button-base-background-color);
-  padding: var(--button-base-padding-top) var(--button-base-padding-right)
-    var(--button-base-padding-bottom) var(--button-base-padding-left);
+  padding: var(--button-base-padding);
   height: var(--button-base-height);
   color: var(--button-base-text-color);
   font-weight: var(--button-base-text-font-weight);
@@ -90,16 +89,22 @@
     text-decoration: var(--button-base-text-decoration);
   }
 
+  & {
+    --button-base-padding: var(--button-base-padding-top)
+      var(--button-base-padding-right) var(--button-base-padding-bottom)
+      var(--button-base-padding-left);
+  }
+
   &--small {
-    padding: var(--button-small-padding-top) var(--button-small-padding-right)
+    --button-base-padding: var(--button-small-padding-top) var(--button-small-padding-right)
       var(--button-small-padding-bottom) var(--button-small-padding-left);
-    height: var(--button-small-height);
+    --button-base-height: var(--button-small-height);
   }
 
   &--large {
-    padding: var(--button-large-padding-top) var(--button-large-padding-right)
+    --button-base-padding: var(--button-large-padding-top) var(--button-large-padding-right)
       var(--button-large-padding-bottom) var(--button-large-padding-left);
-    height: var(--button-large-height);
+    --button-base-height: var(--button-large-height);
   }
 
   .icon-chip {

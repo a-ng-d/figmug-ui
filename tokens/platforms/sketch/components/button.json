@@ -557,7 +557,7 @@
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{size.null}",
           "$type": "dimension"
         },
         "bottom": {
