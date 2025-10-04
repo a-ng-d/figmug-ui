@@ -7,12 +7,7 @@ export default defineConfig({
   plugins: [
     css({
       filename: 'figma-types.scss',
-      modeSelectors: [
-        {
-          theme: 'figma',
-          selectors: ['[data-theme="figma"]'],
-        },
-      ],
+      baseSelector: ':root[data-theme="figma"]',
     }),
   ],
   lint: {

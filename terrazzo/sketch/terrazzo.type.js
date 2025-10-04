@@ -7,12 +7,7 @@ export default defineConfig({
   plugins: [
     css({
       filename: 'sketch-types.scss',
-      modeSelectors: [
-        {
-          theme: 'sketch',
-          selectors: ['[data-theme="sketch"]'],
-        },
-      ],
+      baseSelector: ':root[data-theme="sketch"]',
     }),
   ],
   lint: {
