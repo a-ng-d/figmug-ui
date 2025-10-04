@@ -81,9 +81,9 @@ function askThemeName() {
  * @returns {Promise<void>}
  */
 async function ensureDirectories(themeName) {
-  // No need to create icon directories anymore as we're not copying icons
   const tokenDir = path.join(TOKENS_PLATFORMS_DIR, themeName)
   const terrazzoDir = path.join(TERRAZZO_DIR, themeName)
+  const iconsDir = path.join(rootDir, 'src', 'icons', themeName)
 
   try {
     // Create tokens platform directory if it doesn't exist
@@ -98,6 +98,12 @@ async function ensureDirectories(themeName) {
     if (!fs.existsSync(terrazzoDir)) {
       await mkdir(terrazzoDir, { recursive: true })
       log.success(`Created terrazzo directory for ${log.highlight(themeName)}`)
+    }
+
+    // Create icons directory if it doesn't exist
+    if (!fs.existsSync(iconsDir)) {
+      await mkdir(iconsDir, { recursive: true })
+      log.success(`Created icons directory for ${log.highlight(themeName)}`)
     }
   } catch (err) {
     const error = err instanceof Error ? err : new Error(String(err))
@@ -654,6 +660,50 @@ async function updateThemeStylesImports(themeName) {
 }
 
 /**
+ * Copy icons from figma theme to new theme
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
+ */
+async function copyIconsFromFigma(themeName) {
+  const sourceIconsDir = path.join(rootDir, 'src', 'icons', SOURCE_COLOR_THEME)
+  const targetIconsDir = path.join(rootDir, 'src', 'icons', themeName)
+
+  try {
+    // Check if source icons directory exists
+    if (!fs.existsSync(sourceIconsDir)) {
+      log.warn(
+        `Source icons directory ${log.path(sourceIconsDir)} does not exist. Skipping icons copy.`
+      )
+      return
+    }
+
+    // Create the target directory if it doesn't exist
+    if (!fs.existsSync(targetIconsDir)) {
+      await mkdir(targetIconsDir, { recursive: true })
+      log.success(`Created icons directory for ${log.highlight(themeName)}`)
+    }
+
+    // Copy all SVG files from the source icons directory
+    const iconFiles = await readdir(sourceIconsDir)
+
+    for (const file of iconFiles)
+      if (file.endsWith('.svg')) {
+        const sourcePath = path.join(sourceIconsDir, file)
+        const targetPath = path.join(targetIconsDir, file)
+
+        await copyFile(sourcePath, targetPath)
+        log.step(`Copied icon: ${log.path(path.relative(rootDir, targetPath))}`)
+      }
+
+    log.success(`Successfully copied all icons for ${log.highlight(themeName)}`)
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err))
+    log.error(`Error copying icons: ${error.message}`)
+    throw error
+  }
+}
+
+/**
  * Copy platform tokens from source to new theme
  * @param {string} themeName - The name of the theme
  * @returns {Promise<void>}
@@ -726,6 +776,7 @@ async function main() {
     await ensureDirectories(themeName)
     await createTerrazzoFiles(themeName)
     await copyPlatformTokens(themeName)
+    await copyIconsFromFigma(themeName)
     await updateScssImports(themeName)
     await updateStorybookPreview(themeName)
     await createThemeModuleFiles(themeName)
@@ -747,22 +798,25 @@ async function main() {
       `3. Customize the token JSON files in ${log.path(`tokens/platforms/${themeName}/`)}`
     )
     log.info(
-      `4. Run ${log.path(`npm run scss:build:theme -- --theme=${themeName}`)} to build the theme tokens`
+      `4. Customize the icons in ${log.path(`src/icons/${themeName}/`)} (copied from Figma theme)`
     )
     log.info(
-      `5. Launch Storybook to preview your new theme with ${log.path('npm run storybook')}`
+      `5. Run ${log.path(`npm run scss:build:theme -- --theme=${themeName}`)} to build the theme tokens`
     )
     log.info(
-      `6. If needed, customize the generated SCSS files in ${log.path('src/styles/tokens/')}`
+      `6. Launch Storybook to preview your new theme with ${log.path('npm run storybook')}`
     )
     log.info(
-      `7. ${log.highlight(`@import 'styles/${themeName}'`)} statements have been added to all relevant SCSS files`
+      `7. If needed, customize the generated SCSS files in ${log.path('src/styles/tokens/')}`
     )
     log.info(
-      `8. Module files have been created at ${log.path(`src/styles/tokens/modules/${themeName}-types.module.scss`)} and ${log.path(`src/styles/tokens/modules/${themeName}-colors.module.scss`)}`
+      `8. ${log.highlight(`@import 'styles/${themeName}'`)} statements have been added to all relevant SCSS files`
     )
     log.info(
-      `9. Module imports have been added to ${log.path('.storybook/theme-styles.scss')}`
+      `9. Module files have been created at ${log.path(`src/styles/tokens/modules/${themeName}-types.module.scss`)} and ${log.path(`src/styles/tokens/modules/${themeName}-colors.module.scss`)}`
+    )
+    log.info(
+      `10. Module imports have been added to ${log.path('.storybook/theme-styles.scss')}`
     )
   } catch (error) {
     log.error(
