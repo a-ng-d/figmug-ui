@@ -5,20 +5,22 @@
  * Usage:
  *
  * 1. List all Terrazzo files:
- *    node scripts/build-scss.js
  *    npm run scss:list
  *
  * 2. Build all Terrazzo files:
- *    node scripts/build-scss.js --build
  *    npm run scss:build
  *
  * 3. Build all files for a specific theme:
- *    node scripts/build-scss.js --build --theme=sketch
  *    npm run scss:build theme=sketch
  *
  * 4. Build a specific component for a theme:
- *    node scripts/build-scss.js --build --theme=sketch --component=button
  *    npm run scss:build theme=sketch component=button
+ *
+ * 5. Build a specific token type for a theme:
+ *    npm run scss:build theme=sketch text
+ *
+ * 6. Build a specific token type for all themes:
+ *    npm run scss:build color
  *
  */
 import { fileURLToPath } from 'url'
@@ -33,27 +35,21 @@ const __dirname = dirname(__filename)
 const projectRoot = path.join(__dirname, '..')
 // Process command line arguments
 const args = process.argv.slice(2)
-let BUILD_MODE = args.includes('--build')
+const BUILD_MODE = args.length > 0 // Enable build mode if any arguments are provided
 let THEME = null
 let COMPONENT = null
-// Handle two possible argument formats:
-// 1. Legacy style: --theme=sketch --component=button
-// 2. New style: theme=sketch component=button
+let TOKEN_TYPE = null // text, icon, color, typography
+
+// Parse arguments
 args.forEach((arg) => {
-  // Legacy style with --
-  if (arg.startsWith('--theme=')) THEME = arg.split('=')[1]
-  else if (arg.startsWith('--component=')) COMPONENT = arg.split('=')[1]
-  // New style without --
-  else if (arg.startsWith('theme=')) {
-    THEME = arg.split('=')[1]
-    BUILD_MODE = true // If theme is specified, enable build mode
-  } else if (arg.startsWith('component=')) {
-    COMPONENT = arg.split('=')[1]
-    BUILD_MODE = true // If component is specified, enable build mode
-  }
+  if (arg.startsWith('theme=')) THEME = arg.split('=')[1]
+  else if (arg.startsWith('component=')) COMPONENT = arg.split('=')[1]
+  else if (arg === 'text') TOKEN_TYPE = 'text'
+  else if (arg === 'icon') TOKEN_TYPE = 'icon'
+  else if (arg === 'color') TOKEN_TYPE = 'color'
+  else if (arg === 'typography') TOKEN_TYPE = 'type'
 })
-// If component is specified but no theme, build for all themes
-// This will be handled in the main function
+// If component or token type is specified but no theme, build for all themes
 // Function to find all Terrazzo files
 function findTerrazzoFiles(dir) {
   let results = []
@@ -137,20 +133,18 @@ function displayTerrazzoFiles(groupedFiles) {
   console.log(chalk.cyan('npm run scss:build\n'))
   console.log(chalk.bold('Build all files for a specific theme:'))
   console.log(chalk.cyan('npm run scss:build theme=sketch\n'))
-  console.log(chalk.cyan('# or legacy syntax:'))
-  console.log(chalk.cyan('npm run scss:build -- --theme=sketch\n'))
   console.log(chalk.bold('Build a specific component for a theme:'))
   console.log(chalk.cyan('npm run scss:build theme=sketch component=button\n'))
-  console.log(chalk.cyan('# or legacy syntax:'))
-  console.log(
-    chalk.cyan(
-      'npm run scss:build -- --build --theme=sketch --component=button\n'
-    )
-  )
   console.log(chalk.bold('Build a specific component for all themes:'))
   console.log(chalk.cyan('npm run scss:build component=button\n'))
-  console.log(chalk.cyan('# or legacy syntax:'))
-  console.log(chalk.cyan('npm run scss:build -- --build --component=button\n'))
+  console.log(chalk.bold('Build a specific token type for a theme:'))
+  console.log(chalk.cyan('npm run scss:build theme=sketch text'))
+  console.log(chalk.cyan('npm run scss:build theme=penpot color\n'))
+  console.log(chalk.bold('Build a specific token type for all themes:'))
+  console.log(chalk.cyan('npm run scss:build typography'))
+  console.log(chalk.cyan('npm run scss:build icon'))
+  console.log(chalk.cyan('npm run scss:build color'))
+  console.log(chalk.cyan('npm run scss:build text\n'))
 }
 // Main function that executes the script
 async function main() {
@@ -164,7 +158,38 @@ async function main() {
       return
     }
     // Build mode
-    if (COMPONENT && !THEME) {
+    if (TOKEN_TYPE && !THEME) {
+      // Build a specific token type for all themes
+      const tokenDisplayName = TOKEN_TYPE === 'type' ? 'typography' : TOKEN_TYPE
+      console.log(
+        chalk.blue(`\nBuilding ${tokenDisplayName} tokens for all themes...`)
+      )
+      let builtCount = 0
+
+      for (const [theme, files] of Object.entries(groupedFiles)) {
+        const tokenFile = files.tokens.find((t) => t.name === TOKEN_TYPE)
+        if (tokenFile) {
+          await buildTerrazzoFile(tokenFile.path)
+          builtCount++
+          console.log(
+            chalk.green(
+              `✅ Built ${tokenDisplayName} tokens for theme ${theme}`
+            )
+          )
+        } else
+          console.log(
+            chalk.yellow(
+              `⚠️  ${tokenDisplayName} tokens not found in theme ${theme}`
+            )
+          )
+      }
+
+      console.log(
+        chalk.green(
+          `\n✅ Successfully built ${tokenDisplayName} tokens for ${builtCount} theme(s)`
+        )
+      )
+    } else if (COMPONENT && !THEME) {
       // Build a specific component for all themes
       console.log(
         chalk.blue(`\nBuilding component ${COMPONENT} for all themes...`)
@@ -213,7 +238,26 @@ async function main() {
         )
         process.exit(1)
       }
-      if (COMPONENT) {
+      if (TOKEN_TYPE) {
+        // Build a specific token type for a specific theme
+        const tokenDisplayName =
+          TOKEN_TYPE === 'type' ? 'typography' : TOKEN_TYPE
+        const tokenFile = themeFiles.tokens.find((t) => t.name === TOKEN_TYPE)
+        if (!tokenFile) {
+          console.error(
+            chalk.red(
+              `Token type "${tokenDisplayName}" not found in theme "${THEME}". Available token types: ${themeFiles.tokens.map((t) => (t.name === 'type' ? 'typography' : t.name)).join(', ')}`
+            )
+          )
+          process.exit(1)
+        }
+        await buildTerrazzoFile(tokenFile.path)
+        console.log(
+          chalk.green(
+            `\n✅ Successfully built ${tokenDisplayName} tokens for theme ${THEME}`
+          )
+        )
+      } else if (COMPONENT) {
         // Build a specific component for a specific theme
         const componentFile = themeFiles.components.find(
           (c) => c.name === COMPONENT

@@ -14,10 +14,10 @@ In the figmug-ui project, Terrazzo files are organized as follows:
 terrazzo/
   ├── terrazzo.globals.js      # Global configuration
   ├── sketch/                  # Configuration for Sketch theme
-  │   ├── terrazzo.colors.js   # Color variables generation
+  │   ├── terrazzo.color.js    # Color variables generation
   │   ├── terrazzo.icon.js     # Icon variables generation
   │   ├── terrazzo.text.js     # Text variables generation
-  │   ├── terrazzo.types.js    # Type variables generation
+  │   ├── terrazzo.type.js     # Typography variables generation
   │   └── components/          # Component configurations
   │       ├── terrazzo.accordion.js
   │       ├── terrazzo.button.js
@@ -29,7 +29,7 @@ terrazzo/
 
 ## The Unified `build-scss.js` Script
 
-We use a single script `scripts/build-scss.js` that both lists available Terrazzo files and builds them. This script supports two syntax styles for greater flexibility.
+We use a single script `scripts/build-scss.js` that both lists available Terrazzo files and builds them. The script provides a simple and intuitive syntax for managing design tokens.
 
 ## Available Commands
 
@@ -41,21 +41,9 @@ To see all Terrazzo files available in the project:
 npm run scss:list
 ```
 
-or
-
-```bash
-node scripts/build-scss.js
-```
-
 ### Build All Terrazzo Files
 
 To generate CSS files from all tokens:
-
-```bash
-npm run scss:build -- --build
-```
-
-or simply
 
 ```bash
 npm run scss:build
@@ -66,11 +54,7 @@ npm run scss:build
 To generate CSS files for a specific theme:
 
 ```bash
-# Modern syntax (recommended)
 npm run scss:build theme=sketch
-
-# Legacy syntax
-npm run scss:build -- --build --theme=sketch
 ```
 
 Available themes are:
@@ -84,11 +68,7 @@ Available themes are:
 To generate CSS files for a specific component within a theme:
 
 ```bash
-# Modern syntax (recommended)
 npm run scss:build theme=sketch component=button
-
-# Legacy syntax
-npm run scss:build -- --build --theme=sketch --component=button
 ```
 
 ### Build a Specific Component for All Themes
@@ -96,11 +76,49 @@ npm run scss:build -- --build --theme=sketch --component=button
 To generate CSS files for a specific component across all available themes:
 
 ```bash
-# Modern syntax (recommended)
-npm run scss:build component=button theme=figma
+npm run scss:build component=button
 ```
 
 This will build the specified component for every theme that contains it.
+
+### Build Specific Token Types
+
+You can build specific types of design tokens (text, icon, color, typography) instead of entire themes or components:
+
+#### Build a Token Type for All Themes
+
+```bash
+# Build text tokens for all themes
+npm run scss:build text
+
+# Build color tokens for all themes
+npm run scss:build color
+
+# Build icon tokens for all themes
+npm run scss:build icon
+
+# Build typography tokens for all themes
+npm run scss:build typography
+```
+
+#### Build a Token Type for a Specific Theme
+
+```bash
+# Build text tokens for sketch theme only
+npm run scss:build theme=sketch text
+
+# Build color tokens for penpot theme only
+npm run scss:build theme=penpot color
+
+# Build typography tokens for figma theme only
+npm run scss:build theme=figma typography
+```
+
+Available token types are:
+- `text` - Text styling tokens (font sizes, weights, colors)
+- `color` - Color palette tokens
+- `icon` - Icon-related tokens
+- `typography` - Typography system tokens
 
 ## Direct Script Usage
 
@@ -111,15 +129,17 @@ You can also use the `build-scss.js` script directly with Node:
 node scripts/build-scss.js
 
 # Build all Terrazzo files
-node scripts/build-scss.js --build
+node scripts/build-scss.js
 
 # Build a specific theme
-node scripts/build-scss.js --build --theme=sketch
-node scripts/build-scss.js theme=sketch  # Alternative syntax
+node scripts/build-scss.js theme=sketch
 
 # Build a specific component
-node scripts/build-scss.js --build --component=button
-node scripts/build-scss.js component=button  # Alternative syntax
+node scripts/build-scss.js component=button
+
+# Build specific token types
+node scripts/build-scss.js text
+node scripts/build-scss.js theme=penpot color
 ```
 
 ## Common Use Cases
@@ -133,6 +153,19 @@ node scripts/build-scss.js component=button  # Alternative syntax
 npm run scss:build theme=sketch component=button
 ```
 
+### Update Base Tokens After Modifications
+
+1. Modify a base token file (e.g., `/tokens/platforms/penpot/text.json`)
+2. Run the command to regenerate the token's CSS files:
+
+```bash
+# Update text tokens for penpot theme only
+npm run scss:build theme=penpot text
+
+# Or update text tokens for all themes
+npm run scss:build text
+```
+
 ### Update All Components for a Theme
 
 ```bash
@@ -143,6 +176,16 @@ npm run scss:build theme=sketch
 
 ```bash
 npm run scss:build
+```
+
+### Update Specific Token Types Across All Themes
+
+```bash
+# Update all color tokens after changing color system
+npm run scss:build color
+
+# Update all typography tokens after font changes
+npm run scss:build typography
 ```
 
 ## Important Notes

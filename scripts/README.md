@@ -36,14 +36,25 @@ npm run scss:build component=componentName
 
 # Build SCSS for a specific component within a specific theme
 npm run scss:build theme=themeName component=componentName
+
+# Build specific token types across all themes
+npm run scss:build text
+npm run scss:build color
+npm run scss:build icon
+npm run scss:build typography
+
+# Build specific token types for a specific theme
+npm run scss:build theme=themeName text
+npm run scss:build theme=themeName color
 ```
 
 The SCSS Builder:
 
-- Converts JSON tokens to SCSS variables
-- Generates theme-specific color variables
-- Creates typography styles
-- Handles component-specific styling
+- Converts JSON design tokens to SCSS variables
+- Generates theme-specific styling for all platforms (Figma, Penpot, Sketch)
+- Supports granular builds for specific token types (text, color, icon, typography)
+- Creates component-specific styling
+- Handles both base tokens and component tokens
 
 ## Usage of Theme Generator
 

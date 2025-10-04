@@ -48,7 +48,7 @@ The Theme Generator automates the creation of all necessary files and configurat
 
 ### SCSS Builder
 
-Generate theme-specific SCSS files from tokens with these commands:
+Generate theme-specific SCSS files from design tokens with these commands:
 
 ```bash
 # List available themes and components
@@ -65,6 +65,16 @@ npm run scss:build component=componentName
 
 # Build SCSS for a specific component within a specific theme
 npm run scss:build theme=themeName component=componentName
+
+# Build specific token types across all themes
+npm run scss:build text
+npm run scss:build color
+npm run scss:build icon
+npm run scss:build typography
+
+# Build specific token types for a specific theme
+npm run scss:build theme=themeName text
+npm run scss:build theme=themeName color
 ```
 
 ## Usage
