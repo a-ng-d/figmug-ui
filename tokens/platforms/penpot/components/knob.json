@@ -270,7 +270,7 @@
         }
       },
       "radius": {
-        "$value": "{border.radius.large}",
+        "$value": "{border.radius.xxlarge}",
         "$type": "dimension"
       },
       "background": {
@@ -281,19 +281,19 @@
       },
       "padding": {
         "top": {
-          "$value": "{size.pos.xunit}",
+          "$value": "{size.pos.xxxsmall}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{size.pos.xxxsmall}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.xunit}",
+          "$value": "{size.pos.xxxsmall}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{size.pos.xxxsmall}",
           "$type": "dimension"
         }
       },
