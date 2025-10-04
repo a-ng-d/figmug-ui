@@ -8,7 +8,10 @@
   --draggable-window-border-offset: var(--size-neg-unit);
   --draggable-window-border-width: var(--size-pos-unit);
   --draggable-window-content-gap: var(--size-pos-xxxsmall);
-  --draggable-window-content-padding: var(--size-pos-xxsmall);
+  --draggable-window-content-padding-bottom: var(--size-pos-xxsmall);
+  --draggable-window-content-padding-left: var(--size-pos-xxsmall);
+  --draggable-window-content-padding-right: var(--size-pos-xxsmall);
+  --draggable-window-content-padding-top: var(--size-pos-xxsmall);
   --draggable-window-header-border-color: var(--sketch-color-border-disabled);
   --draggable-window-header-border-width: var(--size-pos-unit);
   --draggable-window-radius: var(--border-radius-xxxlarge);
