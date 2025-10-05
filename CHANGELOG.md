@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.18.1]
+
+### Changed
+
+- **Icons**: Updated SVG icons for consistency and improved design
+  - Refactored Figma icons: check, help, repository, star-off, star-on, user
+  - Updated Penpot icons: star-off, star-on
+  - Updated Sketch repository icon with improved styling and opacity effects
+
+### Improved
+
+- Better visual consistency across icon sets
+- Enhanced icon styling with proper opacity and fill rules
+- Improved accessibility and visual clarity
+
 ## [1.18.0]
 
 ### Added
