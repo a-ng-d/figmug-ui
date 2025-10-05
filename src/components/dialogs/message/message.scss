@@ -1,17 +1,17 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .message {
   display: flex;
   align-items: start;
   gap: var(--message-gap);
   cursor: default;
-  padding: var(--message-padding);
+  padding: var(--message-padding-top) var(--message-padding-right)
+    var(--message-padding-bottom) var(--message-padding-left);
   user-select: none;
-  --icon-picto-color: var(--message-icon-color);
-  --text-color-primary: var(--message-text-color);
+  --icon-picto-color: var(--message-icon-color-default);
+  --text-color-primary: var(--message-text-color-default);
 
   &--blocked {
     --icon-picto-color: var(--message-icon-color-disabled);
@@ -23,7 +23,9 @@
   }
 
   &__msg {
-    padding: var(--message-message-padding);
+    padding: var(--message-message-padding-top)
+      var(--message-message-padding-right) var(--message-message-padding-bottom)
+      var(--message-message-padding-left);
   }
 
   /* Tips ticker */
@@ -31,16 +33,20 @@
     display: flex;
     position: relative;
     flex: 1;
-    max-width: var(--message-ticker-max_width);
+    max-width: var(--message-ticker-max-width);
     height: var(--message-ticker-height);
     overflow: hidden;
 
-    &__msg {
-      padding: var(--message-message-padding);
+    .message__msg {
+      padding: var(--message-message-padding-top)
+        var(--message-message-padding-right)
+        var(--message-message-padding-bottom)
+        var(--message-message-padding-left);
+      white-space: nowrap;
     }
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
       z-index: 2;
       width: var(--message-ticker-mask-width);
@@ -48,7 +54,7 @@
       content: '';
     }
 
-    &:before {
+    &::before {
       left: 0;
       background: linear-gradient(
         90deg,
@@ -57,7 +63,7 @@
       );
     }
 
-    &:after {
+    &::after {
       right: 0;
       background: linear-gradient(
         90deg,

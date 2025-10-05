@@ -35,7 +35,7 @@ export const Icon = (props: IconProps) => {
           'icon-box',
           'icon-box--picto',
           icons.icon,
-          icons[`icon--${iconName?.replace(/-/g, '_')}`],
+          icons[`icon--${iconName}`],
           customClassName,
         ])}
         role={role || 'icon'}

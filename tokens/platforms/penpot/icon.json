@@ -1,0 +1,428 @@
+{
+  "icon": {
+    "adjust": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/adjust.svg"
+    },
+    "alert": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/alert.svg"
+    },
+    "angle": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/angle.svg"
+    },
+    "arrowLeftRight": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/arrow-left-right.svg"
+    },
+    "arrowUpDown": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/arrow-up-down.svg"
+    },
+    "autoLayoutHorizontal": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/auto-layout-horizontal.svg"
+    },
+    "autoLayoutVertical": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/auto-layout-vertical.svg"
+    },
+    "back": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/back.svg"
+    },
+    "blendEmpty": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/blend-empty.svg"
+    },
+    "blend": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/blend.svg"
+    },
+    "break": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/break.svg"
+    },
+    "caretDown": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/caret-down.svg"
+    },
+    "caretLeft": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/caret-left.svg"
+    },
+    "caretRight": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/caret-right.svg"
+    },
+    "caretUp": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/caret-up.svg"
+    },
+    "chevronDown": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/chevron-down.svg"
+    },
+    "chevronLeft": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/chevron-left.svg"
+    },
+    "chevronRight": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/chevron-right.svg"
+    },
+    "chevronUp": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/chevron-up.svg"
+    },
+    "check": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/check.svg"
+    },
+    "close": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/close.svg"
+    },
+    "component": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/component.svg"
+    },
+    "cornerRadius": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/corner-radius.svg"
+    },
+    "corners": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/corners.svg"
+    },
+    "downward": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/downward.svg"
+    },
+    "distributeHorizontalSpacing": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/distribute-horizontal-spacing.svg"
+    },
+    "distributeVerticalSpacing": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/distribute-vertical-spacing.svg"
+    },
+    "draft": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/draft.svg"
+    },
+    "effects": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/effects.svg"
+    },
+    "ellipses": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/ellipses.svg"
+    },
+    "eyedropper": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/eyedropper.svg"
+    },
+    "forward": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/forward.svg"
+    },
+    "filter": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/filter.svg"
+    },
+    "frame": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/frame.svg"
+    },
+    "group": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/group.svg"
+    },
+    "help": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/help.svg"
+    },
+    "hidden": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/hidden.svg"
+    },
+    "horizontalPadding": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/horizontal-padding.svg"
+    },
+    "hyperlink": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/hyperlink.svg"
+    },
+    "image": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/image.svg"
+    },
+    "import": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/import.svg"
+    },
+    "instance": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/instance.svg"
+    },
+    "key": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/key.svg"
+    },
+    "layoutAlignBottom": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/layout-align-bottom.svg"
+    },
+    "layoutAlignHorizontalCenters": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/layout-align-horizontal-centers.svg"
+    },
+    "layoutAlignLeft": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/layout-align-left.svg"
+    },
+    "layoutAlignRight": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/layout-align-right.svg"
+    },
+    "layoutAlignTop": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/layout-align-top.svg"
+    },
+    "layoutAlignVerticalCenters": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/layout-align-vertical-centers.svg"
+    },
+    "layoutGridColumns": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/layout-grid-columns.svg"
+    },
+    "layoutGridRows": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/layout-grid-rows.svg"
+    },
+    "layoutGridUniform": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/layout-grid-uniform.svg"
+    },
+    "library": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/library.svg"
+    },
+    "linkBroken": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/link-broken.svg"
+    },
+    "linkConnected": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/link-connected.svg"
+    },
+    "listDetailed": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/list-detailed.svg"
+    },
+    "listTile": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/list-tile.svg"
+    },
+    "list": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/list.svg"
+    },
+    "lockOff": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/lock-off.svg"
+    },
+    "lockOn": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/lock-on.svg"
+    },
+    "minus": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/minus.svg"
+    },
+    "play": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/play.svg"
+    },
+    "plus": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/plus.svg"
+    },
+    "random": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/random.svg"
+    },
+    "recent": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/recent.svg"
+    },
+    "refresh": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/refresh.svg"
+    },
+    "reset": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/reset.svg"
+    },
+    "resizeToFit": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/resize-to-fit.svg"
+    },
+    "resolveFilled": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/resolve-filled.svg"
+    },
+    "resolve": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/resolve.svg"
+    },
+    "reverse": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/reverse.svg"
+    },
+    "searchLarge": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/search-large.svg"
+    },
+    "search": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/search.svg"
+    },
+    "settings": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/settings.svg"
+    },
+    "share": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/share.svg"
+    },
+    "smiley": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/smiley.svg"
+    },
+    "sortAlphaAsc": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/sort-alpha-asc.svg"
+    },
+    "sortAlphaDsc": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/sort-alpha-dsc.svg"
+    },
+    "sortTopBottom": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/sort-top-bottom.svg"
+    },
+    "spacing": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/spacing.svg"
+    },
+    "starOff": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/star-off.svg"
+    },
+    "starOn": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/star-on.svg"
+    },
+    "strokeWeight": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/stroke-weight.svg"
+    },
+    "styles": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/styles.svg"
+    },
+    "swap": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/swap.svg"
+    },
+    "theme": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/theme.svg"
+    },
+    "tidyUpGrid": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/tidy-up-grid.svg"
+    },
+    "tidyUpListHorizontal": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/tidy-up-list-horizontal.svg"
+    },
+    "tidyUpListVertical": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/tidy-up-list-vertical.svg"
+    },
+    "timer": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/timer.svg"
+    },
+    "toggleSidebarTop": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/toggle-sidebar-top.svg"
+    },
+    "toggleSidebarRight": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/toggle-sidebar-right.svg"
+    },
+    "toggleSidebarBottom": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/toggle-sidebar-bottom.svg"
+    },
+    "toggleSidebarLeft": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/toggle-sidebar-left.svg"
+    },
+    "trash": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/trash.svg"
+    },
+    "verticalPadding": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/vertical-padding.svg"
+    },
+    "visible": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/visible.svg"
+    },
+    "warningLarge": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/warning-large.svg"
+    },
+    "warning": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/warning.svg"
+    },
+    "repository": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/repository.svg"
+    },
+    "info": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/info.svg"
+    },
+    "resizeGrip": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/resize-grip.svg"
+    },
+    "spinner": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/spinner.svg"
+    },
+    "upward": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/upward.svg"
+    },
+    "user": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/user.svg"
+    },
+    "target": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/target.svg"
+    }
+  }
+}

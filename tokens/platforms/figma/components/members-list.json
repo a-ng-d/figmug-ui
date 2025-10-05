@@ -1,0 +1,48 @@
+{
+  "members-list": {
+    "gap": {
+      "$value": "{size.neg.xxxsmall}",
+      "$type": "dimension"
+    },
+    "avatar": {
+      "radius": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "width": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      }
+    },
+    "more": {
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "text": {
+      "color": {
+        "$value": "{grey.0}",
+        "$type": "color"
+      }
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "semantic-message": {
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "default": {
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "anchored": {
+        "top": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "vertical": {
+        "top": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "anchored-vertical": {
+        "top": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "radius": {
+      "$value": "{border.radius.xlarge}",
+      "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.background.primary}",
+          "$type": "color"
+        },
+        "info": {
+          "default": {
+            "$value": "{sketch.color.background.info}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
+        },
+        "error": {
+          "default": {
+            "$value": "{sketch.color.background.error}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
+        },
+        "success": {
+          "default": {
+            "$value": "{sketch.color.background.success}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
+        },
+        "warning": {
+          "default": {
+            "$value": "{sketch.color.background.warning}",
+            "$type": "color"
+          },
+          "accent": {
+            "$value": "#00000030",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "border": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.border.secondary}",
+          "$type": "color"
+        },
+        "info": {
+          "$value": "{sketch.color.accent.info}",
+          "$type": "color"
+        },
+        "error": {
+          "$value": "{sketch.color.accent.error}",
+          "$type": "color"
+        },
+        "success": {
+          "$value": "{sketch.color.accent.success}",
+          "$type": "color"
+        },
+        "warning": {
+          "$value": "{sketch.color.accent.warning}",
+          "$type": "color"
+        }
+      },
+      "width": {
+        "default": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "info": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "error": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "success": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "warning": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        }
+      },
+      "offset": {
+        "default": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "info": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "error": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "success": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "warning": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}

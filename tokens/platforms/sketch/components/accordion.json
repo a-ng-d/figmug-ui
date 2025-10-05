@@ -1,0 +1,100 @@
+{
+  "accordion": {
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "transparent",
+        "$type": "string"
+      }
+    },
+    "row": {
+      "gap": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "text": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.foreground.secondary}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{sketch.color.foreground.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "icon": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.foreground.secondary}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{sketch.color.foreground.disabled}",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}

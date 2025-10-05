@@ -1,0 +1,153 @@
+{
+  "formItem": {
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      }
+    },
+    "text": {
+      "color": {
+        "default": {
+          "$value": "{penpot.color.foreground.primary}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{penpot.color.foreground.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "label": {
+      "width": {
+        "$value": {
+          "value": 112,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "margin": {
+        "default": {
+          "top": {
+            "$value": "{size.pos.xxsmall}",
+            "$type": "dimension"
+          },
+          "right": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "multiline": {
+          "top": {
+            "$value": "{size.pos.xxsmall}",
+            "$type": "dimension"
+          },
+          "right": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        }
+      }
+    },
+    "chip": {
+      "margin": {
+        "default": {
+          "top": {
+            "$value": "{size.pos.xunit}",
+            "$type": "dimension"
+          },
+          "right": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "multiline": {
+          "top": {
+            "$value": "{size.pos.xunit}",
+            "$type": "dimension"
+          },
+          "right": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        }
+      }
+    },
+    "helper": {
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "icon": {
+      "color": {
+        "disabled": {
+          "$value": "{penpot.color.foreground.disabled}",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}

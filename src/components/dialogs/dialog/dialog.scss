@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .dialog {
   display: flex;
@@ -12,13 +11,18 @@
   cursor: default;
   box-sizing: border-box;
   margin: 0;
-  inset: 0 0 0 0;
+  inset: 0;
   border: none;
   background-color: var(--dialog-background-color);
   padding: var(--dialog-padding);
   width: 100%;
   height: 100%;
   user-select: none;
+
+  & {
+    --dialog-padding: var(--dialog-padding-top) var(--dialog-padding-right)
+      var(--dialog-padding-bottom) var(--dialog-padding-left);
+  }
 
   &--right {
     justify-content: end;
@@ -36,7 +40,8 @@
     overflow: hidden;
 
     &--padding {
-      padding: var(--dialog-cover-padding);
+      padding: var(--dialog-cover-padding-top) var(--dialog-cover-padding-right)
+        var(--dialog-cover-padding-bottom) var(--dialog-cover-padding-left);
     }
   }
 
@@ -46,7 +51,8 @@
     flex-direction: column;
     gap: var(--dialog-text-gap);
     margin: 0;
-    padding: var(--dialog-text-padding);
+    padding: var(--dialog-text-padding-top) var(--dialog-text-padding-right)
+      var(--dialog-text-padding-bottom) var(--dialog-text-padding-left);
 
     p {
       margin: 0;
@@ -59,11 +65,12 @@
     flex-direction: column;
     gap: var(--dialog-form-gap);
     margin: 0;
-    padding: var(--dialog-form-padding);
+    padding: var(--dialog-form-padding-top) var(--dialog-form-padding-right)
+      var(--dialog-form-padding-bottom) var(--dialog-form-padding-left);
   }
 }
 
-@media (max-width: 460px) {
+@media (width <= 460px) {
   .dialog {
     & .dialog__cover {
       flex: auto;

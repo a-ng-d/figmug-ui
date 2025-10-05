@@ -1,13 +1,13 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .list {
   box-sizing: border-box;
-  background-color: var(--list-background-color);
-  padding: var(--list-padding);
-  overflow-x: hidden;
-  overflow-y: auto;
+  background-color: var(--list-background-color-default);
+  padding: var(--list-padding-top) var(--list-padding-right)
+    var(--list-padding-bottom) var(--list-padding-left);
+  overflow: hidden auto;
 
   &--full-with {
     width: 100%;
@@ -31,7 +31,7 @@
 
   &--alternate {
     & > *:nth-child(even) {
-      background-color: var(--list-alternate-background-color);
+      background-color: var(--list-alternate-background-color-alternate);
     }
   }
 }

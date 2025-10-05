@@ -31,10 +31,6 @@ export const TextInputItem: Story = {
         type="TEXT"
         value=""
         placeholder="Type your name"
-        isBlocked={true}
-        warning={{
-          label: 'This field is blocked',
-        }}
       />
     ),
   },

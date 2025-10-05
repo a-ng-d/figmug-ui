@@ -1,0 +1,58 @@
+{
+  "bar": {
+    "minHeight": {
+      "$value": "{size.pos.large}",
+      "$type": "dimension"
+    },
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "default": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      },
+      "mobile": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      }
+    },
+    "background": {
+      "color": {
+        "$value": "transparent",
+        "$type": "string"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "transparent",
+        "$type": "string"
+      }
+    },
+    "height": {
+      "compact": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

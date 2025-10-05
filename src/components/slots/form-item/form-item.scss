@@ -1,35 +1,58 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .form-item {
   display: flex;
   flex-direction: column;
-  --text-color-primary: var(--form_item-text-color);
-  --message-padding: var(--form_item-helper-padding);
+  --text-color-primary: var(--form-item-text-color-default);
+  --message-padding: var(--form-item-helper-padding-vertical)
+    var(--form-item-helper-padding-horizontal);
 
   &__row {
     display: inline-flex;
     position: relative;
     align-items: start;
-    gap: var(--form_item-gap);
+    gap: var(--form-item-gap);
     cursor: default;
-    padding: var(--form_item-padding);
+    padding: var(--form-item-padding-top) var(--form-item-padding-right)
+      var(--form-item-padding-bottom) var(--form-item-padding-left);
     user-select: none;
 
     .form-item__label {
-      margin: var(--form_item-label-margin);
+      margin: var(--form-item-label-margin);
+    }
+
+    .form-item__chip {
+      margin: var(--form-item-chip-margin);
     }
   }
 
+  & {
+    --form-item-label-margin: var(--form-item-label-margin-default-top)
+      var(--form-item-label-margin-default-right)
+      var(--form-item-label-margin-default-bottom)
+      var(--form-item-label-margin-default-left);
+    --form-item-chip-margin: var(--form-item-chip-margin-default-top)
+      var(--form-item-chip-margin-default-right)
+      var(--form-item-chip-margin-default-bottom)
+      var(--form-item-chip-margin-default-left);
+  }
+
   &--multiline {
-    --form_item-label-margin: var(--form_item-label-margin-multiline);
+    --form-item-label-margin: var(--form-item-label-margin-multiline-top)
+      var(--form-item-label-margin-multiline-right)
+      var(--form-item-label-margin-multiline-bottom)
+      var(--form-item-label-margin-multiline-left);
+    --form-item-chip-margin: var(--form-item-chip-margin-multiline-top)
+      var(--form-item-chip-margin-multiline-right)
+      var(--form-item-chip-margin-multiline-bottom)
+      var(--form-item-chip-margin-multiline-left);
   }
 
   &--fill {
     .form-item__label {
-      flex: 0 1 var(--form_item-label-width);
+      flex: 0 1 var(--form-item-label-width);
     }
 
     .form-item__input {
@@ -43,9 +66,10 @@
   }
 
   &--blocked {
+    --text-color-primary: var(--form-item-text-color-disabled);
+    --message-text-color: var(--form-item-text-color-disabled);
+    --message-icon-color: var(--form-item-text-color-disabled);
+
     pointer-events: none;
-    --text-color-primary: var(--form_item-text-color-disabled);
-    --message-text-color: var(--form_item-text-color-disabled);
-    --message-icon-color: var(--form_item-text-color-disabled);
   }
 }

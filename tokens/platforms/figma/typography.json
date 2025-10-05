@@ -1,0 +1,8 @@
+{
+  "font": {
+    "stack": {
+      "$type": "fontFamily",
+      "$value": ["Inter", "sans-serif"]
+    }
+  }
+}

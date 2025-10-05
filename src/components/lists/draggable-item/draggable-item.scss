@@ -1,48 +1,48 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .draggable-item {
   display: grid;
   position: relative;
-  grid-template-rows: var(--draggable_item-template-rows);
-  grid-template-columns: var(--draggable_item-template-columns);
-  background-color: var(--draggable_item-background-color);
-  padding: var(--draggable_item-padding);
+  grid-template-rows: var(--draggable-item-template-rows);
+  grid-template-columns: var(--draggable-item-template-columns);
+  background-color: var(--draggable-item-background-color);
+  padding: var(--draggable-item-padding-top) var(--draggable-item-padding-right)
+    var(--draggable-item-padding-bottom) var(--draggable-item-padding-left);
+
+  & {
+    --draggable-item-background-color: var(
+      --draggable-item-background-color-default
+    );
+  }
 
   &[draggable='true'] {
-    --draggable_item-background-color: var(
-      --draggable_item-background-color-selected
+    --draggable-item-background-color: var(
+      --draggable-item-background-color-selected
     );
-    --input-background-color: var(--input-background-color-onselected);
-    --input-border-color: var(--input-border-color-onselected);
-    --input-border-width: var(--input-border-width-onselected);
-    --input-border-offset: var(--input-border-offset-onselected);
-    --dropdown-background-color: var(--dropdown-background-color-onselected);
-    --dropdown-border-color: var(--dropdown-border-color-onselected);
-    --icon_button-background-color: var(
-      --icon_button-background-color-onselected
+    --icon-button-default-background-color-default: var(
+      --icon-button-default-background-color-onselected
     );
-    --icon_button-background-color-disabled: var(
-      --icon_button-background-color-onselected
+    --icon-button-default-background-color-hover: var(
+      --icon-button-default-background-color-onselected-hover
     );
 
-    --input-background-color-hover: var(
+    --input-background-color-default: var(
+      --input-background-color-onselected-default
+    );
+    --input-border-color-default: var(--input-border-color-onselected-default);
+    --input-border-width-default: var(--input-border-width-onselected-default);
+    --input-border-offset-default: var(
+      --input-border-offset-onselected-default
+    );
+
+    --input-background-color-default-hover: var(
       --input-background-color-onselected-hover
     );
     --input-border-color-hover: var(--input-border-color-onselected-hover);
     --input-border-width-hover: var(--input-border-width-onselected-hover);
     --input-border-offset-hover: var(--input-border-offset-onselected-hover);
-    --dropdown-background-color-hover: var(
-      --dropdown-background-color-onselected-hover
-    );
-    --dropdown-border-color-hover: var(
-      --dropdown-border-color-onselected-hover
-    );
-    --icon_button-background-color-hover: var(
-      --icon_button-background-color-onselected-hover
-    );
   }
 
   &[draggable='true']:active {
@@ -55,23 +55,23 @@
 
   &--above::before {
     position: absolute;
-    top: var(--draggable_item-ghost-inset);
+    top: var(--draggable-item-ghost-inset);
     left: 0;
     z-index: 99;
-    background-color: var(--draggable_item-ghost-color);
+    background-color: var(--draggable-item-ghost-color);
     width: 100%;
-    height: var(--draggable_item-ghost-height);
+    height: var(--draggable-item-ghost-height);
     content: '';
   }
 
-  &--below:before {
+  &--below::before {
     position: absolute;
-    bottom: var(--draggable_item-ghost-inset);
+    bottom: var(--draggable-item-ghost-inset);
     left: 0;
     z-index: 99;
-    background-color: var(--draggable_item-ghost-color);
+    background-color: var(--draggable-item-ghost-color);
     width: 100%;
-    height: var(--draggable_item-ghost-height);
+    height: var(--draggable-item-ghost-height);
     content: '';
   }
 
@@ -86,7 +86,7 @@
   .draggable-item__right {
     display: flex;
     align-items: center;
-    gap: var(--draggable_item-gap);
+    gap: var(--draggable-item-gap);
     max-width: 100%;
   }
 
@@ -94,14 +94,14 @@
     max-width: 100%;
 
     &--compact {
-      width: var(--draggable_item-param-width-compact);
+      width: var(--draggable-item-param-width-compact);
     }
 
     &--square {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: var(--draggable_item-param-width-square);
+      width: var(--draggable-item-param-width-square);
     }
   }
 

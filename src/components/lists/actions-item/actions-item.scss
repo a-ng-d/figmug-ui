@@ -1,20 +1,35 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 li.actions-item {
   display: flex;
   align-items: center;
-  gap: var(--actions_item-gap);
-  outline: var(--actions_item-border-secondary-width) solid
-    var(--actions_item-border-secondary-color);
-  outline-offset: var(--actions_item-border-secondary-offset);
-  border-bottom: var(--actions_item-border-width) solid
-    var(--actions_item-border-color);
-  background-color: var(--actions_item-background-color);
-  padding: var(--actions_item-padding);
+  gap: var(--actions-item-gap);
+  outline: var(--actions-item-border-secondary-width) solid
+    var(--actions-item-border-secondary-color);
+  outline-offset: var(--actions-item-border-secondary-offset);
+  border-bottom: var(--actions-item-border-width) solid
+    var(--actions-item-border-color);
+  background-color: var(--actions-item-background-color);
+  padding: var(--actions-item-padding-top) var(--actions-item-padding-right)
+    var(--actions-item-padding-bottom) var(--actions-item-padding-left);
   user-select: none;
+
+  & {
+    --actions-item-background-color: var(
+      --actions-item-background-color-default
+    );
+    --actions-item-border-secondary-width: var(
+      --actions-item-border-secondary-width-default
+    );
+    --actions-item-border-secondary-offset: var(
+      --actions-item-border-secondary-offset-default
+    );
+    --actions-item-border-secondary-color: var(
+      --actions-item-border-secondary-color-default
+    );
+  }
 
   &:last-child {
     border-bottom: none;
@@ -22,43 +37,43 @@ li.actions-item {
 
   &--interactive {
     &:hover {
-      --actions_item-background-color: var(
-        --actions_item-background-color-hover
+      --actions-item-background-color: var(
+        --actions-item-background-color-hover
       );
     }
 
     &:focus {
-      --actions_item-background-color: var(
-        --actions_item-background-color-focus
+      --actions-item-background-color: var(
+        --actions-item-background-color-focus
       );
-      --actions_item-border-secondary-width: var(
-        --actions_item-border-secondary-width-focus
+      --actions-item-border-secondary-width: var(
+        --actions-item-border-secondary-width-focus
       );
-      --actions_item-border-secondary-offset: var(
-        --actions_item-border-secondary-offset-focus
+      --actions-item-border-secondary-offset: var(
+        --actions-item-border-secondary-offset-focus
       );
-      --actions_item-border-secondary-color: var(
-        --actions_item-border-secondary-color-focus
+      --actions-item-border-secondary-color: var(
+        --actions-item-border-secondary-color-focus
       );
     }
   }
 
   .actions-item__asset {
     width: 100px;
-    min-width: var(--actions_item-asset-min_width);
-    height: var(--actions_item-asset-height);
+    min-width: var(--actions-item-asset-min-width);
+    height: var(--actions-item-asset-height);
   }
 
   .actions-item__content {
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: var(--actions_item-content-gap);
+    gap: var(--actions-item-content-gap);
   }
 
   .actions-item__actions {
     display: flex;
     align-items: center;
-    gap: var(--actions_item-actions-gap);
+    gap: var(--actions-item-actions-gap);
   }
 }

@@ -1,12 +1,13 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .accordion {
   cursor: default;
-  border-bottom: var(--accordion-border);
-  padding: var(--accordion-padding);
+  border-bottom: var(--accordion-border-width) solid
+    var(--accordion-border-color);
+  padding: var(--accordion-padding-top) var(--accordion-padding-right)
+    var(--accordion-padding-bottom) var(--accordion-padding-left);
   user-select: none;
 
   &__row {
@@ -14,24 +15,29 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--accordion-row-gap);
-    padding: var(--accordion-row-padding);
+    padding: var(--accordion-row-padding-top) var(--accordion-row-padding-right)
+      var(--accordion-row-padding-bottom) var(--accordion-row-padding-left);
     height: var(--accordion-row-height);
 
-    --section_title-text-color: var(--accordion-text-color);
-    --text-color-primary: var(--accordion-text-color);
-    --icon-picto-color: var(--accordion-icon-color);
-    --icon_button-icon-color: var(--accordion-icon-color);
+    --section-title-text-color: var(--accordion-text-color-default);
+    --text-color-primary: var(--accordion-text-color-default);
+    --icon-picto-color: var(--accordion-icon-color-default);
+    --icon-button-default-icon-color-default: var(
+      --accordion-icon-color-default
+    );
 
     &:hover,
     &:focus-within {
-      --section_title-text-color: var(--accordion-text-color-hover);
+      --section-title-text-color: var(--accordion-text-color-hover);
       --text-color-primary: var(--accordion-text-color-hover);
       --icon-picto-color: var(--accordion-icon-color-hover);
-      --icon_button-icon-color: var(--accordion-icon-color-hover);
+      --icon-button-default-icon-color-default: var(
+        --accordion-icon-color-hover
+      );
     }
 
     &:focus-within {
-      --section_title-text-color: var(--accordion-text-color-hover);
+      --section-title-text-color: var(--accordion-text-color-hover);
       --text-color-primary: var(--accordion-text-color-hover);
     }
   }
@@ -48,16 +54,20 @@
   }
 
   &--expanded &__row {
-    --section_title-text-color: var(--accordion-text-color-expanded);
+    --section-title-text-color: var(--accordion-text-color-expanded);
     --text-color-primary: var(--accordion-text-color-expanded);
     --icon-picto-color: var(--accordion-icon-color-expanded);
-    --icon_button-icon-color: var(--accordion-icon-color-expanded);
+    --icon-button-default-icon-color-default: var(
+      --accordion-icon-color-expanded
+    );
   }
 
   &--blocked &__row {
-    --section_title-text-color: var(--accordion-text-color-disabled);
+    --section-title-text-color: var(--accordion-text-color-disabled);
     --text-color-primary: var(--accordion-text-color-disabled);
     --icon-picto-color: var(--accordion-icon-color-disabled);
-    --icon_button-icon-color: var(--accordion-icon-color-disabled);
+    --icon-button-default-icon-color-default: var(
+      --accordion-icon-color-disabled
+    );
   }
 }

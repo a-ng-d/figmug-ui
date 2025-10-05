@@ -1,29 +1,33 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .simple-slider {
   display: flex;
   position: relative;
   align-items: center;
-  margin: var(--simple_slider-margin);
-  padding: var(--simple_slider-padding);
+  margin: var(--simple-slider-margin-top) var(--simple-slider-margin-right)
+    var(--simple-slider-margin-bottom) var(--simple-slider-margin-left);
+  padding: var(--simple-slider-padding-top) var(--simple-slider-padding-right)
+    var(--simple-slider-padding-bottom) var(--simple-slider-padding-left);
 
   &__range {
     position: relative;
     flex: 1 1 auto;
-    box-shadow: inset 0 0 0 var(--simple_slider-border-width)
-      var(--simple_slider-border-color);
-    border-radius: var(--simple_slider-radius);
-    height: var(--simple_slider-height);
+    box-shadow: inset 0 0 0 var(--simple-slider-border-width)
+      var(--simple-slider-border-color);
+    border-radius: var(--simple-slider-radius);
+    height: var(--simple-slider-height);
   }
 
   &__status {
     display: flex;
     align-items: center;
-    gap: var(--simple_slider-status-gap);
-    margin: var(--simple_slider-status-margin);
-    height: var(--simple_slider-status-height);
+    gap: var(--simple-slider-status-gap);
+    margin: var(--simple-slider-status-margin-top)
+      var(--simple-slider-status-margin-right)
+      var(--simple-slider-status-margin-bottom)
+      var(--simple-slider-status-margin-left);
+    height: var(--simple-slider-status-height);
   }
 }

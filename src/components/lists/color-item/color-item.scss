@@ -1,14 +1,16 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .color-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--color_item-padding);
-  height: var(--color_item-height);
+  cursor: default;
+  padding: var(--color-item-padding-top) var(--color-item-padding-right)
+    var(--color-item-padding-bottom) var(--color-item-padding-left);
+  height: var(--color-item-height);
+  user-select: none;
 
   .color-item__left,
   .color-item__right {
@@ -18,7 +20,7 @@
   .color-item__info {
     display: flex;
     align-items: center;
-    gap: var(--color_item-gap);
+    gap: var(--color-item-gap);
     max-width: 100%;
     white-space: nowrap;
   }

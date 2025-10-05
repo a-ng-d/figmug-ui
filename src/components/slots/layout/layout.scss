@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .layout {
   display: flex;
@@ -24,12 +23,13 @@
     flex: 1;
     flex-direction: column;
     justify-content: start;
-    padding: var(--layout-block-padding);
-    overflow-x: hidden;
-    overflow-y: auto;
+    padding: var(--layout-block-padding-top) var(--layout-block-padding-right)
+      var(--layout-block-padding-bottom) var(--layout-block-padding-left);
+    overflow: hidden auto;
 
     &--list {
-      padding: var(--layout-list-padding);
+      padding: var(--layout-list-padding-top) var(--layout-list-padding-right)
+        var(--layout-list-padding-bottom) var(--layout-list-padding-left);
     }
 
     &--distributed {
@@ -42,7 +42,10 @@
       flex: none;
       box-sizing: border-box;
       margin: auto;
-      padding: var(--layout-centered-padding);
+      padding: var(--layout-centered-padding-top)
+        var(--layout-centered-padding-right)
+        var(--layout-centered-padding-bottom)
+        var(--layout-centered-padding-left);
       max-width: 100%;
     }
 
@@ -56,6 +59,7 @@
   }
 
   & > div + div {
-    border-left: var(--layout-block-border);
+    border-left: var(--layout-block-border-width) solid
+      var(--layout-block-border-color);
   }
 }

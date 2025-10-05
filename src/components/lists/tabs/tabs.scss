@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .tabs {
   display: flex;
@@ -13,7 +12,16 @@
   padding: var(--tabs-padding);
   user-select: none;
 
-  & .tabs__tab {
+  & {
+    --tabs-gap: var(--tabs-gap-default);
+    --tabs-radius: var(--tabs-radius-default);
+    --tabs-padding: var(--tabs-padding-default-top)
+      var(--tabs-padding-default-right) var(--tabs-padding-default-bottom)
+      var(--tabs-padding-default-left);
+    --tabs-background-color: var(--tabs-background-color-default);
+  }
+
+  .tabs__tab {
     display: flex;
     position: relative;
     justify-content: center;
@@ -38,13 +46,43 @@
       text-transform: var(--tabs-tab-text-transform);
     }
 
-    &--with-icon {
-      --tabs-tab-padding: var(--tabs-tab-padding-with-icon);
-    }
-
     &--flex {
       flex: 1;
       overflow: hidden;
+    }
+
+    & {
+      --tabs-tab-padding: var(--tabs-tab-padding-default-top)
+        var(--tabs-tab-padding-default-right)
+        var(--tabs-tab-padding-default-bottom)
+        var(--tabs-tab-padding-default-left);
+      --tabs-tab-gap: var(--tabs-tab-gap-default);
+      --tabs-tab-radius: var(--tabs-tab-radius-default);
+      --tabs-tab-height: var(--tabs-tab-height-default);
+      --tabs-tab-icon-width: var(--tabs-tab-icon-width-default);
+      --tabs-tab-icon-height: var(--tabs-tab-icon-height-default);
+      --tabs-tab-text-size: var(--tabs-tab-text-size-default);
+      --tabs-tab-text-transform: var(--tabs-tab-text-transform-default);
+
+      &--with-icon {
+        --tabs-tab-padding: var(--tabs-tab-padding-with-icon-top)
+          var(--tabs-tab-padding-with-icon-right)
+          var(--tabs-tab-padding-with-icon-bottom)
+          var(--tabs-tab-padding-with-icon-left);
+      }
+    }
+
+    &:not(&--active) {
+      --tabs-tab-background-color: var(--tabs-tab-background-color-default);
+      --tabs-tab-border-color: var(--tabs-tab-border-color-default);
+      --tabs-tab-border-width: var(--tabs-tab-border-width-default);
+      --tabs-tab-border-offset: var(--tabs-tab-border-offset-default);
+      --tabs-tab-text-color: var(--tabs-tab-text-color-default);
+      --tabs-tab-text-weight: var(--tabs-tab-text-weight-default);
+      --tabs-tab-icon-color: var(--tabs-tab-icon-color-default);
+      --tabs-tab-notification-border-color: var(
+        --tabs-tab-notification-border-color-default
+      );
     }
 
     &:hover:not(&--active) {
@@ -87,9 +125,12 @@
     }
   }
 
-  & .tabs__tab--updated:after {
+  & .tabs__tab--updated::after {
     position: absolute;
-    inset: var(--tabs-tab-notification-inset);
+    inset: var(--tabs-tab-notification-inset-top)
+      var(--tabs-tab-notification-inset-right)
+      var(--tabs-tab-notification-inset-bottom)
+      var(--tabs-tab-notification-inset-left);
     outline: var(--tabs-tab-notification-border-width) solid
       var(--tabs-tab-notification-border-color);
     outline-offset: var(--tabs-tab-notification-border-offset);
@@ -101,78 +142,62 @@
   }
 
   &--vertical {
-    flex-direction: column;
     --tabs-gap: var(--tabs-gap-vertical);
     --tabs-radius: var(--tabs-radius-vertical);
-    --tabs-padding: var(--tabs-padding-vertical);
+    --tabs-padding: var(--tabs-padding-vertical-top) var(--tabs-padding-vertical-right) var(--tabs-padding-vertical-bottom) var(--tabs-padding-vertical-left);
     --tabs-background-color: var(--tabs-background-color-vertical);
 
-    --tabs-tab-gap: var(--tabs-tab-gap-alternative);
-    --tabs-tab-padding: var(--tabs-tab-padding-alternative);
-    --tabs-tab-radius: var(--tabs-tab-radius-alternative);
-    --tabs-tab-height: var(--tabs-tab-height-alternative);
-    --tabs-tab-background-color: var(--tabs-tab-background-color-alternative);
-    --tabs-tab-text-color: var(--tabs-tab-text-color-alternative);
-    --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative);
-    --tabs-tab-text-transform: var(--tabs-tab-text-transform-alternative);
-    --tabs-tab-icon-width: var(--tabs-tab-icon-width-alternative);
-    --tabs-tab-icon-height: var(--tabs-tab-icon-width-alternative);
-    --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative);
+    flex-direction: column;
 
-    --tabs-tab-padding-with-icon: var(--tabs-tab-padding-with-icon-alternative);
+    .tabs__tab {
+      justify-content: flex-start;
 
-    --tabs-tab-background-color-hover: var(
-      --tabs-tab-background-color-alternative-hover
-    );
-    --tabs-tab-border-color-hover: var(
-      --tabs-tab-border-color-alternative-hover
-    );
-    --tabs-tab-border-width-hover: var(
-      --tabs-tab-border-width-alternative-hover
-    );
-    --tabs-tab-border-offset-hover: var(
-      --tabs-tab-border-offset-alternative-hover
-    );
-    --tabs-tab-text-color-hover: var(--tabs-tab-text-color-alternative-hover);
-    --tabs-tab-text-weight-hover: var(--tabs-tab-text-weight-alternative-hover);
-    --tabs-tab-icon-color-hover: var(--tabs-tab-icon-color-alternative-hover);
-    --tabs-tab-notification-border-color-hover: var(
-      --tabs-tab-notification-border-color-alternative-hover
-    );
+      & {
+        --tabs-tab-gap: var(--tabs-tab-gap-alternative);
+        --tabs-tab-padding: var(--tabs-tab-padding-alternative-with-icon-top) var(--tabs-tab-padding-alternative-with-icon-right) var(--tabs-tab-padding-alternative-with-icon-bottom) var(--tabs-tab-padding-alternative-with-icon-left);
+        --tabs-tab-radius: var(--tabs-tab-radius-alternative);
+        --tabs-tab-height: var(--tabs-tab-height-alternative);
+        --tabs-tab-text-transform: var(--tabs-tab-text-transform-alternative);
+        --tabs-tab-icon-width: var(--tabs-tab-icon-width-alternative);
+        --tabs-tab-icon-height: var(--tabs-tab-icon-height-alternative);
+      }
+      
+      &:not(&--active) {
+        --tabs-tab-background-color: var(--tabs-tab-background-color-alternative);
+        --tabs-tab-text-color: var(--tabs-tab-text-color-alternative);
+        --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative);
+        --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative);
+      }
 
-    --tabs-tab-background-color-focus: var(
-      --tabs-tab-background-color-alternative-focus
-    );
-    --tabs-tab-border-color-focus: var(
-      --tabs-tab-border-color-alternative-focus
-    );
-    --tabs-tab-border-width-focus: var(
-      --tabs-tab-border-width-alternative-focus
-    );
-    --tabs-tab-border-offset-focus: var(
-      --tabs-tab-border-offset-alternative-focus
-    );
-    --tabs-tab-text-color-focus: var(--tabs-tab-text-color-alternative-focus);
-    --tabs-tab-text-weight-focus: var(--tabs-tab-text-weight-alternative-focus);
-    --tabs-tab-icon-color-focus: var(--tabs-tab-icon-color-alternative-focus);
-    --tabs-tab-notification-border-color-focus: var(
-      --tabs-tab-notification-border-color-alternative-focus
-    );
+      &:hover:not(&--active) {
+        --tabs-tab-background-color: var(--tabs-tab-background-color-alternative-hover);
+        --tabs-tab-border-color: var(--tabs-tab-border-color-alternative-hover);
+        --tabs-tab-border-width: var(--tabs-tab-border-width-alternative-hover);
+        --tabs-tab-border-offset: var(--tabs-tab-border-offset-alternative-hover);
+        --tabs-tab-text-color: var(--tabs-tab-text-color-alternative-hover);
+        --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative-hover);
+        --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative-hover);
+        --tabs-tab-notification-border-color: var(--tabs-tab-notification-border-color-alternative-hover);
+      }
 
-    --tabs-tab-background-color-active: var(
-      --tabs-tab-background-color-alternative-active
-    );
-    --tabs-tab-text-color-active: var(--tabs-tab-text-color-alternative-active);
-    --tabs-tab-text-weight-active: var(
-      --tabs-tab-text-weight-alternative-active
-    );
-    --tabs-tab-icon-color-active: var(--tabs-tab-icon-color-alternative-active);
-    --tabs-tab-notification-border-color-active: var(
-      --tabs-tab-notification-border-color-alternative-active
-    );
+      &:focus:not(&--active) {
+        --tabs-tab-background-color: var(--tabs-tab-background-color-alternative-focus);
+        --tabs-tab-border-color: var(--tabs-tab-border-color-alternative-focus);
+        --tabs-tab-border-width: var(--tabs-tab-border-width-alternative-focus);
+        --tabs-tab-border-offset: var(--tabs-tab-border-offset-alternative-focus);
+        --tabs-tab-text-color: var(--tabs-tab-text-color-alternative-focus);
+        --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative-focus);
+        --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative-focus);
+        --tabs-tab-notification-border-color: var(--tabs-tab-notification-border-color-alternative-focus);
+      }
 
-    & .tabs__tab {
-      justify-content: start;
+      &--active {
+        --tabs-tab-background-color: var(--tabs-tab-background-color-alternative-active);
+        --tabs-tab-text-color: var(--tabs-tab-text-color-alternative-active);
+        --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative-active);
+        --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative-active);
+        --tabs-tab-notification-border-color: var(--tabs-tab-notification-border-color-alternative-active);
+      }
     }
   }
 }

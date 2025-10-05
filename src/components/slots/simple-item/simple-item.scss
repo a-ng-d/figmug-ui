@@ -1,19 +1,26 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .simple-item {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  gap: var(--simple_item-gap);
+  gap: var(--simple-item-gap);
   box-sizing: content-box;
-  outline: var(--simple_item-border-width) solid var(--simple_item-border-color);
-  outline-offset: var(--simple_item-border-offset);
-  background-color: var(--simple_item-background-color);
-  padding: var(--simple_item-padding);
-  min-height: var(--simple_item-min_height);
+  outline: var(--simple-item-border-width) solid var(--simple-item-border-color);
+  outline-offset: var(--simple-item-border-offset);
+  background-color: var(--simple-item-background-color);
+  padding: var(--simple-item-padding-top) var(--simple-item-padding-right)
+    var(--simple-item-padding-bottom) var(--simple-item-padding-left);
+  min-height: var(--simple-item-min-height);
+
+  & {
+    --simple-item-background-color: var(--simple-item-background-color-default);
+    --simple-item-border-width: var(--simple-item-border-width-default);
+    --simple-item-border-offset: var(--simple-item-border-offset-default);
+    --simple-item-border-color: var(--simple-item-border-color-default);
+  }
 
   &--centered {
     align-items: center;
@@ -25,19 +32,19 @@
 
   &--interactive {
     &:hover {
-      --simple_item-background-color: var(--simple_item-background-color-hover);
+      --simple-item-background-color: var(--simple-item-background-color-hover);
     }
 
     &:focus {
-      --simple_item-background-color: var(--simple_item-background-color-focus);
-      --simple_item-border-width: var(--simple_item-border-width-focus);
-      --simple_item-border-offset: var(--simple_item-border-offset-focus);
-      --simple_item-border-color: var(--simple_item-border-color-focus);
+      --simple-item-background-color: var(--simple-item-background-color-focus);
+      --simple-item-border-width: var(--simple-item-border-width-focus);
+      --simple-item-border-offset: var(--simple-item-border-offset-focus);
+      --simple-item-border-color: var(--simple-item-border-color-focus);
     }
   }
 
   &--transparent {
-    --simple_item-background-color: transparent;
+    --simple-item-background-color: transparent;
   }
 
   .simple-item__left,
@@ -54,16 +61,16 @@
     max-width: 100%;
 
     &--compact {
-      width: var(--simple_item-width-compact);
-      min-width: var(--simple_item-min_width-compact);
+      width: var(--simple-item-width-compact);
+      min-width: var(--simple-item-min-width-compact);
     }
 
     &--square {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: var(--simple_item-width-square);
-      min-width: var(--simple_item-min_width-square);
+      width: var(--simple-item-width-square);
+      min-width: var(--simple-item-min-width-square);
     }
 
     &--fill {

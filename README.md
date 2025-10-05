@@ -11,6 +11,9 @@ Figmug UI is a comprehensive library of UI components designed specifically for 
 - **Bundled with Vite**: Fast and optimized build tool for modern web projects
 - **Tested with Jest and Vitest**: Ensures reliability and robustness of components
 - **Exposed with Storybook**: Interactive UI component explorer for easy development and testing
+- **Design tokens with Terrazzo**: Theme management using design tokens for consistent styling across platforms. [View Terrazzo Guide](./docs/terrazzo-guide.md)
+- **Theme Generator**: Create custom themes easily with the [Theme Generator](./docs/theme-generator.md) tool based on Figma theme structure
+- **SCSS Builder**: Generate theme-specific SCSS files from tokens using the build-scss script, with support for building components across all themes
 
 ## Installation
 
@@ -20,6 +23,58 @@ To install Figmug UI, use npm or yarn:
 npm install figmug-ui
 # or
 yarn add figmug-ui
+```
+
+## Theme Development Tools
+
+Figmug UI provides powerful tools for creating and managing custom themes:
+
+### Theme Generator
+
+Create new themes based on existing design systems (Sketch, Figma UI, etc.) with a single command:
+
+```bash
+npm run create:theme
+```
+
+The Theme Generator automates the creation of all necessary files and configurations:
+
+- Tokens JSON files
+- Terrazzo configuration
+- Storybook integration
+- SCSS imports
+
+[Learn more about the Theme Generator](./docs/theme-generator.md)
+
+### SCSS Builder
+
+Generate theme-specific SCSS files from design tokens with these commands:
+
+```bash
+# List available themes and components
+npm run scss:list
+
+# Build all SCSS files
+npm run scss:build
+
+# Build SCSS for a specific theme
+npm run scss:build theme=themeName
+
+# Build SCSS for a specific component across all themes
+npm run scss:build component=componentName
+
+# Build SCSS for a specific component within a specific theme
+npm run scss:build theme=themeName component=componentName
+
+# Build specific token types across all themes
+npm run scss:build text
+npm run scss:build color
+npm run scss:build icon
+npm run scss:build type
+
+# Build specific token types for a specific theme
+npm run scss:build theme=themeName text
+npm run scss:build theme=themeName color
 ```
 
 ## Usage

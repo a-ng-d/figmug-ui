@@ -1,22 +1,67 @@
-# Figmug UI Theme Generator
+# Figmug UI Scripts
 
-This script allows you to easily generate a new UI theme for figmug-ui, based on existing themes (figma-ui2, figma-ui3, penpot, sketch).
+This directory contains utility scripts for Figmug UI theme development and maintenance.
 
-## Features
+## Available Scripts
+
+### Theme Generator (`create-theme.js`)
+
+Creates a complete new theme for Figmug UI based on the Figma theme.
+
+**[📚 Detailed documentation available here](../docs/theme-generator.md)**
 
 The script automates the creation of the following elements:
 
-1. **Color tokens**: creation of token files for light and dark modes
-2. **Typography tokens**: creation of typography token files
-3. **Icons**: duplication of figma-ui3 icons to the new theme
-4. **SCSS files**: creation of theme-specific SCSS files for all components
+1. **Token JSON files**: Creation of all theme tokens
+2. **Terrazzo configuration**: Setup of Terrazzo configuration files
+3. **Storybook integration**: Automatic configuration of the new theme in Storybook
+4. **SCSS imports**: Updates all necessary SCSS imports automatically
 
-## Usage
+### SCSS Builder (`build-scss.js`)
+
+Generates SCSS files from design tokens.
+
+```bash
+# List available themes and components
+npm run scss:list
+
+# Build all SCSS files
+npm run scss:build
+
+# Build SCSS for a specific theme
+npm run scss:build theme=themeName
+
+# Build SCSS for a specific component across all themes
+npm run scss:build component=componentName
+
+# Build SCSS for a specific component within a specific theme
+npm run scss:build theme=themeName component=componentName
+
+# Build specific token types across all themes
+npm run scss:build text
+npm run scss:build color
+npm run scss:build icon
+npm run scss:build type
+
+# Build specific token types for a specific theme
+npm run scss:build theme=themeName text
+npm run scss:build theme=themeName color
+```
+
+The SCSS Builder:
+
+- Converts JSON design tokens to SCSS variables
+- Generates theme-specific styling for all platforms (Figma, Penpot, Sketch)
+- Supports granular builds for specific token types (text, color, icon, typography)
+- Creates component-specific styling
+- Handles both base tokens and component tokens
+
+## Usage of Theme Generator
 
 ### Via NPM Script
 
 ```bash
-npm run create-theme
+npm run create:theme
 ```
 
 ### Directly
@@ -29,37 +74,32 @@ The script will ask you to enter a name for your new theme, then create all the 
 
 ## Generated Structure
 
-- `src/styles/tokens/[theme-name]-colors.scss`: Color tokens
-- `src/styles/tokens/modules/[theme-name]-colors.module.scss`: Color tokens module
-- `src/styles/tokens/[theme-name]-types.scss`: Typography tokens
-- `src/styles/tokens/modules/[theme-name]-types.module.scss`: Typography tokens module
-- `src/icons/[theme-name]/`: Icons directory
-- Theme-specific SCSS files for each component
+- `tokens/platforms/[theme-name]/`: JSON token files
+- `terrazzo/[theme-name]/`: Terrazzo configuration files
+- `terrazzo/[theme-name]/components/`: Terrazzo component configurations
+- Automatic Storybook integration
+- SCSS import statements in relevant files
 
-## Next Steps
+## Next Steps After Theme Generation
 
 After generating your theme, you will need to:
 
-1. Customize color tokens in `src/styles/tokens/[theme-name]-colors.scss`
-2. Customize typography tokens in `src/styles/tokens/[theme-name]-types.scss`
-3. Adapt component SCSS files if necessary
-4. Update your application to include the new theme
+1. Review the Terrazzo configuration files in `terrazzo/[theme-name]/`
+2. Customize token JSON files in `tokens/platforms/[theme-name]/`
+3. Run `npm run scss:build theme=[theme-name]` to build the theme tokens
+4. Launch Storybook with `npm run storybook` to preview your new theme
 
 ## Reference Source
 
-The script uses `figma-ui3` theme as reference for all elements:
+The script now uses the `figma` theme as reference for all elements:
 
-- Colors: `figma-ui3`
-- Typography: `figma-ui3`
-- Icons: `figma-ui3`
+- Token JSON files: `figma`
+- Terrazzo configuration: `figma`
 
-## Contribution
+## Contributing
 
-To modify the script's behavior, you can edit the constants at the beginning of the `scripts/create-theme.js` file:
+When modifying these scripts, please:
 
-```javascript
-// Source theme to copy from - using figma-ui3 for everything
-const SOURCE_COLOR_THEME = 'figma-ui3'
-const SOURCE_TYPE_THEME = 'figma-ui3'
-const SOURCE_ICONS = 'figma-ui3'
-```
+1. Update the documentation in `/docs/` accordingly
+2. Test all functionality before committing
+3. Follow the existing code style and patterns

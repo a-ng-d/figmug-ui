@@ -1,22 +1,22 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .draggable-window {
   position: absolute;
   z-index: 3;
-  outline: var(--draggable_window-border-width) solid
-    var(--draggable_window-border-color);
-  outline-offset: var(--draggable_window-border-offset);
-  box-shadow: var(--draggable_window-shadow);
-  border-radius: var(--draggable_window-radius);
-  background-color: var(--draggable_window-background-color);
-  width: var(--draggable_window-width);
+  outline: var(--draggable-window-border-width) solid
+    var(--draggable-window-border-color);
+  outline-offset: var(--draggable-window-border-offset);
+  box-shadow: var(--draggable-window-shadow);
+  border-radius: var(--draggable-window-radius);
+  background-color: var(--draggable-window-background-color);
+  width: var(--draggable-window-width);
   max-width: 100%;
 
   &__header {
-    --bar-border: var(--draggable_window-header-border);
+    --bar-border: var(--draggable-window-header-border);
+
     cursor: move;
 
     .section-title {
@@ -27,7 +27,10 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: var(--draggable_window-content-gap);
-    padding: var(--draggable_window-content-padding);
+    gap: var(--draggable-window-content-gap);
+    padding: var(--draggable-window-content-padding-top)
+      var(--draggable-window-content-padding-right)
+      var(--draggable-window-content-padding-bottom)
+      var(--draggable-window-content-padding-left);
   }
 }

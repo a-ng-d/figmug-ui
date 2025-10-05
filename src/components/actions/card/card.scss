@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .card {
   display: flex;
@@ -12,11 +11,19 @@
   box-shadow: var(--card-border-offset);
   border-radius: var(--card-radius);
   background-color: var(--card-background-color);
-  padding: var(--card-padding);
+  padding: var(--card-padding-top) var(--card-padding-right)
+    var(--card-padding-bottom) var(--card-padding-left);
   width: var(--card-width);
 
   &--fill {
     width: 100%;
+  }
+
+  & {
+    --card-background-color: var(--card-background-color-default);
+    --card-border-width: var(--card-border-width-default);
+    --card-border-color: var(--card-border-color-default);
+    --card-border-offset: var(--card-border-offset-default);
   }
 
   &:hover {
@@ -50,13 +57,13 @@
     display: flex;
     position: absolute;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+    place-content: center center;
     align-items: center;
     gap: var(--card-actions-gap);
     visibility: hidden;
-    inset: 0 0 0 0;
-    padding: var(--card-actions-padding);
+    inset: 0;
+    padding: var(--card-actions-padding-top) var(--card-actions-padding-right)
+      var(--card-actions-padding-bottom) var(--card-actions-padding-left);
   }
 
   &__text {

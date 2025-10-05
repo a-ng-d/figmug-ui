@@ -1,0 +1,128 @@
+{
+  "card": {
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{size.pos.xsmall}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      }
+    },
+    "width": {
+      "$value": { "value": 200, "unit": "px" },
+      "$type": "dimension"
+    },
+    "ratio": {
+      "$value": "2 / 1",
+      "$type": "string"
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.background.primary}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{sketch.color.background.secondary}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{sketch.color.accent.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "color": {
+        "default": {
+          "$value": "transparent",
+          "$type": "string"
+        },
+        "hover": {
+          "$value": "transparent",
+          "$type": "string"
+        },
+        "focus": {
+          "$value": "{sketch.color.accent.primary}",
+          "$type": "color"
+        }
+      },
+      "width": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "hover": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "focus": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        }
+      },
+      "offset": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "hover": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "focus": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "actions": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "content": {
+      "gap": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

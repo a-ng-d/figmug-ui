@@ -1,0 +1,84 @@
+{
+  "consent": {
+    "background": {
+      "color": {
+        "$value": "{sketch.color.overlay.default}",
+        "$type": "color"
+      }
+    },
+    "banner": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      },
+      "maxWidth": {
+        "$value": {
+          "value": 400,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "background": {
+        "color": {
+          "$value": "{sketch.color.background.primary}",
+          "$type": "color"
+        }
+      },
+      "border": {
+        "width": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{sketch.color.border.primary}",
+          "$type": "color"
+        }
+      }
+    },
+    "list": {
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      },
+      "maxWidth": {
+        "$value": {
+          "value": 400,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      }
+    }
+  }
+}

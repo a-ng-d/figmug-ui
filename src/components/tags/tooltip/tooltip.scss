@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .tooltip {
   position: absolute;
@@ -9,12 +8,12 @@
   transform: translateX(-50%) translateY(0);
   z-index: 3;
   width: auto;
-  min-width: var(--tooltip-min_width);
-  max-width: var(--tooltip-max_width);
+  min-width: var(--tooltip-min-width);
+  max-width: var(--tooltip-max-width);
   pointer-events: none;
   user-select: none;
 
-  &:after {
+  &::after {
     position: absolute;
     left: calc(50% - var(--tooltip-arrow-size));
     border-width: var(--tooltip-arrow-size);
@@ -27,7 +26,7 @@
   &.tooltip--top {
     bottom: calc(100% + var(--tooltip-arrow-size));
 
-    &:after {
+    &::after {
       bottom: 0;
       left: 50%;
       transform: translateX(-50%) translateY(50%) rotate(45deg);
@@ -48,7 +47,7 @@
   &.tooltip--bottom {
     top: calc(100% + var(--tooltip-arrow-size));
 
-    &:after {
+    &::after {
       top: 1px;
       left: 50%;
       transform: translateX(-50%) translateY(-50%) rotate(45deg);
@@ -75,11 +74,13 @@
     box-shadow: var(--tooltip-shadow);
     border-radius: var(--tooltip-radius);
     background-color: var(--tooltip-background-color);
-    padding: var(--tooltip-padding);
+    padding: var(--tooltip-padding-top) var(--tooltip-padding-right)
+      var(--tooltip-padding-bottom) var(--tooltip-padding-left);
   }
 
   &__text {
     --text-color-primary: var(--tooltip-text-color);
+
     text-align: center;
   }
 
@@ -99,8 +100,14 @@
   }
 
   &--withimage {
-    --tooltip-min_width: var(--tooltip-withimage-min_width);
-    --tooltip-padding: var(--tooltip-withimage-padding);
+    --tooltip-min-width: var(--tooltip-with-image-min-width);
+
+    .tooltip__block {
+      padding: var(--tooltip-with-image-padding-top)
+        var(--tooltip-with-image-padding-right)
+        var(--tooltip-with-image-padding-bottom)
+        var(--tooltip-with-image-padding-left);
+    }
 
     .tooltip__text {
       text-align: left;

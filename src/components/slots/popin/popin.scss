@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .popin {
   display: flex;
@@ -14,17 +13,21 @@
   border-radius: var(--popin-radius);
   background-color: var(--popin-background-color);
   width: 100%;
-  min-width: var(--popin-min_width);
-  max-width: var(--popin-max_width);
-  min-height: var(--popin-min_height);
+  min-width: var(--popin-min-width);
+  max-width: var(--popin-max-width);
+  min-height: var(--popin-min-height);
   max-height: 100%;
   overflow: hidden;
   user-select: none;
 
+  & {
+    --popin-shadow: var(--popin-shadow-default);
+  }
+
   &--panel {
-    --popin-max_width: var(--popin-width-panel);
-    --popin-min_width: var(--popin-width-panel);
-    --popin-min_height: 100%;
+    --popin-max-width: var(--popin-width-panel);
+    --popin-min-width: var(--popin-width-panel);
+    --popin-min-height: 100%;
     --popin-radius: 0;
     --popin-shadow: var(--popin-shadow-panel);
   }
@@ -34,8 +37,10 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--popin-header-gap);
-    border-bottom: var(--popin-header-border);
-    padding: var(--popin-header-padding);
+    border-bottom: var(--popin-header-border-width) solid
+      var(--popin-header-border-color);
+    padding: var(--popin-header-padding-top) var(--popin-header-padding-right)
+      var(--popin-header-padding-bottom) var(--popin-header-padding-left);
     height: var(--popin-header-height);
   }
 
@@ -56,7 +61,10 @@
     &--message {
       justify-content: center;
       align-items: center;
-      padding: var(--popin-content-padding-empty);
+      padding: var(--popin-content-padding-empty-top)
+        var(--popin-content-padding-empty-right)
+        var(--popin-content-padding-empty-bottom)
+        var(--popin-content-padding-empty-left);
     }
   }
 
@@ -64,8 +72,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: var(--popin-footer-border);
-    padding: var(--popin-footer-padding);
+    border-top: var(--popin-footer-border-width) solid
+      var(--popin-footer-border-color);
+    padding: var(--popin-footer-padding-top) var(--popin-footer-padding-right)
+      var(--popin-footer-padding-bottom) var(--popin-footer-padding-left);
   }
 
   .popin__actions {
@@ -74,7 +84,7 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (width <= 460px) {
   .popin {
     min-width: unset;
     max-width: unset;
@@ -82,9 +92,10 @@
     min-height: max-content;
 
     &--panel {
-      --popin-max_width: 100%;
-      --popin-min_width: 100%;
-      --popin-min_height: 100%;
+      --popin-max-width: 100%;
+      --popin-min-width: 100%;
+      --popin-min-height: 100%;
+
       height: 100%;
     }
 

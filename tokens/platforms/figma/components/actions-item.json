@@ -1,0 +1,106 @@
+{
+  "actions-item": {
+    "gap": {
+      "$value": "{size.pos.xsmall}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "color": {
+        "$value": "{figma.color.border.disabled}",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "secondary": {
+        "width": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          }
+        },
+        "offset": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "{figma.color.border.selected}",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{figma.color.bg}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{figma.color.bg.hover}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{figma.color.bg.selected}",
+          "$type": "color"
+        }
+      }
+    },
+    "asset": {
+      "minWidth": {
+        "$value": "{size.pos.xxxlarge}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.xxxlarge}",
+        "$type": "dimension"
+      }
+    },
+    "content": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      }
+    },
+    "actions": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

@@ -1,40 +1,39 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .type {
   color: var(--text-color-primary);
-  font-weight: var(--text-default-font_weight);
-  font-size: var(--text-default-font_size);
-  line-height: var(--text-default-line_height);
+  font-weight: var(--text-default-font-weight);
+  font-size: var(--text-default-font-size);
+  line-height: var(--text-default-line-height);
   font-family: var(--text-font-family);
-  letter-spacing: var(--text-default-letter_spacing);
+  letter-spacing: var(--text-default-letter-spacing);
 
   &--small {
-    font-size: var(--text-small-font_size);
-    line-height: var(--text-small-line_height);
-    letter-spacing: var(--text-small-letter_spacing);
+    font-size: var(--text-small-font-size);
+    line-height: var(--text-small-line-height);
+    letter-spacing: var(--text-small-letter-spacing);
   }
 
   &--large {
-    font-size: var(--text-large-font_size);
-    line-height: var(--text-large-line_height);
-    letter-spacing: var(--text-large-letter_spacing);
+    font-size: var(--text-large-font-size);
+    line-height: var(--text-large-line-height);
+    letter-spacing: var(--text-large-letter-spacing);
   }
 
   &--xlarge {
-    font-size: var(--text-xlarge-font_size);
-    line-height: var(--text-xlarge-line_height);
-    letter-spacing: var(--text-xlarge-letter_spacing);
+    font-size: var(--text-xlarge-font-size);
+    line-height: var(--text-xlarge-line-height);
+    letter-spacing: var(--text-xlarge-letter-spacing);
   }
 
   &--medium {
-    font-weight: var(--text-font_weight-medium);
+    font-weight: var(--text-font-weight-medium);
   }
 
   &--bold {
-    font-weight: var(--text-font_weight-bold);
+    font-weight: var(--text-font-weight-bold);
   }
 
   &--truncated {
@@ -71,13 +70,14 @@
   align-items: center;
   gap: var(--text-label-gap);
   cursor: default;
-  padding: var(--text-label-padding);
+  padding: var(--text-label-padding-top) var(--text-label-padding-right)
+    var(--text-label-padding-bottom) var(--text-label-padding-left);
   height: var(--text-label-height);
   color: var(--text-label-color);
-  font-weight: var(--text-label-font_weight);
-  font-size: var(--text-label-font_size);
-  line-height: var(--text-label-line_height);
+  font-weight: var(--text-label-font-weight);
+  font-size: var(--text-label-font-size);
+  line-height: var(--text-label-line-height);
   font-family: var(--text-font-family);
-  letter-spacing: var(--text-label-letter_spacing);
+  letter-spacing: var(--text-label-letter-spacing);
   user-select: none;
 }

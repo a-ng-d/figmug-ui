@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .chip {
   display: inline-flex;
@@ -10,18 +9,28 @@
   gap: var(--chip-gap);
   cursor: default;
   box-sizing: border-box;
-  margin: var(--chip-margin);
+  margin: var(--chip-margin-top) var(--chip-margin-right)
+    var(--chip-margin-bottom) var(--chip-margin-left);
   outline: var(--chip-border-width) solid var(--chip-border-color);
   outline-offset: var(--chip-border-offset);
   border-radius: var(--chip-radius);
   background-color: var(--chip-background-color);
-  padding: var(--chip-padding);
+  padding: var(--chip-padding-top) var(--chip-padding-right)
+    var(--chip-padding-bottom) var(--chip-padding-left);
   max-width: 100%;
   height: var(--chip-height);
   user-select: none;
 
   &--interactive {
     pointer-events: auto;
+
+    & {
+      --chip-background-color: var(--chip-background-color-default);
+      --chip-border-color: var(--chip-border-color-default);
+      --chip-border-offset: var(--chip-border-offset-default);
+      --chip-border-width: var(--chip-border-width-default);
+      --chip-text-color: var(--chip-text-color-default);
+    }
 
     &:hover,
     &:focus {
@@ -48,6 +57,15 @@
 
   .chip__right-slot {
     display: flex;
+  }
+
+  & {
+    --chip-background-color: var(--chip-background-color-default);
+    --chip-border-color: var(--chip-border-color-default);
+    --chip-border-width: var(--chip-border-width-default);
+    --chip-border-offset: var(--chip-border-offset-default);
+    --chip-text-color: var(--chip-text-color-default);
+    --chip-text-weight: var(--chip-text-weight-default);
   }
 
   &--inactive {

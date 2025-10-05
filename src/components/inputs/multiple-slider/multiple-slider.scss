@@ -1,22 +1,24 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .multiple-slider {
   display: flex;
   position: relative;
   align-items: center;
-  margin: var(--multiple_slider-margin);
-  padding: var(--multiple_slider-padding);
+  margin: var(--multiple-slider-margin-top) var(--multiple-slider-margin-right)
+    var(--multiple-slider-margin-bottom) var(--multiple-slider-margin-left);
+  padding: var(--multiple-slider-padding-top)
+    var(--multiple-slider-padding-right) var(--multiple-slider-padding-bottom)
+    var(--multiple-slider-padding-left);
 
   &__range {
     position: relative;
     flex: 1 1 auto;
-    box-shadow: inset 0 0 0 var(--multiple_slider-border-width)
-      var(--multiple_slider-border-color);
-    border-radius: var(--multiple_slider-radius);
-    height: var(--multiple_slider-height);
+    box-shadow: inset 0 0 0 var(--multiple-slider-border-width)
+      var(--multiple-slider-border-color);
+    border-radius: var(--multiple-slider-radius);
+    height: var(--multiple-slider-height);
 
     &--add {
       cursor: copy;
@@ -35,8 +37,11 @@
   &__status {
     display: flex;
     align-items: center;
-    gap: var(--multiple_slider-status-gap);
-    margin: var(--multiple_slider-status-margin);
-    height: var(--multiple_slider-status-height);
+    gap: var(--multiple-slider-status-gap);
+    margin: var(--multiple-slider-status-margin-top)
+      var(--multiple-slider-status-margin-right)
+      var(--multiple-slider-status-margin-bottom)
+      var(--multiple-slider-status-margin-left);
+    height: var(--multiple-slider-status-height);
   }
 }

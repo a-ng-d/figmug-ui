@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .knob {
   display: flex;
@@ -14,11 +13,28 @@
   z-index: 1;
   cursor: ew-resize;
   background: transparent;
-  min-width: var(--knob-min_width);
+  min-width: var(--knob-min-width);
   height: var(--knob-height);
+
+  & {
+    --knob-label-background-color: var(--knob-label-background-color-default);
+    --knob-label-border-color: var(--knob-label-border-color-default);
+    --knob-label-border-width: var(--knob-label-border-width-default);
+    --knob-label-text-color: var(--knob-label-text-color-default);
+    --knob-label-arrow-background-color: var(
+      --knob-label-arrow-background-color-default
+    );
+    --knob-label-arrow-border-color: var(
+      --knob-label-arrow-border-color-default
+    );
+  }
 
   &:hover {
     --knob-label-background-color: var(--knob-label-background-color-hover);
+    --knob-label-arrow-background-color: var(
+      --knob-label-arrow-background-color-hover
+    );
+    --knob-label-arrow-border-color: var(--knob-label-arrow-border-color-hover);
   }
 
   &:focus,
@@ -27,14 +43,10 @@
     --knob-label-background-color: var(--knob-label-background-color-focus);
     --knob-label-border-color: var(--knob-label-border-color-focus);
     --knob-label-border-width: var(--knob-label-border-width-focus);
-    --knob-label-arrow-stroke-inset: var(--knob-label-arrow-stroke-inset-focus);
-    --knob-label-arrow-stroke-width: var(--knob-label-arrow-stroke-width-focus);
-    --knob-label-arrow-stroke-border-color: var(
-      --knob-label-arrow-stroke-border-color-focus
+    --knob-label-arrow-background-color: var(
+      --knob-label-arrow-background-color-focus
     );
-    --knob-label-arrow-fill-border-color: var(
-      --knob-label-arrow-fill-border-color-focus
-    );
+    --knob-label-arrow-border-color: var(--knob-label-arrow-border-color-focus);
   }
 
   &:focus,
@@ -49,11 +61,11 @@
     --knob-label-background-color: var(--knob-label-background-color-disabled);
     --knob-label-border-color: var(--knob-label-border-color-disabled);
     --knob-label-text-color: var(--knob-label-text-color-disabled);
-    --knob-label-arrow-stroke-border-color: var(
-      --knob-label-arrow-stroke-border-color-disabled
+    --knob-label-arrow-background-color: var(
+      --knob-label-arrow-background-color-disabled
     );
-    --knob-label-arrow-fill-border-color: var(
-      --knob-label-arrow-fill-border-color-disabled
+    --knob-label-arrow-border-color: var(
+      --knob-label-arrow-border-color-disabled
     );
   }
 }
@@ -67,7 +79,8 @@
     var(--knob-label-border-color);
   border-radius: var(--knob-label-radius);
   background: var(--knob-label-background-color);
-  padding: var(--knob-label-padding);
+  padding: var(--knob-label-padding-top) var(--knob-label-padding-right)
+    var(--knob-label-padding-bottom) var(--knob-label-padding-left);
   width: 100%;
   height: var(--knob-label-height);
   pointer-events: none;
@@ -75,31 +88,27 @@
   text-align: center;
   --text-color-primary: var(--knob-label-text-color);
 
-  &:before {
-    position: absolute;
-    inset: var(--knob-label-arrow-stroke-inset);
-    border-width: var(--knob-label-arrow-stroke-width);
-    border-style: solid;
-    border-top-color: var(--knob-label-arrow-stroke-border-color);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    width: 0;
-    height: 0;
-    content: '';
+  span {
+    z-index: 2;
   }
 
-  &:after {
+  &::after {
     position: absolute;
-    inset: var(--knob-label-arrow-fill-inset);
-    border-width: var(--knob-label-arrow-fill-width);
-    border-style: solid;
-    border-top-color: var(--knob-label-arrow-fill-border-color);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    width: 0;
-    height: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%) rotate(45deg);
+    transform-origin: 50% 50%;
+    z-index: 1;
+    border-top: transparent;
+    border-right: var(--knob-label-arrow-border-width) solid
+      var(--knob-label-arrow-border-color);
+    border-bottom: var(--knob-label-arrow-border-width) solid
+      var(--knob-label-arrow-border-color);
+    border-left: transparent;
+    border-radius: var(--knob-label-arrow-radius);
+    background-color: var(--knob-label-arrow-background-color);
+    width: var(--knob-label-arrow-width);
+    height: var(--knob-label-arrow-height);
     content: '';
   }
 }
@@ -111,24 +120,35 @@
   transform: translateX(-50%) translateY(-100%);
   border-radius: var(--knob-tooltip-radius);
   background-color: var(--knob-tooltip-background-color);
-  padding: var(--knob-tooltip-padding);
-  min-width: var(--knob-tooltip-min_width);
+  padding: var(--knob-tooltip-padding-top) var(--knob-tooltip-padding-right)
+    var(--knob-tooltip-padding-bottom) var(--knob-tooltip-padding-left);
+  min-width: var(--knob-tooltip-min-width);
   pointer-events: none;
   color: var(--knob-tooltip-text-color);
   user-select: none;
   text-align: center;
 
-  &:after {
+  span {
+    z-index: 2;
+  }
+
+  &::after {
     position: absolute;
-    inset: var(--knob-tooltip-arrow-inset);
-    border-width: var(--knob-tooltip-arrow-width);
-    border-style: solid;
-    border-top-color: var(--knob-tooltip-background-color);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    width: 0;
-    height: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%) rotate(45deg);
+    transform-origin: 50% 50%;
+    z-index: 1;
+    border-top: transparent;
+    border-right: var(--knob-tooltip-arrow-border-width) solid
+      var(--knob-tooltip-arrow-border-color);
+    border-bottom: var(--knob-tooltip-arrow-border-width) solid
+      var(--knob-tooltip-arrow-border-color);
+    border-left: transparent;
+    border-radius: var(--knob-tooltip-arrow-radius);
+    background-color: var(--knob-tooltip-arrow-background-color);
+    width: var(--knob-tooltip-arrow-width);
+    height: var(--knob-tooltip-arrow-height);
     content: '';
   }
 }
@@ -151,6 +171,7 @@
   box-shadow: var(--knob-input-shadow);
   border-radius: var(--knob-input-radius);
   background-color: var(--knob-input-background-color);
-  padding: var(--knob-input-padding);
+  padding: var(--knob-input-padding-top) var(--knob-input-padding-right)
+    var(--knob-input-padding-bottom) var(--knob-input-padding-left);
   width: var(--knob-input-width);
 }

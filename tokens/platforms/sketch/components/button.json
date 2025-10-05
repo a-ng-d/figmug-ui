@@ -1,0 +1,1492 @@
+{
+  "button": {
+    "base": {
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "gap": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "radius": {
+        "$value": "{border.radius.large}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        }
+      },
+      "background": {
+        "color": {
+          "$value": "transparent",
+          "$type": "string"
+        }
+      },
+      "border": {
+        "color": {
+          "$value": "transparent",
+          "$type": "string"
+        },
+        "width": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "offset": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "text": {
+        "color": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "font": {
+          "family": {
+            "$value": "{font.stack}",
+            "$type": "fontFamily"
+          },
+          "size": {
+            "$value": "{font.size.medium}",
+            "$type": "dimension"
+          },
+          "weight": {
+            "$value": "{font.weight.bold}",
+            "$type": "fontWeight"
+          }
+        },
+        "letterSpacing": {
+          "$value": "{font.letterSpacing.pos.small}",
+          "$type": "dimension"
+        },
+        "lineHeight": {
+          "$value": "{font.lineHeight.default}",
+          "$type": "dimension"
+        },
+        "decoration": {
+          "$value": "none",
+          "$type": "string"
+        },
+        "transform": {
+          "$value": "none",
+          "$type": "string"
+        }
+      },
+      "icon": {
+        "color": {
+          "$value": "{sketch.color.foreground.primary}",
+          "$type": "color"
+        },
+        "width": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "height": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
+      },
+      "caret": {
+        "width": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "height": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "small": {
+      "height": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "large": {
+      "height": {
+        "$value": "{size.pos.large}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "status": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      }
+    },
+    "primary": {
+      "background": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.accent.secondary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.secondary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.accent.tertiary}",
+            "$type": "color"
+          }
+        }
+      },
+      "border": {
+        "width": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "offset": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.tertiary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "none",
+            "$type": "string"
+          }
+        }
+      },
+      "text": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.foreground.onaccent.disabled}",
+            "$type": "color"
+          }
+        },
+        "decoration": {
+          "default": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "disabled": {
+            "$value": "none",
+            "$type": "string"
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.foreground.onaccent.disabled}",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "secondary": {
+      "background": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.background.secondary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.background.secondary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.background.secondary}",
+            "$type": "color"
+          }
+        }
+      },
+      "border": {
+        "width": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          }
+        },
+        "offset": {
+          "default": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "{sketch.color.border.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.border.primary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.border.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.border.disabled}",
+            "$type": "color"
+          }
+        }
+      },
+      "text": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.foreground.disabled}",
+            "$type": "color"
+          }
+        },
+        "decoration": {
+          "default": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "disabled": {
+            "$value": "none",
+            "$type": "string"
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.foreground.tertiary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.foreground.tertiary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.foreground.tertiary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.foreground.tertiary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.foreground.disabled}",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "tertiary": {
+      "text": {
+        "font": {
+          "size": {
+            "$value": "{font.size.medium}",
+            "$type": "dimension"
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.accent.tertiary}",
+            "$type": "color"
+          }
+        },
+        "decoration": {
+          "default": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "underline",
+            "$type": "string"
+          },
+          "disabled": {
+            "$value": "none",
+            "$type": "string"
+          }
+        }
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "background": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          }
+        }
+      },
+      "border": {
+        "width": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "offset": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "disabled": {
+            "$value": "transparent",
+            "$type": "string"
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "destructive": {
+      "background": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.accent.error}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.foreground.error}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.foreground.error}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.error}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.background.error}",
+            "$type": "color"
+          }
+        }
+      },
+      "border": {
+        "width": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "offset": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "{sketch.color.border.tertiary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "transparent",
+            "$type": "string"
+          }
+        }
+      },
+      "text": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.foreground.onaccent.disabled}",
+            "$type": "color"
+          }
+        },
+        "decoration": {
+          "default": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "disabled": {
+            "$value": "none",
+            "$type": "string"
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.foreground.onaccent}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.foreground.onaccent.disabled}",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "alternative": {
+      "background": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.accent.tertiary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.accent.tertiary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          }
+        }
+      },
+      "border": {
+        "width": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "offset": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "transparent",
+            "$type": "string"
+          }
+        }
+      },
+      "text": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.accent.tertiary}",
+            "$type": "color"
+          }
+        },
+        "decoration": {
+          "default": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "none",
+            "$type": "string"
+          },
+          "disabled": {
+            "$value": "none",
+            "$type": "string"
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.accent.tertiary}",
+            "$type": "color"
+          }
+        }
+      }
+    }
+  },
+  "iconButton": {
+    "base": {
+      "width": {
+        "$value": "{size.pos.large}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "radius": {
+        "$value": "{border.radius.large}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "background": {
+        "color": {
+          "$value": "transparent",
+          "$type": "string"
+        }
+      },
+      "border": {
+        "color": {
+          "$value": "transparent",
+          "$type": "string"
+        },
+        "width": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "offset": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      },
+      "text": {
+        "color": {
+          "$value": "{sketch.color.background.secondary}",
+          "$type": "color"
+        }
+      },
+      "icon": {
+        "color": {
+          "$value": "{sketch.color.background.secondary}",
+          "$type": "color"
+        },
+        "width": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "height": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
+      },
+      "notification": {
+        "width": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "height": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "radius": {
+          "$value": "{border.radius.full}",
+          "$type": "dimension"
+        },
+        "top": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "border": {
+          "width": {
+            "$value": "{size.pos.xunit}",
+            "$type": "dimension"
+          },
+          "offset": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        }
+      }
+    },
+    "small": {
+      "width": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      }
+    },
+    "large": {
+      "width": {
+        "$value": "{size.pos.xlarge}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.large}",
+        "$type": "dimension"
+      }
+    },
+    "default": {
+      "background": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.background.secondary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.background.secondary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.background.primary}",
+            "$type": "color"
+          },
+          "onselected": {
+            "$value": "{sketch.color.accent.tertiary}",
+            "$type": "color",
+            "hover": {
+              "$value": "{sketch.color.accent.tertiary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
+              "$type": "color"
+            }
+          }
+        }
+      },
+      "border": {
+        "width": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "offset": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "transparent",
+            "$type": "string"
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.foreground.tertiary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.foreground.disabled}",
+            "$type": "color"
+          }
+        }
+      },
+      "notification": {
+        "background": {
+          "color": {
+            "default": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "pressed": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.tertiary}",
+              "$type": "color"
+            }
+          }
+        },
+        "border": {
+          "color": {
+            "default": {
+              "$value": "{sketch.color.background.primary}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{sketch.color.background.tertiary}",
+              "$type": "color"
+            },
+            "pressed": {
+              "$value": "{sketch.color.background.tertiary}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{sketch.color.background.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.background.secondary}",
+              "$type": "color"
+            }
+          }
+        }
+      }
+    },
+    "selected": {
+      "background": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.accent.tertiary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.accent.tertiary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.accent.disabled}",
+            "$type": "color"
+          }
+        }
+      },
+      "border": {
+        "width": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "offset": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "pressed": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "color": {
+          "default": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "hover": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "pressed": {
+            "$value": "transparent",
+            "$type": "string"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "transparent",
+            "$type": "string"
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "default": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "pressed": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{sketch.color.accent.tertiary}",
+            "$type": "color"
+          }
+        }
+      },
+      "notification": {
+        "background": {
+          "color": {
+            "default": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "pressed": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.tertiary}",
+              "$type": "color"
+            }
+          }
+        },
+        "border": {
+          "color": {
+            "default": {
+              "$value": "{sketch.color.accent.disabled}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{sketch.color.accent.tertiary}",
+              "$type": "color"
+            },
+            "pressed": {
+              "$value": "{sketch.color.accent.tertiary}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{sketch.color.accent.disabled}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
+              "$type": "color"
+            }
+          }
+        }
+      }
+    }
+  }
+}

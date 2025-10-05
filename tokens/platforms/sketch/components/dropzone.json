@@ -1,0 +1,98 @@
+{
+  "dropzone": {
+    "padding": {
+      "top": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      }
+    },
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "minWidth": {
+      "$value": {
+        "value": 200,
+        "unit": "px"
+      },
+      "$type": "dimension"
+    },
+    "minHeight": {
+      "$value": {
+        "value": 200,
+        "unit": "px"
+      },
+      "$type": "dimension"
+    },
+    "border": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.border.secondary}",
+          "$type": "color"
+        },
+        "over": {
+          "$value": "{sketch.color.accent.primary}",
+          "$type": "color"
+        }
+      },
+      "width": {
+        "default": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "over": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        }
+      },
+      "offset": {
+        "default": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "over": {
+          "$value": "{size.neg.xunit}",
+          "$type": "dimension"
+        }
+      },
+      "style": {
+        "default": {
+          "$value": "dashed",
+          "$type": "string"
+        },
+        "over": {
+          "$value": "solid",
+          "$type": "string"
+        }
+      }
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{sketch.color.background.primary}",
+          "$type": "color"
+        },
+        "over": {
+          "$value": "{sketch.color.accent.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "radius": {
+      "$value": "{border.radius.medium}",
+      "$type": "dimension"
+    }
+  }
+}

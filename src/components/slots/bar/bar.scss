@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .bar {
   display: flex;
@@ -12,7 +11,13 @@
   box-sizing: border-box;
   background-color: var(--bar-background-color);
   padding: var(--bar-padding);
-  min-height: var(--bar-min_height);
+  min-height: var(--bar-min-height);
+
+  & {
+    --bar-padding: var(--bar-padding-default-top)
+      var(--bar-padding-default-right) var(--bar-padding-default-bottom)
+      var(--bar-padding-default-left);
+  }
 
   &.bar--compact {
     height: var(--bar-height-compact);
@@ -27,6 +32,7 @@
       display: flex;
       justify-content: center;
     }
+
     & .bar__solo {
       display: flex;
       justify-content: center;
@@ -38,6 +44,7 @@
       display: flex;
       justify-content: center;
     }
+
     & .bar__solo {
       display: flex;
       justify-content: center;
@@ -47,9 +54,11 @@
   &__left {
     flex: 1;
   }
+
   &__right {
     flex: 0;
   }
+
   &__solo {
     flex: 1;
   }
@@ -58,13 +67,14 @@
     .bar__left {
       flex: 0;
     }
+
     .bar__right {
       flex: 1;
     }
   }
 }
 
-@media (max-width: 460px) {
+@media (width <= 460px) {
   .bar--reflow {
     flex-direction: column;
     --bar-padding: var(--bar-padding-mobile);

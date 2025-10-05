@@ -1,7 +1,6 @@
-@import 'figma-ui2';
-@import 'figma-ui3';
-@import 'penpot';
-@import 'sketch';
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
 
 .select-menu {
   display: flex;
@@ -37,9 +36,19 @@
     border: none;
     border-radius: var(--dropdown-radius);
     background-color: var(--dropdown-background-color);
-    padding: var(--dropdown-padding);
+    padding: var(--dropdown-padding-top) var(--dropdown-padding-right)
+      var(--dropdown-padding-bottom) var(--dropdown-padding-left);
     width: auto;
     height: var(--dropdown-height);
+
+    & {
+      --dropdown-background-color: var(--dropdown-background-color-default);
+      --dropdown-border-color: var(--dropdown-border-color-default);
+      --dropdown-border-width: var(--dropdown-border-width-default);
+      --dropdown-border-offset: var(--dropdown-border-offset-default);
+      --dropdown-caret-color: var(--dropdown-caret-color-default);
+      --dropdown-text-color: var(--dropdown-text-color-default);
+    }
 
     &:hover {
       --dropdown-background-color: var(--dropdown-background-color-hover);
@@ -71,6 +80,7 @@
 
   .select-menu__label {
     --text-color-primary: var(--dropdown-text-color);
+
     pointer-events: none;
   }
 
@@ -92,7 +102,9 @@
     display: flex;
     align-items: center;
     gap: var(--dropdown-status-gap);
-    margin: var(--dropdown-status-margin);
+    margin: var(--dropdown-status-margin-top)
+      var(--dropdown-status-margin-right) var(--dropdown-status-margin-bottom)
+      var(--dropdown-status-margin-left);
     height: var(--dropdown-status-height);
   }
 
