@@ -147,29 +147,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.package_version.outputs.tag }}
-          release_name: Release ${{ steps.package_version.outputs.tag }}
+          release_name: ${{ steps.package_version.outputs.tag }}
           body: ${{ steps.release_notes.outputs.notes }}
           draft: false
           prerelease: false
-
-      - name: Comment on PR
-        if: steps.check_tag.outputs.tag_exists == 'false'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const tag = "${{ steps.package_version.outputs.tag }}";
-            const releaseUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/releases/tag/${tag}`;
-            
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: ${{ github.event.pull_request.number }},
-              body: `🚀 **Release ${tag} has been created!**
-              
-              **Release Notes:** ${releaseUrl}
-              
-              The release was automatically created from this merged pull request.`
-            });
 
       - name: Skip release (tag exists)
         if: steps.check_tag.outputs.tag_exists == 'true'
