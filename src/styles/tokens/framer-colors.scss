@@ -6,6 +6,10 @@
   --framer-color-bg: #ffffff;
   --framer-color-bg-secondary: #eeeeee;
   --framer-color-bg-tertiary: #f3f3f3;
+  --framer-color-destructive: #ff3366;
+  --framer-color-destructive-dark: #ee2255;
+  --framer-color-destructive-dimmed: #ff33661a;
+  --framer-color-destructive-extra-dark: #dd1144;
   --framer-color-divider: #eeeeee;
   --framer-color-text: #333333;
   --framer-color-text-reversed: #ffffff;
@@ -14,6 +18,44 @@
   --framer-color-tint: #0099ff;
   --framer-color-tint-dark: #0088ff;
   --framer-color-tint-dimmed: #0099ff1a;
+  --framer-color-tint-extra-dark: #0077ff;
+}
+
+[data-mode="framer-light"] {
+  --framer-color-bg: #ffffff;
+  --framer-color-bg-secondary: #eeeeee;
+  --framer-color-bg-tertiary: #f3f3f3;
+  --framer-color-destructive: #ff3366;
+  --framer-color-destructive-dark: #ee2255;
+  --framer-color-destructive-dimmed: #ff33661a;
+  --framer-color-destructive-extra-dark: #dd1144;
+  --framer-color-divider: #eeeeee;
+  --framer-color-text: #333333;
+  --framer-color-text-reversed: #ffffff;
+  --framer-color-text-secondary: #666666;
+  --framer-color-text-tertiary: #999999;
+  --framer-color-tint: #0099ff;
+  --framer-color-tint-dark: #0088ff;
+  --framer-color-tint-dimmed: #0099ff1a;
+  --framer-color-tint-extra-dark: #0077ff;
+}
+
+[data-mode="framer-dark"] {
+  --framer-color-bg: #111111;
+  --framer-color-bg-secondary: #1d1d1d;
+  --framer-color-bg-tertiary: #2b2b2b;
+  --framer-color-destructive: #ff3366;
+  --framer-color-destructive-dark: #ee1155;
+  --framer-color-destructive-dimmed: #ff336626;
+  --framer-color-destructive-extra-dark: #cf2e55;
+  --framer-color-divider: #252525;
+  --framer-color-text: #ffffff;
+  --framer-color-text-reversed: #ffffff;
+  --framer-color-text-secondary: #cccccc;
+  --framer-color-text-tertiary: #777777;
+  --framer-color-tint: #0099ff;
+  --framer-color-tint-dark: #0088ff;
+  --framer-color-tint-dimmed: #0099ff26;
   --framer-color-tint-extra-dark: #0077ff;
 }
 

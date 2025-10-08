@@ -37,10 +37,6 @@
         "$value": "{font.size.small}",
         "$type": "dimension"
       },
-      "fontWeight": {
-        "$value": "{font.weight.normal}",
-        "$type": "fontWeight"
-      },
       "lineHeight": {
         "$value": "{font.lineHeight.default}",
         "$type": "dimension"
