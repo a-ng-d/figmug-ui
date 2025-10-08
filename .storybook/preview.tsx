@@ -23,7 +23,7 @@ const withTheme: Decorator = (Story, context) => {
         'sketch-light': '#ffffff',
         'sketch-dark': '#202022',
         'framer-light': '#ffffff',
-        'framer-dark': '#202022',
+        'framer-dark': '#111111',
       }
 
       const bgValue = backgroundMap[modes as keyof typeof backgroundMap]
