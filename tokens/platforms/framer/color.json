@@ -26,7 +26,7 @@
           "$extensions": {
             "mode": {
               "framer-light": "#f3f3f3",
-              "framer-dark": "#2B2B2B"
+              "framer-dark": "#2b2b2b"
             }
           }
         }
@@ -77,6 +77,46 @@
             "mode": {
               "framer-light": "#0077FF",
               "framer-dark": "#0077FF"
+            }
+          }
+        }
+      },
+      "destructive": {
+        "$type": "color",
+        "$value": "#ff3366",
+        "$extensions": {
+          "mode": {
+            "framer-light": "#ff3366",
+            "framer-dark": "#ff3366"
+          }
+        },
+        "dimmed": {
+          "$type": "color",
+          "$value": "rgba(255, 51, 102, .1)",
+          "$extensions": {
+            "mode": {
+              "framer-light": "rgba(255, 51, 102, .1)",
+              "framer-dark": "rgba(255, 51, 102, 0.15)"
+            }
+          }
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "#ee2255",
+          "$extensions": {
+            "mode": {
+              "framer-light": "#ee2255",
+              "framer-dark": "#ee1155"
+            }
+          }
+        },
+        "extraDark": {
+          "$type": "color",
+          "$value": "#dd1144",
+          "$extensions": {
+            "mode": {
+              "framer-light": "#dd1144",
+              "framer-dark": "#cf2e55"
             }
           }
         }

@@ -102,6 +102,24 @@
           "$value": "{size.pos.small}",
           "$type": "dimension"
         }
+      },
+      "with-color": {
+        "top": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
       }
     },
     "clearable": {
