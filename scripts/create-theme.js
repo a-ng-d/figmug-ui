@@ -181,6 +181,15 @@ function replaceAllThemeNames(content, newThemeName) {
   // Replace all patterns for each theme
   for (const oldTheme of existingThemes)
     updatedContent = updatedContent
+      .replace(
+        new RegExp(`\\${oldTheme}-light\\`, 'g'),
+        `${newThemeName}-light`
+      )
+      .replace(
+        new RegExp(`\\${oldTheme}-light\\`, 'g'),
+        `${newThemeName}-light`
+      )
+      .replace(new RegExp(`\\${oldTheme}-dark\\`, 'g'), `${newThemeName}-dark`)
       // Data attributes with double quotes
       .replace(
         new RegExp(`\\[data-theme="${oldTheme}"\\]`, 'g'),
