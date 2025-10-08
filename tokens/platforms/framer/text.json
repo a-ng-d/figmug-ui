@@ -6,19 +6,19 @@
     },
     "color": {
       "primary": {
-        "$value": "{figma.color.text}",
+        "$value": "{framer.color.text}",
         "$type": "color"
       },
       "secondary": {
-        "$value": "{figma.color.text.secondary}",
+        "$value": "{framer.color.text.secondary}",
         "$type": "color"
       },
       "tertiary": {
-        "$value": "{figma.color.text.tertiary}",
+        "$value": "{framer.color.text.tertiary}",
         "$type": "color"
       },
       "inverse": {
-        "$value": "{figma.color.text.oninverse}",
+        "$value": "{framer.color.text.reversed}",
         "$type": "color"
       }
     },
@@ -34,7 +34,7 @@
     },
     "default": {
       "fontSize": {
-        "$value": "{font.size.xsmall}",
+        "$value": "{font.size.small}",
         "$type": "dimension"
       },
       "lineHeight": {
@@ -48,7 +48,7 @@
     },
     "small": {
       "fontSize": {
-        "$value": "{font.size.small}",
+        "$value": "{font.size.xsmall}",
         "$type": "dimension"
       },
       "lineHeight": {
@@ -90,7 +90,7 @@
     },
     "link": {
       "color": {
-        "$value": "{figma.color.text.brand}",
+        "$value": "{framer.color.tint.dark}",
         "$type": "color"
       },
       "decoration": {
@@ -108,7 +108,7 @@
     },
     "label": {
       "color": {
-        "$value": "{figma.color.text.tertiary}",
+        "$value": "{framer.color.text.tertiary}",
         "$type": "color"
       },
       "fontSize": {
