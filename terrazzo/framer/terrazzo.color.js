@@ -10,16 +10,12 @@ export default defineConfig({
       legacyHex: true,
       modeSelectors: [
         {
-          mode: 'figma-light',
+          mode: 'framer-light',
           selectors: ['[data-mode="framer-light"]'],
         },
         {
-          mode: 'figma-dark',
+          mode: 'framer-dark',
           selectors: ['[data-mode="framer-dark"]'],
-        },
-        {
-          mode: 'figjam',
-          selectors: ['[data-mode="figjam"]'],
         },
       ],
     }),
