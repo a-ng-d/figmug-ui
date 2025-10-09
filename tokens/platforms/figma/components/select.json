@@ -39,24 +39,6 @@
         "$value": "{size.pos.xxsmall}",
         "$type": "dimension"
       },
-      "margin": {
-        "top": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.pos.xxsmall}",
-          "$type": "dimension"
-        }
-      },
       "height": {
         "$value": "{size.pos.medium}",
         "$type": "dimension"
@@ -67,41 +49,9 @@
         "$value": "{size.pos.medium}",
         "$type": "dimension"
       },
-      "padding": {
-        "top": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.pos.xxsmall}",
-          "$type": "dimension"
-        }
-      },
-      "margin": {
-        "top": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        }
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
       }
     },
     "box": {
@@ -116,24 +66,6 @@
       "radius": {
         "$value": "{border.radius.medium}",
         "$type": "dimension"
-      },
-      "margin": {
-        "top": {
-          "$value": "{size.neg.unit}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.pos.xxsmall}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.neg.xxsmall}",
-          "$type": "dimension"
-        }
       },
       "border": {
         "default": {
@@ -258,39 +190,21 @@
         },
         "position": {
           "top": {
-            "$value": "{size.pos.unit}",
+            "$value": "{size.neg.xxxsmall}",
             "$type": "dimension"
           },
           "left": {
-            "$value": "{size.neg.xxsmall}",
+            "$value": "{size.neg.xxxsmall}",
             "$type": "dimension"
           }
         },
         "width": {
-          "$value": "{size.pos.medium}",
+          "$value": "{size.pos.small}",
           "$type": "dimension"
         },
         "height": {
-          "$value": "{size.pos.medium}",
+          "$value": "{size.pos.small}",
           "$type": "dimension"
-        },
-        "margin": {
-          "top": {
-            "$value": "{size.null}",
-            "$type": "dimension"
-          },
-          "right": {
-            "$value": "{size.null}",
-            "$type": "dimension"
-          },
-          "bottom": {
-            "$value": "{size.null}",
-            "$type": "dimension"
-          },
-          "left": {
-            "$value": "{size.neg.xsmall}",
-            "$type": "dimension"
-          }
         },
         "color": {
           "default": {
@@ -309,79 +223,23 @@
         "$value": "{size.pos.medium}",
         "$type": "dimension"
       },
-      "padding": {
-        "top": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.pos.xxsmall}",
-          "$type": "dimension"
-        }
-      },
-      "margin": {
-        "top": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        }
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
       }
     },
     "toggle": {
       "height": {
-        "$value": {
-          "value": 10,
-          "unit": "px"
-        },
+        "$value": "{size.pos.xmsmall}",
         "$type": "dimension"
       },
       "width": {
-        "$value": {
-          "value": 22,
-          "unit": "px"
-        },
+        "$value": "{size.pos.small}",
         "$type": "dimension"
       },
       "radius": {
         "$value": "{size.pos.xxsmall}",
         "$type": "dimension"
-      },
-      "margin": {
-        "top": {
-          "$value": "{size.pos.xunit}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.pos.xxsmall}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.neg.xxsmall}",
-          "$type": "dimension"
-        }
       },
       "background": {
         "color": {
@@ -554,27 +412,24 @@
         "transform": {
           "default": {
             "translateX": {
-              "$value": "{size.null}",
+              "$value": "{size.pos.unit}",
               "$type": "dimension"
             },
             "translateY": {
-              "$value": {
-                "value": 3,
-                "unit": "px"
-              },
+              "$value": "{size.pos.unit}",
               "$type": "dimension"
             }
           },
           "checked": {
             "translateX": {
-              "$value": "{size.pos.xmsmall}",
+              "$value": {
+                "value": 13,
+                "unit": "px"
+              },
               "$type": "dimension"
             },
             "translateY": {
-              "$value": {
-                "value": 3,
-                "unit": "px"
-              },
+              "$value": "{size.pos.unit}",
               "$type": "dimension"
             }
           }
@@ -608,41 +463,9 @@
         "$value": "{size.pos.medium}",
         "$type": "dimension"
       },
-      "padding": {
-        "top": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.pos.xxsmall}",
-          "$type": "dimension"
-        }
-      },
-      "margin": {
-        "top": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.neg.xsmall}",
-          "$type": "dimension"
-        }
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
       }
     },
     "button": {
@@ -663,39 +486,20 @@
           "$value": "{size.pos.xxsmall}",
           "$type": "dimension"
         },
-        "top": {
-          "$value": "{size.pos.xxxsmall}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": {
-            "value": 5,
-            "unit": "px"
+        "position": {
+          "top": {
+            "$value": "{size.pos.xxxsmall}",
+            "$type": "dimension"
           },
-          "$type": "dimension"
+          "left": {
+            "$value": "{size.pos.xxxsmall}",
+            "$type": "dimension"
+          }
         }
       },
       "radius": {
         "$value": "{border.radius.full}",
         "$type": "dimension"
-      },
-      "margin": {
-        "top": {
-          "$value": "{size.neg.unit}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.pos.xxsmall}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.neg.xxsmall}",
-          "$type": "dimension"
-        }
       },
       "icon": {
         "color": {
