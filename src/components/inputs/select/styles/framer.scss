@@ -4,9 +4,9 @@
 
 :root[data-theme="framer"] {
   --select-box-background-color-checked-default: var(--framer-color-tint);
-  --select-box-background-color-checked-disabled: var(--framer-color-bg-tertiary);
-  --select-box-background-color-default: var(--framer-color-bg-secondary);
-  --select-box-background-color-disabled: var(--framer-color-bg-tertiary);
+  --select-box-background-color-checked-disabled: var(--framer-color-bg-secondary);
+  --select-box-background-color-default: var(--framer-color-bg-tertiary);
+  --select-box-background-color-disabled: var(--framer-color-bg-secondary);
   --select-box-border-checked-default-color: transparent;
   --select-box-border-checked-default-width: var(--size-null);
   --select-box-border-checked-disabled-color: transparent;
@@ -35,9 +35,9 @@
   --select-box-tick-width: var(--size-pos-msmall);
   --select-box-width: var(--size-pos-xmsmall);
   --select-button-background-color-checked-default: var(--framer-color-tint);
-  --select-button-background-color-checked-disabled: var(--framer-color-bg-tertiary);
-  --select-button-background-color-default: var(--framer-color-bg-secondary);
-  --select-button-background-color-disabled: var(--framer-color-bg-tertiary);
+  --select-button-background-color-checked-disabled: var(--framer-color-bg-secondary);
+  --select-button-background-color-default: var(--framer-color-bg-tertiary);
+  --select-button-background-color-disabled: var(--framer-color-bg-secondary);
   --select-button-border-checked-default-color: transparent;
   --select-button-border-checked-default-width: var(--size-null);
   --select-button-border-checked-disabled-color: transparent;
@@ -80,9 +80,9 @@
   --select-text-letter-spacing: var(--font-letter-spacing-pos-medium);
   --select-text-line-height: var(--font-line-height-default);
   --select-toggle-background-color-checked-default: var(--framer-color-tint);
-  --select-toggle-background-color-checked-disabled: var(--framer-color-bg-tertiary);
-  --select-toggle-background-color-default: var(--framer-color-bg-secondary);
-  --select-toggle-background-color-disabled: var(--framer-color-bg-tertiary);
+  --select-toggle-background-color-checked-disabled: var(--framer-color-bg-secondary);
+  --select-toggle-background-color-default: var(--framer-color-bg-tertiary);
+  --select-toggle-background-color-disabled: var(--framer-color-bg-secondary);
   --select-toggle-border-checked-default-color: transparent;
   --select-toggle-border-checked-default-width: var(--size-null);
   --select-toggle-border-checked-disabled-color: transparent;

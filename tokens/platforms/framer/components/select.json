@@ -164,7 +164,7 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{framer.color.bg.secondary}",
+            "$value": "{framer.color.bg.tertiary}",
             "$type": "color"
           },
           "checked": {
@@ -173,12 +173,12 @@
               "$type": "color"
             },
             "disabled": {
-              "$value": "{framer.color.bg.tertiary}",
+              "$value": "{framer.color.bg.secondary}",
               "$type": "color"
             }
           },
           "disabled": {
-            "$value": "{framer.color.bg.tertiary}",
+            "$value": "{framer.color.bg.secondary}",
             "$type": "color"
           }
         }
@@ -244,7 +244,7 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{framer.color.bg.secondary}",
+            "$value": "{framer.color.bg.tertiary}",
             "$type": "color"
           },
           "checked": {
@@ -253,12 +253,12 @@
               "$type": "color"
             },
             "disabled": {
-              "$value": "{framer.color.bg.tertiary}",
+              "$value": "{framer.color.bg.secondary}",
               "$type": "color"
             }
           },
           "disabled": {
-            "$value": "{framer.color.bg.tertiary}",
+            "$value": "{framer.color.bg.secondary}",
             "$type": "color"
           }
         }
@@ -515,7 +515,7 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{framer.color.bg.secondary}",
+            "$value": "{framer.color.bg.tertiary}",
             "$type": "color"
           },
           "checked": {
@@ -524,12 +524,12 @@
               "$type": "color"
             },
             "disabled": {
-              "$value": "{framer.color.bg.tertiary}",
+              "$value": "{framer.color.bg.secondary}",
               "$type": "color"
             }
           },
           "disabled": {
-            "$value": "{framer.color.bg.tertiary}",
+            "$value": "{framer.color.bg.secondary}",
             "$type": "color"
           }
         }

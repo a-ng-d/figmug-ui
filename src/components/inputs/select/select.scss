@@ -35,8 +35,9 @@
 
   &__slot {
     position: relative;
-    width: var(--select-box-width);
-    height: var(--select-box-height);
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
   }
 
   &__label {
@@ -64,6 +65,9 @@
     padding: 0;
     width: var(--select-box-width);
     height: var(--select-box-height);
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
 
     &__background {
       display: block;
@@ -73,8 +77,7 @@
       outline: var(--select-box-border-secondary-width-default) solid
         var(--select-box-border-secondary-color-default);
       outline-offset: var(--select-box-border-secondary-offset-default);
-      border: var(--select-box-border-default-width) solid
-        var(--select-box-border-default-color);
+      box-shadow: inset 0 0 0 var(--select-box-border-default-width) var(--select-box-border-default-color);
       border-radius: var(--select-box-radius);
       background: var(--select-box-background-color-default);
       width: var(--select-box-width);
@@ -102,8 +105,7 @@
     }
 
     &:checked ~ .checkbox__box__background {
-      border: var(--select-box-border-checked-default-width) solid
-        var(--select-box-border-checked-default-color);
+      box-shadow: inset 0 0 0 var(--select-box-border-checked-default-width) var(--select-box-border-checked-default-color);
       background: var(--select-box-background-color-checked-default);
     }
 
@@ -124,14 +126,12 @@
     }
 
     &:disabled:checked ~ .checkbox__box__background {
-      border: var(--select-box-border-checked-disabled-width) solid
-        var(--select-box-border-checked-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-box-border-checked-disabled-width) var(--select-box-border-checked-disabled-color);
       background: var(--select-box-background-color-checked-disabled);
     }
 
     &:disabled ~ .checkbox__box__background {
-      border: var(--select-box-border-disabled-width) solid
-        var(--select-box-border-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-box-border-disabled-width) var(--select-box-border-disabled-color);
       background: var(--select-box-background-color-disabled);
     }
 
@@ -147,8 +147,9 @@
 
   &__slot {
     position: relative;
-    width: var(--select-toggle-width);
-    height: var(--select-toggle-height);
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
   }
 
   &__label {
@@ -176,6 +177,9 @@
     padding: 0;
     width: var(--select-toggle-width);
     height: var(--select-toggle-height);
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
 
     &__background {
       display: block;
@@ -187,8 +191,7 @@
       outline: var(--select-toggle-border-secondary-width-default) solid
         var(--select-toggle-border-secondary-color-default);
       outline-offset: var(--select-toggle-border-secondary-offset-default);
-      border: var(--select-toggle-border-default-width) solid
-        var(--select-toggle-border-default-color);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-default-width) var(--select-toggle-border-default-color);
       border-radius: var(--select-toggle-radius);
       background-color: var(--select-toggle-background-color-default);
       width: var(--select-toggle-width);
@@ -214,8 +217,7 @@
     }
 
     &:checked ~ .switch__toggle__background {
-      border: var(--select-toggle-border-checked-default-width) solid
-        var(--select-toggle-border-checked-default-color);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-checked-default-width) var(--select-toggle-border-checked-default-color);
       background-color: var(--select-toggle-background-color-checked-default);
     }
 
@@ -244,8 +246,7 @@
     }
 
     &:disabled ~ .switch__toggle__background {
-      border: var(--select-toggle-border-disabled-width) solid
-        var(--select-toggle-border-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-disabled-width) var(--select-toggle-border-disabled-color);
       background-color: var(--select-toggle-background-color-disabled);
     }
 
@@ -254,8 +255,7 @@
     }
 
     &:disabled:checked ~ .switch__toggle__background {
-      border: var(--select-toggle-border-checked-disabled-width) solid
-        var(--select-toggle-border-checked-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-checked-disabled-width) var(--select-toggle-border-checked-disabled-color);
       background-color: var(--select-toggle-background-color-checked-disabled);
     }
 
@@ -274,8 +274,9 @@
 
   &__slot {
     position: relative;
-    width: var(--select-button-width);
-    height: var(--select-button-height);
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
   }
 
   &__label {
@@ -304,6 +305,9 @@
     width: var(--select-button-width);
     height: var(--select-button-height);
     flex: none;
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
 
     &__background {
       display: block;
@@ -313,8 +317,7 @@
       outline: var(--select-button-border-secondary-width-default) solid
         var(--select-button-border-secondary-color-default);
       outline-offset: var(--select-button-border-secondary-offset-default);
-      border: var(--select-button-border-default-width) solid
-        var(--select-button-border-default-color);
+      box-shadow: inset 0 0 0 var(--select-button-border-default-width) var(--select-button-border-default-color);
       border-radius: var(--select-button-radius);
       background: var(--select-button-background-color-default);
       width: var(--select-button-width);
@@ -336,8 +339,7 @@
     }
 
     &:checked ~ .radio__button__background {
-      border: var(--select-button-border-checked-default-width) solid
-        var(--select-button-border-checked-default-color);
+      box-shadow: inset 0 0 0 var(--select-button-border-checked-default-width) var(--select-button-border-checked-default-color);
       background: var(--select-button-background-color-checked-default);
     }
 
@@ -360,8 +362,7 @@
     }
 
     &:disabled:checked ~ .radio__button__background {
-      border: var(--select-button-border-checked-disabled-width) solid
-        var(--select-button-border-checked-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-button-border-checked-disabled-width) var(--select-button-border-checked-disabled-color);
       background: var(--select-button-background-color-checked-disabled);
     }
 
@@ -370,8 +371,7 @@
     }
 
     &:disabled + .radio__button__background {
-      border: var(--select-button-border-disabled-width) solid
-        var(--select-button-border-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-button-border-disabled-width) var(--select-button-border-disabled-color);
       background: var(--select-button-background-color-disabled);
     }
   }
