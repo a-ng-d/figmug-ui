@@ -12,20 +12,20 @@
         },
         "secondary": {
           "$type": "color",
-          "$value": "#eeeeee",
+          "$value": "#f3f3f3",
           "$extensions": {
             "mode": {
-              "framer-light": "#eeeeee",
+              "framer-light": "#f3f3f3",
               "framer-dark": "#1d1d1d"
             }
           }
         },
         "tertiary": {
           "$type": "color",
-          "$value": "#f3f3f3",
+          "$value": "#eeeeee",
           "$extensions": {
             "mode": {
-              "framer-light": "#f3f3f3",
+              "framer-light": "#eeeeee",
               "framer-dark": "#2b2b2b"
             }
           }
