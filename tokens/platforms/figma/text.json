@@ -37,6 +37,10 @@
         "$value": "{font.size.xsmall}",
         "$type": "dimension"
       },
+      "fontWeight": {
+        "$value": "{font.weight.medium}",
+        "$type": "fontWeight"
+      },
       "lineHeight": {
         "$value": "{font.lineHeight.default}",
         "$type": "dimension"
@@ -50,6 +54,10 @@
       "fontSize": {
         "$value": "{font.size.small}",
         "$type": "dimension"
+      },
+      "fontWeight": {
+        "$value": "{font.weight.medium}",
+        "$type": "fontWeight"
       },
       "lineHeight": {
         "$value": "{font.lineHeight.default}",
@@ -65,6 +73,10 @@
         "$value": "{font.size.medium}",
         "$type": "dimension"
       },
+      "fontWeight": {
+        "$value": "{font.weight.medium}",
+        "$type": "fontWeight"
+      },
       "lineHeight": {
         "$value": "{font.lineHeight.large}",
         "$type": "dimension"
@@ -78,6 +90,10 @@
       "fontSize": {
         "$value": "{font.size.large}",
         "$type": "dimension"
+      },
+      "fontWeight": {
+        "$value": "{font.weight.medium}",
+        "$type": "fontWeight"
       },
       "lineHeight": {
         "$value": "{font.lineHeight.large}",

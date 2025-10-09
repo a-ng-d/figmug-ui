@@ -8,7 +8,7 @@
   --text-color-secondary: var(--penpot-color-foreground-secondary);
   --text-color-tertiary: var(--penpot-color-foreground-disabled);
   --text-default-font-size: var(--font-size-small);
-  --text-default-font-weight: var(--font-weight-normal);
+  --text-default-font-weight: var(--font-weight-medium);
   --text-default-letter-spacing: var(--font-letter-spacing-pos-large);
   --text-default-line-height: var(--font-line-height-default);
   --text-font-family: var(--font-stack);
@@ -26,16 +26,19 @@
   --text-label-padding-right: var(--size-pos-xxxsmall);
   --text-label-padding-top: var(--size-null);
   --text-large-font-size: var(--font-size-medium);
+  --text-large-font-weight: var(--font-weight-medium);
   --text-large-letter-spacing: var(--font-letter-spacing-pos-medium);
   --text-large-line-height: var(--font-line-height-large);
   --text-link-border-focus: none;
   --text-link-color: var(--penpot-color-accent-primary);
   --text-link-decoration: none;
   --text-link-decoration-focus: underline;
-  --text-small-font-size: var(--font-size-small);
-  --text-small-letter-spacing: var(--font-letter-spacing-pos-large);
+  --text-small-font-size: var(--font-size-xsmall);
+  --text-small-font-weight: var(--font-weight-medium);
+  --text-small-letter-spacing: var(--font-letter-spacing-pos-xlarge);
   --text-small-line-height: var(--font-line-height-default);
   --text-xlarge-font-size: var(--font-size-large);
+  --text-xlarge-font-weight: var(--font-weight-medium);
   --text-xlarge-letter-spacing: var(--font-letter-spacing-pos-small);
   --text-xlarge-line-height: var(--font-line-height-large);
 }

@@ -8,7 +8,7 @@
   --text-color-secondary: var(--figma-color-text-secondary);
   --text-color-tertiary: var(--figma-color-text-tertiary);
   --text-default-font-size: var(--font-size-xsmall);
-  --text-default-font-weight: var(--font-weight-normal);
+  --text-default-font-weight: var(--font-weight-medium);
   --text-default-letter-spacing: var(--font-letter-spacing-pos-xlarge);
   --text-default-line-height: var(--font-line-height-default);
   --text-font-family: var(--font-stack);
@@ -26,6 +26,7 @@
   --text-label-padding-right: var(--size-pos-xxxsmall);
   --text-label-padding-top: var(--size-null);
   --text-large-font-size: var(--font-size-medium);
+  --text-large-font-weight: var(--font-weight-medium);
   --text-large-letter-spacing: var(--font-letter-spacing-pos-medium);
   --text-large-line-height: var(--font-line-height-large);
   --text-link-border-focus: none;
@@ -33,9 +34,11 @@
   --text-link-decoration: none;
   --text-link-decoration-focus: underline;
   --text-small-font-size: var(--font-size-small);
+  --text-small-font-weight: var(--font-weight-medium);
   --text-small-letter-spacing: var(--font-letter-spacing-pos-large);
   --text-small-line-height: var(--font-line-height-default);
   --text-xlarge-font-size: var(--font-size-large);
+  --text-xlarge-font-weight: var(--font-weight-medium);
   --text-xlarge-letter-spacing: var(--font-letter-spacing-pos-small);
   --text-xlarge-line-height: var(--font-line-height-large);
 }
