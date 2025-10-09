@@ -9,7 +9,7 @@
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{size.pos.small}",
+      "$value": "{size.pos.xxlarge}",
       "$type": "dimension"
     }
   }
