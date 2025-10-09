@@ -220,11 +220,7 @@ export default class ActionsList extends React.Component<
         aria-disabled="true"
       >
         <span
-          className={doClassnames([
-            texts['type--small'],
-            texts.type,
-            'select-menu__item__label',
-          ])}
+          className={doClassnames([texts.type, 'select-menu__item__label'])}
           aria-hidden="true"
         >
           {option.label}
@@ -294,11 +290,7 @@ export default class ActionsList extends React.Component<
         )}
 
         <span
-          className={doClassnames([
-            texts['type--small'],
-            texts.type,
-            'select-menu__item__label',
-          ])}
+          className={doClassnames([texts.type, 'select-menu__item__label'])}
         >
           {option.label}
         </span>
@@ -349,11 +341,7 @@ export default class ActionsList extends React.Component<
         onBlur={() => null}
       >
         <span
-          className={doClassnames([
-            texts['type--small'],
-            texts.type,
-            'select-menu__item__label',
-          ])}
+          className={doClassnames([texts.type, 'select-menu__item__label'])}
         >
           {option.label}
         </span>
