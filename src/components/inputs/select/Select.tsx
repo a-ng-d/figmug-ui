@@ -119,22 +119,29 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           if (helper !== undefined) this.setState({ isTooltipVisible: false })
         }}
       >
-        <input
-          data-feature={feature}
-          id={id}
-          className="checkbox__box"
-          type="checkbox"
-          name={name}
-          checked={isChecked}
-          disabled={isDisabled || isBlocked}
-          onChange={action}
-          tabIndex={0}
-          ref={this.inputRef}
-          aria-label={label}
-        />
+        <div className="checkbox__slot">
+          <input
+            data-feature={feature}
+            id={id}
+            className="checkbox__box"
+            type="checkbox"
+            name={name}
+            checked={isChecked}
+            disabled={isDisabled || isBlocked}
+            onChange={action}
+            tabIndex={0}
+            ref={this.inputRef}
+            aria-label={label}
+          />
+          <div className="checkbox__box__background" />
+          <div className="checkbox__box__tick" />
+        </div>
         <label
-          className="checkbox__label"
-          htmlFor={id}
+          className={doClassnames([
+            'checkbox__label',
+            (isDisabled || isBlocked) && 'checkbox__label--disabled',
+          ])}
+          htmlFor={!(isDisabled || isBlocked) ? id : undefined}
         >
           {label}
         </label>
@@ -179,23 +186,30 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           if (helper !== undefined) this.setState({ isTooltipVisible: false })
         }}
       >
-        <input
-          data-feature={feature}
-          id={id}
-          className="radio__button"
-          type="radio"
-          name={name}
-          value={value}
-          checked={isChecked}
-          disabled={isDisabled || isBlocked}
-          onChange={action}
-          tabIndex={0}
-          ref={this.inputRef}
-          aria-label={label}
-        />
+        <div className="radio__slot">
+          <input
+            data-feature={feature}
+            id={id}
+            className="radio__button"
+            type="radio"
+            name={name}
+            value={value}
+            checked={isChecked}
+            disabled={isDisabled || isBlocked}
+            onChange={action}
+            tabIndex={0}
+            ref={this.inputRef}
+            aria-label={label}
+          />
+          <div className="radio__button__background" />
+          <div className="radio__button__inner" />
+        </div>
         <label
-          className="radio__label"
-          htmlFor={id}
+          className={doClassnames([
+            'radio__label',
+            (isDisabled || isBlocked) && 'radio__label--disabled',
+          ])}
+          htmlFor={!(isDisabled || isBlocked) ? id : undefined}
         >
           {label}
         </label>
@@ -239,22 +253,29 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           if (helper !== undefined) this.setState({ isTooltipVisible: false })
         }}
       >
-        <input
-          data-feature={feature}
-          id={id}
-          className="switch__toggle"
-          type="checkbox"
-          name={name}
-          checked={isChecked}
-          disabled={isDisabled || isBlocked}
-          onChange={action}
-          tabIndex={0}
-          ref={this.inputRef}
-          aria-label={label}
-        />
+        <div className="switch__slot">
+          <input
+            data-feature={feature}
+            id={id}
+            className="switch__toggle"
+            type="checkbox"
+            name={name}
+            checked={isChecked}
+            disabled={isDisabled || isBlocked}
+            onChange={action}
+            tabIndex={0}
+            ref={this.inputRef}
+            aria-label={label}
+          />
+          <div className="switch__toggle__background" />
+          <div className="switch__toggle__knob" />
+        </div>
         <label
-          className="switch__label"
-          htmlFor={id}
+          className={doClassnames([
+            'switch__label',
+            (isDisabled || isBlocked) && 'switch__label--disabled',
+          ])}
+          htmlFor={!(isDisabled || isBlocked) ? id : undefined}
         >
           {label}
         </label>
