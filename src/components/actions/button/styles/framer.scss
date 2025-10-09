@@ -4,7 +4,7 @@
 
 :root[data-theme="framer"] {
   --button-alternative-background-color-default: var(--framer-color-tint-dimmed);
-  --button-alternative-background-color-disabled: var(--framer-color-bg-secondary);
+  --button-alternative-background-color-disabled: var(--framer-color-bg-tertiary);
   --button-alternative-background-color-focus: var(--framer-color-tint-dimmed);
   --button-alternative-background-color-hover: var(--framer-color-tint);
   --button-alternative-background-color-pressed: var(--framer-color-tint-dimmed);
@@ -63,7 +63,7 @@
   --button-base-text-line-height: var(--font-line-height-default);
   --button-base-text-transform: none;
   --button-destructive-background-color-default: var(--framer-color-destructive);
-  --button-destructive-background-color-disabled: var(--framer-color-bg-secondary);
+  --button-destructive-background-color-disabled: var(--framer-color-bg-tertiary);
   --button-destructive-background-color-focus: var(--framer-color-destructive-dark);
   --button-destructive-background-color-hover: var(--framer-color-destructive-dark);
   --button-destructive-background-color-pressed: var(--framer-color-destructive);
@@ -137,11 +137,11 @@
   --button-primary-text-decoration-focus: none;
   --button-primary-text-decoration-hover: none;
   --button-primary-text-decoration-pressed: none;
-  --button-secondary-background-color-default: var(--framer-color-bg-tertiary);
-  --button-secondary-background-color-disabled: var(--framer-color-bg-secondary);
-  --button-secondary-background-color-focus: var(--framer-color-bg-secondary);
-  --button-secondary-background-color-hover: var(--framer-color-bg-secondary);
-  --button-secondary-background-color-pressed: var(--framer-color-bg-tertiary);
+  --button-secondary-background-color-default: var(--framer-color-bg-secondary);
+  --button-secondary-background-color-disabled: var(--framer-color-bg-tertiary);
+  --button-secondary-background-color-focus: var(--framer-color-bg-tertiary);
+  --button-secondary-background-color-hover: var(--framer-color-bg-tertiary);
+  --button-secondary-background-color-pressed: var(--framer-color-bg-secondary);
   --button-secondary-border-color-default: transparent;
   --button-secondary-border-color-disabled: transparent;
   --button-secondary-border-color-focus: var(--framer-color-tint);

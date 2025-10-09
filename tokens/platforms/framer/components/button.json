@@ -338,23 +338,23 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{framer.color.bg.tertiary}",
+            "$value": "{framer.color.bg.secondary}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.bg.secondary}",
-            "$type": "color"
-          },
-          "pressed": {
             "$value": "{framer.color.bg.tertiary}",
             "$type": "color"
           },
-          "focus": {
+          "pressed": {
             "$value": "{framer.color.bg.secondary}",
             "$type": "color"
           },
+          "focus": {
+            "$value": "{framer.color.bg.tertiary}",
+            "$type": "color"
+          },
           "disabled": {
-            "$value": "{framer.color.bg.secondary}",
+            "$value": "{framer.color.bg.tertiary}",
             "$type": "color"
           }
         }
@@ -706,7 +706,7 @@
             "$type": "color"
           },
           "disabled": {
-            "$value": "{framer.color.bg.secondary}",
+            "$value": "{framer.color.bg.tertiary}",
             "$type": "color"
           }
         }
@@ -870,7 +870,7 @@
             "$type": "color"
           },
           "disabled": {
-            "$value": "{framer.color.bg.secondary}",
+            "$value": "{framer.color.bg.tertiary}",
             "$type": "color"
           }
         }
