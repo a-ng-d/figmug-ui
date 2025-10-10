@@ -8,17 +8,25 @@
   --framer-color-bg-tertiary: #eeeeee;
   --framer-color-destructive: #ff3366;
   --framer-color-destructive-dark: #ee2255;
-  --framer-color-destructive-dimmed: #ff33661a;
+  --framer-color-destructive-dimmed: #ffebf0;
   --framer-color-destructive-extra-dark: #dd1144;
   --framer-color-divider: #eeeeee;
+  --framer-color-success: #33ff36;
+  --framer-color-success-dark: #22ff25;
+  --framer-color-success-dimmed: #ebffeb;
+  --framer-color-success-extra-dark: #11ff14;
   --framer-color-text: #333333;
   --framer-color-text-reversed: #ffffff;
   --framer-color-text-secondary: #666666;
   --framer-color-text-tertiary: #999999;
   --framer-color-tint: #0099ff;
   --framer-color-tint-dark: #0088ff;
-  --framer-color-tint-dimmed: #0099ff1a;
+  --framer-color-tint-dimmed: #e5f5ff;
   --framer-color-tint-extra-dark: #0077ff;
+  --framer-color-warning: #ffaa00;
+  --framer-color-warning-dark: #ff9900;
+  --framer-color-warning-dimmed: #fff6e5;
+  --framer-color-warning-extra-dark: #ff8800;
 }
 
 [data-mode="framer-light"] {
@@ -27,17 +35,25 @@
   --framer-color-bg-tertiary: #eeeeee;
   --framer-color-destructive: #ff3366;
   --framer-color-destructive-dark: #ee2255;
-  --framer-color-destructive-dimmed: #ff33661a;
+  --framer-color-destructive-dimmed: #ffebf0;
   --framer-color-destructive-extra-dark: #dd1144;
   --framer-color-divider: #eeeeee;
+  --framer-color-success: #33ff36;
+  --framer-color-success-dark: #22ff25;
+  --framer-color-success-dimmed: #ebffeb;
+  --framer-color-success-extra-dark: #11ff14;
   --framer-color-text: #333333;
   --framer-color-text-reversed: #ffffff;
   --framer-color-text-secondary: #666666;
   --framer-color-text-tertiary: #999999;
   --framer-color-tint: #0099ff;
   --framer-color-tint-dark: #0088ff;
-  --framer-color-tint-dimmed: #0099ff1a;
+  --framer-color-tint-dimmed: #e5f5ff;
   --framer-color-tint-extra-dark: #0077ff;
+  --framer-color-warning: #ffaa00;
+  --framer-color-warning-dark: #ff9900;
+  --framer-color-warning-dimmed: #fff6e5;
+  --framer-color-warning-extra-dark: #ff8800;
 }
 
 [data-mode="framer-dark"] {
@@ -46,16 +62,24 @@
   --framer-color-bg-tertiary: #2b2b2b;
   --framer-color-destructive: #ff3366;
   --framer-color-destructive-dark: #ee1155;
-  --framer-color-destructive-dimmed: #ff336626;
-  --framer-color-destructive-extra-dark: #cf2e55;
+  --framer-color-destructive-dimmed: #35161e;
+  --framer-color-destructive-extra-dark: #dd1144;
   --framer-color-divider: #252525;
+  --framer-color-success: #33ff36;
+  --framer-color-success-dark: #22ff25;
+  --framer-color-success-dimmed: #163517;
+  --framer-color-success-extra-dark: #11ff14;
   --framer-color-text: #ffffff;
   --framer-color-text-reversed: #ffffff;
   --framer-color-text-secondary: #cccccc;
   --framer-color-text-tertiary: #777777;
   --framer-color-tint: #0099ff;
   --framer-color-tint-dark: #0088ff;
-  --framer-color-tint-dimmed: #0099ff26;
+  --framer-color-tint-dimmed: #0e2535;
   --framer-color-tint-extra-dark: #0077ff;
+  --framer-color-warning: #ffaa00;
+  --framer-color-warning-dark: #ff9900;
+  --framer-color-warning-dimmed: #35280e;
+  --framer-color-warning-extra-dark: #ff8800;
 }
 

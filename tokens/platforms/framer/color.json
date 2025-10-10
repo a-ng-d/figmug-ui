@@ -52,11 +52,11 @@
         },
         "dimmed": {
           "$type": "color",
-          "$value": "rgba(0, 153, 255, .1)",
+          "$value": "#e5f5ff",
           "$extensions": {
             "mode": {
-              "framer-light": "rgba(0, 153, 255, .1)",
-              "framer-dark": "rgba(0, 153, 255, 0.15)"
+              "framer-light": "#e5f5ff",
+              "framer-dark": "#0e2535"
             }
           }
         },
@@ -81,6 +81,86 @@
           }
         }
       },
+      "warning": {
+        "$type": "color",
+        "$value": "#ffaa00",
+        "$extensions": {
+          "mode": {
+            "framer-light": "#ffaa00",
+            "framer-dark": "#ffaa00"
+          }
+        },
+        "dimmed": {
+          "$type": "color",
+          "$value": "#fff6e5",
+          "$extensions": {
+            "mode": {
+              "framer-light": "#fff6e5",
+              "framer-dark": "#35280e"
+            }
+          }
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "#ff9900",
+          "$extensions": {
+            "mode": {
+              "framer-light": "#ff9900",
+              "framer-dark": "#ff9900"
+            }
+          }
+        },
+        "extraDark": {
+          "$type": "color",
+          "$value": "#ff8800",
+          "$extensions": {
+            "mode": {
+              "framer-light": "#ff8800",
+              "framer-dark": "#ff8800"
+            }
+          }
+        }
+      },
+      "success": {
+        "$type": "color",
+        "$value": "#33ff36",
+        "$extensions": {
+          "mode": {
+            "framer-light": "#33ff36",
+            "framer-dark": "#33ff36"
+          }
+        },
+        "dimmed": {
+          "$type": "color",
+          "$value": "#ebffeb",
+          "$extensions": {
+            "mode": {
+              "framer-light": "#ebffeb",
+              "framer-dark": "#163517"
+            }
+          }
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "#22ff25",
+          "$extensions": {
+            "mode": {
+              "framer-light": "#22ff25",
+              "framer-dark": "#22ff25"
+            }
+          }
+        },
+        "extraDark": {
+          "$type": "color",
+          "$value": "#11ff14",
+          "$extensions": {
+            "mode": {
+              "framer-light": "#11ff14",
+              "framer-dark": "#11ff14"
+            }
+          }
+        }
+      },
       "destructive": {
         "$type": "color",
         "$value": "#ff3366",
@@ -92,11 +172,11 @@
         },
         "dimmed": {
           "$type": "color",
-          "$value": "rgba(255, 51, 102, .1)",
+          "$value": "ffebf0",
           "$extensions": {
             "mode": {
-              "framer-light": "rgba(255, 51, 102, .1)",
-              "framer-dark": "rgba(255, 51, 102, 0.15)"
+              "framer-light": "#ffebf0",
+              "framer-dark": "#35161e"
             }
           }
         },
@@ -116,7 +196,7 @@
           "$extensions": {
             "mode": {
               "framer-light": "#dd1144",
-              "framer-dark": "#cf2e55"
+              "framer-dark": "#dd1144"
             }
           }
         }
