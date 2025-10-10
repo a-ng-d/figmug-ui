@@ -1,0 +1,112 @@
+{
+  "keyboard-shortcut-item": {
+    "padding": {
+      "top": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      }
+    },
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "minHeight": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "$value": "{framer.color.bg}",
+        "$type": "color"
+      }
+    },
+    "key": {
+      "radius": {
+        "$value": "{border.radius.medium}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "minWidth": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "gap": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "background": {
+        "color": {
+          "$value": "{framer.color.bg.tertiary}",
+          "$type": "color"
+        }
+      },
+      "border": {
+        "width": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "offset": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "transparent",
+          "$type": "string"
+        }
+      }
+    },
+    "separator": {
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}
