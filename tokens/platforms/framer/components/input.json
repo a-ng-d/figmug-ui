@@ -194,11 +194,11 @@
         },
         "onselected": {
           "default": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.secondary}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.secondary}",
             "$type": "color"
           }
         }
