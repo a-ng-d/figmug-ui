@@ -110,7 +110,7 @@
         },
         "success": {
           "default": {
-            "$value": "{framer.color.tint.dimmed}",
+            "$value": "{framer.color.success.dimmed}",
             "$type": "color"
           },
           "accent": {
@@ -120,7 +120,7 @@
         },
         "warning": {
           "default": {
-            "$value": "{framer.color.tint.dimmed}",
+            "$value": "{framer.color.warning.dimmed}",
             "$type": "color"
           },
           "accent": {
