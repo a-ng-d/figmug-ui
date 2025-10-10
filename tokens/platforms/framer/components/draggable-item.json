@@ -1,0 +1,81 @@
+{
+  "draggable-item": {
+    "template": {
+      "rows": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "columns": {
+        "$value": "repeat(76, 1fr)",
+        "$type": "string"
+      }
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      }
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{framer.color.bg}",
+          "$type": "color"
+        },
+        "selected": {
+          "$value": "{framer.color.tint.dimmed}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{framer.color.bg.secondary}",
+          "$type": "color"
+        }
+      }
+    },
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "ghost": {
+      "color": {
+        "$value": "{framer.color.tint}",
+        "$type": "color"
+      },
+      "height": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "inset": {
+        "$value": "{size.neg.unit}",
+        "$type": "dimension"
+      }
+    },
+    "param": {
+      "width": {
+        "compact": {
+          "$value": {
+            "value": 112,
+            "unit": "px"
+          },
+          "$type": "dimension"
+        },
+        "square": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}
