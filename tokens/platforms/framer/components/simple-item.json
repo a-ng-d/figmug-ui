@@ -1,0 +1,108 @@
+{
+  "simple-item": {
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      }
+    },
+    "minHeight": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{framer.color.bg}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{framer.color.bg.secondary}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{framer.color.tint.dimmed}",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "radius": {
+        "$value": "{border.radius.small}",
+        "$type": "dimension"
+      },
+      "width": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "focus": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        }
+      },
+      "offset": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "focus": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        }
+      },
+      "color": {
+        "default": {
+          "$value": "transparent",
+          "$type": "string"
+        },
+        "focus": {
+          "$value": "{framer.color.tint}",
+          "$type": "color"
+        }
+      }
+    },
+    "compact": {
+      "minWidth": {
+        "$value": {
+          "value": 112,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "width": {
+        "$value": {
+          "value": 112,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      }
+    },
+    "square": {
+      "minWidth": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "width": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      }
+    }
+  }
+}
