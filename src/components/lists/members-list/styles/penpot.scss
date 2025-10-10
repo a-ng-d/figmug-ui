@@ -3,6 +3,9 @@
  * ------------------------------------------- */
 
 :root[data-theme="penpot"] {
+  --members-list-avatar-border-color: transparent;
+  --members-list-avatar-border-offset: var(--size-null);
+  --members-list-avatar-border-width: var(--size-null);
   --members-list-avatar-height: var(--size-pos-small);
   --members-list-avatar-radius: var(--size-pos-small);
   --members-list-avatar-width: var(--size-pos-small);
