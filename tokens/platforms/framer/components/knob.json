@@ -273,7 +273,7 @@
         }
       },
       "radius": {
-        "$value": "{border.radius.large}",
+        "$value": "{border.radius.xlarge}",
         "$type": "dimension"
       },
       "background": {
