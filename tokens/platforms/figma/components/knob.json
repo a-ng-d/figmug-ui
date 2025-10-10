@@ -14,7 +14,7 @@
     },
     "label": {
       "height": {
-        "$value": { "value": 20, "unit": "px" },
+        "$value": "{size.pos.msmall}",
         "$type": "dimension"
       },
       "padding": {
