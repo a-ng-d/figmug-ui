@@ -244,7 +244,7 @@
         "$type": "dimension"
       },
       "radius": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{border.radius.xxxlarge}",
         "$type": "dimension"
       },
       "background": {

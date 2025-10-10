@@ -6,7 +6,7 @@
     },
     "avatar": {
       "radius": {
-        "$value": "{size.pos.small}",
+        "$value": "{border.radius.xxlarge}",
         "$type": "dimension"
       },
       "width": {
