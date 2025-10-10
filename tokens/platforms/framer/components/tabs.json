@@ -41,19 +41,19 @@
       },
       "vertical": {
         "top": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{size.pos.xsmall}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{size.pos.xsmall}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{size.pos.xsmall}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{size.pos.xsmall}",
           "$type": "dimension"
         }
       }
