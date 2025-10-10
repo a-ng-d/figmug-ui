@@ -586,7 +586,7 @@
               "offsetX": 0,
               "offsetY": 0,
               "blur": 0,
-              "spread": "{size.null}",
+              "spread": "{size.pos.unit}",
               "color": "rgba(0, 0, 0, 0.1)",
               "inset": true
             }
