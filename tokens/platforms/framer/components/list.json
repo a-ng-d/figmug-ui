@@ -1,0 +1,44 @@
+{
+  "list": {
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{framer.color.bg}",
+          "$type": "color"
+        },
+        "alternate": {
+          "$value": "{framer.color.bg.secondary}",
+          "$type": "color"
+        }
+      }
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{framer.color.divider}",
+        "$type": "color"
+      }
+    }
+  }
+}
