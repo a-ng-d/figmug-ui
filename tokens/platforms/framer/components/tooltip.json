@@ -13,30 +13,30 @@
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{border.radius.medium}",
+      "$value": "{border.radius.xlarge}",
       "$type": "dimension"
     },
     "padding": {
       "top": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{size.pos.xsmall}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{size.pos.xsmall}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{size.pos.xsmall}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{size.pos.xsmall}",
         "$type": "dimension"
       }
     },
     "background": {
       "color": {
-        "$value": "{grey.1000}",
+        "$value": "{framer.color.bg}",
         "$type": "color"
       }
     },
@@ -56,7 +56,7 @@
     },
     "text": {
       "color": {
-        "$value": "{grey.0}",
+        "$value": "{framer.color.text}",
         "$type": "color"
       }
     },
@@ -66,7 +66,7 @@
     },
     "arrow": {
       "size": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{size.pos.xsmall}",
         "$type": "dimension"
       },
       "radius": {
@@ -75,17 +75,17 @@
       },
       "background": {
         "color": {
-          "$value": "{grey.1000}",
+          "$value": "{framer.color.bg}",
           "$type": "color"
         }
       },
       "border": {
         "color": {
-          "$value": "{grey.900}",
-          "$type": "color"
+          "$value": "transparent",
+          "$type": "string"
         },
         "width": {
-          "$value": "{size.pos.unit}",
+          "$value": "{size.null}",
           "$type": "dimension"
         }
       }
@@ -100,7 +100,7 @@
         "$type": "dimension"
       },
       "radius": {
-        "$value": "{border.radius.medium}",
+        "$value": "{border.radius.xlarge}",
         "$type": "dimension"
       }
     },
@@ -111,19 +111,19 @@
       },
       "padding": {
         "top": {
-          "$value": "{size.pos.xxxsmall}",
+          "$value": "{size.pos.xsmall}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{size.pos.xsmall}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.xxxsmall}",
+          "$value": "{size.pos.xsmall}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xxxsmall}",
+          "$value": "{size.pos.xsmall}",
           "$type": "dimension"
         }
       }
