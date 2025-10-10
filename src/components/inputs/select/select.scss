@@ -68,6 +68,8 @@
     box-sizing: border-box;
     line-height: 0;
     flex-shrink: 0;
+    z-index: 2;
+    position: relative;
 
     &__background {
       display: block;
@@ -82,7 +84,7 @@
       background: var(--select-box-background-color-default);
       width: var(--select-box-width);
       height: var(--select-box-height);
-      z-index: -1;
+      z-index: 1;
     }
 
     &__tick {
@@ -101,7 +103,7 @@
       width: var(--select-box-tick-width);
       height: var(--select-box-tick-height);
       pointer-events: none;
-      z-index: -1;
+      z-index: 1;
     }
 
     &:checked ~ .checkbox__box__background {
@@ -180,6 +182,8 @@
     box-sizing: border-box;
     line-height: 0;
     flex-shrink: 0;
+    z-index: 2;
+    position: relative;
 
     &__background {
       display: block;
@@ -196,7 +200,7 @@
       background-color: var(--select-toggle-background-color-default);
       width: var(--select-toggle-width);
       height: var(--select-toggle-height);
-      z-index: -1;
+      z-index: 1;
     }
 
     &__knob {
@@ -213,7 +217,7 @@
       background-color: var(--select-toggle-knob-background-color-default);
       width: var(--select-toggle-knob-width);
       height: var(--select-toggle-knob-height);
-      z-index: -1;
+      z-index: 1;
     }
 
     &:checked ~ .switch__toggle__background {
@@ -308,6 +312,8 @@
     box-sizing: border-box;
     line-height: 0;
     flex-shrink: 0;
+    z-index: 2;
+    position: relative;
 
     &__background {
       display: block;
@@ -322,7 +328,7 @@
       background: var(--select-button-background-color-default);
       width: var(--select-button-width);
       height: var(--select-button-height);
-      z-index: -1;
+      z-index: 1;
     }
 
     &__inner {
@@ -335,7 +341,7 @@
       background-color: var(--select-button-icon-color-default);
       width: var(--select-button-inner-width);
       height: var(--select-button-inner-height);
-      z-index: -1;
+      z-index: 1;
     }
 
     &:checked ~ .radio__button__background {
