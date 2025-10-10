@@ -82,6 +82,10 @@
       box-shadow: var(--input-color-chip-border);
       border: none;
       border-radius: var(--input-color-chip-radius);
+
+      & {
+        --input-color-chip-border: var(--input-color-chip-border-default)
+      }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -100,7 +104,7 @@
       --input-color-chip-opacity: var(--input-color-chip-opacity-default);
     }
 
-    &[type='color' i]:focus {
+    &[type='color' i]:focus::-webkit-color-swatch {
       --input-color-chip-border: var(--input-color-chip-border-focus);
     }
 

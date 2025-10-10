@@ -65,7 +65,7 @@
   --input-border-width-onselected-hover: var(--size-pos-unit);
   --input-clearable-right: var(--size-pos-xunit);
   --input-clearable-top: var(--size-pos-xunit);
-  --input-color-chip-border-default: inset 0 0 0 var(--size-null) color(srgb 0 0 0 / 0.1);
+  --input-color-chip-border-default: inset 0 0 0 var(--size-pos-unit) color(srgb 0 0 0 / 0.1);
   --input-color-chip-border-focus: inset 0 0 0 var(--size-pos-unit) var(--framer-color-tint);
   --input-color-chip-height: var(--size-pos-small);
   --input-color-chip-left: var(--size-pos-xxxsmall);
