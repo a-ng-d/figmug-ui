@@ -3458,9 +3458,7 @@
     "branch": "features/dtcg-tokens-implementation",
     "slug": "a-ng-d/figmug-ui",
     "fromCI": false,
-    "parentCommits": [
-      "be3ea3b9c04d61eb92bb43de3d8fc6b93b53a6c4"
-    ]
+    "parentCommits": ["be3ea3b9c04d61eb92bb43de3d8fc6b93b53a6c4"]
   },
   "input": [],
   "isOnboarding": false,
@@ -3495,9 +3493,7 @@
     "name": "@a_ng_d/figmug-ui",
     "version": "1.17.28",
     "type": "module",
-    "files": [
-      "dist"
-    ],
+    "files": ["dist"],
     "exports": "./dist/index.js",
     "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -3576,11 +3572,7 @@
       "type": "git",
       "url": "git+https://github.com/a-ng-d/figmug-ui.git"
     },
-    "keywords": [
-      "library",
-      "ui",
-      "figma-ui"
-    ],
+    "keywords": ["library", "ui", "figma-ui"],
     "author": "Aurélien Grimaud",
     "license": "MIT",
     "bugs": {

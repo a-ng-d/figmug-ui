@@ -145,7 +145,9 @@
   &--vertical {
     --tabs-gap: var(--tabs-gap-vertical);
     --tabs-radius: var(--tabs-radius-vertical);
-    --tabs-padding: var(--tabs-padding-vertical-top) var(--tabs-padding-vertical-right) var(--tabs-padding-vertical-bottom) var(--tabs-padding-vertical-left);
+    --tabs-padding: var(--tabs-padding-vertical-top)
+      var(--tabs-padding-vertical-right) var(--tabs-padding-vertical-bottom)
+      var(--tabs-padding-vertical-left);
     --tabs-background-color: var(--tabs-background-color-vertical);
 
     flex-direction: column;
@@ -155,49 +157,70 @@
 
       & {
         --tabs-tab-gap: var(--tabs-tab-gap-alternative);
-        --tabs-tab-padding: var(--tabs-tab-padding-alternative-with-icon-top) var(--tabs-tab-padding-alternative-with-icon-right) var(--tabs-tab-padding-alternative-with-icon-bottom) var(--tabs-tab-padding-alternative-with-icon-left);
+        --tabs-tab-padding: var(--tabs-tab-padding-alternative-with-icon-top)
+          var(--tabs-tab-padding-alternative-with-icon-right)
+          var(--tabs-tab-padding-alternative-with-icon-bottom)
+          var(--tabs-tab-padding-alternative-with-icon-left);
         --tabs-tab-radius: var(--tabs-tab-radius-alternative);
         --tabs-tab-height: var(--tabs-tab-height-alternative);
         --tabs-tab-text-transform: var(--tabs-tab-text-transform-alternative);
         --tabs-tab-icon-width: var(--tabs-tab-icon-width-alternative);
         --tabs-tab-icon-height: var(--tabs-tab-icon-height-alternative);
       }
-      
+
       &:not(&--active) {
-        --tabs-tab-background-color: var(--tabs-tab-background-color-alternative);
+        --tabs-tab-background-color: var(
+          --tabs-tab-background-color-alternative
+        );
         --tabs-tab-text-color: var(--tabs-tab-text-color-alternative);
         --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative);
         --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative);
       }
 
       &:hover:not(&--active) {
-        --tabs-tab-background-color: var(--tabs-tab-background-color-alternative-hover);
+        --tabs-tab-background-color: var(
+          --tabs-tab-background-color-alternative-hover
+        );
         --tabs-tab-border-color: var(--tabs-tab-border-color-alternative-hover);
         --tabs-tab-border-width: var(--tabs-tab-border-width-alternative-hover);
-        --tabs-tab-border-offset: var(--tabs-tab-border-offset-alternative-hover);
+        --tabs-tab-border-offset: var(
+          --tabs-tab-border-offset-alternative-hover
+        );
         --tabs-tab-text-color: var(--tabs-tab-text-color-alternative-hover);
         --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative-hover);
         --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative-hover);
-        --tabs-tab-notification-border-color: var(--tabs-tab-notification-border-color-alternative-hover);
+        --tabs-tab-notification-border-color: var(
+          --tabs-tab-notification-border-color-alternative-hover
+        );
       }
 
       &:focus:not(&--active) {
-        --tabs-tab-background-color: var(--tabs-tab-background-color-alternative-focus);
+        --tabs-tab-background-color: var(
+          --tabs-tab-background-color-alternative-focus
+        );
         --tabs-tab-border-color: var(--tabs-tab-border-color-alternative-focus);
         --tabs-tab-border-width: var(--tabs-tab-border-width-alternative-focus);
-        --tabs-tab-border-offset: var(--tabs-tab-border-offset-alternative-focus);
+        --tabs-tab-border-offset: var(
+          --tabs-tab-border-offset-alternative-focus
+        );
         --tabs-tab-text-color: var(--tabs-tab-text-color-alternative-focus);
         --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative-focus);
         --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative-focus);
-        --tabs-tab-notification-border-color: var(--tabs-tab-notification-border-color-alternative-focus);
+        --tabs-tab-notification-border-color: var(
+          --tabs-tab-notification-border-color-alternative-focus
+        );
       }
 
       &--active {
-        --tabs-tab-background-color: var(--tabs-tab-background-color-alternative-active);
+        --tabs-tab-background-color: var(
+          --tabs-tab-background-color-alternative-active
+        );
         --tabs-tab-text-color: var(--tabs-tab-text-color-alternative-active);
         --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative-active);
         --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative-active);
-        --tabs-tab-notification-border-color: var(--tabs-tab-notification-border-color-alternative-active);
+        --tabs-tab-notification-border-color: var(
+          --tabs-tab-notification-border-color-alternative-active
+        );
       }
     }
   }

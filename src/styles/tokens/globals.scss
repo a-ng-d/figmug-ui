@@ -12,11 +12,28 @@
   --border-radius-xsmall: 1px;
   --border-radius-xxlarge: 12px;
   --border-radius-xxxlarge: 16px;
-  --elevation-100-canvas: 0 0 0.5px 0 color(srgb 0 0 0 / 0.5), 0 1px 3px 0 color(srgb 0 0 0 / 0.4), inset 0 1px 0 0 color(srgb 1 1 1 / 0.1), inset 0 0 1px 0 color(srgb 1 1 1 / 0.3);
-  --elevation-200-canvas: 0 3px 8px 0 color(srgb 0 0 0 / 0.35), 0 1px 3px 0 color(srgb 0 0 0 / 0.5), inset 0 1px 0 0 color(srgb 1 1 1 / 0.08), inset 0 0 1px 0 color(srgb 1 1 1 / 0.3);
-  --elevation-300-tooltip: 0 5px 12px 0 color(srgb 0 0 0 / 0.35), 0 1px 3px 0 color(srgb 0 0 0 / 0.5), inset 0 1px 0 0 color(srgb 1 1 1 / 0.08), inset 0 0 1px 0 color(srgb 1 1 1 / 0.3);
-  --elevation-400-menu-panel: 0 10px 16px 0 color(srgb 0 0 0 / 0.35), 0 2px 5px 0 color(srgb 0 0 0 / 0.35), inset 0 1px 0 0 color(srgb 1 1 1 / 0.08), inset 0 0 1px 0 color(srgb 1 1 1 / 0.35);
-  --elevation-500-modal-window: 0 10px 24px 0 color(srgb 0 0 0 / 0.45), 0 3px 5px 0 color(srgb 0 0 0 / 0.35), inset 0 1px 0 0 color(srgb 1 1 1 / 0.08), inset 0 0 1px 0 color(srgb 1 1 1 / 0.35);
+  --elevation-100-canvas:
+    0 0 0.5px 0 color(srgb 0 0 0 / 0.5), 0 1px 3px 0 color(srgb 0 0 0 / 0.4),
+    inset 0 1px 0 0 color(srgb 1 1 1 / 0.1),
+    inset 0 0 1px 0 color(srgb 1 1 1 / 0.3);
+  --elevation-200-canvas:
+    0 3px 8px 0 color(srgb 0 0 0 / 0.35), 0 1px 3px 0 color(srgb 0 0 0 / 0.5),
+    inset 0 1px 0 0 color(srgb 1 1 1 / 0.08),
+    inset 0 0 1px 0 color(srgb 1 1 1 / 0.3);
+  --elevation-300-tooltip:
+    0 5px 12px 0 color(srgb 0 0 0 / 0.35), 0 1px 3px 0 color(srgb 0 0 0 / 0.5),
+    inset 0 1px 0 0 color(srgb 1 1 1 / 0.08),
+    inset 0 0 1px 0 color(srgb 1 1 1 / 0.3);
+  --elevation-400-menu-panel:
+    0 10px 16px 0 color(srgb 0 0 0 / 0.35),
+    0 2px 5px 0 color(srgb 0 0 0 / 0.35),
+    inset 0 1px 0 0 color(srgb 1 1 1 / 0.08),
+    inset 0 0 1px 0 color(srgb 1 1 1 / 0.35);
+  --elevation-500-modal-window:
+    0 10px 24px 0 color(srgb 0 0 0 / 0.45),
+    0 3px 5px 0 color(srgb 0 0 0 / 0.35),
+    inset 0 1px 0 0 color(srgb 1 1 1 / 0.08),
+    inset 0 0 1px 0 color(srgb 1 1 1 / 0.35);
   --font-letter-spacing-neg-large: -0.005em;
   --font-letter-spacing-neg-medium: -0.0025em;
   --font-letter-spacing-neg-small: -0.001em;
@@ -39,18 +56,39 @@
   --font-weight-normal: 400;
   --font-weight-semi: 550;
   --grey-0: color(srgb 1 1 1);
-  --grey-100: color(srgb 0.9411764705882353 0.9411764705882353 0.9411764705882353);
-  --grey-200: color(srgb 0.8509803921568627 0.8509803921568627 0.8509803921568627);
-  --grey-300: color(srgb 0.7490196078431373 0.7490196078431373 0.7490196078431373);
-  --grey-400: color(srgb 0.6509803921568628 0.6509803921568628 0.6509803921568628);
-  --grey-500: color(srgb 0.5490196078431373 0.5490196078431373 0.5490196078431373);
-  --grey-600: color(srgb 0.45098039215686275 0.45098039215686275 0.45098039215686275);
-  --grey-700: color(srgb 0.34901960784313724 0.34901960784313724 0.34901960784313724);
-  --grey-800: color(srgb 0.25098039215686274 0.25098039215686274 0.25098039215686274);
-  --grey-900: color(srgb 0.17254901960784313 0.17254901960784313 0.17254901960784313);
-  --grey-1000: color(srgb 0.13333333333333333 0.13333333333333333 0.13333333333333333);
+  --grey-100: color(
+    srgb 0.9411764705882353 0.9411764705882353 0.9411764705882353
+  );
+  --grey-200: color(
+    srgb 0.8509803921568627 0.8509803921568627 0.8509803921568627
+  );
+  --grey-300: color(
+    srgb 0.7490196078431373 0.7490196078431373 0.7490196078431373
+  );
+  --grey-400: color(
+    srgb 0.6509803921568628 0.6509803921568628 0.6509803921568628
+  );
+  --grey-500: color(
+    srgb 0.5490196078431373 0.5490196078431373 0.5490196078431373
+  );
+  --grey-600: color(
+    srgb 0.45098039215686275 0.45098039215686275 0.45098039215686275
+  );
+  --grey-700: color(
+    srgb 0.34901960784313724 0.34901960784313724 0.34901960784313724
+  );
+  --grey-800: color(
+    srgb 0.25098039215686274 0.25098039215686274 0.25098039215686274
+  );
+  --grey-900: color(
+    srgb 0.17254901960784313 0.17254901960784313 0.17254901960784313
+  );
+  --grey-1000: color(
+    srgb 0.13333333333333333 0.13333333333333333 0.13333333333333333
+  );
   --shadow-floating-window: 0 2px 14px 0 color(srgb 0 0 0 / 0.15);
-  --shadow-hud: 0 5px 17px 0 color(srgb 0 0 0 / 0.2), 0 2px 7px 0 color(srgb 0 0 0 / 0.15);
+  --shadow-hud:
+    0 5px 17px 0 color(srgb 0 0 0 / 0.2), 0 2px 7px 0 color(srgb 0 0 0 / 0.15);
   --size-neg-large: -40px;
   --size-neg-medium: -32px;
   --size-neg-msmall: -20px;
@@ -81,4 +119,3 @@
   --size-pos-xxxlarge: 80px;
   --size-pos-xxxsmall: 4px;
 }
-

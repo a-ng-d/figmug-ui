@@ -115,6 +115,7 @@ npm run scss:build theme=figma type
 ```
 
 Available token types are:
+
 - `text` - Text styling tokens (font sizes, weights, colors)
 - `color` - Color palette tokens
 - `icon` - Icon-related tokens

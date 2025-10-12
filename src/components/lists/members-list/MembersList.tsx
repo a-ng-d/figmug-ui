@@ -19,7 +19,10 @@ export interface MembersListState {
   isMembersListVisible: boolean
 }
 
-export default class MembersList extends React.Component<MembersListProps, MembersListState> {
+export default class MembersList extends React.Component<
+  MembersListProps,
+  MembersListState
+> {
   static defaultProps: Partial<MembersListProps> = {
     isInverted: false,
   }

@@ -30,14 +30,14 @@
 
 /* Checkbox */
 .checkbox {
-  min-height: var(--select-checkbox-height);
   gap: var(--select-checkbox-gap);
+  min-height: var(--select-checkbox-height);
 
   &__slot {
     position: relative;
+    flex-shrink: 0;
     box-sizing: border-box;
     line-height: 0;
-    flex-shrink: 0;
   }
 
   &__label {
@@ -58,41 +58,43 @@
   }
 
   &__box {
+    position: relative;
     flex: none;
+    flex-shrink: 0;
     opacity: 0;
+    z-index: 2;
+    box-sizing: border-box;
     margin: 0;
     outline: none;
     padding: 0;
     width: var(--select-box-width);
     height: var(--select-box-height);
-    box-sizing: border-box;
     line-height: 0;
-    flex-shrink: 0;
-    z-index: 2;
-    position: relative;
 
     &__background {
       display: block;
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 1;
       outline: var(--select-box-border-secondary-width-default) solid
         var(--select-box-border-secondary-color-default);
       outline-offset: var(--select-box-border-secondary-offset-default);
-      box-shadow: inset 0 0 0 var(--select-box-border-default-width) var(--select-box-border-default-color);
+      box-shadow: inset 0 0 0 var(--select-box-border-default-width)
+        var(--select-box-border-default-color);
       border-radius: var(--select-box-radius);
       background: var(--select-box-background-color-default);
       width: var(--select-box-width);
       height: var(--select-box-height);
-      z-index: 1;
     }
 
     &__tick {
       display: block;
       position: absolute;
-      visibility: hidden;
       top: var(--select-box-tick-position-top);
       left: var(--select-box-tick-position-left);
+      visibility: hidden;
+      z-index: 1;
       mask-image: var(--select-box-tick-icon);
       -webkit-mask-image: var(--select-box-tick-icon);
       mask-position: center center;
@@ -103,11 +105,11 @@
       width: var(--select-box-tick-width);
       height: var(--select-box-tick-height);
       pointer-events: none;
-      z-index: 1;
     }
 
     &:checked ~ .checkbox__box__background {
-      box-shadow: inset 0 0 0 var(--select-box-border-checked-default-width) var(--select-box-border-checked-default-color);
+      box-shadow: inset 0 0 0 var(--select-box-border-checked-default-width)
+        var(--select-box-border-checked-default-color);
       background: var(--select-box-background-color-checked-default);
     }
 
@@ -128,12 +130,14 @@
     }
 
     &:disabled:checked ~ .checkbox__box__background {
-      box-shadow: inset 0 0 0 var(--select-box-border-checked-disabled-width) var(--select-box-border-checked-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-box-border-checked-disabled-width)
+        var(--select-box-border-checked-disabled-color);
       background: var(--select-box-background-color-checked-disabled);
     }
 
     &:disabled ~ .checkbox__box__background {
-      box-shadow: inset 0 0 0 var(--select-box-border-disabled-width) var(--select-box-border-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-box-border-disabled-width)
+        var(--select-box-border-disabled-color);
       background: var(--select-box-background-color-disabled);
     }
 
@@ -144,14 +148,14 @@
 }
 
 .switch {
-  min-height: var(--select-switch-height);
   gap: var(--select-switch-gap);
+  min-height: var(--select-switch-height);
 
   &__slot {
     position: relative;
+    flex-shrink: 0;
     box-sizing: border-box;
     line-height: 0;
-    flex-shrink: 0;
   }
 
   &__label {
@@ -172,35 +176,36 @@
   }
 
   &__toggle {
+    position: relative;
     flex: none;
+    flex-shrink: 0;
     opacity: 0;
+    z-index: 2;
+    box-sizing: border-box;
     margin: 0;
     outline: none;
     padding: 0;
     width: var(--select-toggle-width);
     height: var(--select-toggle-height);
-    box-sizing: border-box;
     line-height: 0;
-    flex-shrink: 0;
-    z-index: 2;
-    position: relative;
 
     &__background {
       display: block;
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 1;
       transition: background-color
         var(--select-toggle-knob-transition-background-color);
       outline: var(--select-toggle-border-secondary-width-default) solid
         var(--select-toggle-border-secondary-color-default);
       outline-offset: var(--select-toggle-border-secondary-offset-default);
-      box-shadow: inset 0 0 0 var(--select-toggle-border-default-width) var(--select-toggle-border-default-color);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-default-width)
+        var(--select-toggle-border-default-color);
       border-radius: var(--select-toggle-radius);
       background-color: var(--select-toggle-background-color-default);
       width: var(--select-toggle-width);
       height: var(--select-toggle-height);
-      z-index: 1;
     }
 
     &__knob {
@@ -212,16 +217,17 @@
           var(--select-toggle-knob-transform-default-translate-x)
         )
         translateY(var(--select-toggle-knob-transform-default-translate-y));
+      z-index: 1;
       transition: transform var(--select-toggle-knob-transition-transform);
       border-radius: var(--select-toggle-knob-radius);
       background-color: var(--select-toggle-knob-background-color-default);
       width: var(--select-toggle-knob-width);
       height: var(--select-toggle-knob-height);
-      z-index: 1;
     }
 
     &:checked ~ .switch__toggle__background {
-      box-shadow: inset 0 0 0 var(--select-toggle-border-checked-default-width) var(--select-toggle-border-checked-default-color);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-checked-default-width)
+        var(--select-toggle-border-checked-default-color);
       background-color: var(--select-toggle-background-color-checked-default);
     }
 
@@ -250,7 +256,8 @@
     }
 
     &:disabled ~ .switch__toggle__background {
-      box-shadow: inset 0 0 0 var(--select-toggle-border-disabled-width) var(--select-toggle-border-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-disabled-width)
+        var(--select-toggle-border-disabled-color);
       background-color: var(--select-toggle-background-color-disabled);
     }
 
@@ -259,7 +266,8 @@
     }
 
     &:disabled:checked ~ .switch__toggle__background {
-      box-shadow: inset 0 0 0 var(--select-toggle-border-checked-disabled-width) var(--select-toggle-border-checked-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-checked-disabled-width)
+        var(--select-toggle-border-checked-disabled-color);
       background-color: var(--select-toggle-background-color-checked-disabled);
     }
 
@@ -273,14 +281,14 @@
 
 /* Radio */
 .radio {
-  min-height: var(--select-radio-height);
   gap: var(--select-radio-gap);
+  min-height: var(--select-radio-height);
 
   &__slot {
     position: relative;
+    flex-shrink: 0;
     box-sizing: border-box;
     line-height: 0;
-    flex-shrink: 0;
   }
 
   &__label {
@@ -302,33 +310,34 @@
   }
 
   &__button {
+    position: relative;
+    flex: none;
+    flex-shrink: 0;
     opacity: 0;
+    z-index: 2;
+    box-sizing: border-box;
     margin: 0;
     outline: none;
     padding: 0;
     width: var(--select-button-width);
     height: var(--select-button-height);
-    flex: none;
-    box-sizing: border-box;
     line-height: 0;
-    flex-shrink: 0;
-    z-index: 2;
-    position: relative;
 
     &__background {
       display: block;
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 1;
       outline: var(--select-button-border-secondary-width-default) solid
         var(--select-button-border-secondary-color-default);
       outline-offset: var(--select-button-border-secondary-offset-default);
-      box-shadow: inset 0 0 0 var(--select-button-border-default-width) var(--select-button-border-default-color);
+      box-shadow: inset 0 0 0 var(--select-button-border-default-width)
+        var(--select-button-border-default-color);
       border-radius: var(--select-button-radius);
       background: var(--select-button-background-color-default);
       width: var(--select-button-width);
       height: var(--select-button-height);
-      z-index: 1;
     }
 
     &__inner {
@@ -337,15 +346,16 @@
       top: var(--select-button-inner-position-top);
       left: var(--select-button-inner-position-left);
       visibility: hidden;
+      z-index: 1;
       border-radius: var(--select-button-radius);
       background-color: var(--select-button-icon-color-default);
       width: var(--select-button-inner-width);
       height: var(--select-button-inner-height);
-      z-index: 1;
     }
 
     &:checked ~ .radio__button__background {
-      box-shadow: inset 0 0 0 var(--select-button-border-checked-default-width) var(--select-button-border-checked-default-color);
+      box-shadow: inset 0 0 0 var(--select-button-border-checked-default-width)
+        var(--select-button-border-checked-default-color);
       background: var(--select-button-background-color-checked-default);
     }
 
@@ -368,7 +378,8 @@
     }
 
     &:disabled:checked ~ .radio__button__background {
-      box-shadow: inset 0 0 0 var(--select-button-border-checked-disabled-width) var(--select-button-border-checked-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-button-border-checked-disabled-width)
+        var(--select-button-border-checked-disabled-color);
       background: var(--select-button-background-color-checked-disabled);
     }
 
@@ -377,7 +388,8 @@
     }
 
     &:disabled + .radio__button__background {
-      box-shadow: inset 0 0 0 var(--select-button-border-disabled-width) var(--select-button-border-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-button-border-disabled-width)
+        var(--select-button-border-disabled-color);
       background: var(--select-button-background-color-disabled);
     }
   }

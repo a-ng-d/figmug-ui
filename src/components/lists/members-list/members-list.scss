@@ -20,11 +20,12 @@
 
   &__avatar {
     flex: none;
+    outline: var(--members-list-avatar-border-width) solid
+      var(--members-list-avatar-border-color);
+    outline-offset: var(--members-list-avatar-border-offset);
     border-radius: var(--members-list-avatar-radius);
     width: var(--members-list-avatar-width);
     height: var(--members-list-avatar-height);
-    outline: var(--members-list-avatar-border-width) solid var(--members-list-avatar-border-color);
-    outline-offset: var(--members-list-avatar-border-offset);
     overflow: hidden;
 
     img {

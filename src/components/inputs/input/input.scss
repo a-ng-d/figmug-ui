@@ -47,7 +47,7 @@
       padding-left: var(--input-padding-with-icon-left);
     }
   }
-  
+
   &--with-color & {
     &__field {
       padding-left: var(--input-padding-with-color-left);
@@ -84,7 +84,7 @@
       border-radius: var(--input-color-chip-radius);
 
       & {
-        --input-color-chip-border: var(--input-color-chip-border-default)
+        --input-color-chip-border: var(--input-color-chip-border-default);
       }
     }
 

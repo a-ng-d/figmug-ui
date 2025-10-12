@@ -8,29 +8,29 @@
   font-family: var(--text-font-family);
 
   & {
-    font-size: var(--text-default-font-size);
     font-weight: var(--text-default-font-weight);
+    font-size: var(--text-default-font-size);
     line-height: var(--text-default-line-height);
     letter-spacing: var(--text-default-letter-spacing);
   }
 
   &--small {
-    font-size: var(--text-small-font-size);
     font-weight: var(--text-small-font-weight);
+    font-size: var(--text-small-font-size);
     line-height: var(--text-small-line-height);
     letter-spacing: var(--text-small-letter-spacing);
   }
 
   &--large {
-    font-size: var(--text-large-font-size);
     font-weight: var(--text-large-font-weight);
+    font-size: var(--text-large-font-size);
     line-height: var(--text-large-line-height);
     letter-spacing: var(--text-large-letter-spacing);
   }
 
   &--xlarge {
-    font-size: var(--text-xlarge-font-size);
     font-weight: var(--text-xlarge-font-weight);
+    font-size: var(--text-xlarge-font-size);
     line-height: var(--text-xlarge-line-height);
     letter-spacing: var(--text-xlarge-letter-spacing);
   }

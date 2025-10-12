@@ -75,6 +75,7 @@
   display: flex;
   position: relative;
   justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   box-shadow: 0 0 0 var(--knob-label-border-width)
     var(--knob-label-border-color);
@@ -87,7 +88,6 @@
   pointer-events: none;
   user-select: none;
   text-align: center;
-  align-items: center;
   --text-color-primary: var(--knob-label-text-color);
 
   span {
@@ -119,6 +119,7 @@
   position: absolute;
   top: var(--knob-tooltip-top);
   left: 50%;
+  align-items: center;
   transform: translateX(-50%) translateY(-100%);
   border-radius: var(--knob-tooltip-radius);
   background-color: var(--knob-tooltip-background-color);
@@ -129,7 +130,6 @@
   color: var(--knob-tooltip-text-color);
   user-select: none;
   text-align: center;
-  align-items: center;
 
   span {
     z-index: 2;

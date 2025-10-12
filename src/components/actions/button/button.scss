@@ -97,14 +97,16 @@
   }
 
   &--small {
-    --button-base-padding: var(--button-small-padding-top) var(--button-small-padding-right)
-      var(--button-small-padding-bottom) var(--button-small-padding-left);
+    --button-base-padding: var(--button-small-padding-top)
+      var(--button-small-padding-right) var(--button-small-padding-bottom)
+      var(--button-small-padding-left);
     --button-base-height: var(--button-small-height);
   }
 
   &--large {
-    --button-base-padding: var(--button-large-padding-top) var(--button-large-padding-right)
-      var(--button-large-padding-bottom) var(--button-large-padding-left);
+    --button-base-padding: var(--button-large-padding-top)
+      var(--button-large-padding-right) var(--button-large-padding-bottom)
+      var(--button-large-padding-left);
     --button-base-height: var(--button-large-height);
   }
 
