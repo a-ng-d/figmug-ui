@@ -1122,11 +1122,11 @@
     },
     "small": {
       "width": {
-        "$value": "20px",
+        "$value": "{size.pos.msmall}",
         "$type": "dimension"
       },
       "height": {
-        "$value": "20px",
+        "$value": "{size.pos.msmall}",
         "$type": "dimension"
       }
     },

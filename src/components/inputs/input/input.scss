@@ -1,6 +1,7 @@
 @import 'styles/penpot';
 @import 'styles/sketch';
 @import 'styles/figma';
+@import 'styles/framer';
 
 .textarea {
   display: flex;
@@ -46,6 +47,12 @@
       padding-left: var(--input-padding-with-icon-left);
     }
   }
+  
+  &--with-color & {
+    &__field {
+      padding-left: var(--input-padding-with-color-left);
+    }
+  }
 
   input {
     cursor: inherit;
@@ -57,7 +64,7 @@
       left: var(--input-color-chip-left);
       transform: translateY(-50%);
       appearance: none;
-      opacity: var(--input-color-chip-opacity-default);
+      opacity: var(--input-color-chip-opacity);
       z-index: 1;
       outline: none;
       border: none;
@@ -75,6 +82,10 @@
       box-shadow: var(--input-color-chip-border);
       border: none;
       border-radius: var(--input-color-chip-radius);
+
+      & {
+        --input-color-chip-border: var(--input-color-chip-border-default)
+      }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -89,7 +100,11 @@
       }
     }
 
-    &[type='color' i]:focus {
+    &[type='color' i] {
+      --input-color-chip-opacity: var(--input-color-chip-opacity-default);
+    }
+
+    &[type='color' i]:focus::-webkit-color-swatch {
       --input-color-chip-border: var(--input-color-chip-border-focus);
     }
 

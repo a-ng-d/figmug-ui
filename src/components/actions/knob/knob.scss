@@ -1,6 +1,7 @@
 @import 'styles/penpot';
 @import 'styles/sketch';
 @import 'styles/figma';
+@import 'styles/framer';
 
 .knob {
   display: flex;
@@ -86,6 +87,7 @@
   pointer-events: none;
   user-select: none;
   text-align: center;
+  align-items: center;
   --text-color-primary: var(--knob-label-text-color);
 
   span {
@@ -127,6 +129,7 @@
   color: var(--knob-tooltip-text-color);
   user-select: none;
   text-align: center;
+  align-items: center;
 
   span {
     z-index: 2;

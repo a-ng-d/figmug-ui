@@ -1,6 +1,7 @@
 @import 'styles/penpot';
 @import 'styles/sketch';
 @import 'styles/figma';
+@import 'styles/framer';
 
 .icon-box {
   display: flex;
@@ -18,6 +19,6 @@
 
   &--letter span {
     color: var(--icon-letter-color);
-    font-size: var(--icon-letter-text-size);
+    font-size: var(--icon-letter-text-size) !important;
   }
 }

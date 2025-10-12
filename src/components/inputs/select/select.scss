@@ -1,6 +1,7 @@
 @import 'styles/penpot';
 @import 'styles/sketch';
 @import 'styles/figma';
+@import 'styles/framer';
 
 .checkbox,
 .radio,
@@ -30,14 +31,18 @@
 /* Checkbox */
 .checkbox {
   min-height: var(--select-checkbox-height);
+  gap: var(--select-checkbox-gap);
+
+  &__slot {
+    position: relative;
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
+  }
 
   &__label {
     display: flex;
     align-items: start;
-    margin-left: var(--select-checkbox-margin-left);
-    padding: var(--select-checkbox-padding-top)
-      var(--select-checkbox-padding-right) var(--select-checkbox-padding-bottom)
-      var(--select-checkbox-padding-left);
     height: 100%;
     color: var(--select-text-color-default);
     font-weight: var(--select-text-font-weight);
@@ -47,93 +52,92 @@
     letter-spacing: var(--select-text-letter-spacing);
     user-select: none;
 
-    &::before {
-      display: block;
-      flex: none;
-      margin: var(--select-box-margin-top) var(--select-box-margin-right)
-        var(--select-box-margin-bottom) var(--select-box-margin-left);
-      outline: var(--select-box-border-secondary-width-default) solid
-        var(--select-box-border-secondary-color-default);
-      outline-offset: var(--select-box-border-secondary-offset-default);
-      border: var(--select-box-border-default-width) solid
-        var(--select-box-border-default-color);
-      border-radius: var(--select-box-radius);
-      background: var(--select-box-background-color-default);
-      width: var(--select-box-width);
-      height: var(--select-box-height);
-      content: '';
-    }
-
-    &::after {
-      display: block;
-      position: absolute;
-      visibility: hidden;
-      mask-image: var(--select-box-tick-icon);
-      -webkit-mask-image: var(--select-box-tick-icon);
-      mask-position: var(--select-box-tick-position-top)
-        var(--select-box-tick-position-left);
-      -webkit-mask-position: var(--select-box-tick-position-top)
-        var(--select-box-tick-position-left);
-      mask-size: cover;
-      -webkit-mask-size: cover;
-      margin: var(--select-box-tick-margin-top)
-        var(--select-box-tick-margin-right) var(--select-box-tick-margin-bottom)
-        var(--select-box-tick-margin-left);
-      background-color: var(--select-box-tick-color-default);
-      width: var(--select-box-tick-width);
-      height: var(--select-box-tick-height);
-      pointer-events: none;
-      content: '';
+    &--disabled {
+      color: var(--select-text-color-disabled);
     }
   }
 
   &__box {
+    flex: none;
     opacity: 0;
     margin: 0;
     outline: none;
     padding: 0;
     width: var(--select-box-width);
     height: var(--select-box-height);
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
 
-    &:checked + .checkbox__label::before {
-      border: var(--select-box-border-checked-default-width) solid
-        var(--select-box-border-checked-default-color);
+    &__background {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      outline: var(--select-box-border-secondary-width-default) solid
+        var(--select-box-border-secondary-color-default);
+      outline-offset: var(--select-box-border-secondary-offset-default);
+      box-shadow: inset 0 0 0 var(--select-box-border-default-width) var(--select-box-border-default-color);
+      border-radius: var(--select-box-radius);
+      background: var(--select-box-background-color-default);
+      width: var(--select-box-width);
+      height: var(--select-box-height);
+      z-index: 1;
+    }
+
+    &__tick {
+      display: block;
+      position: absolute;
+      visibility: hidden;
+      top: var(--select-box-tick-position-top);
+      left: var(--select-box-tick-position-left);
+      mask-image: var(--select-box-tick-icon);
+      -webkit-mask-image: var(--select-box-tick-icon);
+      mask-position: center center;
+      -webkit-mask-position: center center;
+      mask-size: cover;
+      -webkit-mask-size: cover;
+      background-color: var(--select-box-tick-color-default);
+      width: var(--select-box-tick-width);
+      height: var(--select-box-tick-height);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    &:checked ~ .checkbox__box__background {
+      box-shadow: inset 0 0 0 var(--select-box-border-checked-default-width) var(--select-box-border-checked-default-color);
       background: var(--select-box-background-color-checked-default);
     }
 
-    &:checked + .checkbox__label::after {
+    &:checked ~ .checkbox__box__tick {
       visibility: visible;
     }
 
-    &:focus + .checkbox__label::before {
+    &:focus ~ .checkbox__box__background {
       outline: var(--select-box-border-secondary-width-focus) solid
         var(--select-box-border-secondary-color-focus);
       outline-offset: var(--select-box-border-secondary-offset-focus);
     }
 
-    &:focus:checked + .checkbox__label::before {
+    &:focus:checked ~ .checkbox__box__background {
       outline: var(--select-box-border-secondary-width-checked-focus) solid
         var(--select-box-border-secondary-color-checked-focus);
       outline-offset: var(--select-box-border-secondary-offset-checked-focus);
     }
 
-    &:disabled + .checkbox__label {
-      color: var(--select-text-color-disabled);
-    }
-
-    &:disabled:checked + .checkbox__label::before {
-      border: var(--select-box-border-checked-disabled-width) solid
-        var(--select-box-border-checked-disabled-color);
+    &:disabled:checked ~ .checkbox__box__background {
+      box-shadow: inset 0 0 0 var(--select-box-border-checked-disabled-width) var(--select-box-border-checked-disabled-color);
       background: var(--select-box-background-color-checked-disabled);
     }
 
-    &:disabled + .checkbox__label::before {
-      border: var(--select-box-border-disabled-width) solid
-        var(--select-box-border-disabled-color);
+    &:disabled ~ .checkbox__box__background {
+      box-shadow: inset 0 0 0 var(--select-box-border-disabled-width) var(--select-box-border-disabled-color);
       background: var(--select-box-background-color-disabled);
     }
 
-    &:disabled:checked + .checkbox__label::after {
+    &:disabled:checked ~ .checkbox__box__tick {
       background-color: var(--select-box-tick-color-disabled);
     }
   }
@@ -141,13 +145,18 @@
 
 .switch {
   min-height: var(--select-switch-height);
+  gap: var(--select-switch-gap);
+
+  &__slot {
+    position: relative;
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
+  }
 
   &__label {
     display: flex;
     align-items: start;
-    margin-left: var(--select-switch-margin-left);
-    padding: var(--select-switch-padding-top) var(--select-switch-padding-right)
-      var(--select-switch-padding-bottom) var(--select-switch-padding-left);
     height: 100%;
     color: var(--select-text-color-default);
     font-weight: var(--select-text-font-weight);
@@ -157,40 +166,8 @@
     letter-spacing: var(--select-text-letter-spacing);
     user-select: none;
 
-    &::before {
-      display: block;
-      flex: none;
-      transition: background-color
-        var(--select-toggle-knob-transition-background-color);
-      margin: var(--select-toggle-margin-top) var(--select-toggle-margin-right)
-        var(--select-toggle-margin-bottom) var(--select-toggle-margin-left);
-      outline: var(--select-toggle-border-secondary-width-default) solid
-        var(--select-toggle-border-secondary-color-default);
-      outline-offset: var(--select-toggle-border-secondary-offset-default);
-      border: var(--select-toggle-border-default-width) solid
-        var(--select-toggle-border-default-color);
-      border-radius: var(--select-toggle-radius);
-      background-color: var(--select-toggle-background-color-default);
-      width: var(--select-toggle-width);
-      height: var(--select-toggle-height);
-      content: '';
-    }
-
-    &::after {
-      display: block;
-      position: absolute;
-      left: var(--select-toggle-knob-left);
-      flex: none;
-      transform: translateX(
-          var(--select-toggle-knob-transform-default-translate-x)
-        )
-        translateY(var(--select-toggle-knob-transform-default-translate-y));
-      transition: transform var(--select-toggle-knob-transition-transform);
-      border-radius: var(--select-toggle-knob-radius);
-      background-color: var(--select-toggle-knob-background-color-default);
-      width: var(--select-toggle-knob-width);
-      height: var(--select-toggle-knob-height);
-      content: '';
+    &--disabled {
+      color: var(--select-text-color-disabled);
     }
   }
 
@@ -202,14 +179,53 @@
     padding: 0;
     width: var(--select-toggle-width);
     height: var(--select-toggle-height);
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
 
-    &:checked + .switch__label::before {
-      border: var(--select-toggle-border-checked-default-width) solid
-        var(--select-toggle-border-checked-default-color);
+    &__background {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: background-color
+        var(--select-toggle-knob-transition-background-color);
+      outline: var(--select-toggle-border-secondary-width-default) solid
+        var(--select-toggle-border-secondary-color-default);
+      outline-offset: var(--select-toggle-border-secondary-offset-default);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-default-width) var(--select-toggle-border-default-color);
+      border-radius: var(--select-toggle-radius);
+      background-color: var(--select-toggle-background-color-default);
+      width: var(--select-toggle-width);
+      height: var(--select-toggle-height);
+      z-index: 1;
+    }
+
+    &__knob {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(
+          var(--select-toggle-knob-transform-default-translate-x)
+        )
+        translateY(var(--select-toggle-knob-transform-default-translate-y));
+      transition: transform var(--select-toggle-knob-transition-transform);
+      border-radius: var(--select-toggle-knob-radius);
+      background-color: var(--select-toggle-knob-background-color-default);
+      width: var(--select-toggle-knob-width);
+      height: var(--select-toggle-knob-height);
+      z-index: 1;
+    }
+
+    &:checked ~ .switch__toggle__background {
+      box-shadow: inset 0 0 0 var(--select-toggle-border-checked-default-width) var(--select-toggle-border-checked-default-color);
       background-color: var(--select-toggle-background-color-checked-default);
     }
 
-    &:checked + .switch__label::after {
+    &:checked ~ .switch__toggle__knob {
       transform: translateX(
           var(--select-toggle-knob-transform-checked-translate-x)
         )
@@ -219,13 +235,13 @@
       );
     }
 
-    &:focus + .switch__label::before {
+    &:focus ~ .switch__toggle__background {
       outline: var(--select-toggle-border-secondary-width-focus) solid
         var(--select-toggle-border-secondary-color-focus);
       outline-offset: var(--select-toggle-border-secondary-offset-focus);
     }
 
-    &:focus:checked + .switch__label::before {
+    &:focus:checked ~ .switch__toggle__background {
       outline: var(--select-toggle-border-secondary-width-checked-focus) solid
         var(--select-toggle-border-secondary-color-checked-focus);
       outline-offset: var(
@@ -233,27 +249,21 @@
       );
     }
 
-    &:disabled + .switch__label {
-      color: var(--select-text-color-disabled);
-    }
-
-    &:disabled + .switch__label::before {
-      border: var(--select-toggle-border-disabled-width) solid
-        var(--select-toggle-border-disabled-color);
+    &:disabled ~ .switch__toggle__background {
+      box-shadow: inset 0 0 0 var(--select-toggle-border-disabled-width) var(--select-toggle-border-disabled-color);
       background-color: var(--select-toggle-background-color-disabled);
     }
 
-    &:disabled + .switch__label::after {
+    &:disabled ~ .switch__toggle__knob {
       background-color: var(--select-toggle-knob-background-color-disabled);
     }
 
-    &:disabled:checked + .switch__label::before {
-      border: var(--select-toggle-border-checked-disabled-width) solid
-        var(--select-toggle-border-checked-disabled-color);
+    &:disabled:checked ~ .switch__toggle__background {
+      box-shadow: inset 0 0 0 var(--select-toggle-border-checked-disabled-width) var(--select-toggle-border-checked-disabled-color);
       background-color: var(--select-toggle-background-color-checked-disabled);
     }
 
-    &:disabled:checked + .switch__label::after {
+    &:disabled:checked ~ .switch__toggle__knob {
       background-color: var(
         --select-toggle-knob-background-color-checked-disabled
       );
@@ -264,14 +274,19 @@
 /* Radio */
 .radio {
   min-height: var(--select-radio-height);
+  gap: var(--select-radio-gap);
+
+  &__slot {
+    position: relative;
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
+  }
 
   &__label {
     display: flex;
     position: relative;
     align-items: start;
-    margin-left: var(--select-radio-margin-left);
-    padding: var(--select-radio-padding-top) var(--select-radio-padding-right)
-      var(--select-radio-padding-bottom) var(--select-radio-padding-left);
     height: 100%;
     color: var(--select-text-color-default);
     font-weight: var(--select-text-font-weight);
@@ -281,34 +296,8 @@
     letter-spacing: var(--select-text-letter-spacing);
     user-select: none;
 
-    &::before {
-      display: block;
-      flex: none;
-      margin: var(--select-button-margin-top) var(--select-button-margin-right)
-        var(--select-button-margin-bottom) var(--select-button-margin-left);
-      outline: var(--select-button-border-secondary-width-default) solid
-        var(--select-button-border-secondary-color-default);
-      outline-offset: var(--select-button-border-secondary-offset-default);
-      border: var(--select-button-border-default-width) solid
-        var(--select-button-border-default-color);
-      border-radius: var(--select-button-radius);
-      background: var(--select-button-background-color-default);
-      width: var(--select-button-width);
-      height: var(--select-button-height);
-      content: '';
-    }
-
-    &::after {
-      display: block;
-      position: absolute;
-      top: var(--select-button-inner-top);
-      left: var(--select-button-inner-left);
-      visibility: hidden;
-      border-radius: var(--select-button-radius);
-      background-color: var(--select-button-icon-color-default);
-      width: var(--select-button-inner-width);
-      height: var(--select-button-inner-height);
-      content: '';
+    &--disabled {
+      color: var(--select-text-color-disabled);
     }
   }
 
@@ -319,24 +308,58 @@
     padding: 0;
     width: var(--select-button-width);
     height: var(--select-button-height);
+    flex: none;
+    box-sizing: border-box;
+    line-height: 0;
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
 
-    &:checked + .radio__label::before {
-      border: var(--select-button-border-checked-default-width) solid
-        var(--select-button-border-checked-default-color);
+    &__background {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      outline: var(--select-button-border-secondary-width-default) solid
+        var(--select-button-border-secondary-color-default);
+      outline-offset: var(--select-button-border-secondary-offset-default);
+      box-shadow: inset 0 0 0 var(--select-button-border-default-width) var(--select-button-border-default-color);
+      border-radius: var(--select-button-radius);
+      background: var(--select-button-background-color-default);
+      width: var(--select-button-width);
+      height: var(--select-button-height);
+      z-index: 1;
+    }
+
+    &__inner {
+      display: block;
+      position: absolute;
+      top: var(--select-button-inner-position-top);
+      left: var(--select-button-inner-position-left);
+      visibility: hidden;
+      border-radius: var(--select-button-radius);
+      background-color: var(--select-button-icon-color-default);
+      width: var(--select-button-inner-width);
+      height: var(--select-button-inner-height);
+      z-index: 1;
+    }
+
+    &:checked ~ .radio__button__background {
+      box-shadow: inset 0 0 0 var(--select-button-border-checked-default-width) var(--select-button-border-checked-default-color);
       background: var(--select-button-background-color-checked-default);
     }
 
-    &:checked + .radio__label::after {
+    &:checked ~ .radio__button__inner {
       visibility: visible;
     }
 
-    &:focus + .radio__label::before {
+    &:focus ~ .radio__button__background {
       outline: var(--select-button-border-secondary-width-focus) solid
         var(--select-button-border-secondary-color-focus);
       outline-offset: var(--select-button-border-secondary-offset-focus);
     }
 
-    &:focus:checked + .radio__label::before {
+    &:focus:checked ~ .radio__button__background {
       outline: var(--select-button-border-secondary-width-checked-focus) solid
         var(--select-button-border-secondary-color-checked-focus);
       outline-offset: var(
@@ -344,23 +367,17 @@
       );
     }
 
-    &:disabled + .radio__label {
-      color: var(--select-text-color-disabled);
-    }
-
-    &:disabled:checked + .radio__label::before {
-      border: var(--select-button-border-checked-disabled-width) solid
-        var(--select-button-border-checked-disabled-color);
+    &:disabled:checked ~ .radio__button__background {
+      box-shadow: inset 0 0 0 var(--select-button-border-checked-disabled-width) var(--select-button-border-checked-disabled-color);
       background: var(--select-button-background-color-checked-disabled);
     }
 
-    &:disabled:checked + .radio__label::after {
+    &:disabled:checked ~ .radio__button__inner {
       background-color: var(--select-button-icon-color-disabled);
     }
 
-    &:disabled + .radio__label::before {
-      border: var(--select-button-border-disabled-width) solid
-        var(--select-button-border-disabled-color);
+    &:disabled + .radio__button__background {
+      box-shadow: inset 0 0 0 var(--select-button-border-disabled-width) var(--select-button-border-disabled-color);
       background: var(--select-button-background-color-disabled);
     }
   }

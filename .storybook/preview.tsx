@@ -22,6 +22,8 @@ const withTheme: Decorator = (Story, context) => {
         'penpot-dark': '#000000',
         'sketch-light': '#ffffff',
         'sketch-dark': '#202022',
+        'framer-light': '#ffffff',
+        'framer-dark': '#111111',
       }
 
       const bgValue = backgroundMap[modes as keyof typeof backgroundMap]
@@ -40,18 +42,17 @@ const preview: Preview = {
   globalTypes: {
     themes: {
       defaultValue: 'figma',
-      description: 'Select the UI theme (Figma UI2, Figma UI3, Penpot)',
+      description: 'Select the UI theme',
       toolbar: {
         title: 'UI Theme',
         icon: 'paintbrush',
-        items: ['figma', 'penpot', 'sketch'],
+        items: ['figma', 'penpot', 'sketch', 'framer'],
         dynamicTitle: true,
       },
     },
     modes: {
       defaultValue: 'figma-dark',
-      description:
-        'Select the mode (Figma Light, Figma Dark, FigJam, Penpot Light, Penpot Dark)',
+      description: 'Select the mode',
       toolbar: {
         title: 'Color Mode',
         icon: 'photo',
@@ -63,6 +64,8 @@ const preview: Preview = {
           'penpot-dark',
           'sketch-light',
           'sketch-dark',
+          'framer-light',
+          'framer-dark',
         ],
         dynamicTitle: true,
       },

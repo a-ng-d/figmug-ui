@@ -70,7 +70,7 @@
         "$type": "dimension"
       },
       "radius": {
-        "$value": "{size.null}",
+        "$value": "{border.radius.null}",
         "$type": "dimension"
       },
       "background": {

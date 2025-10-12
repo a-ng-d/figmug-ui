@@ -65,7 +65,7 @@
   --input-border-width-onselected-hover: var(--size-pos-unit);
   --input-clearable-right: 6px;
   --input-clearable-top: 6px;
-  --input-color-chip-border-default: inset 0 0 0 var(--size-null) color(srgb 0 0 0 / 0.1);
+  --input-color-chip-border-default: inset 0 0 0 var(--size-pos-unit) color(srgb 0 0 0 / 0.1);
   --input-color-chip-border-focus: inset 0 0 0 var(--size-pos-xunit) var(--penpot-color-accent-primary);
   --input-color-chip-height: var(--size-pos-xsmall);
   --input-color-chip-left: var(--size-pos-xxsmall);
@@ -92,6 +92,10 @@
   --input-padding-unit-left: var(--size-pos-small);
   --input-padding-unit-right: var(--size-pos-small);
   --input-padding-unit-top: var(--size-pos-small);
+  --input-padding-with-color-bottom: var(--size-pos-small);
+  --input-padding-with-color-left: var(--size-pos-medium);
+  --input-padding-with-color-right: var(--size-pos-small);
+  --input-padding-with-color-top: var(--size-pos-small);
   --input-padding-with-icon-bottom: var(--size-pos-small);
   --input-padding-with-icon-left: var(--size-pos-medium);
   --input-padding-with-icon-right: var(--size-pos-small);
@@ -116,7 +120,7 @@
   --input-text-font-family: var(--font-stack);
   --input-text-font-size: var(--font-size-small);
   --input-text-font-weight: var(--font-weight-normal);
-  --input-text-letter-spacing: var(--font-letter-spacing-neg-small);
+  --input-text-letter-spacing: var(--font-letter-spacing-pos-large);
   --input-text-line-height: var(--font-line-height-default);
   --input-text-placeholder-color-default: var(--penpot-color-foreground-secondary);
   --input-text-placeholder-color-disabled: var(--penpot-color-foreground-disabled);

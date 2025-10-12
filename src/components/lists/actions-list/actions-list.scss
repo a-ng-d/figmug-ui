@@ -1,6 +1,7 @@
 @import 'styles/penpot';
 @import 'styles/sketch';
 @import 'styles/figma';
+@import 'styles/framer';
 
 .select-menu {
   position: relative;
@@ -126,6 +127,11 @@
       flex: 1;
       pointer-events: none;
       white-space: nowrap;
+      font-family: var(--actions-list-item-text-font-family);
+      font-size: var(--actions-list-item-text-font-size);
+      font-weight: var(--actions-list-item-text-font-weight);
+      line-height: var(--actions-list-item-text-line-height);
+      letter-spacing: var(--actions-list-item-text-letter-spacing);
     }
 
     &__caret {

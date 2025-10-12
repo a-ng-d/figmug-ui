@@ -11,6 +11,7 @@ export interface MembersListProps {
     fullName: string
   }>
   numberOfAvatarsDisplayed: number
+  isInverted?: boolean
 }
 
 export interface MembersListState {
@@ -18,10 +19,11 @@ export interface MembersListState {
   isMembersListVisible: boolean
 }
 
-export default class MembersList extends React.Component<
-  MembersListProps,
-  MembersListState
-> {
+export default class MembersList extends React.Component<MembersListProps, MembersListState> {
+  static defaultProps: Partial<MembersListProps> = {
+    isInverted: false,
+  }
+
   constructor(props: MembersListProps) {
     super(props)
     this.state = {
@@ -31,45 +33,52 @@ export default class MembersList extends React.Component<
   }
 
   render() {
-    const { members, numberOfAvatarsDisplayed } = this.props
+    const { members, numberOfAvatarsDisplayed, isInverted } = this.props
     const { activeTooltipIndex, isMembersListVisible } = this.state
 
     return (
       <div
-        className="members-list"
+        className={`members-list ${isInverted ? 'members-list--inverted' : ''}`}
         role="list"
       >
-        {members.slice(0, numberOfAvatarsDisplayed).map((member, index) => (
-          <div
-            key={member.fullName}
-            className="members-list__member"
-            role="listitem"
-            onMouseEnter={() =>
-              this.setState({
-                activeTooltipIndex: index,
-              })
-            }
-            onMouseLeave={() =>
-              this.setState({
-                activeTooltipIndex: null,
-              })
-            }
-          >
+        {members.slice(0, numberOfAvatarsDisplayed).map((member, index) => {
+          const zIndex = isInverted
+            ? index + 1
+            : numberOfAvatarsDisplayed - index
+
+          return (
             <div
-              className="members-list__avatar"
-              role="presentation"
+              key={member.fullName}
+              className="members-list__member"
+              role="listitem"
+              style={{ zIndex }}
+              onMouseEnter={() =>
+                this.setState({
+                  activeTooltipIndex: index,
+                })
+              }
+              onMouseLeave={() =>
+                this.setState({
+                  activeTooltipIndex: null,
+                })
+              }
             >
-              <img
-                src={member.avatar}
-                alt={member.fullName}
-                aria-hidden="true"
-              />
+              <div
+                className="members-list__avatar"
+                role="presentation"
+              >
+                <img
+                  src={member.avatar}
+                  alt={member.fullName}
+                  aria-hidden="true"
+                />
+              </div>
+              {activeTooltipIndex === index && (
+                <Tooltip>{member.fullName}</Tooltip>
+              )}
             </div>
-            {activeTooltipIndex === index && (
-              <Tooltip>{member.fullName}</Tooltip>
-            )}
-          </div>
-        ))}
+          )
+        })}
         {members.slice(numberOfAvatarsDisplayed).length > 0 && (
           <div
             className="members-list__remaining"

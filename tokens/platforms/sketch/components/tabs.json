@@ -12,7 +12,7 @@
     },
     "radius": {
       "default": {
-        "$value": "{size.null}",
+        "$value": "{border.radius.null}",
         "$type": "dimension"
       },
       "vertical": {

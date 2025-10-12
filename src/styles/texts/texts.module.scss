@@ -1,29 +1,36 @@
 @import 'styles/penpot';
 @import 'styles/sketch';
 @import 'styles/figma';
+@import 'styles/framer';
 
 .type {
   color: var(--text-color-primary);
-  font-weight: var(--text-default-font-weight);
-  font-size: var(--text-default-font-size);
-  line-height: var(--text-default-line-height);
   font-family: var(--text-font-family);
-  letter-spacing: var(--text-default-letter-spacing);
+
+  & {
+    font-size: var(--text-default-font-size);
+    font-weight: var(--text-default-font-weight);
+    line-height: var(--text-default-line-height);
+    letter-spacing: var(--text-default-letter-spacing);
+  }
 
   &--small {
     font-size: var(--text-small-font-size);
+    font-weight: var(--text-small-font-weight);
     line-height: var(--text-small-line-height);
     letter-spacing: var(--text-small-letter-spacing);
   }
 
   &--large {
     font-size: var(--text-large-font-size);
+    font-weight: var(--text-large-font-weight);
     line-height: var(--text-large-line-height);
     letter-spacing: var(--text-large-letter-spacing);
   }
 
   &--xlarge {
     font-size: var(--text-xlarge-font-size);
+    font-weight: var(--text-xlarge-font-weight);
     line-height: var(--text-xlarge-line-height);
     letter-spacing: var(--text-xlarge-letter-spacing);
   }
@@ -47,7 +54,7 @@
   }
 
   &--tertiary {
-    color: var(--text-color-secondary);
+    color: var(--text-color-tertiary);
   }
 
   &--inverse {

@@ -40,7 +40,7 @@
   --knob-label-border-color-focus: var(--figma-color-border-selected);
   --knob-label-border-width-default: var(--size-pos-unit);
   --knob-label-border-width-focus: var(--size-pos-unit);
-  --knob-label-height: 20px;
+  --knob-label-height: var(--size-pos-msmall);
   --knob-label-padding-bottom: var(--size-pos-xunit);
   --knob-label-padding-left: var(--size-pos-xxxsmall);
   --knob-label-padding-right: var(--size-pos-xxxsmall);

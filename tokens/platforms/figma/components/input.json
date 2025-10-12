@@ -102,6 +102,24 @@
           "$value": "{size.pos.small}",
           "$type": "dimension"
         }
+      },
+      "with-color": {
+        "top": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
       }
     },
     "clearable": {
@@ -414,7 +432,7 @@
         }
       },
       "letterSpacing": {
-        "$value": "{font.letterSpacing.neg.small}",
+        "$value": "{font.letterSpacing.pos.xlarge}",
         "$type": "dimension"
       },
       "lineHeight": {
@@ -568,7 +586,7 @@
               "offsetX": 0,
               "offsetY": 0,
               "blur": 0,
-              "spread": "{size.null}",
+              "spread": "{size.pos.unit}",
               "color": "rgba(0, 0, 0, 0.1)",
               "inset": true
             }

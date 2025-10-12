@@ -1,0 +1,100 @@
+{
+  "accordion": {
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{framer.color.divider}",
+        "$type": "color"
+      }
+    },
+    "row": {
+      "gap": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.xlarge}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "text": {
+      "color": {
+        "default": {
+          "$value": "{framer.color.text}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{framer.color.text}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{framer.color.text}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{framer.color.text.tertiary}",
+          "$type": "color"
+        }
+      }
+    },
+    "icon": {
+      "color": {
+        "default": {
+          "$value": "{framer.color.text}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{framer.color.text}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{framer.color.text}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{framer.color.text.tertiary}",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}

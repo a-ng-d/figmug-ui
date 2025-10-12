@@ -556,7 +556,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
         className={doClassnames([
           'input',
           'input--color',
-          'input--with-icon',
+          'input--with-color',
           isBlocked && 'input--blocked',
         ])}
         role="group"

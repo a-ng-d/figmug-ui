@@ -316,7 +316,7 @@
   --icon-button-selected-notification-border-color-focus: var(--figma-color-bg-selected);
   --icon-button-selected-notification-border-color-hover: var(--figma-color-bg-tertiary);
   --icon-button-selected-notification-border-color-pressed: var(--figma-color-bg-brand-tertiary);
-  --icon-button-small-height: 20px;
-  --icon-button-small-width: 20px;
+  --icon-button-small-height: var(--size-pos-msmall);
+  --icon-button-small-width: var(--size-pos-msmall);
 }
 

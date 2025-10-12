@@ -17,6 +17,10 @@
         "$type": "dimension",
         "$value": { "value": -40, "unit": "px" }
       },
+      "xmedium": {
+        "$type": "dimension",
+        "$value": { "value": -36, "unit": "px" }
+      },
       "medium": {
         "$type": "dimension",
         "$value": { "value": -32, "unit": "px" }
@@ -24,6 +28,10 @@
       "small": {
         "$type": "dimension",
         "$value": { "value": -24, "unit": "px" }
+      },
+      "msmall": {
+        "$type": "dimension",
+        "$value": { "value": -20, "unit": "px" }
       },
       "xsmall": {
         "$type": "dimension",
@@ -79,6 +87,10 @@
         "$type": "dimension",
         "$value": { "value": 16, "unit": "px" }
       },
+      "msmall": {
+        "$type": "dimension",
+        "$value": { "value": 20, "unit": "px" }
+      },
       "small": {
         "$type": "dimension",
         "$value": { "value": 24, "unit": "px" }
@@ -86,6 +98,10 @@
       "medium": {
         "$type": "dimension",
         "$value": { "value": 32, "unit": "px" }
+      },
+      "xmedium": {
+        "$type": "dimension",
+        "$value": { "value": 36, "unit": "px" }
       },
       "large": {
         "$type": "dimension",

@@ -1,0 +1,30 @@
+{
+  "drawer": {
+    "background": {
+      "color": {
+        "$value": "{framer.color.bg}",
+        "$type": "color"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{framer.color.divider}",
+        "$type": "color"
+      }
+    },
+    "knob": {
+      "size": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "position": {
+        "$value": "{size.neg.xxxsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

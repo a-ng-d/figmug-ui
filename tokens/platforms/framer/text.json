@@ -1,0 +1,174 @@
+{
+  "text": {
+    "fontFamily": {
+      "$value": "{font.stack}",
+      "$type": "fontFamily"
+    },
+    "color": {
+      "primary": {
+        "$value": "{framer.color.text}",
+        "$type": "color"
+      },
+      "secondary": {
+        "$value": "{framer.color.text.secondary}",
+        "$type": "color"
+      },
+      "tertiary": {
+        "$value": "{framer.color.text.tertiary}",
+        "$type": "color"
+      },
+      "inverse": {
+        "$value": "{framer.color.bg}",
+        "$type": "color"
+      }
+    },
+    "fontWeight": {
+      "medium": {
+        "$value": "{font.weight.medium}",
+        "$type": "fontWeight"
+      },
+      "bold": {
+        "$value": "{font.weight.bold}",
+        "$type": "fontWeight"
+      }
+    },
+    "default": {
+      "fontSize": {
+        "$value": "{font.size.small}",
+        "$type": "dimension"
+      },
+      "fontWeight": {
+        "$value": "{font.weight.medium}",
+        "$type": "fontWeight"
+      },
+      "lineHeight": {
+        "$value": "{font.lineHeight.default}",
+        "$type": "dimension"
+      },
+      "letterSpacing": {
+        "$value": "{font.letterSpacing.pos.large}",
+        "$type": "dimension"
+      }
+    },
+    "small": {
+      "fontSize": {
+        "$value": "{font.size.xsmall}",
+        "$type": "dimension"
+      },
+      "fontWeight": {
+        "$value": "{font.weight.medium}",
+        "$type": "fontWeight"
+      },
+      "lineHeight": {
+        "$value": "{font.lineHeight.default}",
+        "$type": "dimension"
+      },
+      "letterSpacing": {
+        "$value": "{font.letterSpacing.pos.xlarge}",
+        "$type": "dimension"
+      }
+    },
+    "large": {
+      "fontSize": {
+        "$value": "{font.size.medium}",
+        "$type": "dimension"
+      },
+      "fontWeight": {
+        "$value": "{font.weight.semi}",
+        "$type": "fontWeight"
+      },
+      "lineHeight": {
+        "$value": "{font.lineHeight.large}",
+        "$type": "dimension"
+      },
+      "letterSpacing": {
+        "$value": "{font.letterSpacing.pos.medium}",
+        "$type": "dimension"
+      }
+    },
+    "xlarge": {
+      "fontSize": {
+        "$value": "{font.size.large}",
+        "$type": "dimension"
+      },
+      "fontWeight": {
+        "$value": "{font.weight.bold}",
+        "$type": "fontWeight"
+      },
+      "lineHeight": {
+        "$value": "{font.lineHeight.large}",
+        "$type": "dimension"
+      },
+      "letterSpacing": {
+        "$value": "{font.letterSpacing.pos.small}",
+        "$type": "dimension"
+      }
+    },
+    "link": {
+      "color": {
+        "$value": "{framer.color.tint.dark}",
+        "$type": "color"
+      },
+      "decoration": {
+        "$value": "none",
+        "$type": "string"
+      },
+      "borderFocus": {
+        "$value": "none",
+        "$type": "string"
+      },
+      "decorationFocus": {
+        "$value": "underline",
+        "$type": "string"
+      }
+    },
+    "label": {
+      "color": {
+        "$value": "{framer.color.text.tertiary}",
+        "$type": "color"
+      },
+      "fontSize": {
+        "$value": "{font.size.xsmall}",
+        "$type": "dimension"
+      },
+      "fontWeight": {
+        "$value": "{font.weight.normal}",
+        "$type": "fontWeight"
+      },
+      "letterSpacing": {
+        "$value": "{font.letterSpacing.pos.large}",
+        "$type": "dimension"
+      },
+      "lineHeight": {
+        "$value": "{font.lineHeight.default}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "gap": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "icon": {
+    "width": {
+      "$value": "{size.pos.small}",
+      "$type": "dimension"
+    },
+    "height": {
+      "$value": "{size.pos.small}",
+      "$type": "dimension"
+    },
+    "picto": {
+      "color": {
+        "$value": "{framer.color.text}",
+        "$type": "color"
+      }
+    },
+    "letter": {
+      "color": {
+        "$value": "{framer.color.text}",
+        "$type": "color"
+      },
+      "textSize": {
+        "$value": "{font.size.xxxsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

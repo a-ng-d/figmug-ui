@@ -4,7 +4,7 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-    #spinner-figma-ui3 {
+    #spinner-figma {
       transform-origin: center;
       animation: spin 1s linear infinite;
       animation-play-state: running !important;
@@ -15,5 +15,5 @@
       transform: translateZ(0);
     }
   </style>
-  <path id="spinner-figma-ui3" fill="#000" fill-rule="evenodd" d="M11.165 4.53a.5.5 0 0 1-.404.58A7 7 0 1 0 19 12a.5.5 0 0 1 1 0 8 8 0 1 1-9.416-7.874.5.5 0 0 1 .58.404Z" clip-rule="evenodd"/>
+  <path id="spinner-figma" fill="#000" fill-rule="evenodd" d="M11.165 4.53a.5.5 0 0 1-.404.58A7 7 0 1 0 19 12a.5.5 0 0 1 1 0 8 8 0 1 1-9.416-7.874.5.5 0 0 1 .58.404Z" clip-rule="evenodd"/>
 </svg>

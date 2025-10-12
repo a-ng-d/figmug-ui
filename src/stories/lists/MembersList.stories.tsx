@@ -39,6 +39,7 @@ export const Default: Story = {
   args: {
     members: mockMembers,
     numberOfAvatarsDisplayed: 3,
+    isInverted: false,
   },
 }
 
@@ -46,6 +47,7 @@ export const ShowAllMembers: Story = {
   args: {
     members: mockMembers,
     numberOfAvatarsDisplayed: 5,
+    isInverted: false,
   },
 }
 
@@ -53,6 +55,7 @@ export const ShowOneMember: Story = {
   args: {
     members: mockMembers,
     numberOfAvatarsDisplayed: 1,
+    isInverted: false,
   },
 }
 
@@ -60,5 +63,6 @@ export const EmptyList: Story = {
   args: {
     members: [],
     numberOfAvatarsDisplayed: 3,
+    isInverted: false,
   },
 }

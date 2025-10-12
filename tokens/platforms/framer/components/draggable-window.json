@@ -1,0 +1,75 @@
+{
+  "draggableWindow": {
+    "width": {
+      "$value": {
+        "value": 296,
+        "unit": "px"
+      },
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{border.radius.xxlarge}",
+      "$type": "dimension"
+    },
+    "shadow": {
+      "$value": "{elevation.500ModalWindow}",
+      "$type": "shadow"
+    },
+    "background": {
+      "color": {
+        "$value": "{framer.color.bg}",
+        "$type": "color"
+      }
+    },
+    "border": {
+      "color": {
+        "$value": "transparent",
+        "$type": "string"
+      },
+      "width": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "offset": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "header": {
+      "border": {
+        "width": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{framer.color.divider}",
+          "$type": "color"
+        }
+      }
+    },
+    "content": {
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xmsmall}",
+          "$type": "dimension"
+        }
+      },
+      "gap": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

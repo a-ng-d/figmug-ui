@@ -6,7 +6,7 @@
     },
     "avatar": {
       "radius": {
-        "$value": "{size.pos.small}",
+        "$value": "{border.radius.xxlarge}",
         "$type": "dimension"
       },
       "width": {
@@ -16,6 +16,20 @@
       "height": {
         "$value": "{size.pos.small}",
         "$type": "dimension"
+      },
+      "border": {
+        "width": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "offset": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "transparent",
+          "$type": "sring"
+        }
       }
     },
     "more": {

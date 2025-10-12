@@ -133,13 +133,18 @@ async function updateStorybookPreview(themeName) {
     )
 
     // 2. Add the light and dark modes for the new theme with proper indentation
-    const modesItemsRegex = /(items: \[\s*.*?'sketch-dark',\s*)/s
+    const modesItemsRegex = new RegExp(
+      `(items: \\[\\s*.*?'${SOURCE_COLOR_THEME}-dark',\\s*)`,
+      's'
+    )
     const updatedModesItems = `$1  '${themeName}-light',\n          '${themeName}-dark',\n        `
     previewContent = previewContent.replace(modesItemsRegex, updatedModesItems)
 
     // 3. Add background colors for the new theme modes with proper indentation
-    const backgroundMapRegex =
-      /(const backgroundMap = \{.*?'sketch-dark': '#202022',\s*)/s
+    const backgroundMapRegex = new RegExp(
+      `(const backgroundMap = \\{.*?'${SOURCE_COLOR_THEME}-dark': '#202022',\\s*)`,
+      's'
+    )
     const updatedBackgroundMap = `$1  '${themeName}-light': '#ffffff',\n        '${themeName}-dark': '#202022',\n      `
     previewContent = previewContent.replace(
       backgroundMapRegex,
@@ -170,40 +175,102 @@ async function updateStorybookPreview(themeName) {
 function replaceAllThemeNames(content, newThemeName) {
   // List of all possible theme names to replace
   const existingThemes = ['figma', 'penpot', 'sketch']
-  
+
   let updatedContent = content
-  
-  for (const oldTheme of existingThemes) {
-    // Replace all patterns for each theme
+
+  // Replace all patterns for each theme
+  for (const oldTheme of existingThemes)
     updatedContent = updatedContent
+      .replace(
+        new RegExp(`\\${oldTheme}-light\\`, 'g'),
+        `${newThemeName}-light`
+      )
+      .replace(
+        new RegExp(`\\${oldTheme}-light\\`, 'g'),
+        `${newThemeName}-light`
+      )
+      .replace(new RegExp(`\\${oldTheme}-dark\\`, 'g'), `${newThemeName}-dark`)
       // Data attributes with double quotes
-      .replace(new RegExp(`\\[data-theme="${oldTheme}"\\]`, 'g'), `[data-theme="${newThemeName}"]`)
-      .replace(new RegExp(`\\[data-theme='${oldTheme}'\\]`, 'g'), `[data-theme='${newThemeName}']`)
+      .replace(
+        new RegExp(`\\[data-theme="${oldTheme}"\\]`, 'g'),
+        `[data-theme="${newThemeName}"]`
+      )
+      .replace(
+        new RegExp(`\\[data-theme='${oldTheme}'\\]`, 'g'),
+        `[data-theme='${newThemeName}']`
+      )
       // Data mode attributes
-      .replace(new RegExp(`\\[data-mode="${oldTheme}-light"\\]`, 'g'), `[data-mode="${newThemeName}-light"]`)
-      .replace(new RegExp(`\\[data-mode="${oldTheme}-dark"\\]`, 'g'), `[data-mode="${newThemeName}-dark"]`)
-      .replace(new RegExp(`\\[data-mode='${oldTheme}-light'\\]`, 'g'), `[data-mode='${newThemeName}-light']`)
-      .replace(new RegExp(`\\[data-mode='${oldTheme}-dark'\\]`, 'g'), `[data-mode='${newThemeName}-dark']`)
+      .replace(
+        new RegExp(`\\[data-mode="${oldTheme}-light"\\]`, 'g'),
+        `[data-mode="${newThemeName}-light"]`
+      )
+      .replace(
+        new RegExp(`\\[data-mode="${oldTheme}-dark"\\]`, 'g'),
+        `[data-mode="${newThemeName}-dark"]`
+      )
+      .replace(
+        new RegExp(`\\[data-mode='${oldTheme}-light'\\]`, 'g'),
+        `[data-mode='${newThemeName}-light']`
+      )
+      .replace(
+        new RegExp(`\\[data-mode='${oldTheme}-dark'\\]`, 'g'),
+        `[data-mode='${newThemeName}-dark']`
+      )
       // File paths and names
-      .replace(new RegExp(`filename: 'styles/${oldTheme}\\.scss'`, 'g'), `filename: 'styles/${newThemeName}.scss'`)
-      .replace(new RegExp(`filename: '${oldTheme}-`, 'g'), `filename: '${newThemeName}-`)
-      .replace(new RegExp(`'\\./tokens/platforms/${oldTheme}/`, 'g'), `'./tokens/platforms/${newThemeName}/`)
+      .replace(
+        new RegExp(`filename: 'styles/${oldTheme}\\.scss'`, 'g'),
+        `filename: 'styles/${newThemeName}.scss'`
+      )
+      .replace(
+        new RegExp(`filename: '${oldTheme}-`, 'g'),
+        `filename: '${newThemeName}-`
+      )
+      .replace(
+        new RegExp(`'\\./tokens/platforms/${oldTheme}/`, 'g'),
+        `'./tokens/platforms/${newThemeName}/`
+      )
       // Root selectors
-      .replace(new RegExp(`:root\\[data-theme="${oldTheme}"\\]`, 'g'), `:root[data-theme="${newThemeName}"]`)
-      .replace(new RegExp(`:root\\[data-theme='${oldTheme}'\\]`, 'g'), `:root[data-theme='${newThemeName}']`)
+      .replace(
+        new RegExp(`:root\\[data-theme="${oldTheme}"\\]`, 'g'),
+        `:root[data-theme="${newThemeName}"]`
+      )
+      .replace(
+        new RegExp(`:root\\[data-theme='${oldTheme}'\\]`, 'g'),
+        `:root[data-theme='${newThemeName}']`
+      )
       // Import statements
-      .replace(new RegExp(`@import 'styles/${oldTheme}'`, 'g'), `@import 'styles/${newThemeName}'`)
-      .replace(new RegExp(`@import "styles/${oldTheme}"`, 'g'), `@import "styles/${newThemeName}"`)
+      .replace(
+        new RegExp(`@import 'styles/${oldTheme}'`, 'g'),
+        `@import 'styles/${newThemeName}'`
+      )
+      .replace(
+        new RegExp(`@import "styles/${oldTheme}"`, 'g'),
+        `@import "styles/${newThemeName}"`
+      )
       // Theme configuration
-      .replace(new RegExp(`theme: ['"']${oldTheme}['"']`, 'g'), `theme: '${newThemeName}'`)
+      .replace(
+        new RegExp(`theme: ['"']${oldTheme}['"']`, 'g'),
+        `theme: '${newThemeName}'`
+      )
       .replace(new RegExp(`theme: ${oldTheme}`, 'g'), `theme: ${newThemeName}`)
       // Base selectors in plugins
-      .replace(new RegExp(`baseSelector: ':root\\[data-theme="${oldTheme}"\\]'`, 'g'), `baseSelector: ':root[data-theme="${newThemeName}"]'`)
-      .replace(new RegExp(`baseSelector: ':root\\[data-theme=\\'${oldTheme}\\'\\]'`, 'g'), `baseSelector: ':root[data-theme='${newThemeName}']'`)
+      .replace(
+        new RegExp(`baseSelector: ':root\\[data-theme="${oldTheme}"\\]'`, 'g'),
+        `baseSelector: ':root[data-theme="${newThemeName}"]'`
+      )
+      .replace(
+        new RegExp(
+          `baseSelector: ':root\\[data-theme=\\'${oldTheme}\\'\\]'`,
+          'g'
+        ),
+        `baseSelector: ':root[data-theme='${newThemeName}']'`
+      )
       // Color references
-      .replace(new RegExp(`${oldTheme}\\.color.*`, 'g'), `${newThemeName}.color.*',`)
-  }
-  
+      .replace(
+        new RegExp(`${oldTheme}\\.color.*`, 'g'),
+        `${newThemeName}.color.*',`
+      )
+
   return updatedContent
 }
 
