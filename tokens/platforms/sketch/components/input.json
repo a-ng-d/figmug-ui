@@ -432,7 +432,7 @@
         }
       },
       "letterSpacing": {
-        "$value": "{font.letterSpacing.neg.small}",
+        "$value": "{font.letterSpacing.pos.medium}",
         "$type": "dimension"
       },
       "lineHeight": {

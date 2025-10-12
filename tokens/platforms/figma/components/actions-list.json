@@ -188,7 +188,7 @@
           }
         },
         "letterSpacing": {
-          "$value": "{font.letterSpacing.neg.small}",
+          "$value": "{font.letterSpacing.pos.large}",
           "$type": "dimension"
         },
         "lineHeight": {
