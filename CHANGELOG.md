@@ -5,6 +5,70 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.0]
+
+### Added
+
+- **Framer Theme Support**: Complete theme implementation for Framer design system
+  - Full Framer color palette, typography, and spacing tokens
+  - Platform-specific component styling for Framer
+  - Framer-compatible icons and visual elements
+- **New Members List Component**: Interactive member avatar display component
+  - Support for avatar stacking with configurable display count
+  - Tooltip integration for member information
+  - `isInverted` prop for flexible z-index management
+- **Enhanced Component Library**: Comprehensive Framer theme support across all components
+  - Actions List, Buttons, Inputs, Dropdowns, Tabs
+  - Dialog systems, Notifications, Form components
+  - List components, Layout components, and more
+
+### Changed
+
+- **Input Components**: Improved styling consistency across platforms
+  - Unified padding and height variables for better alignment
+  - Enhanced color chip and icon positioning
+  - Better focus and error state handling
+- **Select Component**: Complete refactoring for better maintainability
+  - Improved accessibility with proper ARIA labels
+  - Enhanced disabled state styling
+  - Better box-sizing and positioning control
+- **Typography System**: Updated font weights and letter spacing for consistency
+- **Component Tokens**: Platform-specific token refinements
+  - Improved border radius usage across components
+  - Enhanced color token mappings for better theme consistency
+  - Optimized spacing and sizing tokens
+
+### Fixed
+
+- **Letter Spacing**: Corrected letter spacing values across all text tokens
+- **Border Radius**: Fixed border radius aliases and raw value usage
+- **Input Container**: Improved input container radius calculations
+- **Color Mapping**: Fixed background color mappings in Framer theme
+- **Z-Index Issues**: Resolved input z-index conflicts
+- **Icon Fonts**: Ensured icon letter font sizes are properly applied
+
+### Improved
+
+- **Theme Consistency**: Better visual alignment between Figma, Penpot, Sketch, and Framer
+- **Token Management**: More robust token system with proper aliases
+- **Component Reliability**: Enhanced component stability and predictable behavior
+- **Developer Experience**: Better component APIs and prop consistency
+
+### Technical Details
+
+- Added comprehensive Framer configuration files across all component categories
+- Implemented platform-specific token generation for Framer
+- Enhanced SCSS build system to support multi-platform token generation
+- Improved component-level token management and inheritance
+- Added proper TypeScript types for new component features
+
+### Platform Support
+
+- **Figma**: Continued full support with optimizations
+- **Penpot**: Enhanced theme compatibility and visual consistency
+- **Sketch**: Improved component styling and token accuracy
+- **Framer**: **NEW** - Complete design system implementation with full component library support
+
 ## [1.18.1]
 
 ### Changed
