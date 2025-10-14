@@ -68,7 +68,7 @@ jobs:
                 in_section=0
                 content_found=0
               }
-              # Match version headers like ## [1.18.0], ## [v1.18.0], or ## [Unreleased]
+              # Match version headers like ## [1.18.0], ## [v1.18.0], ## [1.18.0] - 2025-10-14, or ## [Unreleased]
               /^## \[/ {
                 if (in_section && content_found) {
                   # We hit the next section, stop here
