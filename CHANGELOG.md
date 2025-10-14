@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.3] - 2025-10-14
+
+### Fixed
+
+- **Framer Theme Inconsistencies**: Corrected various inconsistencies in the Framer design system implementation
+  - Fixed styling discrepancies between Framer theme and other platform themes
+  - Resolved component-specific styling issues affecting visual consistency
+  - Improved theme token mappings for better cross-platform alignment
+
+### Changed
+
+- **Theme Consistency**: Enhanced visual coherence across all supported design systems
+  - Standardized component styling patterns for better maintainability
+  - Improved token usage consistency in Framer-specific components
+  - Better alignment with Framer design system guidelines
+
+### Technical Details
+
+- Corrected inconsistent CSS variable usage in Framer theme components
+- Fixed theme-specific styling overrides that were causing visual discrepancies
+- Improved component token inheritance for better theme consistency
+
 ## [1.19.2] - 2025-10-14
 
 ### Fixed
