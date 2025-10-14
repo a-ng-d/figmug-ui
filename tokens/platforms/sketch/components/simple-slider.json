@@ -78,7 +78,7 @@
         }
       },
       "height": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{size.pos.xmsmall}",
         "$type": "dimension"
       }
     }
