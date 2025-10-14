@@ -1,6 +1,6 @@
 {
   "name": "@a_ng_d/figmug-ui",
-  "version": "1.19.1",
+  "version": "1.19.2",
   "type": "module",
   "files": [
     "dist"
@@ -10,7 +10,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "start": "npm run storybook",
-    "build": "tsc && vite build && node scripts/fix-css-modules.mjs",
+    "build": "tsc && vite build",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",

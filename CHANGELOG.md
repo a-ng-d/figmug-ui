@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.2] - 2025-10-14
+
+### Fixed
+
+- **Framer Styles Export**: Fixed missing export of Framer CSS modules in the main library bundle
+  - Added direct imports for `framer-colors.module.scss` and `framer-types.module.scss` to index.ts
+  - Framer theme styles now properly available when consuming the library
+  - Resolved issue where Framer styling was not accessible in production builds
+
+### Changed
+
+- **Build Process**: Simplified build pipeline by removing post-build CSS fix script
+  - Removed `fix-css-modules.mjs` script in favor of direct module imports
+  - Streamlined build command from `tsc && vite build && node scripts/fix-css-modules.mjs` to `tsc && vite build`
+  - More reliable CSS module inclusion through explicit imports rather than post-build copying
+
+### Technical Details
+
+- Removed automated CSS module fix script (`scripts/fix-css-modules.mjs`)
+- Added explicit Framer theme CSS module imports to main entry point
+- Simplified build process while maintaining consistent CSS module availability
+- Improved library distribution reliability for Framer theme assets
+
 ## [1.19.1] - 2025-10-14
 
 ### Fixed
