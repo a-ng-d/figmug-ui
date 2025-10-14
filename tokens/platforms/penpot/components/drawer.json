@@ -8,7 +8,7 @@
     },
     "border": {
       "width": {
-        "$value": "{size.pos.unit}",
+        "$value": "{size.null}",
         "$type": "dimension"
       },
       "style": {
@@ -16,8 +16,8 @@
         "$type": "string"
       },
       "color": {
-        "$value": "{penpot.color.background.quaternary}",
-        "$type": "color"
+        "$value": "transparent",
+        "$type": "string"
       }
     },
     "knob": {
