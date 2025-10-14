@@ -3,6 +3,8 @@ import sketchColors from '@styles/tokens/modules/sketch-colors.module.scss'
 import penpotTypes from '@styles/tokens/modules/penpot-types.module.scss'
 import penpotColors from '@styles/tokens/modules/penpot-colors.module.scss'
 import globals from '@styles/tokens/modules/globals.module.scss'
+import framerTypes from '@styles/tokens/modules/framer-types.module.scss'
+import framerColors from '@styles/tokens/modules/framer-colors.module.scss'
 import figmaTypes from '@styles/tokens/modules/figma-types.module.scss'
 import figmaColors from '@styles/tokens/modules/figma-colors.module.scss'
 import texts from '@styles/texts/texts.module.scss'
@@ -83,4 +85,6 @@ export {
   penpotTypes,
   sketchColors,
   sketchTypes,
+  framerColors,
+  framerTypes,
 }
