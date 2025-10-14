@@ -10,7 +10,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "start": "npm run storybook",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node scripts/fix-css-modules.mjs",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",

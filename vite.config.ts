@@ -45,7 +45,7 @@ export default defineConfig({
         ])
           .filter(
             (file) =>
-              (!/\.test\.tsx|\.test\.ts|colors\.module\.scss$/.test(file) &&
+              (!/\.test\.tsx|\.test\.ts$/.test(file) &&
                 !/\/modules\/.*\.scss$/.test(file)) ||
               /\/modules\/.*\.module\.scss$/.test(file)
           )
