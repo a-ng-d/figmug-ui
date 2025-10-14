@@ -10,6 +10,8 @@
   background-color: var(--section-background-color);
   padding: var(--section-padding-top) var(--section-padding-right)
     var(--section-padding-bottom) var(--section-padding-left);
+  
+  --section-border: var(--section-border-width) solid var(--section-border-color);
 
   &__child {
     padding: var(--section-child-padding-default-top)
