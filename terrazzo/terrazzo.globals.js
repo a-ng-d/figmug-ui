@@ -15,6 +15,16 @@ export default defineConfig({
     css({
       filename: 'globals.scss',
       baseSelector: ':root',
+      modeSelectors: [
+        {
+          mode: 'light',
+          selectors: ['[data-mode*="light"]'],
+        },
+        {
+          mode: 'dark',
+          selectors: ['[data-mode*="dark"]'],
+        },
+      ],
     }),
   ],
   lint: {
