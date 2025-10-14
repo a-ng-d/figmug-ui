@@ -130,6 +130,11 @@ jobs:
           cat release_notes.md >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
+      - name: Get current date
+        if: steps.check_tag.outputs.tag_exists == 'false'
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
       - name: Create Git tag
         if: steps.check_tag.outputs.tag_exists == 'false'
         run: |
@@ -147,7 +152,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.package_version.outputs.tag }}
-          release_name: ${{ steps.package_version.outputs.tag }} - $(date +'%Y-%m-%d')
+          release_name: ${{ steps.package_version.outputs.tag }} - ${{ steps.date.outputs.date }}
           body: ${{ steps.release_notes.outputs.notes }}
           draft: false
           prerelease: false
