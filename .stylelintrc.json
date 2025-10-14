@@ -2,12 +2,14 @@
   "extends": ["stylelint-config-standard"],
   "ignoreFiles": [
     "**/figma.scss",
-    "**/sketch.scss",
     "**/penpot.scss",
+    "**/sketch.scss",
+    "**/framer.scss",
     "**/globals.scss",
     "**/*-colors.scss",
     "**/*-types.scss",
-    "coverage/**"
+    "coverage/**",
+    "dist/**"
   ],
   "rules": {
     "property-no-unknown": [
