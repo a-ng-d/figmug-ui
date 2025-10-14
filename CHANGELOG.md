@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.1]
+
+### Fixed
+
+- **Framer Colors CSS Module Generation**: Fixed issue where `framer-colors.css` was not being generated in the `dist/assets/styles/tokens/modules/` directory
+  - Resolved Vite optimization behavior that treated smaller CSS files differently
+  - Added automated CSS module fix script to ensure consistent module generation
+  - All Framer color tokens now properly available as CSS modules for import
+
+### Changed
+
+- **Build System**: Enhanced build process with automated CSS module validation
+  - Added `fix-css-modules.mjs` script to ensure consistent CSS module generation
+  - Converted build scripts to ES modules for better consistency with project structure
+  - Improved reliability of CSS token distribution in library builds
+
+### Technical Details
+
+- Implemented post-build validation script that detects and fixes missing CSS modules
+- Fixed Vite configuration regex filter that was incorrectly excluding color module files
+- Enhanced build pipeline to automatically copy missing CSS modules to proper distribution directories
+- Converted CommonJS scripts to ES modules (`.mjs`) for modern JavaScript compatibility
+
 ## [1.19.0]
 
 ### Added
