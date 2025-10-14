@@ -157,15 +157,22 @@
 
       & {
         --tabs-tab-gap: var(--tabs-tab-gap-alternative);
-        --tabs-tab-padding: var(--tabs-tab-padding-alternative-with-icon-top)
-          var(--tabs-tab-padding-alternative-with-icon-right)
-          var(--tabs-tab-padding-alternative-with-icon-bottom)
-          var(--tabs-tab-padding-alternative-with-icon-left);
+        --tabs-tab-padding: var(--tabs-tab-padding-alternative-top)
+          var(--tabs-tab-padding-alternative-right)
+          var(--tabs-tab-padding-alternative-bottom)
+          var(--tabs-tab-padding-alternative-left);
         --tabs-tab-radius: var(--tabs-tab-radius-alternative);
         --tabs-tab-height: var(--tabs-tab-height-alternative);
         --tabs-tab-text-transform: var(--tabs-tab-text-transform-alternative);
         --tabs-tab-icon-width: var(--tabs-tab-icon-width-alternative);
         --tabs-tab-icon-height: var(--tabs-tab-icon-height-alternative);
+
+        &--with-icon {
+          --tabs-tab-padding: var(--tabs-tab-padding-alternative-with-icon-top)
+            var(--tabs-tab-padding-alternative-with-icon-right)
+            var(--tabs-tab-padding-alternative-with-icon-bottom)
+            var(--tabs-tab-padding-alternative-with-icon-left);
+        }
       }
 
       &:not(&--active) {

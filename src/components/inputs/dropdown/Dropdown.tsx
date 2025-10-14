@@ -338,7 +338,7 @@ export default class Dropdown extends React.Component<
           <span className="select-menu__caret">
             <Icon
               type="PICTO"
-              iconName="chevron-down"
+              iconName="caret-down"
             />
           </span>
           {isTooltipVisible && helper !== undefined && (

@@ -147,7 +147,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.package_version.outputs.tag }}
-          release_name: ${{ steps.package_version.outputs.tag }}
+          release_name: ${{ steps.package_version.outputs.tag }} - $(date +'%Y-%m-%d')
           body: ${{ steps.release_notes.outputs.notes }}
           draft: false
           prerelease: false

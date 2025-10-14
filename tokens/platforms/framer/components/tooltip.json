@@ -81,11 +81,11 @@
       },
       "border": {
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{framer.color.divider}",
+          "$type": "color"
         },
         "width": {
-          "$value": "{size.null}",
+          "$value": "{size.pos.unit}",
           "$type": "dimension"
         }
       }

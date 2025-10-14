@@ -124,7 +124,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.pos.xxxsmall}",
+            "$value": "{size.pos.xxsmall}",
             "$type": "dimension"
           },
           "bottom": {
@@ -132,7 +132,7 @@
             "$type": "dimension"
           },
           "left": {
-            "$value": "{size.pos.medium}",
+            "$value": "{size.pos.small}",
             "$type": "dimension"
           }
         },
@@ -142,7 +142,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.pos.xxxsmall}",
+            "$value": "{size.pos.xxsmall}",
             "$type": "dimension"
           },
           "bottom": {
@@ -150,7 +150,7 @@
             "$type": "dimension"
           },
           "left": {
-            "$value": "{size.pos.small}",
+            "$value": "{size.pos.xsmall}",
             "$type": "dimension"
           }
         }

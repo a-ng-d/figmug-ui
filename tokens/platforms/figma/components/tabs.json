@@ -41,15 +41,15 @@
       },
       "vertical": {
         "top": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{size.pos.xxsmall}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.null}",
+          "$value": "{size.pos.xxsmall}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{size.pos.xxsmall}",
           "$type": "dimension"
         },
         "left": {
