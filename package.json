@@ -2,6 +2,22 @@
   "name": "@a_ng_d/figmug-ui",
   "version": "1.19.4",
   "type": "module",
+  "description": "Figmug UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
+  "repository": "https://github.com/a-ng-d/figmug-ui",
+  "keywords": [
+    "library",
+    "ui",
+    "figma-ui"
+  ],
+  "author": "Aurélien Grimaud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-ng-d/figmug-ui/issues"
+  },
+  "homepage": "https://github.com/a-ng-d/figmug-ui#readme",
+  "overrides": {
+    "storybook": "$storybook"
+  },
   "files": [
     "dist"
   ],
@@ -77,24 +93,5 @@
     "vite-plugin-lib-inject-css": "^2.0.1",
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.6.0"
-  },
-  "description": "Figmug UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/a-ng-d/figmug-ui.git"
-  },
-  "keywords": [
-    "library",
-    "ui",
-    "figma-ui"
-  ],
-  "author": "Aurélien Grimaud",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/a-ng-d/figmug-ui/issues"
-  },
-  "homepage": "https://github.com/a-ng-d/figmug-ui#readme",
-  "overrides": {
-    "storybook": "$storybook"
   }
 }
