@@ -99,7 +99,7 @@
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.msmall}",
+          "$value": "{size.pos.medium}",
           "$type": "dimension"
         }
       },
@@ -124,11 +124,11 @@
     },
     "clearable": {
       "top": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{size.pos.xxxsmall}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{size.pos.xxxsmall}",
         "$type": "dimension"
       }
     },
@@ -620,7 +620,7 @@
     },
     "icon": {
       "width": {
-        "$value": "{size.pos.msmall}",
+        "$value": "{size.pos.medium}",
         "$type": "dimension"
       },
       "height": {
