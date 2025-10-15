@@ -67,8 +67,8 @@
   --input-border-width-hover: var(--size-pos-unit);
   --input-border-width-onselected-default: var(--size-pos-unit);
   --input-border-width-onselected-hover: var(--size-pos-unit);
-  --input-clearable-right: var(--size-pos-xunit);
-  --input-clearable-top: var(--size-pos-xunit);
+  --input-clearable-right: var(--size-pos-xxxsmall);
+  --input-clearable-top: var(--size-pos-xxxsmall);
   --input-color-chip-border-default: inset 0 0 0 var(--size-pos-unit)
     color(srgb 0 0 0 / 0.1);
   --input-color-chip-border-focus: inset 0 0 0 var(--size-pos-unit)
@@ -84,7 +84,7 @@
   --input-height: var(--size-pos-medium);
   --input-icon-color: var(--framer-color-text-tertiary);
   --input-icon-height: var(--size-pos-medium);
-  --input-icon-width: var(--size-pos-msmall);
+  --input-icon-width: var(--size-pos-medium);
   --input-number-width: 112px;
   --input-padding-clearable-bottom: var(--size-pos-medium);
   --input-padding-clearable-left: var(--size-pos-medium);
@@ -103,7 +103,7 @@
   --input-padding-with-color-right: var(--size-pos-small);
   --input-padding-with-color-top: var(--size-pos-small);
   --input-padding-with-icon-bottom: var(--size-pos-small);
-  --input-padding-with-icon-left: var(--size-pos-msmall);
+  --input-padding-with-icon-left: var(--size-pos-medium);
   --input-padding-with-icon-right: var(--size-pos-msmall);
   --input-padding-with-icon-top: var(--size-pos-small);
   --input-radius: var(--border-radius-xlarge);
