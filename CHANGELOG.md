@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.4] - 2025-10-15
+
+### Fixed
+
+- **Framer Theme Icon Sizing**: Fixed icon width and positioning inconsistencies in Framer theme
+  - Corrected icon width from `msmall` to `medium` for better visual balance
+  - Updated input padding with icon to match new icon dimensions
+  - Fixed icon color variables to ensure both letter and picto icons use consistent colors
+
+### Changed
+
+- **Input Component Spacing**: Improved input component spacing and positioning in Framer theme
+  - Adjusted clearable button positioning from `xunit` to `xxxsmall` for better alignment
+  - Updated popin footer padding from `xxsmall` to `msmall` for improved spacing
+  - Refined input token values for more consistent visual hierarchy
+
+### Technical Details
+
+- Updated Framer theme tokens for input icon width (`size.pos.medium` instead of `size.pos.msmall`)
+- Fixed clearable button positioning tokens (`size.pos.xxxsmall` instead of `size.pos.xunit`)
+- Added `--icon-picto-color` CSS variable for consistent icon coloring
+- Improved popin footer padding tokens for better visual spacing
+- Enhanced input padding calculations to accommodate updated icon dimensions
+
 ## [1.19.3] - 2025-10-14
 
 ### Fixed
