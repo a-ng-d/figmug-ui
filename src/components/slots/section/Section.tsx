@@ -4,7 +4,7 @@ import './section.scss'
 
 export interface SectionProps {
   id?: string
-  title: React.ReactNode
+  title?: React.ReactNode
   body: Array<{
     node?: React.ReactNode
     spacingModifier?: 'LARGE' | 'TIGHT' | 'NONE'
@@ -41,7 +41,7 @@ export default class Section extends React.Component<SectionProps> {
         }}
         role="region"
       >
-        <div role="presentation">{title}</div>
+        {title && <div role="presentation">{title}</div>}
         {body.map(
           (item, index) =>
             (item.node !== undefined || item.node !== null) && (
