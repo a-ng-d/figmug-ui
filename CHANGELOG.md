@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.6] - 2025-10-19
+
+### Changed
+
+- **Release Workflow Enhancement**: Improved GitHub release automation
+  - Updated release workflow to include date in release names for better identification
+  - Enhanced release notes generation for more informative GitHub releases
+  - Streamlined release process with better date formatting
+
+### Technical Details
+
+- Modified GitHub Actions workflow to automatically append current date to release names
+- Improved release automation for better release tracking and identification
+
 ## [1.19.5] - 2025-10-19
 
 ### Changed
