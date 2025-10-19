@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.7] - 2025-10-19
+
+### Fixed
+
+- **Figma Icon Correction**: Fixed visual inconsistency in Figma `caret-down` icon
+  - Corrected icon design to match Figma's design system specifications
+  - Improved visual consistency across Figma-themed components
+  - Enhanced icon clarity and alignment
+
+### Technical Details
+
+- Updated Figma `caret-down` icon SVG for better visual fidelity
+- Maintained icon sizing and positioning while improving design accuracy
+
 ## [1.19.6] - 2025-10-19
 
 ### Changed
