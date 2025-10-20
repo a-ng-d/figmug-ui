@@ -37,4 +37,15 @@
     --dropzone-border-color: var(--dropzone-border-color-over);
     --dropzone-background-color: var(--dropzone-background-color-over);
   }
+
+  &--disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    --semantic-message-background-color: var(--dropzone-background-color-disabled);
+    --dropzone-border-width: var(--dropzone-border-width-disabled);
+    --dropzone-border-offset: var(--dropzone-border-offset-disabled);
+    --dropzone-border-style: var(--dropzone-border-style-disabled);
+    --dropzone-border-color: var(--dropzone-border-color-disabled);
+    --dropzone-background-color: var(--dropzone-background-color-disabled);
+  }
 }

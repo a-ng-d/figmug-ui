@@ -4,14 +4,19 @@
 
 :root[data-theme="penpot"] {
   --dropzone-background-color-default: var(--penpot-color-background-primary);
+  --dropzone-background-color-disabled: var(--penpot-color-background-secondary);
   --dropzone-background-color-over: var(--penpot-color-accent-primary-muted);
   --dropzone-border-color-default: var(--penpot-color-background-quaternary);
+  --dropzone-border-color-disabled: var(--penpot-color-background-tertiary);
   --dropzone-border-color-over: var(--penpot-color-accent-primary);
   --dropzone-border-offset-default: var(--size-neg-unit);
+  --dropzone-border-offset-disabled: var(--size-neg-unit);
   --dropzone-border-offset-over: var(--size-neg-xunit);
   --dropzone-border-style-default: dashed;
+  --dropzone-border-style-disabled: dashed;
   --dropzone-border-style-over: solid;
   --dropzone-border-width-default: var(--size-pos-unit);
+  --dropzone-border-width-disabled: var(--size-pos-unit);
   --dropzone-border-width-over: var(--size-pos-xunit);
   --dropzone-gap: var(--size-pos-xxsmall);
   --dropzone-min-height: 200px;
