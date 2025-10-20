@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.8] - 2025-10-20
+
+### Added
+
+- **Dropzone Disabled State**: Added comprehensive disabled state support to Dropzone component
+  - New disabled visual styling with appropriate background, border, and cursor states
+  - Consistent disabled appearance across all supported themes (Figma, Penpot, Sketch, Framer)
+  - Proper accessibility support with `pointer-events: none` and `cursor: not-allowed`
+  - Automatic disabled state activation when `isBlocked` or `isDisabled` props are true
+
+### Changed
+
+- **Dropzone Theme Tokens**: Enhanced design token system for Dropzone component
+  - Added disabled-specific tokens for background color, border color, width, offset, and style
+  - Updated all theme configurations (Figma, Penpot, Sketch, Framer) with disabled state tokens
+  - Improved semantic message background color handling in disabled state
+  - Refined Framer theme default background color for better consistency
+
+### Technical Details
+
+- Added `dropzone--disabled` CSS class with comprehensive disabled styling
+- Implemented disabled state tokens across all design system themes
+- Enhanced component logic to apply disabled class when `isBlocked` or `isDisabled` is true
+- Updated design token JSON files for all platforms with disabled state specifications
+- Improved theme consistency with proper disabled color mappings
+
 ## [1.19.7] - 2025-10-19
 
 ### Fixed

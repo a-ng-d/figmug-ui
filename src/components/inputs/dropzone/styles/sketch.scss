@@ -4,14 +4,19 @@
 
 :root[data-theme="sketch"] {
   --dropzone-background-color-default: var(--sketch-color-background-primary);
+  --dropzone-background-color-disabled: var(--sketch-color-background-disabled);
   --dropzone-background-color-over: var(--sketch-color-accent-disabled);
   --dropzone-border-color-default: var(--sketch-color-border-secondary);
+  --dropzone-border-color-disabled: var(--sketch-color-border-disabled);
   --dropzone-border-color-over: var(--sketch-color-accent-primary);
   --dropzone-border-offset-default: var(--size-neg-unit);
+  --dropzone-border-offset-disabled: var(--size-neg-unit);
   --dropzone-border-offset-over: var(--size-neg-xunit);
   --dropzone-border-style-default: dashed;
+  --dropzone-border-style-disabled: dashed;
   --dropzone-border-style-over: solid;
   --dropzone-border-width-default: var(--size-pos-unit);
+  --dropzone-border-width-disabled: var(--size-pos-unit);
   --dropzone-border-width-over: var(--size-pos-xunit);
   --dropzone-gap: var(--size-pos-xxsmall);
   --dropzone-min-height: 200px;

@@ -292,6 +292,7 @@ export default class Dropzone extends React.Component<
         className={doClassnames([
           'dropzone',
           isDraggedOver && 'dropzone--dragged-over',
+          (isBlocked || isDisabled) && 'dropzone--disabled',
         ])}
         role="region"
         aria-disabled={isDisabled || isBlocked}
