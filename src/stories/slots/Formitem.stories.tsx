@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import texts from '@styles/texts/texts.module.scss'
 import FormItem from '@components/slots/form-item/FormItem'
 import Input from '@components/inputs/input/Input'
-import texts from '@styles/texts/texts.module.scss'
 
 const meta = {
   title: 'Components/Slots/Form Item',
