@@ -12,6 +12,7 @@ export interface FormItemProps {
     message: string
   }
   shouldFill?: boolean
+  isBaseline?: boolean
   isMultiLine?: boolean
   isBlocked?: boolean
   isNew?: boolean
@@ -24,6 +25,7 @@ const FormItem = (props: FormItemProps) => {
     label,
     helper,
     shouldFill = true,
+    isBaseline = false,
     isMultiLine = false,
     isBlocked = false,
     isNew = false,
@@ -35,6 +37,7 @@ const FormItem = (props: FormItemProps) => {
       className={doClassnames([
         'form-item',
         shouldFill && 'form-item--fill',
+        isBaseline && 'form-item--baseline',
         isMultiLine && 'form-item--multiline',
         isBlocked && 'form-item--blocked',
       ])}
