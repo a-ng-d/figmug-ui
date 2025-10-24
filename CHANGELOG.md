@@ -5,6 +5,40 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.9] - 2025-10-24
+
+### Added
+
+- **FormItem Baseline Alignment**: Added `isBaseline` prop to FormItem component for better text alignment
+  - New baseline alignment option for improved layout when using text content as children
+  - Enhanced FormItem styling with `form-item--baseline` modifier class
+  - Better visual consistency when mixing interactive and text-only form items
+
+### Changed
+
+- **FormItem Component Enhancement**: Improved FormItem component flexibility and styling
+  - Added baseline alignment styling that removes margins from labels and chips
+  - Enhanced row alignment to use baseline positioning when `isBaseline` is enabled
+  - Improved component API with better prop organization
+
+- **ColorItem Props Refinement**: Improved ColorItem component prop structure
+  - Made `id` prop optional for better component flexibility
+  - Reordered props for better logical grouping and readability
+
+### Added
+
+- **Storybook Documentation**: Enhanced FormItem component documentation
+  - Added new `SimpleTextItem` story demonstrating text content usage with baseline alignment
+  - Improved story examples with proper text styling using design system typography
+  - Better demonstration of FormItem component versatility
+
+### Technical Details
+
+- Added `isBaseline` prop to FormItem interface with default value of `false`
+- Implemented `form-item--baseline` CSS class with baseline alignment and margin resets
+- Enhanced FormItem stories with text styling import and baseline alignment example
+- Improved ColorItem prop types with optional `id` prop for better developer experience
+
 ## [1.19.8] - 2025-10-20
 
 ### Added
