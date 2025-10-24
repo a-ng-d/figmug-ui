@@ -35,6 +35,7 @@
 
   .popin__header {
     display: flex;
+    flex: none;
     justify-content: space-between;
     align-items: center;
     gap: var(--popin-header-gap);

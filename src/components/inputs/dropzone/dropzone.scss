@@ -39,9 +39,11 @@
   }
 
   &--disabled {
-    pointer-events: none;
     cursor: not-allowed;
-    --semantic-message-background-color: var(--dropzone-background-color-disabled);
+    pointer-events: none;
+    --semantic-message-background-color: var(
+      --dropzone-background-color-disabled
+    );
     --dropzone-border-width: var(--dropzone-border-width-disabled);
     --dropzone-border-offset: var(--dropzone-border-offset-disabled);
     --dropzone-border-style: var(--dropzone-border-style-disabled);
