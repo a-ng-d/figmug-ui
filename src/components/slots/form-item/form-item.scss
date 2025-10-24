@@ -73,4 +73,18 @@
 
     pointer-events: none;
   }
+
+  &--baseline {
+    .form-item__row {
+      align-items: baseline;
+    }
+
+    .form-item__label {
+      margin: 0;
+    }
+
+    .form-item__chip {
+      margin: 0;
+    }
+  }
 }

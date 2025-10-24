@@ -5,9 +5,9 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './color-item.scss'
 
 export type ColorItemProps = {
+  id?: string
   name: string
   hex: string
-  id: string
   canBeRemoved?: boolean
   onRemoveColor?: React.ReactEventHandler
 }
