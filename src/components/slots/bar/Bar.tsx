@@ -8,6 +8,7 @@ export interface BarProps {
   soloPartSlot?: React.ReactElement | null
   rightPartSlot?: React.ReactElement | null
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
+  clip?: Array<'LEFT' | 'RIGHT' | 'SOLO'>
   padding?: string
   isCompact?: boolean
   isOnlyText?: boolean
@@ -52,6 +53,7 @@ export default class Bar extends React.Component<BarProps> {
       shouldReflow,
       border,
       padding,
+      clip,
       leftPartSlot,
       soloPartSlot,
       rightPartSlot,
@@ -70,6 +72,9 @@ export default class Bar extends React.Component<BarProps> {
       isInverted && 'bar--inverted',
       isCentered && 'bar--centered',
       shouldReflow && 'bar--reflow',
+      clip && clip.includes('LEFT') && 'bar--clip-left',
+      clip && clip.includes('RIGHT') && 'bar--clip-right',
+      clip && clip.includes('SOLO') && 'bar--clip-solo',
     ])
 
     if (hasValidSolo)

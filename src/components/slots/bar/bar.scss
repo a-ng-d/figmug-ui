@@ -76,6 +76,24 @@
       flex: 1;
     }
   }
+
+  &.bar--clip-left {
+    .bar__left {
+      overflow: hidden;
+    }
+  }
+
+  &.bar--clip-right {
+    .bar__right {
+      overflow: hidden;
+    }
+  }
+
+  &.bar--clip-solo {
+    .bar__solo {
+      overflow: hidden;
+    }
+  }
 }
 
 @media (width <= 460px) {
