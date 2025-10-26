@@ -54,14 +54,17 @@
 
   &__left {
     flex: 1;
+    overflow: auto;
   }
 
   &__right {
     flex: none;
+    overflow: auto;
   }
 
   &__solo {
     flex: 1;
+    overflow: auto;
   }
 
   &.bar--inverted {
