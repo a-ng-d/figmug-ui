@@ -115,8 +115,6 @@ const Accordion = (props: AccordionProps) => {
                     }
                   : undefined
               }
-              isDisabled={isBlocked}
-              isBlocked={isBlocked}
               action={(e) => handleEmpty(e)}
             />
           ) : (
