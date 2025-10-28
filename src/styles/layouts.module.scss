@@ -24,6 +24,10 @@
     align-items: start;
   }
 
+  &--centered {
+    align-items: center;
+  }
+
   &--end {
     align-items: end;
   }
@@ -58,6 +62,10 @@
     @extend .stackbar;
 
     gap: var(--size-pos-xsmall);
+  }
+
+  &--start {
+    align-items: start;
   }
 
   &--centered {
