@@ -5,6 +5,55 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.18] - 2025-10-28
+
+### Fixed
+
+- Adjust popin component height settings for better responsiveness (commit 9b088be2)
+
+## [1.19.17] - 2025-10-28
+
+### Added / Changed
+
+- Add centered alignment options to snackbar and stackbar components (commit 865dcafe)
+
+## [1.19.16] - 2025-10-27
+
+### Fixed
+
+- Remove `isDisabled` and `isBlocked` props from `Accordion` component (commit 1d7a7b7b)
+
+## [1.19.15] - 2025-10-26
+
+### Fixed
+
+- Remove overflow:auto from `bar__left`, `bar__right`, and `bar__solo` elements (commit b6c9d194)
+
+## [1.19.14] - 2025-10-26
+
+### Added
+
+- Bar component: add clipping/truncation functionality and update stories (commit d2ed9fcb)
+
+## [1.19.13] - 2025-10-26
+
+### Fixed
+
+- Ensure overflow is auto for `bar__left`, `bar__right`, and `bar__solo` elements (commit 77ff4d67)
+
+## [1.19.12] - 2025-10-26
+
+### Fixed
+
+- Remove overflow hidden from `bar__left`, `bar__right`, and `bar__solo` elements (commit 19685f64)
+
+## [1.19.11] - 2025-10-26
+
+### Fixed
+
+- Ensure overflow is hidden for `bar__left`, `bar__right`, and `bar__solo` elements (commit 8bc3468f)
+
+
 ## [1.19.9] - 2025-10-24
 
 ### Added
