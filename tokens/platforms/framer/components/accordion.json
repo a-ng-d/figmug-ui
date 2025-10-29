@@ -30,7 +30,7 @@
     },
     "row": {
       "gap": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{size.null}",
         "$type": "dimension"
       },
       "height": {
