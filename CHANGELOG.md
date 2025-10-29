@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.21] - 2025-10-29
+
+### Changed
+
+- Refactor Framer theme SCSS variable syntax to use double quotes for consistency across components and stylesheets (commit 33bb2d93)
+
+### Fixed
+
+- Update accordion styles to use null size for row gap across themes (commit aa61978d)
+
 ## [1.19.20] - 2025-10-29
 
 ### Fixed
