@@ -34,6 +34,7 @@ const Chip = (props: ChipProps) => {
       ])}
       onMouseDown={(e) => {
         if (action) action(e)
+        else return undefined
       }}
       onMouseEnter={() => {
         if (preview !== undefined) setIsPreviewVisible(true)
@@ -43,6 +44,7 @@ const Chip = (props: ChipProps) => {
       }}
       onKeyDown={(e) => {
         if (action && (e.key === 'Enter' || e.key === ' ')) action(e)
+        else return undefined
       }}
       onFocus={() => {
         if (preview !== undefined) setIsPreviewVisible(true)
