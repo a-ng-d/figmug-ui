@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.20] - 2025-10-29
+
+### Fixed
+
+- Update tab notification dimensions to use `xxsmall` size (commit 02c33342)
+
 ## [1.19.19] - 2025-10-29
 
 ### Fixed
@@ -58,7 +64,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Ensure overflow is hidden for `bar__left`, `bar__right`, and `bar__solo` elements (commit 8bc3468f)
-
 
 ## [1.19.9] - 2025-10-24
 

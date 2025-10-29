@@ -91,7 +91,7 @@ function App() {
     <Bar
       leftPartSlot={<div>Left very long text that may be truncated</div>}
       rightPartSlot={<div>Right very long text that may be truncated</div>}
-      truncate={[ 'LEFT', 'RIGHT' ]}
+      truncate={['LEFT', 'RIGHT']}
       padding="12px"
     />
   )
