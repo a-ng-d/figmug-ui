@@ -39,7 +39,7 @@
     --icon-picto-color: var(--tabs-tab-icon-color);
     --icon-letter-color: var(--tabs-tab-icon-color);
 
-    & span {
+    & > span {
       pointer-events: none;
       color: var(--tabs-tab-text-color);
       font-weight: var(--tabs-tab-text-weight);
@@ -154,6 +154,10 @@
 
     .tabs__tab {
       justify-content: flex-start;
+
+      & > span {
+        flex: 1;
+      }
 
       & {
         --tabs-tab-gap: var(--tabs-tab-gap-alternative);

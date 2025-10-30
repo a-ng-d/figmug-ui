@@ -142,7 +142,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.pos.xxsmall}",
+            "$value": "{size.pos.xmsmall}",
             "$type": "dimension"
           },
           "bottom": {
