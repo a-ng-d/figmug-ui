@@ -9,13 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Adjust tab padding sizes in SCSS and token JSON for consistency across Figma and Sketch platforms (commit 847d8ee8)
+- Adjust tab padding sizes in SCSS and token JSON for consistency across Figma and Sketch platforms
 
 ## [1.19.21] - 2025-10-29
 
 ### Changed
 
-- Refactor Framer theme SCSS variable syntax to use double quotes for consistency across components and stylesheets (commit 33bb2d93)
+- Refactor Framer theme SCSS variable syntax to use double quotes for consistency across components and stylesheets
 
 ### Fixed
 
@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Update tab notification dimensions to use `xxsmall` size (commit 02c33342)
+- Update tab notification dimensions to use `xxsmall` size
 
 ## [1.19.19] - 2025-10-29
 
@@ -37,49 +37,49 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Adjust popin component height settings for better responsiveness (commit 9b088be2)
+- Adjust popin component height settings for better responsiveness
 
 ## [1.19.17] - 2025-10-28
 
 ### Added / Changed
 
-- Add centered alignment options to snackbar and stackbar components (commit 865dcafe)
+- Add centered alignment options to snackbar and stackbar components
 
 ## [1.19.16] - 2025-10-27
 
 ### Fixed
 
-- Remove `isDisabled` and `isBlocked` props from `Accordion` component (commit 1d7a7b7b)
+- Remove `isDisabled` and `isBlocked` props from `Accordion` component
 
 ## [1.19.15] - 2025-10-26
 
 ### Fixed
 
-- Remove overflow:auto from `bar__left`, `bar__right`, and `bar__solo` elements (commit b6c9d194)
+- Remove overflow:auto from `bar__left`, `bar__right`, and `bar__solo` elements
 
 ## [1.19.14] - 2025-10-26
 
 ### Added
 
-- Bar component: add clipping/truncation functionality and update stories (commit d2ed9fcb)
+- Bar component: add clipping/truncation functionality and update stories
 
 ## [1.19.13] - 2025-10-26
 
 ### Fixed
 
-- Ensure overflow is auto for `bar__left`, `bar__right`, and `bar__solo` elements (commit 77ff4d67)
+- Ensure overflow is auto for `bar__left`, `bar__right`, and `bar__solo` elements
 
 ## [1.19.12] - 2025-10-26
 
 ### Fixed
 
-- Remove overflow hidden from `bar__left`, `bar__right`, and `bar__solo` elements (commit 19685f64)
+- Remove overflow hidden from `bar__left`, `bar__right`, and `bar__solo` elements
 
 ## [1.19.11] - 2025-10-26
 
 ### Fixed
 
-- Ensure overflow is hidden for `bar__left`, `bar__right`, and `bar__solo` elements (commit 8bc3468f)
+- Ensure overflow is hidden for `bar__left`, `bar__right`, and `bar__solo` elements
 
 ## [1.19.9] - 2025-10-24
 
