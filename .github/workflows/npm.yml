@@ -1,7 +1,8 @@
 name: Publish a new version on npm
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - main
 

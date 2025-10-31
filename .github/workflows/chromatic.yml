@@ -1,7 +1,8 @@
 name: Publish a new version on Chromatic
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - main
 
