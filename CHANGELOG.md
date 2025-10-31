@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Make `src` prop optional and ensure proper rendering of asset and actions styles (commit 8ebe3c69)
+- Make `src` prop optional and ensure proper rendering of asset and actions styles
 
 ## [1.19.22] - 2025-10-30
 
