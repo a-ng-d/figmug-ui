@@ -5,7 +5,7 @@ import './card.scss'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 
 interface CardProps {
-  src: string
+  src?: string
   title?: string
   subtitle?: string
   richText: React.ReactNode
@@ -43,21 +43,23 @@ const Card = (props: CardProps) => {
       onMouseDown={action}
       tabIndex={0}
     >
-      <div
-        className="card__asset"
-        role="group"
-      >
-        <Thumbnail src={src} />
-        {actions !== undefined && (
-          <div
-            className={'card__actions'}
-            role="group"
-            aria-hidden={!isActionsVisible}
-          >
-            {isActionsVisible && actions}
-          </div>
-        )}
-      </div>
+      {src && (
+        <div
+          className="card__asset"
+          role="group"
+        >
+          <Thumbnail src={src} />
+          {actions !== undefined && (
+            <div
+              className={'card__actions'}
+              role="group"
+              aria-hidden={!isActionsVisible}
+            >
+              {isActionsVisible && actions}
+            </div>
+          )}
+        </div>
+      )}
       <div
         className="card__text"
         role="contentinfo"

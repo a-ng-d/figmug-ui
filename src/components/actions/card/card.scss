@@ -15,6 +15,7 @@
   padding: var(--card-padding-top) var(--card-padding-right)
     var(--card-padding-bottom) var(--card-padding-left);
   width: var(--card-width);
+  justify-content: center;
 
   &--fill {
     width: 100%;
