@@ -92,7 +92,7 @@ export default class Dropdown extends React.Component<
     this.setState({
       isMenuOpen: !isMenuOpen,
     })
-    
+
     setTimeout(() => {
       if (this.listRef.current != null) {
         const menuRect = this.listRef.current.getBoundingClientRect()
