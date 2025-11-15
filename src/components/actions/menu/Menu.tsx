@@ -14,7 +14,7 @@ export interface MenuProps {
   customIcon?: React.ReactElement
   options: Array<DropdownOption>
   selected?: string
-  parentClassName?: string
+  containerId?: string
   state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
   alignment?: 'TOP_RIGHT' | 'TOP_LEFT' | 'BOTTOM_RIGHT' | 'BOTTOM_LEFT'
   helper?: {
@@ -96,13 +96,13 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
   onOpenMenu = (
     e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
   ) => {
-    const { parentClassName } = this.props
+    const { containerId } = this.props
     const { isMenuOpen } = this.state
 
     this.setState({
       isMenuOpen: !isMenuOpen,
     })
-    
+
     setTimeout(() => {
       if (this.listRef.current != null) {
         const menuRect = this.listRef.current.getBoundingClientRect()
@@ -143,33 +143,33 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
         if (shouldTransformX && !shouldTransformY)
           this.listRef.current.style.transform = `translateX(${adjustedLeft - menuRect.left}px)`
 
-        if (parentClassName !== undefined) {
-          const parentElement = document.getElementsByClassName(
-            parentClassName as string
-          )[0]
-          if (parentElement) {
-            const diffTop: number =
-              this.listRef.current.getBoundingClientRect().top -
-              parentElement.getBoundingClientRect().top
-            const diffBottom: number =
-              this.listRef.current.getBoundingClientRect().bottom -
-              parentElement.getBoundingClientRect().bottom
+        if (containerId !== undefined) {
+          const containerElement = document.getElementById(containerId)
+          if (containerElement) {
+            const container = containerElement.getBoundingClientRect()
+            const button =
+              this.buttonRef.current?.buttonRef.current?.getBoundingClientRect()
 
-            if (diffTop < 16) {
-              this.listRef.current.style.top =
-                'calc(var(--size-pos-medium) + var(--size-pos-xxsmall))'
-              this.listRef.current.style.transform = 'none'
-            }
-            if (diffBottom > -16) {
-              this.listRef.current.style.top =
-                'calc(var(--size-pos-xxsmall) * -1)'
-              this.listRef.current.style.transform = 'translateY(-100%)'
-            }
+            const diffTop =
+              this.listRef.current.getBoundingClientRect().top - container.top
+            const diffBottom =
+              this.listRef.current.getBoundingClientRect().bottom -
+              container.bottom
+
+            if (diffTop < -16 && button)
+              this.listRef.current.style.top = `${container.top - button.top + 16}px`
+
+            if (diffBottom > -16 && button)
+              this.listRef.current.style.bottom = `${
+                button.bottom - container.bottom + 16
+              }px`
+
+            this.listRef.current.style.visibility = 'visible'
           }
         }
       }
     }, 0)
-    
+
     if (e.type === 'keydown')
       setTimeout(() => this.actionsListRef.current?.focusFirstMenuItem(), 0)
   }
@@ -188,6 +188,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
       alignment,
       isBlocked,
       isNew,
+      containerId,
     } = this.props
     const { isMenuOpen } = this.state
 
@@ -291,6 +292,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
                 style={{
                   position: 'absolute',
                   zIndex: 99,
+                  visibility: containerId === undefined ? 'visible' : 'hidden',
                 }}
                 ref={this.listRef}
                 role="menu"
@@ -300,6 +302,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
                   options={options}
                   selected={selected}
                   direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
+                  containerId={containerId}
                   onCancellation={() => this.setState({ isMenuOpen: false })}
                   ref={this.actionsListRef}
                   menuRef={this.menuRef}
