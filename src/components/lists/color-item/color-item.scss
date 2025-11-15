@@ -7,15 +7,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: var(--color-item-gap);
   cursor: default;
   padding: var(--color-item-padding-top) var(--color-item-padding-right)
     var(--color-item-padding-bottom) var(--color-item-padding-left);
   height: var(--color-item-height);
   user-select: none;
 
-  .color-item__left,
-  .color-item__right {
-    max-width: 100%;
+  .color-item__left {
+    flex: 1;
+    overflow: hidden;
   }
 
   .color-item__info {
