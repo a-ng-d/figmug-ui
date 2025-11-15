@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.25] - 2025-11-15
+
+### Enhanced
+
+- **ColorItem Component**: Enhanced ColorItem component to manage removal state and improve styling
+  - Added removal state management for better user interaction
+  - Improved component styling for enhanced visual feedback
+  - Better handling of color item removal workflows
+
 ## [1.19.24] - 2025-10-31
 
 ### Changed
