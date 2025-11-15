@@ -102,32 +102,74 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
     this.setState({
       isMenuOpen: !isMenuOpen,
     })
-    if (parentClassName !== undefined)
-      setTimeout(() => {
-        if (this.listRef.current != null) {
-          const diffTop: number =
-            this.listRef.current.getBoundingClientRect().top -
-            document
-              .getElementsByClassName(parentClassName as string)[0]
-              .getBoundingClientRect().top
-          const diffBottom: number =
-            this.listRef.current.getBoundingClientRect().bottom -
-            document
-              .getElementsByClassName(parentClassName as string)[0]
-              .getBoundingClientRect().bottom
+    
+    setTimeout(() => {
+      if (this.listRef.current != null) {
+        const menuRect = this.listRef.current.getBoundingClientRect()
+        const buttonRect =
+          this.buttonRef.current?.buttonRef.current?.getBoundingClientRect()
 
-          if (diffTop < 16) {
-            this.listRef.current.style.top =
-              'calc(var(--size-pos-medium) + var(--size-pos-xxsmall))'
-            this.listRef.current.style.transform = 'none'
-          }
-          if (diffBottom > -16) {
-            this.listRef.current.style.top =
-              'calc(var(--size-pos-xxsmall) * -1)'
-            this.listRef.current.style.transform = 'translateY(-100%)'
+        let adjustedTop = 0
+        let adjustedLeft = 0
+        let shouldTransformY = false
+        let shouldTransformX = false
+
+        if (menuRect.bottom > window.innerHeight) {
+          adjustedTop = window.innerHeight - menuRect.height - 8
+          shouldTransformY = true
+        }
+        if (menuRect.top < 0) {
+          adjustedTop = 8
+          shouldTransformY = true
+        }
+
+        if (menuRect.right > window.innerWidth) {
+          adjustedLeft = window.innerWidth - menuRect.width - 8
+          shouldTransformX = true
+        }
+        if (menuRect.left < 0) {
+          adjustedLeft = 8
+          shouldTransformX = true
+        }
+
+        if (shouldTransformY) {
+          if (buttonRect)
+            this.listRef.current.style.top = `${adjustedTop - buttonRect.top}px`
+          this.listRef.current.style.transform = shouldTransformX
+            ? `translate(${adjustedLeft - menuRect.left}px, 0)`
+            : 'none'
+        }
+
+        if (shouldTransformX && !shouldTransformY)
+          this.listRef.current.style.transform = `translateX(${adjustedLeft - menuRect.left}px)`
+
+        if (parentClassName !== undefined) {
+          const parentElement = document.getElementsByClassName(
+            parentClassName as string
+          )[0]
+          if (parentElement) {
+            const diffTop: number =
+              this.listRef.current.getBoundingClientRect().top -
+              parentElement.getBoundingClientRect().top
+            const diffBottom: number =
+              this.listRef.current.getBoundingClientRect().bottom -
+              parentElement.getBoundingClientRect().bottom
+
+            if (diffTop < 16) {
+              this.listRef.current.style.top =
+                'calc(var(--size-pos-medium) + var(--size-pos-xxsmall))'
+              this.listRef.current.style.transform = 'none'
+            }
+            if (diffBottom > -16) {
+              this.listRef.current.style.top =
+                'calc(var(--size-pos-xxsmall) * -1)'
+              this.listRef.current.style.transform = 'translateY(-100%)'
+            }
           }
         }
-      }, 0)
+      }
+    }, 0)
+    
     if (e.type === 'keydown')
       setTimeout(() => this.actionsListRef.current?.focusFirstMenuItem(), 0)
   }
