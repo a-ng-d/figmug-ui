@@ -96,7 +96,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
   onOpenMenu = (
     e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
   ) => {
-    const { containerId } = this.props
+    const { containerId, alignment } = this.props
     const { isMenuOpen } = this.state
 
     this.setState({
@@ -135,13 +135,24 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
         if (shouldTransformY) {
           if (buttonRect)
             this.listRef.current.style.top = `${adjustedTop - buttonRect.top}px`
+
+          const isTopAlignment = alignment?.includes('TOP')
+          const baseTransform = isTopAlignment ? 'translateY(-100%)' : 'none'
+
           this.listRef.current.style.transform = shouldTransformX
-            ? `translate(${adjustedLeft - menuRect.left}px, 0)`
-            : 'none'
+            ? `${baseTransform} translateX(${adjustedLeft - menuRect.left}px)`
+            : baseTransform
         }
 
-        if (shouldTransformX && !shouldTransformY)
-          this.listRef.current.style.transform = `translateX(${adjustedLeft - menuRect.left}px)`
+        if (shouldTransformX && !shouldTransformY) {
+          const isTopAlignment = alignment?.includes('TOP')
+          const baseTransform = isTopAlignment ? 'translateY(-100%)' : 'none'
+
+          this.listRef.current.style.transform =
+            baseTransform === 'none'
+              ? `translateX(${adjustedLeft - menuRect.left}px)`
+              : `${baseTransform} translateX(${adjustedLeft - menuRect.left}px)`
+        }
 
         if (containerId !== undefined) {
           const containerElement = document.getElementById(containerId)
