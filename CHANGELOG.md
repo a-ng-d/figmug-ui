@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.26] - 2025-11-15
+
+### Enhanced
+
+- **Menu and Dropdown Components**: Improved positioning and viewport visibility enhancements
+  - Added automatic viewport boundary detection to prevent menus from overflowing outside the visible area
+  - Implemented smart repositioning for both horizontal and vertical overflow scenarios
+  - Enhanced Menu component to use `containerId` prop instead of `parentClassName` for better consistency with Dropdown
+  - Added comprehensive viewport management that works in combination with existing parent container positioning
+  - Improved menu visibility with proper transform calculations to keep menus within viewport bounds
+  - Enhanced accessibility and user experience by ensuring menus remain accessible regardless of screen position
+
+### Changed
+
+- **Menu Component API**: Updated Menu component prop interface for better consistency
+  - **BREAKING**: Replaced `parentClassName?: string` with `containerId?: string` prop
+  - Unified positioning API between Menu and Dropdown components for consistent developer experience
+  - Enhanced ActionsList integration with proper containerId prop passing
+
+### Technical Details
+
+- Implemented dual-layer positioning system: viewport-first, then container-specific adjustments
+- Added smart transform calculations using `translateX()` and `translate()` for optimal positioning
+- Enhanced both Menu and Dropdown components with identical viewport management logic
+- Improved menu visibility logic with proper container-based visibility handling
+- Added 8px safety margins from viewport edges to ensure adequate spacing
+
 ## [1.19.25] - 2025-11-15
 
 ### Enhanced

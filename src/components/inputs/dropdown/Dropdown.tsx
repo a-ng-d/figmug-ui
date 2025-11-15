@@ -92,9 +92,47 @@ export default class Dropdown extends React.Component<
     this.setState({
       isMenuOpen: !isMenuOpen,
     })
-    if (containerId !== undefined)
-      setTimeout(() => {
-        if (this.listRef.current != null) {
+
+    setTimeout(() => {
+      if (this.listRef.current != null) {
+        const menuRect = this.listRef.current.getBoundingClientRect()
+        const buttonRect = this.buttonRef.current?.getBoundingClientRect()
+
+        let adjustedTop = 0
+        let adjustedLeft = 0
+        let shouldTransformY = false
+        let shouldTransformX = false
+
+        if (menuRect.bottom > window.innerHeight) {
+          adjustedTop = window.innerHeight - menuRect.height - 8
+          shouldTransformY = true
+        }
+        if (menuRect.top < 0) {
+          adjustedTop = 8
+          shouldTransformY = true
+        }
+
+        if (menuRect.right > window.innerWidth) {
+          adjustedLeft = window.innerWidth - menuRect.width - 8
+          shouldTransformX = true
+        }
+        if (menuRect.left < 0) {
+          adjustedLeft = 8
+          shouldTransformX = true
+        }
+
+        if (shouldTransformY) {
+          if (buttonRect)
+            this.listRef.current.style.top = `${adjustedTop - buttonRect.top}px`
+          this.listRef.current.style.transform = shouldTransformX
+            ? `translate(${adjustedLeft - menuRect.left}px, 0)`
+            : 'none'
+        }
+
+        if (shouldTransformX && !shouldTransformY)
+          this.listRef.current.style.transform = `translateX(${adjustedLeft - menuRect.left}px)`
+
+        if (containerId !== undefined) {
           const containerElement = document.getElementById(containerId)
           if (containerElement) {
             const container = containerElement.getBoundingClientRect()
@@ -140,7 +178,8 @@ export default class Dropdown extends React.Component<
             this.listRef.current.style.visibility = 'visible'
           }
         }
-      }, 1)
+      }
+    }, 1)
   }
 
   setPosition = () => {
