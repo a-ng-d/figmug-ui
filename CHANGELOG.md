@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.27] - 2025-11-15
+
+### Fixed
+
+- **Menu Component Alignment**: Fixed CSS transform conflicts affecting TOP_RIGHT and TOP_LEFT menu positioning
+  - Resolved issue where viewport management transforms were overriding alignment-specific transforms
+  - Fixed menus appearing too low when using TOP_RIGHT or TOP_LEFT alignment options
+  - Enhanced transform combination logic to preserve both alignment positioning and viewport adjustments
+  - Improved transform calculation to properly combine `translateY(-100%)` with viewport `translateX()` adjustments
+
+### Technical Details
+
+- Added intelligent transform combination that preserves base alignment transforms
+- Enhanced viewport management to detect and respect existing TOP alignment transforms
+- Fixed transform conflicts by properly combining CSS and JavaScript transform values
+- Improved positioning logic to handle multiple simultaneous transform operations
+
 ## [1.19.26] - 2025-11-15
 
 ### Enhanced
