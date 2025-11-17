@@ -136,15 +136,17 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           <div className="checkbox__box__background" />
           <div className="checkbox__box__tick" />
         </div>
-        <label
-          className={doClassnames([
-            'checkbox__label',
-            (isDisabled || isBlocked) && 'checkbox__label--disabled',
-          ])}
-          htmlFor={!(isDisabled || isBlocked) ? id : undefined}
-        >
-          {label}
-        </label>
+        {label !== undefined && (
+          <label
+            className={doClassnames([
+              'checkbox__label',
+              (isDisabled || isBlocked) && 'checkbox__label--disabled',
+            ])}
+            htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+          >
+            {label}
+          </label>
+        )}
         {this.Status('checkbox')}
         {isTooltipVisible && helper !== undefined && (
           <Tooltip
@@ -204,15 +206,17 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           <div className="radio__button__background" />
           <div className="radio__button__inner" />
         </div>
-        <label
-          className={doClassnames([
-            'radio__label',
-            (isDisabled || isBlocked) && 'radio__label--disabled',
-          ])}
-          htmlFor={!(isDisabled || isBlocked) ? id : undefined}
-        >
-          {label}
-        </label>
+        {label !== undefined && (
+          <label
+            className={doClassnames([
+              'radio__label',
+              (isDisabled || isBlocked) && 'radio__label--disabled',
+            ])}
+            htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+          >
+            {label}
+          </label>
+        )}
         {this.Status('radio')}
         {isTooltipVisible && helper !== undefined && (
           <Tooltip
@@ -270,15 +274,17 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           <div className="switch__toggle__background" />
           <div className="switch__toggle__knob" />
         </div>
-        <label
-          className={doClassnames([
-            'switch__label',
-            (isDisabled || isBlocked) && 'switch__label--disabled',
-          ])}
-          htmlFor={!(isDisabled || isBlocked) ? id : undefined}
-        >
-          {label}
-        </label>
+        {label !== undefined && (
+          <label
+            className={doClassnames([
+              'switch__label',
+              (isDisabled || isBlocked) && 'switch__label--disabled',
+            ])}
+            htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+          >
+            {label}
+          </label>
+        )}
         {this.Status('switch')}
         {isTooltipVisible && helper !== undefined && (
           <Tooltip
