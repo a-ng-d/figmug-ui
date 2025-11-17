@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.30] - 2025-11-17
+
+### Added
+
+- **Button Helper Tooltip**: Added `helper` prop for contextual tooltips with configurable positioning
+- **Tabs Responsive Wrapper**: Enhanced Tabs dropdown mode with proper wrapper structure and ARIA attributes
+
+### Fixed
+
+- **Layout Overflow**: Fixed `overflow: visible` on layout blocks for screens ≤460px to prevent content clipping
+
 ## [1.19.29] - 2025-11-17
 
 ### Fixed
