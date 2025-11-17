@@ -168,7 +168,9 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
               />
             </span>
           )}
-          <span className="button__label">{label}</span>
+          {label !== undefined && (
+            <span className="button__label">{label}</span>
+          )}
           {isLoading && (
             <div
               className="button__loader"
