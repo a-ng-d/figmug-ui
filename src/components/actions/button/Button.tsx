@@ -120,14 +120,16 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
       type,
       icon,
       size,
-      isBlocked,
+      helper,
       feature,
       hasMultipleActions,
       isLoading,
       isDisabled,
+      isBlocked,
       action,
       label,
     } = this.props
+    const { isTooltipVisible } = this.state
 
     return (
       <div className={layouts['snackbar--medium']}>
@@ -193,6 +195,14 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
                 iconName="chevron-down"
               />
             </span>
+          )}
+          {isTooltipVisible && helper !== undefined && (
+            <Tooltip
+              pin={helper?.pin || 'BOTTOM'}
+              type={helper?.type || 'SINGLE_LINE'}
+            >
+              {helper?.label}
+            </Tooltip>
           )}
         </button>
         {this.Status()}

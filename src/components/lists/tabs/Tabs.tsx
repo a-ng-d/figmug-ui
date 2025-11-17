@@ -74,12 +74,23 @@ const Tabs = (props: TabsProps) => {
   if (tabs.length > 1) {
     if (windowWidth <= 460)
       return (
-        <Dropdown
-          id="tabs-dropdown"
-          options={dropdownOptions}
-          selected={active}
-          alignment="FILL"
-        />
+        <div
+          className={doClassnames([
+            'tabs',
+            direction === 'VERTICAL' && 'tabs--vertical',
+          ])}
+          role="tablist"
+          aria-orientation={
+            direction === 'VERTICAL' ? 'vertical' : 'horizontal'
+          }
+        >
+          <Dropdown
+            id="tabs-dropdown"
+            options={dropdownOptions}
+            selected={active}
+            alignment="FILL"
+          />
+        </div>
       )
 
     return (
