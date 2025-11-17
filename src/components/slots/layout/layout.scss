@@ -71,6 +71,10 @@
     &--fixed {
       flex: none;
     }
+
+    @media (max-width: 460px) {
+      overflow: visible;
+    }
   }
 
   & > div + div {
