@@ -1,7 +1,10 @@
 import './tabs.scss'
+import { useEffect, useState } from 'react'
+import { DropdownOption } from '@tps/list.types'
 import { IconList } from '@tps/icon.types'
 import texts from '@styles/texts/texts.module.scss'
 import Chip from '@components/tags/chip/Chip'
+import Dropdown from '@components/inputs/dropdown/Dropdown'
 import Icon from '@components/assets/icon/Icon'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 
@@ -31,7 +34,54 @@ const Tabs = (props: TabsProps) => {
     action,
   } = props
 
-  if (tabs.length > 1)
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== 'undefined' ? window.innerWidth : 1024
+  )
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const dropdownOptions: DropdownOption[] = tabs.map((tab) => ({
+    type: 'OPTION' as const,
+    label: tab.label,
+    value: tab.id,
+    isNew: tab.isNew,
+    action: (e: React.MouseEvent<Element> | React.KeyboardEvent<Element>) => {
+      const syntheticEvent = {
+        ...e,
+        target: {
+          ...e.target,
+          dataset: { feature: tab.id },
+        },
+        currentTarget: {
+          ...e.currentTarget,
+          dataset: { feature: tab.id },
+        },
+      }
+      action(
+        syntheticEvent as unknown as React.MouseEvent<Element> &
+          React.KeyboardEvent<Element>
+      )
+    },
+  }))
+
+  if (tabs.length > 1) {
+    if (windowWidth <= 460)
+      return (
+        <Dropdown
+          id="tabs-dropdown"
+          options={dropdownOptions}
+          selected={active}
+          alignment="FILL"
+        />
+      )
+
     return (
       <div
         className={doClassnames([
@@ -80,6 +130,7 @@ const Tabs = (props: TabsProps) => {
         ))}
       </div>
     )
+  }
   return null
 }
 

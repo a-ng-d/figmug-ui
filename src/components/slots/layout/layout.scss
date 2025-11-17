@@ -11,12 +11,26 @@
   background-color: var(--layout-background-color);
   overflow: hidden;
 
+  @media (max-width: 460px) {
+    flex-direction: column;
+
+    & > * {
+      width: 100% !important;
+      max-width: unset;
+      min-width: unset;
+    }
+  }
+
   &--full-width {
     width: 100%;
   }
 
   &--full-height {
     height: 100%;
+
+    @media (max-width: 460px) {
+      height: auto;
+    }
   }
 
   &__block {
@@ -62,5 +76,11 @@
   & > div + div {
     border-left: var(--layout-block-border-width) solid
       var(--layout-block-border-color);
+
+    @media (max-width: 460px) {
+      border-left: none;
+      border-top: var(--layout-block-border-width) solid
+        var(--layout-block-border-color);
+    }
   }
 }

@@ -5,6 +5,56 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.28] - 2025-11-17
+
+### Added
+
+- **Responsive Tabs Component**: Implemented intelligent responsive behavior for navigation tabs
+  - Added automatic dropdown fallback for tab navigation on narrow screens (≤460px)
+  - Enhanced Tabs component with window width detection using `useState` and `useEffect` hooks
+  - Implemented dynamic option mapping that preserves tab functionality in dropdown mode
+  - Added proper event handling to maintain `data-feature` attribute consistency between tab and dropdown modes
+
+- **Layout Storybook Documentation**: Created comprehensive Storybook stories for Layout component
+  - Added detailed Layout component stories demonstrating responsive behavior
+  - Created sample components using Section, SimpleItem, and SectionTitle for realistic examples
+  - Implemented TwoColumns and ThreeColumns story variants showcasing different layout configurations
+  - Added responsive documentation explaining automatic column-to-row conversion at 460px breakpoint
+
+### Enhanced
+
+- **Layout Component Responsiveness**: Improved Layout component behavior across different screen sizes
+  - Added responsive CSS rules with `@media (max-width: 460px)` breakpoint for automatic layout adaptation
+  - Enhanced layout to switch from horizontal columns to vertical stacking on small screens
+  - Implemented border direction changes: `border-left` converts to `border-top` in responsive mode
+  - Added automatic width adjustments with `width: 100%` and constraint resets for responsive columns
+  - Fixed height behavior in responsive mode: `height: auto` instead of fixed heights
+
+### Changed
+
+- **Tabs Component API**: Enhanced Tabs component with responsive dropdown integration
+  - Added support for automatic UI pattern switching based on viewport width
+  - Implemented DropdownOption mapping that preserves original tab functionality
+  - Enhanced component to handle both tab navigation and dropdown selection seamlessly
+  - Added window resize event handling for real-time responsive behavior
+
+### Technical Details
+
+- Added `useEffect` and `useState` hooks for window width tracking in Tabs component
+- Implemented responsive breakpoint detection with proper cleanup of event listeners
+- Enhanced Layout CSS with mobile-first responsive design patterns
+- Created comprehensive Storybook documentation with realistic component examples
+- Added proper TypeScript interfaces for dropdown option mapping from tabs
+- Implemented event delegation to maintain consistent action handling across UI patterns
+
+### Documentation
+
+- **Storybook Stories**: Added comprehensive Layout component documentation
+  - Created realistic example components using the design system (Section, SimpleItem, SectionTitle)
+  - Added detailed story descriptions explaining responsive behavior and breakpoint changes
+  - Implemented proper component composition patterns for Layout story examples
+  - Added visual examples of two-column and three-column layouts with responsive adaptations
+
 ## [1.19.27] - 2025-11-15
 
 ### Fixed
