@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.29] - 2025-11-17
+
+### Fixed
+
+- **Button Component Label Rendering**: Improved button label rendering to handle optional labels
+  - Fixed issue where button label span was always rendered even when label was undefined
+  - Added conditional rendering to only display label element when label prop is defined
+  - Enhanced component flexibility by allowing buttons with icons only (no label required)
+  - Improved DOM structure by avoiding empty label spans in the rendered output
+
+### Technical Details
+
+- Added `label !== undefined` condition before rendering the button label span
+- Maintained existing label styling and structure when label is provided
+- Enhanced component API flexibility for icon-only button use cases
+- Improved DOM cleanliness by preventing unnecessary empty elements
+
 ## [1.19.28] - 2025-11-17
 
 ### Added
