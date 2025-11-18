@@ -177,7 +177,7 @@
   --figma-color-text-warning-tertiary: #b86200;
 }
 
-[data-mode='figma-light'] {
+[data-mode="figma-light"] {
   --figma-color-bg: #ffffff;
   --figma-color-bg-brand: #0d99ff;
   --figma-color-bg-brand-hover: #007be5;
@@ -352,7 +352,7 @@
   --figma-color-text-warning-tertiary: #b86200;
 }
 
-[data-mode='figma-dark'] {
+[data-mode="figma-dark"] {
   --figma-color-bg: #2c2c2c;
   --figma-color-bg-brand: #0c8ce9;
   --figma-color-bg-brand-hover: #0a6dc2;
@@ -527,7 +527,7 @@
   --figma-color-text-warning-tertiary: #f7d15f;
 }
 
-[data-mode='figjam'] {
+[data-mode="figjam"] {
   --figma-color-bg: #ffffff;
   --figma-color-bg-brand: #9747ff;
   --figma-color-bg-brand-hover: #8638e5;
@@ -701,3 +701,4 @@
   --figma-color-text-warning-secondary: #b86200;
   --figma-color-text-warning-tertiary: #b86200;
 }
+

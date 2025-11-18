@@ -24,6 +24,9 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    padding: var(--list-message-padding-top)
+      var(--list-message-padding-right) var(--list-message-padding-bottom)
+      var(--list-message-padding-left);
   }
 
   &--top-border {
