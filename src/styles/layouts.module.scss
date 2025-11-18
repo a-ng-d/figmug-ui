@@ -1,6 +1,7 @@
 .snackbar {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   &--tight {
     @extend .snackbar;
@@ -45,7 +46,6 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  flex-wrap: wrap;
 
   &--tight {
     @extend .stackbar;
