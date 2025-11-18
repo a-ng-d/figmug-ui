@@ -16,6 +16,7 @@ export interface DropdownProps {
   options: Array<DropdownOption>
   selected: string
   containerId?: string
+  icon?: IconList
   alignment?: 'RIGHT' | 'LEFT' | 'FILL'
   pin?: 'NONE' | 'TOP' | 'BOTTOM'
   helper?: {
@@ -33,7 +34,6 @@ export interface DropdownProps {
     pin?: 'TOP' | 'BOTTOM'
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
-  icon?: IconList
   shouldReflow?: boolean
   isDisabled?: boolean
   isBlocked?: boolean
@@ -48,10 +48,7 @@ export interface DropdownStates {
   documentWidth: number
 }
 
-export default class Dropdown extends React.Component<
-  DropdownProps,
-  DropdownStates
-> {
+export default class Dropdown extends React.Component<DropdownProps, DropdownStates> {
   private selectMenuRef: React.RefObject<HTMLDivElement>
   private buttonRef: React.RefObject<HTMLButtonElement>
   private listRef: React.RefObject<HTMLDivElement>
@@ -60,6 +57,7 @@ export default class Dropdown extends React.Component<
   private subMenuRef: React.RefObject<HTMLUListElement>
 
   static defaultProps: Partial<DropdownProps> = {
+    icon: 'adjust',
     alignment: 'LEFT',
     pin: 'NONE',
     shouldReflow: false,
