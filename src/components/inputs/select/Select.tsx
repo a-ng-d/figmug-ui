@@ -24,9 +24,10 @@ export interface SelectProps {
   warning?: {
     label: string
     pin?: 'TOP' | 'BOTTOM'
-    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
   feature?: string
+  shouldReflow?: boolean
   isChecked?: boolean
   isDisabled?: boolean
   isBlocked?: boolean
@@ -37,12 +38,14 @@ export interface SelectProps {
 
 export interface SelectStates {
   isTooltipVisible: boolean
+  documentWidth: number
 }
 
 export default class Select extends React.Component<SelectProps, SelectStates> {
   private inputRef: React.RefObject<HTMLInputElement> = React.createRef()
 
   static defaultProps: Partial<SelectProps> = {
+    shouldReflow: false,
     isChecked: false,
     isDisabled: false,
     isBlocked: false,
@@ -53,7 +56,22 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
     super(props)
     this.state = {
       isTooltipVisible: false,
+      documentWidth: document.documentElement.clientWidth,
     }
+  }
+
+  // Lifecycle
+  componentDidMount = () => {
+    window.addEventListener('resize', this.handleResize)
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('resize', this.handleResize)
+  }
+
+  // Handlers
+  handleResize = () => {
+    this.setState({ documentWidth: document.documentElement.clientWidth })
   }
 
   // Templates
@@ -99,12 +117,20 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       name,
       helper,
       feature,
+      shouldReflow,
       isChecked,
       isDisabled,
       isBlocked,
       action,
     } = this.props
-    const { isTooltipVisible } = this.state
+    const { isTooltipVisible, documentWidth } = this.state
+
+    const isReflowActive = shouldReflow && documentWidth <= 460
+
+    const getSelectLabel = () => (isReflowActive ? undefined : label)
+    const getTooltipLabel = () => (isReflowActive ? label : helper?.label)
+    const hasTooltipContent = () =>
+      isReflowActive ? label !== undefined : helper !== undefined
 
     return (
       <div
@@ -113,10 +139,16 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         aria-checked={isChecked}
         aria-disabled={isDisabled || isBlocked}
         onMouseEnter={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
         }}
         onMouseLeave={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
+        }}
+        onFocus={() => {
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
+        }}
+        onBlur={() => {
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
         }}
       >
         <div className="checkbox__slot">
@@ -136,22 +168,24 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           <div className="checkbox__box__background" />
           <div className="checkbox__box__tick" />
         </div>
-        <label
-          className={doClassnames([
-            'checkbox__label',
-            (isDisabled || isBlocked) && 'checkbox__label--disabled',
-          ])}
-          htmlFor={!(isDisabled || isBlocked) ? id : undefined}
-        >
-          {label}
-        </label>
+        {getSelectLabel() !== undefined && (
+          <label
+            className={doClassnames([
+              'checkbox__label',
+              (isDisabled || isBlocked) && 'checkbox__label--disabled',
+            ])}
+            htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+          >
+            {getSelectLabel()}
+          </label>
+        )}
         {this.Status('checkbox')}
-        {isTooltipVisible && helper !== undefined && (
+        {isTooltipVisible && hasTooltipContent() && (
           <Tooltip
             pin={helper?.pin || 'BOTTOM'}
             type={helper?.type || 'SINGLE_LINE'}
           >
-            {helper?.label}
+            {getTooltipLabel()}
           </Tooltip>
         )}
       </div>
@@ -166,12 +200,20 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       value,
       helper,
       feature,
+      shouldReflow,
       isChecked,
       isDisabled,
       isBlocked,
       action,
     } = this.props
-    const { isTooltipVisible } = this.state
+    const { isTooltipVisible, documentWidth } = this.state
+
+    const isReflowActive = shouldReflow && documentWidth <= 460
+
+    const getSelectLabel = () => (isReflowActive ? undefined : label)
+    const getTooltipLabel = () => (isReflowActive ? label : helper?.label)
+    const hasTooltipContent = () =>
+      isReflowActive ? label !== undefined : helper !== undefined
 
     return (
       <div
@@ -180,10 +222,16 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         aria-checked={isChecked}
         aria-disabled={isDisabled || isBlocked}
         onMouseEnter={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
         }}
         onMouseLeave={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
+        }}
+        onFocus={() => {
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
+        }}
+        onBlur={() => {
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
         }}
       >
         <div className="radio__slot">
@@ -204,22 +252,24 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           <div className="radio__button__background" />
           <div className="radio__button__inner" />
         </div>
-        <label
-          className={doClassnames([
-            'radio__label',
-            (isDisabled || isBlocked) && 'radio__label--disabled',
-          ])}
-          htmlFor={!(isDisabled || isBlocked) ? id : undefined}
-        >
-          {label}
-        </label>
+        {getSelectLabel() !== undefined && (
+          <label
+            className={doClassnames([
+              'radio__label',
+              (isDisabled || isBlocked) && 'radio__label--disabled',
+            ])}
+            htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+          >
+            {getSelectLabel()}
+          </label>
+        )}
         {this.Status('radio')}
-        {isTooltipVisible && helper !== undefined && (
+        {isTooltipVisible && hasTooltipContent() && (
           <Tooltip
             pin={helper?.pin || 'BOTTOM'}
             type={helper?.type || 'SINGLE_LINE'}
           >
-            {helper?.label}
+            {getTooltipLabel()}
           </Tooltip>
         )}
       </div>
@@ -233,12 +283,20 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       name,
       helper,
       feature,
+      shouldReflow,
       isChecked,
       isDisabled,
       isBlocked,
       action,
     } = this.props
-    const { isTooltipVisible } = this.state
+    const { isTooltipVisible, documentWidth } = this.state
+
+    const isReflowActive = shouldReflow && documentWidth <= 460
+
+    const getSelectLabel = () => (isReflowActive ? undefined : label)
+    const getTooltipLabel = () => (isReflowActive ? label : helper?.label)
+    const hasTooltipContent = () =>
+      isReflowActive ? label !== undefined : helper !== undefined
 
     return (
       <div
@@ -247,10 +305,16 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         aria-checked={isChecked}
         aria-disabled={isDisabled || isBlocked}
         onMouseEnter={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
         }}
         onMouseLeave={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
+        }}
+        onFocus={() => {
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
+        }}
+        onBlur={() => {
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
         }}
       >
         <div className="switch__slot">
@@ -270,22 +334,24 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           <div className="switch__toggle__background" />
           <div className="switch__toggle__knob" />
         </div>
-        <label
-          className={doClassnames([
-            'switch__label',
-            (isDisabled || isBlocked) && 'switch__label--disabled',
-          ])}
-          htmlFor={!(isDisabled || isBlocked) ? id : undefined}
-        >
-          {label}
-        </label>
+        {getSelectLabel() !== undefined && (
+          <label
+            className={doClassnames([
+              'switch__label',
+              (isDisabled || isBlocked) && 'switch__label--disabled',
+            ])}
+            htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+          >
+            {getSelectLabel()}
+          </label>
+        )}
         {this.Status('switch')}
-        {isTooltipVisible && helper !== undefined && (
+        {isTooltipVisible && hasTooltipContent() && (
           <Tooltip
             pin={helper?.pin || 'BOTTOM'}
             type={helper?.type || 'SINGLE_LINE'}
           >
-            {helper?.label}
+            {getTooltipLabel()}
           </Tooltip>
         )}
       </div>

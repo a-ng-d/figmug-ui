@@ -36,7 +36,7 @@ interface SliderProps {
   warning?: {
     label: string
     pin?: 'TOP' | 'BOTTOM'
-    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
   isBlocked?: boolean
   isNew?: boolean

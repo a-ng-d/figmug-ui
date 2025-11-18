@@ -3,8 +3,10 @@ import { useEffect, useState } from 'react'
 import { IconList } from '@tps/icon.types'
 import texts from '@styles/texts/texts.module.scss'
 import Chip from '@components/tags/chip/Chip'
+import Dropdown from '@components/inputs/dropdown/Dropdown'
 import Icon from '@components/assets/icon/Icon'
 import { doClassnames } from '@a_ng_d/figmug-utils'
+import type { DropdownOption } from '@tps/list.types'
 
 export interface TabsProps {
   tabs: Array<{
@@ -45,12 +47,70 @@ const Tabs = (props: TabsProps) => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  if (tabs.length > 1)
+  const tabsToDropdownOptions = (): DropdownOption[] => {
+    return tabs
+      .filter((tab) => tab.id && tab.label)
+      .map((tab) => ({
+        type: 'OPTION' as const,
+        label: tab.label,
+        value: String(tab.id || ''),
+        isNew: tab.isNew,
+        action: (e: React.MouseEvent | React.KeyboardEvent) => {
+          const mockTarget = {
+            dataset: { feature: tab.id },
+          }
+
+          const mockEvent = {
+            ...e,
+            target: mockTarget,
+            currentTarget: mockTarget,
+          } as unknown as React.MouseEvent & React.KeyboardEvent
+
+          action(mockEvent)
+        },
+      }))
+  }
+
+  if (tabs.length > 1) {
+    if (windowWidth <= 460) {
+      const dropdownOptions = tabsToDropdownOptions()
+      let selectedValue = active || tabs[0]?.id || ''
+
+      if (dropdownOptions.length === 0) return null
+
+      const selectedExists = dropdownOptions.some(
+        (option) => option.value === selectedValue
+      )
+      if (!selectedExists && dropdownOptions.length > 0)
+        selectedValue = dropdownOptions[0].value || ''
+
+      return (
+        <div
+          className={doClassnames([
+            'tabs',
+            direction === 'VERTICAL' && 'tabs--vertical',
+          ])}
+          role="tablist"
+          aria-orientation={
+            direction === 'VERTICAL' ? 'vertical' : 'horizontal'
+          }
+        >
+          <Dropdown
+            id="tabs-dropdown"
+            options={dropdownOptions}
+            selected={String(selectedValue)}
+            pin="TOP"
+            alignment="LEFT"
+          />
+        </div>
+      )
+    }
+
     return (
       <div
         className={doClassnames([
           'tabs',
-          direction === 'VERTICAL' && windowWidth > 460 && 'tabs--vertical',
+          direction === 'VERTICAL' && 'tabs--vertical',
         ])}
         role="tablist"
         aria-orientation={direction === 'VERTICAL' ? 'vertical' : 'horizontal'}
@@ -94,6 +154,8 @@ const Tabs = (props: TabsProps) => {
         ))}
       </div>
     )
+  }
+
   return null
 }
 

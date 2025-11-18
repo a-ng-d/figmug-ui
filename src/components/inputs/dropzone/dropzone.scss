@@ -17,8 +17,6 @@
   background-color: var(--dropzone-background-color);
   padding: var(--dropzone-padding-top) var(--dropzone-padding-right)
     var(--dropzone-padding-bottom) var(--dropzone-padding-left);
-  min-width: var(--dropzone-min-width);
-  min-height: var(--dropzone-min-height);
   user-select: none;
 
   & {

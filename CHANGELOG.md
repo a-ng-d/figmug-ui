@@ -5,6 +5,46 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.32] - 2025-11-19
+
+### Added
+
+- **Responsive UI Patterns**: Comprehensive responsive behavior across components with 460px breakpoint
+  - Button `shouldReflow` prop: labels automatically move to tooltips on narrow screens
+  - Dropdown responsive mode: transforms to Menu component on mobile
+  - Tabs responsive fallback: converts to dropdown navigation on small screens
+  - Select component tooltip handling with optional label rendering for flexible usage
+
+### Enhanced
+
+- **Component Positioning**: Improved Menu and Dropdown viewport management
+  - Smart repositioning to prevent overflow outside visible area
+  - Enhanced transform calculations for better Menu alignment
+  - Added visibility delays for smoother positioning transitions
+
+- **Layout Responsiveness**: Refined responsive layout behavior
+  - Flex-wrap support in snackbar layouts and ActionsItem components
+  - Better border positioning for mobile (border-left → border-top)
+  - Enhanced component dimensions handling in responsive mode
+
+### Fixed
+
+- **Warning Prop Consistency**: Standardized warning prop types across components
+  - Removed deprecated `WITH_IMAGE` type from tooltip interfaces
+  - Fixed prop type mismatches in Slider, Select, and SimpleSlider components
+
+- **Component Styling**: Minor fixes for better visual consistency
+  - Removed fixed dimensions from Dropzone component
+  - Updated select component heights (medium → small) for better alignment
+  - Enhanced Dialog cover box-sizing for responsive behavior
+
+### Technical Details
+
+- Window resize event handling with proper cleanup across components
+- Responsive breakpoint detection at ≤460px with automatic UI adaptation
+- Enhanced tooltip management with conditional rendering based on screen size
+- Improved component state management for viewport dimension tracking
+
 ## [1.19.31] - 2025-11-17
 
 ### Fixed

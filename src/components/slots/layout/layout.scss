@@ -15,9 +15,10 @@
     flex-direction: column;
 
     & > * {
+      flex: 1 !important;
       width: 100% !important;
-      max-width: unset;
-      min-width: unset;
+      min-width: unset !important;
+      max-width: unset !important;
     }
   }
 
@@ -27,10 +28,6 @@
 
   &--full-height {
     height: 100%;
-
-    @media (max-width: 460px) {
-      height: auto;
-    }
   }
 
   &__block {
@@ -70,6 +67,11 @@
 
     &--fixed {
       flex: none;
+
+      @media (max-width: 460px) {
+        flex: none !important;
+        overflow: visible;
+      }
     }
   }
 
@@ -78,9 +80,9 @@
       var(--layout-block-border-color);
 
     @media (max-width: 460px) {
-      border-left: none;
       border-top: var(--layout-block-border-width) solid
         var(--layout-block-border-color);
+      border-left: none;
     }
   }
 }
