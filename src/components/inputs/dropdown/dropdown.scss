@@ -40,8 +40,8 @@
     padding: var(--dropdown-padding-top) var(--dropdown-padding-right)
       var(--dropdown-padding-bottom) var(--dropdown-padding-left);
     width: auto;
-    height: var(--dropdown-height);
     max-width: 100%;
+    height: var(--dropdown-height);
 
     & {
       --dropdown-background-color: var(--dropdown-background-color-default);

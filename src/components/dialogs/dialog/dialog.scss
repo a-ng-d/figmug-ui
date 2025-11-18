@@ -75,9 +75,9 @@
   .dialog {
     & .dialog__cover {
       flex: auto;
+      box-sizing: border-box;
       width: 100%;
       max-width: none;
-      box-sizing: border-box;
     }
   }
 }

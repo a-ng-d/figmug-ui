@@ -80,9 +80,9 @@ li.actions-item {
 
   .actions-item__actions {
     display: flex;
-    align-items: center;
-    gap: var(--actions-item-actions-gap);
     flex-wrap: wrap;
     justify-content: end;
+    align-items: center;
+    gap: var(--actions-item-actions-gap);
   }
 }
