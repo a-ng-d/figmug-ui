@@ -54,10 +54,12 @@
   &--fill {
     .form-item__label {
       flex: 0 1 var(--form-item-label-width);
+      min-width: var(--form-item-label-width);
     }
 
     .form-item__input {
       flex: 1;
+      min-width: 0;
     }
 
     .input--number,

@@ -327,6 +327,7 @@ export default class Dropdown extends React.Component<
   // Templates
   MenuButton = () => {
     const {
+      id,
       helper,
       warning,
       options,
@@ -347,6 +348,7 @@ export default class Dropdown extends React.Component<
 
     return (
       <Menu
+        id={id}
         options={options}
         selected={selected}
         alignment={`${newAlignment.join('_')}` as MenuProps['alignment']}
