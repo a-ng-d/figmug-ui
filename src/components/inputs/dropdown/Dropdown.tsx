@@ -5,8 +5,10 @@ import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
 import ActionsList from '@components/lists/actions-list/ActionsList'
 import Icon from '@components/assets/icon/Icon'
+import Menu from '@components/actions/menu/Menu'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import type { DropdownOption } from '@tps/list.types'
+import type { IconList } from '@tps/icon.types'
 import './dropdown.scss'
 
 export interface DropdownProps {
@@ -29,8 +31,10 @@ export interface DropdownProps {
   warning?: {
     label: string
     pin?: 'TOP' | 'BOTTOM'
-    type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  icon?: IconList
+  shouldReflow?: boolean
   isDisabled?: boolean
   isBlocked?: boolean
   isNew?: boolean
@@ -41,6 +45,7 @@ export interface DropdownStates {
   isMenuOpen: boolean
   listShouldScroll: boolean
   isTooltipVisible: boolean
+  documentWidth: number
 }
 
 export default class Dropdown extends React.Component<
@@ -57,6 +62,7 @@ export default class Dropdown extends React.Component<
   static defaultProps: Partial<DropdownProps> = {
     alignment: 'LEFT',
     pin: 'NONE',
+    shouldReflow: false,
     isNew: false,
     isBlocked: false,
     isDisabled: false,
@@ -68,6 +74,7 @@ export default class Dropdown extends React.Component<
       isMenuOpen: false,
       listShouldScroll: false,
       isTooltipVisible: false,
+      documentWidth: typeof window !== 'undefined' ? window.innerWidth : 1024,
     }
     this.selectMenuRef = React.createRef()
     this.buttonRef = React.createRef()
@@ -78,11 +85,20 @@ export default class Dropdown extends React.Component<
     this.handleClickOutside = this.handleClickOutside.bind(this)
   }
 
-  componentDidMount = () =>
+  componentDidMount = () => {
     document.addEventListener('mousedown', this.handleClickOutside)
+    window.addEventListener('resize', this.handleResize)
+  }
 
-  componentWillUnmount = () =>
+  componentWillUnmount = () => {
     document.removeEventListener('mousedown', this.handleClickOutside)
+    window.removeEventListener('resize', this.handleResize)
+  }
+
+  // Handlers
+  handleResize = () => {
+    this.setState({ documentWidth: window.innerWidth })
+  }
 
   // Direct Actions
   onOpenMenu = () => {
@@ -300,8 +316,33 @@ export default class Dropdown extends React.Component<
       )
   }
 
-  // Render
-  render() {
+  // Templates
+  MenuButton = () => {
+    const {
+      helper,
+      warning,
+      options,
+      selected,
+      pin,
+      alignment,
+      icon,
+      isBlocked,
+    } = this.props
+
+    return (
+      <Menu
+        options={options}
+        selected={selected}
+        alignment={`${pin === 'NONE' ? 'BOTTOM' : pin || 'BOTTOM'}_${alignment === 'FILL' ? 'LEFT' : alignment || 'LEFT'}`}
+        icon={icon}
+        helper={helper}
+        warning={warning}
+        isBlocked={isBlocked}
+      />
+    )
+  }
+
+  DropdownButton = () => {
     const {
       id,
       alignment,
@@ -432,5 +473,16 @@ export default class Dropdown extends React.Component<
         })()}
       </div>
     )
+  }
+
+  // Render
+  render() {
+    const { shouldReflow } = this.props
+    const { documentWidth } = this.state
+
+    const isReflowActive = shouldReflow && documentWidth <= 460
+
+    if (isReflowActive) return this.MenuButton()
+    return this.DropdownButton()
   }
 }
