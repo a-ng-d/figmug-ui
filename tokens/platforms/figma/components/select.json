@@ -46,7 +46,7 @@
     },
     "checkbox": {
       "height": {
-        "$value": "{size.pos.medium}",
+        "$value": "{size.pos.small}",
         "$type": "dimension"
       },
       "gap": {
@@ -220,7 +220,7 @@
     },
     "switch": {
       "height": {
-        "$value": "{size.pos.medium}",
+        "$value": "{size.pos.small}",
         "$type": "dimension"
       },
       "gap": {
@@ -460,7 +460,7 @@
     },
     "radio": {
       "height": {
-        "$value": "{size.pos.medium}",
+        "$value": "{size.pos.small}",
         "$type": "dimension"
       },
       "gap": {
