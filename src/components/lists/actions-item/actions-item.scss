@@ -17,6 +17,11 @@ li.actions-item {
     var(--actions-item-padding-bottom) var(--actions-item-padding-left);
   user-select: none;
 
+  @media (max-width: 460px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   & {
     --actions-item-background-color: var(
       --actions-item-background-color-default
@@ -70,11 +75,14 @@ li.actions-item {
     flex: 1;
     flex-direction: column;
     gap: var(--actions-item-content-gap);
+    overflow: hidden;
   }
 
   .actions-item__actions {
     display: flex;
     align-items: center;
     gap: var(--actions-item-actions-gap);
+    flex-wrap: wrap;
+    justify-content: end;
   }
 }

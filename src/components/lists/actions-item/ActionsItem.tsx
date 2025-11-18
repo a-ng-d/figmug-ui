@@ -1,6 +1,5 @@
 import React from 'react'
 import texts from '@styles/texts/texts.module.scss'
-import layouts from '@styles/layouts.module.scss'
 import Chip from '@components/tags/chip/Chip'
 import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import Avatar from '@components/assets/avatar/Avatar'
@@ -114,7 +113,7 @@ export default class ActionsItem extends React.Component<ActionsItemProps> {
         </div>
         {actionsSlot !== undefined && (
           <div
-            className={layouts['snackbar--medium']}
+            className="actions-item__actions"
             role="group"
           >
             {actionsSlot}
