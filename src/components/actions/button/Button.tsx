@@ -88,15 +88,15 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
         if (this.buttonRef.current) this.buttonRef.current.focus()
       }, 1)
 
-    window.addEventListener('resize', this.updateDocumentWidth)
+    window.addEventListener('resize', this.handleResize)
   }
 
   componentWillUnmount = () => {
-    window.removeEventListener('resize', this.updateDocumentWidth)
+    window.removeEventListener('resize', this.handleResize)
   }
 
   // Handlers
-  updateDocumentWidth = () => {
+  handleResize = () => {
     this.setState({ documentWidth: document.documentElement.clientWidth })
   }
 
@@ -291,77 +291,80 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
     const { isTooltipVisible } = this.state
 
     return (
-      <button
-        role="button"
-        data-feature={feature}
-        className={doClassnames([
-          'icon-button',
-          `icon-button--${size}`,
-          state === 'selected' && 'icon-button--selected',
-          isNew && 'icon-button--new',
-          isLoading && 'button--loading',
-        ])}
-        disabled={isDisabled || isBlocked}
-        aria-label={helper?.label || icon}
-        aria-disabled={isDisabled || isBlocked}
-        aria-pressed={state === 'selected'}
-        aria-busy={isLoading}
-        onKeyDown={(e) => {
-          if (
-            (e.key === ' ' || e.key === 'Enter') &&
-            !(isDisabled || isBlocked)
-          )
-            action?.(e)
-          if (e.key === 'Escape') (e.target as HTMLElement).blur()
-        }}
-        onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
-        onMouseEnter={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: true })
-        }}
-        onMouseLeave={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: false })
-        }}
-        onFocus={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: true })
-        }}
-        onBlur={() => {
-          if (helper !== undefined) this.setState({ isTooltipVisible: false })
-        }}
-        tabIndex={0}
-        ref={this.buttonRef}
-      >
-        {customIcon === undefined ? (
-          <Icon
-            type="PICTO"
-            iconName={isLoading ? 'spinner' : icon}
-            customClassName={
-              iconClassName !== undefined ? iconClassName : undefined
-            }
-          />
-        ) : (
-          <div
-            style={{
-              opacity: isDisabled || isBlocked ? 0.5 : 1,
-              pointerEvents: 'none',
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            {customIcon}
-          </div>
-        )}
-        {isTooltipVisible && helper !== undefined && state !== 'selected' && (
-          <Tooltip
-            pin={helper?.pin || 'BOTTOM'}
-            type={helper?.type || 'SINGLE_LINE'}
-          >
-            {helper?.label}
-          </Tooltip>
-        )}
-      </button>
+      <div className={layouts['snackbar--medium']}>
+        <button
+          role="button"
+          data-feature={feature}
+          className={doClassnames([
+            'icon-button',
+            `icon-button--${size}`,
+            state === 'selected' && 'icon-button--selected',
+            isNew && 'icon-button--new',
+            isLoading && 'button--loading',
+          ])}
+          disabled={isDisabled || isBlocked}
+          aria-label={helper?.label || icon}
+          aria-disabled={isDisabled || isBlocked}
+          aria-pressed={state === 'selected'}
+          aria-busy={isLoading}
+          onKeyDown={(e) => {
+            if (
+              (e.key === ' ' || e.key === 'Enter') &&
+              !(isDisabled || isBlocked)
+            )
+              action?.(e)
+            if (e.key === 'Escape') (e.target as HTMLElement).blur()
+          }}
+          onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
+          onMouseEnter={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: true })
+          }}
+          onMouseLeave={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          }}
+          onFocus={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: true })
+          }}
+          onBlur={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          }}
+          tabIndex={0}
+          ref={this.buttonRef}
+        >
+          {customIcon === undefined ? (
+            <Icon
+              type="PICTO"
+              iconName={isLoading ? 'spinner' : icon}
+              customClassName={
+                iconClassName !== undefined ? iconClassName : undefined
+              }
+            />
+          ) : (
+            <div
+              style={{
+                opacity: isDisabled || isBlocked ? 0.5 : 1,
+                pointerEvents: 'none',
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              {customIcon}
+            </div>
+          )}
+          {isTooltipVisible && helper !== undefined && state !== 'selected' && (
+            <Tooltip
+              pin={helper?.pin || 'BOTTOM'}
+              type={helper?.type || 'SINGLE_LINE'}
+            >
+              {helper?.label}
+            </Tooltip>
+          )}
+        </button>
+        {this.Status()}
+      </div>
     )
   }
 
