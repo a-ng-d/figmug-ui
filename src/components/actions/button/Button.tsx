@@ -41,8 +41,11 @@ export interface ButtonProps {
   feature?: string
   hasMultipleActions?: boolean
   isLink?: boolean
-  shouldReflow?: boolean
   isAutofocus?: boolean
+  shouldReflow?: {
+    isEnabled: boolean
+    icon: IconList
+  }
   isLoading?: boolean
   isBlocked?: boolean
   isDisabled?: boolean
@@ -64,6 +67,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
     state: 'default',
     hasMultipleActions: false,
     isLink: false,
+    shouldReflow: { isEnabled: false, icon: 'adjust' },
     isAutofocus: false,
     isLoading: false,
     isBlocked: false,
@@ -146,12 +150,16 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
     } = this.props
     const { isTooltipVisible, documentWidth } = this.state
 
-    const isReflowActive = shouldReflow && documentWidth <= 460
+    const isReflowActive = shouldReflow?.isEnabled && documentWidth <= 460
 
     const getButtonLabel = () => (isReflowActive ? undefined : label)
     const getTooltipLabel = () => (isReflowActive ? label : helper?.label)
     const hasTooltipContent = () =>
       isReflowActive ? label !== undefined : helper !== undefined
+    const getIconName = () =>
+      isReflowActive && shouldReflow?.icon !== undefined
+        ? shouldReflow.icon
+        : icon
 
     return (
       <div className={layouts['snackbar--medium']}>
@@ -193,14 +201,14 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           tabIndex={0}
           ref={this.buttonRef}
         >
-          {icon !== undefined && (
+          {getIconName() !== undefined && (
             <span
               className="button__icon"
               aria-hidden="true"
             >
               <Icon
                 type="PICTO"
-                iconName={icon}
+                iconName={getIconName()}
               />
             </span>
           )}
