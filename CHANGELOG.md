@@ -5,6 +5,48 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.32] - 2025-11-18
+
+### Added
+
+- **Button Responsive Mode**: Added `shouldReflow` prop for automatic responsive behavior at ≤460px
+  - Button labels automatically move to helper tooltips on narrow screens
+  - Window resize detection with automatic UI adaptation
+  - Enhanced tooltip visibility management for both manual and automatic modes
+
+- **Dropdown Responsive Mode**: Extended `shouldReflow` pattern to Dropdown component
+  - Automatic transformation to Menu component on narrow screens (≤460px)
+  - Unified responsive behavior across form components
+  - Preserved all functionality while optimizing for mobile interfaces
+
+### Enhanced
+
+- **Select Component Tooltip Handling**: Improved tooltip interactions with focus/blur events
+  - Added proper keyboard navigation support for tooltips
+  - Enhanced accessibility with better focus management
+  - Optional label rendering for more flexible component usage
+
+- **Layout Component Responsiveness**: Refined responsive layout behavior
+  - Improved flex-wrap support in snackbar layouts
+  - Better handling of component dimensions in responsive mode
+  - Enhanced border positioning for mobile layouts
+
+### Fixed
+
+- **Warning Prop Consistency**: Standardized warning prop types across components
+  - Removed deprecated `WITH_IMAGE` type from warning interfaces
+  - Unified tooltip type definitions for better consistency
+  - Fixed prop type mismatches in Slider, Select, and SimpleSlider components
+
+- **Dropzone Dimensions**: Removed fixed min-width and min-height constraints for better flexibility
+
+### Technical Details
+
+- Added window resize event handling with proper cleanup in component lifecycle
+- Implemented responsive breakpoint detection at 460px across multiple components
+- Enhanced tooltip management with conditional rendering based on responsive state
+- Improved component state management for window dimension tracking
+
 ## [1.19.31] - 2025-11-17
 
 ### Fixed
