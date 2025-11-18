@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   align-items: center;
 
+  @media (max-width: 460px) {
+    justify-content: center;
+  }
+
   &--tight {
     @extend .snackbar;
 
