@@ -7,8 +7,9 @@
   display: flex;
   flex-direction: column;
   --text-color-primary: var(--form-item-text-color-default);
-  --message-padding: var(--form-item-helper-padding-vertical)
-    var(--form-item-helper-padding-horizontal);
+  --message-padding: var(--form-item-helper-padding-top)
+    var(--form-item-helper-padding-left) var(--form-item-helper-padding-bottom)
+    var(--form-item-helper-padding-right);
 
   &__row {
     display: inline-flex;
