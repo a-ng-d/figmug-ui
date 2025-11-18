@@ -403,6 +403,12 @@ export default class Dropdown extends React.Component<
           onMouseLeave={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: false })
           }}
+          onFocus={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: true })
+          }}
+          onBlur={() => {
+            if (helper !== undefined) this.setState({ isTooltipVisible: false })
+          }}
           tabIndex={0}
           ref={this.buttonRef}
         >

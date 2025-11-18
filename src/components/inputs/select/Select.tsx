@@ -118,6 +118,12 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         onMouseLeave={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: false })
         }}
+        onFocus={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onBlur={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
       >
         <div className="checkbox__slot">
           <input
@@ -187,6 +193,12 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
         onMouseLeave={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: false })
         }}
+        onFocus={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onBlur={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
       >
         <div className="radio__slot">
           <input
@@ -254,6 +266,12 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
         onMouseLeave={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
+        onFocus={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onBlur={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: false })
         }}
       >
