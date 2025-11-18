@@ -16,8 +16,8 @@
 
     & > * {
       width: 100% !important;
-      max-width: unset !important;
       min-width: unset !important;
+      max-width: unset !important;
     }
   }
 
@@ -74,9 +74,9 @@
       var(--layout-block-border-color);
 
     @media (max-width: 460px) {
-      border-left: none;
       border-top: var(--layout-block-border-width) solid
         var(--layout-block-border-color);
+      border-left: none;
     }
   }
 }
