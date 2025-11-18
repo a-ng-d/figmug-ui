@@ -5,47 +5,45 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.19.32] - 2025-11-18
+## [1.19.32] - 2025-11-19
 
 ### Added
 
-- **Button Responsive Mode**: Added `shouldReflow` prop for automatic responsive behavior at ≤460px
-  - Button labels automatically move to helper tooltips on narrow screens
-  - Window resize detection with automatic UI adaptation
-  - Enhanced tooltip visibility management for both manual and automatic modes
-
-- **Dropdown Responsive Mode**: Extended `shouldReflow` pattern to Dropdown component
-  - Automatic transformation to Menu component on narrow screens (≤460px)
-  - Unified responsive behavior across form components
-  - Preserved all functionality while optimizing for mobile interfaces
+- **Responsive UI Patterns**: Comprehensive responsive behavior across components with 460px breakpoint
+  - Button `shouldReflow` prop: labels automatically move to tooltips on narrow screens
+  - Dropdown responsive mode: transforms to Menu component on mobile
+  - Tabs responsive fallback: converts to dropdown navigation on small screens
+  - Select component tooltip handling with optional label rendering for flexible usage
 
 ### Enhanced
 
-- **Select Component Tooltip Handling**: Improved tooltip interactions with focus/blur events
-  - Added proper keyboard navigation support for tooltips
-  - Enhanced accessibility with better focus management
-  - Optional label rendering for more flexible component usage
+- **Component Positioning**: Improved Menu and Dropdown viewport management
+  - Smart repositioning to prevent overflow outside visible area
+  - Enhanced transform calculations for better Menu alignment
+  - Added visibility delays for smoother positioning transitions
 
-- **Layout Component Responsiveness**: Refined responsive layout behavior
-  - Improved flex-wrap support in snackbar layouts
-  - Better handling of component dimensions in responsive mode
-  - Enhanced border positioning for mobile layouts
+- **Layout Responsiveness**: Refined responsive layout behavior
+  - Flex-wrap support in snackbar layouts and ActionsItem components
+  - Better border positioning for mobile (border-left → border-top)
+  - Enhanced component dimensions handling in responsive mode
 
 ### Fixed
 
 - **Warning Prop Consistency**: Standardized warning prop types across components
-  - Removed deprecated `WITH_IMAGE` type from warning interfaces
-  - Unified tooltip type definitions for better consistency
+  - Removed deprecated `WITH_IMAGE` type from tooltip interfaces
   - Fixed prop type mismatches in Slider, Select, and SimpleSlider components
 
-- **Dropzone Dimensions**: Removed fixed min-width and min-height constraints for better flexibility
+- **Component Styling**: Minor fixes for better visual consistency
+  - Removed fixed dimensions from Dropzone component
+  - Updated select component heights (medium → small) for better alignment
+  - Enhanced Dialog cover box-sizing for responsive behavior
 
 ### Technical Details
 
-- Added window resize event handling with proper cleanup in component lifecycle
-- Implemented responsive breakpoint detection at 460px across multiple components
-- Enhanced tooltip management with conditional rendering based on responsive state
-- Improved component state management for window dimension tracking
+- Window resize event handling with proper cleanup across components
+- Responsive breakpoint detection at ≤460px with automatic UI adaptation
+- Enhanced tooltip management with conditional rendering based on screen size
+- Improved component state management for viewport dimension tracking
 
 ## [1.19.31] - 2025-11-17
 
