@@ -22,6 +22,11 @@ export interface MenuProps {
     pin?: 'TOP' | 'BOTTOM'
     isSingleLine?: boolean
   }
+  warning?: {
+    label: string
+    pin?: 'TOP' | 'BOTTOM'
+    type?: 'MULTI_LINE' | 'SINGLE_LINE'
+  }
   isBlocked?: boolean
   isNew?: boolean
 }
@@ -193,6 +198,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
       state,
       icon,
       helper,
+      warning,
       customIcon,
       options,
       selected,
@@ -260,6 +266,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
             customIcon={customIcon === undefined ? undefined : customIcon}
             state={isMenuOpen ? 'selected' : undefined}
             helper={helper === undefined ? undefined : helper}
+            warning={warning === undefined ? undefined : warning}
             isLoading={state === 'LOADING'}
             isDisabled={state === 'DISABLED' || isBlocked}
             isNew={isNew}
@@ -279,6 +286,8 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
             type="primary"
             label={label}
             hasMultipleActions
+            helper={helper === undefined ? undefined : helper}
+            warning={warning === undefined ? undefined : warning}
             isLoading={state === 'LOADING'}
             isDisabled={state === 'DISABLED' || isBlocked}
             isNew={isNew}
