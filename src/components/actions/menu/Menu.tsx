@@ -33,6 +33,7 @@ export interface MenuProps {
 
 export interface MenuStates {
   isMenuOpen: boolean
+  isMenuVisible: boolean
   alignment: 'TOP_RIGHT' | 'TOP_LEFT' | 'BOTTOM_RIGHT' | 'BOTTOM_LEFT'
 }
 
@@ -57,6 +58,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
     super(props)
     this.state = {
       isMenuOpen: false,
+      isMenuVisible: false,
       alignment: props.alignment ?? 'BOTTOM_LEFT',
     }
     this.selectMenuRef = React.createRef()
@@ -95,6 +97,7 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
     else
       this.setState({
         isMenuOpen: false,
+        isMenuVisible: false,
       })
   }
 
@@ -138,14 +141,17 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
         }
 
         if (shouldTransformY) {
-          if (buttonRect)
-            this.listRef.current.style.top = `${adjustedTop - buttonRect.top}px`
-
           const isTopAlignment = alignment?.includes('TOP')
           const baseTransform = isTopAlignment ? 'translateY(-100%)' : 'none'
 
+          if (buttonRect) {
+            const originalTop = isTopAlignment ? -menuRect.height : 0
+            const adjustment = adjustedTop - buttonRect.top - originalTop
+            this.listRef.current.style.top = `${adjustment}px`
+          }
+
           this.listRef.current.style.transform = shouldTransformX
-            ? `${baseTransform} translateX(${adjustedLeft - menuRect.left}px)`
+            ? `${baseTransform !== 'none' ? baseTransform + ' ' : ''}translateX(${adjustedLeft - menuRect.left}px)`
             : baseTransform
         }
 
@@ -183,6 +189,9 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
             this.listRef.current.style.visibility = 'visible'
           }
         }
+
+        // Rendre le menu visible après positionnement
+        this.setState({ isMenuVisible: true })
       }
     }, 0)
 
@@ -312,7 +321,10 @@ export default class Menu extends React.Component<MenuProps, MenuStates> {
                 style={{
                   position: 'absolute',
                   zIndex: 99,
-                  visibility: containerId === undefined ? 'visible' : 'hidden',
+                  visibility:
+                    containerId === undefined && this.state.isMenuVisible
+                      ? 'visible'
+                      : 'hidden',
                 }}
                 ref={this.listRef}
                 role="menu"

@@ -5,7 +5,7 @@ import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
 import ActionsList from '@components/lists/actions-list/ActionsList'
 import Icon from '@components/assets/icon/Icon'
-import Menu from '@components/actions/menu/Menu'
+import Menu, { MenuProps } from '@components/actions/menu/Menu'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import type { DropdownOption } from '@tps/list.types'
 import type { IconList } from '@tps/icon.types'
@@ -16,7 +16,6 @@ export interface DropdownProps {
   options: Array<DropdownOption>
   selected: string
   containerId?: string
-  icon?: IconList
   alignment?: 'RIGHT' | 'LEFT' | 'FILL'
   pin?: 'NONE' | 'TOP' | 'BOTTOM'
   helper?: {
@@ -34,7 +33,10 @@ export interface DropdownProps {
     pin?: 'TOP' | 'BOTTOM'
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
-  shouldReflow?: boolean
+  shouldReflow?: {
+    isEnabled: boolean
+    icon: IconList
+  }
   isDisabled?: boolean
   isBlocked?: boolean
   isNew?: boolean
@@ -43,6 +45,7 @@ export interface DropdownProps {
 
 export interface DropdownStates {
   isMenuOpen: boolean
+  isMenuVisible: boolean
   listShouldScroll: boolean
   isTooltipVisible: boolean
   documentWidth: number
@@ -60,10 +63,9 @@ export default class Dropdown extends React.Component<
   private subMenuRef: React.RefObject<HTMLUListElement>
 
   static defaultProps: Partial<DropdownProps> = {
-    icon: 'adjust',
     alignment: 'LEFT',
     pin: 'NONE',
-    shouldReflow: false,
+    shouldReflow: { isEnabled: false, icon: 'adjust' },
     isNew: false,
     isBlocked: false,
     isDisabled: false,
@@ -73,6 +75,7 @@ export default class Dropdown extends React.Component<
     super(props)
     this.state = {
       isMenuOpen: false,
+      isMenuVisible: false,
       listShouldScroll: false,
       isTooltipVisible: false,
       documentWidth: typeof window !== 'undefined' ? window.innerWidth : 1024,
@@ -195,6 +198,9 @@ export default class Dropdown extends React.Component<
             this.listRef.current.style.visibility = 'visible'
           }
         }
+
+        // Rendre le menu visible après positionnement
+        this.setState({ isMenuVisible: true })
       }
     }, 1)
   }
@@ -266,6 +272,7 @@ export default class Dropdown extends React.Component<
     else
       this.setState({
         isMenuOpen: false,
+        isMenuVisible: false,
         listShouldScroll: false,
       })
   }
@@ -326,16 +333,24 @@ export default class Dropdown extends React.Component<
       selected,
       pin,
       alignment,
-      icon,
+      shouldReflow,
       isBlocked,
     } = this.props
+
+    const newAlignment = []
+
+    if (pin === 'TOP' || pin === 'NONE') newAlignment.push('BOTTOM')
+    else newAlignment.push('TOP')
+
+    if (alignment === 'LEFT' || alignment === 'FILL') newAlignment.push('LEFT')
+    else newAlignment.push('RIGHT')
 
     return (
       <Menu
         options={options}
         selected={selected}
-        alignment={`${pin === 'NONE' ? 'BOTTOM' : pin || 'BOTTOM'}_${alignment === 'FILL' ? 'LEFT' : alignment || 'LEFT'}`}
-        icon={icon}
+        alignment={`${newAlignment.join('_')}` as MenuProps['alignment']}
+        icon={shouldReflow?.icon}
         helper={helper}
         warning={warning}
         isBlocked={isBlocked}
@@ -459,7 +474,10 @@ export default class Dropdown extends React.Component<
                   bottom: pin === 'BOTTOM' ? '-4px' : 'auto',
                   right: alignment === 'RIGHT' ? 0 : 'auto',
                   left: alignment === 'LEFT' ? 0 : 'auto',
-                  visibility: containerId === undefined ? 'visible' : 'hidden',
+                  visibility:
+                    containerId === undefined && this.state.isMenuVisible
+                      ? 'visible'
+                      : 'hidden',
                 }}
                 ref={this.listRef}
               >
@@ -487,7 +505,7 @@ export default class Dropdown extends React.Component<
     const { shouldReflow } = this.props
     const { documentWidth } = this.state
 
-    const isReflowActive = shouldReflow && documentWidth <= 460
+    const isReflowActive = shouldReflow?.isEnabled && documentWidth <= 460
 
     if (isReflowActive) return this.MenuButton()
     return this.DropdownButton()
