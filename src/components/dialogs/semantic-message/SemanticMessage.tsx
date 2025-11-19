@@ -13,10 +13,41 @@ export interface SemanticMessageProps {
   actionsSlot?: React.ReactNode
 }
 
-export default class SemanticMessage extends React.Component<SemanticMessageProps> {
+export interface SemanticMessageStates {
+  documentWidth: number
+}
+
+export default class SemanticMessage extends React.Component<
+  SemanticMessageProps,
+  SemanticMessageStates
+> {
   static defaultProps: Partial<SemanticMessageProps> = {
     orientation: 'HORIZONTAL',
     isAnchored: false,
+  }
+
+  constructor(props: SemanticMessageProps) {
+    super(props)
+    this.state = {
+      documentWidth:
+        typeof document !== 'undefined'
+          ? document.documentElement.clientWidth
+          : 1024,
+    }
+  }
+
+  // Lifecycle
+  componentDidMount = () => {
+    window.addEventListener('resize', this.handleResize)
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('resize', this.handleResize)
+  }
+
+  // Handlers
+  handleResize = () => {
+    this.setState({ documentWidth: document.documentElement.clientWidth })
   }
 
   setIcon = (type: string): IconList => {
@@ -30,13 +61,17 @@ export default class SemanticMessage extends React.Component<SemanticMessageProp
   // Render
   render() {
     const { type, message, isAnchored, orientation, actionsSlot } = this.props
+    const { documentWidth } = this.state
+
+    const isResponsiveVertical = documentWidth <= 460
+    const effectiveOrientation = isResponsiveVertical ? 'VERTICAL' : orientation
 
     return (
       <div
         className={doClassnames([
           'semantic-message',
           `semantic-message--${type.toLowerCase()}`,
-          orientation === 'VERTICAL' && 'semantic-message--vertical',
+          effectiveOrientation === 'VERTICAL' && 'semantic-message--vertical',
           isAnchored && 'semantic-message--anchored',
         ])}
         role="status"
