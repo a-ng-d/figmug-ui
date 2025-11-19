@@ -43,7 +43,7 @@
   --sketch-color-overlay-default: #1e1f20bf;
 }
 
-[data-mode='sketch-light'] {
+[data-mode="sketch-light"] {
   --sketch-color-accent-default: #f26726;
   --sketch-color-accent-disabled: #fce4d8;
   --sketch-color-accent-error: #cc0000;
@@ -84,7 +84,7 @@
   --sketch-color-overlay-default: #1e1f20bf;
 }
 
-[data-mode='sketch-dark'] {
+[data-mode="sketch-dark"] {
   --sketch-color-accent-default: #f26726;
   --sketch-color-accent-disabled: #4e2f24;
   --sketch-color-accent-error: #cc0000;
@@ -124,3 +124,4 @@
   --sketch-color-foreground-warning: #d4910c;
   --sketch-color-overlay-default: #1e1f20bf;
 }
+
