@@ -96,6 +96,7 @@
 @media (width <= 460px) {
   .bar--reflow {
     flex-direction: column;
-    --bar-padding: var(--bar-padding-mobile);
+    --bar-padding: var(--bar-padding-mobile-top) var(--bar-padding-mobile-right)
+      var(--bar-padding-mobile-bottom) var(--bar-padding-mobile-left);
   }
 }

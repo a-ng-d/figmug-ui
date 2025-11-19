@@ -39,7 +39,7 @@
   --penpot-color-token-foreground: #1d4464;
 }
 
-[data-mode='penpot-light'] {
+[data-mode="penpot-light"] {
   --penpot-color-accent-default: #eef0f2;
   --penpot-color-accent-error: #c80857;
   --penpot-color-accent-info: #0e9be9;
@@ -76,7 +76,7 @@
   --penpot-color-token-foreground: #1d4464;
 }
 
-[data-mode='penpot-dark'] {
+[data-mode="penpot-dark"] {
   --penpot-color-accent-default: #2e3434;
   --penpot-color-accent-error: #c80857;
   --penpot-color-accent-info: #0e9be9;
@@ -112,3 +112,4 @@
   --penpot-color-token-border: #484c74;
   --penpot-color-token-foreground: #a7a9ff;
 }
+
