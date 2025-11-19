@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.33] - 2025-11-19
+
+### Enhanced
+
+- **Bar Component Responsive Padding**: Improved mobile padding configuration for better responsive design
+  - Enhanced mobile padding specification with individual top, right, bottom, left values
+  - Refined responsive padding from single `--bar-padding-mobile` to detailed directional padding tokens
+  - Better spacing control in mobile layouts with more granular padding configuration
+
+### Technical Details
+
+- Updated bar component padding tokens across all themes (Figma, Penpot, Sketch, Framer)
+- Enhanced CSS responsive rules to use individual padding directions for mobile breakpoints
+- Improved design token structure for more flexible responsive padding management
+- Minor formatting improvements in generated CSS files for better readability
+
 ## [1.19.32] - 2025-11-19
 
 ### Added
