@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.34] - 2025-11-19
+
+### Enhanced
+
+- **SemanticMessage Responsive Orientation**: Added automatic vertical orientation on narrow screens (≤460px)
+  - Dynamic orientation switching based on document width detection
+  - Window resize event handling for real-time responsive adaptation
+  - Enhanced mobile layout for better semantic message display
+
+### Technical Details
+
+- Added document width tracking with resize event listeners to SemanticMessage component
+- Implemented responsive orientation logic that overrides manual orientation prop on small screens
+- Enhanced component state management for viewport dimension tracking
+
 ## [1.19.33] - 2025-11-19
 
 ### Enhanced
