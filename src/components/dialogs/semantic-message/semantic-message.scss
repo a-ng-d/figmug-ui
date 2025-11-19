@@ -33,7 +33,7 @@
     );
 
     --button-secondary-background-color-default: var(
-      --semantic-message-background-color-info
+      --semantic-message-background-color-info-default
     );
     --button-secondary-background-color-hover: var(
       --semantic-message-background-color-info-accent
@@ -46,7 +46,7 @@
       --semantic-message-background-color-info-accent
     );
     --icon-button-default-background-color-default: var(
-      --semantic-message-background-color-info
+      --semantic-message-background-color-info-default
     );
     --icon-button-default-background-color-hover: var(
       --semantic-message-background-color-info-accent
@@ -64,7 +64,7 @@
     );
 
     --button-secondary-background-color-default: var(
-      --semantic-message-background-color-error
+      --semantic-message-background-color-error-default
     );
     --button-secondary-background-color-hover: var(
       --semantic-message-background-color-error-accent
@@ -78,7 +78,7 @@
     );
 
     --icon-button-default-background-color-default: var(
-      --semantic-message-background-color-error
+      --semantic-message-background-color-error-default
     );
     --icon-button-default-background-color-hover: var(
       --semantic-message-background-color-error-accent
@@ -100,7 +100,7 @@
     );
 
     --button-secondary-background-color-default: var(
-      --semantic-message-background-color-success
+      --semantic-message-background-color-success-default
     );
     --button-secondary-background-color-hover: var(
       --semantic-message-background-color-success-accent
@@ -114,7 +114,7 @@
     );
 
     --icon-button-default-background-color-default: var(
-      --semantic-message-background-color-success
+      --semantic-message-background-color-success-default
     );
     --icon-button-default-background-color-hover: var(
       --semantic-message-background-color-success-accent
@@ -136,7 +136,7 @@
     );
 
     --button-secondary-background-color-default: var(
-      --semantic-message-background-color-warning
+      --semantic-message-background-color-warning-default
     );
     --button-secondary-background-color-hover: var(
       --semantic-message-background-color-warning-accent
@@ -150,7 +150,7 @@
     );
 
     --icon-button-default-background-color-default: var(
-      --semantic-message-background-color-warning
+      --semantic-message-background-color-warning-default
     );
     --icon-button-default-background-color-hover: var(
       --semantic-message-background-color-warning-accent

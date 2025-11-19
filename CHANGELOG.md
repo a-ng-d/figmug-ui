@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.35] - 2025-11-19
+
+### Enhanced
+
+- **SemanticMessage Layout**: Added max-width constraint (400px) for better responsive layout control
+- **Select Component Structure**: Improved layout with snackbar wrapper for better tooltip positioning and responsive behavior
+- **Background Color Variables**: Standardized semantic message background color variable naming across themes
+
+### Technical Details
+
+- Added semantic-message max-width token across all theme configurations
+- Enhanced Select component templates with consistent layout wrapper structure
+- Updated background color variable references from base names to `-default` suffix for consistency
+
 ## [1.19.34] - 2025-11-19
 
 ### Enhanced

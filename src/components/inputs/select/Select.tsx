@@ -1,4 +1,5 @@
 import React from 'react'
+import layouts from '@styles/layouts.module.scss'
 import Tooltip from '@components/tags/tooltip/Tooltip'
 import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
@@ -133,61 +134,66 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       isReflowActive ? label !== undefined : helper !== undefined
 
     return (
-      <div
-        className={doClassnames(['checkbox', isBlocked && 'checkbox--blocked'])}
-        role="checkbox"
-        aria-checked={isChecked}
-        aria-disabled={isDisabled || isBlocked}
-        onMouseEnter={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
-        }}
-        onMouseLeave={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
-        }}
-        onFocus={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
-        }}
-        onBlur={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
-        }}
-      >
-        <div className="checkbox__slot">
-          <input
-            data-feature={feature}
-            id={id}
-            className="checkbox__box"
-            type="checkbox"
-            name={name}
-            checked={isChecked}
-            disabled={isDisabled || isBlocked}
-            onChange={action}
-            tabIndex={0}
-            ref={this.inputRef}
-            aria-label={label}
-          />
-          <div className="checkbox__box__background" />
-          <div className="checkbox__box__tick" />
+      <div className={layouts['snackbar--medium']}>
+        <div
+          className={doClassnames([
+            'checkbox',
+            isBlocked && 'checkbox--blocked',
+          ])}
+          role="checkbox"
+          aria-checked={isChecked}
+          aria-disabled={isDisabled || isBlocked}
+          onMouseEnter={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
+          }}
+          onMouseLeave={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
+          }}
+          onFocus={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
+          }}
+          onBlur={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
+          }}
+        >
+          <div className="checkbox__slot">
+            <input
+              data-feature={feature}
+              id={id}
+              className="checkbox__box"
+              type="checkbox"
+              name={name}
+              checked={isChecked}
+              disabled={isDisabled || isBlocked}
+              onChange={action}
+              tabIndex={0}
+              ref={this.inputRef}
+              aria-label={label}
+            />
+            <div className="checkbox__box__background" />
+            <div className="checkbox__box__tick" />
+          </div>
+          {getSelectLabel() !== undefined && (
+            <label
+              className={doClassnames([
+                'checkbox__label',
+                (isDisabled || isBlocked) && 'checkbox__label--disabled',
+              ])}
+              htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+            >
+              {getSelectLabel()}
+            </label>
+          )}
+          {isTooltipVisible && hasTooltipContent() && (
+            <Tooltip
+              pin={helper?.pin || 'BOTTOM'}
+              type={helper?.type || 'SINGLE_LINE'}
+            >
+              {getTooltipLabel()}
+            </Tooltip>
+          )}
         </div>
-        {getSelectLabel() !== undefined && (
-          <label
-            className={doClassnames([
-              'checkbox__label',
-              (isDisabled || isBlocked) && 'checkbox__label--disabled',
-            ])}
-            htmlFor={!(isDisabled || isBlocked) ? id : undefined}
-          >
-            {getSelectLabel()}
-          </label>
-        )}
         {this.Status('checkbox')}
-        {isTooltipVisible && hasTooltipContent() && (
-          <Tooltip
-            pin={helper?.pin || 'BOTTOM'}
-            type={helper?.type || 'SINGLE_LINE'}
-          >
-            {getTooltipLabel()}
-          </Tooltip>
-        )}
       </div>
     )
   }
@@ -216,62 +222,65 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       isReflowActive ? label !== undefined : helper !== undefined
 
     return (
-      <div
-        className={doClassnames(['radio', isBlocked && 'radio--blocked'])}
-        role="radio"
-        aria-checked={isChecked}
-        aria-disabled={isDisabled || isBlocked}
-        onMouseEnter={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
-        }}
-        onMouseLeave={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
-        }}
-        onFocus={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
-        }}
-        onBlur={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
-        }}
-      >
-        <div className="radio__slot">
-          <input
-            data-feature={feature}
-            id={id}
-            className="radio__button"
-            type="radio"
-            name={name}
-            value={value}
-            checked={isChecked}
-            disabled={isDisabled || isBlocked}
-            onChange={action}
-            tabIndex={0}
-            ref={this.inputRef}
-            aria-label={label}
-          />
-          <div className="radio__button__background" />
-          <div className="radio__button__inner" />
+      <div className={layouts['snackbar--medium']}>
+        <div
+          className={doClassnames(['radio', isBlocked && 'radio--blocked'])}
+          role="radio"
+          aria-checked={isChecked}
+          aria-disabled={isDisabled || isBlocked}
+          onMouseEnter={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
+          }}
+          onMouseLeave={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
+          }}
+          onFocus={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
+          }}
+          onBlur={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
+          }}
+        >
+          <div className="radio__slot">
+            <input
+              data-feature={feature}
+              id={id}
+              className="radio__button"
+              type="radio"
+              name={name}
+              value={value}
+              checked={isChecked}
+              disabled={isDisabled || isBlocked}
+              onChange={action}
+              tabIndex={0}
+              ref={this.inputRef}
+              aria-label={label}
+            />
+            <div className="radio__button__background" />
+            <div className="radio__button__inner" />
+          </div>
+          {getSelectLabel() !== undefined && (
+            <label
+              className={doClassnames([
+                'radio__label',
+                (isDisabled || isBlocked) && 'radio__label--disabled',
+              ])}
+              htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+            >
+              {getSelectLabel()}
+            </label>
+          )}
+
+          {isTooltipVisible && hasTooltipContent() && (
+            <Tooltip
+              pin={helper?.pin || 'BOTTOM'}
+              type={helper?.type || 'SINGLE_LINE'}
+            >
+              {getTooltipLabel()}
+            </Tooltip>
+          )}
         </div>
-        {getSelectLabel() !== undefined && (
-          <label
-            className={doClassnames([
-              'radio__label',
-              (isDisabled || isBlocked) && 'radio__label--disabled',
-            ])}
-            htmlFor={!(isDisabled || isBlocked) ? id : undefined}
-          >
-            {getSelectLabel()}
-          </label>
-        )}
         {this.Status('radio')}
-        {isTooltipVisible && hasTooltipContent() && (
-          <Tooltip
-            pin={helper?.pin || 'BOTTOM'}
-            type={helper?.type || 'SINGLE_LINE'}
-          >
-            {getTooltipLabel()}
-          </Tooltip>
-        )}
       </div>
     )
   }
@@ -299,61 +308,64 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       isReflowActive ? label !== undefined : helper !== undefined
 
     return (
-      <div
-        className={doClassnames(['switch', isBlocked && 'switch--blocked'])}
-        role="switch"
-        aria-checked={isChecked}
-        aria-disabled={isDisabled || isBlocked}
-        onMouseEnter={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
-        }}
-        onMouseLeave={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
-        }}
-        onFocus={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
-        }}
-        onBlur={() => {
-          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
-        }}
-      >
-        <div className="switch__slot">
-          <input
-            data-feature={feature}
-            id={id}
-            className="switch__toggle"
-            type="checkbox"
-            name={name}
-            checked={isChecked}
-            disabled={isDisabled || isBlocked}
-            onChange={action}
-            tabIndex={0}
-            ref={this.inputRef}
-            aria-label={label}
-          />
-          <div className="switch__toggle__background" />
-          <div className="switch__toggle__knob" />
+      <div className={layouts['snackbar--medium']}>
+        <div
+          className={doClassnames(['switch', isBlocked && 'switch--blocked'])}
+          role="switch"
+          aria-checked={isChecked}
+          aria-disabled={isDisabled || isBlocked}
+          onMouseEnter={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
+          }}
+          onMouseLeave={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
+          }}
+          onFocus={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
+          }}
+          onBlur={() => {
+            if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
+          }}
+        >
+          <div className="switch__slot">
+            <input
+              data-feature={feature}
+              id={id}
+              className="switch__toggle"
+              type="checkbox"
+              name={name}
+              checked={isChecked}
+              disabled={isDisabled || isBlocked}
+              onChange={action}
+              tabIndex={0}
+              ref={this.inputRef}
+              aria-label={label}
+            />
+            <div className="switch__toggle__background" />
+            <div className="switch__toggle__knob" />
+          </div>
+          {getSelectLabel() !== undefined && (
+            <label
+              className={doClassnames([
+                'switch__label',
+                (isDisabled || isBlocked) && 'switch__label--disabled',
+              ])}
+              htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+            >
+              {getSelectLabel()}
+            </label>
+          )}
+
+          {isTooltipVisible && hasTooltipContent() && (
+            <Tooltip
+              pin={helper?.pin || 'BOTTOM'}
+              type={helper?.type || 'SINGLE_LINE'}
+            >
+              {getTooltipLabel()}
+            </Tooltip>
+          )}
         </div>
-        {getSelectLabel() !== undefined && (
-          <label
-            className={doClassnames([
-              'switch__label',
-              (isDisabled || isBlocked) && 'switch__label--disabled',
-            ])}
-            htmlFor={!(isDisabled || isBlocked) ? id : undefined}
-          >
-            {getSelectLabel()}
-          </label>
-        )}
         {this.Status('switch')}
-        {isTooltipVisible && hasTooltipContent() && (
-          <Tooltip
-            pin={helper?.pin || 'BOTTOM'}
-            type={helper?.type || 'SINGLE_LINE'}
-          >
-            {getTooltipLabel()}
-          </Tooltip>
-        )}
       </div>
     )
   }

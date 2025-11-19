@@ -23,6 +23,13 @@
           "$type": "dimension"
         }
       },
+      "maxWidth": {
+        "$value": {
+          "value": 400,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
       "anchored": {
         "top": {
           "$value": "{size.pos.small}",
