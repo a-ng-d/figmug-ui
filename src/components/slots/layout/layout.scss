@@ -48,6 +48,10 @@
       justify-content: space-between;
       gap: var(--layout-distributed-gap);
       overflow-y: hidden;
+
+      @media (max-width: 460px) {
+        overflow-y: auto;
+      }
     }
 
     &--centered {
