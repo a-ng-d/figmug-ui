@@ -1,6 +1,6 @@
 {
   "name": "@a_ng_d/figmug-ui",
-  "version": "1.19.33",
+  "version": "1.19.34",
   "type": "module",
   "description": "Figmug UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
   "repository": "https://github.com/a-ng-d/figmug-ui",
