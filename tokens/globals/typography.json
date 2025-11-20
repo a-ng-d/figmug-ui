@@ -28,13 +28,13 @@
       }
     },
     "weight": {
+      "light": {
+        "$type": "fontWeight",
+        "$value": 300
+      },
       "normal": {
         "$type": "fontWeight",
         "$value": 400
-      },
-      "accent": {
-        "$type": "fontWeight",
-        "$value": 450
       },
       "medium": {
         "$type": "fontWeight",
@@ -42,11 +42,11 @@
       },
       "semi": {
         "$type": "fontWeight",
-        "$value": 550
+        "$value": 600
       },
       "bold": {
         "$type": "fontWeight",
-        "$value": 600
+        "$value": 700
       }
     },
     "lineHeight": {
