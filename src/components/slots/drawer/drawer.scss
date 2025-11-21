@@ -11,7 +11,7 @@
   --drawer-border: var(--drawer-border-width) solid var(--drawer-border-color);
 
   &--scrolling {
-    overflow-y: auto;
+    overflow: hidden auto;
   }
 
   &__knob {
