@@ -106,7 +106,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
 
   // Templates
   Status = () => {
-    const { warning, preview, isBlocked, isNew, onUnblock } = this.props
+    const { type, warning, preview, isBlocked, isNew, onUnblock } = this.props
 
     if (warning || isBlocked || isNew)
       return (
@@ -120,7 +120,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
               type={warning.type}
             />
           )}
-          {(isBlocked || isNew) && (
+          {(isBlocked || isNew) && type !== 'icon' && (
             <Chip
               preview={preview}
               isSolo
@@ -290,6 +290,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
       feature,
       state,
       helper,
+      warning,
       isLoading,
       isDisabled,
       isBlocked,
@@ -371,7 +372,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
             </Tooltip>
           )}
         </button>
-        {this.Status()}
+        {warning !== undefined && this.Status()}
       </div>
     )
   }
