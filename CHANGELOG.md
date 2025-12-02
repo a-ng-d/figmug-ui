@@ -5,6 +5,45 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.37] - 2025-12-02
+
+### Enhanced
+
+- **Tooltip Component with Image Support**: Added native image support to Tooltip component
+  - New `image` prop for displaying images within tooltips without manual layout composition
+  - Enhanced `WITH_IMAGE` tooltip type with proper image and text alignment
+  - Simplified Chip component by leveraging native Tooltip image support
+  - Better image rendering with consistent gap spacing between image and text
+
+### Changed
+
+- **Tooltip Component Structure**: Improved internal layout for better content composition
+  - Added `tooltip__snack` wrapper for flexible content layout
+  - Enhanced styling with proper flexbox alignment and gap management
+  - Simplified component usage by removing need for manual layout composition in consumers
+
+- **Chip Component Simplification**: Refactored preview tooltip implementation
+  - Removed manual image layout composition in favor of Tooltip's native `image` prop
+  - Simplified component by removing unnecessary layout module imports
+  - Better separation of concerns between Tooltip rendering and Chip logic
+
+### Added
+
+- **Tooltip Storybook Documentation**: Comprehensive story examples for all tooltip variants
+  - Interactive stories for single-line, multi-line, and image tooltips
+  - All tooltip types displayed in organized grid layout with proper spacing
+  - Examples demonstrating both TOP and BOTTOM pin positions
+  - Edge position story showing viewport boundary auto-adjustment
+  - Comprehensive AllTooltips story showcasing all variants with visual examples
+
+### Technical Details
+
+- Added `image?: string` prop to Tooltip component interface
+- Implemented `tooltip__snack` CSS class with flexbox layout and gap styling
+- Enhanced Tooltip component to conditionally render image element when `image` prop is provided
+- Updated `.prettierignore` to include `globals.scss` for better build consistency
+- Improved Tooltip layout structure with nested presentation wrappers for better styling control
+
 ## [1.19.36] - 2025-12-02
 
 ### Enhanced
