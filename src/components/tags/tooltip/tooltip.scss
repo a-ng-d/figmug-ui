@@ -79,6 +79,13 @@
       var(--tooltip-padding-bottom) var(--tooltip-padding-left);
   }
 
+  &__snack {
+    display: flex;
+    align-items: center;
+    gap: var(--tooltip-gap);
+    flex: 1;
+  }
+
   &__text {
     --text-color-primary: var(--tooltip-text-color);
 
