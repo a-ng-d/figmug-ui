@@ -256,6 +256,7 @@ export const Icon: Story = {
     feature: 'ACTION',
     isLoading: false,
     isDisabled: false,
+    isBlocked: false,
     isNew: false,
   },
   argTypes: {
@@ -263,7 +264,6 @@ export const Icon: Story = {
     icon: { control: 'select', options: icons },
     label: { control: false },
     hasMultipleActions: { control: false },
-    isBlocked: { control: false },
     isLink: { control: false },
     url: { control: false },
   },
