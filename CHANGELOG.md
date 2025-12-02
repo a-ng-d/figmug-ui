@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.36] - 2025-12-02
+
+### Enhanced
+
+- **Button Component Status Rendering**: Improved conditional rendering logic for button status indicators
+  - Status component now only renders when warning prop is defined for icon buttons
+  - Chip status (Pro/New badges) no longer displays on icon-type buttons
+  - Better visual consistency across different button types
+
+### Technical Details
+
+- Added conditional rendering check for warning prop in icon button template
+- Enhanced Status template to check button type before rendering Chip component
+- Updated Storybook controls for better icon button configuration
+
 ## [1.19.35] - 2025-11-19
 
 ### Enhanced
