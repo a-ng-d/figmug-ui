@@ -101,7 +101,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.pos.xsmall}",
+            "$value": "{size.pos.xxsmall}",
             "$type": "dimension"
           },
           "bottom": {
@@ -119,7 +119,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.pos.xsmall}",
+            "$value": "{size.pos.xxsmall}",
             "$type": "dimension"
           },
           "bottom": {
