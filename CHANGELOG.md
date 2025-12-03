@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.38] - 2025-12-03
+
+### Fixed
+
+- **ActionsList Component Padding**: Adjusted padding values for selected action items across themes
+  - Reduced right padding from `xsmall` to `xxsmall` for better visual balance in selected states
+  - Fixed selected focus padding structure in Sketch theme for consistency
+  - Updated padding values in Figma, Penpot, and Sketch themes for consistent spacing
+  - Improved visual alignment of selected action items across all design systems
+
+### Technical Details
+
+- Updated `actions-list.json` token files for Figma, Penpot, and Sketch platforms
+- Changed selected action item right padding from `{size.pos.xsmall}` to `{size.pos.xxsmall}`
+- Fixed Sketch theme selectedFocus padding to use individual directional values (top, right, bottom, left)
+- Regenerated SCSS files for ActionsList component with updated padding values
+
 ## [1.19.37] - 2025-12-02
 
 ### Enhanced
