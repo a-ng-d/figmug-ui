@@ -58,6 +58,10 @@
       "color": {
         "$value": "{framer.color.text}",
         "$type": "color"
+      },
+      "transform": {
+        "$value": "none",
+        "$type": "string"
       }
     },
     "shadow": {

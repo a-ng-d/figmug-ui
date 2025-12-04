@@ -58,6 +58,10 @@
       "color": {
         "$value": "{penpot.color.foreground.primary}",
         "$type": "color"
+      },
+      "transform": {
+        "$value": "none",
+        "$type": "string"
       }
     },
     "shadow": {

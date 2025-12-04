@@ -58,6 +58,10 @@
       "color": {
         "$value": "{sketch.color.foreground.primary}",
         "$type": "color"
+      },
+      "transform": {
+        "$value": "none",
+        "$type": "string"
       }
     },
     "shadow": {

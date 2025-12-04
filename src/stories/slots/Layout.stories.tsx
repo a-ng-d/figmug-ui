@@ -10,7 +10,7 @@ import SectionTitle from '@components/assets/section-title/SectionTitle'
 import Button from '@components/actions/button/Button'
 
 const meta = {
-  title: 'Components/Slots/Layout',
+  title: 'Patterns/Layout',
   component: Layout,
   parameters: {
     layout: 'fullscreen',

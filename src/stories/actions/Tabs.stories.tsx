@@ -41,6 +41,7 @@ export const ThreeTabs: Story = {
     active: 'SECTION_1',
     direction: 'HORIZONTAL',
     isFlex: false,
+    maxVisibleTabs: 2,
     action: fn(),
   },
   argTypes: {
@@ -112,6 +113,7 @@ export const FiveTabs: Story = {
     active: 'SECTION_1',
     direction: 'HORIZONTAL',
     isFlex: false,
+    maxVisibleTabs: 3,
     action: fn(),
   },
   argTypes: {

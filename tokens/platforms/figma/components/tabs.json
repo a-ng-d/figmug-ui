@@ -440,11 +440,11 @@
       "notification": {
         "inset": {
           "top": {
-            "$value": "{size.pos.xxxsmall}",
+            "$value": "{size.pos.xunit}",
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.pos.xxxsmall}",
+            "$value": "{size.pos.xunit}",
             "$type": "dimension"
           },
           "bottom": {

@@ -5,6 +5,70 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.39] - 2025-12-04
+
+### Enhanced
+
+- **Tabs Component Responsive Behavior**: Improved responsive tab navigation with overflow menu
+  - Added `maxVisibleTabs` prop (default: 3) to control maximum visible tabs in responsive mode
+  - Implemented intelligent tab overflow: displays 2 tabs + Menu with ellipsis icon when screen ≤460px
+  - Enhanced Menu integration: overflow tabs shown in dropdown with proper selection state
+  - Force horizontal orientation when screen width ≤460px regardless of `direction` prop
+  - Added smart "New" badge on overflow menu when overflow tabs contain new items
+  - Improved responsive logic: full tab display on desktop (>460px), overflow menu on mobile (≤460px)
+
+- **Dropdown Component Positioning**: Enhanced dropdown menu positioning accuracy
+  - Improved `setPosition()` calculation to align selected item with button text
+  - Dynamic height detection from actual list element for theme-accurate positioning
+  - Added button padding compensation for precise vertical alignment
+  - Accounts for menu padding (`--floating-menu-padding-top`) in position calculations
+  - Better cross-theme consistency for Figma, Sketch, Penpot, and Framer
+
+- **Layout Components Flexibility**: Added alignment and wrapping controls to snackbar/stackbar layouts
+  - New `--wrap` modifier for flex-wrap behavior
+  - Added `--left`, `--center`, `--right` modifiers for horizontal alignment
+  - Responsive centering on mobile (≤460px) for better mobile UX
+  - Enhanced semantic message actions with centered, wrapped layout
+
+### Fixed
+
+- **Overflow Scrolling Consistency**: Standardized overflow properties across components
+  - Changed `overflow-y: auto` to `overflow: hidden auto` for better horizontal overflow prevention
+  - Applied to: Consent, Textarea, Select, SortableList, Drawer, and Popin components
+  - Prevents unwanted horizontal scrollbars while maintaining vertical scrolling
+
+- **Tabs Component Styling**: Improved tab badge positioning and sizing
+  - Adjusted notification badge inset values for Figma theme (xxxsmall → xunit)
+  - Fixed notification badge dimensions for Framer and Penpot themes (xxxsmall → xxsmall)
+  - Better visual consistency across all design system themes
+  - Removed `min-width: fit-content` from tabs for better responsive behavior
+
+### Changed
+
+- **Tooltip Component Enhancement**: Added text-transform control
+  - New `--tooltip-text-transform` CSS variable (default: none) for theme customization
+  - Applied across all themes (Figma, Penpot, Sketch, Framer) for consistent text rendering
+
+- **Storybook Organization**: Improved story categorization
+  - Moved complex components from "Components" to "Patterns" category
+  - Recategorized: Consent, Dialog, Bar, Drawer, Form Item, Layout, List, Section, Simple Item
+  - Better organization for component discovery and documentation
+
+- **Bar Component Stories**: Enhanced Bar component examples
+  - Added fullscreen layout parameter for better demonstration
+  - Disabled controls for slot props (leftPartSlot, soloPartSlot, rightPartSlot)
+  - Improved truncation examples with proper text styling
+  - Added border prop to all stories for better visual consistency
+
+### Technical Details
+
+- Enhanced Tabs component with useRef for menu container ID generation
+- Improved responsive tab visibility calculation with dynamic slicing
+- Added Menu component integration for overflow tab navigation
+- Enhanced dropdown positioning with theme-aware CSS variable detection
+- Improved button content height calculation excluding padding
+- Added comprehensive responsive alignment utilities to layout SCSS
+
 ## [1.19.38] - 2025-12-03
 
 ### Fixed

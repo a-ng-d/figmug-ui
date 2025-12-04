@@ -58,6 +58,10 @@
       "color": {
         "$value": "{grey.0}",
         "$type": "color"
+      },
+      "transform": {
+        "$value": "none",
+        "$type": "string"
       }
     },
     "shadow": {

@@ -104,6 +104,7 @@
 
     .tooltip__text {
       white-space: nowrap;
+      text-transform: var(--tooltip-text-transform);
     }
   }
 
@@ -119,6 +120,7 @@
 
     .tooltip__text {
       text-align: left;
+      text-transform: var(--tooltip-text-transform);
     }
   }
 }

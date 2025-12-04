@@ -5,7 +5,7 @@ import SectionTitle from '@components/assets/section-title/SectionTitle'
 import { ColorItem } from './SimpleItem.stories'
 
 const meta = {
-  title: 'Components/Slots/Section',
+  title: 'Patterns/Section',
   component: Section,
   decorators: [
     (Story) => (

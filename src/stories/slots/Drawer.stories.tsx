@@ -5,10 +5,10 @@ import Drawer from '@components/slots/drawer/Drawer'
 import Button from '@components/actions/button/Button'
 
 const meta = {
-  title: 'Components/Slots/Drawer',
+  title: 'Patterns/Drawer',
   component: Drawer,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof Drawer>
 
@@ -62,8 +62,7 @@ export const Default: Story = {
     return (
       <div
         style={{
-          width: '400px',
-          height: '400px',
+          height: '100vh',
           backgroundColor: 'white',
           display: 'flex',
           flexDirection: args.direction === 'VERTICAL' ? 'column' : 'row',
