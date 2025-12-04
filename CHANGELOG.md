@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.40] - 2025-12-04
+
+### Enhanced
+
+- **SectionTitle Component Truncation**: Improved text truncation handling with tooltip protection
+  - Added text truncation with ellipsis for long section titles
+  - Implemented `flex: 1`, `overflow: hidden`, `text-overflow: ellipsis`, `white-space: nowrap` on title element
+  - Protected tooltip icon from being cut off with `flex-shrink: 0`
+  - Better layout control for section titles in constrained spaces
+
+- **Accordion Component Layout**: Improved layout and text truncation support
+  - Added `min-width: 0` to `.accordion__row__left` for proper flex child text truncation
+  - Added `box-sizing: border-box` to `.accordion__row` for consistent sizing
+  - Enabled section title truncation within accordion rows
+  - Better handling of long text content in accordion headers
+
+### Technical Details
+
+- Enhanced SectionTitle styling with flex-based truncation system
+- Improved accordion row layout with proper flex constraints
+- Added box-sizing for consistent padding calculations in accordion rows
+- Protected interactive elements (tooltips) from being truncated
+
 ## [1.19.39] - 2025-12-04
 
 ### Enhanced
