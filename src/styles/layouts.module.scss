@@ -1,11 +1,6 @@
 .snackbar {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-
-  @media (max-width: 460px) {
-    justify-content: center;
-  }
 
   &--tight {
     @extend .snackbar;
@@ -43,6 +38,34 @@
 
   &--fill {
     align-items: stretch;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--left {
+    justify-content: start;
+
+    @media (max-width: 460px) {
+      justify-content: center;
+    }
+  }
+
+  &--center {
+    justify-content: center;
+
+    @media (max-width: 460px) {
+      justify-content: center;
+    }
+  }
+
+  &--right {
+    justify-content: end;
+
+    @media (max-width: 460px) {
+      justify-content: center;
+    }
   }
 }
 
@@ -87,6 +110,34 @@
 
   &--fill {
     align-items: stretch;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--left {
+    justify-content: start;
+
+    @media (max-width: 460px) {
+      justify-content: center;
+    }
+  }
+
+  &--center {
+    justify-content: center;
+
+    @media (max-width: 460px) {
+      justify-content: center;
+    }
+  }
+
+  &--right {
+    justify-content: end;
+
+    @media (max-width: 460px) {
+      justify-content: center;
+    }
   }
 }
 
