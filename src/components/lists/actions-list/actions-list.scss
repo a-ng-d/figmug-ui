@@ -59,7 +59,7 @@
     &--scrolling {
       z-index: 1;
       height: 100%;
-      overflow-y: auto;
+      overflow: hidden auto;
     }
 
     &--left .select-menu__submenu {

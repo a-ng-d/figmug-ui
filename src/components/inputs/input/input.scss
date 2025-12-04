@@ -13,7 +13,7 @@
   width: 100%;
   min-height: var(--input-textarea-min-height);
   overflow: visible;
-  overflow-y: auto;
+  overflow: hidden auto;
   resize: none;
   font-weight: var(--input-text-font-weight);
   font-size: var(--input-text-font-size);
