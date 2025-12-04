@@ -103,8 +103,8 @@
     max-width: unset;
 
     .tooltip__text {
-      white-space: nowrap;
       text-transform: var(--tooltip-text-transform);
+      white-space: nowrap;
     }
   }
 
