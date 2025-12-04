@@ -86,6 +86,8 @@ export default class SemanticMessage extends React.Component<
           <div
             className={doClassnames([
               layouts['snackbar--medium'],
+              layouts['snackbar--wrap'],
+              layouts['snackbar--center'],
               'semantic-message__actions',
             ])}
             role="toolbar"
