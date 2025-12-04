@@ -207,32 +207,36 @@ export default class Dropdown extends React.Component<
 
   setPosition = () => {
     const { options, selected } = this.props
-    if (!this.selectMenuRef.current) return '0px'
-    const computedStyle = getComputedStyle(this.selectMenuRef.current)
+    if (!this.selectMenuRef.current || !this.listRef.current) return '0px'
+
+    const listComputedStyle = getComputedStyle(this.listRef.current)
     const itemHeight = parseInt(
-      computedStyle.getPropertyValue('--actions-list-item-height') || '32',
+      listComputedStyle.getPropertyValue('--actions-list-item-height') || '32',
       10
     )
     const dividerHeight = parseInt(
-      computedStyle.getPropertyValue('--actions-list-divider-height') || '1',
+      listComputedStyle.getPropertyValue('--actions-list-divider-height') ||
+        '1',
       10
     )
     const dividerMarginTop = parseInt(
-      computedStyle.getPropertyValue('--actions-list-divider-margin-top') ||
+      listComputedStyle.getPropertyValue('--actions-list-divider-margin-top') ||
         '11',
       10
     )
     const dividerMarginBottom = parseInt(
-      computedStyle.getPropertyValue('--actions-list-divider-margin-bottom') ||
-        '8',
-      10
-    )
-    const paddingVertical = parseInt(
-      computedStyle.getPropertyValue('--actions-list-padding-vertical') || '8',
+      listComputedStyle.getPropertyValue(
+        '--actions-list-divider-margin-bottom'
+      ) || '8',
       10
     )
 
-    let totalHeight = paddingVertical
+    const menuPaddingTop = parseInt(
+      listComputedStyle.getPropertyValue('--actions-list-padding-top') || '4',
+      10
+    )
+
+    let totalHeight = menuPaddingTop
 
     for (let i = 0; i < options.length; i++) {
       const option = options[i]
@@ -465,6 +469,7 @@ export default class Dropdown extends React.Component<
                 role="listbox"
                 id={`${id}-listbox`}
                 style={{
+                  opacity: 0.4,
                   position: 'absolute',
                   zIndex: 99,
                   top:
