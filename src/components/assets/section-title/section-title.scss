@@ -22,11 +22,10 @@
   user-select: none;
 
   &__title {
-    flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
     text-transform: var(--section-title-text-transform);
+    white-space: nowrap;
   }
 
   .section-title__tooltip {
