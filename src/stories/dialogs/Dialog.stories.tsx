@@ -72,7 +72,7 @@ const FormSample = () => {
 }
 
 const meta = {
-  title: 'Components/Dialogs/Dialog',
+  title: 'Patterns/Dialogs/Dialog',
   component: Dialog,
   parameters: {
     layout: 'centered',
