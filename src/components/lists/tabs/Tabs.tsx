@@ -70,7 +70,9 @@ const Tabs = (props: TabsProps) => {
                 active === tab.id && 'tabs__tab--active',
                 tab.isUpdated && 'tabs__tab--updated',
                 tab.icon !== undefined && 'tabs__tab--with-icon',
-                isFlex && 'tabs__tab--flex',
+                isFlex &&
+                  effectiveDirection !== 'VERTICAL' &&
+                  'tabs__tab--flex',
               ])}
               data-feature={tab.id}
               tabIndex={active === tab.id ? -1 : 0}
@@ -131,7 +133,7 @@ const Tabs = (props: TabsProps) => {
               active === tab.id && 'tabs__tab--active',
               tab.isUpdated && 'tabs__tab--updated',
               tab.icon !== undefined && 'tabs__tab--with-icon',
-              isFlex && 'tabs__tab--flex',
+              isFlex && effectiveDirection !== 'VERTICAL' && 'tabs__tab--flex',
             ])}
             data-feature={tab.id}
             tabIndex={active === tab.id ? -1 : 0}
