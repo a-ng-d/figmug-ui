@@ -469,7 +469,6 @@ export default class Dropdown extends React.Component<
                 role="listbox"
                 id={`${id}-listbox`}
                 style={{
-                  opacity: 0.4,
                   position: 'absolute',
                   zIndex: 99,
                   top:
