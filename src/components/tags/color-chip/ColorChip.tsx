@@ -8,7 +8,7 @@ interface ColorChipProps {
   width?: string
   height?: string
   isRounded?: boolean
-  helper?: string
+  helper?: string | React.ReactNode
 }
 
 interface ColorChipStates {

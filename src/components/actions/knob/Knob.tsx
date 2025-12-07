@@ -13,7 +13,7 @@ export interface KnobProps {
   min?: string
   max?: string
   helper?: {
-    label: string
+    label: string | React.ReactNode
     type: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
   }
   canBeTyped: boolean

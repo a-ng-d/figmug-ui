@@ -34,7 +34,7 @@ interface SliderProps {
     minMax: string
   }
   warning?: {
-    label: string
+    label: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }

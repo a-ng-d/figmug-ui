@@ -12,7 +12,7 @@ export interface ChipProps {
   isSolo?: boolean
   preview?: {
     image: string
-    text: string
+    text: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
   }
   action?: React.MouseEventHandler & React.KeyboardEventHandler<HTMLDivElement>

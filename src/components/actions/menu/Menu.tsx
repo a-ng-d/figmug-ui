@@ -18,12 +18,12 @@ export interface MenuProps {
   state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
   alignment?: 'TOP_RIGHT' | 'TOP_LEFT' | 'BOTTOM_RIGHT' | 'BOTTOM_LEFT'
   helper?: {
-    label: string
+    label: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
     isSingleLine?: boolean
   }
   warning?: {
-    label: string
+    label: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }

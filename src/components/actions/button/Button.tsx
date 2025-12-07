@@ -24,17 +24,17 @@ export interface ButtonProps {
   state?: 'default' | 'selected'
   url?: string
   helper?: {
-    label: string
+    label: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
   preview?: {
     image: string
-    text: string
+    text: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
   }
   warning?: {
-    label: string
+    label: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
@@ -174,7 +174,11 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
           ])}
           data-feature={feature}
           disabled={isDisabled || isBlocked}
-          aria-label={getButtonLabel() || helper?.label}
+          aria-label={
+            typeof (getButtonLabel() || helper?.label) === 'string'
+              ? ((getButtonLabel() || helper?.label) as string)
+              : undefined
+          }
           aria-disabled={isDisabled || isBlocked}
           aria-busy={isLoading}
           onKeyDown={(e) => {
@@ -312,7 +316,7 @@ export default class Button extends React.Component<ButtonProps, ButtonStates> {
             isLoading && 'button--loading',
           ])}
           disabled={isDisabled || isBlocked}
-          aria-label={helper?.label || icon}
+          aria-label={typeof helper?.label === 'string' ? helper.label : icon}
           aria-disabled={isDisabled || isBlocked}
           aria-pressed={state === 'selected'}
           aria-busy={isLoading}

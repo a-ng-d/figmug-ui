@@ -5,6 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.42] - 2025-12-07
+
+### Enhanced
+
+- **Tooltip Component Size**: Increased tooltip dimensions for better readability
+  - Increased `minWidth` from 172px to 200px across all themes (Figma, Penpot, Sketch, Framer)
+  - Increased `maxWidth` from 200px to 248px across all themes
+  - Better text allocation and improved visibility for tooltip content
+  - Enhanced multi-line tooltip readability with larger width constraints
+
+- **Tooltip Text Alignment**: Improved text alignment for better content presentation
+  - Changed default text alignment from `center` to `left` for multi-line tooltips
+  - Single-line tooltips retain centered alignment for better visual balance
+  - Better readability for longer tooltip content with left-aligned text
+
+- **Component Helper/Warning Props**: Enhanced flexibility for tooltip content across components
+  - Updated `helper`, `warning`, and `preview` text props to accept `string | React.ReactNode`
+  - Enables rich content in tooltips including formatted text, icons, or custom elements
+  - Applied to: Button, Menu, Dropdown, Input, Select, Slider, SimpleSlider, ActionsList, Chip, ColorChip, IconChip, SectionTitle, Knob
+  - Improved component API flexibility while maintaining backward compatibility
+
+### Technical Details
+
+- Updated design tokens for tooltip dimensions across all platform configurations (Figma, Penpot, Sketch, Framer)
+- Enhanced tooltip SCSS with conditional text alignment based on tooltip type
+- Updated TypeScript interfaces across 12+ components for React.ReactNode support
+- Maintained backward compatibility with string-based helper/warning props
+
 ## [1.19.40] - 2025-12-04
 
 ### Enhanced

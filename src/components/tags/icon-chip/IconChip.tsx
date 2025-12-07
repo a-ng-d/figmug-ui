@@ -9,7 +9,7 @@ interface IconChipProps {
   iconType: 'PICTO' | 'LETTER'
   iconName?: IconList
   iconLetter?: string
-  text: string
+  text: string | React.ReactNode
   pin?: 'TOP' | 'BOTTOM'
   type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
 }

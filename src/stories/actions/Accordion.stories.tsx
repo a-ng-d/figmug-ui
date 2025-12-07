@@ -22,6 +22,10 @@ type Story = StoryObj<typeof meta>
 export const ExpandCollapseInput: Story = {
   args: {
     ...TitleStory.TitleWithHelper.args,
+    helper:
+      typeof TitleStory.TitleWithHelper.args?.helper === 'string'
+        ? TitleStory.TitleWithHelper.args.helper
+        : undefined,
     icon: 'plus',
     isExpanded: false,
     isBlocked: false,
