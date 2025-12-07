@@ -14,7 +14,7 @@ export interface ActionsListProps {
   containerId?: string
   preview?: {
     image: string
-    text: string
+    text: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
   }
   onCancellation?: () => void

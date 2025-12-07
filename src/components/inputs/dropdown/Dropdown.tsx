@@ -19,17 +19,17 @@ export interface DropdownProps {
   alignment?: 'RIGHT' | 'LEFT' | 'FILL'
   pin?: 'NONE' | 'TOP' | 'BOTTOM'
   helper?: {
-    label: string
+    label: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
   preview?: {
     image: string
-    text: string
+    text: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
   }
   warning?: {
-    label: string
+    label: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
