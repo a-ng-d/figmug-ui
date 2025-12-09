@@ -1,11 +1,11 @@
 {
   "tooltip": {
     "minWidth": {
-      "$value": { "value": 172, "unit": "px" },
+      "$value": { "value": 200, "unit": "px" },
       "$type": "dimension"
     },
     "maxWidth": {
-      "$value": { "value": 200, "unit": "px" },
+      "$value": { "value": 248, "unit": "px" },
       "$type": "dimension"
     },
     "gap": {
@@ -58,6 +58,10 @@
       "color": {
         "$value": "{penpot.color.foreground.primary}",
         "$type": "color"
+      },
+      "transform": {
+        "$value": "none",
+        "$type": "string"
       }
     },
     "shadow": {

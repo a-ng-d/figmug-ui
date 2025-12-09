@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import texts from '@styles/texts/texts.module.scss'
-import layouts from '@styles/layouts.module.scss'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 import Tooltip from '../tooltip/Tooltip'
 import './chip.scss'
@@ -13,7 +12,7 @@ export interface ChipProps {
   isSolo?: boolean
   preview?: {
     image: string
-    text: string
+    text: string | React.ReactNode
     pin?: 'TOP' | 'BOTTOM'
   }
   action?: React.MouseEventHandler & React.KeyboardEventHandler<HTMLDivElement>
@@ -91,24 +90,9 @@ const Chip = (props: ChipProps) => {
         <Tooltip
           pin={preview?.pin || 'BOTTOM'}
           type="WITH_IMAGE"
+          image={preview?.image}
         >
-          <div
-            className={layouts['snackbar--medium']}
-            role="presentation"
-          >
-            <img
-              src={preview?.image}
-              alt={preview?.text}
-              className="tooltip__image"
-              role="presentation"
-            />
-            <span
-              className="tooltip__text"
-              role="presentation"
-            >
-              {preview?.text}
-            </span>
-          </div>
+          {preview?.text}
         </Tooltip>
       )}
     </div>

@@ -457,11 +457,11 @@
           }
         },
         "width": {
-          "$value": "{size.pos.xxxsmall}",
+          "$value": "{size.pos.xxsmall}",
           "$type": "dimension"
         },
         "height": {
-          "$value": "{size.pos.xxxsmall}",
+          "$value": "{size.pos.xxsmall}",
           "$type": "dimension"
         },
         "radius": {

@@ -7,7 +7,7 @@ import Button from '@components/actions/button/Button'
 const mock = fn()
 
 const meta = {
-  title: 'Components/Slots/Simple Item',
+  title: 'Patterns/Simple Item',
   component: SimpleItem,
   decorators: [
     (Story) => (

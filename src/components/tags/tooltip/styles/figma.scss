@@ -16,8 +16,8 @@
   --tooltip-image-height: 96px;
   --tooltip-image-radius: var(--border-radius-medium);
   --tooltip-image-width: 96px;
-  --tooltip-max-width: 200px;
-  --tooltip-min-width: 172px;
+  --tooltip-max-width: 248px;
+  --tooltip-min-width: 200px;
   --tooltip-padding-bottom: var(--size-pos-xxxsmall);
   --tooltip-padding-left: var(--size-pos-xxsmall);
   --tooltip-padding-right: var(--size-pos-xxsmall);
@@ -25,6 +25,7 @@
   --tooltip-radius: var(--border-radius-medium);
   --tooltip-shadow: var(--elevation-300-tooltip);
   --tooltip-text-color: var(--grey-0);
+  --tooltip-text-transform: none;
   --tooltip-with-image-min-width: 248px;
   --tooltip-with-image-padding-bottom: var(--size-pos-xxxsmall);
   --tooltip-with-image-padding-left: var(--size-pos-xxxsmall);

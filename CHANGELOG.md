@@ -5,6 +5,192 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.42] - 2025-12-07
+
+### Enhanced
+
+- **Tooltip Component Size**: Increased tooltip dimensions for better readability
+  - Increased `minWidth` from 172px to 200px across all themes (Figma, Penpot, Sketch, Framer)
+  - Increased `maxWidth` from 200px to 248px across all themes
+  - Better text allocation and improved visibility for tooltip content
+  - Enhanced multi-line tooltip readability with larger width constraints
+
+- **Tooltip Text Alignment**: Improved text alignment for better content presentation
+  - Changed default text alignment from `center` to `left` for multi-line tooltips
+  - Single-line tooltips retain centered alignment for better visual balance
+  - Better readability for longer tooltip content with left-aligned text
+
+- **Component Helper/Warning Props**: Enhanced flexibility for tooltip content across components
+  - Updated `helper`, `warning`, and `preview` text props to accept `string | React.ReactNode`
+  - Enables rich content in tooltips including formatted text, icons, or custom elements
+  - Applied to: Button, Menu, Dropdown, Input, Select, Slider, SimpleSlider, ActionsList, Chip, ColorChip, IconChip, SectionTitle, Knob
+  - Improved component API flexibility while maintaining backward compatibility
+
+### Technical Details
+
+- Updated design tokens for tooltip dimensions across all platform configurations (Figma, Penpot, Sketch, Framer)
+- Enhanced tooltip SCSS with conditional text alignment based on tooltip type
+- Updated TypeScript interfaces across 12+ components for React.ReactNode support
+- Maintained backward compatibility with string-based helper/warning props
+
+## [1.19.40] - 2025-12-04
+
+### Enhanced
+
+- **SectionTitle Component Truncation**: Improved text truncation handling with tooltip protection
+  - Added text truncation with ellipsis for long section titles
+  - Implemented `flex: 1`, `overflow: hidden`, `text-overflow: ellipsis`, `white-space: nowrap` on title element
+  - Protected tooltip icon from being cut off with `flex-shrink: 0`
+  - Better layout control for section titles in constrained spaces
+
+- **Accordion Component Layout**: Improved layout and text truncation support
+  - Added `min-width: 0` to `.accordion__row__left` for proper flex child text truncation
+  - Added `box-sizing: border-box` to `.accordion__row` for consistent sizing
+  - Enabled section title truncation within accordion rows
+  - Better handling of long text content in accordion headers
+
+### Technical Details
+
+- Enhanced SectionTitle styling with flex-based truncation system
+- Improved accordion row layout with proper flex constraints
+- Added box-sizing for consistent padding calculations in accordion rows
+- Protected interactive elements (tooltips) from being truncated
+
+## [1.19.39] - 2025-12-04
+
+### Enhanced
+
+- **Tabs Component Responsive Behavior**: Improved responsive tab navigation with overflow menu
+  - Added `maxVisibleTabs` prop (default: 3) to control maximum visible tabs in responsive mode
+  - Implemented intelligent tab overflow: displays 2 tabs + Menu with ellipsis icon when screen ≤460px
+  - Enhanced Menu integration: overflow tabs shown in dropdown with proper selection state
+  - Force horizontal orientation when screen width ≤460px regardless of `direction` prop
+  - Added smart "New" badge on overflow menu when overflow tabs contain new items
+  - Improved responsive logic: full tab display on desktop (>460px), overflow menu on mobile (≤460px)
+
+- **Dropdown Component Positioning**: Enhanced dropdown menu positioning accuracy
+  - Improved `setPosition()` calculation to align selected item with button text
+  - Dynamic height detection from actual list element for theme-accurate positioning
+  - Added button padding compensation for precise vertical alignment
+  - Accounts for menu padding (`--floating-menu-padding-top`) in position calculations
+  - Better cross-theme consistency for Figma, Sketch, Penpot, and Framer
+
+- **Layout Components Flexibility**: Added alignment and wrapping controls to snackbar/stackbar layouts
+  - New `--wrap` modifier for flex-wrap behavior
+  - Added `--left`, `--center`, `--right` modifiers for horizontal alignment
+  - Responsive centering on mobile (≤460px) for better mobile UX
+  - Enhanced semantic message actions with centered, wrapped layout
+
+### Fixed
+
+- **Overflow Scrolling Consistency**: Standardized overflow properties across components
+  - Changed `overflow-y: auto` to `overflow: hidden auto` for better horizontal overflow prevention
+  - Applied to: Consent, Textarea, Select, SortableList, Drawer, and Popin components
+  - Prevents unwanted horizontal scrollbars while maintaining vertical scrolling
+
+- **Tabs Component Styling**: Improved tab badge positioning and sizing
+  - Adjusted notification badge inset values for Figma theme (xxxsmall → xunit)
+  - Fixed notification badge dimensions for Framer and Penpot themes (xxxsmall → xxsmall)
+  - Better visual consistency across all design system themes
+  - Removed `min-width: fit-content` from tabs for better responsive behavior
+
+### Changed
+
+- **Tooltip Component Enhancement**: Added text-transform control
+  - New `--tooltip-text-transform` CSS variable (default: none) for theme customization
+  - Applied across all themes (Figma, Penpot, Sketch, Framer) for consistent text rendering
+
+- **Storybook Organization**: Improved story categorization
+  - Moved complex components from "Components" to "Patterns" category
+  - Recategorized: Consent, Dialog, Bar, Drawer, Form Item, Layout, List, Section, Simple Item
+  - Better organization for component discovery and documentation
+
+- **Bar Component Stories**: Enhanced Bar component examples
+  - Added fullscreen layout parameter for better demonstration
+  - Disabled controls for slot props (leftPartSlot, soloPartSlot, rightPartSlot)
+  - Improved truncation examples with proper text styling
+  - Added border prop to all stories for better visual consistency
+
+### Technical Details
+
+- Enhanced Tabs component with useRef for menu container ID generation
+- Improved responsive tab visibility calculation with dynamic slicing
+- Added Menu component integration for overflow tab navigation
+- Enhanced dropdown positioning with theme-aware CSS variable detection
+- Improved button content height calculation excluding padding
+- Added comprehensive responsive alignment utilities to layout SCSS
+
+## [1.19.38] - 2025-12-03
+
+### Fixed
+
+- **ActionsList Component Padding**: Adjusted padding values for selected action items across themes
+  - Reduced right padding from `xsmall` to `xxsmall` for better visual balance in selected states
+  - Fixed selected focus padding structure in Sketch theme for consistency
+  - Updated padding values in Figma, Penpot, and Sketch themes for consistent spacing
+  - Improved visual alignment of selected action items across all design systems
+
+### Technical Details
+
+- Updated `actions-list.json` token files for Figma, Penpot, and Sketch platforms
+- Changed selected action item right padding from `{size.pos.xsmall}` to `{size.pos.xxsmall}`
+- Fixed Sketch theme selectedFocus padding to use individual directional values (top, right, bottom, left)
+- Regenerated SCSS files for ActionsList component with updated padding values
+
+## [1.19.37] - 2025-12-02
+
+### Enhanced
+
+- **Tooltip Component with Image Support**: Added native image support to Tooltip component
+  - New `image` prop for displaying images within tooltips without manual layout composition
+  - Enhanced `WITH_IMAGE` tooltip type with proper image and text alignment
+  - Simplified Chip component by leveraging native Tooltip image support
+  - Better image rendering with consistent gap spacing between image and text
+
+### Changed
+
+- **Tooltip Component Structure**: Improved internal layout for better content composition
+  - Added `tooltip__snack` wrapper for flexible content layout
+  - Enhanced styling with proper flexbox alignment and gap management
+  - Simplified component usage by removing need for manual layout composition in consumers
+
+- **Chip Component Simplification**: Refactored preview tooltip implementation
+  - Removed manual image layout composition in favor of Tooltip's native `image` prop
+  - Simplified component by removing unnecessary layout module imports
+  - Better separation of concerns between Tooltip rendering and Chip logic
+
+### Added
+
+- **Tooltip Storybook Documentation**: Comprehensive story examples for all tooltip variants
+  - Interactive stories for single-line, multi-line, and image tooltips
+  - All tooltip types displayed in organized grid layout with proper spacing
+  - Examples demonstrating both TOP and BOTTOM pin positions
+  - Edge position story showing viewport boundary auto-adjustment
+  - Comprehensive AllTooltips story showcasing all variants with visual examples
+
+### Technical Details
+
+- Added `image?: string` prop to Tooltip component interface
+- Implemented `tooltip__snack` CSS class with flexbox layout and gap styling
+- Enhanced Tooltip component to conditionally render image element when `image` prop is provided
+- Updated `.prettierignore` to include `globals.scss` for better build consistency
+- Improved Tooltip layout structure with nested presentation wrappers for better styling control
+
+## [1.19.36] - 2025-12-02
+
+### Enhanced
+
+- **Button Component Status Rendering**: Improved conditional rendering logic for button status indicators
+  - Status component now only renders when warning prop is defined for icon buttons
+  - Chip status (Pro/New badges) no longer displays on icon-type buttons
+  - Better visual consistency across different button types
+
+### Technical Details
+
+- Added conditional rendering check for warning prop in icon button template
+- Enhanced Status template to check button type before rendering Chip component
+- Updated Storybook controls for better icon button configuration
+
 ## [1.19.35] - 2025-11-19
 
 ### Enhanced

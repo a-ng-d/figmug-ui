@@ -101,7 +101,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.pos.xsmall}",
+            "$value": "{size.pos.xxsmall}",
             "$type": "dimension"
           },
           "bottom": {
@@ -114,12 +114,16 @@
           }
         },
         "selectedFocus": {
-          "vertical": {
+          "top": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.pos.xsmall}",
+            "$value": "{size.pos.xxsmall}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
             "$type": "dimension"
           },
           "left": {

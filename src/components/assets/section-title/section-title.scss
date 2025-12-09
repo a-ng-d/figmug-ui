@@ -22,12 +22,16 @@
   user-select: none;
 
   &__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-transform: var(--section-title-text-transform);
+    white-space: nowrap;
   }
 
   .section-title__tooltip {
     display: flex;
     position: relative;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
     width: var(--section-title-info-icon-width);

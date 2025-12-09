@@ -79,10 +79,17 @@
       var(--tooltip-padding-bottom) var(--tooltip-padding-left);
   }
 
+  &__snack {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: var(--tooltip-gap);
+  }
+
   &__text {
     --text-color-primary: var(--tooltip-text-color);
 
-    text-align: center;
+    text-align: left;
   }
 
   &__image {
@@ -96,7 +103,9 @@
     max-width: unset;
 
     .tooltip__text {
+      text-transform: var(--tooltip-text-transform);
       white-space: nowrap;
+      text-align: center;
     }
   }
 
@@ -112,6 +121,7 @@
 
     .tooltip__text {
       text-align: left;
+      text-transform: var(--tooltip-text-transform);
     }
   }
 }

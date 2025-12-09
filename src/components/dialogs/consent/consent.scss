@@ -37,11 +37,11 @@
 
     &__message {
       max-width: var(--consent-banner-max-width);
-      overflow-y: auto;
+      overflow: hidden auto;
     }
 
     &__content {
-      overflow-y: auto;
+      overflow: hidden auto;
     }
 
     &__list {

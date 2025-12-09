@@ -7,10 +7,11 @@ export interface TooltipProps {
   children: React.ReactNode
   pin?: 'TOP' | 'BOTTOM'
   type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+  image?: string
 }
 
 const Tooltip = (props: TooltipProps) => {
-  const { children, pin = 'BOTTOM', type = 'SINGLE_LINE' } = props
+  const { children, pin = 'BOTTOM', type = 'SINGLE_LINE', image } = props
   const tooltipRef = useRef<HTMLDivElement>(null)
   const [shift, setShift] = React.useState(0)
   const [isVisible, setIsVisible] = useState(false)
@@ -50,10 +51,22 @@ const Tooltip = (props: TooltipProps) => {
         role="presentation"
       >
         <div
-          className={doClassnames(['tooltip__text', texts.type])}
+          className="tooltip__snack"
           role="presentation"
         >
-          {children}
+          {image !== undefined && (
+            <img
+              src={image}
+              className="tooltip__image"
+              role="presentation"
+            />
+          )}
+          <div
+            className={doClassnames(['tooltip__text', texts.type])}
+            role="presentation"
+          >
+            {children}
+          </div>
         </div>
       </div>
     </div>

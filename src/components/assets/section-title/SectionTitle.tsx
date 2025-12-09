@@ -6,7 +6,7 @@ import './section-title.scss'
 export type SectionTitleProps = {
   label: string
   indicator?: string | number
-  helper?: string
+  helper?: string | React.ReactNode
   id?: string
 }
 

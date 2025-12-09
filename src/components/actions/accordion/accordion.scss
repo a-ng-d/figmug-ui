@@ -19,6 +19,7 @@
     padding: var(--accordion-row-padding-top) var(--accordion-row-padding-right)
       var(--accordion-row-padding-bottom) var(--accordion-row-padding-left);
     height: var(--accordion-row-height);
+    box-sizing: border-box;
 
     --section-title-text-color: var(--accordion-text-color-default);
     --text-color-primary: var(--accordion-text-color-default);
@@ -47,6 +48,7 @@
     display: flex;
     flex: 1;
     align-items: baseline;
+    min-width: 0;
   }
 
   &__row__right {

@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
-import layouts from '@styles/layouts.module.scss'
 import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
 import Button from '@components/actions/button/Button'
 
@@ -24,8 +23,8 @@ export const TypedMessage: Story = {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     isAnchored: false,
     orientation: 'HORIZONTAL',
-    actionsSlot: (() => (
-      <div className={layouts['snackbar--medium']}>
+    actionsSlot: (
+      <>
         <Button
           type="secondary"
           label="Action"
@@ -36,8 +35,8 @@ export const TypedMessage: Story = {
           icon="close"
           action={mock}
         />
-      </div>
-    ))(),
+      </>
+    ),
   },
   argTypes: {
     type: {
