@@ -41,7 +41,10 @@
     "build-storybook": "storybook build",
     "create:theme": "node scripts/create-theme.js",
     "scss:list": "node scripts/build-scss.js",
-    "scss:build": "node scripts/build-scss.js -- --build"
+    "scss:build": "node scripts/build-scss.js -- --build",
+    "figma:publish": "figma connect publish",
+    "figma:unpublish": "figma connect unpublish",
+    "figma:parse": "figma connect parse"
   },
   "dependencies": {
     "@a_ng_d/figmug-utils": "^0.6.0",
@@ -53,6 +56,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.0.0",
+    "@figma/code-connect": "^1.3.12",
     "@storybook/addon-a11y": "^9.0.8",
     "@storybook/addon-docs": "^9.0.6",
     "@storybook/addon-links": "^9.0.6",
