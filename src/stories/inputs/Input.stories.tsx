@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
+import figma from '@figma/code-connect'
 import Input from '@components/inputs/input/Input'
 
 const meta: Meta<typeof Input> = {
@@ -8,6 +9,22 @@ const meta: Meta<typeof Input> = {
   component: Input,
   parameters: {
     layout: 'centered',
+    design: {
+      url: 'https://www.figma.com/design/QlBdsfEcaUsGBzqA20xbNi/Unoff?node-id=1-4618',
+      props: {
+        type: figma.enum('type', {
+          TEXT_INPUT: 'TEXT',
+          TEXT_AREA: 'LONG_TEXT',
+          NUMBER: 'NUMBER',
+          COLOR_INPUT: 'COLOR',
+        }),
+        hasBorder: figma.boolean('isFramed'),
+        state: figma.enum('state', {
+          DEFAULT: 'DEFAULT',
+          ERROR: 'ERROR',
+        }),
+      },
+    },
   },
   args: {
     onChange: fn(),

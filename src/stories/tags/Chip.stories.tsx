@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import figma from '@figma/code-connect'
 import ColorChip from '@components/tags/color-chip/ColorChip'
 import Chip from '@components/tags/chip/Chip'
 
@@ -7,6 +8,16 @@ const meta = {
   component: Chip,
   parameters: {
     layout: 'centered',
+    design: {
+      url: 'https://www.figma.com/design/QlBdsfEcaUsGBzqA20xbNi/Unoff?node-id=276-83',
+      props: {
+        state: figma.enum('state', {
+          ACTIVE: 'ACTIVE',
+          INACTIVE: 'INACTIVE',
+          TRANSPARENT: 'ON_BACKGROUND',
+        }),
+      },
+    },
   },
 } satisfies Meta<typeof Chip>
 
