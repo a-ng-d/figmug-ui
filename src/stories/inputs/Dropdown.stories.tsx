@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { useArgs } from '@storybook/client-api'
 import * as ListStories from '@stories/lists/List.stories'
+import figma from '@figma/code-connect'
 import Dropdown from '@components/inputs/dropdown/Dropdown'
 
 const meta = {
@@ -8,6 +9,15 @@ const meta = {
   component: Dropdown,
   parameters: {
     layout: 'centered',
+    design: {
+      url: 'https://www.figma.com/design/QlBdsfEcaUsGBzqA20xbNi/Unoff?node-id=393-795',
+      props: {
+        alignment: figma.enum('Type', {
+          HUG: 'LEFT',
+          STRETCH: 'FILL',
+        }),
+      },
+    },
   },
 } satisfies Meta<typeof Dropdown>
 
