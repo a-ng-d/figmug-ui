@@ -5,6 +5,48 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.19.43] - 2025-12-16
+
+### Added
+
+- **Figma Code Connect Integration**: Implemented comprehensive Code Connect setup to link Figma design components to React implementation
+  - Added `@figma/code-connect` v1.3.12 dependency for bidirectional Figma-code synchronization
+  - Created 6 Code Connect files mapping Figma components to React components:
+    - **Button** (`Button.figma.tsx`): 7 type variants (PRIMARY, SECONDARY, TERTIARY, DESTRUCTIVE, ALTERNATIVE, INACTIVE, ICON)
+    - **Icon** (`Icon.figma.tsx`): PICTO type with icon name mappings
+    - **Input** (`Input.figma.tsx`): 4 input types (TEXT, LONG_TEXT, NUMBER, COLOR) with state mappings
+    - **Dropdown** (`Dropdown.figma.tsx`): Alignment variants (LEFT/HUG, FILL/STRETCH)
+    - **Tabs** (`Tabs.figma.tsx`): Direction (HORIZONTAL/VERTICAL) and flex mode support
+    - **Chip** (`Chip.figma.tsx`): 3 state variants (ACTIVE, INACTIVE, ON_BACKGROUND)
+  - Configured `figma.config.json` with React parser and include patterns
+  - Added npm scripts: `figma:publish`, `figma:unpublish`, `figma:parse`
+
+- **Storybook-Figma Integration**: Enhanced Storybook stories with native Figma Code Connect integration
+  - Added `parameters.design` configuration to story meta objects
+  - Integrated Figma prop mappings using `figma.enum()` and `figma.boolean()` helpers
+  - Connected stories for Input, Dropdown, and Chip components
+  - Enables direct Figma design access from Storybook documentation
+
+- **Documentation**: Created comprehensive Code Connect documentation
+  - Added `docs/code-connect.md` with setup instructions and token requirements
+  - Documented all 6 connected components with their Figma node IDs
+  - Included troubleshooting guide for token scope configuration
+  - Provided file structure examples and next steps for expanding coverage
+
+### Changed
+
+- **Environment Configuration**: Updated `.gitignore` to properly manage environment files
+  - Changed from ignoring `*.local` to explicitly ignoring `.env` and `.env.*` patterns
+  - Better security for Figma access token and other sensitive configuration
+
+### Technical Details
+
+- Connected Figma file: `QlBdsfEcaUsGBzqA20xbNi` ("Unoff" document)
+- Code Connect files use component set node IDs (parent frames) for proper variant mapping
+- Validation passes for all 6 components with `npm run figma:parse`
+- Token requirements: "File Read" + "Code Connect Write" scopes
+- Storybook integration uses default import pattern: `import figma from '@figma/code-connect'`
+
 ## [1.19.42] - 2025-12-07
 
 ### Enhanced
