@@ -13,33 +13,78 @@ import './multiple-slider.scss'
 type UpdateEvent = 'TYPED' | 'UPDATING' | 'RELEASED' | 'SHIFTED'
 
 interface SliderProps {
+  /**
+   * Type of slider interaction
+   */
   type: 'EDIT' | 'FULLY_EDIT'
+  /**
+   * Scale mapping stop positions to values
+   */
   scale: Record<string, number>
+  /**
+   * Easing function for distribution
+   */
   distributionEasing: Easing
+  /**
+   * Stops configuration
+   */
   stops: {
+    /** List of stop positions */
     list: Array<number>
+    /** Minimum allowed stop value */
     min?: number
+    /** Maximum allowed stop value */
     max?: number
   }
+  /**
+   * Range constraints for values
+   */
   range: {
+    /** Minimum value */
     min: number
+    /** Maximum value */
     max: number
+    /** Step increment */
     step?: number
   }
+  /**
+   * Colors for gradient display
+   */
   colors: {
+    /** Start color */
     min: string
+    /** End color */
     max: string
   }
+  /**
+   * Tooltip configuration
+   */
   tips: {
+    /** Tooltip text for min/max values */
     minMax: string
   }
+  /**
+   * Warning tooltip configuration
+   */
   warning?: {
+    /** Warning message */
     label: string | React.ReactNode
+    /** Warning position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Warning display type */
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  /**
+   * Whether the slider is blocked
+   */
   isBlocked?: boolean
+  /**
+   * Whether to show a "New" badge
+   */
   isNew?: boolean
+  /**
+   * Change handler
+   */
   onChange: (
     state: UpdateEvent,
     results: {
@@ -50,6 +95,9 @@ interface SliderProps {
     },
     feature?: string
   ) => void
+  /**
+   * Handler called when unblock is clicked
+   */
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 

@@ -6,26 +6,77 @@ import { doMap } from '@a_ng_d/figmug-utils'
 import './simple-slider.scss'
 
 export interface SimpleSliderProps {
+  /**
+   * Unique identifier for the slider
+   */
   id: string
+  /**
+   * Label text for the slider
+   */
   label: string
+  /**
+   * Current value
+   */
   value: number
+  /**
+   * Minimum allowed value
+   */
   min: number
+  /**
+   * Maximum allowed value
+   */
   max: number
+  /**
+   * Step increment
+   * @default 1
+   */
   step?: number
+  /**
+   * Colors for gradient display
+   */
   colors: {
+    /** Start color */
     min: string
+    /** End color */
     max: string
   }
+  /**
+   * Warning tooltip configuration
+   */
   warning?: {
+    /** Warning message */
     label: string | React.ReactNode
+    /** Warning position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Warning display type */
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  /**
+   * Feature identifier for tracking
+   */
   feature: string
+  /**
+   * Whether the slider is blocked
+   * @default false
+   */
   isBlocked?: boolean
+  /**
+   * Whether the slider is disabled
+   * @default false
+   */
   isDisabled?: boolean
+  /**
+   * Whether to show a "New" badge
+   * @default false
+   */
   isNew?: boolean
+  /**
+   * Change handler
+   */
   onChange: (feature: string, state: string, value: number) => void
+  /**
+   * Handler called when unblock is clicked
+   */
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 

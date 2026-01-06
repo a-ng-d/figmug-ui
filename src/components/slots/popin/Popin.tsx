@@ -7,11 +7,28 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './popin.scss'
 
 export interface PopInProps {
+  /**
+   * HTML id attribute
+   */
   id?: string
+  /**
+   * Type of popin layout
+   * @default 'POPIN'
+   */
   type?: 'POPIN' | 'PANEL'
+  /**
+   * Title text
+   */
   title: string
+  /**
+   * Optional tag to display next to the title
+   */
   tag?: string
+  /**
+   * Configuration for action buttons
+   */
   actions?: {
+    /** Primary action button */
     primary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
@@ -19,6 +36,7 @@ export interface PopInProps {
       feature?: string
       action: React.MouseEventHandler & React.KeyboardEventHandler
     }
+    /** Destructive action button */
     destructive?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
@@ -26,6 +44,7 @@ export interface PopInProps {
       isAutofocus?: boolean
       action: React.ReactEventHandler | (() => void)
     }
+    /** Secondary action button */
     secondary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
@@ -34,15 +53,38 @@ export interface PopInProps {
       action: React.MouseEventHandler & React.KeyboardEventHandler
     }
   }
+  /**
+   * Select/checkbox configuration
+   */
   select?: {
+    /** Label text */
     label: string
+    /** Current state */
     state: boolean
+    /** Change handler */
     action: React.ChangeEventHandler<HTMLInputElement> | undefined
   }
+  /**
+   * Optional indicator text
+   */
   indicator?: string
+  /**
+   * Whether the popin is in loading state
+   * @default false
+   */
   isLoading?: boolean
+  /**
+   * Whether to use message layout
+   * @default false
+   */
   isMessage?: boolean
+  /**
+   * Popin content
+   */
   children?: React.ReactNode
+  /**
+   * Close handler
+   */
   onClose: React.MouseEventHandler & React.KeyboardEventHandler
 }
 

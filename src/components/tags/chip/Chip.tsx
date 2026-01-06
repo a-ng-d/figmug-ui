@@ -5,16 +5,42 @@ import Tooltip from '../tooltip/Tooltip'
 import './chip.scss'
 
 export interface ChipProps {
+  /**
+   * Visual state of the chip
+   * @default 'ACTIVE'
+   */
   state?: 'ACTIVE' | 'INACTIVE' | 'ON_BACKGROUND'
+  /**
+   * Content for the left slot
+   */
   leftSlot?: React.ReactElement
+  /**
+   * Content for the right slot
+   */
   rightSlot?: React.ReactElement
+  /**
+   * Text content of the chip
+   */
   children?: React.ReactNode
+  /**
+   * Whether the chip is displayed alone (adds padding)
+   * @default false
+   */
   isSolo?: boolean
+  /**
+   * Preview tooltip configuration
+   */
   preview?: {
+    /** Preview image URL */
     image: string
+    /** Preview text */
     text: string | React.ReactNode
+    /** Preview position */
     pin?: 'TOP' | 'BOTTOM'
   }
+  /**
+   * Click handler
+   */
   action?: React.MouseEventHandler & React.KeyboardEventHandler<HTMLDivElement>
 }
 

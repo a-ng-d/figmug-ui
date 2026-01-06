@@ -3,10 +3,29 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './avatar.scss'
 
 export interface AvatarProps {
+  /**
+   * URL of the avatar image
+   * @default 'https://www.gravatar.com/avatar'
+   */
   avatar?: string
+  /**
+   * Full name of the user
+   * @default 'John Doe'
+   */
   fullName?: string
+  /**
+   * Additional content to display alongside the avatar
+   */
   complementarySlot?: React.ReactNode
+  /**
+   * Whether to use accented text style
+   * @default false
+   */
   isAccented?: boolean
+  /**
+   * Whether to use inverted color scheme
+   * @default false
+   */
   isInverted?: boolean
 }
 

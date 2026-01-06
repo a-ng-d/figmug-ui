@@ -7,9 +7,22 @@ import Bar from '../bar/Bar'
 import './draggable-window.scss'
 
 export interface DraggableWindowProps {
+  /**
+   * Title of the window
+   * @default 'Options'
+   */
   title?: string
+  /**
+   * Content of the window
+   */
   children: React.ReactNode
+  /**
+   * Reference to the trigger button
+   */
   triggerRef: React.RefObject<Button>
+  /**
+   * Close handler
+   */
   onClose: () => void
 }
 

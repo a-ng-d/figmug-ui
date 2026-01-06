@@ -7,22 +7,60 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './actions-item.scss'
 
 export interface ActionsItemProps {
+  /**
+   * Unique identifier for the item
+   */
   id: string
+  /**
+   * Image source URL
+   */
   src?: string
+  /**
+   * Name/title of the item
+   */
   name: string
+  /**
+   * Status indicator configuration
+   */
   indicator?: {
+    /** Label text */
     label: string
+    /** Status state */
     status: 'ACTIVE' | 'INACTIVE'
   }
+  /**
+   * Description text
+   */
   description: string
+  /**
+   * Additional description text
+   */
   subdescription: string
+  /**
+   * Additional content slot
+   */
   complementSlot?: React.ReactNode
+  /**
+   * User information to display
+   */
   user?: {
+    /** User avatar URL */
     avatar?: string
+    /** User name */
     name: string
   }
+  /**
+   * Action buttons slot
+   */
   actionsSlot?: React.ReactNode
+  /**
+   * Whether the item is clickable
+   * @default false
+   */
   isInteractive?: boolean
+  /**
+   * Click handler
+   */
   action?: React.MouseEventHandler<HTMLLIElement> &
     React.KeyboardEventHandler<HTMLLIElement>
 }

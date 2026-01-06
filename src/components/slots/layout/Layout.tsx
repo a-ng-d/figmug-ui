@@ -3,9 +3,17 @@ import Drawer, { DrawerProps } from '../drawer/Drawer'
 import './layout.scss'
 
 export type LayoutProps = {
+  /**
+   * HTML id attribute
+   */
   id?: string
+  /**
+   * Array of column configurations
+   */
   column: Array<{
+    /** Content node */
     node?: React.ReactElement
+    /** Type modifier for styling */
     typeModifier?:
       | 'LIST'
       | 'DISTRIBUTED'
@@ -13,10 +21,20 @@ export type LayoutProps = {
       | 'BLANK'
       | 'DRAWER'
       | 'FIXED'
+    /** Fixed width value */
     fixedWidth?: string
+    /** Drawer configuration (when typeModifier is DRAWER) */
     drawerOptions?: DrawerProps
   }>
+  /**
+   * Whether to use full width
+   * @default false
+   */
   isFullWidth?: boolean
+  /**
+   * Whether to use full height
+   * @default false
+   */
   isFullHeight?: boolean
 }
 

@@ -4,9 +4,21 @@ import SemanticMessage from '../semantic-message/SemanticMessage'
 import './notification.scss'
 
 export interface NotificationProps {
+  /**
+   * Type of notification determining its visual style
+   */
   type: 'NEUTRAL' | 'INFO' | 'SUCCESS' | 'WARNING' | 'ERROR'
+  /**
+   * Message content to display
+   */
   message: string
+  /**
+   * Auto-close timer in milliseconds (0 or undefined for no auto-close)
+   */
   timer?: number
+  /**
+   * Close handler
+   */
   onClose: React.ReactEventHandler
 }
 

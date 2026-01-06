@@ -3,12 +3,26 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './section.scss'
 
 export interface SectionProps {
+  /**
+   * HTML id attribute
+   */
   id?: string
+  /**
+   * Title element for the section
+   */
   title?: React.ReactNode
+  /**
+   * Array of body content configurations
+   */
   body: Array<{
+    /** Content node */
     node?: React.ReactNode
+    /** Spacing modifier */
     spacingModifier?: 'LARGE' | 'TIGHT' | 'NONE'
   }>
+  /**
+   * Array of border positions
+   */
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
 }
 

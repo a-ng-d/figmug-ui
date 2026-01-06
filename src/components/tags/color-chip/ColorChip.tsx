@@ -4,10 +4,27 @@ import Tooltip from '../tooltip/Tooltip'
 import './color-chip.scss'
 
 interface ColorChipProps {
+  /**
+   * Color value (hex, rgb, etc.)
+   */
   color: string
+  /**
+   * Width of the chip
+   * @default '16px'
+   */
   width?: string
+  /**
+   * Height of the chip
+   * @default '16px'
+   */
   height?: string
+  /**
+   * Whether to use rounded corners
+   */
   isRounded?: boolean
+  /**
+   * Helper tooltip content
+   */
   helper?: string | React.ReactNode
 }
 

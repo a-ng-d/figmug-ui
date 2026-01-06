@@ -4,9 +4,23 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './tooltip.scss'
 
 export interface TooltipProps {
+  /**
+   * Tooltip content
+   */
   children: React.ReactNode
+  /**
+   * Position relative to the parent
+   * @default 'BOTTOM'
+   */
   pin?: 'TOP' | 'BOTTOM'
+  /**
+   * Display type
+   * @default 'SINGLE_LINE'
+   */
   type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
+  /**
+   * Image URL (when type is WITH_IMAGE)
+   */
   image?: string
 }
 

@@ -3,8 +3,18 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './keyboard-shortcut-item.scss'
 
 export type KeyboardShortcutItemProps = {
+  /**
+   * Label describing the action
+   */
   label: string
+  /**
+   * Array of keyboard shortcut combinations
+   */
   shortcuts: Array<Array<string>>
+  /**
+   * Separator between multiple shortcuts
+   * @default ''
+   */
   separator?: string
 }
 

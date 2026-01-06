@@ -3,13 +3,41 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './simple-item.scss'
 
 export interface SimpleItemProps {
+  /**
+   * HTML id attribute
+   */
   id?: string
+  /**
+   * Content for the left section
+   */
   leftPartSlot: React.ReactNode
+  /**
+   * Content for the right section
+   */
   rightPartSlot?: React.ReactNode
+  /**
+   * Whether to render as a list item
+   * @default true
+   */
   isListItem?: boolean
+  /**
+   * Whether the item is clickable
+   * @default false
+   */
   isInteractive?: boolean
+  /**
+   * Whether to use transparent background
+   * @default false
+   */
   isTransparent?: boolean
+  /**
+   * Vertical alignment mode
+   * @default 'DEFAULT'
+   */
   alignment?: 'DEFAULT' | 'CENTER' | 'BASELINE'
+  /**
+   * Click handler
+   */
   action?: React.MouseEventHandler<HTMLLIElement | HTMLElement> &
     React.KeyboardEventHandler<HTMLLIElement | HTMLElement>
 }

@@ -3,8 +3,19 @@ import Icon from '../icon/Icon'
 import './thumbnail.scss'
 
 export interface ThumbnailProps {
+  /**
+   * Image source URL to display
+   */
   src: string
+  /**
+   * Width of the thumbnail
+   * @default '100%'
+   */
   width?: string
+  /**
+   * Height of the thumbnail
+   * @default '100%'
+   */
   height?: string
 }
 

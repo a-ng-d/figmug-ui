@@ -6,11 +6,23 @@ import Avatar from '@components/assets/avatar/Avatar'
 import './members-list.scss'
 
 export interface MembersListProps {
+  /**
+   * Array of member information
+   */
   members: Array<{
+    /** Avatar image URL */
     avatar: string
+    /** Full name of the member */
     fullName: string
   }>
+  /**
+   * Maximum number of avatars to display
+   */
   numberOfAvatarsDisplayed: number
+  /**
+   * Whether to use inverted color scheme
+   * @default false
+   */
   isInverted?: boolean
 }
 

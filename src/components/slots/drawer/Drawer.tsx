@@ -8,16 +8,50 @@ interface Unit {
 }
 
 export type DrawerProps = {
+  /**
+   * HTML id attribute
+   */
   id?: string
+  /**
+   * Direction of the drawer layout
+   */
   direction: 'VERTICAL' | 'HORIZONTAL'
+  /**
+   * Position of the drawer
+   */
   pin: 'TOP' | 'BOTTOM' | 'LEFT' | 'RIGHT'
+  /**
+   * Default size of the drawer
+   */
   defaultSize: Unit
+  /**
+   * Maximum allowed size
+   */
   maxSize: Unit
+  /**
+   * Minimum allowed size
+   */
   minSize: Unit
+  /**
+   * Array of border positions
+   */
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
+  /**
+   * Whether the content is scrollable
+   * @default false
+   */
   isScrolling?: boolean
+  /**
+   * Drawer content
+   */
   children?: React.ReactNode
+  /**
+   * Callback when drawer collapses
+   */
   onCollapse?: () => void
+  /**
+   * Callback when drawer expands
+   */
   onExpand?: () => void
 }
 

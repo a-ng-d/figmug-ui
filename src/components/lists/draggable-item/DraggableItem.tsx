@@ -5,36 +5,102 @@ import { doClassnames, doMap } from '@a_ng_d/figmug-utils'
 import './draggable-item.scss'
 
 export interface DraggableItemProps {
+  /**
+   * Unique identifier for the item
+   */
   id: string
+  /**
+   * Index position in the list
+   */
   index: number
+  /**
+   * Whether the item can be removed
+   * @default true
+   */
   canBeRemoved?: boolean
+  /**
+   * Primary content slot
+   */
   primarySlot: React.ReactNode
+  /**
+   * Secondary content configuration
+   */
   secondarySlot?: {
+    /** Title for the secondary content */
     title: string
+    /** Content node */
     node: React.ReactNode
   }
+  /**
+   * Action buttons slot
+   */
   actionsSlot?: React.ReactNode
+  /**
+   * Whether the item is selected
+   * @default false
+   */
   selected?: boolean
+  /**
+   * Title for the options panel
+   */
   optionsTitle?: string
+  /**
+   * Helper texts for buttons
+   */
   helpers?: {
+    /** Helper for remove button */
     remove?: string
+    /** Helper for more options button */
     more?: string
   }
+  /**
+   * Whether to show drop guide above
+   * @default false
+   */
   guideAbove?: boolean
+  /**
+   * Whether to show drop guide below
+   * @default false
+   */
   guideBelow?: boolean
+  /**
+   * Whether the item is blocked
+   * @default false
+   */
   isBlocked?: boolean
+  /**
+   * Selection change handler
+   */
   onChangeSelection: React.MouseEventHandler<HTMLLIElement>
+  /**
+   * Cancel selection handler
+   */
   onCancelSelection: React.MouseEventHandler<Element> &
     React.FocusEventHandler<HTMLInputElement>
+  /**
+   * Refold options handler
+   */
   onRefoldOptions?: () => void
+  /**
+   * Drag state change handler
+   */
   onDragChange: (
     id: string | undefined,
     hasGuideAbove: boolean,
     hasGuideBelow: boolean,
     position: number
   ) => void
+  /**
+   * Drop outside handler
+   */
   onDropOutside: (e: React.DragEvent<HTMLLIElement>) => void
+  /**
+   * Order change handler
+   */
   onChangeOrder: (e: React.DragEvent<HTMLLIElement>) => void
+  /**
+   * Remove item handler
+   */
   onRemove: React.MouseEventHandler<Element> &
     React.KeyboardEventHandler<Element>
 }

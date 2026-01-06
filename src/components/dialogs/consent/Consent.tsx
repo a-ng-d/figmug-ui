@@ -10,32 +10,70 @@ import type { ConsentConfiguration } from '@tps/consent.types'
 import './consent.scss'
 
 export interface ConsentProps {
+  /**
+   * Welcome message displayed at the top
+   */
   welcomeMessage: string
+  /**
+   * Message describing the vendors
+   */
   vendorsMessage: string
+  /**
+   * Privacy policy link configuration
+   */
   privacyPolicy: {
+    /** Label for the privacy policy link */
     label: string
+    /** Click handler for the privacy policy */
     action: React.MouseEventHandler & React.KeyboardEventHandler
   }
+  /**
+   * Label for the "more details" toggle
+   */
   moreDetailsLabel: string
+  /**
+   * Label for the "less details" toggle
+   */
   lessDetailsLabel: string
+  /**
+   * Configuration for consent action buttons
+   */
   consentActions: {
+    /** Consent to all action */
     consent: {
       label: string
       action: (vendorsConsent: Array<ConsentConfiguration>) => void
     }
+    /** Deny all action */
     deny: {
       label: string
       action: (vendorsConsent: Array<ConsentConfiguration>) => void
     }
+    /** Save preferences action */
     save: {
       label: string
       action: (vendorsConsent: Array<ConsentConfiguration>) => void
     }
   }
+  /**
+   * Configuration for a valid vendor
+   */
   validVendor: ConsentConfiguration
+  /**
+   * List of all vendors
+   */
   vendorsList: Array<ConsentConfiguration>
+  /**
+   * Whether the consent dialog can be closed
+   */
   canBeClosed?: boolean
+  /**
+   * Label for the close button
+   */
   closeLabel?: string
+  /**
+   * Close button handler
+   */
   onClose?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 

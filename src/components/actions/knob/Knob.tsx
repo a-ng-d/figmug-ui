@@ -6,25 +6,80 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './knob.scss'
 
 export interface KnobProps {
+  /**
+   * Unique identifier for the knob
+   */
   id: string
+  /**
+   * Short identifier for the knob
+   */
   shortId: string
+  /**
+   * Current value of the knob
+   */
   value: string | number
+  /**
+   * Offset position for the knob display
+   */
   offset: number
+  /**
+   * Minimum allowed value
+   */
   min?: string
+  /**
+   * Maximum allowed value
+   */
   max?: string
+  /**
+   * Helper tooltip configuration
+   */
   helper?: {
+    /** Tooltip content */
     label: string | React.ReactNode
+    /** Tooltip display type */
     type: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
   }
+  /**
+   * Whether the value can be edited by typing
+   */
   canBeTyped: boolean
+  /**
+   * Whether the knob is visible
+   */
   isDisplayed: boolean
+  /**
+   * Whether the knob is blocked
+   * @default false
+   */
   isBlocked: boolean
+  /**
+   * Whether the knob is disabled
+   * @default false
+   */
   isDisabled: boolean
+  /**
+   * Custom inline styles
+   */
   style?: React.CSSProperties
+  /**
+   * Handler for right arrow key
+   */
   onShiftRight?: React.KeyboardEventHandler<HTMLInputElement>
+  /**
+   * Handler for left arrow key
+   */
   onShiftLeft?: React.KeyboardEventHandler<HTMLInputElement>
+  /**
+   * Handler for delete key
+   */
   onDelete?: React.KeyboardEventHandler<HTMLInputElement>
+  /**
+   * Mouse down handler for dragging
+   */
   onMouseDown: React.MouseEventHandler<HTMLDivElement>
+  /**
+   * Callback when value is validated
+   */
   onValidStopValue?: (
     stopId: string,
     e:
