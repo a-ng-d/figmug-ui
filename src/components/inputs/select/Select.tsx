@@ -7,33 +7,95 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './select.scss'
 
 export interface SelectProps {
+  /**
+   * Unique identifier for the select input
+   */
   id: string
+  /**
+   * Type of selection control
+   */
   type: 'CHECK_BOX' | 'RADIO_BUTTON' | 'SWITCH_BUTTON'
+  /**
+   * Label text
+   */
   label?: string
+  /**
+   * Name attribute for form submission
+   */
   name?: string
+  /**
+   * Value attribute
+   */
   value?: string
+  /**
+   * Helper tooltip configuration
+   */
   helper?: {
+    /** Tooltip content */
     label: string | React.ReactNode
+    /** Tooltip position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Tooltip display type */
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  /**
+   * Preview tooltip configuration with image
+   */
   preview?: {
+    /** Preview image URL */
     image: string
+    /** Preview text */
     text: string | React.ReactNode
+    /** Preview position */
     pin?: 'TOP' | 'BOTTOM'
   }
+  /**
+   * Warning tooltip configuration
+   */
   warning?: {
+    /** Warning message */
     label: string | React.ReactNode
+    /** Warning position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Warning display type */
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  /**
+   * Feature identifier for tracking
+   */
   feature?: string
+  /**
+   * Whether to reflow on small screens
+   * @default false
+   */
   shouldReflow?: boolean
+  /**
+   * Whether the control is checked
+   * @default false
+   */
   isChecked?: boolean
+  /**
+   * Whether the control is disabled
+   * @default false
+   */
   isDisabled?: boolean
+  /**
+   * Whether the control is blocked
+   * @default false
+   */
   isBlocked?: boolean
+  /**
+   * Whether to show a "New" badge
+   * @default false
+   */
   isNew?: boolean
+  /**
+   * Change event handler
+   */
   action: React.ChangeEventHandler<HTMLInputElement>
+  /**
+   * Handler called when unblock is clicked
+   */
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 

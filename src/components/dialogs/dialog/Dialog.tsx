@@ -4,9 +4,19 @@ import './dialog.scss'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 
 export interface DialogProps {
+  /**
+   * Title of the dialog
+   */
   title: string
+  /**
+   * Optional tag displayed next to the title
+   */
   tag?: string
+  /**
+   * Configuration for action buttons
+   */
   actions?: {
+    /** Primary action button */
     primary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
@@ -14,6 +24,7 @@ export interface DialogProps {
       isAutofocus?: boolean
       action: React.ReactEventHandler | (() => void)
     }
+    /** Destructive action button */
     destructive?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
@@ -21,6 +32,7 @@ export interface DialogProps {
       isAutofocus?: boolean
       action: React.ReactEventHandler | (() => void)
     }
+    /** Secondary action button */
     secondary?: {
       label: string
       state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
@@ -29,16 +41,43 @@ export interface DialogProps {
       action: React.ReactEventHandler | (() => void)
     }
   }
+  /**
+   * Select/checkbox configuration
+   */
   select?: {
+    /** Label for the select */
     label: string
+    /** Current state */
     state: boolean
+    /** Change handler */
     action: React.ChangeEventHandler<HTMLInputElement>
   }
+  /**
+   * Optional indicator text
+   */
   indicator?: string
+  /**
+   * Position of the dialog
+   * @default 'CENTER'
+   */
   pin?: 'CENTER' | 'RIGHT'
+  /**
+   * Whether the dialog is in loading state
+   * @default false
+   */
   isLoading?: boolean
+  /**
+   * Whether to use message layout
+   * @default false
+   */
   isMessage?: boolean
+  /**
+   * Dialog content
+   */
   children?: React.ReactNode
+  /**
+   * Close handler
+   */
   onClose: React.ReactEventHandler
 }
 

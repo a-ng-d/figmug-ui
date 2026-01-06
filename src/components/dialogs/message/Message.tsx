@@ -6,8 +6,18 @@ import type { IconList } from '@tps/icon.types'
 import './message.scss'
 
 export interface MessageProps {
+  /**
+   * Icon to display with the message
+   */
   icon: IconList
+  /**
+   * Array of message strings to display
+   */
   messages: Array<string>
+  /**
+   * Whether the message is blocked
+   * @default false
+   */
   isBlocked?: boolean
 }
 

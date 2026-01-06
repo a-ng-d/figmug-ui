@@ -6,10 +6,27 @@ import Message from '../message/Message'
 import './semantic-message.scss'
 
 export interface SemanticMessageProps {
+  /**
+   * Type of message determining its visual style and icon
+   */
   type: 'NEUTRAL' | 'INFO' | 'SUCCESS' | 'WARNING' | 'ERROR'
+  /**
+   * Message content to display
+   */
   message: string
+  /**
+   * Whether the message is anchored to its position
+   * @default false
+   */
   isAnchored?: boolean
+  /**
+   * Layout orientation
+   * @default 'HORIZONTAL'
+   */
   orientation?: 'HORIZONTAL' | 'VERTICAL'
+  /**
+   * Optional action buttons slot
+   */
   actionsSlot?: React.ReactNode
 }
 

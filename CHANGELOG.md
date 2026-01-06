@@ -5,7 +5,40 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.19.43] - 2025-12-16
+## [1.19.43] - 2026-01-06
+
+### Enhanced
+
+- **Component Props Documentation**: Comprehensive documentation enhancement for 42 components with detailed JSDoc comments
+  - **Input Components**: Dropdown, Dropzone, Input, InputsBar, MultipleSlider, Select, SimpleSlider
+    - Added detailed prop descriptions for unique identifiers, options, states, event handlers
+    - Enhanced type documentation for icons, units, character limits, range constraints
+    - Documented helper, preview, and warning message configurations
+    - Added feature tracking, reflow, and responsive behavior props
+  - **List Components**: ActionsItem, ActionsList, ColorItem, DraggableItem, KeyboardShortcutItem, MembersList, SortableList, Tabs
+    - Documented selection states, interactivity options, and click handlers
+    - Added descriptions for image sources, indicators, descriptions, and action slots
+    - Enhanced drag-and-drop functionality documentation with state change handlers
+    - Documented responsive behavior with max visible tabs and overflow handling
+  - **Slot Components**: Bar, DraggableWindow, Drawer, FormItem, Layout, List, Popin, Section, SimpleItem
+    - Added comprehensive layout configuration documentation (columns, dimensions, borders)
+    - Documented content slot positions (left, center, right) and alignment options
+    - Enhanced form item documentation with label, helper, error message configurations
+    - Documented responsive behaviors, padding options, and centering controls
+  - **Action Components**: Accordion, Button, Card, Knob, Menu
+    - Enhanced button prop documentation with variants, icons, helper tooltips
+    - Documented accordion row configurations, expansion states, action handlers
+    - Added menu positioning, alignment, and viewport management documentation
+  - **Asset Components**: Avatar, Icon, SectionTitle, Thumbnail
+    - Documented icon types, names, sizes, and color configurations
+    - Added avatar initials, image sources, and user state documentation
+  - **Dialog Components**: Consent, Dialog, Message, Notification, SemanticMessage
+    - Documented dialog types, titles, illustrations, and action configurations
+    - Enhanced semantic message documentation with orientation and responsive options
+  - **Tag Components**: Chip, ColorChip, IconChip, Tooltip
+    - Added visual state documentation (active, inactive, on-background)
+    - Documented color values, preview configurations, and tooltip positioning
+    - Enhanced tooltip content documentation with image support
 
 ### Added
 
@@ -41,6 +74,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Technical Details
 
+- Enhanced 42 component files with comprehensive JSDoc documentation (1392+ lines added)
 - Connected Figma file: `QlBdsfEcaUsGBzqA20xbNi` ("Unoff" document)
 - Code Connect files use component set node IDs (parent frames) for proper variant mapping
 - Validation passes for all 6 components with `npm run figma:parse`

@@ -12,34 +12,93 @@ import type { IconList } from '@tps/icon.types'
 import './dropdown.scss'
 
 export interface DropdownProps {
+  /**
+   * Unique identifier for the dropdown
+   */
   id: string
+  /**
+   * List of options to display in the dropdown
+   */
   options: Array<DropdownOption>
+  /**
+   * ID of the currently selected option
+   */
   selected: string
+  /**
+   * ID of the container element for portal rendering
+   */
   containerId?: string
+  /**
+   * Horizontal alignment of the dropdown
+   * @default 'LEFT'
+   */
   alignment?: 'RIGHT' | 'LEFT' | 'FILL'
+  /**
+   * Vertical position of helper tooltips
+   * @default 'NONE'
+   */
   pin?: 'NONE' | 'TOP' | 'BOTTOM'
+  /**
+   * Helper tooltip configuration
+   */
   helper?: {
+    /** Tooltip content */
     label: string | React.ReactNode
+    /** Tooltip position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Tooltip display type */
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  /**
+   * Preview tooltip configuration with image
+   */
   preview?: {
+    /** Preview image URL */
     image: string
+    /** Preview text */
     text: string | React.ReactNode
+    /** Preview position */
     pin?: 'TOP' | 'BOTTOM'
   }
+  /**
+   * Warning tooltip configuration
+   */
   warning?: {
+    /** Warning message */
     label: string | React.ReactNode
+    /** Warning position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Warning display type */
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  /**
+   * Reflow configuration for responsive behavior
+   * @default { isEnabled: false, icon: 'adjust' }
+   */
   shouldReflow?: {
+    /** Whether reflow is enabled */
     isEnabled: boolean
+    /** Icon to show when reflowed */
     icon: IconList
   }
+  /**
+   * Whether the dropdown is disabled
+   * @default false
+   */
   isDisabled?: boolean
+  /**
+   * Whether the dropdown is blocked
+   * @default false
+   */
   isBlocked?: boolean
+  /**
+   * Whether to show a "New" badge
+   * @default false
+   */
   isNew?: boolean
+  /**
+   * Handler called when unblock is clicked
+   */
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 

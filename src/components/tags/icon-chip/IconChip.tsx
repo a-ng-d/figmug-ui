@@ -6,11 +6,32 @@ import Tooltip from '../tooltip/Tooltip'
 import './icon-chip.scss'
 
 interface IconChipProps {
+  /**
+   * Type of icon
+   */
   iconType: 'PICTO' | 'LETTER'
+  /**
+   * Icon name (when type is PICTO)
+   * @default 'adjust'
+   */
   iconName?: IconList
+  /**
+   * Letter to display (when type is LETTER)
+   */
   iconLetter?: string
+  /**
+   * Tooltip text content
+   */
   text: string | React.ReactNode
+  /**
+   * Tooltip position
+   * @default 'BOTTOM'
+   */
   pin?: 'TOP' | 'BOTTOM'
+  /**
+   * Tooltip display type
+   * @default 'SINGLE_LINE'
+   */
   type?: 'MULTI_LINE' | 'SINGLE_LINE' | 'WITH_IMAGE'
 }
 

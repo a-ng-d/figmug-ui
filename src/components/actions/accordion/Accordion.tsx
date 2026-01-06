@@ -6,21 +6,59 @@ import Button from '../button/Button'
 import './accordion.scss'
 
 export interface AccordionProps {
+  /**
+   * Title label of the accordion
+   */
   label: string
+  /**
+   * Optional indicator (number or text) displayed next to the label
+   */
   indicator?: string | number
+  /**
+   * Icon to display in the add button
+   * @default 'plus'
+   */
   icon?: IconList
+  /**
+   * Helper text displayed near the title
+   */
   helper?: string
+  /**
+   * Helper texts for the action buttons
+   */
   helpers?: {
+    /** Helper text for the add button */
     add?: string
+    /** Helper text for the empty button */
     empty?: string
   }
+  /**
+   * Whether the accordion is expanded
+   */
   isExpanded: boolean
+  /**
+   * Whether the accordion is blocked (disabled)
+   * @default false
+   */
   isBlocked?: boolean
+  /**
+   * Whether to show a "New" badge
+   * @default false
+   */
   isNew?: boolean
+  /**
+   * Content to display when accordion is expanded
+   */
   children?: React.ReactNode
+  /**
+   * Callback fired when the add button is clicked
+   */
   onAdd: (
     event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
   ) => void
+  /**
+   * Callback fired when the empty button is clicked
+   */
   onEmpty: (
     event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
   ) => void

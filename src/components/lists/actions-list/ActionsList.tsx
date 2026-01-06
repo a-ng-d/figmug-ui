@@ -7,18 +7,51 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './actions-list.scss'
 
 export interface ActionsListProps {
+  /**
+   * List of options to display
+   */
   options: Array<DropdownOption>
+  /**
+   * ID of the currently selected option
+   */
   selected?: string
+  /**
+   * Direction for submenu expansion
+   * @default 'RIGHT'
+   */
   direction?: 'LEFT' | 'RIGHT'
+  /**
+   * Whether the list should be scrollable
+   * @default false
+   */
   shouldScroll?: boolean
+  /**
+   * ID of the container element
+   */
   containerId?: string
+  /**
+   * Preview tooltip configuration
+   */
   preview?: {
+    /** Preview image URL */
     image: string
+    /** Preview text */
     text: string | React.ReactNode
+    /** Preview position */
     pin?: 'TOP' | 'BOTTOM'
   }
+  /**
+   * Callback when the list is cancelled
+   * @default () => null
+   */
   onCancellation?: () => void
+  /**
+   * Ref to the menu element
+   */
   menuRef?: React.RefObject<HTMLUListElement>
+  /**
+   * Ref to the submenu element
+   */
   subMenuRef?: React.RefObject<HTMLUListElement>
 }
 

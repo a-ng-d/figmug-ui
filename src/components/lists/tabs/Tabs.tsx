@@ -8,20 +8,46 @@ import Menu from '@components/actions/menu/Menu'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 
 export interface TabsProps {
+  /**
+   * Array of tab configurations
+   */
   tabs: Array<{
+    /** Tab label */
     label: string
+    /** Unique tab ID */
     id: string
+    /** Optional icon */
     icon?: {
       type: 'PICTO' | 'LETTER'
       name: IconList
     }
+    /** Whether tab has been updated */
     isUpdated: boolean
+    /** Whether to show a "New" badge */
     isNew?: boolean
   }>
+  /**
+   * ID of the active tab
+   */
   active: string
+  /**
+   * Layout direction
+   * @default 'HORIZONTAL'
+   */
   direction?: 'HORIZONTAL' | 'VERTICAL'
+  /**
+   * Whether tabs should use flex layout
+   * @default false
+   */
   isFlex?: boolean
+  /**
+   * Maximum number of tabs to display before collapsing into menu
+   * @default 3
+   */
   maxVisibleTabs?: number
+  /**
+   * Click handler
+   */
   action: React.MouseEventHandler & React.KeyboardEventHandler
 }
 

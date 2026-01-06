@@ -11,16 +11,54 @@ interface FileContent {
 }
 
 export interface DropzoneProps {
+  /**
+   * Message to display in the dropzone
+   */
   message: string
+  /**
+   * Warning message to show on invalid file type
+   */
   warningMessage: string
+  /**
+   * Error message to show on upload failure
+   */
   errorMessage: string
+  /**
+   * Call-to-action text for the upload button
+   */
   cta: string
+  /**
+   * Array of accepted MIME types
+   * @default ['image/jpeg', 'image/png', 'application/pdf']
+   */
   acceptedMimeTypes: Array<string>
+  /**
+   * Whether multiple files can be uploaded
+   */
   isMultiple: boolean
+  /**
+   * Whether the dropzone is in loading state
+   * @default false
+   */
   isLoading?: boolean
+  /**
+   * Whether the dropzone is disabled
+   * @default false
+   */
   isDisabled?: boolean
+  /**
+   * Whether the dropzone is blocked
+   * @default false
+   */
   isBlocked?: boolean
+  /**
+   * Whether to show a "New" badge
+   * @default false
+   */
   isNew?: boolean
+  /**
+   * Callback when files are successfully imported
+   */
   onImportFiles: (files: Array<FileContent>) => void
 }
 

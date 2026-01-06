@@ -9,6 +9,9 @@ import type { IconList } from '@tps/icon.types'
 import './button.scss'
 
 export interface ButtonProps {
+  /**
+   * Visual style of the button
+   */
   type:
     | 'primary'
     | 'secondary'
@@ -16,41 +19,125 @@ export interface ButtonProps {
     | 'destructive'
     | 'alternative'
     | 'icon'
+  /**
+   * Size of the button
+   * @default 'default'
+   */
   size?: 'small' | 'default' | 'large'
+  /**
+   * Icon name to display in the button
+   */
   icon?: IconList
+  /**
+   * Custom CSS class for the icon
+   */
   iconClassName?: string
+  /**
+   * Custom icon element to replace the default icon
+   */
   customIcon?: React.ReactElement
+  /**
+   * Text label of the button
+   */
   label?: string
+  /**
+   * Visual state of the button
+   * @default 'default'
+   */
   state?: 'default' | 'selected'
+  /**
+   * URL for link buttons
+   */
   url?: string
+  /**
+   * Helper tooltip configuration
+   */
   helper?: {
+    /** Tooltip content */
     label: string | React.ReactNode
+    /** Tooltip position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Tooltip display type */
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  /**
+   * Preview tooltip configuration with image
+   */
   preview?: {
+    /** Preview image URL */
     image: string
+    /** Preview text */
     text: string | React.ReactNode
+    /** Preview position */
     pin?: 'TOP' | 'BOTTOM'
   }
+  /**
+   * Warning tooltip configuration
+   */
   warning?: {
+    /** Warning message */
     label: string | React.ReactNode
+    /** Warning position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Warning display type */
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  /**
+   * Feature identifier for tracking
+   */
   feature?: string
+  /**
+   * Whether the button has multiple actions
+   * @default false
+   */
   hasMultipleActions?: boolean
+  /**
+   * Whether the button should render as a link
+   * @default false
+   */
   isLink?: boolean
+  /**
+   * Whether the button should auto-focus on mount
+   * @default false
+   */
   isAutofocus?: boolean
+  /**
+   * Reflow configuration for responsive behavior
+   * @default { isEnabled: false, icon: 'adjust' }
+   */
   shouldReflow?: {
+    /** Whether reflow is enabled */
     isEnabled: boolean
+    /** Icon to show when reflowed */
     icon: IconList
   }
+  /**
+   * Whether the button is in loading state
+   * @default false
+   */
   isLoading?: boolean
+  /**
+   * Whether the button is blocked (shows unblock action)
+   * @default false
+   */
   isBlocked?: boolean
+  /**
+   * Whether the button is disabled
+   * @default false
+   */
   isDisabled?: boolean
+  /**
+   * Whether to show a "New" badge
+   * @default false
+   */
   isNew?: boolean
+  /**
+   * Click handler for the button
+   */
   action?: React.MouseEventHandler & React.KeyboardEventHandler
+  /**
+   * Handler called when unblock is clicked
+   */
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 

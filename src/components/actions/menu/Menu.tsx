@@ -7,27 +7,81 @@ import Button from '../button/Button'
 import './menu.scss'
 
 export interface MenuProps {
+  /**
+   * Unique identifier for the menu
+   */
   id: string
+  /**
+   * Visual type of the menu button
+   * @default 'ICON'
+   */
   type: 'ICON' | 'PRIMARY'
+  /**
+   * Text label for the menu button
+   */
   label?: string
+  /**
+   * Icon name to display in the button
+   */
   icon?: IconList
+  /**
+   * Custom icon element
+   */
   customIcon?: React.ReactElement
+  /**
+   * List of menu options
+   * @default []
+   */
   options: Array<DropdownOption>
+  /**
+   * ID of the currently selected option
+   */
   selected?: string
+  /**
+   * ID of the container element for portal rendering
+   */
   containerId?: string
+  /**
+   * State of the menu button
+   * @default 'DEFAULT'
+   */
   state?: 'DEFAULT' | 'DISABLED' | 'LOADING'
+  /**
+   * Position of the menu relative to the button
+   * @default 'BOTTOM_LEFT'
+   */
   alignment?: 'TOP_RIGHT' | 'TOP_LEFT' | 'BOTTOM_RIGHT' | 'BOTTOM_LEFT'
+  /**
+   * Helper tooltip configuration
+   */
   helper?: {
+    /** Tooltip content */
     label: string | React.ReactNode
+    /** Tooltip position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Whether to use single line display */
     isSingleLine?: boolean
   }
+  /**
+   * Warning tooltip configuration
+   */
   warning?: {
+    /** Warning message */
     label: string | React.ReactNode
+    /** Warning position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Warning display type */
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  /**
+   * Whether the menu is blocked
+   * @default false
+   */
   isBlocked?: boolean
+  /**
+   * Whether to show a "New" badge
+   * @default false
+   */
   isNew?: boolean
 }
 

@@ -5,17 +5,51 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './form-item.scss'
 
 export interface FormItemProps {
+  /**
+   * HTML id attribute
+   */
   id?: string
+  /**
+   * Label text for the form item
+   */
   label?: string
+  /**
+   * Helper or error message configuration
+   */
   helper?: {
+    /** Type of message */
     type: 'INFO' | 'ERROR'
+    /** Message text */
     message: string
   }
+  /**
+   * Whether to fill available width
+   * @default true
+   */
   shouldFill?: boolean
+  /**
+   * Whether to align content to baseline
+   * @default false
+   */
   isBaseline?: boolean
+  /**
+   * Whether to use multi-line layout
+   * @default false
+   */
   isMultiLine?: boolean
+  /**
+   * Whether the item is blocked
+   * @default false
+   */
   isBlocked?: boolean
+  /**
+   * Whether to show a "New" badge
+   * @default false
+   */
   isNew?: boolean
+  /**
+   * Form input element
+   */
   children: React.ReactNode
 }
 

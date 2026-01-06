@@ -4,9 +4,21 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './section-title.scss'
 
 export type SectionTitleProps = {
+  /**
+   * Text label of the section title
+   */
   label: string
+  /**
+   * Optional indicator (number or text) displayed in parentheses
+   */
   indicator?: string | number
+  /**
+   * Helper content displayed in a tooltip icon
+   */
   helper?: string | React.ReactNode
+  /**
+   * HTML id attribute for the title
+   */
   id?: string
 }
 

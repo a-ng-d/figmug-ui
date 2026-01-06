@@ -18,25 +18,72 @@ interface HoveredColor extends SelectedColor {
 }
 
 export interface SortableListProps<T = DefaultData> {
+  /**
+   * Array of data items
+   */
   data: Array<T>
+  /**
+   * Array of primary content nodes
+   */
   primarySlot: Array<React.ReactNode>
+  /**
+   * Array of secondary content configurations
+   */
   secondarySlot?: Array<{
+    /** Title for the secondary content */
     title: string
+    /** Content node */
     node: React.ReactNode
   }>
+  /**
+   * Array of action button nodes
+   */
   actionsSlot?: Array<React.ReactNode>
+  /**
+   * Content to display when list is empty
+   */
   emptySlot?: React.ReactNode
+  /**
+   * Helper texts for buttons
+   */
   helpers?: {
+    /** Helper for remove button */
     remove?: string
+    /** Helper for more options button */
     more?: string
   }
+  /**
+   * Whether the list is scrollable
+   * @default false
+   */
   isScrollable?: boolean
+  /**
+   * Whether to show a top border on scroll
+   * @default false
+   */
   isTopBorderEnabled?: boolean
+  /**
+   * Whether the list can be empty
+   * @default true
+   */
   canBeEmpty?: boolean
+  /**
+   * Whether the list is blocked
+   * @default false
+   */
   isBlocked?: boolean
+  /**
+   * Change handler when list is reordered
+   */
   onChangeSortableList: (data: Array<T>) => void
+  /**
+   * Remove item handler
+   */
   onRemoveItem: React.MouseEventHandler<Element> &
     React.KeyboardEventHandler<Element>
+  /**
+   * Refold options handler
+   */
   onRefoldOptions: () => void
 }
 

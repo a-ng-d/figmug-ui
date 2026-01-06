@@ -5,10 +5,26 @@ import type { IconList } from '@tps/icon.types'
 import './icon.scss'
 
 export interface IconProps {
+  /**
+   * Type of icon to display
+   * @default 'PICTO'
+   */
   type?: 'PICTO' | 'LETTER'
+  /**
+   * Name of the pictogram icon (when type is PICTO)
+   */
   iconName?: IconList
+  /**
+   * Letter to display (when type is LETTER)
+   */
   iconLetter?: string
+  /**
+   * Custom CSS class to apply
+   */
   customClassName?: string
+  /**
+   * ARIA role for accessibility
+   */
   role?: string
 }
 
