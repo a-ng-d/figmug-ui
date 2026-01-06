@@ -9,51 +9,163 @@ import type { IconList } from '@tps/icon.types'
 import './input.scss'
 
 export interface InputProps {
+  /**
+   * HTML id attribute
+   */
   id?: string
+  /**
+   * Type of input
+   */
   type: 'NUMBER' | 'COLOR' | 'TEXT' | 'LONG_TEXT' | 'CODE'
+  /**
+   * Icon configuration to display in the input
+   */
   icon?: { type: 'LETTER' | 'PICTO'; value: IconList }
+  /**
+   * Unit suffix to display (% or °)
+   */
   unit?: '%' | '°'
+  /**
+   * Visual state of the input
+   * @default 'DEFAULT'
+   */
   state?: 'DEFAULT' | 'ERROR'
+  /**
+   * Placeholder text
+   */
   placeholder?: string
+  /**
+   * Current value of the input
+   */
   value: string
+  /**
+   * Maximum number of characters allowed
+   */
   charactersLimit?: number
+  /**
+   * Minimum value (for NUMBER type)
+   */
   min?: string
+  /**
+   * Maximum value (for NUMBER type)
+   */
   max?: string
+  /**
+   * Step value (for NUMBER type)
+   */
   step?: string
+  /**
+   * Helper tooltip configuration
+   */
   helper?: {
+    /** Tooltip content */
     label: string | React.ReactNode
+    /** Tooltip position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Tooltip display type */
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  /**
+   * Preview tooltip configuration with image
+   */
   preview?: {
+    /** Preview image URL */
     image: string
+    /** Preview text */
     text: string | React.ReactNode
+    /** Preview position */
     pin?: 'TOP' | 'BOTTOM'
   }
+  /**
+   * Warning tooltip configuration
+   */
   warning?: {
+    /** Warning message */
     label: string | React.ReactNode
+    /** Warning position */
     pin?: 'TOP' | 'BOTTOM'
+    /** Warning display type */
     type?: 'MULTI_LINE' | 'SINGLE_LINE'
   }
+  /**
+   * Feature identifier for tracking
+   */
   feature?: string
+  /**
+   * Whether to blur the input after interaction
+   */
   shouldBlur?: boolean
+  /**
+   * Whether to auto-focus on mount
+   */
   isAutoFocus?: boolean
+  /**
+   * Whether the textarea should grow with content
+   */
   isGrowing?: boolean
+  /**
+   * Whether to use flex layout
+   */
   isFlex?: boolean
+  /**
+   * Whether to show a clear button
+   */
   isClearable?: boolean
+  /**
+   * Whether to show a frame border
+   */
   isFramed?: boolean
+  /**
+   * Whether the input can be empty
+   */
   canBeEmpty?: boolean
+  /**
+   * Whether the input is blocked
+   */
   isBlocked?: boolean
+  /**
+   * Whether the input is disabled
+   */
   isDisabled?: boolean
+  /**
+   * Whether to show a "New" badge
+   */
   isNew?: boolean
+  /**
+   * Change event handler
+   */
   onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  /**
+   * Focus event handler
+   */
   onFocus?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  /**
+   * Blur event handler
+   */
   onBlur?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  /**
+   * Keyboard shift handler
+   */
   onShift?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  /**
+   * Clear button handler
+   */
   onClear?: (value: string) => void
+  /**
+   * Slider change handler (for NUMBER type)
+   */
   onSlide?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  /**
+   * Validation handler
+   */
   onValid?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  /**
+   * Color picker handler (for COLOR type)
+   */
   onPick?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  /**
+   * Handler called when unblock is clicked
+   */
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 

@@ -3,17 +3,58 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './bar.scss'
 
 export interface BarProps {
+  /**
+   * HTML id attribute
+   */
   id?: string
+  /**
+   * Content for the left section
+   */
   leftPartSlot?: React.ReactElement | null
+  /**
+   * Content for the center section (when used alone)
+   */
   soloPartSlot?: React.ReactElement | null
+  /**
+   * Content for the right section
+   */
   rightPartSlot?: React.ReactElement | null
+  /**
+   * Array of border positions
+   */
   border?: Array<'TOP' | 'LEFT' | 'BOTTOM' | 'RIGHT'>
+  /**
+   * Array of clip positions (for visual effects)
+   */
   clip?: Array<'LEFT' | 'RIGHT' | 'SOLO'>
+  /**
+   * Custom padding value
+   */
   padding?: string
+  /**
+   * Whether to use compact spacing
+   * @default false
+   */
   isCompact?: boolean
+  /**
+   * Whether the bar contains only text
+   * @default false
+   */
   isOnlyText?: boolean
+  /**
+   * Whether to use inverted color scheme
+   * @default false
+   */
   isInverted?: boolean
+  /**
+   * Whether to center the content
+   * @default false
+   */
   isCentered?: boolean
+  /**
+   * Whether to reflow on small screens
+   * @default false
+   */
   shouldReflow?: boolean
 }
 

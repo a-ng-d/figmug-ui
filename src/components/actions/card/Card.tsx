@@ -5,12 +5,34 @@ import './card.scss'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 
 interface CardProps {
+  /**
+   * Image source URL for the card thumbnail
+   */
   src?: string
+  /**
+   * Main title of the card
+   */
   title?: string
+  /**
+   * Subtitle text of the card
+   */
   subtitle?: string
+  /**
+   * Rich text content to display in the card
+   */
   richText?: React.ReactNode
+  /**
+   * Action buttons to display on hover
+   */
   actions?: React.ReactNode
+  /**
+   * Whether the card should fill available space
+   * @default false
+   */
   shouldFill?: boolean
+  /**
+   * Click handler for the card
+   */
   action: (
     event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
   ) => void

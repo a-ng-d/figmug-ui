@@ -3,8 +3,17 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './inputs-bar.scss'
 
 export interface InputsBarProps {
+  /**
+   * Optional label for the input bar
+   */
   label?: string
+  /**
+   * Custom CSS class
+   */
   customClassName?: string
+  /**
+   * Input components to display in the bar
+   */
   children: React.ReactNode
 }
 

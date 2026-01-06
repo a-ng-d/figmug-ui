@@ -4,14 +4,47 @@ import { doClassnames } from '@a_ng_d/figmug-utils'
 import './list.scss'
 
 export interface ListProps {
+  /**
+   * HTML id attribute
+   */
   id?: string
+  /**
+   * List item elements
+   */
   children?: React.ReactNode
+  /**
+   * Custom padding value
+   */
   padding?: string
+  /**
+   * Whether to show a border on scroll
+   * @default false
+   */
   isTopBorderEnabled?: boolean
+  /**
+   * Whether to show loading state
+   * @default false
+   */
   isLoading?: boolean
+  /**
+   * Whether the list contains message items
+   * @default false
+   */
   isMessage?: boolean
+  /**
+   * Whether to use alternate styling
+   * @default false
+   */
   isAlternate?: boolean
+  /**
+   * Whether to use full width
+   * @default false
+   */
   isFullWidth?: boolean
+  /**
+   * Whether to use full height
+   * @default false
+   */
   isFullHeight?: boolean
 }
 
