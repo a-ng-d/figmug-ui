@@ -91,7 +91,6 @@ export default class ActionsItem extends React.Component<ActionsItemProps> {
           isInteractive && 'actions-item--interactive',
         ])}
         data-id={id}
-        role="listitem"
         aria-label={name}
         tabIndex={isInteractive ? 0 : -1}
         onMouseDown={isInteractive ? action : undefined}

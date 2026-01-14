@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, within } from 'storybook/test'
 import ActionsItem from '@components/lists/actions-item/ActionsItem'
 import Button from '@components/actions/button/Button'
 
@@ -44,6 +44,22 @@ export const SingleAction: Story = {
     isInteractive: false,
     action: mock,
   },
+  render: (args) => (
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+      <ActionsItem {...args} />
+    </ul>
+  ),
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const actionName = canvas.getByText(args.name)
+    await expect(actionName).toBeInTheDocument()
+    const description = canvas.getByText(args.description)
+    await expect(description).toBeInTheDocument()
+    if (args.user) {
+      const userName = canvas.getByText(args.user.name)
+      await expect(userName).toBeInTheDocument()
+    }
+  },
 }
 
 export const SeveralActions: Story = {
@@ -79,6 +95,31 @@ export const SeveralActions: Story = {
     })(),
     isInteractive: false,
     action: mock,
+  },
+  render: (args) => (
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+      <ActionsItem {...args} />
+    </ul>
+  ),
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const actionName = canvas.getByText(args.name)
+    await expect(actionName).toBeInTheDocument()
+
+    const description = canvas.getByText(args.description)
+    await expect(description).toBeInTheDocument()
+
+    if (args.user) {
+      const userName = canvas.getByText(args.user.name)
+      await expect(userName).toBeInTheDocument()
+    }
+
+    const buttons = canvas.getAllByRole('button')
+    await expect(buttons.length).toBe(2)
+
+    const addToFileButton = canvas.getByRole('button', { name: /Add to file/i })
+    await expect(addToFileButton).toBeInTheDocument()
   },
 }
 
@@ -131,5 +172,31 @@ export const WithoutActionNorThumbnail: Story = {
   argTypes: {
     src: { control: false },
     actionsSlot: { control: false },
+  },
+  render: (args) => (
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+      <ActionsItem {...args} />
+    </ul>
+  ),
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const actionName = canvas.getByText(args.name)
+    await expect(actionName).toBeInTheDocument()
+
+    const description = canvas.getByText(args.description)
+    await expect(description).toBeInTheDocument()
+
+    const subdescription = canvas.getByText(args.subdescription)
+    await expect(subdescription).toBeInTheDocument()
+
+    const thumbnails = canvas.queryAllByRole('img')
+    await expect(thumbnails.length).toBe(0)
+
+    const buttons = canvas.queryAllByRole('button')
+    await expect(buttons.length).toBe(0)
+
+    const complementSlot = canvas.getByRole('complementary')
+    await expect(complementSlot).toBeInTheDocument()
   },
 }

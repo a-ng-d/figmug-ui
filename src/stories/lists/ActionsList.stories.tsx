@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, within } from 'storybook/test'
 import ActionsList from '@components/lists/actions-list/ActionsList'
 
 const meta = {
@@ -45,6 +45,25 @@ export const FourOptionsList: Story = {
   },
   argTypes: {
     direction: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const option1 = canvas.getByText('Option 1')
+    await expect(option1).toBeInTheDocument()
+
+    const option2 = canvas.getByText('Option 2')
+    await expect(option2).toBeInTheDocument()
+
+    const option3 = canvas.getByText('Option 3')
+    await expect(option3).toBeInTheDocument()
+
+    const option4 = canvas.getByText('Option 4')
+    await expect(option4).toBeInTheDocument()
+
+    // Verify all options are present
+    const allOptions = canvas.getAllByText(/Option \d/)
+    await expect(allOptions.length).toBe(4)
   },
 }
 
@@ -92,6 +111,25 @@ export const FourOptionsListWithSeparator: Story = {
   argTypes: {
     direction: { control: false },
     selected: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const group1 = canvas.getByText('Group 1')
+    await expect(group1).toBeInTheDocument()
+
+    const group2 = canvas.getByText('Group 2')
+    await expect(group2).toBeInTheDocument()
+
+    const option1 = canvas.getByText('Option 1')
+    await expect(option1).toBeInTheDocument()
+
+    const option4 = canvas.getByText('Option 4')
+    await expect(option4).toBeInTheDocument()
+
+    // Verify separator is present
+    const separator = canvas.getByRole('separator', { hidden: true })
+    await expect(separator).toBeInTheDocument()
   },
 }
 
@@ -165,6 +203,15 @@ export const FourOptionsListInGroups: Story = {
   argTypes: {
     direction: { control: false },
     selected: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const group1 = canvas.getByText('Group 1')
+    await expect(group1).toBeInTheDocument()
+
+    const group2 = canvas.getByText('Group 2')
+    await expect(group2).toBeInTheDocument()
   },
 }
 
@@ -266,5 +313,14 @@ export const LongListWithScroll: Story = {
   },
   argTypes: {
     direction: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const option1 = canvas.getByText('Option 1')
+    await expect(option1).toBeInTheDocument()
+
+    const allOptions = canvas.getAllByText(/Option \d+/)
+    await expect(allOptions.length).toBe(12)
   },
 }

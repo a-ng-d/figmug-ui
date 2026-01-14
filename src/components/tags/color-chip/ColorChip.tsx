@@ -63,7 +63,7 @@ export default class ColorChip extends React.Component<
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
         onMouseLeave={() => this.setState({ isTooltipVisible: false })}
-        role="img"
+        role="contentinfo"
       >
         {isTooltipVisible && <Tooltip>{helper}</Tooltip>}
       </div>

@@ -37,7 +37,6 @@ const ColorItem = (props: ColorItemProps) => {
     <li
       className="color-item"
       data-id={id}
-      role="listitem"
       onMouseEnter={() => {
         if (canBeRemoved) setIsRemovePermitted(true)
       }}
@@ -61,7 +60,7 @@ const ColorItem = (props: ColorItemProps) => {
             {name}
           </div>
           <div className={doClassnames([texts.type, texts['type--secondary']])}>
-            {hex}
+            {hex.toUpperCase()}
           </div>
         </div>
       </div>

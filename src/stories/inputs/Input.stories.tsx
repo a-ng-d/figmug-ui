@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, userEvent, within } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
 import figma from '@figma/code-connect'
 import Input from '@components/inputs/input/Input'
@@ -92,6 +92,23 @@ export const ColorPicker: Story = {
       />
     )
   },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const colorInput = canvas.getByLabelText('Color picker')
+    await expect(colorInput).toBeInTheDocument()
+    await expect(colorInput).toHaveValue('#87ebe7')
+
+    const hexInput = canvas.getByLabelText('Hex color code')
+    await expect(hexInput).toBeInTheDocument()
+    await expect(hexInput).toHaveValue('87EBE7')
+
+    await userEvent.clear(hexInput)
+    await userEvent.type(hexInput, 'FF5733')
+    await userEvent.tab()
+
+    await expect(args.onBlur).toHaveBeenCalled()
+  },
 }
 
 export const NumericStepper: Story = {
@@ -155,6 +172,19 @@ export const NumericStepper: Story = {
       />
     )
   },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const input = canvas.getByRole('spinbutton')
+
+    await expect(input).toBeInTheDocument()
+    await expect(input).toHaveValue(20)
+
+    await userEvent.clear(input)
+    await userEvent.type(input, '50')
+    await userEvent.tab()
+
+    await expect(args.onBlur).toHaveBeenCalled()
+  },
 }
 
 export const ShortText: Story = {
@@ -208,6 +238,17 @@ export const ShortText: Story = {
       />
     )
   },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const input = canvas.getByPlaceholderText(/Type something/)
+
+    await expect(input).toBeInTheDocument()
+
+    await userEvent.type(input, 'Hello Figmug UI!')
+    await userEvent.tab()
+
+    await expect(args.onBlur).toHaveBeenCalled()
+  },
 }
 
 export const LongText: Story = {
@@ -259,6 +300,21 @@ export const LongText: Story = {
       />
     )
   },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const textarea = canvas.getByRole('textbox') as HTMLTextAreaElement
+    await expect(textarea).toBeInTheDocument()
+    await expect(textarea).toHaveValue('')
+
+    await userEvent.type(textarea, 'Line 1{Enter}Line 2{Enter}Line 3')
+    await userEvent.tab()
+
+    await expect(args.onBlur).toHaveBeenCalled()
+    await expect(textarea.value).toContain('Line 1')
+    await expect(textarea.value).toContain('Line 2')
+    await expect(textarea.value).toContain('Line 3')
+  },
 }
 
 export const CodeSnippet: Story = {
@@ -282,5 +338,13 @@ export const CodeSnippet: Story = {
     min: { control: false },
     max: { control: false },
     step: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const codeTextarea = canvas.getByRole('textbox')
+    await expect(codeTextarea).toBeInTheDocument()
+
+    await expect(codeTextarea).toHaveAttribute('readonly')
   },
 }

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, userEvent, within } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
 import SimpleSlider from '@components/inputs/simple-slider/SimpleSlider'
 
@@ -66,5 +66,24 @@ export const AgeSelect: Story = {
         onChange={onChange}
       />
     )
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const slider = canvas.getByRole('slider')
+    await expect(slider).toBeInTheDocument()
+    await expect(slider).toHaveAttribute('aria-valuenow', '25')
+    await expect(slider).toHaveAttribute('aria-valuemin', '10')
+    await expect(slider).toHaveAttribute('aria-valuemax', '90')
+
+    const label = canvas.getByText('Age')
+    await expect(label).toBeInTheDocument()
+
+    slider.focus()
+    await userEvent.keyboard('{ArrowRight}')
+    await userEvent.keyboard('{ArrowRight}')
+    await userEvent.keyboard('{ArrowRight}')
+
+    await expect(args.onChange).toHaveBeenCalled()
   },
 }

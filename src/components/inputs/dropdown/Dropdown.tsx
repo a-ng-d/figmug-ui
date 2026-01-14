@@ -449,10 +449,6 @@ export default class Dropdown extends React.Component<
           (isDisabled || isBlocked) && 'select-menu--disabled',
         ])}
         ref={this.selectMenuRef}
-        role="combobox"
-        aria-expanded={isMenuOpen}
-        aria-haspopup="listbox"
-        aria-controls={`${id}-listbox`}
       >
         <button
           role="combobox"
@@ -461,8 +457,10 @@ export default class Dropdown extends React.Component<
             isMenuOpen && 'select-menu__button--active',
           ])}
           disabled={isDisabled || isBlocked}
-          aria-expanded={isMenuOpen}
-          aria-controls={`${id}-listbox`}
+          aria-expanded={isMenuOpen ? 'true' : 'false'}
+          {...((isMenuOpen && (containerId === undefined ? this.state.isMenuVisible : true)) && { 'aria-controls': `${id}-menu` })}
+          aria-label={`Select option: ${this.findSelectedOption(options)}`}
+          aria-haspopup="menu"
           onKeyDown={(e) => {
             if (
               e.key === ' ' ||
@@ -525,8 +523,7 @@ export default class Dropdown extends React.Component<
             return (
               <div
                 className="floating-menu"
-                role="listbox"
-                id={`${id}-listbox`}
+                id={`${id}-menu`}
                 style={{
                   position: 'absolute',
                   zIndex: 99,
