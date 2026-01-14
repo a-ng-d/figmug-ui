@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { useArgs } from '@storybook/client-api'
+import { useArgs } from 'storybook/preview-api'
 import * as ListStories from '@stories/lists/List.stories'
 import figma from '@figma/code-connect'
 import Dropdown from '@components/inputs/dropdown/Dropdown'

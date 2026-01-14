@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { useArgs } from 'storybook/internal/preview-api'
 import { useRef } from 'react'
-import { useArgs } from '@storybook/client-api'
 import Drawer from '@components/slots/drawer/Drawer'
 import Button from '@components/actions/button/Button'
 

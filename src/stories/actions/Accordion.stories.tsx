@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
-import { useArgs } from '@storybook/client-api'
+import { useArgs } from 'storybook/preview-api'
 import * as InputStory from '@stories/inputs/Input.stories'
 import * as TitleStory from '@stories/assets/SectionTitle.stories'
 import Input from '@components/inputs/input/Input'
