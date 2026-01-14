@@ -1,21 +1,31 @@
 {
   "activity": {},
   "announcedBuild": {
-    "id": "68e1ab0d3d95a1d974373d4d",
-    "number": 459,
+    "id": "6967d8a7572d514659dd20ec",
+    "number": 518,
     "status": "PUBLISHED",
     "autoAcceptChanges": false,
+    "features": {
+      "uiTests": true,
+      "uiReview": true,
+      "isReactNativeApp": null
+    },
     "app": {
       "id": "663a220bcc5dda79791c430e",
       "turboSnapAvailability": "UNUSED"
     },
-    "storybookUrl": "https://663a220bcc5dda79791c430e-atxfkftvkm.chromatic.com/"
+    "storybookUrl": "https://663a220bcc5dda79791c430e-pkzqvswazs.chromatic.com/"
   },
   "build": {
-    "id": "68e1ab0d3d95a1d974373d4d",
-    "number": 459,
+    "id": "6967d8a7572d514659dd20ec",
+    "number": 518,
     "status": "PENDING",
     "autoAcceptChanges": false,
+    "features": {
+      "uiTests": true,
+      "uiReview": true,
+      "isReactNativeApp": null
+    },
     "app": {
       "manageUrl": "https://www.chromatic.com/manage?appId=663a220bcc5dda79791c430e",
       "setupUrl": "https://www.chromatic.com/setup?appId=663a220bcc5dda79791c430e",
@@ -28,26 +38,22 @@
         "provider": "github"
       }
     },
-    "storybookUrl": "https://663a220bcc5dda79791c430e-atxfkftvkm.chromatic.com/",
-    "specCount": 97,
-    "componentCount": 36,
-    "testCount": 97,
-    "changeCount": 28,
+    "storybookUrl": "https://663a220bcc5dda79791c430e-pkzqvswazs.chromatic.com/",
+    "specCount": 112,
+    "componentCount": 38,
+    "testCount": 112,
+    "changeCount": 3,
     "errorCount": 0,
-    "actualTestCount": 97,
-    "actualCaptureCount": 97,
+    "actualTestCount": 112,
+    "actualCaptureCount": 112,
     "inheritedCaptureCount": 0,
     "interactionTestFailuresCount": 0,
-    "webUrl": "https://www.chromatic.com/build?appId=663a220bcc5dda79791c430e&number=459",
+    "webUrl": "https://www.chromatic.com/build?appId=663a220bcc5dda79791c430e&number=518",
     "browsers": [
       {
         "browser": "chrome"
       }
     ],
-    "features": {
-      "uiTests": true,
-      "uiReview": true
-    },
     "turboSnapEnabled": null,
     "wasLimited": false,
     "tests": [
@@ -631,7 +637,7 @@
         "spec": {
           "name": "Single Vendor",
           "component": {
-            "name": "Components/Dialogs/Consent",
+            "name": "Patterns/Dialogs/Consent",
             "displayName": "Consent"
           }
         },
@@ -647,7 +653,7 @@
         "spec": {
           "name": "Several Vendors",
           "component": {
-            "name": "Components/Dialogs/Consent",
+            "name": "Patterns/Dialogs/Consent",
             "displayName": "Consent"
           }
         },
@@ -663,7 +669,7 @@
         "spec": {
           "name": "Single Message",
           "component": {
-            "name": "Components/Dialogs/Dialog",
+            "name": "Patterns/Dialogs/Dialog",
             "displayName": "Dialog"
           }
         },
@@ -679,7 +685,7 @@
         "spec": {
           "name": "Multiple Message",
           "component": {
-            "name": "Components/Dialogs/Dialog",
+            "name": "Patterns/Dialogs/Dialog",
             "displayName": "Dialog"
           }
         },
@@ -695,7 +701,7 @@
         "spec": {
           "name": "Form",
           "component": {
-            "name": "Components/Dialogs/Dialog",
+            "name": "Patterns/Dialogs/Dialog",
             "displayName": "Dialog"
           }
         },
@@ -711,7 +717,7 @@
         "spec": {
           "name": "Delete Dialog",
           "component": {
-            "name": "Components/Dialogs/Dialog",
+            "name": "Patterns/Dialogs/Dialog",
             "displayName": "Dialog"
           }
         },
@@ -727,7 +733,7 @@
         "spec": {
           "name": "Loading Dialog",
           "component": {
-            "name": "Components/Dialogs/Dialog",
+            "name": "Patterns/Dialogs/Dialog",
             "displayName": "Dialog"
           }
         },
@@ -743,7 +749,7 @@
         "spec": {
           "name": "Dialog On Error",
           "component": {
-            "name": "Components/Dialogs/Dialog",
+            "name": "Patterns/Dialogs/Dialog",
             "displayName": "Dialog"
           }
         },
@@ -1431,7 +1437,71 @@
         "spec": {
           "name": "Default",
           "component": {
-            "name": "Components/Slots/Bar",
+            "name": "Patterns/Bar",
+            "displayName": "Bar"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Truncate Left",
+          "component": {
+            "name": "Patterns/Bar",
+            "displayName": "Bar"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Truncate Right",
+          "component": {
+            "name": "Patterns/Bar",
+            "displayName": "Bar"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Truncate Solo",
+          "component": {
+            "name": "Patterns/Bar",
+            "displayName": "Bar"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Truncate Both",
+          "component": {
+            "name": "Patterns/Bar",
             "displayName": "Bar"
           }
         },
@@ -1447,7 +1517,7 @@
         "spec": {
           "name": "Default",
           "component": {
-            "name": "Components/Slots/Drawer",
+            "name": "Patterns/Drawer",
             "displayName": "Drawer"
           }
         },
@@ -1463,8 +1533,56 @@
         "spec": {
           "name": "Text Input Item",
           "component": {
-            "name": "Components/Slots/Form Item",
+            "name": "Patterns/Form Item",
             "displayName": "Form Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Simple Text Item",
+          "component": {
+            "name": "Patterns/Form Item",
+            "displayName": "Form Item"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Two Columns",
+          "component": {
+            "name": "Patterns/Layout",
+            "displayName": "Layout"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Three Columns",
+          "component": {
+            "name": "Patterns/Layout",
+            "displayName": "Layout"
           }
         },
         "parameters": {
@@ -1479,7 +1597,7 @@
         "spec": {
           "name": "Default",
           "component": {
-            "name": "Components/Slots/List",
+            "name": "Patterns/List",
             "displayName": "List"
           }
         },
@@ -1495,7 +1613,7 @@
         "spec": {
           "name": "Message",
           "component": {
-            "name": "Components/Slots/List",
+            "name": "Patterns/List",
             "displayName": "List"
           }
         },
@@ -1511,7 +1629,7 @@
         "spec": {
           "name": "Loading",
           "component": {
-            "name": "Components/Slots/List",
+            "name": "Patterns/List",
             "displayName": "List"
           }
         },
@@ -1527,7 +1645,7 @@
         "spec": {
           "name": "Default",
           "component": {
-            "name": "Components/Slots/Section",
+            "name": "Patterns/Section",
             "displayName": "Section"
           }
         },
@@ -1543,7 +1661,7 @@
         "spec": {
           "name": "Color Item",
           "component": {
-            "name": "Components/Slots/Simple Item",
+            "name": "Patterns/Simple Item",
             "displayName": "Simple Item"
           }
         },
@@ -1602,12 +1720,140 @@
         "mode": {
           "name": "1200px"
         }
+      },
+      {
+        "spec": {
+          "name": "Single Line Bottom",
+          "component": {
+            "name": "Components/Tags/Tooltip",
+            "displayName": "Tooltip"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Single Line Top",
+          "component": {
+            "name": "Components/Tags/Tooltip",
+            "displayName": "Tooltip"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Multi Line Bottom",
+          "component": {
+            "name": "Components/Tags/Tooltip",
+            "displayName": "Tooltip"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Multi Line Top",
+          "component": {
+            "name": "Components/Tags/Tooltip",
+            "displayName": "Tooltip"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "With Image",
+          "component": {
+            "name": "Components/Tags/Tooltip",
+            "displayName": "Tooltip"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Long Text",
+          "component": {
+            "name": "Components/Tags/Tooltip",
+            "displayName": "Tooltip"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Edge Position",
+          "component": {
+            "name": "Components/Tags/Tooltip",
+            "displayName": "Tooltip"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "All Tooltips",
+          "component": {
+            "name": "Components/Tags/Tooltip",
+            "displayName": "Tooltip"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
       }
     ],
     "inProgressCount": 0,
-    "completedAt": 1759619951102
+    "completedAt": 1768413470038
   },
-  "buildCommand": "npm run build-storybook -- --output-dir=/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--27760-m7coMkOCUcop",
+  "buildCommand": "npm run build-storybook -- --output-dir=/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--52892-cnXzTh1euiGh",
   "buildLogFile": "/Users/a_ng_d/DEV/figmug-ui/build-storybook.log",
   "configuration": {
     "configFile": "chromatic.config.json",
@@ -1647,444 +1893,479 @@
         "knownAs": "addon-visual-tests-assets/visual-test-illustration.mp4"
       },
       {
-        "pathname": "assets/Accordion-Dr66zEdh.css",
-        "contentLength": 5407,
-        "knownAs": "assets/Accordion-Dr66zEdh.css"
+        "pathname": "assets/Accordion-D-ptxr3Z.css",
+        "contentLength": 6500,
+        "knownAs": "assets/Accordion-D-ptxr3Z.css"
       },
       {
-        "pathname": "assets/Accordion.stories-2NzpOZ5d.js",
-        "contentLength": 3267,
-        "knownAs": "assets/Accordion.stories-2NzpOZ5d.js"
+        "pathname": "assets/Accordion.stories-DPoPV249.js",
+        "contentLength": 3532,
+        "knownAs": "assets/Accordion.stories-DPoPV249.js"
       },
       {
-        "pathname": "assets/ActionsItem-B9DfHBES.css",
-        "contentLength": 5532,
-        "knownAs": "assets/ActionsItem-B9DfHBES.css"
+        "pathname": "assets/ActionsItem-BQG45kiw.js",
+        "contentLength": 1458,
+        "knownAs": "assets/ActionsItem-BQG45kiw.js"
       },
       {
-        "pathname": "assets/ActionsItem-gmuQh1EG.js",
-        "contentLength": 1468,
-        "knownAs": "assets/ActionsItem-gmuQh1EG.js"
+        "pathname": "assets/ActionsItem-DwFQtIGY.css",
+        "contentLength": 6865,
+        "knownAs": "assets/ActionsItem-DwFQtIGY.css"
       },
       {
-        "pathname": "assets/ActionsItem.stories-Ddz4a1Gz.js",
-        "contentLength": 5367,
-        "knownAs": "assets/ActionsItem.stories-Ddz4a1Gz.js"
+        "pathname": "assets/ActionsItem.stories-Daj7QqTB.js",
+        "contentLength": 5441,
+        "knownAs": "assets/ActionsItem.stories-Daj7QqTB.js"
       },
       {
-        "pathname": "assets/Avatar-D574redX.css",
-        "contentLength": 785,
-        "knownAs": "assets/Avatar-D574redX.css"
+        "pathname": "assets/ActionsList-Fr62Rg_I.css",
+        "contentLength": 32355,
+        "knownAs": "assets/ActionsList-Fr62Rg_I.css"
       },
       {
-        "pathname": "assets/Avatar-DUIocDzj.js",
+        "pathname": "assets/ActionsList-mQ9-6uw5.js",
+        "contentLength": 7992,
+        "knownAs": "assets/ActionsList-mQ9-6uw5.js"
+      },
+      {
+        "pathname": "assets/Avatar-CBNZOOay.js",
         "contentLength": 651,
-        "knownAs": "assets/Avatar-DUIocDzj.js"
+        "knownAs": "assets/Avatar-CBNZOOay.js"
       },
       {
-        "pathname": "assets/Avatar.stories-CzDgIy-J.js",
-        "contentLength": 1256,
-        "knownAs": "assets/Avatar.stories-CzDgIy-J.js"
+        "pathname": "assets/Avatar-DwjGxSH7.css",
+        "contentLength": 955,
+        "knownAs": "assets/Avatar-DwjGxSH7.css"
       },
       {
-        "pathname": "assets/Bar-BbfIYc-b.js",
-        "contentLength": 1183,
-        "knownAs": "assets/Bar-BbfIYc-b.js"
+        "pathname": "assets/Avatar.stories-bI2xdkZg.js",
+        "contentLength": 1293,
+        "knownAs": "assets/Avatar.stories-bI2xdkZg.js"
       },
       {
-        "pathname": "assets/Bar-CAA-NJFe.css",
-        "contentLength": 2424,
-        "knownAs": "assets/Bar-CAA-NJFe.css"
-      },
-      {
-        "pathname": "assets/Bar.stories-DyzEJdbA.js",
-        "contentLength": 762,
-        "knownAs": "assets/Bar.stories-DyzEJdbA.js"
-      },
-      {
-        "pathname": "assets/Button-BWqghIAP.css",
-        "contentLength": 87893,
-        "knownAs": "assets/Button-BWqghIAP.css"
-      },
-      {
-        "pathname": "assets/Button-DsL-_spA.js",
-        "contentLength": 3749,
-        "knownAs": "assets/Button-DsL-_spA.js"
-      },
-      {
-        "pathname": "assets/Button.stories-CtaJAAgT.js",
-        "contentLength": 8749,
-        "knownAs": "assets/Button.stories-CtaJAAgT.js"
-      },
-      {
-        "pathname": "assets/Card-CMEZwrJD.css",
-        "contentLength": 5410,
-        "knownAs": "assets/Card-CMEZwrJD.css"
-      },
-      {
-        "pathname": "assets/Card.stories-BTBfi0r9.js",
-        "contentLength": 5426,
-        "knownAs": "assets/Card.stories-BTBfi0r9.js"
-      },
-      {
-        "pathname": "assets/Chip-goHBVq4y.css",
-        "contentLength": 8957,
-        "knownAs": "assets/Chip-goHBVq4y.css"
-      },
-      {
-        "pathname": "assets/Chip-vfXwv8Px.js",
-        "contentLength": 2210,
-        "knownAs": "assets/Chip-vfXwv8Px.js"
-      },
-      {
-        "pathname": "assets/Chip.stories-C2LdC8_S.js",
-        "contentLength": 1741,
-        "knownAs": "assets/Chip.stories-C2LdC8_S.js"
-      },
-      {
-        "pathname": "assets/ColorChip-6JcwB7Ux.js",
-        "contentLength": 679,
-        "knownAs": "assets/ColorChip-6JcwB7Ux.js"
-      },
-      {
-        "pathname": "assets/ColorChip-BNuKa_wH.css",
-        "contentLength": 979,
-        "knownAs": "assets/ColorChip-BNuKa_wH.css"
-      },
-      {
-        "pathname": "assets/ColorItem-CVJPTbIO.css",
-        "contentLength": 1387,
-        "knownAs": "assets/ColorItem-CVJPTbIO.css"
-      },
-      {
-        "pathname": "assets/ColorItem.stories-DVj56Uws.js",
-        "contentLength": 1583,
-        "knownAs": "assets/ColorItem.stories-DVj56Uws.js"
-      },
-      {
-        "pathname": "assets/Consent-C3hY4tlF.css",
-        "contentLength": 3826,
-        "knownAs": "assets/Consent-C3hY4tlF.css"
-      },
-      {
-        "pathname": "assets/Consent.stories-D_m_7VTe.js",
-        "contentLength": 11536,
-        "knownAs": "assets/Consent.stories-D_m_7VTe.js"
-      },
-      {
-        "pathname": "assets/Dialog-sKxmYmbA.css",
-        "contentLength": 11752,
-        "knownAs": "assets/Dialog-sKxmYmbA.css"
-      },
-      {
-        "pathname": "assets/Dialog.stories-B4JjAqVr.js",
-        "contentLength": 10770,
-        "knownAs": "assets/Dialog.stories-B4JjAqVr.js"
-      },
-      {
-        "pathname": "assets/DraggableItem-CHpLwmxC.css",
-        "contentLength": 8696,
-        "knownAs": "assets/DraggableItem-CHpLwmxC.css"
-      },
-      {
-        "pathname": "assets/DraggableItem-DZSmr-zi.js",
-        "contentLength": 4221,
-        "knownAs": "assets/DraggableItem-DZSmr-zi.js"
-      },
-      {
-        "pathname": "assets/DraggableItem.stories-BQu4t2vr.js",
-        "contentLength": 4454,
-        "knownAs": "assets/DraggableItem.stories-BQu4t2vr.js"
-      },
-      {
-        "pathname": "assets/Drawer-BMsWMYv4.css",
-        "contentLength": 1504,
-        "knownAs": "assets/Drawer-BMsWMYv4.css"
-      },
-      {
-        "pathname": "assets/Drawer.stories-Dve2nsde.js",
-        "contentLength": 5865,
-        "knownAs": "assets/Drawer.stories-Dve2nsde.js"
-      },
-      {
-        "pathname": "assets/Dropdown-CWy8Wp3R.css",
-        "contentLength": 10058,
-        "knownAs": "assets/Dropdown-CWy8Wp3R.css"
-      },
-      {
-        "pathname": "assets/Dropdown.stories-CDpTpRGa.js",
-        "contentLength": 14299,
-        "knownAs": "assets/Dropdown.stories-CDpTpRGa.js"
-      },
-      {
-        "pathname": "assets/Dropzone-5SaFQbLp.css",
-        "contentLength": 4088,
-        "knownAs": "assets/Dropzone-5SaFQbLp.css"
-      },
-      {
-        "pathname": "assets/Dropzone.stories-CadsIXme.js",
-        "contentLength": 4518,
-        "knownAs": "assets/Dropzone.stories-CadsIXme.js"
-      },
-      {
-        "pathname": "assets/FormItem-CrvbXoTf.js",
-        "contentLength": 1038,
-        "knownAs": "assets/FormItem-CrvbXoTf.js"
-      },
-      {
-        "pathname": "assets/FormItem-D7mhBfWR.css",
-        "contentLength": 6795,
-        "knownAs": "assets/FormItem-D7mhBfWR.css"
-      },
-      {
-        "pathname": "assets/Formitem.stories-C9dBixgK.js",
-        "contentLength": 1276,
-        "knownAs": "assets/Formitem.stories-C9dBixgK.js"
-      },
-      {
-        "pathname": "assets/Icon-DQfiZFUJ.css",
-        "contentLength": 263452,
-        "knownAs": "assets/Icon-DQfiZFUJ.css"
-      },
-      {
-        "pathname": "assets/Icon-DsYVMpye.js",
-        "contentLength": 5811,
-        "knownAs": "assets/Icon-DsYVMpye.js"
-      },
-      {
-        "pathname": "assets/Icon.stories-CevD7XUg.js",
-        "contentLength": 3712,
-        "knownAs": "assets/Icon.stories-CevD7XUg.js"
-      },
-      {
-        "pathname": "assets/IconChip-CmQBgUXH.js",
-        "contentLength": 728,
-        "knownAs": "assets/IconChip-CmQBgUXH.js"
-      },
-      {
-        "pathname": "assets/IconChip-vUYspul-.css",
-        "contentLength": 492,
-        "knownAs": "assets/IconChip-vUYspul-.css"
-      },
-      {
-        "pathname": "assets/Input-CeUwiGrB.js",
-        "contentLength": 13604,
-        "knownAs": "assets/Input-CeUwiGrB.js"
-      },
-      {
-        "pathname": "assets/Input-CgLGNCnF.css",
-        "contentLength": 35881,
-        "knownAs": "assets/Input-CgLGNCnF.css"
-      },
-      {
-        "pathname": "assets/Input.stories-DpCXMu00.js",
-        "contentLength": 9403,
-        "knownAs": "assets/Input.stories-DpCXMu00.js"
-      },
-      {
-        "pathname": "assets/InputsBar-BSvW5oV7.css",
-        "contentLength": 3731,
-        "knownAs": "assets/InputsBar-BSvW5oV7.css"
-      },
-      {
-        "pathname": "assets/InputsBar.stories-DjSQIEEs.js",
-        "contentLength": 1307,
-        "knownAs": "assets/InputsBar.stories-DjSQIEEs.js"
-      },
-      {
-        "pathname": "assets/KeyboardShortcutItem-DiA9LYqY.css",
-        "contentLength": 6161,
-        "knownAs": "assets/KeyboardShortcutItem-DiA9LYqY.css"
-      },
-      {
-        "pathname": "assets/KeyboardShortcutItem.stories-Bea4JH6V.js",
-        "contentLength": 2234,
-        "knownAs": "assets/KeyboardShortcutItem.stories-Bea4JH6V.js"
-      },
-      {
-        "pathname": "assets/Knob-BPfZi0db.js",
-        "contentLength": 2897,
-        "knownAs": "assets/Knob-BPfZi0db.js"
-      },
-      {
-        "pathname": "assets/Knob-CQ4WO8QK.css",
-        "contentLength": 15401,
-        "knownAs": "assets/Knob-CQ4WO8QK.css"
-      },
-      {
-        "pathname": "assets/List-CMhlktPD.css",
-        "contentLength": 1840,
-        "knownAs": "assets/List-CMhlktPD.css"
-      },
-      {
-        "pathname": "assets/List-DLHrNr83.css",
-        "contentLength": 25987,
-        "knownAs": "assets/List-DLHrNr83.css"
-      },
-      {
-        "pathname": "assets/List.stories-BzZbABkc.js",
-        "contentLength": 5188,
-        "knownAs": "assets/List.stories-BzZbABkc.js"
-      },
-      {
-        "pathname": "assets/List.stories-CHivsOva.js",
-        "contentLength": 15470,
-        "knownAs": "assets/List.stories-CHivsOva.js"
-      },
-      {
-        "pathname": "assets/MembersList-DSDR68FL.css",
-        "contentLength": 2345,
-        "knownAs": "assets/MembersList-DSDR68FL.css"
-      },
-      {
-        "pathname": "assets/MembersList.stories-C2TiNssq.js",
-        "contentLength": 3047,
-        "knownAs": "assets/MembersList.stories-C2TiNssq.js"
-      },
-      {
-        "pathname": "assets/Menu-CCMzxXvz.css",
-        "contentLength": 1241,
-        "knownAs": "assets/Menu-CCMzxXvz.css"
-      },
-      {
-        "pathname": "assets/Menu.stories-BDEyWflJ.js",
-        "contentLength": 698047,
-        "knownAs": "assets/Menu.stories-BDEyWflJ.js"
-      },
-      {
-        "pathname": "assets/Message-CUrJW_-V.css",
-        "contentLength": 5210,
-        "knownAs": "assets/Message-CUrJW_-V.css"
-      },
-      {
-        "pathname": "assets/Message-DL1N4aUg.js",
-        "contentLength": 1782,
-        "knownAs": "assets/Message-DL1N4aUg.js"
-      },
-      {
-        "pathname": "assets/Message.stories-62Te4_wl.js",
-        "contentLength": 2016,
-        "knownAs": "assets/Message.stories-62Te4_wl.js"
-      },
-      {
-        "pathname": "assets/MultipleSlider-BstOg5tu.css",
-        "contentLength": 4108,
-        "knownAs": "assets/MultipleSlider-BstOg5tu.css"
-      },
-      {
-        "pathname": "assets/MultipleSlider.stories-1Z0U2qYz.js",
-        "contentLength": 12650,
-        "knownAs": "assets/MultipleSlider.stories-1Z0U2qYz.js"
-      },
-      {
-        "pathname": "assets/Notification-DdPNi5TA.css",
-        "contentLength": 1243,
-        "knownAs": "assets/Notification-DdPNi5TA.css"
-      },
-      {
-        "pathname": "assets/Notification.stories-BKQVwOlV.js",
-        "contentLength": 1792,
-        "knownAs": "assets/Notification.stories-BKQVwOlV.js"
-      },
-      {
-        "pathname": "assets/Section-DXinz_v2.css",
-        "contentLength": 4333,
-        "knownAs": "assets/Section-DXinz_v2.css"
-      },
-      {
-        "pathname": "assets/Section.stories-D8ugE2Qv.js",
-        "contentLength": 2439,
-        "knownAs": "assets/Section.stories-D8ugE2Qv.js"
-      },
-      {
-        "pathname": "assets/SectionTitle-Ce5YVudT.js",
-        "contentLength": 555,
-        "knownAs": "assets/SectionTitle-Ce5YVudT.js"
-      },
-      {
-        "pathname": "assets/SectionTitle-UUSXUwlg.css",
-        "contentLength": 3435,
-        "knownAs": "assets/SectionTitle-UUSXUwlg.css"
-      },
-      {
-        "pathname": "assets/SectionTitle.stories-UwWy-H9B.js",
-        "contentLength": 991,
-        "knownAs": "assets/SectionTitle.stories-UwWy-H9B.js"
-      },
-      {
-        "pathname": "assets/Select-BJmjmSu-.js",
-        "contentLength": 3265,
-        "knownAs": "assets/Select-BJmjmSu-.js"
-      },
-      {
-        "pathname": "assets/Select-DqthswtF.css",
-        "contentLength": 39429,
-        "knownAs": "assets/Select-DqthswtF.css"
-      },
-      {
-        "pathname": "assets/Select.stories-BZug3bl3.js",
-        "contentLength": 9298,
-        "knownAs": "assets/Select.stories-BZug3bl3.js"
-      },
-      {
-        "pathname": "assets/SemanticMessage-BidMGw9M.js",
-        "contentLength": 867,
-        "knownAs": "assets/SemanticMessage-BidMGw9M.js"
-      },
-      {
-        "pathname": "assets/SemanticMessage-CITttpej.css",
-        "contentLength": 14195,
-        "knownAs": "assets/SemanticMessage-CITttpej.css"
-      },
-      {
-        "pathname": "assets/SemanticMessage.stories-DHyTsT2x.js",
-        "contentLength": 1807,
-        "knownAs": "assets/SemanticMessage.stories-DHyTsT2x.js"
-      },
-      {
-        "pathname": "assets/SimpleItem-CAS8orMg.js",
-        "contentLength": 1373,
-        "knownAs": "assets/SimpleItem-CAS8orMg.js"
-      },
-      {
-        "pathname": "assets/SimpleItem-CqPNGmYr.css",
-        "contentLength": 5237,
-        "knownAs": "assets/SimpleItem-CqPNGmYr.css"
-      },
-      {
-        "pathname": "assets/SimpleItem.stories-CDTh40z1.js",
-        "contentLength": 1244,
-        "knownAs": "assets/SimpleItem.stories-CDTh40z1.js"
-      },
-      {
-        "pathname": "assets/SimpleSlider-ChF16MjI.css",
+        "pathname": "assets/Bar-Bvuq-Kn0.css",
         "contentLength": 3789,
-        "knownAs": "assets/SimpleSlider-ChF16MjI.css"
+        "knownAs": "assets/Bar-Bvuq-Kn0.css"
       },
       {
-        "pathname": "assets/SimpleSlider.stories-BbnpGf9e.js",
-        "contentLength": 4854,
-        "knownAs": "assets/SimpleSlider.stories-BbnpGf9e.js"
+        "pathname": "assets/Bar-CPbhk0Tw.js",
+        "contentLength": 1312,
+        "knownAs": "assets/Bar-CPbhk0Tw.js"
       },
       {
-        "pathname": "assets/SortableList-pDD7EZXB.css",
-        "contentLength": 1400,
-        "knownAs": "assets/SortableList-pDD7EZXB.css"
+        "pathname": "assets/Bar.stories-DDiSGTkZ.js",
+        "contentLength": 4070,
+        "knownAs": "assets/Bar.stories-DDiSGTkZ.js"
       },
       {
-        "pathname": "assets/SortableList.stories-CVJngmsv.js",
-        "contentLength": 10587,
-        "knownAs": "assets/SortableList.stories-CVJngmsv.js"
+        "pathname": "assets/Button-B-h5Nx-x.js",
+        "contentLength": 4829,
+        "knownAs": "assets/Button-B-h5Nx-x.js"
       },
       {
-        "pathname": "assets/Tabs-1fy4pW2W.css",
-        "contentLength": 28317,
-        "knownAs": "assets/Tabs-1fy4pW2W.css"
+        "pathname": "assets/Button-BKkz9B6W.css",
+        "contentLength": 107579,
+        "knownAs": "assets/Button-BKkz9B6W.css"
       },
       {
-        "pathname": "assets/Tabs.stories-DRwvW8Hm.js",
+        "pathname": "assets/Button.stories-Dd0p0dM9.js",
+        "contentLength": 8790,
+        "knownAs": "assets/Button.stories-Dd0p0dM9.js"
+      },
+      {
+        "pathname": "assets/Card-kRteE-je.css",
+        "contentLength": 6633,
+        "knownAs": "assets/Card-kRteE-je.css"
+      },
+      {
+        "pathname": "assets/Card.stories-DVAp981i.js",
+        "contentLength": 5508,
+        "knownAs": "assets/Card.stories-DVAp981i.js"
+      },
+      {
+        "pathname": "assets/Chip-BXye3nRh.css",
+        "contentLength": 9689,
+        "knownAs": "assets/Chip-BXye3nRh.css"
+      },
+      {
+        "pathname": "assets/Chip-vKUGkIDH.js",
+        "contentLength": 1253,
+        "knownAs": "assets/Chip-vKUGkIDH.js"
+      },
+      {
+        "pathname": "assets/Chip.stories-BwLW2Off.js",
+        "contentLength": 2008,
+        "knownAs": "assets/Chip.stories-BwLW2Off.js"
+      },
+      {
+        "pathname": "assets/ColorChip-B0J_ixrH.js",
+        "contentLength": 679,
+        "knownAs": "assets/ColorChip-B0J_ixrH.js"
+      },
+      {
+        "pathname": "assets/ColorChip-Bj4drYDE.css",
+        "contentLength": 1199,
+        "knownAs": "assets/ColorChip-Bj4drYDE.css"
+      },
+      {
+        "pathname": "assets/ColorItem-DoTVlW3G.css",
+        "contentLength": 1690,
+        "knownAs": "assets/ColorItem-DoTVlW3G.css"
+      },
+      {
+        "pathname": "assets/ColorItem.stories-CxApJpYB.js",
+        "contentLength": 1746,
+        "knownAs": "assets/ColorItem.stories-CxApJpYB.js"
+      },
+      {
+        "pathname": "assets/Consent-CohcxN0R.css",
+        "contentLength": 4605,
+        "knownAs": "assets/Consent-CohcxN0R.css"
+      },
+      {
+        "pathname": "assets/Consent.stories-DjAH8sQd.js",
+        "contentLength": 11608,
+        "knownAs": "assets/Consent.stories-DjAH8sQd.js"
+      },
+      {
+        "pathname": "assets/Dialog-CfuDyEHr.css",
+        "contentLength": 14381,
+        "knownAs": "assets/Dialog-CfuDyEHr.css"
+      },
+      {
+        "pathname": "assets/Dialog.stories-CjPgSdFS.js",
+        "contentLength": 10842,
+        "knownAs": "assets/Dialog.stories-CjPgSdFS.js"
+      },
+      {
+        "pathname": "assets/DraggableItem-BWyD2Owv.js",
+        "contentLength": 4221,
+        "knownAs": "assets/DraggableItem-BWyD2Owv.js"
+      },
+      {
+        "pathname": "assets/DraggableItem-DtVt6JcH.css",
+        "contentLength": 10398,
+        "knownAs": "assets/DraggableItem-DtVt6JcH.css"
+      },
+      {
+        "pathname": "assets/DraggableItem.stories-CZg0W7pD.js",
+        "contentLength": 4528,
+        "knownAs": "assets/DraggableItem.stories-CZg0W7pD.js"
+      },
+      {
+        "pathname": "assets/Drawer-ALyE93rL.js",
+        "contentLength": 3156,
+        "knownAs": "assets/Drawer-ALyE93rL.js"
+      },
+      {
+        "pathname": "assets/Drawer-Bx7F9kX-.css",
+        "contentLength": 1815,
+        "knownAs": "assets/Drawer-Bx7F9kX-.css"
+      },
+      {
+        "pathname": "assets/Drawer.stories-BV6zYg4w.js",
+        "contentLength": 2865,
+        "knownAs": "assets/Drawer.stories-BV6zYg4w.js"
+      },
+      {
+        "pathname": "assets/Dropdown-H5dMy_gn.css",
+        "contentLength": 12289,
+        "knownAs": "assets/Dropdown-H5dMy_gn.css"
+      },
+      {
+        "pathname": "assets/Dropdown.stories-8Vbn38Lb.js",
+        "contentLength": 16200,
+        "knownAs": "assets/Dropdown.stories-8Vbn38Lb.js"
+      },
+      {
+        "pathname": "assets/Dropzone-GnY-SYf2.css",
+        "contentLength": 6555,
+        "knownAs": "assets/Dropzone-GnY-SYf2.css"
+      },
+      {
+        "pathname": "assets/Dropzone.stories-DX4ZgL0J.js",
+        "contentLength": 4621,
+        "knownAs": "assets/Dropzone.stories-DX4ZgL0J.js"
+      },
+      {
+        "pathname": "assets/FormItem-Dm5GtQ7f.css",
+        "contentLength": 8670,
+        "knownAs": "assets/FormItem-Dm5GtQ7f.css"
+      },
+      {
+        "pathname": "assets/FormItem-YG1dxCF3.js",
+        "contentLength": 1079,
+        "knownAs": "assets/FormItem-YG1dxCF3.js"
+      },
+      {
+        "pathname": "assets/Formitem.stories-DX1Rw7p4.js",
+        "contentLength": 2220,
+        "knownAs": "assets/Formitem.stories-DX1Rw7p4.js"
+      },
+      {
+        "pathname": "assets/Icon-DvrP2pSW.js",
+        "contentLength": 5811,
+        "knownAs": "assets/Icon-DvrP2pSW.js"
+      },
+      {
+        "pathname": "assets/Icon-gd8MHZwP.css",
+        "contentLength": 325931,
+        "knownAs": "assets/Icon-gd8MHZwP.css"
+      },
+      {
+        "pathname": "assets/Icon.stories-C6UB2tlu.js",
+        "contentLength": 3749,
+        "knownAs": "assets/Icon.stories-C6UB2tlu.js"
+      },
+      {
+        "pathname": "assets/IconChip-CNlq9s7A.js",
+        "contentLength": 728,
+        "knownAs": "assets/IconChip-CNlq9s7A.js"
+      },
+      {
+        "pathname": "assets/IconChip-DACI21Dl.css",
+        "contentLength": 600,
+        "knownAs": "assets/IconChip-DACI21Dl.css"
+      },
+      {
+        "pathname": "assets/Input-B4FgOnhc.js",
+        "contentLength": 13605,
+        "knownAs": "assets/Input-B4FgOnhc.js"
+      },
+      {
+        "pathname": "assets/Input-DApY0whH.css",
+        "contentLength": 45390,
+        "knownAs": "assets/Input-DApY0whH.css"
+      },
+      {
+        "pathname": "assets/Input.stories-B-9bPoZZ.js",
+        "contentLength": 9805,
+        "knownAs": "assets/Input.stories-B-9bPoZZ.js"
+      },
+      {
+        "pathname": "assets/InputsBar-IFL0LG0t.css",
+        "contentLength": 4487,
+        "knownAs": "assets/InputsBar-IFL0LG0t.css"
+      },
+      {
+        "pathname": "assets/InputsBar.stories-B7zjxB3Z.js",
+        "contentLength": 1381,
+        "knownAs": "assets/InputsBar.stories-B7zjxB3Z.js"
+      },
+      {
+        "pathname": "assets/KeyboardShortcutItem-DAQWiJyu.css",
+        "contentLength": 7713,
+        "knownAs": "assets/KeyboardShortcutItem-DAQWiJyu.css"
+      },
+      {
+        "pathname": "assets/KeyboardShortcutItem.stories-CMrJ0PZx.js",
+        "contentLength": 2271,
+        "knownAs": "assets/KeyboardShortcutItem.stories-CMrJ0PZx.js"
+      },
+      {
+        "pathname": "assets/Knob-CYoSynEG.js",
+        "contentLength": 2897,
+        "knownAs": "assets/Knob-CYoSynEG.js"
+      },
+      {
+        "pathname": "assets/Knob-_vqamK4s.css",
+        "contentLength": 18930,
+        "knownAs": "assets/Knob-_vqamK4s.css"
+      },
+      {
+        "pathname": "assets/Layout-D9J2YSzP.css",
+        "contentLength": 5030,
+        "knownAs": "assets/Layout-D9J2YSzP.css"
+      },
+      {
+        "pathname": "assets/Layout.stories-speTGR8D.js",
+        "contentLength": 5333,
+        "knownAs": "assets/Layout.stories-speTGR8D.js"
+      },
+      {
+        "pathname": "assets/List-BgEPiq5j.css",
+        "contentLength": 3224,
+        "knownAs": "assets/List-BgEPiq5j.css"
+      },
+      {
+        "pathname": "assets/List.stories-CJU-nToF.js",
+        "contentLength": 5254,
+        "knownAs": "assets/List.stories-CJU-nToF.js"
+      },
+      {
+        "pathname": "assets/List.stories-DUsAP_qf.js",
+        "contentLength": 7591,
+        "knownAs": "assets/List.stories-DUsAP_qf.js"
+      },
+      {
+        "pathname": "assets/MembersList-Bs4mSYh1.css",
+        "contentLength": 3561,
+        "knownAs": "assets/MembersList-Bs4mSYh1.css"
+      },
+      {
+        "pathname": "assets/MembersList.stories-B7lMQTAM.js",
+        "contentLength": 3358,
+        "knownAs": "assets/MembersList.stories-B7lMQTAM.js"
+      },
+      {
+        "pathname": "assets/Menu-BSOuRSKc.js",
+        "contentLength": 4803,
+        "knownAs": "assets/Menu-BSOuRSKc.js"
+      },
+      {
+        "pathname": "assets/Menu-Cjpqn47M.css",
+        "contentLength": 1470,
+        "knownAs": "assets/Menu-Cjpqn47M.css"
+      },
+      {
+        "pathname": "assets/Menu.stories-BDZYCltp.js",
+        "contentLength": 5704,
+        "knownAs": "assets/Menu.stories-BDZYCltp.js"
+      },
+      {
+        "pathname": "assets/Message-B1i5pBlJ.css",
+        "contentLength": 6462,
+        "knownAs": "assets/Message-B1i5pBlJ.css"
+      },
+      {
+        "pathname": "assets/Message-C1IVuOJR.js",
+        "contentLength": 1782,
+        "knownAs": "assets/Message-C1IVuOJR.js"
+      },
+      {
+        "pathname": "assets/Message.stories-J2HqnKJG.js",
+        "contentLength": 2053,
+        "knownAs": "assets/Message.stories-J2HqnKJG.js"
+      },
+      {
+        "pathname": "assets/MultipleSlider-hJcDnEIk.css",
+        "contentLength": 5097,
+        "knownAs": "assets/MultipleSlider-hJcDnEIk.css"
+      },
+      {
+        "pathname": "assets/MultipleSlider.stories-CSHzllyw.js",
+        "contentLength": 12724,
+        "knownAs": "assets/MultipleSlider.stories-CSHzllyw.js"
+      },
+      {
+        "pathname": "assets/Notification-BNJ1dd50.css",
+        "contentLength": 1518,
+        "knownAs": "assets/Notification-BNJ1dd50.css"
+      },
+      {
+        "pathname": "assets/Notification.stories-BxAqiuz8.js",
+        "contentLength": 1866,
+        "knownAs": "assets/Notification.stories-BxAqiuz8.js"
+      },
+      {
+        "pathname": "assets/Section-DH3q7A95.css",
+        "contentLength": 5531,
+        "knownAs": "assets/Section-DH3q7A95.css"
+      },
+      {
+        "pathname": "assets/Section-DfZ4LvNo.js",
+        "contentLength": 831,
+        "knownAs": "assets/Section-DfZ4LvNo.js"
+      },
+      {
+        "pathname": "assets/Section.stories-CxIA4YwJ.js",
+        "contentLength": 1812,
+        "knownAs": "assets/Section.stories-CxIA4YwJ.js"
+      },
+      {
+        "pathname": "assets/SectionTitle-D8LCwOBa.js",
+        "contentLength": 555,
+        "knownAs": "assets/SectionTitle-D8LCwOBa.js"
+      },
+      {
+        "pathname": "assets/SectionTitle-j0N_CKly.css",
+        "contentLength": 4338,
+        "knownAs": "assets/SectionTitle-j0N_CKly.css"
+      },
+      {
+        "pathname": "assets/SectionTitle.stories-CnLupO_E.js",
+        "contentLength": 1028,
+        "knownAs": "assets/SectionTitle.stories-CnLupO_E.js"
+      },
+      {
+        "pathname": "assets/Select-DZEEE1HH.css",
+        "contentLength": 40022,
+        "knownAs": "assets/Select-DZEEE1HH.css"
+      },
+      {
+        "pathname": "assets/Select-vGAVUFbP.js",
+        "contentLength": 5047,
+        "knownAs": "assets/Select-vGAVUFbP.js"
+      },
+      {
+        "pathname": "assets/Select.stories-D8fB7Sbq.js",
+        "contentLength": 9372,
+        "knownAs": "assets/Select.stories-D8fB7Sbq.js"
+      },
+      {
+        "pathname": "assets/SemanticMessage-B-Bcq7IT.js",
+        "contentLength": 1333,
+        "knownAs": "assets/SemanticMessage-B-Bcq7IT.js"
+      },
+      {
+        "pathname": "assets/SemanticMessage-DRcdpJ3V.css",
+        "contentLength": 17250,
+        "knownAs": "assets/SemanticMessage-DRcdpJ3V.css"
+      },
+      {
+        "pathname": "assets/SemanticMessage.stories-DWCjokhA.js",
+        "contentLength": 1786,
+        "knownAs": "assets/SemanticMessage.stories-DWCjokhA.js"
+      },
+      {
+        "pathname": "assets/SimpleItem-BcDy1X-R.js",
+        "contentLength": 1373,
+        "knownAs": "assets/SimpleItem-BcDy1X-R.js"
+      },
+      {
+        "pathname": "assets/SimpleItem-Bs9s_UY_.css",
+        "contentLength": 6323,
+        "knownAs": "assets/SimpleItem-Bs9s_UY_.css"
+      },
+      {
+        "pathname": "assets/SimpleItem.stories-B_lnpIwU.js",
+        "contentLength": 1310,
+        "knownAs": "assets/SimpleItem.stories-B_lnpIwU.js"
+      },
+      {
+        "pathname": "assets/SimpleSlider-A0PWGOKn.css",
         "contentLength": 4742,
-        "knownAs": "assets/Tabs.stories-DRwvW8Hm.js"
+        "knownAs": "assets/SimpleSlider-A0PWGOKn.css"
+      },
+      {
+        "pathname": "assets/SimpleSlider.stories-BKhaQRRs.js",
+        "contentLength": 4928,
+        "knownAs": "assets/SimpleSlider.stories-BKhaQRRs.js"
+      },
+      {
+        "pathname": "assets/SortableList-BAKWXzvp.css",
+        "contentLength": 1737,
+        "knownAs": "assets/SortableList-BAKWXzvp.css"
+      },
+      {
+        "pathname": "assets/SortableList.stories-DT6q6o3B.js",
+        "contentLength": 10657,
+        "knownAs": "assets/SortableList.stories-DT6q6o3B.js"
+      },
+      {
+        "pathname": "assets/Tabs-Axiln_6q.js",
+        "contentLength": 2650,
+        "knownAs": "assets/Tabs-Axiln_6q.js"
+      },
+      {
+        "pathname": "assets/Tabs-CJt8CqDh.css",
+        "contentLength": 35168,
+        "knownAs": "assets/Tabs-CJt8CqDh.css"
+      },
+      {
+        "pathname": "assets/Tabs.stories-C2ZSQiuu.js",
+        "contentLength": 4142,
+        "knownAs": "assets/Tabs.stories-C2ZSQiuu.js"
       },
       {
         "pathname": "assets/Text-BMiWk0nE.css",
@@ -2092,54 +2373,54 @@
         "knownAs": "assets/Text-BMiWk0nE.css"
       },
       {
-        "pathname": "assets/Text.stories-CsXO4pdb.js",
-        "contentLength": 8135,
-        "knownAs": "assets/Text.stories-CsXO4pdb.js"
+        "pathname": "assets/Text.stories-DKtONuNG.js",
+        "contentLength": 8154,
+        "knownAs": "assets/Text.stories-DKtONuNG.js"
       },
       {
-        "pathname": "assets/Thumbnail-C-V_Bhic.js",
+        "pathname": "assets/Thumbnail-BQodlImw.css",
+        "contentLength": 2162,
+        "knownAs": "assets/Thumbnail-BQodlImw.css"
+      },
+      {
+        "pathname": "assets/Thumbnail-DsKOFnyj.js",
         "contentLength": 760,
-        "knownAs": "assets/Thumbnail-C-V_Bhic.js"
+        "knownAs": "assets/Thumbnail-DsKOFnyj.js"
       },
       {
-        "pathname": "assets/Thumbnail-DcbOH4qw.css",
-        "contentLength": 1748,
-        "knownAs": "assets/Thumbnail-DcbOH4qw.css"
+        "pathname": "assets/Thumbnail.stories-BNqy-bgo.js",
+        "contentLength": 920,
+        "knownAs": "assets/Thumbnail.stories-BNqy-bgo.js"
       },
       {
-        "pathname": "assets/Thumbnail.stories-CAPF9ytb.js",
-        "contentLength": 883,
-        "knownAs": "assets/Thumbnail.stories-CAPF9ytb.js"
+        "pathname": "assets/Tooltip-K6JRB4Yv.css",
+        "contentLength": 8039,
+        "knownAs": "assets/Tooltip-K6JRB4Yv.css"
       },
       {
-        "pathname": "assets/Tooltip-BLZroa-2.css",
-        "contentLength": 6453,
-        "knownAs": "assets/Tooltip-BLZroa-2.css"
+        "pathname": "assets/Tooltip-WG772y4n.js",
+        "contentLength": 1051,
+        "knownAs": "assets/Tooltip-WG772y4n.js"
       },
       {
-        "pathname": "assets/Tooltip-NUrsFXyl.js",
-        "contentLength": 884,
-        "knownAs": "assets/Tooltip-NUrsFXyl.js"
+        "pathname": "assets/Tooltip.stories-B50MvrB3.js",
+        "contentLength": 12209,
+        "knownAs": "assets/Tooltip.stories-B50MvrB3.js"
       },
       {
-        "pathname": "assets/axe-R0Vz0SSC.js",
-        "contentLength": 572189,
-        "knownAs": "assets/axe-R0Vz0SSC.js"
+        "pathname": "assets/axe-DHLpdGED.js",
+        "contentLength": 572178,
+        "knownAs": "assets/axe-DHLpdGED.js"
       },
       {
-        "pathname": "assets/chunk-2WNKQWTL-BojUnj9C.js",
-        "contentLength": 6901,
-        "knownAs": "assets/chunk-2WNKQWTL-BojUnj9C.js"
-      },
-      {
-        "pathname": "assets/do-classnames-CxELcYNX.css",
-        "contentLength": 7420,
-        "knownAs": "assets/do-classnames-CxELcYNX.css"
-      },
-      {
-        "pathname": "assets/do-classnames-DH2TAT9V.js",
+        "pathname": "assets/do-classnames-CrR1s3v2.js",
         "contentLength": 498,
-        "knownAs": "assets/do-classnames-DH2TAT9V.js"
+        "knownAs": "assets/do-classnames-CrR1s3v2.js"
+      },
+      {
+        "pathname": "assets/do-classnames-DAykdX9l.css",
+        "contentLength": 10052,
+        "knownAs": "assets/do-classnames-DAykdX9l.css"
       },
       {
         "pathname": "assets/do-map-LnAUJFLK.js",
@@ -2147,103 +2428,143 @@
         "knownAs": "assets/do-map-LnAUJFLK.js"
       },
       {
-        "pathname": "assets/iframe-C66nh3la.js",
-        "contentLength": 1283784,
-        "knownAs": "assets/iframe-C66nh3la.js"
+        "pathname": "assets/iframe-BumRv7TA.js",
+        "contentLength": 1091473,
+        "knownAs": "assets/iframe-BumRv7TA.js"
       },
       {
-        "pathname": "assets/iframe-C9Q9Kiwb.css",
-        "contentLength": 42131,
-        "knownAs": "assets/iframe-C9Q9Kiwb.css"
+        "pathname": "assets/iframe-D3JM0jFn.css",
+        "contentLength": 46383,
+        "knownAs": "assets/iframe-D3JM0jFn.css"
       },
       {
-        "pathname": "assets/matchers-7Z3WT2CE-DM6fYTiH.js",
-        "contentLength": 29696,
-        "knownAs": "assets/matchers-7Z3WT2CE-DM6fYTiH.js"
+        "pathname": "assets/index_react-Bzr5E4qb.js",
+        "contentLength": 470579,
+        "knownAs": "assets/index_react-Bzr5E4qb.js"
       },
       {
-        "pathname": "assets/react-18-pA1GYM2Q.js",
-        "contentLength": 134636,
-        "knownAs": "assets/react-18-pA1GYM2Q.js"
+        "pathname": "assets/layouts-CsTHU-3I.css",
+        "contentLength": 1950,
+        "knownAs": "assets/layouts-CsTHU-3I.css"
+      },
+      {
+        "pathname": "assets/layouts.module-Cyor_6L3.js",
+        "contentLength": 210,
+        "knownAs": "assets/layouts.module-Cyor_6L3.js"
+      },
+      {
+        "pathname": "assets/matchers-DMFSMG2O-HJu_DfWo.js",
+        "contentLength": 29226,
+        "knownAs": "assets/matchers-DMFSMG2O-HJu_DfWo.js"
+      },
+      {
+        "pathname": "assets/preload-helper-CmsKOCeN.js",
+        "contentLength": 1109,
+        "knownAs": "assets/preload-helper-CmsKOCeN.js"
+      },
+      {
+        "pathname": "assets/react-18-BYEC2zhE.js",
+        "contentLength": 134673,
+        "knownAs": "assets/react-18-BYEC2zhE.js"
       },
       {
         "pathname": "components/actions/accordion/Accordion.d.ts",
-        "contentLength": 689,
+        "contentLength": 1551,
         "knownAs": "components/actions/accordion/Accordion.d.ts"
       },
       {
         "pathname": "components/actions/accordion/Accordion.d.ts.map",
-        "contentLength": 914,
+        "contentLength": 1064,
         "knownAs": "components/actions/accordion/Accordion.d.ts.map"
       },
       {
         "pathname": "components/actions/button/Button.d.ts",
-        "contentLength": 1768,
+        "contentLength": 3895,
         "knownAs": "components/actions/button/Button.d.ts"
       },
       {
         "pathname": "components/actions/button/Button.d.ts.map",
-        "contentLength": 1765,
+        "contentLength": 2363,
         "knownAs": "components/actions/button/Button.d.ts.map"
       },
       {
+        "pathname": "components/actions/button/Button.figma.d.ts",
+        "contentLength": 53,
+        "knownAs": "components/actions/button/Button.figma.d.ts"
+      },
+      {
+        "pathname": "components/actions/button/Button.figma.d.ts.map",
+        "contentLength": 196,
+        "knownAs": "components/actions/button/Button.figma.d.ts.map"
+      },
+      {
         "pathname": "components/actions/card/Card.d.ts",
-        "contentLength": 397,
+        "contentLength": 820,
         "knownAs": "components/actions/card/Card.d.ts"
       },
       {
         "pathname": "components/actions/card/Card.d.ts.map",
-        "contentLength": 583,
+        "contentLength": 676,
         "knownAs": "components/actions/card/Card.d.ts.map"
       },
       {
         "pathname": "components/actions/knob/Knob.d.ts",
-        "contentLength": 1395,
+        "contentLength": 2403,
         "knownAs": "components/actions/knob/Knob.d.ts"
       },
       {
         "pathname": "components/actions/knob/Knob.d.ts.map",
-        "contentLength": 1465,
+        "contentLength": 1701,
         "knownAs": "components/actions/knob/Knob.d.ts.map"
       },
       {
         "pathname": "components/actions/menu/Menu.d.ts",
-        "contentLength": 1482,
+        "contentLength": 2781,
         "knownAs": "components/actions/menu/Menu.d.ts"
       },
       {
         "pathname": "components/actions/menu/Menu.d.ts.map",
-        "contentLength": 1546,
+        "contentLength": 1990,
         "knownAs": "components/actions/menu/Menu.d.ts.map"
       },
       {
         "pathname": "components/assets/avatar/Avatar.d.ts",
-        "contentLength": 317,
+        "contentLength": 722,
         "knownAs": "components/assets/avatar/Avatar.d.ts"
       },
       {
         "pathname": "components/assets/avatar/Avatar.d.ts.map",
-        "contentLength": 459,
+        "contentLength": 518,
         "knownAs": "components/assets/avatar/Avatar.d.ts.map"
       },
       {
         "pathname": "components/assets/icon/Icon.d.ts",
-        "contentLength": 361,
+        "contentLength": 666,
         "knownAs": "components/assets/icon/Icon.d.ts"
       },
       {
         "pathname": "components/assets/icon/Icon.d.ts.map",
-        "contentLength": 498,
+        "contentLength": 554,
         "knownAs": "components/assets/icon/Icon.d.ts.map"
       },
       {
+        "pathname": "components/assets/icon/Icon.figma.d.ts",
+        "contentLength": 51,
+        "knownAs": "components/assets/icon/Icon.figma.d.ts"
+      },
+      {
+        "pathname": "components/assets/icon/Icon.figma.d.ts.map",
+        "contentLength": 189,
+        "knownAs": "components/assets/icon/Icon.figma.d.ts.map"
+      },
+      {
         "pathname": "components/assets/section-title/SectionTitle.d.ts",
-        "contentLength": 298,
+        "contentLength": 576,
         "knownAs": "components/assets/section-title/SectionTitle.d.ts"
       },
       {
         "pathname": "components/assets/section-title/SectionTitle.d.ts.map",
-        "contentLength": 453,
+        "contentLength": 519,
         "knownAs": "components/assets/section-title/SectionTitle.d.ts.map"
       },
       {
@@ -2258,112 +2579,132 @@
       },
       {
         "pathname": "components/assets/thumbnail/Thumbnail.d.ts",
-        "contentLength": 253,
+        "contentLength": 443,
         "knownAs": "components/assets/thumbnail/Thumbnail.d.ts"
       },
       {
         "pathname": "components/assets/thumbnail/Thumbnail.d.ts.map",
-        "contentLength": 389,
+        "contentLength": 424,
         "knownAs": "components/assets/thumbnail/Thumbnail.d.ts.map"
       },
       {
         "pathname": "components/dialogs/consent/Consent.d.ts",
-        "contentLength": 1616,
+        "contentLength": 2434,
         "knownAs": "components/dialogs/consent/Consent.d.ts"
       },
       {
         "pathname": "components/dialogs/consent/Consent.d.ts.map",
-        "contentLength": 1431,
+        "contentLength": 1617,
         "knownAs": "components/dialogs/consent/Consent.d.ts.map"
       },
       {
         "pathname": "components/dialogs/dialog/Dialog.d.ts",
-        "contentLength": 1266,
+        "contentLength": 2046,
         "knownAs": "components/dialogs/dialog/Dialog.d.ts"
       },
       {
         "pathname": "components/dialogs/dialog/Dialog.d.ts.map",
-        "contentLength": 1420,
+        "contentLength": 1611,
         "knownAs": "components/dialogs/dialog/Dialog.d.ts.map"
       },
       {
         "pathname": "components/dialogs/message/Message.d.ts",
-        "contentLength": 551,
+        "contentLength": 742,
         "knownAs": "components/dialogs/message/Message.d.ts"
       },
       {
         "pathname": "components/dialogs/message/Message.d.ts.map",
-        "contentLength": 579,
+        "contentLength": 613,
         "knownAs": "components/dialogs/message/Message.d.ts.map"
       },
       {
         "pathname": "components/dialogs/notification/Notification.d.ts",
-        "contentLength": 353,
+        "contentLength": 604,
         "knownAs": "components/dialogs/notification/Notification.d.ts"
       },
       {
         "pathname": "components/dialogs/notification/Notification.d.ts.map",
-        "contentLength": 477,
+        "contentLength": 521,
         "knownAs": "components/dialogs/notification/Notification.d.ts.map"
       },
       {
         "pathname": "components/dialogs/semantic-message/SemanticMessage.d.ts",
-        "contentLength": 614,
+        "contentLength": 1199,
         "knownAs": "components/dialogs/semantic-message/SemanticMessage.d.ts"
       },
       {
         "pathname": "components/dialogs/semantic-message/SemanticMessage.d.ts.map",
-        "contentLength": 714,
+        "contentLength": 914,
         "knownAs": "components/dialogs/semantic-message/SemanticMessage.d.ts.map"
       },
       {
         "pathname": "components/inputs/dropdown/Dropdown.d.ts",
-        "contentLength": 1672,
+        "contentLength": 3437,
         "knownAs": "components/inputs/dropdown/Dropdown.d.ts"
       },
       {
         "pathname": "components/inputs/dropdown/Dropdown.d.ts.map",
-        "contentLength": 1704,
+        "contentLength": 2287,
         "knownAs": "components/inputs/dropdown/Dropdown.d.ts.map"
       },
       {
+        "pathname": "components/inputs/dropdown/Dropdown.figma.d.ts",
+        "contentLength": 55,
+        "knownAs": "components/inputs/dropdown/Dropdown.figma.d.ts"
+      },
+      {
+        "pathname": "components/inputs/dropdown/Dropdown.figma.d.ts.map",
+        "contentLength": 201,
+        "knownAs": "components/inputs/dropdown/Dropdown.figma.d.ts.map"
+      },
+      {
         "pathname": "components/inputs/dropzone/Dropzone.d.ts",
-        "contentLength": 1379,
+        "contentLength": 2195,
         "knownAs": "components/inputs/dropzone/Dropzone.d.ts"
       },
       {
         "pathname": "components/inputs/dropzone/Dropzone.d.ts.map",
-        "contentLength": 1342,
+        "contentLength": 1468,
         "knownAs": "components/inputs/dropzone/Dropzone.d.ts.map"
       },
       {
         "pathname": "components/inputs/input/Input.d.ts",
-        "contentLength": 3795,
+        "contentLength": 5958,
         "knownAs": "components/inputs/input/Input.d.ts"
       },
       {
         "pathname": "components/inputs/input/Input.d.ts.map",
-        "contentLength": 3387,
+        "contentLength": 3942,
         "knownAs": "components/inputs/input/Input.d.ts.map"
       },
       {
+        "pathname": "components/inputs/input/Input.figma.d.ts",
+        "contentLength": 52,
+        "knownAs": "components/inputs/input/Input.figma.d.ts"
+      },
+      {
+        "pathname": "components/inputs/input/Input.figma.d.ts.map",
+        "contentLength": 192,
+        "knownAs": "components/inputs/input/Input.figma.d.ts.map"
+      },
+      {
         "pathname": "components/inputs/inputs-bar/InputsBar.d.ts",
-        "contentLength": 276,
+        "contentLength": 434,
         "knownAs": "components/inputs/inputs-bar/InputsBar.d.ts"
       },
       {
         "pathname": "components/inputs/inputs-bar/InputsBar.d.ts.map",
-        "contentLength": 401,
+        "contentLength": 434,
         "knownAs": "components/inputs/inputs-bar/InputsBar.d.ts.map"
       },
       {
         "pathname": "components/inputs/multiple-slider/MultipleSlider.d.ts",
-        "contentLength": 2733,
+        "contentLength": 3762,
         "knownAs": "components/inputs/multiple-slider/MultipleSlider.d.ts"
       },
       {
         "pathname": "components/inputs/multiple-slider/MultipleSlider.d.ts.map",
-        "contentLength": 2309,
+        "contentLength": 2608,
         "knownAs": "components/inputs/multiple-slider/MultipleSlider.d.ts.map"
       },
       {
@@ -2408,248 +2749,278 @@
       },
       {
         "pathname": "components/inputs/select/Select.d.ts",
-        "contentLength": 1457,
+        "contentLength": 2901,
         "knownAs": "components/inputs/select/Select.d.ts"
       },
       {
         "pathname": "components/inputs/select/Select.d.ts.map",
-        "contentLength": 1444,
+        "contentLength": 1903,
         "knownAs": "components/inputs/select/Select.d.ts.map"
       },
       {
         "pathname": "components/inputs/simple-slider/SimpleSlider.d.ts",
-        "contentLength": 1535,
+        "contentLength": 2462,
         "knownAs": "components/inputs/simple-slider/SimpleSlider.d.ts"
       },
       {
         "pathname": "components/inputs/simple-slider/SimpleSlider.d.ts.map",
-        "contentLength": 1507,
+        "contentLength": 1741,
         "knownAs": "components/inputs/simple-slider/SimpleSlider.d.ts.map"
       },
       {
         "pathname": "components/lists/actions-item/ActionsItem.d.ts",
-        "contentLength": 766,
+        "contentLength": 1414,
         "knownAs": "components/lists/actions-item/ActionsItem.d.ts"
       },
       {
         "pathname": "components/lists/actions-item/ActionsItem.d.ts.map",
-        "contentLength": 933,
+        "contentLength": 1107,
         "knownAs": "components/lists/actions-item/ActionsItem.d.ts.map"
       },
       {
         "pathname": "components/lists/actions-list/ActionsList.d.ts",
-        "contentLength": 1982,
+        "contentLength": 2651,
         "knownAs": "components/lists/actions-list/ActionsList.d.ts"
       },
       {
         "pathname": "components/lists/actions-list/ActionsList.d.ts.map",
-        "contentLength": 1642,
+        "contentLength": 1804,
         "knownAs": "components/lists/actions-list/ActionsList.d.ts.map"
       },
       {
         "pathname": "components/lists/color-item/ColorItem.d.ts",
-        "contentLength": 317,
+        "contentLength": 580,
         "knownAs": "components/lists/color-item/ColorItem.d.ts"
       },
       {
         "pathname": "components/lists/color-item/ColorItem.d.ts.map",
-        "contentLength": 463,
+        "contentLength": 524,
         "knownAs": "components/lists/color-item/ColorItem.d.ts.map"
       },
       {
         "pathname": "components/lists/draggable-item/DraggableItem.d.ts",
-        "contentLength": 1688,
+        "contentLength": 2895,
         "knownAs": "components/lists/draggable-item/DraggableItem.d.ts"
       },
       {
         "pathname": "components/lists/draggable-item/DraggableItem.d.ts.map",
-        "contentLength": 1778,
+        "contentLength": 2044,
         "knownAs": "components/lists/draggable-item/DraggableItem.d.ts.map"
       },
       {
         "pathname": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts",
-        "contentLength": 328,
+        "contentLength": 521,
         "knownAs": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts"
       },
       {
         "pathname": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map",
-        "contentLength": 467,
+        "contentLength": 501,
         "knownAs": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map"
       },
       {
         "pathname": "components/lists/members-list/MembersList.d.ts",
-        "contentLength": 545,
+        "contentLength": 887,
         "knownAs": "components/lists/members-list/MembersList.d.ts"
       },
       {
         "pathname": "components/lists/members-list/MembersList.d.ts.map",
-        "contentLength": 614,
+        "contentLength": 758,
         "knownAs": "components/lists/members-list/MembersList.d.ts.map"
       },
       {
         "pathname": "components/lists/sortable-list/SortableList.d.ts",
-        "contentLength": 2037,
+        "contentLength": 2978,
         "knownAs": "components/lists/sortable-list/SortableList.d.ts"
       },
       {
         "pathname": "components/lists/sortable-list/SortableList.d.ts.map",
-        "contentLength": 2029,
+        "contentLength": 2228,
         "knownAs": "components/lists/sortable-list/SortableList.d.ts.map"
       },
       {
         "pathname": "components/lists/tabs/Tabs.d.ts",
-        "contentLength": 598,
+        "contentLength": 1184,
         "knownAs": "components/lists/tabs/Tabs.d.ts"
       },
       {
         "pathname": "components/lists/tabs/Tabs.d.ts.map",
-        "contentLength": 724,
+        "contentLength": 889,
         "knownAs": "components/lists/tabs/Tabs.d.ts.map"
       },
       {
+        "pathname": "components/lists/tabs/Tabs.figma.d.ts",
+        "contentLength": 51,
+        "knownAs": "components/lists/tabs/Tabs.figma.d.ts"
+      },
+      {
+        "pathname": "components/lists/tabs/Tabs.figma.d.ts.map",
+        "contentLength": 188,
+        "knownAs": "components/lists/tabs/Tabs.figma.d.ts.map"
+      },
+      {
         "pathname": "components/slots/bar/Bar.d.ts",
-        "contentLength": 782,
+        "contentLength": 1599,
         "knownAs": "components/slots/bar/Bar.d.ts"
       },
       {
         "pathname": "components/slots/bar/Bar.d.ts.map",
-        "contentLength": 906,
+        "contentLength": 1109,
         "knownAs": "components/slots/bar/Bar.d.ts.map"
       },
       {
         "pathname": "components/slots/draggable-window/DraggableWindow.d.ts",
-        "contentLength": 449,
+        "contentLength": 655,
         "knownAs": "components/slots/draggable-window/DraggableWindow.d.ts"
       },
       {
         "pathname": "components/slots/draggable-window/DraggableWindow.d.ts.map",
-        "contentLength": 538,
+        "contentLength": 583,
         "knownAs": "components/slots/draggable-window/DraggableWindow.d.ts.map"
       },
       {
         "pathname": "components/slots/drawer/Drawer.d.ts",
-        "contentLength": 1423,
+        "contentLength": 1974,
         "knownAs": "components/slots/drawer/Drawer.d.ts"
       },
       {
         "pathname": "components/slots/drawer/Drawer.d.ts.map",
-        "contentLength": 1441,
+        "contentLength": 1563,
         "knownAs": "components/slots/drawer/Drawer.d.ts.map"
       },
       {
         "pathname": "components/slots/form-item/FormItem.d.ts",
-        "contentLength": 436,
+        "contentLength": 1101,
         "knownAs": "components/slots/form-item/FormItem.d.ts"
       },
       {
         "pathname": "components/slots/form-item/FormItem.d.ts.map",
-        "contentLength": 612,
+        "contentLength": 773,
         "knownAs": "components/slots/form-item/FormItem.d.ts.map"
       },
       {
         "pathname": "components/slots/layout/Layout.d.ts",
-        "contentLength": 518,
+        "contentLength": 924,
         "knownAs": "components/slots/layout/Layout.d.ts"
       },
       {
         "pathname": "components/slots/layout/Layout.d.ts.map",
-        "contentLength": 660,
+        "contentLength": 758,
         "knownAs": "components/slots/layout/Layout.d.ts.map"
       },
       {
         "pathname": "components/slots/list/List.d.ts",
-        "contentLength": 456,
+        "contentLength": 1044,
         "knownAs": "components/slots/list/List.d.ts"
       },
       {
         "pathname": "components/slots/list/List.d.ts.map",
-        "contentLength": 607,
+        "contentLength": 712,
         "knownAs": "components/slots/list/List.d.ts.map"
       },
       {
         "pathname": "components/slots/popin/Popin.d.ts",
-        "contentLength": 1347,
+        "contentLength": 2145,
         "knownAs": "components/slots/popin/Popin.d.ts"
       },
       {
         "pathname": "components/slots/popin/Popin.d.ts.map",
-        "contentLength": 1471,
+        "contentLength": 1673,
         "knownAs": "components/slots/popin/Popin.d.ts.map"
       },
       {
         "pathname": "components/slots/section/Section.d.ts",
-        "contentLength": 595,
+        "contentLength": 859,
         "knownAs": "components/slots/section/Section.d.ts"
       },
       {
         "pathname": "components/slots/section/Section.d.ts.map",
-        "contentLength": 698,
+        "contentLength": 773,
         "knownAs": "components/slots/section/Section.d.ts.map"
       },
       {
         "pathname": "components/slots/simple-item/SimpleItem.d.ts",
-        "contentLength": 652,
+        "contentLength": 1143,
         "knownAs": "components/slots/simple-item/SimpleItem.d.ts"
       },
       {
         "pathname": "components/slots/simple-item/SimpleItem.d.ts.map",
-        "contentLength": 774,
+        "contentLength": 866,
         "knownAs": "components/slots/simple-item/SimpleItem.d.ts.map"
       },
       {
         "pathname": "components/tags/chip/Chip.d.ts",
-        "contentLength": 531,
+        "contentLength": 1048,
         "knownAs": "components/tags/chip/Chip.d.ts"
       },
       {
         "pathname": "components/tags/chip/Chip.d.ts.map",
-        "contentLength": 691,
+        "contentLength": 830,
         "knownAs": "components/tags/chip/Chip.d.ts.map"
       },
       {
+        "pathname": "components/tags/chip/Chip.figma.d.ts",
+        "contentLength": 51,
+        "knownAs": "components/tags/chip/Chip.figma.d.ts"
+      },
+      {
+        "pathname": "components/tags/chip/Chip.figma.d.ts.map",
+        "contentLength": 187,
+        "knownAs": "components/tags/chip/Chip.figma.d.ts.map"
+      },
+      {
         "pathname": "components/tags/color-chip/ColorChip.d.ts",
-        "contentLength": 526,
+        "contentLength": 825,
         "knownAs": "components/tags/color-chip/ColorChip.d.ts"
       },
       {
         "pathname": "components/tags/color-chip/ColorChip.d.ts.map",
-        "contentLength": 627,
+        "contentLength": 704,
         "knownAs": "components/tags/color-chip/ColorChip.d.ts.map"
       },
       {
         "pathname": "components/tags/icon-chip/IconChip.d.ts",
-        "contentLength": 652,
+        "contentLength": 1031,
         "knownAs": "components/tags/icon-chip/IconChip.d.ts"
       },
       {
         "pathname": "components/tags/icon-chip/IconChip.d.ts.map",
-        "contentLength": 734,
+        "contentLength": 824,
         "knownAs": "components/tags/icon-chip/IconChip.d.ts.map"
       },
       {
         "pathname": "components/tags/tooltip/Tooltip.d.ts",
-        "contentLength": 342,
+        "contentLength": 606,
         "knownAs": "components/tags/tooltip/Tooltip.d.ts"
       },
       {
         "pathname": "components/tags/tooltip/Tooltip.d.ts.map",
-        "contentLength": 455,
+        "contentLength": 531,
         "knownAs": "components/tags/tooltip/Tooltip.d.ts.map"
       },
       {
+        "pathname": "favicon-wrapper.svg",
+        "contentLength": 5803,
+        "knownAs": "favicon-wrapper.svg"
+      },
+      {
         "pathname": "favicon.svg",
-        "contentLength": 1251,
+        "contentLength": 2163,
         "knownAs": "favicon.svg"
       },
       {
         "pathname": "icons/icons.module.scss",
-        "contentLength": 12159,
+        "contentLength": 12184,
         "knownAs": "icons/icons.module.scss"
       },
       {
         "pathname": "icons/styles/figma.scss",
         "contentLength": 6749,
         "knownAs": "icons/styles/figma.scss"
+      },
+      {
+        "pathname": "icons/styles/framer.scss",
+        "contentLength": 6856,
+        "knownAs": "icons/styles/framer.scss"
       },
       {
         "pathname": "icons/styles/penpot.scss",
@@ -2663,32 +3034,32 @@
       },
       {
         "pathname": "iframe.html",
-        "contentLength": 18221,
+        "contentLength": 18222,
         "knownAs": "iframe.html"
       },
       {
         "pathname": "index.d.ts",
-        "contentLength": 4515,
+        "contentLength": 4726,
         "knownAs": "index.d.ts"
       },
       {
         "pathname": "index.d.ts.map",
-        "contentLength": 3007,
+        "contentLength": 3093,
         "knownAs": "index.d.ts.map"
       },
       {
         "pathname": "index.html",
-        "contentLength": 3487,
+        "contentLength": 3423,
         "knownAs": "index.html"
       },
       {
         "pathname": "index.json",
-        "contentLength": 30964,
+        "contentLength": 40201,
         "knownAs": "index.json"
       },
       {
         "pathname": "layouts.module.scss",
-        "contentLength": 969,
+        "contentLength": 1827,
         "knownAs": "layouts.module.scss"
       },
       {
@@ -2713,17 +3084,17 @@
       },
       {
         "pathname": "project.json",
-        "contentLength": 1221,
+        "contentLength": 1243,
         "knownAs": "project.json"
       },
       {
         "pathname": "sb-addons/a11y-3/manager-bundle.js",
-        "contentLength": 72789,
+        "contentLength": 64837,
         "knownAs": "sb-addons/a11y-3/manager-bundle.js"
       },
       {
         "pathname": "sb-addons/chromatic-com-storybook-2/manager-bundle.js",
-        "contentLength": 552070,
+        "contentLength": 564400,
         "knownAs": "sb-addons/chromatic-com-storybook-2/manager-bundle.js"
       },
       {
@@ -2733,17 +3104,27 @@
       },
       {
         "pathname": "sb-addons/links-1/manager-bundle.js",
-        "contentLength": 1255,
+        "contentLength": 1356,
         "knownAs": "sb-addons/links-1/manager-bundle.js"
       },
       {
         "pathname": "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js",
-        "contentLength": 308974,
+        "contentLength": 429283,
         "knownAs": "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js"
       },
       {
+        "pathname": "sb-addons/vitest-4/manager-bundle.js",
+        "contentLength": 25884,
+        "knownAs": "sb-addons/vitest-4/manager-bundle.js"
+      },
+      {
+        "pathname": "sb-common-assets/favicon-wrapper.svg",
+        "contentLength": 5803,
+        "knownAs": "sb-common-assets/favicon-wrapper.svg"
+      },
+      {
         "pathname": "sb-common-assets/favicon.svg",
-        "contentLength": 1251,
+        "contentLength": 2163,
         "knownAs": "sb-common-assets/favicon.svg"
       },
       {
@@ -2767,23 +3148,23 @@
         "knownAs": "sb-common-assets/nunito-sans-regular.woff2"
       },
       {
-        "pathname": "sb-manager/globals-module-info.js",
-        "contentLength": 17757,
-        "knownAs": "sb-manager/globals-module-info.js"
-      },
-      {
         "pathname": "sb-manager/globals-runtime.js",
-        "contentLength": 2184924,
+        "contentLength": 3152157,
         "knownAs": "sb-manager/globals-runtime.js"
       },
       {
         "pathname": "sb-manager/globals.js",
-        "contentLength": 1564,
+        "contentLength": 1019,
         "knownAs": "sb-manager/globals.js"
       },
       {
+        "pathname": "sb-manager/manager-stores.js",
+        "contentLength": 654,
+        "knownAs": "sb-manager/manager-stores.js"
+      },
+      {
         "pathname": "sb-manager/runtime.js",
-        "contentLength": 438428,
+        "contentLength": 892011,
         "knownAs": "sb-manager/runtime.js"
       },
       {
@@ -2798,22 +3179,27 @@
       },
       {
         "pathname": "texts/styles/figma.scss",
-        "contentLength": 2091,
+        "contentLength": 2257,
         "knownAs": "texts/styles/figma.scss"
       },
       {
+        "pathname": "texts/styles/framer.scss",
+        "contentLength": 2247,
+        "knownAs": "texts/styles/framer.scss"
+      },
+      {
         "pathname": "texts/styles/penpot.scss",
-        "contentLength": 2137,
+        "contentLength": 2305,
         "knownAs": "texts/styles/penpot.scss"
       },
       {
         "pathname": "texts/styles/sketch.scss",
-        "contentLength": 2137,
+        "contentLength": 2305,
         "knownAs": "texts/styles/sketch.scss"
       },
       {
         "pathname": "texts/texts.module.scss",
-        "contentLength": 2043,
+        "contentLength": 2231,
         "knownAs": "texts/texts.module.scss"
       },
       {
@@ -2832,8 +3218,18 @@
         "knownAs": "tokens/figma-types.scss"
       },
       {
+        "pathname": "tokens/framer-colors.scss",
+        "contentLength": 3088,
+        "knownAs": "tokens/framer-colors.scss"
+      },
+      {
+        "pathname": "tokens/framer-types.scss",
+        "contentLength": 215,
+        "knownAs": "tokens/framer-types.scss"
+      },
+      {
         "pathname": "tokens/globals.scss",
-        "contentLength": 3832,
+        "contentLength": 5361,
         "knownAs": "tokens/globals.scss"
       },
       {
@@ -2845,6 +3241,16 @@
         "pathname": "tokens/modules/figma-types.module.scss",
         "contentLength": 196,
         "knownAs": "tokens/modules/figma-types.module.scss"
+      },
+      {
+        "pathname": "tokens/modules/framer-colors.module.scss",
+        "contentLength": 73,
+        "knownAs": "tokens/modules/framer-colors.module.scss"
+      },
+      {
+        "pathname": "tokens/modules/framer-types.module.scss",
+        "contentLength": 198,
+        "knownAs": "tokens/modules/framer-types.module.scss"
       },
       {
         "pathname": "tokens/modules/globals.module.scss",
@@ -2920,119 +3326,137 @@
         "pathname": "types/list.types.d.ts.map",
         "contentLength": 643,
         "knownAs": "types/list.types.d.ts.map"
+      },
+      {
+        "pathname": "vite-inject-mocker-entry.js",
+        "contentLength": 28761,
+        "knownAs": "vite-inject-mocker-entry.js"
       }
     ],
     "paths": [
       ".DS_Store",
       "addon-visual-tests-assets/visual-test-illustration.mp4",
-      "assets/Accordion-Dr66zEdh.css",
-      "assets/Accordion.stories-2NzpOZ5d.js",
-      "assets/ActionsItem-B9DfHBES.css",
-      "assets/ActionsItem-gmuQh1EG.js",
-      "assets/ActionsItem.stories-Ddz4a1Gz.js",
-      "assets/Avatar-D574redX.css",
-      "assets/Avatar-DUIocDzj.js",
-      "assets/Avatar.stories-CzDgIy-J.js",
-      "assets/Bar-BbfIYc-b.js",
-      "assets/Bar-CAA-NJFe.css",
-      "assets/Bar.stories-DyzEJdbA.js",
-      "assets/Button-BWqghIAP.css",
-      "assets/Button-DsL-_spA.js",
-      "assets/Button.stories-CtaJAAgT.js",
-      "assets/Card-CMEZwrJD.css",
-      "assets/Card.stories-BTBfi0r9.js",
-      "assets/Chip-goHBVq4y.css",
-      "assets/Chip-vfXwv8Px.js",
-      "assets/Chip.stories-C2LdC8_S.js",
-      "assets/ColorChip-6JcwB7Ux.js",
-      "assets/ColorChip-BNuKa_wH.css",
-      "assets/ColorItem-CVJPTbIO.css",
-      "assets/ColorItem.stories-DVj56Uws.js",
-      "assets/Consent-C3hY4tlF.css",
-      "assets/Consent.stories-D_m_7VTe.js",
-      "assets/Dialog-sKxmYmbA.css",
-      "assets/Dialog.stories-B4JjAqVr.js",
-      "assets/DraggableItem-CHpLwmxC.css",
-      "assets/DraggableItem-DZSmr-zi.js",
-      "assets/DraggableItem.stories-BQu4t2vr.js",
-      "assets/Drawer-BMsWMYv4.css",
-      "assets/Drawer.stories-Dve2nsde.js",
-      "assets/Dropdown-CWy8Wp3R.css",
-      "assets/Dropdown.stories-CDpTpRGa.js",
-      "assets/Dropzone-5SaFQbLp.css",
-      "assets/Dropzone.stories-CadsIXme.js",
-      "assets/FormItem-CrvbXoTf.js",
-      "assets/FormItem-D7mhBfWR.css",
-      "assets/Formitem.stories-C9dBixgK.js",
-      "assets/Icon-DQfiZFUJ.css",
-      "assets/Icon-DsYVMpye.js",
-      "assets/Icon.stories-CevD7XUg.js",
-      "assets/IconChip-CmQBgUXH.js",
-      "assets/IconChip-vUYspul-.css",
-      "assets/Input-CeUwiGrB.js",
-      "assets/Input-CgLGNCnF.css",
-      "assets/Input.stories-DpCXMu00.js",
-      "assets/InputsBar-BSvW5oV7.css",
-      "assets/InputsBar.stories-DjSQIEEs.js",
-      "assets/KeyboardShortcutItem-DiA9LYqY.css",
-      "assets/KeyboardShortcutItem.stories-Bea4JH6V.js",
-      "assets/Knob-BPfZi0db.js",
-      "assets/Knob-CQ4WO8QK.css",
-      "assets/List-CMhlktPD.css",
-      "assets/List-DLHrNr83.css",
-      "assets/List.stories-BzZbABkc.js",
-      "assets/List.stories-CHivsOva.js",
-      "assets/MembersList-DSDR68FL.css",
-      "assets/MembersList.stories-C2TiNssq.js",
-      "assets/Menu-CCMzxXvz.css",
-      "assets/Menu.stories-BDEyWflJ.js",
-      "assets/Message-CUrJW_-V.css",
-      "assets/Message-DL1N4aUg.js",
-      "assets/Message.stories-62Te4_wl.js",
-      "assets/MultipleSlider-BstOg5tu.css",
-      "assets/MultipleSlider.stories-1Z0U2qYz.js",
-      "assets/Notification-DdPNi5TA.css",
-      "assets/Notification.stories-BKQVwOlV.js",
-      "assets/Section-DXinz_v2.css",
-      "assets/Section.stories-D8ugE2Qv.js",
-      "assets/SectionTitle-Ce5YVudT.js",
-      "assets/SectionTitle-UUSXUwlg.css",
-      "assets/SectionTitle.stories-UwWy-H9B.js",
-      "assets/Select-BJmjmSu-.js",
-      "assets/Select-DqthswtF.css",
-      "assets/Select.stories-BZug3bl3.js",
-      "assets/SemanticMessage-BidMGw9M.js",
-      "assets/SemanticMessage-CITttpej.css",
-      "assets/SemanticMessage.stories-DHyTsT2x.js",
-      "assets/SimpleItem-CAS8orMg.js",
-      "assets/SimpleItem-CqPNGmYr.css",
-      "assets/SimpleItem.stories-CDTh40z1.js",
-      "assets/SimpleSlider-ChF16MjI.css",
-      "assets/SimpleSlider.stories-BbnpGf9e.js",
-      "assets/SortableList-pDD7EZXB.css",
-      "assets/SortableList.stories-CVJngmsv.js",
-      "assets/Tabs-1fy4pW2W.css",
-      "assets/Tabs.stories-DRwvW8Hm.js",
+      "assets/Accordion-D-ptxr3Z.css",
+      "assets/Accordion.stories-DPoPV249.js",
+      "assets/ActionsItem-BQG45kiw.js",
+      "assets/ActionsItem-DwFQtIGY.css",
+      "assets/ActionsItem.stories-Daj7QqTB.js",
+      "assets/ActionsList-Fr62Rg_I.css",
+      "assets/ActionsList-mQ9-6uw5.js",
+      "assets/Avatar-CBNZOOay.js",
+      "assets/Avatar-DwjGxSH7.css",
+      "assets/Avatar.stories-bI2xdkZg.js",
+      "assets/Bar-Bvuq-Kn0.css",
+      "assets/Bar-CPbhk0Tw.js",
+      "assets/Bar.stories-DDiSGTkZ.js",
+      "assets/Button-B-h5Nx-x.js",
+      "assets/Button-BKkz9B6W.css",
+      "assets/Button.stories-Dd0p0dM9.js",
+      "assets/Card-kRteE-je.css",
+      "assets/Card.stories-DVAp981i.js",
+      "assets/Chip-BXye3nRh.css",
+      "assets/Chip-vKUGkIDH.js",
+      "assets/Chip.stories-BwLW2Off.js",
+      "assets/ColorChip-B0J_ixrH.js",
+      "assets/ColorChip-Bj4drYDE.css",
+      "assets/ColorItem-DoTVlW3G.css",
+      "assets/ColorItem.stories-CxApJpYB.js",
+      "assets/Consent-CohcxN0R.css",
+      "assets/Consent.stories-DjAH8sQd.js",
+      "assets/Dialog-CfuDyEHr.css",
+      "assets/Dialog.stories-CjPgSdFS.js",
+      "assets/DraggableItem-BWyD2Owv.js",
+      "assets/DraggableItem-DtVt6JcH.css",
+      "assets/DraggableItem.stories-CZg0W7pD.js",
+      "assets/Drawer-ALyE93rL.js",
+      "assets/Drawer-Bx7F9kX-.css",
+      "assets/Drawer.stories-BV6zYg4w.js",
+      "assets/Dropdown-H5dMy_gn.css",
+      "assets/Dropdown.stories-8Vbn38Lb.js",
+      "assets/Dropzone-GnY-SYf2.css",
+      "assets/Dropzone.stories-DX4ZgL0J.js",
+      "assets/FormItem-Dm5GtQ7f.css",
+      "assets/FormItem-YG1dxCF3.js",
+      "assets/Formitem.stories-DX1Rw7p4.js",
+      "assets/Icon-DvrP2pSW.js",
+      "assets/Icon-gd8MHZwP.css",
+      "assets/Icon.stories-C6UB2tlu.js",
+      "assets/IconChip-CNlq9s7A.js",
+      "assets/IconChip-DACI21Dl.css",
+      "assets/Input-B4FgOnhc.js",
+      "assets/Input-DApY0whH.css",
+      "assets/Input.stories-B-9bPoZZ.js",
+      "assets/InputsBar-IFL0LG0t.css",
+      "assets/InputsBar.stories-B7zjxB3Z.js",
+      "assets/KeyboardShortcutItem-DAQWiJyu.css",
+      "assets/KeyboardShortcutItem.stories-CMrJ0PZx.js",
+      "assets/Knob-CYoSynEG.js",
+      "assets/Knob-_vqamK4s.css",
+      "assets/Layout-D9J2YSzP.css",
+      "assets/Layout.stories-speTGR8D.js",
+      "assets/List-BgEPiq5j.css",
+      "assets/List.stories-CJU-nToF.js",
+      "assets/List.stories-DUsAP_qf.js",
+      "assets/MembersList-Bs4mSYh1.css",
+      "assets/MembersList.stories-B7lMQTAM.js",
+      "assets/Menu-BSOuRSKc.js",
+      "assets/Menu-Cjpqn47M.css",
+      "assets/Menu.stories-BDZYCltp.js",
+      "assets/Message-B1i5pBlJ.css",
+      "assets/Message-C1IVuOJR.js",
+      "assets/Message.stories-J2HqnKJG.js",
+      "assets/MultipleSlider-hJcDnEIk.css",
+      "assets/MultipleSlider.stories-CSHzllyw.js",
+      "assets/Notification-BNJ1dd50.css",
+      "assets/Notification.stories-BxAqiuz8.js",
+      "assets/Section-DH3q7A95.css",
+      "assets/Section-DfZ4LvNo.js",
+      "assets/Section.stories-CxIA4YwJ.js",
+      "assets/SectionTitle-D8LCwOBa.js",
+      "assets/SectionTitle-j0N_CKly.css",
+      "assets/SectionTitle.stories-CnLupO_E.js",
+      "assets/Select-DZEEE1HH.css",
+      "assets/Select-vGAVUFbP.js",
+      "assets/Select.stories-D8fB7Sbq.js",
+      "assets/SemanticMessage-B-Bcq7IT.js",
+      "assets/SemanticMessage-DRcdpJ3V.css",
+      "assets/SemanticMessage.stories-DWCjokhA.js",
+      "assets/SimpleItem-BcDy1X-R.js",
+      "assets/SimpleItem-Bs9s_UY_.css",
+      "assets/SimpleItem.stories-B_lnpIwU.js",
+      "assets/SimpleSlider-A0PWGOKn.css",
+      "assets/SimpleSlider.stories-BKhaQRRs.js",
+      "assets/SortableList-BAKWXzvp.css",
+      "assets/SortableList.stories-DT6q6o3B.js",
+      "assets/Tabs-Axiln_6q.js",
+      "assets/Tabs-CJt8CqDh.css",
+      "assets/Tabs.stories-C2ZSQiuu.js",
       "assets/Text-BMiWk0nE.css",
-      "assets/Text.stories-CsXO4pdb.js",
-      "assets/Thumbnail-C-V_Bhic.js",
-      "assets/Thumbnail-DcbOH4qw.css",
-      "assets/Thumbnail.stories-CAPF9ytb.js",
-      "assets/Tooltip-BLZroa-2.css",
-      "assets/Tooltip-NUrsFXyl.js",
-      "assets/axe-R0Vz0SSC.js",
-      "assets/chunk-2WNKQWTL-BojUnj9C.js",
-      "assets/do-classnames-CxELcYNX.css",
-      "assets/do-classnames-DH2TAT9V.js",
+      "assets/Text.stories-DKtONuNG.js",
+      "assets/Thumbnail-BQodlImw.css",
+      "assets/Thumbnail-DsKOFnyj.js",
+      "assets/Thumbnail.stories-BNqy-bgo.js",
+      "assets/Tooltip-K6JRB4Yv.css",
+      "assets/Tooltip-WG772y4n.js",
+      "assets/Tooltip.stories-B50MvrB3.js",
+      "assets/axe-DHLpdGED.js",
+      "assets/do-classnames-CrR1s3v2.js",
+      "assets/do-classnames-DAykdX9l.css",
       "assets/do-map-LnAUJFLK.js",
-      "assets/iframe-C66nh3la.js",
-      "assets/iframe-C9Q9Kiwb.css",
-      "assets/matchers-7Z3WT2CE-DM6fYTiH.js",
-      "assets/react-18-pA1GYM2Q.js",
+      "assets/iframe-BumRv7TA.js",
+      "assets/iframe-D3JM0jFn.css",
+      "assets/index_react-Bzr5E4qb.js",
+      "assets/layouts-CsTHU-3I.css",
+      "assets/layouts.module-Cyor_6L3.js",
+      "assets/matchers-DMFSMG2O-HJu_DfWo.js",
+      "assets/preload-helper-CmsKOCeN.js",
+      "assets/react-18-BYEC2zhE.js",
       "components/actions/accordion/Accordion.d.ts",
       "components/actions/accordion/Accordion.d.ts.map",
       "components/actions/button/Button.d.ts",
       "components/actions/button/Button.d.ts.map",
+      "components/actions/button/Button.figma.d.ts",
+      "components/actions/button/Button.figma.d.ts.map",
       "components/actions/card/Card.d.ts",
       "components/actions/card/Card.d.ts.map",
       "components/actions/knob/Knob.d.ts",
@@ -3043,6 +3467,8 @@
       "components/assets/avatar/Avatar.d.ts.map",
       "components/assets/icon/Icon.d.ts",
       "components/assets/icon/Icon.d.ts.map",
+      "components/assets/icon/Icon.figma.d.ts",
+      "components/assets/icon/Icon.figma.d.ts.map",
       "components/assets/section-title/SectionTitle.d.ts",
       "components/assets/section-title/SectionTitle.d.ts.map",
       "components/assets/text/Text.d.ts",
@@ -3061,10 +3487,14 @@
       "components/dialogs/semantic-message/SemanticMessage.d.ts.map",
       "components/inputs/dropdown/Dropdown.d.ts",
       "components/inputs/dropdown/Dropdown.d.ts.map",
+      "components/inputs/dropdown/Dropdown.figma.d.ts",
+      "components/inputs/dropdown/Dropdown.figma.d.ts.map",
       "components/inputs/dropzone/Dropzone.d.ts",
       "components/inputs/dropzone/Dropzone.d.ts.map",
       "components/inputs/input/Input.d.ts",
       "components/inputs/input/Input.d.ts.map",
+      "components/inputs/input/Input.figma.d.ts",
+      "components/inputs/input/Input.figma.d.ts.map",
       "components/inputs/inputs-bar/InputsBar.d.ts",
       "components/inputs/inputs-bar/InputsBar.d.ts.map",
       "components/inputs/multiple-slider/MultipleSlider.d.ts",
@@ -3097,6 +3527,8 @@
       "components/lists/sortable-list/SortableList.d.ts.map",
       "components/lists/tabs/Tabs.d.ts",
       "components/lists/tabs/Tabs.d.ts.map",
+      "components/lists/tabs/Tabs.figma.d.ts",
+      "components/lists/tabs/Tabs.figma.d.ts.map",
       "components/slots/bar/Bar.d.ts",
       "components/slots/bar/Bar.d.ts.map",
       "components/slots/draggable-window/DraggableWindow.d.ts",
@@ -3117,15 +3549,19 @@
       "components/slots/simple-item/SimpleItem.d.ts.map",
       "components/tags/chip/Chip.d.ts",
       "components/tags/chip/Chip.d.ts.map",
+      "components/tags/chip/Chip.figma.d.ts",
+      "components/tags/chip/Chip.figma.d.ts.map",
       "components/tags/color-chip/ColorChip.d.ts",
       "components/tags/color-chip/ColorChip.d.ts.map",
       "components/tags/icon-chip/IconChip.d.ts",
       "components/tags/icon-chip/IconChip.d.ts.map",
       "components/tags/tooltip/Tooltip.d.ts",
       "components/tags/tooltip/Tooltip.d.ts.map",
+      "favicon-wrapper.svg",
       "favicon.svg",
       "icons/icons.module.scss",
       "icons/styles/figma.scss",
+      "icons/styles/framer.scss",
       "icons/styles/penpot.scss",
       "icons/styles/sketch.scss",
       "iframe.html",
@@ -3144,27 +3580,34 @@
       "sb-addons/chromatic-com-storybook-2/manager-bundle.js.LEGAL.txt",
       "sb-addons/links-1/manager-bundle.js",
       "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js",
+      "sb-addons/vitest-4/manager-bundle.js",
+      "sb-common-assets/favicon-wrapper.svg",
       "sb-common-assets/favicon.svg",
       "sb-common-assets/nunito-sans-bold-italic.woff2",
       "sb-common-assets/nunito-sans-bold.woff2",
       "sb-common-assets/nunito-sans-italic.woff2",
       "sb-common-assets/nunito-sans-regular.woff2",
-      "sb-manager/globals-module-info.js",
       "sb-manager/globals-runtime.js",
       "sb-manager/globals.js",
+      "sb-manager/manager-stores.js",
       "sb-manager/runtime.js",
       "tests/setup.d.ts",
       "tests/setup.d.ts.map",
       "texts/styles/figma.scss",
+      "texts/styles/framer.scss",
       "texts/styles/penpot.scss",
       "texts/styles/sketch.scss",
       "texts/texts.module.scss",
       "tokens/.DS_Store",
       "tokens/figma-colors.scss",
       "tokens/figma-types.scss",
+      "tokens/framer-colors.scss",
+      "tokens/framer-types.scss",
       "tokens/globals.scss",
       "tokens/modules/figma-colors.module.scss",
       "tokens/modules/figma-types.module.scss",
+      "tokens/modules/framer-colors.module.scss",
+      "tokens/modules/framer-types.module.scss",
       "tokens/modules/globals.module.scss",
       "tokens/modules/penpot-colors.module.scss",
       "tokens/modules/penpot-types.module.scss",
@@ -3179,157 +3622,177 @@
       "types/icon.types.d.ts",
       "types/icon.types.d.ts.map",
       "types/list.types.d.ts",
-      "types/list.types.d.ts.map"
+      "types/list.types.d.ts.map",
+      "vite-inject-mocker-entry.js"
     ],
     "statsPath": "",
-    "total": 7976960,
+    "total": 9410960,
     "hashes": {
       ".DS_Store": "f1c2f230e2d12b72",
       "addon-visual-tests-assets/visual-test-illustration.mp4": "94d2af4dd76f0574",
-      "assets/Accordion-Dr66zEdh.css": "c948b4f3979be22e",
-      "assets/Accordion.stories-2NzpOZ5d.js": "2fb736b485d6283e",
-      "assets/ActionsItem-B9DfHBES.css": "fc88ed27821a4a3a",
-      "assets/ActionsItem-gmuQh1EG.js": "eba59e2f7a5b09b9",
-      "assets/ActionsItem.stories-Ddz4a1Gz.js": "4fba1aba532fb9a1",
-      "assets/Avatar-D574redX.css": "7f17c9802b3040a4",
-      "assets/Avatar-DUIocDzj.js": "2bf48d199f7f1857",
-      "assets/Avatar.stories-CzDgIy-J.js": "a8f591f538372243",
-      "assets/Bar-BbfIYc-b.js": "f9e0713b19007a07",
-      "assets/Bar-CAA-NJFe.css": "1e66f79341f79997",
-      "assets/Bar.stories-DyzEJdbA.js": "dc5437ea78457ff7",
-      "assets/Button-BWqghIAP.css": "dc99ff255ce87061",
-      "assets/Button-DsL-_spA.js": "a7d28b3e2a36c618",
-      "assets/Button.stories-CtaJAAgT.js": "75e3917ca513211f",
-      "assets/Card-CMEZwrJD.css": "3bc148f6010e708e",
-      "assets/Card.stories-BTBfi0r9.js": "0acdc2bb19a2cafb",
-      "assets/Chip-goHBVq4y.css": "145ea02a0acb7c68",
-      "assets/Chip-vfXwv8Px.js": "646483fa5251d22c",
-      "assets/Chip.stories-C2LdC8_S.js": "5b5519e5ad39d85e",
-      "assets/ColorChip-6JcwB7Ux.js": "f91cfc24935d11e4",
-      "assets/ColorChip-BNuKa_wH.css": "953754e5d9be2bec",
-      "assets/ColorItem-CVJPTbIO.css": "2bada20ef1819ab6",
-      "assets/ColorItem.stories-DVj56Uws.js": "b4349b04b729e9eb",
-      "assets/Consent-C3hY4tlF.css": "253b4e85b36a1c6d",
-      "assets/Consent.stories-D_m_7VTe.js": "23cd97791e2c3029",
-      "assets/Dialog-sKxmYmbA.css": "ce37ed0c75339f4b",
-      "assets/Dialog.stories-B4JjAqVr.js": "6daa540f7d68d4a9",
-      "assets/DraggableItem-CHpLwmxC.css": "1d660d2eb2b2a695",
-      "assets/DraggableItem-DZSmr-zi.js": "bfdbe905702cc77c",
-      "assets/DraggableItem.stories-BQu4t2vr.js": "9341fb28968aa0e1",
-      "assets/Drawer-BMsWMYv4.css": "823ee7efadfce3ac",
-      "assets/Drawer.stories-Dve2nsde.js": "0de636ff54b22100",
-      "assets/Dropdown-CWy8Wp3R.css": "0d65701b9bac6bad",
-      "assets/Dropdown.stories-CDpTpRGa.js": "272251c0a19ea413",
-      "assets/Dropzone-5SaFQbLp.css": "8e49004e1dc6888c",
-      "assets/Dropzone.stories-CadsIXme.js": "7de6429223cbfa5d",
-      "assets/FormItem-CrvbXoTf.js": "9a0ac178873e3fa3",
-      "assets/FormItem-D7mhBfWR.css": "4146f2cfa1902e54",
-      "assets/Formitem.stories-C9dBixgK.js": "4426ccb0f19cf66e",
-      "assets/Icon-DQfiZFUJ.css": "8e59e10e35212a83",
-      "assets/Icon-DsYVMpye.js": "7b1de7c7214cbc5c",
-      "assets/Icon.stories-CevD7XUg.js": "abe4a5ed104dff47",
-      "assets/IconChip-CmQBgUXH.js": "296bd34ec0eb3d5b",
-      "assets/IconChip-vUYspul-.css": "eb280d1559d2cc2b",
-      "assets/Input-CeUwiGrB.js": "a8e0d7a152813012",
-      "assets/Input-CgLGNCnF.css": "02f9ed7103f05e8b",
-      "assets/Input.stories-DpCXMu00.js": "63c0892d8d9d66be",
-      "assets/InputsBar-BSvW5oV7.css": "1973ea4e8c880037",
-      "assets/InputsBar.stories-DjSQIEEs.js": "bb8551fcd767c342",
-      "assets/KeyboardShortcutItem-DiA9LYqY.css": "58e3a754cf4ae821",
-      "assets/KeyboardShortcutItem.stories-Bea4JH6V.js": "78b55e4ce5852a56",
-      "assets/Knob-BPfZi0db.js": "6c347ba1306f2077",
-      "assets/Knob-CQ4WO8QK.css": "313bb6fbd34246c9",
-      "assets/List-CMhlktPD.css": "3e306f28be5269f8",
-      "assets/List-DLHrNr83.css": "5cc90170e7624792",
-      "assets/List.stories-BzZbABkc.js": "80d23d10f907a363",
-      "assets/List.stories-CHivsOva.js": "d284c9427d5893a2",
-      "assets/MembersList-DSDR68FL.css": "0c4e73609c01b1b6",
-      "assets/MembersList.stories-C2TiNssq.js": "30ae1d6d7fff0460",
-      "assets/Menu-CCMzxXvz.css": "737f0892863759f9",
-      "assets/Menu.stories-BDEyWflJ.js": "cd489736599da9f6",
-      "assets/Message-CUrJW_-V.css": "0735280526cc2724",
-      "assets/Message-DL1N4aUg.js": "f7e04c92b1d6deff",
-      "assets/Message.stories-62Te4_wl.js": "0ed391b50b4a971c",
-      "assets/MultipleSlider-BstOg5tu.css": "760aa18077e8584f",
-      "assets/MultipleSlider.stories-1Z0U2qYz.js": "922f8e8f0faa9e38",
-      "assets/Notification-DdPNi5TA.css": "0d05e1802bbe04d7",
-      "assets/Notification.stories-BKQVwOlV.js": "1cf54ec11e6d3870",
-      "assets/Section-DXinz_v2.css": "6161545531b2a67b",
-      "assets/Section.stories-D8ugE2Qv.js": "611b4365e9826b51",
-      "assets/SectionTitle-Ce5YVudT.js": "89e44058bc397be4",
-      "assets/SectionTitle-UUSXUwlg.css": "3ce29588f9c13930",
-      "assets/SectionTitle.stories-UwWy-H9B.js": "49b6c69d7c3262eb",
-      "assets/Select-BJmjmSu-.js": "421a646e38e3849e",
-      "assets/Select-DqthswtF.css": "53eeb40ccd9f7c1b",
-      "assets/Select.stories-BZug3bl3.js": "d6a9083237755be6",
-      "assets/SemanticMessage-BidMGw9M.js": "1475c637281531f9",
-      "assets/SemanticMessage-CITttpej.css": "5a4dc7e0d3d8e24b",
-      "assets/SemanticMessage.stories-DHyTsT2x.js": "bc6c026d01741df5",
-      "assets/SimpleItem-CAS8orMg.js": "756a31ef15c408ab",
-      "assets/SimpleItem-CqPNGmYr.css": "3c3eab2f4bab716c",
-      "assets/SimpleItem.stories-CDTh40z1.js": "fdb50a970e28b910",
-      "assets/SimpleSlider-ChF16MjI.css": "d915f2e06689fe48",
-      "assets/SimpleSlider.stories-BbnpGf9e.js": "c3e2a682dc534eb8",
-      "assets/SortableList-pDD7EZXB.css": "4d865e3f80d90670",
-      "assets/SortableList.stories-CVJngmsv.js": "42d41b938593de42",
-      "assets/Tabs-1fy4pW2W.css": "8f43d97537b4357d",
-      "assets/Tabs.stories-DRwvW8Hm.js": "b4e9d41ab5b46580",
+      "assets/Accordion-D-ptxr3Z.css": "2aa62181447d5967",
+      "assets/Accordion.stories-DPoPV249.js": "71116cb590bfd6e8",
+      "assets/ActionsItem-BQG45kiw.js": "71f34973e17f4621",
+      "assets/ActionsItem-DwFQtIGY.css": "8921d24321862ff0",
+      "assets/ActionsItem.stories-Daj7QqTB.js": "4a72738fdbcb68b8",
+      "assets/ActionsList-Fr62Rg_I.css": "0385937313790e4e",
+      "assets/ActionsList-mQ9-6uw5.js": "7df66253ee793d70",
+      "assets/Avatar-CBNZOOay.js": "f1c16d6555f37102",
+      "assets/Avatar-DwjGxSH7.css": "9d17acc4e0aed27e",
+      "assets/Avatar.stories-bI2xdkZg.js": "1952591123a2fc42",
+      "assets/Bar-Bvuq-Kn0.css": "bbef9cd88554980f",
+      "assets/Bar-CPbhk0Tw.js": "7df44292bc327106",
+      "assets/Bar.stories-DDiSGTkZ.js": "25d244c2d2fbd01e",
+      "assets/Button-B-h5Nx-x.js": "53b73aafc2ba6071",
+      "assets/Button-BKkz9B6W.css": "5dcb9d1c516091c7",
+      "assets/Button.stories-Dd0p0dM9.js": "8bfa6946fe7af99b",
+      "assets/Card-kRteE-je.css": "7b8af5e5258b63e0",
+      "assets/Card.stories-DVAp981i.js": "db507a8fe721f39d",
+      "assets/Chip-BXye3nRh.css": "dd962362e2ce4989",
+      "assets/Chip-vKUGkIDH.js": "1dc9e088372d1c7d",
+      "assets/Chip.stories-BwLW2Off.js": "c1fb1f0bab973fac",
+      "assets/ColorChip-B0J_ixrH.js": "72a154722d2a46b0",
+      "assets/ColorChip-Bj4drYDE.css": "fad6fdd2a17fc160",
+      "assets/ColorItem-DoTVlW3G.css": "4352c83127b9ed67",
+      "assets/ColorItem.stories-CxApJpYB.js": "2c3fc54621de51b3",
+      "assets/Consent-CohcxN0R.css": "ac64798d7c7f36d3",
+      "assets/Consent.stories-DjAH8sQd.js": "23d4341efa4418b0",
+      "assets/Dialog-CfuDyEHr.css": "4342ba53dbd51c6b",
+      "assets/Dialog.stories-CjPgSdFS.js": "669a4bf1e5d78c8d",
+      "assets/DraggableItem-BWyD2Owv.js": "671196506c9312b3",
+      "assets/DraggableItem-DtVt6JcH.css": "294a847a8cd0ca74",
+      "assets/DraggableItem.stories-CZg0W7pD.js": "dcc0de314c2db0d1",
+      "assets/Drawer-ALyE93rL.js": "46540bf135e13386",
+      "assets/Drawer-Bx7F9kX-.css": "3460e563778718f2",
+      "assets/Drawer.stories-BV6zYg4w.js": "cc221d89e485fa96",
+      "assets/Dropdown-H5dMy_gn.css": "5491d46b0c01a9db",
+      "assets/Dropdown.stories-8Vbn38Lb.js": "c5fe3066548c4128",
+      "assets/Dropzone-GnY-SYf2.css": "cf2c315b64d764d5",
+      "assets/Dropzone.stories-DX4ZgL0J.js": "74f8a66316c0d53c",
+      "assets/FormItem-Dm5GtQ7f.css": "f6beb8832bf8ec31",
+      "assets/FormItem-YG1dxCF3.js": "34089a289089cce7",
+      "assets/Formitem.stories-DX1Rw7p4.js": "ed5ba50fd507a841",
+      "assets/Icon-DvrP2pSW.js": "6ce6ac7eed77db31",
+      "assets/Icon-gd8MHZwP.css": "23a41a2e56d5b501",
+      "assets/Icon.stories-C6UB2tlu.js": "d5be3f61753c7dce",
+      "assets/IconChip-CNlq9s7A.js": "8bd8de2f49c23065",
+      "assets/IconChip-DACI21Dl.css": "289c7a75c3c31475",
+      "assets/Input-B4FgOnhc.js": "eb08dc68dc86f636",
+      "assets/Input-DApY0whH.css": "d77b139cc6af4ead",
+      "assets/Input.stories-B-9bPoZZ.js": "c754a8d943c28784",
+      "assets/InputsBar-IFL0LG0t.css": "fbc73a5c0fd5ac8c",
+      "assets/InputsBar.stories-B7zjxB3Z.js": "13e9e2d37052a6c3",
+      "assets/KeyboardShortcutItem-DAQWiJyu.css": "db494efba48383d8",
+      "assets/KeyboardShortcutItem.stories-CMrJ0PZx.js": "75d33c28c506611d",
+      "assets/Knob-CYoSynEG.js": "76dd6a56dcc86247",
+      "assets/Knob-_vqamK4s.css": "b7e2c26a5944b98e",
+      "assets/Layout-D9J2YSzP.css": "f5e041440c732b4b",
+      "assets/Layout.stories-speTGR8D.js": "7ec28ef8c874bf0f",
+      "assets/List-BgEPiq5j.css": "107cab0f95f879ec",
+      "assets/List.stories-CJU-nToF.js": "bc6fb81fa89b97a0",
+      "assets/List.stories-DUsAP_qf.js": "845d2e1811bea95d",
+      "assets/MembersList-Bs4mSYh1.css": "aa28b904cbb16969",
+      "assets/MembersList.stories-B7lMQTAM.js": "ab6c1b82bd270c3b",
+      "assets/Menu-BSOuRSKc.js": "6c89d0af86c4b987",
+      "assets/Menu-Cjpqn47M.css": "0a04618377789bc2",
+      "assets/Menu.stories-BDZYCltp.js": "56605ec11f907f7c",
+      "assets/Message-B1i5pBlJ.css": "6c56ae29ddddf568",
+      "assets/Message-C1IVuOJR.js": "3ffae82ecc4374f1",
+      "assets/Message.stories-J2HqnKJG.js": "fdafdd1adf25821b",
+      "assets/MultipleSlider-hJcDnEIk.css": "4253c5396c5df992",
+      "assets/MultipleSlider.stories-CSHzllyw.js": "1c1bca19b3ed0f1f",
+      "assets/Notification-BNJ1dd50.css": "48178effd0f79087",
+      "assets/Notification.stories-BxAqiuz8.js": "fd0d95fcf8864604",
+      "assets/Section-DH3q7A95.css": "bbd166481fd1baec",
+      "assets/Section-DfZ4LvNo.js": "bd0525314f9b51fb",
+      "assets/Section.stories-CxIA4YwJ.js": "fd1e5e8968fb5c84",
+      "assets/SectionTitle-D8LCwOBa.js": "1b60c779f5c7b6f0",
+      "assets/SectionTitle-j0N_CKly.css": "861229afae85c498",
+      "assets/SectionTitle.stories-CnLupO_E.js": "8ec831348d4e55bb",
+      "assets/Select-DZEEE1HH.css": "d765aae66b06173c",
+      "assets/Select-vGAVUFbP.js": "818de6ce22f45371",
+      "assets/Select.stories-D8fB7Sbq.js": "b9d98c2bdeee27b3",
+      "assets/SemanticMessage-B-Bcq7IT.js": "6dd826fb64672f50",
+      "assets/SemanticMessage-DRcdpJ3V.css": "3648c65179fc52c2",
+      "assets/SemanticMessage.stories-DWCjokhA.js": "fdc786de19ed0dbd",
+      "assets/SimpleItem-BcDy1X-R.js": "0a11ae3d41921ea0",
+      "assets/SimpleItem-Bs9s_UY_.css": "ad0938d8852b15d7",
+      "assets/SimpleItem.stories-B_lnpIwU.js": "30b913fb7be435f8",
+      "assets/SimpleSlider-A0PWGOKn.css": "8b6e14f2e0d05c17",
+      "assets/SimpleSlider.stories-BKhaQRRs.js": "e9b4b81683d6a986",
+      "assets/SortableList-BAKWXzvp.css": "0cb0a91864468b52",
+      "assets/SortableList.stories-DT6q6o3B.js": "54d2e073b7e6567d",
+      "assets/Tabs-Axiln_6q.js": "ea12824d1829a94e",
+      "assets/Tabs-CJt8CqDh.css": "53e322fbc518efc5",
+      "assets/Tabs.stories-C2ZSQiuu.js": "eee3a21b477fbb02",
       "assets/Text-BMiWk0nE.css": "5a2fa418ba895f32",
-      "assets/Text.stories-CsXO4pdb.js": "c5ada8844b8914ef",
-      "assets/Thumbnail-C-V_Bhic.js": "8d44963be25c3616",
-      "assets/Thumbnail-DcbOH4qw.css": "56a670c1753d9c36",
-      "assets/Thumbnail.stories-CAPF9ytb.js": "572271bd15398702",
-      "assets/Tooltip-BLZroa-2.css": "d2e50859463e74ec",
-      "assets/Tooltip-NUrsFXyl.js": "aecc04d102a10941",
-      "assets/axe-R0Vz0SSC.js": "1f5448760a799c10",
-      "assets/chunk-2WNKQWTL-BojUnj9C.js": "9ea4d9344f834479",
-      "assets/do-classnames-CxELcYNX.css": "f21ccd2b8eb355be",
-      "assets/do-classnames-DH2TAT9V.js": "a24cc8fe7220cec0",
+      "assets/Text.stories-DKtONuNG.js": "211ee0b120ec6fde",
+      "assets/Thumbnail-BQodlImw.css": "7ccca4987f27f9cd",
+      "assets/Thumbnail-DsKOFnyj.js": "a31eb4c244e0769b",
+      "assets/Thumbnail.stories-BNqy-bgo.js": "ad97e9ea7fe2f71d",
+      "assets/Tooltip-K6JRB4Yv.css": "72e495bbdbd3bba8",
+      "assets/Tooltip-WG772y4n.js": "5b2ffd6341446499",
+      "assets/Tooltip.stories-B50MvrB3.js": "ab50780729a23e12",
+      "assets/axe-DHLpdGED.js": "ef7f0943beeff99d",
+      "assets/do-classnames-CrR1s3v2.js": "97028a45c18227c5",
+      "assets/do-classnames-DAykdX9l.css": "6223990bdba57fba",
       "assets/do-map-LnAUJFLK.js": "a1d857a09bd1088d",
-      "assets/iframe-C66nh3la.js": "261ef501eff00e90",
-      "assets/iframe-C9Q9Kiwb.css": "d1fc21bd8bcc45d9",
-      "assets/matchers-7Z3WT2CE-DM6fYTiH.js": "4f29295831283b17",
-      "assets/react-18-pA1GYM2Q.js": "0c83d76badf740e9",
-      "components/actions/accordion/Accordion.d.ts": "a3ff1aa3b73aa358",
-      "components/actions/accordion/Accordion.d.ts.map": "bf6b84703bd4cfdc",
-      "components/actions/button/Button.d.ts": "f4c6ae895df9dd52",
-      "components/actions/button/Button.d.ts.map": "ace63d1ef2153f71",
-      "components/actions/card/Card.d.ts": "c3fe16a1216b3206",
-      "components/actions/card/Card.d.ts.map": "95342fb0c43b014a",
-      "components/actions/knob/Knob.d.ts": "d8a271b3e86b098c",
-      "components/actions/knob/Knob.d.ts.map": "a0ef0eb2139930d3",
-      "components/actions/menu/Menu.d.ts": "b135c24ddc2c507d",
-      "components/actions/menu/Menu.d.ts.map": "5d80fc7f77e9b6f0",
-      "components/assets/avatar/Avatar.d.ts": "646f5890c531eb53",
-      "components/assets/avatar/Avatar.d.ts.map": "b364634757933fb1",
-      "components/assets/icon/Icon.d.ts": "2301980af7f2dd21",
-      "components/assets/icon/Icon.d.ts.map": "d5b5b5948f3780e2",
-      "components/assets/section-title/SectionTitle.d.ts": "42c532da8a105a5b",
-      "components/assets/section-title/SectionTitle.d.ts.map": "5fa33d17307c2049",
+      "assets/iframe-BumRv7TA.js": "c3717d303a08966f",
+      "assets/iframe-D3JM0jFn.css": "b5bce0fac91bcec2",
+      "assets/index_react-Bzr5E4qb.js": "470798fddc270648",
+      "assets/layouts-CsTHU-3I.css": "db36f0f734d6208b",
+      "assets/layouts.module-Cyor_6L3.js": "3534cc975563fcf9",
+      "assets/matchers-DMFSMG2O-HJu_DfWo.js": "f6665742fb01c7ec",
+      "assets/preload-helper-CmsKOCeN.js": "040cc9034307024f",
+      "assets/react-18-BYEC2zhE.js": "294425e54933f3af",
+      "components/actions/accordion/Accordion.d.ts": "e96631afbd3466cf",
+      "components/actions/accordion/Accordion.d.ts.map": "573d14ec35febced",
+      "components/actions/button/Button.d.ts": "50b13bd6ac9b53a0",
+      "components/actions/button/Button.d.ts.map": "b4592e550bd24860",
+      "components/actions/button/Button.figma.d.ts": "ed6ee41b8d7d3db3",
+      "components/actions/button/Button.figma.d.ts.map": "9cf8ed948f12f9d2",
+      "components/actions/card/Card.d.ts": "b472686ca0b2c791",
+      "components/actions/card/Card.d.ts.map": "bce6a12b7fb8cb79",
+      "components/actions/knob/Knob.d.ts": "02581cb23c82fa28",
+      "components/actions/knob/Knob.d.ts.map": "4b1ac7b517bebf60",
+      "components/actions/menu/Menu.d.ts": "fedb214c870f619c",
+      "components/actions/menu/Menu.d.ts.map": "84bd75bd4ddb7abc",
+      "components/assets/avatar/Avatar.d.ts": "7e03277121140351",
+      "components/assets/avatar/Avatar.d.ts.map": "5d4c9762a19ef039",
+      "components/assets/icon/Icon.d.ts": "91afe26a7c6f21bb",
+      "components/assets/icon/Icon.d.ts.map": "39ef8532413be60b",
+      "components/assets/icon/Icon.figma.d.ts": "d61e309e1e83e7e6",
+      "components/assets/icon/Icon.figma.d.ts.map": "9b1db295cf3da83c",
+      "components/assets/section-title/SectionTitle.d.ts": "c495c3f8145cacb0",
+      "components/assets/section-title/SectionTitle.d.ts.map": "254bd810aec17160",
       "components/assets/text/Text.d.ts": "3ff841ef562f784e",
       "components/assets/text/Text.d.ts.map": "7b8c6ae3d633bcd4",
-      "components/assets/thumbnail/Thumbnail.d.ts": "ec370fa6a60be205",
-      "components/assets/thumbnail/Thumbnail.d.ts.map": "9cebca263d522c0d",
-      "components/dialogs/consent/Consent.d.ts": "f6126c2703dd8344",
-      "components/dialogs/consent/Consent.d.ts.map": "1b40aa1bc1b14d97",
-      "components/dialogs/dialog/Dialog.d.ts": "ae6d4ff8d8618fc6",
-      "components/dialogs/dialog/Dialog.d.ts.map": "b3f05536602ba2e5",
-      "components/dialogs/message/Message.d.ts": "0978287794005136",
-      "components/dialogs/message/Message.d.ts.map": "0a18701a53c6fbed",
-      "components/dialogs/notification/Notification.d.ts": "8849610419394b22",
-      "components/dialogs/notification/Notification.d.ts.map": "57ef770f5f7ccb5f",
-      "components/dialogs/semantic-message/SemanticMessage.d.ts": "6a6f0c1d94247ed8",
-      "components/dialogs/semantic-message/SemanticMessage.d.ts.map": "dc142cb20acc8684",
-      "components/inputs/dropdown/Dropdown.d.ts": "f3333e11b12ad7df",
-      "components/inputs/dropdown/Dropdown.d.ts.map": "f18e80d7065a98ad",
-      "components/inputs/dropzone/Dropzone.d.ts": "eab6a49ad6b213b9",
-      "components/inputs/dropzone/Dropzone.d.ts.map": "47ab7da1a364fa1e",
-      "components/inputs/input/Input.d.ts": "10f57c0156cb71a1",
-      "components/inputs/input/Input.d.ts.map": "e36103ea5bd7e3ad",
-      "components/inputs/inputs-bar/InputsBar.d.ts": "a0bad6bf08b44fab",
-      "components/inputs/inputs-bar/InputsBar.d.ts.map": "2f49b05551f6d93a",
-      "components/inputs/multiple-slider/MultipleSlider.d.ts": "33438c89e2dee216",
-      "components/inputs/multiple-slider/MultipleSlider.d.ts.map": "85f585a85de2417b",
+      "components/assets/thumbnail/Thumbnail.d.ts": "169a5463ef6976f0",
+      "components/assets/thumbnail/Thumbnail.d.ts.map": "75e4bc7860256e69",
+      "components/dialogs/consent/Consent.d.ts": "2384aab7ce2af890",
+      "components/dialogs/consent/Consent.d.ts.map": "f31538c33abd7d38",
+      "components/dialogs/dialog/Dialog.d.ts": "1e24d66a9aaa8eed",
+      "components/dialogs/dialog/Dialog.d.ts.map": "42953d655927c507",
+      "components/dialogs/message/Message.d.ts": "60ce4b3f5e55e186",
+      "components/dialogs/message/Message.d.ts.map": "79716b0a80cb766a",
+      "components/dialogs/notification/Notification.d.ts": "7d4cad5a61e8d8a8",
+      "components/dialogs/notification/Notification.d.ts.map": "06005626dfb2bb39",
+      "components/dialogs/semantic-message/SemanticMessage.d.ts": "d633ad9323dcc6e1",
+      "components/dialogs/semantic-message/SemanticMessage.d.ts.map": "e70d788499f2d10c",
+      "components/inputs/dropdown/Dropdown.d.ts": "f64862f694e7b869",
+      "components/inputs/dropdown/Dropdown.d.ts.map": "d28ea28a46649a19",
+      "components/inputs/dropdown/Dropdown.figma.d.ts": "1dfbdfaef4ac10b1",
+      "components/inputs/dropdown/Dropdown.figma.d.ts.map": "bc5d83aa0ef497eb",
+      "components/inputs/dropzone/Dropzone.d.ts": "8e635adec5b4718e",
+      "components/inputs/dropzone/Dropzone.d.ts.map": "44d7df2d6a891708",
+      "components/inputs/input/Input.d.ts": "de36e2beb5a5fa43",
+      "components/inputs/input/Input.d.ts.map": "8394d5b46f3ea2b6",
+      "components/inputs/input/Input.figma.d.ts": "13ef9ad75b5aea22",
+      "components/inputs/input/Input.figma.d.ts.map": "3132b2e64a380972",
+      "components/inputs/inputs-bar/InputsBar.d.ts": "ffc09afae80c4d9d",
+      "components/inputs/inputs-bar/InputsBar.d.ts.map": "e5a4fee2e37de71b",
+      "components/inputs/multiple-slider/MultipleSlider.d.ts": "f40f2c545a07e319",
+      "components/inputs/multiple-slider/MultipleSlider.d.ts.map": "9f6706c6785773bb",
       "components/inputs/multiple-slider/actions/addStop.d.ts": "089ad74cc00f12ab",
       "components/inputs/multiple-slider/actions/addStop.d.ts.map": "784d594b1d90b9ea",
       "components/inputs/multiple-slider/actions/deleteStop.d.ts": "d2e69ffc3ae70e65",
@@ -3338,94 +3801,107 @@
       "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts.map": "53e8bad4b7bd4d97",
       "components/inputs/multiple-slider/actions/shiftRightStop.d.ts": "da74a3f6ab876f89",
       "components/inputs/multiple-slider/actions/shiftRightStop.d.ts.map": "b72bbff585573aa7",
-      "components/inputs/select/Select.d.ts": "0a6b04324c6499c2",
-      "components/inputs/select/Select.d.ts.map": "81cd2c96a66bb57c",
-      "components/inputs/simple-slider/SimpleSlider.d.ts": "dbe657a4d71b9e1f",
-      "components/inputs/simple-slider/SimpleSlider.d.ts.map": "caf7fe19cc4679a0",
-      "components/lists/actions-item/ActionsItem.d.ts": "f1655fa333d550af",
-      "components/lists/actions-item/ActionsItem.d.ts.map": "c0bd773a48c08e5f",
-      "components/lists/actions-list/ActionsList.d.ts": "a779ba4c04993d20",
-      "components/lists/actions-list/ActionsList.d.ts.map": "eaa3888b491191aa",
-      "components/lists/color-item/ColorItem.d.ts": "c89763dbff9bf83d",
-      "components/lists/color-item/ColorItem.d.ts.map": "6fc2aa818f3a30bf",
-      "components/lists/draggable-item/DraggableItem.d.ts": "ffa7a163f0289adb",
-      "components/lists/draggable-item/DraggableItem.d.ts.map": "2500588e99627b94",
-      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts": "31ed0265a3bff783",
-      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map": "3d6b37dae9f7f2ed",
-      "components/lists/members-list/MembersList.d.ts": "5a8d546e2962e47e",
-      "components/lists/members-list/MembersList.d.ts.map": "454c364d72ee6410",
-      "components/lists/sortable-list/SortableList.d.ts": "a7e96df71f81c8fb",
-      "components/lists/sortable-list/SortableList.d.ts.map": "d89ffa432d965a96",
-      "components/lists/tabs/Tabs.d.ts": "53168d967b267efa",
-      "components/lists/tabs/Tabs.d.ts.map": "bc586f8cd6998122",
-      "components/slots/bar/Bar.d.ts": "4eb77b0c20c35b51",
-      "components/slots/bar/Bar.d.ts.map": "072b6961aed0ebe1",
-      "components/slots/draggable-window/DraggableWindow.d.ts": "39790fc312381837",
-      "components/slots/draggable-window/DraggableWindow.d.ts.map": "70ba026fefaf7127",
-      "components/slots/drawer/Drawer.d.ts": "c4d47513c91b81cd",
-      "components/slots/drawer/Drawer.d.ts.map": "5380e0c39abc2433",
-      "components/slots/form-item/FormItem.d.ts": "a722fa41714416bd",
-      "components/slots/form-item/FormItem.d.ts.map": "670464b65144e1f9",
-      "components/slots/layout/Layout.d.ts": "9ff8396a208d31bf",
-      "components/slots/layout/Layout.d.ts.map": "3046945f22409668",
-      "components/slots/list/List.d.ts": "005ae9c6a95f4753",
-      "components/slots/list/List.d.ts.map": "ece287caf6134a14",
-      "components/slots/popin/Popin.d.ts": "340530a847616d80",
-      "components/slots/popin/Popin.d.ts.map": "fcdb373b6dfef9bb",
-      "components/slots/section/Section.d.ts": "50c845bbc2389235",
-      "components/slots/section/Section.d.ts.map": "bb7ffd67bbfa2d0d",
-      "components/slots/simple-item/SimpleItem.d.ts": "a6c9239a81d107f2",
-      "components/slots/simple-item/SimpleItem.d.ts.map": "836a5beddf490f74",
-      "components/tags/chip/Chip.d.ts": "05cb2ad00a4a9cbf",
-      "components/tags/chip/Chip.d.ts.map": "c7257e86bd8d1948",
-      "components/tags/color-chip/ColorChip.d.ts": "9dce4a8bf147f24b",
-      "components/tags/color-chip/ColorChip.d.ts.map": "32c49d44371b3fcf",
-      "components/tags/icon-chip/IconChip.d.ts": "1f8603b5ed323381",
-      "components/tags/icon-chip/IconChip.d.ts.map": "a1fb8782d807ac39",
-      "components/tags/tooltip/Tooltip.d.ts": "c99feedd8428c5f8",
-      "components/tags/tooltip/Tooltip.d.ts.map": "292152d2ec9d35ee",
-      "favicon.svg": "293aff65db45e6c4",
-      "icons/icons.module.scss": "bb1b4de6f4150a62",
+      "components/inputs/select/Select.d.ts": "be76766a64d6037a",
+      "components/inputs/select/Select.d.ts.map": "c42d095eecf9b9b6",
+      "components/inputs/simple-slider/SimpleSlider.d.ts": "ffd9bb08abb061cb",
+      "components/inputs/simple-slider/SimpleSlider.d.ts.map": "5e040ae9fd7435f4",
+      "components/lists/actions-item/ActionsItem.d.ts": "469e08be7f5b85aa",
+      "components/lists/actions-item/ActionsItem.d.ts.map": "d5f61f7b41de1ccd",
+      "components/lists/actions-list/ActionsList.d.ts": "9667aadc83fa6faf",
+      "components/lists/actions-list/ActionsList.d.ts.map": "01be39a7b818c73a",
+      "components/lists/color-item/ColorItem.d.ts": "12bdd5176c4e2f00",
+      "components/lists/color-item/ColorItem.d.ts.map": "3e8e72a449115043",
+      "components/lists/draggable-item/DraggableItem.d.ts": "7773d21222005606",
+      "components/lists/draggable-item/DraggableItem.d.ts.map": "9754567176f9a393",
+      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts": "82d408678f29de41",
+      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map": "64b5c55fdb0bdee3",
+      "components/lists/members-list/MembersList.d.ts": "69daf44aca72919e",
+      "components/lists/members-list/MembersList.d.ts.map": "79a4a07acac152b5",
+      "components/lists/sortable-list/SortableList.d.ts": "2e41c01672e28779",
+      "components/lists/sortable-list/SortableList.d.ts.map": "ddfc8ac4dea29123",
+      "components/lists/tabs/Tabs.d.ts": "e779ff72d8d98b1d",
+      "components/lists/tabs/Tabs.d.ts.map": "29b447b42595d0bb",
+      "components/lists/tabs/Tabs.figma.d.ts": "9a86970e87e9cfde",
+      "components/lists/tabs/Tabs.figma.d.ts.map": "e041188c4fff1bd8",
+      "components/slots/bar/Bar.d.ts": "25cd5b34247e720b",
+      "components/slots/bar/Bar.d.ts.map": "56e4acfc73934332",
+      "components/slots/draggable-window/DraggableWindow.d.ts": "1aa86f18bf997f34",
+      "components/slots/draggable-window/DraggableWindow.d.ts.map": "71b5b4290809b91f",
+      "components/slots/drawer/Drawer.d.ts": "7a22d68c1919f8f6",
+      "components/slots/drawer/Drawer.d.ts.map": "96b38f75222edd11",
+      "components/slots/form-item/FormItem.d.ts": "a47f1190bbde1809",
+      "components/slots/form-item/FormItem.d.ts.map": "5c5fa688eb6fdef4",
+      "components/slots/layout/Layout.d.ts": "508d0b3df474f051",
+      "components/slots/layout/Layout.d.ts.map": "450a3f1b2d5c6e20",
+      "components/slots/list/List.d.ts": "88c08f293a5bab3d",
+      "components/slots/list/List.d.ts.map": "dcf3f0a4c68fe912",
+      "components/slots/popin/Popin.d.ts": "e7df59611f7a5f5a",
+      "components/slots/popin/Popin.d.ts.map": "d8284f2b421df060",
+      "components/slots/section/Section.d.ts": "4df23bfe63003078",
+      "components/slots/section/Section.d.ts.map": "a2152b57913c8c60",
+      "components/slots/simple-item/SimpleItem.d.ts": "23226ae6520b22e7",
+      "components/slots/simple-item/SimpleItem.d.ts.map": "75e50917d582a76c",
+      "components/tags/chip/Chip.d.ts": "03b249ef3b7759eb",
+      "components/tags/chip/Chip.d.ts.map": "55f561befb1da606",
+      "components/tags/chip/Chip.figma.d.ts": "8180462674194129",
+      "components/tags/chip/Chip.figma.d.ts.map": "176074bd3680f8d7",
+      "components/tags/color-chip/ColorChip.d.ts": "a2853990468566d0",
+      "components/tags/color-chip/ColorChip.d.ts.map": "4b729167e4b3e7e2",
+      "components/tags/icon-chip/IconChip.d.ts": "d56d2de8f257efeb",
+      "components/tags/icon-chip/IconChip.d.ts.map": "bbbc8cc9b6168e77",
+      "components/tags/tooltip/Tooltip.d.ts": "ba8dca99fb2184bf",
+      "components/tags/tooltip/Tooltip.d.ts.map": "0d1e34b9bfaedcd8",
+      "favicon-wrapper.svg": "ac2f5da4f59a4ab7",
+      "favicon.svg": "d3380c3fb63a8430",
+      "icons/icons.module.scss": "951e7a02753b5235",
       "icons/styles/figma.scss": "b2f506aeeb9a12b9",
+      "icons/styles/framer.scss": "8f3de6f94183e149",
       "icons/styles/penpot.scss": "dbbe4d6840ea10b4",
       "icons/styles/sketch.scss": "92877a7221a3c6c7",
-      "iframe.html": "0ba2da1c2ad8067f",
-      "index.d.ts": "aa0f6499604ad337",
-      "index.d.ts.map": "1c4c7eacef55a0d1",
-      "index.html": "21f65813d6957b36",
-      "index.json": "3dcbd2dd62c5777c",
-      "layouts.module.scss": "22a706cf3ed8eb6d",
+      "iframe.html": "b4a89e83db19ba8e",
+      "index.d.ts": "a7fbc0479f61e9b2",
+      "index.d.ts.map": "76ce194d507fbb2d",
+      "index.html": "c64303927ebbd6b1",
+      "index.json": "c13f646e7f1d2c8b",
+      "layouts.module.scss": "277be35ff9ea7c43",
       "nunito-sans-bold-italic.woff2": "d64464b3594b3fb9",
       "nunito-sans-bold.woff2": "0bd5b61b7fb7f7d5",
       "nunito-sans-italic.woff2": "b7807d9de055e9a0",
       "nunito-sans-regular.woff2": "6687b7be04c2debe",
-      "project.json": "fc4447123eded5aa",
-      "sb-addons/a11y-3/manager-bundle.js": "23968f2f1083fab1",
-      "sb-addons/chromatic-com-storybook-2/manager-bundle.js": "5016923c01e62c02",
+      "project.json": "1e36d56550e3119a",
+      "sb-addons/a11y-3/manager-bundle.js": "531b496368f66082",
+      "sb-addons/chromatic-com-storybook-2/manager-bundle.js": "0ce72dd5fe4bc1bc",
       "sb-addons/chromatic-com-storybook-2/manager-bundle.js.LEGAL.txt": "285dd9e1dc6c7408",
-      "sb-addons/links-1/manager-bundle.js": "c7b6db7f288ef9e5",
-      "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js": "8342c1a4831ad9d4",
-      "sb-common-assets/favicon.svg": "293aff65db45e6c4",
+      "sb-addons/links-1/manager-bundle.js": "866868ddf5055821",
+      "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js": "26f731d4fb2d0df7",
+      "sb-addons/vitest-4/manager-bundle.js": "1cb8bdc02401ec1f",
+      "sb-common-assets/favicon-wrapper.svg": "ac2f5da4f59a4ab7",
+      "sb-common-assets/favicon.svg": "d3380c3fb63a8430",
       "sb-common-assets/nunito-sans-bold-italic.woff2": "d64464b3594b3fb9",
       "sb-common-assets/nunito-sans-bold.woff2": "0bd5b61b7fb7f7d5",
       "sb-common-assets/nunito-sans-italic.woff2": "b7807d9de055e9a0",
       "sb-common-assets/nunito-sans-regular.woff2": "6687b7be04c2debe",
-      "sb-manager/globals-module-info.js": "36983567768d4727",
-      "sb-manager/globals-runtime.js": "b52a04da14b78b7d",
-      "sb-manager/globals.js": "65b5882f82eea1c2",
-      "sb-manager/runtime.js": "6a133cae623124ff",
+      "sb-manager/globals-runtime.js": "16a74988ebbc713f",
+      "sb-manager/globals.js": "2c4cf7380e550517",
+      "sb-manager/manager-stores.js": "9201ef0cd1069e23",
+      "sb-manager/runtime.js": "66b9cebf715eeadc",
       "tests/setup.d.ts": "adf36bcc5e336aa6",
       "tests/setup.d.ts.map": "2491cf3170b2bc52",
-      "texts/styles/figma.scss": "5c444b16f229e6ed",
-      "texts/styles/penpot.scss": "0eac7b2d43b67181",
-      "texts/styles/sketch.scss": "766bccbeacf26ddc",
-      "texts/texts.module.scss": "5545f92746d401e1",
+      "texts/styles/figma.scss": "c90efe3f59a4fc4a",
+      "texts/styles/framer.scss": "7173ea2d6b75949b",
+      "texts/styles/penpot.scss": "6d8b6c8dce81abe2",
+      "texts/styles/sketch.scss": "1690b2f538a36ff1",
+      "texts/texts.module.scss": "8e5722dc1321dfa9",
       "tokens/.DS_Store": "3d217c89b81ac72e",
       "tokens/figma-colors.scss": "9e962e3f1e62911a",
       "tokens/figma-types.scss": "11f15e1dacf69057",
-      "tokens/globals.scss": "f1f19d393b88fa8f",
+      "tokens/framer-colors.scss": "76486a31f64de7da",
+      "tokens/framer-types.scss": "2d0b216c400c5b45",
+      "tokens/globals.scss": "f5ad2c4015087f89",
       "tokens/modules/figma-colors.module.scss": "d39f81d0b3ecfbd3",
       "tokens/modules/figma-types.module.scss": "de0776066229d6bf",
+      "tokens/modules/framer-colors.module.scss": "5d0100323f32de35",
+      "tokens/modules/framer-types.module.scss": "fe0363f122bb4e48",
       "tokens/modules/globals.module.scss": "2ca794a3a40de35a",
       "tokens/modules/penpot-colors.module.scss": "42aff960f728d7d1",
       "tokens/modules/penpot-types.module.scss": "9f786e80eae15df0",
@@ -3440,7 +3916,8 @@
       "types/icon.types.d.ts": "8107b66d288e7778",
       "types/icon.types.d.ts.map": "d190a16abbcefa25",
       "types/list.types.d.ts": "7e3c4c96ef04b024",
-      "types/list.types.d.ts.map": "6f725a26331fb7b7"
+      "types/list.types.d.ts.map": "6f725a26331fb7b7",
+      "vite-inject-mocker-entry.js": "4b58665ff5cb10fd"
     }
   },
   "flags": {
@@ -3449,20 +3926,23 @@
   "git": {
     "version": "2.51.0",
     "gitUserEmail": "a.grimaud@involt.io",
-    "uncommittedHash": "f853f918ea860427d622bc50b77a63b15dc172ec",
+    "uncommittedHash": "d4468a552a77aec251cb8b81923225e2d26f0dcf",
     "rootPath": "/Users/a_ng_d/DEV/figmug-ui",
-    "commit": "d93117cf983dd5c16ebe3a2dbf7e3f59b8de2822",
-    "committedAt": 1759619384000,
+    "commit": "4a3c1a29836958681ade4d8932db8470eb43fe1c",
+    "committedAt": 1768411707000,
     "committerEmail": "a.grimaud@involt.io",
     "committerName": "@a-ng-d",
-    "branch": "features/dtcg-tokens-implementation",
+    "branch": "main",
     "slug": "a-ng-d/figmug-ui",
     "fromCI": false,
-    "parentCommits": ["be3ea3b9c04d61eb92bb43de3d8fc6b93b53a6c4"]
+    "parentCommits": [
+      "8cce9ceb277000351e2ff02f958c397c86da8619"
+    ]
   },
   "input": [],
   "isOnboarding": false,
   "isPublishOnly": false,
+  "isReactNativeApp": false,
   "options": {
     "fromCI": false,
     "inAction": false,
@@ -3491,9 +3971,30 @@
   },
   "packageJson": {
     "name": "@a_ng_d/figmug-ui",
-    "version": "1.17.28",
+    "version": "1.19.43",
     "type": "module",
-    "files": ["dist"],
+    "description": "Figmug UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/a-ng-d/figmug-ui.git"
+    },
+    "keywords": [
+      "library",
+      "ui",
+      "figma-ui"
+    ],
+    "author": "Aurélien Grimaud",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/a-ng-d/figmug-ui/issues"
+    },
+    "homepage": "https://github.com/a-ng-d/figmug-ui#readme",
+    "overrides": {
+      "storybook": "$storybook"
+    },
+    "files": [
+      "dist"
+    ],
     "exports": "./dist/index.js",
     "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -3514,23 +4015,27 @@
       "build-storybook": "storybook build",
       "create:theme": "node scripts/create-theme.js",
       "scss:list": "node scripts/build-scss.js",
-      "scss:build": "node scripts/build-scss.js -- --build"
+      "scss:build": "node scripts/build-scss.js -- --build",
+      "figma:publish": "figma connect publish",
+      "figma:unpublish": "figma connect unpublish",
+      "figma:parse": "figma connect parse"
     },
     "dependencies": {
-      "@a_ng_d/figmug-utils": "^0.6.0",
-      "@storybook/client-api": "^7.6.17"
+      "@a_ng_d/figmug-utils": "^0.7.3"
     },
     "peerDependencies": {
       "react": "^18.2.0",
       "react-dom": "^18.2.0"
     },
     "devDependencies": {
-      "@chromatic-com/storybook": "^4.0.0",
-      "@storybook/addon-a11y": "^9.0.8",
-      "@storybook/addon-docs": "^9.0.6",
-      "@storybook/addon-links": "^9.0.6",
-      "@storybook/addon-onboarding": "^9.0.6",
-      "@storybook/react-vite": "^9.0.6",
+      "@chromatic-com/storybook": "^5.0.0",
+      "@figma/code-connect": "^1.3.12",
+      "@storybook/addon-a11y": "^10.1.11",
+      "@storybook/addon-docs": "^10.1.11",
+      "@storybook/addon-links": "^10.1.11",
+      "@storybook/addon-onboarding": "^10.1.11",
+      "@storybook/addon-vitest": "^10.1.11",
+      "@storybook/react-vite": "^10.1.11",
       "@terrazzo/cli": "^0.10.3",
       "@terrazzo/plugin-css": "^0.10.3",
       "@terrazzo/token-tools": "^0.10.3",
@@ -3540,8 +4045,8 @@
       "@typescript-eslint/eslint-plugin": "^7.2.0",
       "@typescript-eslint/parser": "^7.2.0",
       "@vitejs/plugin-react": "^4.2.1",
-      "@vitest/coverage-v8": "^1.6.0",
-      "@vitest/ui": "^1.6.0",
+      "@vitest/coverage-v8": "^4.0.17",
+      "@vitest/ui": "^4.0.17",
       "chalk": "^5.6.2",
       "chromatic": "^11.3.1",
       "dotenv-cli": "^7.4.2",
@@ -3550,14 +4055,13 @@
       "eslint-plugin-import": "^2.31.0",
       "eslint-plugin-react-hooks": "^4.6.0",
       "eslint-plugin-react-refresh": "^0.4.6",
-      "eslint-plugin-storybook": "^9.0.6",
+      "eslint-plugin-storybook": "^10.1.11",
       "glob": "^10.3.12",
       "jsdom": "^24.0.0",
       "prettier": "^3.2.5",
       "prettier-plugin-css-order": "^2.1.2",
       "sass": "^1.77.0",
-      "storybook": "^9.0.6",
-      "storybook-addon-data-theme-switcher": "^2.0.0",
+      "storybook": "^10.1.11",
       "stylelint": "^16.24.0",
       "stylelint-config-standard": "^39.0.0",
       "typescript": "^5.4.3",
@@ -3565,22 +4069,7 @@
       "vite-plugin-dts": "^3.9.1",
       "vite-plugin-lib-inject-css": "^2.0.1",
       "vite-tsconfig-paths": "^4.3.2",
-      "vitest": "^1.6.0"
-    },
-    "description": "Figmug UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/a-ng-d/figmug-ui.git"
-    },
-    "keywords": ["library", "ui", "figma-ui"],
-    "author": "Aurélien Grimaud",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/a-ng-d/figmug-ui/issues"
-    },
-    "homepage": "https://github.com/a-ng-d/figmug-ui#readme",
-    "overrides": {
-      "storybook": "$storybook"
+      "vitest": "^4.0.17"
     }
   },
   "packagePath": "/Users/a_ng_d/DEV/figmug-ui/package.json",
@@ -3588,7 +4077,7 @@
     "hasRouter": false,
     "creationDate": {},
     "storybookCreationDate": {},
-    "numberOfCommitters": 2,
+    "numberOfCommitters": 4,
     "numberOfAppFiles": 0
   },
   "runtimeMetadata": {
@@ -3598,19 +4087,23 @@
     "packageManagerVersion": "10.8.2"
   },
   "sentinelUrls": [
-    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-atxfkftvkm/.chromatic/files-copied.3134099007.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20251004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20251004T231746Z&X-Amz-Expires=1800&X-Amz-Signature=04a47951d3361ced6c0c8471900d3e3840378791c4b2bc7977d983d59f575819&X-Amz-SignedHeaders=host&x-id=GetObject",
-    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-atxfkftvkm/.chromatic/zip-unpacked.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20251004%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20251004T231746Z&X-Amz-Expires=1980&X-Amz-Signature=beaf45a7c2c71cc13112170365b6d78bfc82c0192019024ec551e7e6a24870b9&X-Amz-SignedHeaders=host&x-id=GetObject"
+    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-pkzqvswazs/.chromatic/files-copied.3258912766.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260114%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260114T175601Z&X-Amz-Expires=1800&X-Amz-Signature=f444ae75c0930bd0c69d5337dd6cb43d5cd74233ad418fb59f68631d86bfd095&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-pkzqvswazs/.chromatic/zip-unpacked.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260114%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260114T175601Z&X-Amz-Expires=1980&X-Amz-Signature=cc35e35792e08d943bd8d94ca0c781c163aa9fecec1ea39ce96e65df853bc312&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
   ],
-  "sessionId": "87966ead-35ca-4826-aa0f-7930b5b74df2",
-  "sourceDir": "/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--27760-m7coMkOCUcop",
-  "startedAt": 1759619876659,
+  "sessionId": "0e5bed6e-b369-458e-a8f3-d9cf1db80f73",
+  "sourceDir": "/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--52892-cnXzTh1euiGh",
+  "startedAt": 1768413371625,
   "storybook": {
-    "version": "9.0.6",
+    "version": "10.1.11",
+    "builder": {
+      "name": "@storybook/react-vite",
+      "packageVersion": "10.1.11"
+    },
     "baseDir": "."
   },
-  "storybookUrl": "https://663a220bcc5dda79791c430e-atxfkftvkm.chromatic.com/",
+  "storybookUrl": "https://663a220bcc5dda79791c430e-pkzqvswazs.chromatic.com/",
   "task": "snapshot",
-  "uploadedBytes": 1276102,
-  "uploadedFiles": 210,
+  "uploadedBytes": 2149134,
+  "uploadedFiles": 201,
   "userError": false
 }
