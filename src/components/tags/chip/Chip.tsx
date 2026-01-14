@@ -78,11 +78,11 @@ const Chip = (props: ChipProps) => {
         if (preview !== undefined) setIsPreviewVisible(false)
       }}
       tabIndex={action !== undefined || preview !== undefined ? 0 : -1}
-      aria-pressed={state === 'ACTIVE'}
-      aria-disabled={state === 'INACTIVE'}
-      aria-live="polite"
-      aria-relevant="additions"
-      role="status"
+      role={
+        action !== undefined || preview !== undefined ? 'button' : undefined
+      }
+      aria-pressed={action !== undefined ? state === 'ACTIVE' : undefined}
+      aria-disabled={state === 'INACTIVE' ? true : undefined}
     >
       {props.leftSlot && (
         <div

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { expect, within } from 'storybook/test'
 import figma from '@figma/code-connect'
 import ColorChip from '@components/tags/color-chip/ColorChip'
 import Chip from '@components/tags/chip/Chip'
@@ -29,12 +30,26 @@ export const New: Story = {
     state: 'ACTIVE',
     children: 'New',
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const chip = canvas.getByText('New')
+    await expect(chip).toBeInTheDocument()
+    await expect(chip).toBeVisible()
+  },
 }
 
 export const Pro: Story = {
   args: {
     state: 'ACTIVE',
     children: 'Pro',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const chip = canvas.getByText('Pro')
+    await expect(chip).toBeInTheDocument()
+    await expect(chip).toBeVisible()
   },
 }
 
@@ -75,5 +90,12 @@ export const Score: Story = {
         ✔︎
       </div>
     ),
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const chip = canvas.getByText('AA')
+    await expect(chip).toBeInTheDocument()
+    await expect(chip).toBeVisible()
   },
 }
