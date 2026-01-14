@@ -99,10 +99,12 @@ export const Message: Story = {
   ],
   args: {
     children: (
-      <SemanticMessage
-        type="ERROR"
-        message="This is an error message"
-      />
+      <li>
+        <SemanticMessage
+          type="ERROR"
+          message="This is an error message"
+        />
+      </li>
     ),
     isMessage: true,
   },

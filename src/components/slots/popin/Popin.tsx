@@ -109,6 +109,8 @@ const PopIn = (props: PopInProps) => {
       className={doClassnames(['popin', type === 'PANEL' && 'popin--panel'])}
       role={type === 'PANEL' ? 'complementary' : 'dialog'}
       aria-modal="true"
+      aria-labelledby={id ? `${id}-title` : undefined}
+      aria-label={!id ? title : undefined}
     >
       <div
         className="popin__header"

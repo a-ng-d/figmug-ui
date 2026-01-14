@@ -42,6 +42,7 @@ export const ColorItem: Story = {
         action={mock}
       />
     ))(),
+    isListItem: false,
   },
   argTypes: {
     id: { control: false },

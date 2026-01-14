@@ -74,6 +74,7 @@ const Layout = (props: LayoutProps) => {
                   item.fixedWidth !== undefined ? item.fixedWidth : undefined,
               }}
               role="region"
+              aria-label={`Content section ${index + 1}`}
             >
               {item.node}
             </div>

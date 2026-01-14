@@ -66,6 +66,11 @@ export const ColorItem: Story = {
     onDragChange: { control: false },
     onDropOutside: { control: false },
   },
+  render: (args) => (
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+      <DraggableItem {...args} />
+    </ul>
+  ),
 }
 
 export const RichColorItem: Story = {
@@ -117,4 +122,9 @@ export const RichColorItem: Story = {
     onDragChange: { control: false },
     onDropOutside: { control: false },
   },
+  render: (args) => (
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+      <DraggableItem {...args} />
+    </ul>
+  ),
 }

@@ -74,6 +74,7 @@ const Thumbnail = (props: ThumbnailProps) => {
           iconName="spinner"
           customClassName="thumbnail__loader"
           role="status"
+          aria-hidden="true"
         />
       ) : (
         <img
