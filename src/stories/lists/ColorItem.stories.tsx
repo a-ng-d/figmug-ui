@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, within } from 'storybook/test'
 import ColorItem from '@components/lists/color-item/ColorItem'
 
 const meta = {
@@ -23,5 +23,17 @@ export const ColorSample: Story = {
   },
   argTypes: {
     hex: { control: 'color' },
+  },
+  render: (args) => (
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+      <ColorItem {...args} />
+    </ul>
+  ),
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const colorName = canvas.getByText(args.name)
+    await expect(colorName).toBeInTheDocument()
+    const colorHex = canvas.getByText(args.hex.toUpperCase())
+    await expect(colorHex).toBeInTheDocument()
   },
 }

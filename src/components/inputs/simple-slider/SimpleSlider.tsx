@@ -257,12 +257,7 @@ export default class SimpleSlider extends React.Component<
       >
         <div
           className="simple-slider__range"
-          role="slider"
-          aria-valuemin={min}
-          aria-valuemax={max}
-          aria-valuenow={value}
-          aria-valuetext={value.toString()}
-          aria-label={label}
+          role="presentation"
           style={{
             background: `linear-gradient(90deg, ${colors.min}, ${colors.max})`,
           }}

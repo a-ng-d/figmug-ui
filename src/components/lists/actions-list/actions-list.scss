@@ -279,6 +279,10 @@
     height: var(--actions-list-divider-height);
   }
 
+  li[data-role="SEPARATOR"] {
+    display: block;
+  }
+
   &__submenu {
     position: absolute;
   }

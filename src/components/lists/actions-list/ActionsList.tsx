@@ -243,7 +243,6 @@ export default class ActionsList extends React.Component<
   MenuTitle = (option: DropdownOption, index: number) => {
     return (
       <li
-        role="menuitem"
         key={`menu-option-${index}`}
         data-role={'TITLE'}
         className={doClassnames([
@@ -264,10 +263,9 @@ export default class ActionsList extends React.Component<
 
   MenuSeparator = (index: number) => {
     return (
-      <hr
-        key={`menu-option-${index}`}
-        data-role={'SEPARATOR'}
-      />
+      <li data-role={'SEPARATOR'}>
+        <hr key={`menu-option-${index}`} />
+      </li>
     )
   }
 
@@ -276,7 +274,6 @@ export default class ActionsList extends React.Component<
 
     return (
       <li
-        role="menuitem"
         key={`menu-option-${index}`}
         className={doClassnames([
           'select-menu__item',
@@ -289,9 +286,11 @@ export default class ActionsList extends React.Component<
         data-feature={option.feature}
         data-role={'OPTION'}
         tabIndex={option.isBlocked ? -1 : 0}
-        aria-selected={
+        aria-current={
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1
+            ? 'true'
+            : undefined
         }
         aria-disabled={option.isBlocked}
         aria-label={option.label}
@@ -340,7 +339,6 @@ export default class ActionsList extends React.Component<
 
     return (
       <li
-        role="menuitem"
         key={`menu-group-${index}`}
         className={doClassnames([
           'select-menu__item',
@@ -397,7 +395,6 @@ export default class ActionsList extends React.Component<
 
     return (
       <li
-        role="menuitem"
         key={`menu-suboption-${index}`}
         className={doClassnames([
           'select-menu__item',
@@ -410,9 +407,11 @@ export default class ActionsList extends React.Component<
         data-feature={option.feature}
         data-role={'OPTION'}
         tabIndex={option.isBlocked ? -1 : 0}
-        aria-selected={
+        aria-current={
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1
+            ? 'true'
+            : undefined
         }
         aria-disabled={option.isBlocked}
         aria-label={option.label}

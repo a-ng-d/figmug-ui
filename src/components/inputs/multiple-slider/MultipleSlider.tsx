@@ -484,10 +484,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
         style={{
           background: `linear-gradient(90deg, ${colors.min}, ${colors.max})`,
         }}
-        role="slider"
-        aria-orientation="horizontal"
-        aria-valuemin={range.min}
-        aria-valuemax={range.max}
+        role="presentation"
       >
         {Object.entries(scale)
           .sort((a, b) => a[1] - b[1])

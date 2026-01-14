@@ -683,13 +683,13 @@ export default class Input extends React.Component<InputProps, InputStates> {
           }}
         >
           <input
-            role="color-picker"
             id={id}
             data-feature={feature}
             type="color"
             className="input__color"
             value={colorValue}
             disabled={isDisabled || isBlocked}
+            aria-label="Color picker"
             aria-disabled={isDisabled || isBlocked}
             onChange={
               !(isDisabled || isBlocked) ? this.onPickColorValue : undefined
@@ -698,14 +698,16 @@ export default class Input extends React.Component<InputProps, InputStates> {
             ref={this.inputRef}
           />
           <input
-            role="color-display"
+            role="textbox"
             id={id}
             data-feature={feature}
-            type="input"
+            type="text"
             className="input__field"
             value={inputValue.toUpperCase().replace('#', '')}
             maxLength={7}
             disabled={isDisabled || isBlocked}
+            aria-label="Hex color code"
+            aria-disabled={isDisabled || isBlocked}
             onChange={
               !(isDisabled || isBlocked) ? this.onChangeColorValue : undefined
             }
@@ -806,6 +808,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
             max={max}
             step={step}
             disabled={isDisabled || isBlocked}
+            aria-label={`Number input${unit ? ` in ${unit}` : ''}${icon ? ` with ${icon.value} icon` : ''}`}
             aria-valuemin={min ? parseFloat(min) : undefined}
             aria-valuemax={max ? parseFloat(max) : undefined}
             aria-valuenow={parseFloat(inputValue)}
@@ -984,6 +987,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
             placeholder={placeholder}
             value={inputValue}
             disabled={isDisabled || isBlocked}
+            aria-label={placeholder || 'Long text input'}
             aria-invalid={state === 'ERROR'}
             aria-disabled={isDisabled || isBlocked}
             onKeyDown={
@@ -1042,6 +1046,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
             ])}
             value={value}
             disabled={isDisabled || isBlocked}
+            aria-label={'Code snippet'}
             aria-disabled={isDisabled || isBlocked}
             onChange={
               !(isDisabled || isBlocked) ? this.onChangeText : undefined

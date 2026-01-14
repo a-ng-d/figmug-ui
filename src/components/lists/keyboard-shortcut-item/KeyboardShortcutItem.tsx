@@ -22,17 +22,14 @@ const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
   const { label, shortcuts = [], separator = '' } = props
 
   return (
-    <li
-      className="keyboard-shortcut-item"
-      role="listitem"
-    >
+    <li className="keyboard-shortcut-item">
       <div
         className="keyboard-shortcut-item__label"
         role="presentation"
       >
         <span
           className={texts.type}
-          aria-label={label}
+          role="presentation"
         >
           {label}
         </span>

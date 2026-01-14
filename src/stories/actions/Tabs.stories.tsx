@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, within, fireEvent } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
 import Tabs from '@components/lists/tabs/Tabs'
 
@@ -69,6 +69,21 @@ export const ThreeTabs: Story = {
         action={onChange}
       />
     )
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const tab1 = canvas.getByText('Section 1')
+    await expect(tab1).toBeInTheDocument()
+
+    const tab2 = canvas.getByText('Section 2')
+    fireEvent.mouseDown(tab2)
+
+    await expect(args.action).toHaveBeenCalled()
+
+    const tab3 = canvas.getByText('Section 3')
+    fireEvent.mouseDown(tab3)
+    await expect(args.action).toHaveBeenCalledTimes(2)
   },
 }
 
@@ -147,5 +162,22 @@ export const FiveTabs: Story = {
         action={onChange}
       />
     )
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const tab1 = canvas.getByText('Section 1')
+    await expect(tab1).toBeInTheDocument()
+
+    const tab2 = canvas.getByText('Section 2')
+    fireEvent.mouseDown(tab2)
+    await expect(args.action).toHaveBeenCalled()
+
+    const tab3 = canvas.getByText('Section 3')
+    fireEvent.mouseDown(tab3)
+    await expect(args.action).toHaveBeenCalledTimes(2)
+
+    const icons = canvas.getAllByRole('img', { hidden: true })
+    await expect(icons.length).toBeGreaterThan(0)
   },
 }

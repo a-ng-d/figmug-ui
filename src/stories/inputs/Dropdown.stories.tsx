@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { expect, within, waitFor, fireEvent } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
-import * as ListStories from '@stories/lists/List.stories'
+import * as ListStories from '@stories/lists/ActionsList.stories'
 import figma from '@figma/code-connect'
 import Dropdown from '@components/inputs/dropdown/Dropdown'
 
@@ -109,6 +110,32 @@ export const SingleSelection: Story = {
         ]}
         selected={argsState.selected}
       />
+    )
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const dropdownButton = canvas.getByRole('combobox')
+    await expect(dropdownButton).toBeInTheDocument()
+    await expect(dropdownButton).toHaveAttribute('aria-expanded', 'false')
+
+    fireEvent.mouseDown(dropdownButton)
+
+    await waitFor(
+      () => {
+        expect(dropdownButton).toHaveAttribute('aria-expanded', 'true')
+      },
+      { timeout: 1000 }
+    )
+
+    await new Promise((resolve) => setTimeout(resolve, 100))
+
+    await waitFor(
+      async () => {
+        const menu = document.querySelector('.select-menu__menu')
+        await expect(menu).toBeInTheDocument()
+      },
+      { timeout: 2000 }
     )
   },
 }
@@ -239,6 +266,32 @@ export const ManyOptionsSelection: Story = {
       />
     )
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const dropdownButton = canvas.getByRole('combobox')
+    await expect(dropdownButton).toBeInTheDocument()
+    await expect(dropdownButton).toHaveAttribute('aria-expanded', 'false')
+
+    fireEvent.mouseDown(dropdownButton)
+
+    await waitFor(
+      () => {
+        expect(dropdownButton).toHaveAttribute('aria-expanded', 'true')
+      },
+      { timeout: 1000 }
+    )
+
+    await new Promise((resolve) => setTimeout(resolve, 100))
+
+    await waitFor(
+      async () => {
+        const menu = document.querySelector('.select-menu__menu')
+        await expect(menu).toBeInTheDocument()
+      },
+      { timeout: 2000 }
+    )
+  },
 }
 
 export const MultipleSelection: Story = {
@@ -325,6 +378,32 @@ export const MultipleSelection: Story = {
         ]}
         selected={argsState.selected}
       />
+    )
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const dropdownButton = canvas.getByRole('combobox')
+    await expect(dropdownButton).toBeInTheDocument()
+    await expect(dropdownButton).toHaveAttribute('aria-expanded', 'false')
+
+    fireEvent.mouseDown(dropdownButton)
+
+    await waitFor(
+      () => {
+        expect(dropdownButton).toHaveAttribute('aria-expanded', 'true')
+      },
+      { timeout: 1000 }
+    )
+
+    await new Promise((resolve) => setTimeout(resolve, 100))
+
+    await waitFor(
+      async () => {
+        const menu = document.querySelector('.select-menu__menu')
+        await expect(menu).toBeInTheDocument()
+      },
+      { timeout: 2000 }
     )
   },
 }

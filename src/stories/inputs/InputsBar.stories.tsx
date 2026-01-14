@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, within } from 'storybook/test'
 import InputsBar from '@components/inputs/inputs-bar/InputsBar'
 import Input from '@components/inputs/input/Input'
 
@@ -53,5 +53,14 @@ export const ColorParameters: Story = {
   args: {
     label: 'HSL',
     children: Inputs(),
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    if (args.label) {
+      const label = canvas.getByText(args.label)
+      await expect(label).toBeInTheDocument()
+    }
+    const inputs = canvas.getAllByRole('spinbutton')
+    await expect(inputs.length).toBe(3)
   },
 }

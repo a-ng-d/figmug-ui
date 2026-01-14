@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, within, waitFor, fireEvent } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
 import MultipleSlider from '@components/inputs/multiple-slider/MultipleSlider'
 
@@ -101,6 +101,58 @@ export const TripleValues: Story = {
         stops={stops}
         onChange={onChange}
       />
+    )
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const sliders = canvas.getAllByRole('slider')
+    await expect(sliders.length).toBeGreaterThan(0)
+
+    const firstKnob = sliders[0]
+    await expect(firstKnob).toBeInTheDocument()
+    await expect(firstKnob).toHaveAttribute('aria-valuenow', '0')
+
+    const knobRect = firstKnob.getBoundingClientRect()
+    const startX = knobRect.left + knobRect.width / 2
+    const startY = knobRect.top + knobRect.height / 2
+
+    fireEvent.mouseDown(firstKnob, {
+      clientX: startX,
+      clientY: startY,
+      bubbles: true,
+    })
+
+    await new Promise((resolve) => setTimeout(resolve, 50))
+
+    fireEvent(
+      document,
+      new MouseEvent('mousemove', {
+        clientX: startX + 50,
+        clientY: startY,
+        shiftKey: true,
+        bubbles: true,
+        cancelable: true,
+      })
+    )
+
+    await new Promise((resolve) => setTimeout(resolve, 100))
+
+    fireEvent(
+      document,
+      new MouseEvent('mouseup', {
+        clientX: startX + 50,
+        clientY: startY,
+        bubbles: true,
+        cancelable: true,
+      })
+    )
+
+    await waitFor(
+      () => {
+        expect(args.onChange).toHaveBeenCalled()
+      },
+      { timeout: 2000 }
     )
   },
 }

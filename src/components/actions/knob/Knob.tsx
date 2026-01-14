@@ -199,6 +199,7 @@ export default class Knob extends React.Component<KnobProps, KnobStates> {
         data-id={id}
         data-value={value}
         role="slider"
+        aria-label={`${shortId} knob, value ${this.transformStopValue(value)}`}
         aria-valuemin={min ? parseFloat(min) : undefined}
         aria-valuemax={max ? parseFloat(max) : undefined}
         aria-valuenow={typeof value === 'number' ? value : parseFloat(value)}

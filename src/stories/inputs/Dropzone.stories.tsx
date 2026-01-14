@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, within } from 'storybook/test'
 import Dropzone from '@components/inputs/dropzone/Dropzone'
 
 const meta: Meta<typeof Dropzone> = {
@@ -26,5 +26,12 @@ export const ImageDropBox: Story = {
     isDisabled: false,
     isNew: false,
     onImportFiles: fn(),
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const message = canvas.getByText(args.message)
+    await expect(message).toBeInTheDocument()
+    const cta = canvas.getByText(args.cta)
+    await expect(cta).toBeInTheDocument()
   },
 }
