@@ -73,6 +73,7 @@ export const List = (props: ListProps) => {
       id={id}
       style={{
         padding: padding,
+        listStyleType: 'none',
       }}
       className={doClassnames([
         'list',
@@ -84,15 +85,17 @@ export const List = (props: ListProps) => {
         isFullHeight && 'list--full-height',
       ])}
       onScroll={onScroll}
-      role="list"
       aria-busy={isLoading}
     >
       {isLoading ? (
-        <Icon
-          type="PICTO"
-          iconName="spinner"
-          role="status"
-        />
+        <li>
+          <Icon
+            type="PICTO"
+            iconName="spinner"
+            role="status"
+            aria-hidden="true"
+          />
+        </li>
       ) : (
         children
       )}

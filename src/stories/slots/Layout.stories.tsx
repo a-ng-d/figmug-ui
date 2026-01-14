@@ -43,14 +43,17 @@ const SamplePanel = ({
     body={[
       {
         node: (
-          <SimpleItem>
-            <div
-              className={texts.type}
-              style={{ padding: '16px' }}
-            >
-              {content}
-            </div>
-          </SimpleItem>
+          <SimpleItem
+            leftPartSlot={
+              <div
+                className={texts.type}
+                style={{ padding: '16px' }}
+              >
+                {content}
+              </div>
+            }
+            isListItem={false}
+          />
         ),
       },
     ]}
@@ -69,23 +72,29 @@ const SampleForm = () => (
     body={[
       {
         node: (
-          <SimpleItem>
-            <Input
-              id="sample-input"
-              type="TEXT"
-              placeholder="Enter your name"
-            />
-          </SimpleItem>
+          <SimpleItem
+            leftPartSlot={
+              <Input
+                id="sample-input"
+                type="TEXT"
+                placeholder="Enter your name"
+              />
+            }
+            isListItem={false}
+          />
         ),
       },
       {
         node: (
-          <SimpleItem>
-            <Button
-              type="primary"
-              label="Save Changes"
-            />
-          </SimpleItem>
+          <SimpleItem
+            leftPartSlot={
+              <Button
+                type="primary"
+                label="Save Changes"
+              />
+            }
+            isListItem={false}
+          />
         ),
       },
     ]}
@@ -103,17 +112,20 @@ const SampleNavigation = () => (
     body={[
       {
         node: (
-          <SimpleItem>
-            <Tabs
-              tabs={[
-                { label: 'Home', id: 'home', isUpdated: false },
-                { label: 'Settings', id: 'settings', isUpdated: true },
-                { label: 'Help', id: 'help', isUpdated: false, isNew: true },
-              ]}
-              active="settings"
-              action={() => {}}
-            />
-          </SimpleItem>
+          <SimpleItem
+            leftPartSlot={
+              <Tabs
+                tabs={[
+                  { label: 'Home', id: 'home', isUpdated: false },
+                  { label: 'Settings', id: 'settings', isUpdated: true },
+                  { label: 'Help', id: 'help', isUpdated: false, isNew: true },
+                ]}
+                active="settings"
+                action={() => {}}
+              />
+            }
+            isListItem={false}
+          />
         ),
       },
     ]}

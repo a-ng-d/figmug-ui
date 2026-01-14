@@ -910,6 +910,7 @@ export default class Input extends React.Component<InputProps, InputStates> {
             value={inputValue}
             maxLength={charactersLimit}
             disabled={isDisabled || isBlocked}
+            aria-label={placeholder || 'Text input'}
             aria-invalid={state === 'ERROR'}
             aria-disabled={isDisabled || isBlocked}
             onKeyDown={

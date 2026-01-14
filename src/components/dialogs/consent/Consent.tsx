@@ -161,6 +161,7 @@ export default class Consent extends React.Component<
         className="consent__banner"
         role="dialog"
         aria-modal="true"
+        aria-label="Cookie consent"
       >
         <div
           className="consent__banner__message"
@@ -247,6 +248,7 @@ export default class Consent extends React.Component<
         className="consent__banner"
         role="dialog"
         aria-modal="true"
+        aria-label="Cookie vendors consent preferences"
       >
         <div
           className="consent__banner__content"
