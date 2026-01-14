@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, within, userEvent } from 'storybook/test'
 import Notification from '@components/dialogs/notification/Notification'
 
 const meta = {
@@ -21,6 +21,14 @@ export const SingleMessage: Story = {
   },
   argTypes: {
     onClose: { control: false },
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const message = canvas.getByText(args.message)
+    await expect(message).toBeInTheDocument()
+    const closeButton = canvas.getByRole('button')
+    await userEvent.click(closeButton)
+    await expect(args.onClose).toHaveBeenCalled()
   },
 }
 
