@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { expect, userEvent, within, waitFor } from 'storybook/test'
 import { useState } from 'react'
 import Tooltip from '@components/tags/tooltip/Tooltip'
 import Button from '@components/actions/button/Button'
@@ -73,6 +74,21 @@ export const SingleLineBottom: Story = {
     type: 'SINGLE_LINE',
   },
   render: (args) => <TooltipWrapper {...args}>{args.children}</TooltipWrapper>,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    
+    const button = canvas.getByRole('button', { name: /Hover me/i })
+    await expect(button).toBeInTheDocument()
+    
+    await userEvent.hover(button)
+    
+    await waitFor(async () => {
+      const tooltip = canvas.getByText('This is a single line tooltip')
+      await expect(tooltip).toBeVisible()
+    })
+    
+    await userEvent.unhover(button)
+  },
 }
 
 export const SingleLineTop: Story = {
@@ -82,6 +98,21 @@ export const SingleLineTop: Story = {
     type: 'SINGLE_LINE',
   },
   render: (args) => <TooltipWrapper {...args}>{args.children}</TooltipWrapper>,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    
+    const button = canvas.getByRole('button', { name: /Hover me/i })
+    await expect(button).toBeInTheDocument()
+    
+    await userEvent.hover(button)
+    
+    await waitFor(async () => {
+      const tooltip = canvas.getByText('This is a single line tooltip at the top')
+      await expect(tooltip).toBeVisible()
+    })
+    
+    await userEvent.unhover(button)
+  },
 }
 
 export const MultiLineBottom: Story = {
@@ -92,6 +123,21 @@ export const MultiLineBottom: Story = {
     type: 'MULTI_LINE',
   },
   render: (args) => <TooltipWrapper {...args}>{args.children}</TooltipWrapper>,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    
+    const button = canvas.getByRole('button', { name: /Hover me/i })
+    await expect(button).toBeInTheDocument()
+    
+    await userEvent.hover(button)
+    
+    await waitFor(async () => {
+      const tooltip = canvas.getByText(/This is a multi-line tooltip with more detailed information/i)
+      await expect(tooltip).toBeVisible()
+    })
+    
+    await userEvent.unhover(button)
+  },
 }
 
 export const MultiLineTop: Story = {
@@ -102,6 +148,21 @@ export const MultiLineTop: Story = {
     type: 'MULTI_LINE',
   },
   render: (args) => <TooltipWrapper {...args}>{args.children}</TooltipWrapper>,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    
+    const button = canvas.getByRole('button', { name: /Hover me/i })
+    await expect(button).toBeInTheDocument()
+    
+    await userEvent.hover(button)
+    
+    await waitFor(async () => {
+      const tooltip = canvas.getByText(/This is a multi-line tooltip positioned at the top/i)
+      await expect(tooltip).toBeVisible()
+    })
+    
+    await userEvent.unhover(button)
+  },
 }
 
 export const WithImage: Story = {
@@ -112,6 +173,25 @@ export const WithImage: Story = {
     image: 'https://placehold.co/96x96',
   },
   render: (args) => <TooltipWrapper {...args}>{args.children}</TooltipWrapper>,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    
+    const button = canvas.getByRole('button', { name: /Hover me/i })
+    await expect(button).toBeInTheDocument()
+    
+    await userEvent.hover(button)
+    
+    await waitFor(async () => {
+      const tooltip = canvas.getByText('Tooltip with an image example')
+      await expect(tooltip).toBeVisible()
+      
+      const image = canvas.getByRole('img')
+      await expect(image).toBeInTheDocument()
+      await expect(image).toHaveAttribute('src', 'https://placehold.co/96x96')
+    })
+    
+    await userEvent.unhover(button)
+  },
 }
 
 export const LongText: Story = {
@@ -122,6 +202,21 @@ export const LongText: Story = {
     type: 'MULTI_LINE',
   },
   render: (args) => <TooltipWrapper {...args}>{args.children}</TooltipWrapper>,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    
+    const button = canvas.getByRole('button', { name: /Hover me/i })
+    await expect(button).toBeInTheDocument()
+    
+    await userEvent.hover(button)
+    
+    await waitFor(async () => {
+      const tooltip = canvas.getByText(/This is a very long tooltip text/i)
+      await expect(tooltip).toBeVisible()
+    })
+    
+    await userEvent.unhover(button)
+  },
 }
 
 export const EdgePosition: Story = {
@@ -147,6 +242,21 @@ export const EdgePosition: Story = {
     ),
   ],
   render: (args) => <TooltipWrapper {...args}>{args.children}</TooltipWrapper>,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    
+    const button = canvas.getByRole('button', { name: /Hover me/i })
+    await expect(button).toBeInTheDocument()
+    
+    await userEvent.hover(button)
+    
+    await waitFor(async () => {
+      const tooltip = canvas.getByText('This tooltip near the edge auto-adjusts its position')
+      await expect(tooltip).toBeVisible()
+    })
+    
+    await userEvent.unhover(button)
+  },
 }
 
 export const AllTooltips: Story = {

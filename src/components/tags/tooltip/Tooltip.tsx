@@ -72,7 +72,8 @@ const Tooltip = (props: TooltipProps) => {
             <img
               src={image}
               className="tooltip__image"
-              role="presentation"
+              role="img"
+              alt="Decorative image"
             />
           )}
           <div
