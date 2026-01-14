@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { expect, within } from 'storybook/test'
 import { IconList } from '@tps/icon.types'
 import texts from '@styles/texts/texts.module.scss'
 import Icon from '@components/assets/icon/Icon'
@@ -198,5 +199,10 @@ export const Letter: Story = {
         iconLetter={args.iconLetter}
       />
     )
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const letter = canvas.getByText(args.iconLetter ?? 'L')
+    await expect(letter).toBeInTheDocument()
   },
 }

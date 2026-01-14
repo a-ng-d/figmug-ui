@@ -43,14 +43,11 @@ const Avatar = (props: AvatarProps) => {
       className={doClassnames(['user', isInverted && 'user--inverted'])}
       role="group"
     >
-      <div
-        className="user__avatar"
-        role="img"
-      >
+      <div className="user__avatar">
         <img
           src={avatar}
           alt={fullName}
-          role="presentation"
+          role="img"
         />
       </div>
       <span

@@ -17,12 +17,22 @@ export interface ThumbnailProps {
    * @default '100%'
    */
   height?: string
+  /**
+   * Alt text for the image
+   * @default 'Image thumbnail'
+   */
+  alt?: string
 }
 
 const Thumbnail = (props: ThumbnailProps) => {
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
-  const { src, width = '100%', height = '100%' } = props
+  const {
+    src,
+    width = '100%',
+    height = '100%',
+    alt = 'Image thumbnail',
+  } = props
 
   useEffect(() => {
     const img = new Image()
@@ -39,7 +49,6 @@ const Thumbnail = (props: ThumbnailProps) => {
           width: width,
           height: height,
         }}
-        role="img"
       >
         <Icon
           type="PICTO"
@@ -57,7 +66,6 @@ const Thumbnail = (props: ThumbnailProps) => {
         width: width,
         height: height,
       }}
-      role="img"
       aria-busy={isLoading}
     >
       {isLoading ? (
@@ -72,8 +80,8 @@ const Thumbnail = (props: ThumbnailProps) => {
           className="thumbnail__image"
           src={src}
           loading="lazy"
-          alt=""
-          role="presentation"
+          alt={alt}
+          role="img"
         />
       )}
     </div>
