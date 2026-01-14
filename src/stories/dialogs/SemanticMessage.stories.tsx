@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, within } from 'storybook/test'
 import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
 import Button from '@components/actions/button/Button'
 
@@ -46,5 +46,12 @@ export const TypedMessage: Story = {
       },
     },
     actionsSlot: { control: { disable: true } },
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const message = canvas.getByText(args.message)
+    await expect(message).toBeInTheDocument()
+    const buttons = canvas.getAllByRole('button')
+    await expect(buttons.length).toBeGreaterThan(0)
   },
 }
