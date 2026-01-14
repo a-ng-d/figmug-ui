@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, userEvent, within } from 'storybook/test'
 import { IconList } from '@tps/icon.types'
 import Button from '@components/actions/button/Button'
 
@@ -147,6 +147,14 @@ export const Primary: Story = {
     customIcon: { control: false },
     helper: { control: false },
   },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button', { name: /Primary action button/i })
+    
+    await expect(button).toBeInTheDocument()
+    await userEvent.click(button)
+    await expect(args.action).toHaveBeenCalledTimes(1)
+  },
 }
 
 export const Secondary: Story = {
@@ -171,6 +179,14 @@ export const Secondary: Story = {
     customIcon: { control: false },
     helper: { control: false },
   },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button', { name: /Secondary action button/i })
+    
+    await expect(button).toBeInTheDocument()
+    await userEvent.click(button)
+    await expect(args.action).toHaveBeenCalled()
+  },
 }
 
 export const Tertiary: Story = {
@@ -193,6 +209,14 @@ export const Tertiary: Story = {
     iconClassName: { control: false },
     customIcon: { control: false },
     helper: { control: false },
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button', { name: /Tertiary action button/i })
+    
+    await expect(button).toBeInTheDocument()
+    await userEvent.click(button)
+    await expect(args.action).toHaveBeenCalled()
   },
 }
 
@@ -218,6 +242,14 @@ export const Destructive: Story = {
     customIcon: { control: false },
     helper: { control: false },
   },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button', { name: /Destructive action button/i })
+    
+    await expect(button).toBeInTheDocument()
+    await userEvent.click(button)
+    await expect(args.action).toHaveBeenCalled()
+  },
 }
 
 export const Alternative: Story = {
@@ -241,6 +273,18 @@ export const Alternative: Story = {
     helper: { control: false },
     iconClassName: { control: false },
     customIcon: { control: false },
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button', { name: /Compact action button/i })
+    
+    await expect(button).toBeInTheDocument()
+    
+    const icon = canvas.getByRole('img', { hidden: true })
+    await expect(icon).toBeInTheDocument()
+    
+    await userEvent.click(button)
+    await expect(args.action).toHaveBeenCalled()
   },
 }
 
@@ -266,5 +310,22 @@ export const Icon: Story = {
     hasMultipleActions: { control: false },
     isLink: { control: false },
     url: { control: false },
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
+    
+    await expect(button).toBeInTheDocument()
+    
+    const icon = canvas.getByRole('img', { hidden: true })
+    await expect(icon).toBeInTheDocument()
+    
+    await userEvent.hover(button)
+    
+    await expect(canvas.getByText('Adjust the parameters')).toBeInTheDocument()
+    
+    await userEvent.unhover(button)
+    await userEvent.click(button)
+    await expect(args.action).toHaveBeenCalled()
   },
 }
