@@ -67,7 +67,7 @@ export default class IconChip extends React.Component<
           this.setState({ isTooltipVisible: true })
         }}
         onMouseLeave={() => this.setState({ isTooltipVisible: false })}
-        role="icon"
+        role="contentinfo"
       >
         <Icon
           type={iconType}

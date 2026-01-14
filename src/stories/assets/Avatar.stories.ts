@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { expect, within } from 'storybook/test'
 import Avatar from '@components/assets/avatar/Avatar'
 
 const meta = {
@@ -19,6 +20,12 @@ export const DefinedUser: Story = {
     fullName: 'Aurélien Grimaud',
     isInverted: false,
   },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const img = canvas.getByRole('img')
+    await expect(img).toBeInTheDocument()
+    if (args.fullName) await expect(img).toHaveAttribute('alt', args.fullName)
+  },
 }
 
 export const UndefinedUser: Story = {
@@ -28,5 +35,11 @@ export const UndefinedUser: Story = {
   argTypes: {
     avatar: { control: false },
     fullName: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const img = canvas.getByRole('img')
+    await expect(img).toBeInTheDocument()
+    await expect(img).toHaveAttribute('alt', 'John Doe')
   },
 }
