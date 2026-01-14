@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, userEvent, within, waitFor, screen } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
-import * as ListStories from '@stories/lists/List.stories.tsx'
+import * as ListStories from '@stories/lists/ActionsList.stories'
 import Menu from '@components/actions/menu/Menu'
 
 const meta = {
@@ -144,6 +144,25 @@ export const DropdownIcon: Story = {
       />
     )
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const menuButton = canvas.getByRole('button')
+    await expect(menuButton).toBeInTheDocument()
+
+    menuButton.focus()
+    await userEvent.keyboard('{Enter}')
+
+    await new Promise((resolve) => setTimeout(resolve, 100))
+
+    await waitFor(
+      async () => {
+        const option1 = screen.getByText('Option 1')
+        await expect(option1).toBeInTheDocument()
+      },
+      { timeout: 1000 }
+    )
+  },
 }
 
 export const MultipleActionsIconButton: Story = {
@@ -165,6 +184,25 @@ export const MultipleActionsIconButton: Story = {
     label: { control: false },
     selected: { control: false },
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const menuButton = canvas.getByRole('button')
+    await expect(menuButton).toBeInTheDocument()
+
+    menuButton.focus()
+    await userEvent.keyboard('{Enter}')
+
+    await new Promise((resolve) => setTimeout(resolve, 100))
+
+    await waitFor(
+      async () => {
+        const option1 = screen.getByText('Option 1')
+        await expect(option1).toBeInTheDocument()
+      },
+      { timeout: 1000 }
+    )
+  },
 }
 
 export const MultipleActionsButton: Story = {
@@ -182,5 +220,24 @@ export const MultipleActionsButton: Story = {
     type: { control: false },
     icon: { control: false },
     selected: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const menuButton = canvas.getByRole('button', { name: /Run/i })
+    await expect(menuButton).toBeInTheDocument()
+
+    menuButton.focus()
+    await userEvent.keyboard('{Enter}')
+
+    await new Promise((resolve) => setTimeout(resolve, 100))
+
+    await waitFor(
+      async () => {
+        const option1 = screen.getByText('Option 1')
+        await expect(option1).toBeInTheDocument()
+      },
+      { timeout: 1000 }
+    )
   },
 }

@@ -293,7 +293,6 @@ export default class ActionsList extends React.Component<
             : undefined
         }
         aria-disabled={option.isBlocked}
-        aria-label={option.label}
         onKeyDown={(e) => {
           e.stopPropagation()
           if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
@@ -350,9 +349,7 @@ export default class ActionsList extends React.Component<
         data-is-blocked={option.isBlocked}
         data-role={'GROUP'}
         tabIndex={option.isBlocked ? -1 : 0}
-        aria-expanded={openedGroup === option.value}
         aria-disabled={option.isBlocked}
-        aria-label={option.label}
         aria-haspopup="true"
         onKeyDown={(e) => {
           e.stopPropagation()
@@ -414,7 +411,6 @@ export default class ActionsList extends React.Component<
             : undefined
         }
         aria-disabled={option.isBlocked}
-        aria-label={option.label}
         onKeyDown={(e) => {
           e.stopPropagation()
           if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {

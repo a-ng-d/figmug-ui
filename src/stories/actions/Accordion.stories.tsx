@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, within, fireEvent } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
 import * as InputStory from '@stories/inputs/Input.stories'
 import * as TitleStory from '@stories/assets/SectionTitle.stories'
@@ -64,5 +64,17 @@ export const ExpandCollapseInput: Story = {
         onEmpty={onChange}
       />
     )
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const accordionButton = canvas.getByRole('button')
+    await expect(accordionButton).toBeInTheDocument()
+
+    fireEvent.mouseDown(accordionButton)
+
+    await new Promise((resolve) => setTimeout(resolve, 300))
+
+    fireEvent.mouseDown(accordionButton)
   },
 }

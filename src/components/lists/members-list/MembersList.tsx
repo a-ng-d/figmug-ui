@@ -85,6 +85,7 @@ export default class MembersList extends React.Component<
                 <img
                   src={member.avatar}
                   alt={member.fullName}
+                  role="img"
                   aria-hidden="true"
                 />
               </div>

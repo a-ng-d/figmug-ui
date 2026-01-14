@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { expect, within } from 'storybook/test'
 import SectionTitle from '@components/assets/section-title/SectionTitle'
 
 const meta = {
@@ -21,5 +22,12 @@ export const TitleWithHelper: Story = {
   },
   argTypes: {
     indicator: { control: 'number' },
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const title = canvas.getByText(args.label)
+    await expect(title).toBeInTheDocument()
+    const indicator = canvas.getByText(`(${args.indicator?.toString()})`)
+    await expect(indicator).toBeInTheDocument()
   },
 }

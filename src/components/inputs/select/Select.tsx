@@ -202,9 +202,6 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
             'checkbox',
             isBlocked && 'checkbox--blocked',
           ])}
-          role="checkbox"
-          aria-checked={isChecked}
-          aria-disabled={isDisabled || isBlocked}
           onMouseEnter={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
           }}
@@ -287,9 +284,6 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       <div className={layouts['snackbar--medium']}>
         <div
           className={doClassnames(['radio', isBlocked && 'radio--blocked'])}
-          role="radio"
-          aria-checked={isChecked}
-          aria-disabled={isDisabled || isBlocked}
           onMouseEnter={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
           }}
@@ -373,9 +367,6 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
       <div className={layouts['snackbar--medium']}>
         <div
           className={doClassnames(['switch', isBlocked && 'switch--blocked'])}
-          role="switch"
-          aria-checked={isChecked}
-          aria-disabled={isDisabled || isBlocked}
           onMouseEnter={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
           }}
@@ -395,6 +386,7 @@ export default class Select extends React.Component<SelectProps, SelectStates> {
               id={id}
               className="switch__toggle"
               type="checkbox"
+              role="switch"
               name={name}
               checked={isChecked}
               disabled={isDisabled || isBlocked}
