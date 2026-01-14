@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, userEvent, within } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
 import { ChangeEvent } from 'react'
 import Select from '@components/inputs/select/Select'
@@ -52,6 +52,16 @@ export const CheckBox: Story = {
       />
     )
   },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const checkbox = canvas.getByRole('checkbox', { name: /Action label/i })
+    await expect(checkbox).toBeInTheDocument()
+    await expect(checkbox).not.toBeChecked()
+
+    await userEvent.click(checkbox)
+    await expect(args.action).toHaveBeenCalled()
+  },
 }
 
 export const RadioButton: Story = {
@@ -90,6 +100,16 @@ export const RadioButton: Story = {
       />
     )
   },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const radio = canvas.getByRole('radio', { name: /Action label/i })
+    await expect(radio).toBeInTheDocument()
+    await expect(radio).not.toBeChecked()
+
+    await userEvent.click(radio)
+    await expect(args.action).toHaveBeenCalled()
+  },
 }
 
 export const SwitchButton: Story = {
@@ -127,6 +147,17 @@ export const SwitchButton: Story = {
         action={action}
       />
     )
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const switchButton = canvas.getByRole('switch', { name: /Action label/i })
+    await expect(switchButton).toBeInTheDocument()
+    await expect(switchButton).not.toBeChecked()
+
+    await userEvent.click(switchButton)
+    await expect(args.action).toHaveBeenCalled()
+    await expect(switchButton).toBeChecked()
   },
 }
 
@@ -209,6 +240,29 @@ export const MultipleChoices: Story = {
       </>
     )
   },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const option1 = canvas.getByRole('checkbox', { name: /Option 1/i })
+    const option2 = canvas.getByRole('checkbox', { name: /Option 2/i })
+    const option3 = canvas.getByRole('checkbox', { name: /Option 3/i })
+
+    await expect(option1).toBeInTheDocument()
+    await expect(option2).toBeInTheDocument()
+    await expect(option3).toBeInTheDocument()
+
+    await expect(option1).not.toBeChecked()
+    await expect(option2).not.toBeChecked()
+    await expect(option3).not.toBeChecked()
+
+    await userEvent.click(option1)
+    await userEvent.click(option3)
+
+    await expect(args.action).toHaveBeenCalledTimes(2)
+    await expect(option1).toBeChecked()
+    await expect(option2).not.toBeChecked()
+    await expect(option3).toBeChecked()
+  },
 }
 
 export const SingleChoice: Story = {
@@ -280,5 +334,31 @@ export const SingleChoice: Story = {
         />
       </>
     )
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const option1 = canvas.getByRole('radio', { name: /Option 1/i })
+    const option2 = canvas.getByRole('radio', { name: /Option 2/i })
+    const option3 = canvas.getByRole('radio', { name: /Option 3/i })
+
+    await expect(option1).toBeInTheDocument()
+    await expect(option2).toBeInTheDocument()
+    await expect(option3).toBeInTheDocument()
+
+    await expect(option1).toBeChecked()
+    await expect(option2).not.toBeChecked()
+    await expect(option3).not.toBeChecked()
+
+    await userEvent.click(option2)
+    await expect(args.action).toHaveBeenCalled()
+    await expect(option1).not.toBeChecked()
+    await expect(option2).toBeChecked()
+    await expect(option3).not.toBeChecked()
+
+    await userEvent.click(option3)
+    await expect(option1).not.toBeChecked()
+    await expect(option2).not.toBeChecked()
+    await expect(option3).toBeChecked()
   },
 }

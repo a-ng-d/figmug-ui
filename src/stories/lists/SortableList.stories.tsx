@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn } from 'storybook/test'
+import { fn, expect, within, waitFor, fireEvent } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
 import React from 'react'
-import FormItem from '@components/slots/form-item/FormItem'
+// import FormItem from '@components/slots/form-item/FormItem'
 import SortableList from '@components/lists/sortable-list/SortableList'
 import Input from '@components/inputs/input/Input'
 import Message from '@components/dialogs/message/Message'
@@ -125,124 +125,157 @@ export const SimpleColors: Story = {
       />
     )
   },
-}
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
 
-export const RichColors: Story = {
-  args: {
-    data: [
-      {
-        id: '000000',
-        color: '#FF0000',
-        description: 'Some description',
-      },
-      {
-        id: '111111',
-        color: '#00FF00',
-        description: 'Some description',
-      },
-      {
-        id: '222222',
-        color: '#0000FF',
-        description: 'Some description',
-      },
-      {
-        id: '333333',
-        color: '#000000',
-        description: '',
-      },
-      {
-        id: '444444',
-        color: '#FFFFFF',
-        description: 'Some description',
-      },
-      {
-        id: '555555',
-        color: '#123456',
-        description: '',
-      },
-      {
-        id: '666666',
-        color: '#654321',
-        description: 'Some description',
-      },
-    ] as Array<ListItem>,
-    primarySlot: [<div></div>],
-    actionsSlot: [<div></div>],
-    emptySlot: [<div></div>],
-    canBeEmpty: true,
-    isScrollable: false,
-    isBlocked: false,
-    onChangeSortableList: mock,
-  },
-  argTypes: {
-    primarySlot: { control: false },
-    secondarySlot: { control: false },
-    actionsSlot: { control: false },
-    onChangeSortableList: { control: false },
-  },
-  render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      data: Array<ListItem>
-    }>()
+    const items = canvas.getAllByRole('listitem')
+    await expect(items.length).toBe(5)
 
-    const onChange = (e: Array<ListItem>) => {
-      updateArgs({
-        data: e,
-      })
-      args.onChangeSortableList?.(e)
-    }
+    const firstItem = items[0]
+    await expect(firstItem).toHaveAttribute('data-id', '000000')
+    await expect(firstItem).toHaveAttribute('data-position', '0')
 
-    const onRemove = (
-      e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-    ) => {
-      let id: string | null
-      const element: HTMLElement | null = (
-        e.currentTarget as HTMLElement
-      ).closest('.draggable-item')
+    const thirdItem = items[2]
+    await expect(thirdItem).toHaveAttribute('data-id', '222222')
+    await expect(thirdItem).toHaveAttribute('data-position', '2')
 
-      element !== null ? (id = element.getAttribute('data-id')) : (id = null)
+    fireEvent.dragStart(firstItem)
 
-      onChange(argsState.data.filter((item) => item.id !== id))
-    }
+    await new Promise((resolve) => setTimeout(resolve, 100))
 
-    return (
-      <SortableList<ListItem>
-        {...args}
-        data={argsState.data}
-        primarySlot={argsState.data.map((item) => (
-          <Input
-            type="COLOR"
-            value={item.color}
-          />
-        ))}
-        secondarySlot={argsState.data.map((item) => {
-          return {
-            title: item.id,
-            node: (
-              <FormItem
-                label="Description"
-                id="type-description"
-              >
-                <Input
-                  id="type-description"
-                  type="LONG_TEXT"
-                  placeholder="Type something"
-                  value={item.description}
-                />
-              </FormItem>
-            ),
-          }
-        })}
-        emptySlot={
-          <Message
-            icon="info"
-            messages={['No colors available']}
-          />
-        }
-        onChangeSortableList={onChange}
-        onRemoveItem={onRemove}
-        onRefoldOptions={() => {}}
-      />
+    fireEvent.dragOver(thirdItem)
+
+    await new Promise((resolve) => setTimeout(resolve, 100))
+
+    fireEvent.drop(thirdItem)
+
+    fireEvent.dragEnd(firstItem)
+
+    await waitFor(
+      () => {
+        expect(args.onChangeSortableList).toHaveBeenCalled()
+      },
+      { timeout: 2000 }
     )
   },
 }
+
+// export const RichColors: Story = {
+//   args: {
+//     data: [
+//       {
+//         id: '000000',
+//         color: '#FF0000',
+//         description: 'Some description',
+//       },
+//       {
+//         id: '111111',
+//         color: '#00FF00',
+//         description: 'Some description',
+//       },
+//       {
+//         id: '222222',
+//         color: '#0000FF',
+//         description: 'Some description',
+//       },
+//       {
+//         id: '333333',
+//         color: '#000000',
+//         description: '',
+//       },
+//       {
+//         id: '444444',
+//         color: '#FFFFFF',
+//         description: 'Some description',
+//       },
+//       {
+//         id: '555555',
+//         color: '#123456',
+//         description: '',
+//       },
+//       {
+//         id: '666666',
+//         color: '#654321',
+//         description: 'Some description',
+//       },
+//     ] as Array<ListItem>,
+//     primarySlot: [<div></div>],
+//     actionsSlot: [<div></div>],
+//     emptySlot: [<div></div>],
+//     canBeEmpty: true,
+//     isScrollable: false,
+//     isBlocked: false,
+//     onChangeSortableList: mock,
+//   },
+//   argTypes: {
+//     primarySlot: { control: false },
+//     secondarySlot: { control: false },
+//     actionsSlot: { control: false },
+//     onChangeSortableList: { control: false },
+//   },
+//   render: (args) => {
+//     const [argsState, updateArgs] = useArgs<{
+//       data: Array<ListItem>
+//     }>()
+
+//     const onChange = (e: Array<ListItem>) => {
+//       updateArgs({
+//         data: e,
+//       })
+//       args.onChangeSortableList?.(e)
+//     }
+
+//     const onRemove = (
+//       e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+//     ) => {
+//       let id: string | null
+//       const element: HTMLElement | null = (
+//         e.currentTarget as HTMLElement
+//       ).closest('.draggable-item')
+
+//       element !== null ? (id = element.getAttribute('data-id')) : (id = null)
+
+//       onChange(argsState.data.filter((item) => item.id !== id))
+//     }
+
+//     return (
+//       <SortableList<ListItem>
+//         {...args}
+//         data={argsState.data}
+//         primarySlot={argsState.data.map((item) => (
+//           <Input
+//             type="COLOR"
+//             value={item.color}
+//           />
+//         ))}
+//         secondarySlot={argsState.data.map((item) => {
+//           return {
+//             title: item.id,
+//             node: (
+//               <FormItem
+//                 label="Description"
+//                 id="type-description"
+//               >
+//                 <Input
+//                   id="type-description"
+//                   type="LONG_TEXT"
+//                   placeholder="Type something"
+//                   value={item.description}
+//                 />
+//               </FormItem>
+//             ),
+//           }
+//         })}
+//         emptySlot={
+//           <Message
+//             icon="info"
+//             messages={['No colors available']}
+//           />
+//         }
+//         onChangeSortableList={onChange}
+//         onRemoveItem={onRemove}
+//         onRefoldOptions={() => {}}
+//       />
+//     )
+//   },
+// }

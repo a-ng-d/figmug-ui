@@ -285,8 +285,6 @@ export default class SortableList<
         ])}
         onScroll={this.onScroll}
         ref={this.listRef}
-        role="list"
-        aria-orientation="vertical"
       >
         {data.map((item, index) => (
           <DraggableItem

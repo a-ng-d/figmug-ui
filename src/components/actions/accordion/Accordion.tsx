@@ -95,15 +95,11 @@ const Accordion = (props: AccordionProps) => {
 
   return (
     <div
-      role="region"
-      aria-expanded={isExpanded}
-      aria-label={label}
       className={doClassnames([
         'accordion',
         isExpanded && 'accordion--expanded',
         isBlocked && 'accordion--blocked',
       ])}
-      tabIndex={-1}
       onMouseDown={(e) => {
         if (
           (e.target as HTMLElement).dataset.feature === undefined &&
@@ -113,20 +109,7 @@ const Accordion = (props: AccordionProps) => {
           onAdd(e as React.MouseEvent<HTMLDivElement, MouseEvent>)
       }}
     >
-      <div
-        className="accordion__row"
-        role="button"
-        aria-expanded={isExpanded}
-        aria-controls={`accordion-content-${label}`}
-        aria-disabled={isBlocked}
-        tabIndex={-1}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()
-            if (!isExpanded && !isBlocked) onAdd(e)
-          }
-        }}
-      >
+      <div className="accordion__row">
         <div
           className="accordion__row__left"
           role="presentation"

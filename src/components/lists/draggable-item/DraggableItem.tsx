@@ -223,9 +223,8 @@ export default class DraggableItem extends React.Component<
           guideBelow && 'draggable-item--below',
         ])}
         draggable={!hasMoreOptions && !isBlocked ? selected : false}
-        role="listitem"
         aria-grabbed={isDragged}
-        aria-selected={selected}
+        aria-current={selected ? 'true' : undefined}
         onMouseDown={(e) => {
           if (!hasMoreOptions && !isBlocked) onChangeSelection(e)
         }}
