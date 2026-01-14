@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
 import * as ListStories from '@stories/lists/List.stories.tsx'
 import Menu from '@components/actions/menu/Menu'
