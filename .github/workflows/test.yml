@@ -27,3 +27,5 @@ jobs:
 
       - name: Run storybook tests
         run: npm run test:storybook
+        env:
+          STORYBOOK_URL: '${{ vars.STORYBOOK_URL }}'
