@@ -50,13 +50,13 @@ export const ComboKeys: Story = {
   ),
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    
+
     const label = canvas.getByText(args.label)
     await expect(label).toBeInTheDocument()
-    
+
     const shift = canvas.getByText('⇧')
     await expect(shift).toBeInTheDocument()
-    
+
     const tab = canvas.getByText('⇥ Tab')
     await expect(tab).toBeInTheDocument()
   },
@@ -75,16 +75,16 @@ export const SeveralComboKeys: Story = {
   ),
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    
+
     const label = canvas.getByText(args.label)
     await expect(label).toBeInTheDocument()
-    
+
     const separator = canvas.getByText('or')
     await expect(separator).toBeInTheDocument()
-    
+
     const tabKeys = canvas.getAllByText('⇥ Tab')
     await expect(tabKeys.length).toBe(2)
-    
+
     const shift = canvas.getByText('⇧')
     await expect(shift).toBeInTheDocument()
   },

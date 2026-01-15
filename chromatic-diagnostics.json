@@ -3919,9 +3919,7 @@
     "branch": "main",
     "slug": "a-ng-d/figmug-ui",
     "fromCI": false,
-    "parentCommits": [
-      "ac059b904336d96b23f82658b144b0a311375c4a"
-    ]
+    "parentCommits": ["ac059b904336d96b23f82658b144b0a311375c4a"]
   },
   "input": [],
   "isOnboarding": false,
@@ -3962,11 +3960,7 @@
       "type": "git",
       "url": "git+https://github.com/a-ng-d/figmug-ui.git"
     },
-    "keywords": [
-      "library",
-      "ui",
-      "figma-ui"
-    ],
+    "keywords": ["library", "ui", "figma-ui"],
     "author": "Aurélien Grimaud",
     "license": "MIT",
     "bugs": {
@@ -3977,9 +3971,7 @@
       "storybook": "$storybook",
       "vite": "$vite"
     },
-    "files": [
-      "dist"
-    ],
+    "files": ["dist"],
     "exports": "./dist/index.js",
     "module": "./dist/index.js",
     "types": "./dist/index.d.ts",

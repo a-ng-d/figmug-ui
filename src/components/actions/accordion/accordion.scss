@@ -16,10 +16,10 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--accordion-row-gap);
+    box-sizing: border-box;
     padding: var(--accordion-row-padding-top) var(--accordion-row-padding-right)
       var(--accordion-row-padding-bottom) var(--accordion-row-padding-left);
     height: var(--accordion-row-height);
-    box-sizing: border-box;
 
     --section-title-text-color: var(--accordion-text-color-default);
     --text-color-primary: var(--accordion-text-color-default);

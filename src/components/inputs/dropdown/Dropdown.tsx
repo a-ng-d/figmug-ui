@@ -458,7 +458,10 @@ export default class Dropdown extends React.Component<
           ])}
           disabled={isDisabled || isBlocked}
           aria-expanded={isMenuOpen ? 'true' : 'false'}
-          {...((isMenuOpen && (containerId === undefined ? this.state.isMenuVisible : true)) && { 'aria-controls': `${id}-menu` })}
+          {...(isMenuOpen &&
+            (containerId === undefined ? this.state.isMenuVisible : true) && {
+              'aria-controls': `${id}-menu`,
+            })}
           aria-label={`Select option: ${this.findSelectedOption(options)}`}
           aria-haspopup="menu"
           onKeyDown={(e) => {

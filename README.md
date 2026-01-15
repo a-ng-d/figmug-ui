@@ -36,6 +36,7 @@ npm run test:storybook
 ```
 
 Tests can also be run directly in Storybook UI:
+
 1. Start Storybook: `npm run storybook`
 2. Open the Tests panel in the sidebar
 3. Click "Run all" to execute all interaction tests
