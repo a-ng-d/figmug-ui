@@ -13,7 +13,7 @@ export default defineConfig({
     storybookTest({
       configDir: '.storybook',
       storybookScript: 'npm run storybook -- --no-open',
-      storybookUrl: 'http://localhost:6006',
+      storybookUrl: import.meta.env.STORYBOOK_URL,
     }),
   ],
   test: {
