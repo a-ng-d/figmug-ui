@@ -25,5 +25,19 @@ export default defineConfig({
       instances: [{ browser: 'chromium' }],
     },
     setupFiles: ['./.storybook/vitest.setup.ts'],
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'json', 'html', 'lcov'],
+      exclude: [
+        'node_modules/',
+        '.storybook/',
+        'coverage/',
+        'dist/',
+        '**/*.d.ts',
+        '**/*.stories.tsx',
+        '**/index.ts',
+      ],
+      include: ['src/**/*.{ts,tsx}'],
+    },
   },
 })
