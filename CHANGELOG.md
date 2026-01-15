@@ -5,6 +5,54 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.20.0] - 2026-01-15
+
+### Added
+
+- **Storybook Interaction Tests**: Comprehensive interaction testing across all components
+  - Implemented Play functions in Storybook stories for interactive behavior validation
+  - Automated user interaction testing covering clicks, form submissions, and state changes
+  - Enhanced test coverage for component responsiveness and event handling
+
+- **Storybook Accessibility Tests**: Full accessibility test suite integration
+  - Integrated `@storybook/addon-a11y` for automated accessibility checking
+  - Added accessibility tests covering WCAG 2.1 standards
+  - Comprehensive coverage of color contrast, ARIA attributes, keyboard navigation
+  - Automated testing for semantic HTML structure and form labels
+
+- **Storybook Coverage Metrics**: Test coverage reporting for component implementations
+  - Integrated coverage analysis for visual regression testing
+  - Added coverage badges and metrics to component documentation
+  - Tracking coverage across actions, assets, dialogs, inputs, lists, slots, and tags
+
+### Enhanced
+
+- **Component Accessibility**: Improved accessibility across all components
+  - Enhanced ARIA labels and descriptions for better screen reader support
+  - Improved keyboard navigation with proper focus management
+  - Added missing `aria-label` attributes to interactive elements
+  - Improved semantic HTML structure for better accessibility
+  - Enhanced form components with proper label associations
+  - Improved color contrast ratios for better readability
+  - Added `aria-describedby` relationships for helper and error messages
+  - Enhanced button and link semantics for assistive technology
+
+- **Accessibility Documentation**: Comprehensive accessibility guidelines
+  - Added accessibility best practices to component documentation
+  - Documented WCAG 2.1 compliance status for each component
+  - Enhanced prop documentation with accessibility requirements
+  - Added usage examples for proper accessible implementation
+
+### Technical Details
+
+- Configured Storybook with Play functions for interaction testing across 42+ components
+- Implemented accessibility addon with automated scanning on every story
+- Added test configurations for interactive and accessibility test execution
+- Enhanced component templates with semantic HTML and ARIA attributes
+- Improved focus management with proper `autoFocus` and `tabIndex` handling
+- Added keyboard event handling for accessible component interactions
+- Comprehensive accessibility testing covering all design system components
+
 ## [1.19.43] - 2026-01-06
 
 ### Enhanced
