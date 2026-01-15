@@ -78,6 +78,9 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    test: {
+      autoplay: false,
+    },
     a111y: {
       element: '#root',
     },
