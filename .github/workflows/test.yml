@@ -1,4 +1,4 @@
-name: Test UI
+name: Tests components and stories
 
 on:
   push:
@@ -28,4 +28,4 @@ jobs:
       - name: Run storybook tests
         run: npm run test:storybook
         env:
-          STORYBOOK_URL: '${{ vars.STORYBOOK_URL }}'
+          STORYBOOK_URL: 'http://localhost:6006'
