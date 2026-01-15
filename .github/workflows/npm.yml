@@ -6,6 +6,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   npm:
     name: Test, Build and Publish on npm
@@ -17,6 +21,7 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: 20
+        registry-url: 'https://registry.npmjs.org'
 
     - name: Install dependencies
       run: npm ci
@@ -25,7 +30,7 @@ jobs:
       run: npm run build
 
     - name: Publish if version has been updated
-      uses: JS-DevTools/npm-publish@v3
-      with:
-        token: ${{ secrets.NPM_TOKEN }}
-        access: public
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NPM_CONFIG_PROVENANCE: true
