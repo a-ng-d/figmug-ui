@@ -9,11 +9,12 @@ Figmug UI is a comprehensive library of UI components designed specifically for 
 
 - **Built with React**: A popular JavaScript library for building user interfaces
 - **Bundled with Vite**: Fast and optimized build tool for modern web projects
-- **Tested with Jest and Vitest**: Ensures reliability and robustness of components
+- **Tested with Vitest**: Ensures reliability and robustness of components with interaction tests
 - **Exposed with Storybook**: Interactive UI component explorer for easy development and testing
 - **Design tokens with Terrazzo**: Theme management using design tokens for consistent styling across platforms. [View Terrazzo Guide](./docs/terrazzo-guide.md)
 - **Theme Generator**: Create custom themes easily with the [Theme Generator](./docs/theme-generator.md) tool based on Figma theme structure
 - **SCSS Builder**: Generate theme-specific SCSS files from tokens using the build-scss script, with support for building components across all themes
+- **Interaction Testing**: Automated interaction tests for all components using Storybook play functions.
 
 ## Installation
 
@@ -24,6 +25,20 @@ npm install figmug-ui
 # or
 yarn add figmug-ui
 ```
+
+## Testing
+
+Figmug UI comes with comprehensive interaction tests for all components:
+
+```bash
+# Run only Storybook interaction tests
+npm run test:storybook
+```
+
+Tests can also be run directly in Storybook UI:
+1. Start Storybook: `npm run storybook`
+2. Open the Tests panel in the sidebar
+3. Click "Run all" to execute all interaction tests
 
 ## Theme Development Tools
 
