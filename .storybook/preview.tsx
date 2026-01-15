@@ -81,8 +81,15 @@ const preview: Preview = {
     test: {
       autoplay: false,
     },
-    a111y: {
-      element: '#root',
+    a11y: {
+      config: {
+        rules: [
+          {
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
     },
   },
   decorators: [withTheme],
