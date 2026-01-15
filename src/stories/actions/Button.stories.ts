@@ -149,8 +149,10 @@ export const Primary: Story = {
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    const button = canvas.getByRole('button', { name: /Primary action button/i })
-    
+    const button = canvas.getByRole('button', {
+      name: /Primary action button/i,
+    })
+
     await expect(button).toBeInTheDocument()
     await userEvent.click(button)
     await expect(args.action).toHaveBeenCalledTimes(1)
@@ -181,8 +183,10 @@ export const Secondary: Story = {
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    const button = canvas.getByRole('button', { name: /Secondary action button/i })
-    
+    const button = canvas.getByRole('button', {
+      name: /Secondary action button/i,
+    })
+
     await expect(button).toBeInTheDocument()
     await userEvent.click(button)
     await expect(args.action).toHaveBeenCalled()
@@ -212,8 +216,10 @@ export const Tertiary: Story = {
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    const button = canvas.getByRole('button', { name: /Tertiary action button/i })
-    
+    const button = canvas.getByRole('button', {
+      name: /Tertiary action button/i,
+    })
+
     await expect(button).toBeInTheDocument()
     await userEvent.click(button)
     await expect(args.action).toHaveBeenCalled()
@@ -244,8 +250,10 @@ export const Destructive: Story = {
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    const button = canvas.getByRole('button', { name: /Destructive action button/i })
-    
+    const button = canvas.getByRole('button', {
+      name: /Destructive action button/i,
+    })
+
     await expect(button).toBeInTheDocument()
     await userEvent.click(button)
     await expect(args.action).toHaveBeenCalled()
@@ -276,13 +284,15 @@ export const Alternative: Story = {
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    const button = canvas.getByRole('button', { name: /Compact action button/i })
-    
+    const button = canvas.getByRole('button', {
+      name: /Compact action button/i,
+    })
+
     await expect(button).toBeInTheDocument()
-    
+
     const icon = canvas.getByRole('img', { hidden: true })
     await expect(icon).toBeInTheDocument()
-    
+
     await userEvent.click(button)
     await expect(args.action).toHaveBeenCalled()
   },
@@ -314,16 +324,16 @@ export const Icon: Story = {
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
     const button = canvas.getByRole('button')
-    
+
     await expect(button).toBeInTheDocument()
-    
+
     const icon = canvas.getByRole('img', { hidden: true })
     await expect(icon).toBeInTheDocument()
-    
+
     await userEvent.hover(button)
-    
+
     await expect(canvas.getByText('Adjust the parameters')).toBeInTheDocument()
-    
+
     await userEvent.unhover(button)
     await userEvent.click(button)
     await expect(args.action).toHaveBeenCalled()

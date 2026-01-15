@@ -60,16 +60,16 @@ export const Default: Story = {
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    
+
     const title = canvas.getByText('Card title')
     await expect(title).toBeInTheDocument()
-    
+
     const subtitle = canvas.getByText('Subtitle')
     await expect(subtitle).toBeInTheDocument()
-    
+
     const image = canvas.getByRole('img')
     await expect(image).toBeInTheDocument()
-    
+
     const card = canvas.getByRole('article')
     await userEvent.click(card)
     await expect(args.action).toHaveBeenCalled()
@@ -92,20 +92,20 @@ export const WithoutActions: Story = {
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    
+
     const title = canvas.getByText('Card without actions')
     await expect(title).toBeInTheDocument()
-    
+
     const subtitle = canvas.getByText('Informative subtitle')
     await expect(subtitle).toBeInTheDocument()
-    
+
     const image = canvas.getByRole('img')
     await expect(image).toBeInTheDocument()
-    
+
     const card = canvas.getByRole('article')
     await userEvent.click(card)
     await expect(args.action).toHaveBeenCalled()
-    
+
     // Verify no action buttons are present
     const buttons = canvas.queryAllByRole('button')
     await expect(buttons.length).toBe(0)
@@ -140,13 +140,13 @@ export const WithoutTitle: Story = {
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    
+
     const subtitle = canvas.getByText('Card without main title')
     await expect(subtitle).toBeInTheDocument()
-    
+
     const image = canvas.getByRole('img')
     await expect(image).toBeInTheDocument()
-    
+
     const card = canvas.getByRole('article')
     await userEvent.click(card)
     await expect(args.action).toHaveBeenCalled()
@@ -196,16 +196,16 @@ export const Filled: Story = {
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    
+
     const title = canvas.getByText('Card in fill mode')
     await expect(title).toBeInTheDocument()
-    
+
     const subtitle = canvas.getByText('With shouldFill set to true')
     await expect(subtitle).toBeInTheDocument()
-    
+
     const image = canvas.getByRole('img')
     await expect(image).toBeInTheDocument()
-    
+
     const card = canvas.getByRole('article')
     await userEvent.click(card)
     await expect(args.action).toHaveBeenCalled()
