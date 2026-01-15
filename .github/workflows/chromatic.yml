@@ -21,9 +21,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: |
-          npm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-          npm install
+        run: npm ci
 
       - name: Run Chromatic
         uses: chromaui/action@latest
