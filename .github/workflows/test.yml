@@ -1,19 +1,18 @@
 name: Tests components and stories
 
 on:
-  push:
-    branches:
-      - 'release/*'
-      - 'improvement/*'
-      - 'fix/*'
+  deployment_status:
 
 permissions:
   contents: read
 
 jobs:
   test:
+    if: github.event.deployment_status.state == 'success'
     name: Test UI
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.52.0-noble
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,4 +27,4 @@ jobs:
       - name: Run storybook tests
         run: npm run test:storybook
         env:
-          STORYBOOK_URL: 'http://localhost:6006'
+          SB_URL: '${{ github.event.deployment_status.environment_url }}'
