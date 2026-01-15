@@ -263,8 +263,11 @@ export default class ActionsList extends React.Component<
 
   MenuSeparator = (index: number) => {
     return (
-      <li data-role={'SEPARATOR'}>
-        <hr key={`menu-option-${index}`} />
+      <li
+        key={`menu-separator-${index}`}
+        data-role={'SEPARATOR'}
+      >
+        <hr />
       </li>
     )
   }
