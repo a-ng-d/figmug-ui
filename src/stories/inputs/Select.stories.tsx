@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn, expect, userEvent, within } from 'storybook/test'
+import { fn, expect, userEvent, within, waitFor } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
-import { ChangeEvent } from 'react'
+import { ChangeEvent, useState } from 'react'
 import Select from '@components/inputs/select/Select'
 
 const meta: Meta<typeof Select> = {
@@ -129,21 +129,17 @@ export const SwitchButton: Story = {
     value: { control: false },
   },
   render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      isChecked: boolean
-    }>()
+    const [isChecked, setIsChecked] = useState(args.isChecked ?? false)
 
     const action = (e: ChangeEvent<HTMLInputElement>) => {
-      updateArgs({
-        isChecked: !argsState.isChecked,
-      })
+      setIsChecked(!isChecked)
       args.action(e)
     }
 
     return (
       <Select
         {...args}
-        isChecked={argsState.isChecked}
+        isChecked={isChecked}
         action={action}
       />
     )
@@ -157,7 +153,7 @@ export const SwitchButton: Story = {
 
     await userEvent.click(switchButton)
     await expect(args.action).toHaveBeenCalled()
-    await expect(switchButton).toBeChecked()
+    await waitFor(() => expect(switchButton).toBeChecked())
   },
 }
 
@@ -187,26 +183,15 @@ export const MultipleChoices: Story = {
     action: { control: false },
   },
   render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      optionA: boolean
-      optionB: boolean
-      optionC: boolean
-    }>()
+    const [optionA, setOptionA] = useState(false)
+    const [optionB, setOptionB] = useState(false)
+    const [optionC, setOptionC] = useState(false)
 
     const action = (e: ChangeEvent<HTMLInputElement>) => {
       const target = e.target as HTMLInputElement
-      if (target.name === 'option-1')
-        updateArgs({
-          optionA: !argsState.optionA,
-        })
-      if (target.name === 'option-2')
-        updateArgs({
-          optionB: !argsState.optionB,
-        })
-      if (target.name === 'option-3')
-        updateArgs({
-          optionC: !argsState.optionC,
-        })
+      if (target.name === 'option-1') setOptionA(!optionA)
+      if (target.name === 'option-2') setOptionB(!optionB)
+      if (target.name === 'option-3') setOptionC(!optionC)
 
       args.action(e)
     }
@@ -218,7 +203,7 @@ export const MultipleChoices: Story = {
           id="option-1"
           label="Option 1"
           name="option-1"
-          isChecked={argsState.optionA}
+          isChecked={optionA}
           action={action}
         />
         <Select
@@ -226,7 +211,7 @@ export const MultipleChoices: Story = {
           id="option-2"
           label="Option 2"
           name="option-2"
-          isChecked={argsState.optionB}
+          isChecked={optionB}
           action={action}
         />
         <Select
@@ -234,7 +219,7 @@ export const MultipleChoices: Story = {
           id="option-3"
           label="Option 3"
           name="option-3"
-          isChecked={argsState.optionC}
+          isChecked={optionC}
           action={action}
         />
       </>
@@ -259,9 +244,11 @@ export const MultipleChoices: Story = {
     await userEvent.click(option3)
 
     await expect(args.action).toHaveBeenCalledTimes(2)
-    await expect(option1).toBeChecked()
-    await expect(option2).not.toBeChecked()
-    await expect(option3).toBeChecked()
+    await waitFor(() => {
+      expect(option1).toBeChecked()
+      expect(option2).not.toBeChecked()
+      expect(option3).toBeChecked()
+    })
   },
 }
 
@@ -292,14 +279,10 @@ export const SingleChoice: Story = {
     action: { control: false },
   },
   render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      value: string
-    }>()
+    const [value, setValue] = useState(args.value ?? 'option-1')
 
     const action = (e: ChangeEvent<HTMLInputElement>) => {
-      updateArgs({
-        value: (e.target as HTMLInputElement).value,
-      })
+      setValue((e.target as HTMLInputElement).value)
       args.action(e)
     }
 
@@ -309,9 +292,9 @@ export const SingleChoice: Story = {
           {...args}
           id="option-1"
           label="Option 1"
-          name="option-1"
+          name="radio-input"
           value="option-1"
-          isChecked={argsState.value === 'option-1'}
+          isChecked={value === 'option-1'}
           action={action}
         />
         <Select
@@ -320,16 +303,16 @@ export const SingleChoice: Story = {
           label="Option 2"
           name="option-2"
           value="option-2"
-          isChecked={argsState.value === 'option-2'}
+          isChecked={value === 'option-2'}
           action={action}
         />
         <Select
           {...args}
           id="option-3"
           label="Option 3"
-          name="option-3"
+          name="radio-input"
           value="option-3"
-          isChecked={argsState.value === 'option-3'}
+          isChecked={value === 'option-3'}
           action={action}
         />
       </>
@@ -352,13 +335,17 @@ export const SingleChoice: Story = {
 
     await userEvent.click(option2)
     await expect(args.action).toHaveBeenCalled()
-    await expect(option1).not.toBeChecked()
-    await expect(option2).toBeChecked()
-    await expect(option3).not.toBeChecked()
+    await waitFor(() => {
+      expect(option1).not.toBeChecked()
+      expect(option2).toBeChecked()
+      expect(option3).not.toBeChecked()
+    })
 
     await userEvent.click(option3)
-    await expect(option1).not.toBeChecked()
-    await expect(option2).not.toBeChecked()
-    await expect(option3).toBeChecked()
+    await waitFor(() => {
+      expect(option1).not.toBeChecked()
+      expect(option2).not.toBeChecked()
+      expect(option3).toBeChecked()
+    })
   },
 }

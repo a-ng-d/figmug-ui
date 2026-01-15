@@ -143,8 +143,10 @@ export default class DraggableItem extends React.Component<
     ;(clone as HTMLElement).id = 'ghost'
     ;(clone as HTMLElement).style.pointerEvents = 'none'
     document.body.appendChild(clone)
-    e.dataTransfer.setDragImage(clone as Element, 0, 0)
-    e.dataTransfer.effectAllowed = 'move'
+    if (e.dataTransfer) {
+      e.dataTransfer.setDragImage(clone as Element, 0, 0)
+      e.dataTransfer.effectAllowed = 'move'
+    }
   }
 
   onDragEnd = (e: React.DragEvent<HTMLLIElement>) => {
