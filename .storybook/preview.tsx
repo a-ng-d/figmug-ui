@@ -90,6 +90,7 @@ const preview: Preview = {
           },
         ],
       },
+      autoplay: false,
     },
   },
   decorators: [withTheme],
