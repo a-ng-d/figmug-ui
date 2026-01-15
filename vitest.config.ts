@@ -12,8 +12,7 @@ export default defineConfig({
     react(),
     storybookTest({
       configDir: '.storybook',
-      storybookScript: 'npm run storybook -- --no-open',
-      storybookUrl: 'http://localhost:6006',
+      storybookUrl: process.env.SB_URL,
     }),
   ],
   test: {
