@@ -1,0 +1,420 @@
+{
+  "$extensions": {
+    "com.figma.modeName": "Default"
+  },
+  "grey": {
+    "$type": "color",
+    "$description": "A comprehensive set of grey color values to ensure consistent color usage across all supported platforms. These values can be used for backgrounds, borders, text, that must be preserved whatever the enabled color mode.",
+    "$extensions": {
+      "com.figma.scopes": ["ALL_SCOPES"]
+    },
+    "transparent": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0, 0, 0],
+        "alpha": 0,
+        "hex": "#00000000"
+      }
+    },
+    "0": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [1, 1, 1],
+        "alpha": 1,
+        "hex": "#FFFFFF"
+      }
+    },
+    "100": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.941, 0.941, 0.941],
+        "alpha": 1,
+        "hex": "#F0F0F0"
+      }
+    },
+    "200": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.851, 0.851, 0.851],
+        "alpha": 1,
+        "hex": "#D9D9D9"
+      }
+    },
+    "300": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.749, 0.749, 0.749],
+        "alpha": 1,
+        "hex": "#BFBFBF"
+      }
+    },
+    "400": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.651, 0.651, 0.651],
+        "alpha": 1,
+        "hex": "#A6A6A6"
+      }
+    },
+    "500": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.549, 0.549, 0.549],
+        "alpha": 1,
+        "hex": "#8C8C8C"
+      }
+    },
+    "600": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.451, 0.451, 0.451],
+        "alpha": 1,
+        "hex": "#737373"
+      }
+    },
+    "700": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.349, 0.349, 0.349],
+        "alpha": 1,
+        "hex": "#595959"
+      }
+    },
+    "800": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.251, 0.251, 0.251],
+        "alpha": 1,
+        "hex": "#404040"
+      }
+    },
+    "900": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.173, 0.173, 0.173],
+        "alpha": 1,
+        "hex": "#2C2C2C"
+      }
+    },
+    "1000": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.133, 0.133, 0.133],
+        "alpha": 1,
+        "hex": "#222222"
+      }
+    }
+  },
+  "alpha": {
+    "$type": "number",
+    "$description": "A comprehensive set of opacity values to ensure consistent transparency levels across all supported platforms. These values can be used for fills, strokes, effects, and other transparency needs.",
+    "$extensions": {
+      "com.figma.scopes": ["OPACITY"]
+    },
+    "0": {
+      "$value": 0
+    },
+    "50": {
+      "$value": 0.5
+    },
+    "100": {
+      "$value": 0.1
+    },
+    "150": {
+      "$value": 0.15
+    },
+    "200": {
+      "$value": 0.2
+    },
+    "250": {
+      "$value": 0.25
+    },
+    "300": {
+      "$value": 0.3
+    },
+    "350": {
+      "$value": 0.35
+    },
+    "400": {
+      "$value": 0.4
+    },
+    "450": {
+      "$value": 0.45
+    },
+    "500": {
+      "$value": 0.5
+    },
+    "550": {
+      "$value": 0.55
+    },
+    "600": {
+      "$value": 0.6
+    },
+    "650": {
+      "$value": 0.65
+    },
+    "700": {
+      "$value": 0.7
+    },
+    "750": {
+      "$value": 0.75
+    },
+    "800": {
+      "$value": 0.8
+    },
+    "850": {
+      "$value": 0.85
+    },
+    "900": {
+      "$value": 0.9
+    },
+    "950": {
+      "$value": 0.95
+    },
+    "1000": {
+      "$value": 1
+    }
+  },
+  "border": {
+    "radius": {
+      "$type": "dimension",
+      "$description": "A comprehensive set of radius values to ensure roundness across all supported platforms. These values can be used for border-radius, corner-radius, and other roundness needs.",
+      "$extensions": {
+        "com.figma.scopes": ["CORNER_RADIUS"]
+      },
+      "null": {
+        "$value": { "value": 0, "unit": "px" }
+      },
+      "xsmall": {
+        "$value": { "value": 1, "unit": "px" }
+      },
+      "small": {
+        "$value": { "value": 2, "unit": "px" }
+      },
+      "medium": {
+        "$value": { "value": 4, "unit": "px" }
+      },
+      "large": {
+        "$value": { "value": 6, "unit": "px" }
+      },
+      "xlarge": {
+        "$value": { "value": 8, "unit": "px" }
+      },
+      "xxlarge": {
+        "$value": { "value": 12, "unit": "px" }
+      },
+      "xxxlarge": {
+        "$value": { "value": 16, "unit": "px" }
+      },
+      "full": {
+        "$value": { "value": 100, "unit": "px" }
+      }
+    }
+  },
+  "size": {
+    "$type": "dimension",
+    "$description": "A comprehensive set of spacing/sizing values to ensure consistent layout and spacing across all supported platforms. These values can be used for margins, paddings, gaps, and other spacing needs.",
+    "$extensions": {
+      "com.figma.scopes": [
+        "WIDTH_HEIGHT",
+        "GAP",
+        "STROKE_FLOAT",
+        "EFFECT_FLOAT",
+        "OPACITY"
+      ]
+    },
+    "neg": {
+      "xxxlarge": {
+        "$value": { "value": -80, "unit": "px" }
+      },
+      "xxlarge": {
+        "$value": { "value": -64, "unit": "px" }
+      },
+      "xlarge": {
+        "$value": { "value": -48, "unit": "px" }
+      },
+      "large": {
+        "$value": { "value": -40, "unit": "px" }
+      },
+      "xmedium": {
+        "$value": { "value": -36, "unit": "px" }
+      },
+      "medium": {
+        "$value": { "value": -32, "unit": "px" }
+      },
+      "small": {
+        "$value": { "value": -24, "unit": "px" }
+      },
+      "msmall": {
+        "$value": { "value": -20, "unit": "px" }
+      },
+      "xsmall": {
+        "$value": { "value": -16, "unit": "px" }
+      },
+      "xmsmall": {
+        "$value": { "value": -12, "unit": "px" }
+      },
+      "xxsmall": {
+        "$value": { "value": -8, "unit": "px" }
+      },
+      "xxxsmall": {
+        "$value": { "value": -4, "unit": "px" }
+      },
+      "xunit": {
+        "$value": { "value": -2, "unit": "px" }
+      },
+      "unit": {
+        "$value": { "value": -1, "unit": "px" }
+      },
+      "hunit": {
+        "$value": { "value": -0.5, "unit": "px" }
+      }
+    },
+    "null": {
+      "$value": { "value": 0, "unit": "px" }
+    },
+    "pos": {
+      "hunit": {
+        "$value": { "value": 0.5, "unit": "px" }
+      },
+      "unit": {
+        "$value": { "value": 1, "unit": "px" }
+      },
+      "xunit": {
+        "$value": { "value": 2, "unit": "px" }
+      },
+      "xxxsmall": {
+        "$value": { "value": 4, "unit": "px" }
+      },
+      "xxsmall": {
+        "$value": { "value": 8, "unit": "px" }
+      },
+      "xmsmall": {
+        "$value": { "value": 12, "unit": "px" }
+      },
+      "xsmall": {
+        "$value": { "value": 16, "unit": "px" }
+      },
+      "msmall": {
+        "$value": { "value": 20, "unit": "px" }
+      },
+      "small": {
+        "$value": { "value": 24, "unit": "px" }
+      },
+      "medium": {
+        "$value": { "value": 32, "unit": "px" }
+      },
+      "xmedium": {
+        "$value": { "value": 36, "unit": "px" }
+      },
+      "large": {
+        "$value": { "value": 40, "unit": "px" }
+      },
+      "xlarge": {
+        "$value": { "value": 48, "unit": "px" }
+      },
+      "xxlarge": {
+        "$value": { "value": 64, "unit": "px" }
+      },
+      "xxxlarge": {
+        "$value": { "value": 80, "unit": "px" }
+      }
+    }
+  },
+  "font": {
+    "$description": "A comprehensive set of typography values to ensure consistent text styles across all supported platforms. These values can be used for font sizes, weights, line heights, and letter spacing.",
+    "size": {
+      "$type": "dimension",
+      "$extensions": {
+        "com.figma.scopes": ["FONT_SIZE"]
+      },
+      "xxxsmall": {
+        "$value": { "value": 9, "unit": "px" }
+      },
+      "xxsmall": {
+        "$value": { "value": 10, "unit": "px" }
+      },
+      "xsmall": {
+        "$value": { "value": 11, "unit": "px" }
+      },
+      "small": {
+        "$value": { "value": 12, "unit": "px" }
+      },
+      "medium": {
+        "$value": { "value": 13, "unit": "px" }
+      },
+      "large": {
+        "$value": { "value": 14, "unit": "px" }
+      }
+    },
+    "weight": {
+      "$type": "number",
+      "$extensions": {
+        "com.figma.scopes": ["FONT_STYLE"]
+      },
+      "normal": {
+        "$value": 400
+      },
+      "accent": {
+        "$value": 450
+      },
+      "medium": {
+        "$value": 500
+      },
+      "semi": {
+        "$value": 550
+      },
+      "bold": {
+        "$value": 600
+      }
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$extensions": {
+        "com.figma.scopes": ["LINE_HEIGHT"]
+      },
+      "default": {
+        "$value": { "value": 16, "unit": "px" },
+        "$type": "dimension"
+      },
+      "large": {
+        "$value": { "value": 20, "unit": "px" },
+        "$type": "dimension"
+      }
+    },
+    "letterSpacing": {
+      "$type": "dimension",
+      "$extensions": {
+        "com.figma.scopes": ["LETTER_SPACING"]
+      },
+      "neg": {
+        "xlarge": {
+          "$value": { "value": -0.16, "unit": "px" }
+        },
+        "large": {
+          "$value": { "value": -0.08, "unit": "px" }
+        },
+        "medium": {
+          "$value": { "value": -0.025, "unit": "px" }
+        },
+        "small": {
+          "$value": { "value": -0.01, "unit": "px" }
+        }
+      },
+      "pos": {
+        "small": {
+          "$value": { "value": 0.01, "unit": "px" }
+        },
+        "medium": {
+          "$value": { "value": 0.025, "unit": "px" }
+        },
+        "large": {
+          "$value": { "value": 0.08, "unit": "px" }
+        },
+        "xlarge": {
+          "$value": { "value": 0.16, "unit": "px" }
+        }
+      }
+    }
+  }
+}

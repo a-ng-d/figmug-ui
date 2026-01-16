@@ -1,0 +1,332 @@
+{
+  "shadow": {
+    "$type": "shadow",
+    "$description": "A comprehensive set of shadow values to ensure consistent shadow effects across all supported platforms. These values can be used for box-shadow, text-shadow, and other shadow needs.",
+    "$extensions": {
+      "com.figma.scopes": ["EFFECT_FLOAT", "OPACITY"]
+    },
+    "hud": {
+      "$value": [
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.xxxsmall}",
+          "blur": { "value": 17, "unit": "px" },
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.200}"
+          }
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.xunit}",
+          "blur": { "value": 7, "unit": "px" },
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.150}"
+          }
+        }
+      ]
+    },
+    "floatingWindow": {
+      "$type": "shadow",
+      "$value": {
+        "offsetX": "{size.null}",
+        "offsetY": "{size.pos.xunit}",
+        "blur": { "value": 14, "unit": "px" },
+        "spread": "{size.null}",
+        "color": {
+          "$type": "color",
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "alpha": "{alpha.150}"
+        }
+      }
+    }
+  },
+  "elevation": {
+    "$type": "shadow",
+    "$description": "A comprehensive set of shadow values to ensure consistent shadow effects across all supported platforms. These values can be used for box-shadow, text-shadow, and other shadow needs.",
+    "$extensions": {
+      "com.figma.scopes": ["EFFECT_FLOAT", "OPACITY"]
+    },
+    "100Shapes": {
+      "$value": [
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.hunit}",
+          "blur": "{size.null}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.100}"
+          },
+          "inset": true
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.null}",
+          "blur": "{size.pos.hunit}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.300}"
+          },
+          "inset": true
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.null}",
+          "blur": "{size.pos.hunit}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.500}"
+          }
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.unit}",
+          "blur": "{size.pos.xxxsmall}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.400}"
+          }
+        }
+      ]
+    },
+    "200Canvas": {
+      "$value": [
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.hunit}",
+          "blur": "{size.null}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.100}"
+          },
+          "inset": true
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.null}",
+          "blur": "{size.pos.hunit}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.200}"
+          },
+          "inset": true
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.xxxsmall}",
+          "blur": "{size.pos.xxsmall}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.500}"
+          }
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.unit}",
+          "blur": "{size.pos.xxxsmall}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.500}"
+          }
+        }
+      ]
+    },
+    "300Tooltip": {
+      "$value": [
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.hunit}",
+          "blur": "{size.null}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.100}"
+          },
+          "inset": true
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.null}",
+          "blur": "{size.pos.hunit}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.300}"
+          },
+          "inset": true
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.xxxsmall}",
+          "blur": "{size.pos.xmsmall}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.350}"
+          }
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.unit}",
+          "blur": "{size.pos.xxxsmall}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.500}"
+          }
+        }
+      ]
+    },
+    "400MenuPanel": {
+      "$value": [
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.hunit}",
+          "blur": "{size.null}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.100}"
+          },
+          "inset": true
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.null}",
+          "blur": "{size.pos.hunit}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.350}"
+          },
+          "inset": true
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.xxsmall}",
+          "blur": "{size.pos.xsmall}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.350}"
+          }
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.xunit}",
+          "blur": "{size.pos.xxxsmall}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.350}"
+          }
+        }
+      ]
+    },
+    "500ModalWindow": {
+      "$value": [
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.hunit}",
+          "blur": "{size.null}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.100}"
+          },
+          "inset": true
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.null}",
+          "blur": "{size.pos.hunit}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.350}"
+          },
+          "inset": true
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.xxsmall}",
+          "blur": "{size.pos.small}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.450}"
+          }
+        },
+        {
+          "offsetX": "{size.null}",
+          "offsetY": "{size.pos.xxxsmall}",
+          "blur": "{size.pos.xxxsmall}",
+          "spread": "{size.null}",
+          "color": {
+            "$type": "color",
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.350}"
+          }
+        }
+      ]
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Dark"
+  }
+}
