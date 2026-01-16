@@ -5,7 +5,7 @@ export default defineConfig({
   name: 'global',
   tokens: [
     './tokens/globals/globals.tokens.json',
-    './tokens/globals/effect.json',
+    './tokens/globals/globals.effect.tokens.json',
   ],
   outDir: './src/styles/tokens/',
   plugins: [
