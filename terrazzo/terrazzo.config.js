@@ -3,8 +3,8 @@ import { defineConfig } from '@terrazzo/cli'
 
 export default defineConfig({
   name: 'Unoff',
-  tokens: ['../tokens/unoff.resolver.json'],
-  outDir: '../src/styles/tokens/',
+  tokens: ['./tokens/unoff.resolver.json'],
+  outDir: './src/styles/tokens/',
   plugins: [
     css({
       filename: 'all.scss',
