@@ -5,10 +5,7 @@
       "$type": "dimension"
     },
     "height": {
-      "$value": {
-        "value": 56,
-        "unit": "px"
-      },
+      "$value": "56px",
       "$type": "dimension"
     },
     "top": {

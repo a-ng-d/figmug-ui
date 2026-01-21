@@ -36,10 +36,7 @@
     },
     "label": {
       "width": {
-        "$value": {
-          "value": 120,
-          "unit": "px"
-        },
+        "$value": "120px",
         "$type": "dimension"
       },
       "margin": {
@@ -85,10 +82,7 @@
       "margin": {
         "default": {
           "top": {
-            "$value": {
-              "value": 6,
-              "unit": "px"
-            },
+            "$value": "6px",
             "$type": "dimension"
           },
           "right": {
@@ -106,10 +100,7 @@
         },
         "multiline": {
           "top": {
-            "$value": {
-              "value": 6,
-              "unit": "px"
-            },
+            "$value": "6px",
             "$type": "dimension"
           },
           "right": {

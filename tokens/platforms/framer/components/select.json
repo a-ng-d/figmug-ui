@@ -409,10 +409,7 @@
           },
           "checked": {
             "translateX": {
-              "$value": {
-                "value": 10,
-                "unit": "px"
-              },
+              "$value": "10px",
               "$type": "dimension"
             },
             "translateY": {
@@ -424,20 +421,14 @@
         "transition": {
           "backgroundColor": {
             "$value": {
-              "duration": {
-                "value": 200,
-                "unit": "ms"
-              },
+              "duration": "200ms",
               "timingFunction": [0.37, 0, 0.63, 1]
             },
             "$type": "transition"
           },
           "transform": {
             "$value": {
-              "duration": {
-                "value": 200,
-                "unit": "ms"
-              },
+              "duration": "200ms",
               "timingFunction": [0.37, 0, 0.63, 1]
             },
             "$type": "transition"
@@ -466,32 +457,20 @@
       },
       "inner": {
         "height": {
-          "$value": {
-            "value": 6,
-            "unit": "px"
-          },
+          "$value": "6px",
           "$type": "dimension"
         },
         "width": {
-          "$value": {
-            "value": 6,
-            "unit": "px"
-          },
+          "$value": "6px",
           "$type": "dimension"
         },
         "position": {
           "top": {
-            "$value": {
-              "value": 5,
-              "unit": "px"
-            },
+            "$value": "5px",
             "$type": "dimension"
           },
           "left": {
-            "$value": {
-              "value": 5,
-              "unit": "px"
-            },
+            "$value": "5px",
             "$type": "dimension"
           }
         }

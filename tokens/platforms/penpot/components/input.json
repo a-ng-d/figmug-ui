@@ -118,17 +118,11 @@
     },
     "clearable": {
       "top": {
-        "$value": {
-          "value": 6,
-          "unit": "px"
-        },
+        "$value": "6px",
         "$type": "dimension"
       },
       "right": {
-        "$value": {
-          "value": 6,
-          "unit": "px"
-        },
+        "$value": "6px",
         "$type": "dimension"
       }
     },

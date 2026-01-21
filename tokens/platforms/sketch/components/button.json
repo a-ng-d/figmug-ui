@@ -266,19 +266,19 @@
       "text": {
         "color": {
           "default": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "disabled": {
@@ -312,19 +312,19 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "disabled": {
@@ -782,19 +782,19 @@
       "text": {
         "color": {
           "default": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "disabled": {
@@ -828,19 +828,19 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "disabled": {

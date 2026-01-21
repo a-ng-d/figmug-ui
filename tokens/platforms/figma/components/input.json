@@ -2,19 +2,13 @@
   "input": {
     "number": {
       "width": {
-        "$value": {
-          "value": 96,
-          "unit": "px"
-        },
+        "$value": "{size.pos.huge}",
         "$type": "dimension"
       }
     },
     "color": {
       "width": {
-        "$value": {
-          "value": 96,
-          "unit": "px"
-        },
+        "$value": "{size.pos.huge}",
         "$type": "dimension"
       }
     },
