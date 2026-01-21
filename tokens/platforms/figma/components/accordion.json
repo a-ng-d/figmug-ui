@@ -63,11 +63,11 @@
           "$type": "color"
         },
         "hover": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "expanded": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -83,11 +83,11 @@
           "$type": "color"
         },
         "hover": {
-          "$value": "{figma.color.icon}",
+          "$value": "{figma.color.icon.default}",
           "$type": "color"
         },
         "expanded": {
-          "$value": "{figma.color.icon}",
+          "$value": "{figma.color.icon.default}",
           "$type": "color"
         },
         "disabled": {

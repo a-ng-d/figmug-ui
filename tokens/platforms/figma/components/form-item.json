@@ -25,7 +25,7 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "disabled": {

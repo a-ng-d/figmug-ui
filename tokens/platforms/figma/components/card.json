@@ -37,7 +37,7 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         },
         "hover": {

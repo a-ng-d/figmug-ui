@@ -53,13 +53,13 @@
     },
     "background": {
       "color": {
-        "$value": "{figma.color.bg}",
+        "$value": "{figma.color.bg.default}",
         "$type": "color"
       }
     },
     "text": {
       "color": {
-        "$value": "{figma.color.text}",
+        "$value": "{figma.color.text.default}",
         "$type": "color"
       }
     },
@@ -110,7 +110,7 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "{figma.color.border}",
+          "$value": "{figma.color.border.default}",
           "$type": "color"
         }
       },

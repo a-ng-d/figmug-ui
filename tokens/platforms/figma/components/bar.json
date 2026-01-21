@@ -58,7 +58,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{figma.color.border}",
+        "$value": "{figma.color.border.default}",
         "$type": "color"
       }
     },
