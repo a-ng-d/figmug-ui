@@ -10,7 +10,7 @@
         {
           "offsetX": "{size.null}",
           "offsetY": "{size.pos.xxxsmall}",
-          "blur": { "value": 17, "unit": "px" },
+          "blur": "{size.xsmall}",
           "spread": "{size.null}",
           "color": {
             "$type": "color",
@@ -22,7 +22,7 @@
         {
           "offsetX": "{size.null}",
           "offsetY": "{size.pos.xunit}",
-          "blur": { "value": 7, "unit": "px" },
+          "blur": "{size.xxsmall}",
           "spread": "{size.null}",
           "color": {
             "$type": "color",
@@ -38,7 +38,7 @@
       "$value": {
         "offsetX": "{size.null}",
         "offsetY": "{size.pos.xunit}",
-        "blur": { "value": 14, "unit": "px" },
+        "blur": "",
         "spread": "{size.null}",
         "color": {
           "$type": "color",

@@ -442,7 +442,7 @@
     "divider": {
       "margin": {
         "top": {
-          "$value": { "value": 11, "unit": "px" },
+          "$value": "11px",
           "$type": "dimension"
         },
         "right": {
