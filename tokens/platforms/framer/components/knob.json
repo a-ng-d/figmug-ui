@@ -69,7 +69,7 @@
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "disabled": {
@@ -132,7 +132,7 @@
               "$type": "color"
             },
             "focus": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "disabled": {

@@ -174,7 +174,7 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "hover": {
@@ -182,7 +182,7 @@
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "focus": {
@@ -418,7 +418,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "disabled": {
@@ -508,19 +508,19 @@
         },
         "color": {
           "default": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "disabled": {
@@ -664,19 +664,19 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "disabled": {
@@ -858,7 +858,7 @@
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "pressed": {
@@ -934,7 +934,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "disabled": {
@@ -946,7 +946,7 @@
       "text": {
         "color": {
           "default": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "hover": {
@@ -954,11 +954,11 @@
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "disabled": {
@@ -992,7 +992,7 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "hover": {
@@ -1000,11 +1000,11 @@
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "disabled": {
@@ -1167,7 +1167,7 @@
             "$value": "{framer.color.tint.dimmed}",
             "$type": "color",
             "hover": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "disabled": {
@@ -1236,7 +1236,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "disabled": {
@@ -1273,19 +1273,19 @@
         "background": {
           "color": {
             "default": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "pressed": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "disabled": {
@@ -1404,7 +1404,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "disabled": {
@@ -1441,19 +1441,19 @@
         "background": {
           "color": {
             "default": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "pressed": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "disabled": {

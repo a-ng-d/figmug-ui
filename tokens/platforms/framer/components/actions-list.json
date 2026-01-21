@@ -147,11 +147,11 @@
             "$type": "string"
           },
           "hover": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "selected": {
@@ -159,11 +159,11 @@
             "$type": "string"
           },
           "selectedHover": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "selectedFocus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "disabled": {

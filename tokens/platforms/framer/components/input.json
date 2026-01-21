@@ -360,7 +360,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "error": {
@@ -383,7 +383,7 @@
           "$type": "string"
         },
         "focus": {
-          "$value": "{framer.color.tint}",
+          "$value": "{framer.color.tint.default}",
           "$type": "color"
         },
         "error": {
@@ -406,11 +406,11 @@
         },
         "onselected": {
           "default": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           }
         }
@@ -600,7 +600,7 @@
               "offsetY": 0,
               "blur": 0,
               "spread": "{size.pos.unit}",
-              "color": "{framer.color.tint}",
+              "color": "{framer.color.tint.default}",
               "inset": true
             }
           ],
