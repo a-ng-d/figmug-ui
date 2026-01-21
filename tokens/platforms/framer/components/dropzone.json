@@ -43,7 +43,7 @@
           "$type": "color"
         },
         "over": {
-          "$value": "{framer.color.tint}",
+          "$value": "{framer.color.tint.default}",
           "$type": "color"
         },
         "disabled": {

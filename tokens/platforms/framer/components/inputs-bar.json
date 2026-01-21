@@ -56,7 +56,7 @@
     },
     "border": {
       "color": {
-        "$value": "{framer.color.tint}",
+        "$value": "{framer.color.tint.default}",
         "$type": "color"
       },
       "width": {

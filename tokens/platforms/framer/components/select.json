@@ -117,7 +117,7 @@
               "$type": "string"
             },
             "focus": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "checked": {
@@ -169,7 +169,7 @@
           },
           "checked": {
             "default": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "disabled": {
@@ -249,7 +249,7 @@
           },
           "checked": {
             "default": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "disabled": {
@@ -313,7 +313,7 @@
               "$type": "string"
             },
             "focus": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "checked": {
@@ -520,7 +520,7 @@
           },
           "checked": {
             "default": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "disabled": {
@@ -584,7 +584,7 @@
               "$type": "string"
             },
             "focus": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "checked": {
