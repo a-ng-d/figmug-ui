@@ -347,17 +347,17 @@
       },
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "empty": {
           "default": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "hover": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "focus": {
             "$value": "{sketch.color.accent.primary}",
@@ -379,8 +379,8 @@
           }
         },
         "hover": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "focus": {
           "$value": "{sketch.color.accent.primary}",
@@ -671,8 +671,8 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       },
       "text": {

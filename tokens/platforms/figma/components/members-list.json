@@ -27,8 +27,8 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
-          "$type": "sring"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       }
     },

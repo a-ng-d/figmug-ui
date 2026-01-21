@@ -208,8 +208,8 @@
         },
         "border": {
           "color": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "width": {
             "$value": "{size.null}",
@@ -241,8 +241,8 @@
       },
       "background": {
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       }
     },

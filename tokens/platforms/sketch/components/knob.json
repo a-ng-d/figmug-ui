@@ -101,19 +101,19 @@
         "background": {
           "color": {
             "default": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "hover": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "focus": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "disabled": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             }
           }
@@ -121,19 +121,19 @@
         "border": {
           "color": {
             "default": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "hover": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "focus": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "disabled": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             }
           },
@@ -208,8 +208,8 @@
         },
         "border": {
           "color": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "width": {
             "$value": "{size.null}",
