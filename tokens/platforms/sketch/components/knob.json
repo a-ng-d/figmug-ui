@@ -270,7 +270,7 @@
         }
       },
       "radius": {
-        "$value": { "value": 10, "unit": "px" },
+        "$value": "10px",
         "$type": "dimension"
       },
       "background": {

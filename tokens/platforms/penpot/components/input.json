@@ -2,13 +2,13 @@
   "input": {
     "number": {
       "width": {
-        "$value": { "value": 108, "unit": "px" },
+        "$value": "108px",
         "$type": "dimension"
       }
     },
     "color": {
       "width": {
-        "$value": { "value": 108, "unit": "px" },
+        "$value": "108px",
         "$type": "dimension"
       }
     },
