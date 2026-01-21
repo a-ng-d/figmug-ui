@@ -359,11 +359,11 @@
           },
           "error": {
             "default": {
-              "$value": "{figma.color.border.danger}",
+              "$value": "{figma.color.border.danger.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{figma.color.border.danger}",
+              "$value": "{figma.color.border.danger.default}",
               "$type": "color"
             },
             "focus": {
@@ -382,11 +382,11 @@
         },
         "error": {
           "default": {
-            "$value": "{figma.color.border.danger}",
+            "$value": "{figma.color.border.danger.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{figma.color.border.danger}",
+            "$value": "{figma.color.border.danger.default}",
             "$type": "color"
           },
           "focus": {
