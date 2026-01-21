@@ -164,6 +164,9 @@
       ]
     },
     "neg": {
+      "huge": {
+        "$value": "-96px"
+      },
       "xxxlarge": {
         "$value": "-80px"
       },
@@ -258,6 +261,9 @@
       },
       "xxxlarge": {
         "$value": "80px"
+      },
+      "huge": {
+        "$value": "96px"
       }
     }
   },
