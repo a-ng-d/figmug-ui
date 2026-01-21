@@ -23,17 +23,11 @@
       "$type": "dimension"
     },
     "minWidth": {
-      "$value": {
-        "value": 200,
-        "unit": "px"
-      },
+      "$value": "200px",
       "$type": "dimension"
     },
     "minHeight": {
-      "$value": {
-        "value": 200,
-        "unit": "px"
-      },
+      "$value": "200px",
       "$type": "dimension"
     },
     "border": {

@@ -208,7 +208,7 @@
         },
         "color": {
           "default": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "disabled": {
@@ -230,17 +230,11 @@
     },
     "toggle": {
       "height": {
-        "$value": {
-          "value": 16,
-          "unit": "px"
-        },
+        "$value": "16px",
         "$type": "dimension"
       },
       "width": {
-        "$value": {
-          "value": 24,
-          "unit": "px"
-        },
+        "$value": "24px",
         "$type": "dimension"
       },
       "radius": {
@@ -381,10 +375,7 @@
           "$type": "dimension"
         },
         "left": {
-          "$value": {
-            "value": 11,
-            "unit": "px"
-          },
+          "$value": "11px",
           "$type": "dimension"
         },
         "background": {
@@ -395,7 +386,7 @@
             },
             "checked": {
               "default": {
-                "$value": "{sketch.color.foreground.onaccent}",
+                "$value": "{sketch.color.foreground.onaccent.default}",
                 "$type": "color"
               },
               "disabled": {
@@ -422,10 +413,7 @@
           },
           "checked": {
             "translateX": {
-              "$value": {
-                "value": 10,
-                "unit": "px"
-              },
+              "$value": "10px",
               "$type": "dimension"
             },
             "translateY": {
@@ -437,20 +425,14 @@
         "transition": {
           "backgroundColor": {
             "$value": {
-              "duration": {
-                "value": 200,
-                "unit": "ms"
-              },
+              "duration": "200ms",
               "timingFunction": [0.37, 0, 0.63, 1]
             },
             "$type": "transition"
           },
           "transform": {
             "$value": {
-              "duration": {
-                "value": 200,
-                "unit": "ms"
-              },
+              "duration": "200ms",
               "timingFunction": [0.37, 0, 0.63, 1]
             },
             "$type": "transition"
@@ -504,7 +486,7 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "disabled": {

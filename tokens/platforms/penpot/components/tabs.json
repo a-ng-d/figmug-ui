@@ -22,16 +22,40 @@
     },
     "padding": {
       "default": {
-        "top": { "$value": "{size.pos.xunit}", "$type": "dimension" },
-        "right": { "$value": "{size.pos.xunit}", "$type": "dimension" },
-        "bottom": { "$value": "{size.pos.xunit}", "$type": "dimension" },
-        "left": { "$value": "{size.pos.xunit}", "$type": "dimension" }
+        "top": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        }
       },
       "vertical": {
-        "top": { "$value": "{size.null}", "$type": "dimension" },
-        "right": { "$value": "{size.null}", "$type": "dimension" },
-        "bottom": { "$value": "{size.null}", "$type": "dimension" },
-        "left": { "$value": "{size.null}", "$type": "dimension" }
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
       }
     },
     "background": {

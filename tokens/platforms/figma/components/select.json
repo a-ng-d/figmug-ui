@@ -363,17 +363,11 @@
       },
       "knob": {
         "height": {
-          "$value": {
-            "value": 10,
-            "unit": "px"
-          },
+          "$value": "10px",
           "$type": "dimension"
         },
         "width": {
-          "$value": {
-            "value": 10,
-            "unit": "px"
-          },
+          "$value": "10px",
           "$type": "dimension"
         },
         "radius": {
@@ -381,10 +375,7 @@
           "$type": "dimension"
         },
         "left": {
-          "$value": {
-            "value": 7,
-            "unit": "px"
-          },
+          "$value": "7px",
           "$type": "dimension"
         },
         "background": {
@@ -422,10 +413,7 @@
           },
           "checked": {
             "translateX": {
-              "$value": {
-                "value": 13,
-                "unit": "px"
-              },
+              "$value": "13px",
               "$type": "dimension"
             },
             "translateY": {
@@ -437,21 +425,20 @@
         "transition": {
           "backgroundColor": {
             "$value": {
-              "duration": {
-                "value": 200,
-                "unit": "ms"
-              },
+              "duration": "200ms",
               "timingFunction": [0.37, 0, 0.63, 1]
             },
             "$type": "transition"
           },
           "transform": {
             "$value": {
-              "duration": {
-                "value": 200,
-                "unit": "ms"
-              },
-              "timingFunction": [0.37, 0, 0.63, 1]
+              "duration": "200ms",
+              "timingFunction": [
+                0.37,
+                0,
+                0.63,
+                1
+              ]
             },
             "$type": "transition"
           }
