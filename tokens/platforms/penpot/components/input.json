@@ -347,16 +347,16 @@
       },
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "empty": {
           "default": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "hover": {
-            "$value": "transparent",
+            "$value": "{grey.transparent}",
             "$type": "color"
           },
           "focus": {
@@ -379,7 +379,7 @@
           }
         },
         "hover": {
-          "$value": "transparent",
+          "$value": "{grey.transparent}",
           "$type": "color"
         },
         "focus": {
@@ -671,7 +671,7 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
+          "$value": "{grey.transparent}",
           "$type": "color"
         }
       },

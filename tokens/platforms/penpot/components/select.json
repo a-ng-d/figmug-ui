@@ -113,7 +113,7 @@
         "secondary": {
           "color": {
             "default": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "focus": {
@@ -315,7 +315,7 @@
         "secondary": {
           "color": {
             "default": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "focus": {
@@ -581,7 +581,7 @@
         "secondary": {
           "color": {
             "default": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "focus": {

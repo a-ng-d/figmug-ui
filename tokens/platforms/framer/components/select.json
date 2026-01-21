@@ -74,8 +74,8 @@
             "$type": "dimension"
           },
           "color": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           }
         },
         "checked": {
@@ -85,7 +85,7 @@
               "$type": "dimension"
             },
             "color": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             }
           },
@@ -95,7 +95,7 @@
               "$type": "dimension"
             },
             "color": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             }
           }
@@ -106,14 +106,14 @@
             "$type": "dimension"
           },
           "color": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           }
         },
         "secondary": {
           "color": {
             "default": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "focus": {
@@ -270,8 +270,8 @@
             "$type": "dimension"
           },
           "color": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           }
         },
         "checked": {
@@ -281,7 +281,7 @@
               "$type": "dimension"
             },
             "color": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             }
           },
@@ -291,7 +291,7 @@
               "$type": "dimension"
             },
             "color": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             }
           }
@@ -302,14 +302,14 @@
             "$type": "dimension"
           },
           "color": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           }
         },
         "secondary": {
           "color": {
             "default": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "focus": {
@@ -541,8 +541,8 @@
             "$type": "dimension"
           },
           "color": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           }
         },
         "checked": {
@@ -552,7 +552,7 @@
               "$type": "dimension"
             },
             "color": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             }
           },
@@ -562,7 +562,7 @@
               "$type": "dimension"
             },
             "color": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             }
           }
@@ -573,14 +573,14 @@
             "$type": "dimension"
           },
           "color": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           }
         },
         "secondary": {
           "color": {
             "default": {
-              "$value": "transparent",
+              "$value": "{grey.transparent}",
               "$type": "string"
             },
             "focus": {

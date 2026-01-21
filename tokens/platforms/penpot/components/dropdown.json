@@ -57,11 +57,11 @@
     "border": {
       "color": {
         "default": {
-          "$value": "transparent",
+          "$value": "{grey.transparent}",
           "$type": "color"
         },
         "hover": {
-          "$value": "transparent",
+          "$value": "{grey.transparent}",
           "$type": "color"
         },
         "focus": {

@@ -37,8 +37,8 @@
     },
     "border": {
       "color": {
-        "$value": "transparent",
-        "$type": "string"
+        "$value": "{grey.transparent}",
+        "$type": "color"
       },
       "width": {
         "$value": "{size.null}",
@@ -143,8 +143,8 @@
       "background": {
         "color": {
           "default": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "hover": {
             "$value": "{sketch.color.background.secondary}",
@@ -306,8 +306,8 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       }
     },
