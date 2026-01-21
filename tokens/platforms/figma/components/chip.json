@@ -55,7 +55,7 @@
           "$type": "color"
         },
         "inactive": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "hover": {

@@ -42,7 +42,7 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{figma.color.bg}",
+            "$value": "{figma.color.bg.default}",
             "$type": "color"
           },
           "hover": {
@@ -88,7 +88,7 @@
       "text": {
         "color": {
           "default": {
-            "$value": "{figma.color.text}",
+            "$value": "{figma.color.text.default}",
             "$type": "color"
           },
           "disabled": {
@@ -101,7 +101,7 @@
         "background": {
           "color": {
             "default": {
-              "$value": "{figma.color.bg}",
+              "$value": "{figma.color.bg.default}",
               "$type": "color"
             },
             "hover": {
@@ -257,7 +257,7 @@
       },
       "border": {
         "color": {
-          "$value": "{figma.color.border}",
+          "$value": "{figma.color.border.default}",
           "$type": "color"
         },
         "width": {
@@ -275,7 +275,7 @@
       },
       "background": {
         "color": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         }
       },

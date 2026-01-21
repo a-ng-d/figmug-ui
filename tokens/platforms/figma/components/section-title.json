@@ -50,7 +50,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{figma.color.text}",
+        "$value": "{figma.color.text.default}",
         "$type": "color"
       },
       "transform": {

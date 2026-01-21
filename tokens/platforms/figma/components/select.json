@@ -25,7 +25,7 @@
       },
       "color": {
         "default": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -74,7 +74,7 @@
             "$type": "dimension"
           },
           "color": {
-            "$value": "{figma.color.border}",
+            "$value": "{figma.color.border.default}",
             "$type": "color"
           }
         },
@@ -178,7 +178,7 @@
             }
           },
           "disabled": {
-            "$value": "{figma.color.bg}",
+            "$value": "{figma.color.bg.default}",
             "$type": "color"
           }
         }
@@ -270,7 +270,7 @@
             "$type": "dimension"
           },
           "color": {
-            "$value": "{figma.color.border}",
+            "$value": "{figma.color.border.default}",
             "$type": "color"
           }
         },
@@ -504,7 +504,7 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{figma.color.icon}",
+            "$value": "{figma.color.icon.default}",
             "$type": "color"
           },
           "disabled": {
@@ -516,21 +516,21 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{figma.color.bg}",
+            "$value": "{figma.color.bg.default}",
             "$type": "color"
           },
           "checked": {
             "default": {
-              "$value": "{figma.color.bg}",
+              "$value": "{figma.color.bg.default}",
               "$type": "color"
             },
             "disabled": {
-              "$value": "{figma.color.bg}",
+              "$value": "{figma.color.bg.default}",
               "$type": "color"
             }
           },
           "disabled": {
-            "$value": "{figma.color.bg}",
+            "$value": "{figma.color.bg.default}",
             "$type": "color"
           }
         }
@@ -542,7 +542,7 @@
             "$type": "dimension"
           },
           "color": {
-            "$value": "{figma.color.icon}",
+            "$value": "{figma.color.icon.default}",
             "$type": "color"
           }
         },
@@ -553,7 +553,7 @@
               "$type": "dimension"
             },
             "color": {
-              "$value": "{figma.color.icon}",
+              "$value": "{figma.color.icon.default}",
               "$type": "color"
             }
           },
