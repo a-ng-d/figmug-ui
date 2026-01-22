@@ -53,7 +53,7 @@
     "platforms/figma/modes/figma-dark.tokens",
     "platforms/figma/modes/figma-light.tokens",
     "platforms/figma/text",
-    "platforms/figma/typography",
+    "platforms/figma/information",
     "platforms/framer/color",
     "platforms/framer/components/accordion",
     "platforms/framer/components/actions-item",
@@ -101,7 +101,7 @@
     "platforms/framer/modes/framer-dark.tokens",
     "platforms/framer/modes/framer-light.tokens",
     "platforms/framer/text",
-    "platforms/framer/typography",
+    "platforms/framer/information",
     "platforms/penpot/color",
     "platforms/penpot/components/accordion",
     "platforms/penpot/components/actions-item",
@@ -149,7 +149,7 @@
     "platforms/penpot/modes/penpot-dark.tokens",
     "platforms/penpot/modes/penpot-light.tokens.",
     "platforms/penpot/text",
-    "platforms/penpot/typography",
+    "platforms/penpot/information",
     "platforms/sketch/color",
     "platforms/sketch/components/accordion",
     "platforms/sketch/components/actions-item",
@@ -197,7 +197,7 @@
     "platforms/sketch/modes/sketch-dark.tokens",
     "platforms/sketch/modes/sketck-light.tokens",
     "platforms/sketch/text",
-    "platforms/sketch/typography",
+    "platforms/sketch/information",
     "unoff.resolver"
   ]
 }
