@@ -230,11 +230,11 @@
     },
     "toggle": {
       "height": {
-        "$value": "16px",
+        "$value": "{size.pos.xsmall}",
         "$type": "dimension"
       },
       "width": {
-        "$value": "24px",
+        "$value": "{size.pos.small}",
         "$type": "dimension"
       },
       "radius": {
