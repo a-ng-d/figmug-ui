@@ -1,6 +1,8 @@
 {
   "information": {
-    "$type": "string",
-    "$value": "Sketch"
+    "platform": {
+      "$type": "string",
+      "$value": "Sketch"
+    }
   }
 }

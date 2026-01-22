@@ -1,6 +1,8 @@
 {
   "information": {
-    "$type": "string",
-    "$value": "Penpot"
+    "platform": {
+      "$type": "string",
+      "$value": "Penpot"
+    }
   }
 }

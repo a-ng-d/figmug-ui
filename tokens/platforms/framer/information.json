@@ -1,6 +1,8 @@
 {
   "information": {
-    "$type": "string",
-    "$value": "Framer"
+    "platform": {
+      "$type": "string",
+      "$value": "Framer"
+    }
   }
 }
