@@ -339,35 +339,35 @@
         "weight": {
           "default": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "hover": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "focus": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "active": {
             "$value": "{font.weight.bold}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "alternative": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "alternativeHover": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "alternativeFocus": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "alternativeActive": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           }
         },
         "transform": {

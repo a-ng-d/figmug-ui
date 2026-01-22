@@ -70,11 +70,11 @@
       "weight": {
         "default": {
           "$value": "{font.weight.bold}",
-          "$type": "fontWeight"
+          "$type": "dimension"
         },
         "onBackground": {
           "$value": "{font.weight.accent}",
-          "$type": "fontWeight"
+          "$type": "dimension"
         }
       },
       "size": {

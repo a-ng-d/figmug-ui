@@ -58,8 +58,8 @@
         },
         "font": {
           "family": {
-            "$value": "{font.stack}",
-            "$type": "fontFamily"
+            "$value": "{text.fontFamily}",
+            "$type": "fontFamilies"
           },
           "size": {
             "$value": "{font.size.medium}",
@@ -67,7 +67,7 @@
           },
           "weight": {
             "$value": "{font.weight.bold}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           }
         },
         "letterSpacing": {

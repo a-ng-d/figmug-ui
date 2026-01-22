@@ -3,8 +3,8 @@
     "text": {
       "font": {
         "family": {
-          "$value": "{font.stack}",
-          "$type": "fontFamily"
+          "$value": "{text.fontFamily}",
+          "$type": "fontFamilies"
         },
         "size": {
           "$value": "{font.size.small}",
@@ -12,7 +12,7 @@
         },
         "weight": {
           "$value": "{font.weight.medium}",
-          "$type": "fontWeight"
+          "$type": "dimension"
         }
       },
       "line-height": {
