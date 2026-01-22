@@ -1,6 +1,8 @@
 {
   "information": {
-    "$type": "string",
-    "$value": "Figma"
+    "platform": {
+      "$type": "string",
+      "$value": "Figma"
+    }
   }
 }
