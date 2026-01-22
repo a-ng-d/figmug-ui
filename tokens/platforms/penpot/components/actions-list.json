@@ -172,8 +172,8 @@
       "text": {
         "font": {
           "family": {
-            "$value": "{font.stack}",
-            "$type": "fontFamily"
+            "$value": "{text.fontFamily}",
+            "$type": "fontFamilies"
           },
           "size": {
             "$value": "{font.size.small}",
@@ -181,7 +181,7 @@
           },
           "weight": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           }
         },
         "letterSpacing": {

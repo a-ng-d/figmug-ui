@@ -70,11 +70,11 @@
       "weight": {
         "default": {
           "$value": "{font.weight.medium}",
-          "$type": "fontWeight"
+          "$type": "dimension"
         },
         "onBackground": {
           "$value": "{font.weight.normal}",
-          "$type": "fontWeight"
+          "$type": "dimension"
         }
       },
       "size": {
