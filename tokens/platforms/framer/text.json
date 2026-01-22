@@ -32,16 +32,6 @@
         "$type": "fontWeight"
       }
     },
-    "default": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{text.fontFamily}",
-        "fontSize": "{font.size.small}",
-        "fontWeight": "{font.weight.medium}",
-        "lineHeight": "{font.lineHeight.default}",
-        "letterSpacing": "{font.letterSpacing.pos.large}"
-      }
-    },
     "styles": {
       "default": {
         "fontFamily": {
@@ -49,19 +39,19 @@
           "$type": "string"
         },
         "fontSize": {
-          "$value": "{text.default.fontSize}",
+          "$value": "{font.size.small}",
           "$type": "dimension"
         },
         "fontWeight": {
-          "$value": "{text.default.fontWeight}",
+          "$value": "{font.weight.medium}",
           "$type": "number"
         },
         "lineHeight": {
-          "$value": "{text.default.lineHeight}",
-          "$type": "dimension"
+          "$value": "{font.lineHeight.default}",
+          "$type": "number"
         },
         "letterSpacing": {
-          "$value": "{text.default.letterSpacing}",
+          "$value": "{font.letterSpacing.pos.large}",
           "$type": "dimension"
         }
       },
@@ -80,7 +70,7 @@
         },
         "lineHeight": {
           "$value": "{font.lineHeight.default}",
-          "$type": "dimension"
+          "$type": "number"
         },
         "letterSpacing": {
           "$value": "{font.letterSpacing.pos.xlarge}",
@@ -102,7 +92,7 @@
         },
         "lineHeight": {
           "$value": "{font.lineHeight.large}",
-          "$type": "dimension"
+          "$type": "number"
         },
         "letterSpacing": {
           "$value": "{font.letterSpacing.pos.medium}",
@@ -124,7 +114,7 @@
         },
         "lineHeight": {
           "$value": "{font.lineHeight.large}",
-          "$type": "dimension"
+          "$type": "number"
         },
         "letterSpacing": {
           "$value": "{font.letterSpacing.pos.small}",
@@ -180,6 +170,16 @@
           "$value": "{size.pos.xxxsmall}",
           "$type": "dimension"
         }
+      }
+    },
+    "default": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{text.styles.default.fontFamily}",
+        "fontSize": "{text.styles.default.fontSize}",
+        "fontWeight": "{text.styles.default.fontWeight}",
+        "lineHeight": "{text.styles.default.lineHeight}",
+        "letterSpacing": "{text.styles.default.letterSpacing}"
       }
     },
     "small": {
