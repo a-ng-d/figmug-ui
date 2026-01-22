@@ -86,7 +86,7 @@
             },
             "color": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             }
           },
           "disabled": {
@@ -96,7 +96,7 @@
             },
             "color": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             }
           }
         },
@@ -114,7 +114,7 @@
           "color": {
             "default": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             },
             "focus": {
               "$value": "{framer.color.tint.default}",
@@ -282,7 +282,7 @@
             },
             "color": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             }
           },
           "disabled": {
@@ -292,7 +292,7 @@
             },
             "color": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             }
           }
         },
@@ -310,7 +310,7 @@
           "color": {
             "default": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             },
             "focus": {
               "$value": "{framer.color.tint.default}",
@@ -372,6 +372,10 @@
         },
         "radius": {
           "$value": "{border.radius.full}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "11px",
           "$type": "dimension"
         },
         "background": {
@@ -532,7 +536,7 @@
             },
             "color": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             }
           },
           "disabled": {
@@ -542,7 +546,7 @@
             },
             "color": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             }
           }
         },
@@ -560,7 +564,7 @@
           "color": {
             "default": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             },
             "focus": {
               "$value": "{framer.color.tint.default}",
