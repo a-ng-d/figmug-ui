@@ -2,7 +2,7 @@
   "text": {
     "fontFamily": {
       "$value": "Work Sans",
-      "$type": "fontFamily"
+      "$type": "fontFamilies"
     },
     "color": {
       "primary": {
@@ -36,7 +36,7 @@
       "default": {
         "fontFamily": {
           "$value": "{text.fontFamily}",
-          "$type": "fontFamily"
+          "$type": "fontFamilies"
         },
         "fontSize": {
           "$value": "{font.size.small}",
