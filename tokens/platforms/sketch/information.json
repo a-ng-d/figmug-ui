@@ -3,6 +3,10 @@
     "platform": {
       "$type": "text",
       "$value": "Sketch"
+    },
+    "isCapitalized": {
+      "$type": "boolean",
+      "$value": false
     }
   }
 }

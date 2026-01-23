@@ -3,6 +3,10 @@
     "platform": {
       "$type": "text",
       "$value": "Figma"
+    },
+    "isCapitalized": {
+      "$type": "boolean",
+      "$value": false
     }
   }
 }
