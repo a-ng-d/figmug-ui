@@ -3,6 +3,10 @@
     "platform": {
       "$type": "text",
       "$value": "Penpot"
+    },
+    "isCapitalized": {
+      "$type": "boolean",
+      "$value": true
     }
   }
 }
