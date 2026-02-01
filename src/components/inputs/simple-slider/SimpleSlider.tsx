@@ -138,13 +138,14 @@ export default class SimpleSlider extends React.Component<
         e.clientX -
         stop.getBoundingClientRect().left -
         stop.getBoundingClientRect().width / 2,
-      rangeWidth = range.offsetWidth as number,
+      rangeRect = range.getBoundingClientRect(),
+      rangeWidth = rangeRect.width as number,
       slider = range.parentElement as HTMLElement
 
     stop.style.zIndex = '2'
 
     document.onmousemove = (e) =>
-      this.onSlide(e, slider, stop, shift, rangeWidth)
+      this.onSlide(e, slider, stop, shift, rangeWidth, rangeRect)
 
     document.onmouseup = () => this.onRelease(stop)
   }
@@ -155,16 +156,14 @@ export default class SimpleSlider extends React.Component<
 
   onSlide = (
     e: MouseEvent,
-    slider: HTMLElement,
+    _: HTMLElement,
     stop: HTMLElement,
     shift: number,
-    rangeWidth: number
+    rangeWidth: number,
+    rangeRect: DOMRect
   ) => {
     const { min, max, feature, onChange, step = 0.1 } = this.props
-    const sliderPadding: number = parseFloat(
-      window.getComputedStyle(slider, null).getPropertyValue('padding-left')
-    )
-    let offset = e.clientX - slider.offsetLeft - sliderPadding - shift
+    let offset = e.clientX - rangeRect.left - shift
 
     const limitMin = 0
     const limitMax = rangeWidth

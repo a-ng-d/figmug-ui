@@ -169,7 +169,8 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
         e.clientX -
         (e.currentTarget as HTMLElement).getBoundingClientRect().left -
         (e.currentTarget as HTMLElement).getBoundingClientRect().width / 2,
-      rangeWidth = range.offsetWidth as number,
+      rangeRect = range.getBoundingClientRect(),
+      rangeWidth = rangeRect.width as number,
       slider = range.parentElement as HTMLElement,
       stops = Array.from(range.children as HTMLCollectionOf<HTMLElement>)
 
@@ -209,6 +210,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
         stop,
         shift,
         rangeWidth,
+        rangeRect,
         (event: UpdateEvent) => update(event)
       )
 
@@ -218,19 +220,17 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
 
   onSlide = (
     e: MouseEvent,
-    slider: HTMLElement,
+    _: HTMLElement,
     range: HTMLElement,
     stops: Array<HTMLElement>,
     stop: HTMLElement,
     shift: number,
     rangeWidth: number,
+    rangeRect: DOMRect,
     update: (e: UpdateEvent) => void
   ) => {
     const { min, max, step = 0.1 } = this.props.range
-    const sliderPadding: number = parseFloat(
-      window.getComputedStyle(slider, null).getPropertyValue('padding-left')
-    )
-    let offset = e.clientX - slider.offsetLeft - sliderPadding - shift
+    let offset = e.clientX - rangeRect.left - shift
 
     if (offset <= 0) offset = 0
     else if (offset >= rangeWidth) offset = rangeWidth
