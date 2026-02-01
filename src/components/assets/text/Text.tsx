@@ -18,7 +18,14 @@ export type TextProps = {
   /**
    * Text color
    */
-  color?: 'primary' | 'secondary' | 'tertiary' | 'inverse'
+  color?:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'inverse'
+    | 'success'
+    | 'warning'
+    | 'alert'
   /**
    * Truncate text if too long (adds ...)
    */
