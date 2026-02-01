@@ -22,6 +22,7 @@ const demoImage = 'https://placehold.co/400x184'
 export const Default: Story = {
   args: {
     src: demoImage,
+    tag: 'New layout',
     title: 'Card title',
     subtitle: 'Subtitle',
     richText: (
@@ -115,6 +116,7 @@ export const WithoutActions: Story = {
 export const WithoutTitle: Story = {
   args: {
     src: demoImage,
+    tag: 'New layout',
     subtitle: 'Card without main title',
     richText: (
       <span className={texts.type}>
@@ -156,6 +158,7 @@ export const WithoutTitle: Story = {
 export const Filled: Story = {
   args: {
     src: demoImage,
+    tag: 'New layout',
     title: 'Card in fill mode',
     subtitle: 'With shouldFill set to true',
     richText: (

@@ -57,6 +57,18 @@
     color: var(--text-color-tertiary);
   }
 
+  &--success {
+    color: var(--text-color-success);
+  }
+
+  &--warning {
+    color: var(--text-color-warning);
+  }
+
+  &--alert {
+    color: var(--text-color-alert);
+  }
+
   &--inverse {
     color: var(--text-color-inverse);
   }

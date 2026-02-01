@@ -204,6 +204,9 @@ export const AllColors: Story = {
       <Text>Primary text (primary)</Text>
       <Text color="secondary">Secondary text (secondary)</Text>
       <Text color="tertiary">Tertiary text (tertiary)</Text>
+      <Text color="success">Success text (success)</Text>
+      <Text color="warning">Warning text (warning)</Text>
+      <Text color="alert">Alert text (alert)</Text>
       <div style={{ background: '#333', padding: '8px' }}>
         <Text color="inverse">Inverse text (inverse)</Text>
       </div>

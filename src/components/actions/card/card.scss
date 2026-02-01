@@ -15,6 +15,7 @@
   padding: var(--card-padding-top) var(--card-padding-right)
     var(--card-padding-bottom) var(--card-padding-left);
   width: var(--card-width);
+  position: relative;
 
   &--fill {
     width: 100%;
@@ -47,6 +48,14 @@
     .card__actions {
       visibility: visible;
     }
+  }
+
+  &__tags {
+    position: absolute;
+    inset: calc(var(--card-padding-top) / 2) calc(var(--card-padding-right) / 2) auto auto;
+    z-index: 2;
+    display: flex;
+    justify-content: end;
   }
 
   &__asset {

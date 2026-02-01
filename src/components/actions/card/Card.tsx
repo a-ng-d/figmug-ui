@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import texts from '@styles/texts/texts.module.scss'
+import Chip from '@components/tags/chip/Chip'
 import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import './card.scss'
 import { doClassnames } from '@a_ng_d/figmug-utils'
@@ -9,6 +10,10 @@ interface CardProps {
    * Image source URL for the card thumbnail
    */
   src?: string
+  /**
+   * Tag label of the card
+   */
+  tag?: string
   /**
    * Main title of the card
    */
@@ -42,6 +47,7 @@ const Card = (props: CardProps) => {
   const [isActionsVisible, setActionsVisible] = useState<boolean>(false)
   const {
     src,
+    tag,
     title,
     subtitle,
     richText,
@@ -65,6 +71,14 @@ const Card = (props: CardProps) => {
       onMouseDown={action}
       tabIndex={0}
     >
+      {tag !== undefined && (
+        <div
+          className="card__tags"
+          role="group"
+        >
+          <Chip isSolo>{tag}</Chip>
+        </div>
+      )}
       {src && (
         <div
           className="card__asset"
