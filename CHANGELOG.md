@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.20.2] - 2026-02-02
+
+### Fixed
+
+- **Slider Components Positioning**: Fixed mouse position calculation for nested containers
+  - Updated SimpleSlider and MultipleSlider to use `getBoundingClientRect()` instead of `offsetLeft`
+  - Eliminates position offset when sliders are placed in deeply nested containers
+  - More reliable positioning regardless of parent container structure
+
+### Technical Details
+
+- Replaced `slider.offsetLeft` with `e.clientX - rangeRect.left` in position calculations
+- Removed dependency on computed padding values for positioning accuracy
+- Updated `onSlide` method signature to accept `DOMRect` for range element positioning
+- Improved positioning robustness for complex component hierarchies
+
 ## [1.21.0] - 2026-02-01
 
 ### Added
