@@ -10,7 +10,7 @@
   gap: var(--card-gap);
   box-sizing: border-box;
   outline: var(--card-border-width) solid var(--card-border-color);
-  box-shadow: var(--card-border-offset);
+  outline-offset: var(--card-border-offset);
   border-radius: var(--card-radius);
   background-color: var(--card-background-color);
   padding: var(--card-padding-top) var(--card-padding-right)
