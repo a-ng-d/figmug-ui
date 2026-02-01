@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.21.0] - 2026-02-01
+
+### Added
+
+- **Card Component Tag Feature**: New tag support for better content categorization
+  - Added `tag` prop to Card component for displaying category labels
+  - Integrated Chip component for consistent tag styling
+  - Tags display in top-right corner of cards with absolute positioning
+  - Configurable tag display with optional rendering
+
+- **Text Component Extended Color Palette**: New color options for semantic states
+  - Added `success` color option for positive/success messages
+  - Added `warning` color option for caution/warning messages
+  - Added `alert` color option for error/danger messages
+  - Updated all theme configurations (Figma, Framer, Penpot, Sketch) with new color variables
+  - Enhanced Text component story with comprehensive color examples
+
+### Technical Details
+
+- Added `tag?: string` prop to Card component interface
+- Enhanced Card component with conditional tag rendering
+- Updated Card SCSS with `.card__tags` styling and positioning
+- Added new CSS variables for text colors: `--text-color-success`, `--text-color-warning`, `--text-color-alert`
+- Updated theme files for Figma, Framer, Penpot, and Sketch with semantic color mappings
+- Enhanced Text component SCSS with new color modifier classes (`.text--success`, `.text--warning`, `.text--alert`)
+- Updated Card and Text component Storybook stories with new prop examples
+
 ## [1.20.0] - 2026-01-15
 
 ### Added
