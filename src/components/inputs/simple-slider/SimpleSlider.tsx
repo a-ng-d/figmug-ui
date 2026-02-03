@@ -162,7 +162,7 @@ export default class SimpleSlider extends React.Component<
     rangeWidth: number,
     rangeRect: DOMRect
   ) => {
-    const { min, max, feature, onChange, step = 0.1 } = this.props
+    const { min, max, feature, onChange, step = 1 } = this.props
     let offset = e.clientX - rangeRect.left - shift
 
     const limitMin = 0
@@ -171,30 +171,51 @@ export default class SimpleSlider extends React.Component<
     if (offset <= limitMin) offset = limitMin
     else if (offset >= limitMax) offset = limitMax
 
-    stop.style.left = doMap(offset, 0, rangeWidth, 0, 100).toFixed(1) + '%'
-
     const rawValue = doMap(offset, 0, rangeWidth, min, max)
 
-    this.value = this.roundToStep(rawValue, step)
+    if (step > 1) {
+      const newValue = this.roundToStep(rawValue, step)
+      const clampedValue = Math.max(min, Math.min(max, newValue))
 
-    if (this.value < min) this.value = min
-    if (this.value > max) this.value = max
+      if (this.value !== clampedValue) {
+        this.value = clampedValue
 
-    this.setState({
-      isTooltipDisplay: true,
-    })
+        const snappedPosition = doMap(this.value, min, max, 0, 100)
+        stop.style.left = snappedPosition.toFixed(1) + '%'
 
-    onChange(feature, 'UPDATING', this.value)
+        this.setState({
+          isTooltipDisplay: true,
+        })
+
+        onChange(feature, 'UPDATING', this.value)
+      }
+    } else {
+      this.value = rawValue
+
+      if (this.value < min) this.value = min
+      if (this.value > max) this.value = max
+
+      stop.style.left = doMap(offset, 0, rangeWidth, 0, 100).toFixed(1) + '%'
+
+      this.setState({
+        isTooltipDisplay: true,
+      })
+
+      onChange(feature, 'UPDATING', this.value)
+    }
+
     document.body.style.cursor = 'ew-resize'
   }
 
   onRelease = (stop: HTMLElement) => {
-    const { feature, onChange } = this.props
+    const { feature, onChange, step = 1 } = this.props
 
     document.onmousemove = null
     document.onmouseup = null
     stop.onmouseup = null
     stop.style.zIndex = '1'
+
+    this.value = this.roundToStep(this.value, step)
 
     this.setState({
       isTooltipDisplay: false,
@@ -275,7 +296,7 @@ export default class SimpleSlider extends React.Component<
             onShiftRight={(e) => {
               const { step = 1 } = this.props
               if (e.shiftKey) {
-                const newValue = this.roundToStep(value + 10, step)
+                const newValue = this.roundToStep(value + step * 10, step)
                 onChange(feature, 'SHIFTED', newValue > max ? max : newValue)
               } else {
                 const newValue = this.roundToStep(value + step, step)
@@ -285,7 +306,7 @@ export default class SimpleSlider extends React.Component<
             onShiftLeft={(e) => {
               const { step = 1 } = this.props
               if (e.shiftKey) {
-                const newValue = this.roundToStep(value - 10, step)
+                const newValue = this.roundToStep(value - step * 10, step)
                 onChange(feature, 'SHIFTED', newValue < min ? min : newValue)
               } else {
                 const newValue = this.roundToStep(value - step, step)

@@ -276,14 +276,39 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     const steppedValue = Math.round(rawValue / step) * step
     const precision = step.toString().split('.')[1]?.length || 0
 
-    const newPosition = doMap(steppedValue, min, max, 0, 100)
-    stop.style.left = newPosition.toFixed(precision) + '%'
+    if (step > 1) {
+      const currentValue = parseFloat(
+        doMap(
+          parseFloat(stop.style.left.replace('%', '')),
+          0,
+          100,
+          min,
+          max
+        ).toFixed(precision)
+      )
+      const newValue = parseFloat(steppedValue.toFixed(precision))
 
-    requestAnimationFrame(() => {
-      stop.focus()
-    })
+      if (currentValue !== newValue) {
+        const newPosition = doMap(steppedValue, min, max, 0, 100)
+        stop.style.left = newPosition.toFixed(precision) + '%'
 
-    update('UPDATING')
+        requestAnimationFrame(() => {
+          stop.focus()
+        })
+
+        update('UPDATING')
+      }
+    } else {
+      const newPosition = doMap(steppedValue, min, max, 0, 100)
+      stop.style.left = newPosition.toFixed(precision) + '%'
+
+      requestAnimationFrame(() => {
+        stop.focus()
+      })
+
+      update('UPDATING')
+    }
+
     document.body.style.cursor = 'ew-resize'
   }
 
@@ -328,11 +353,11 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     onChange('SHIFTED', results, 'DELETE_STOP')
   }
 
-  onShiftRight = (knob: HTMLElement, isMeta: boolean, isCtrl: boolean) => {
+  onShiftRight = (knob: HTMLElement, isShift: boolean) => {
     const { scale, onChange } = this.props
-    const { min, max } = this.props.range
+    const { min, max, step = 1 } = this.props.range
 
-    const results = shiftRightStop(scale, knob, isMeta, isCtrl, min, max)
+    const results = shiftRightStop(scale, knob, isShift, min, max, step)
 
     onChange('SHIFTED', results)
 
@@ -347,11 +372,11 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     })
   }
 
-  onShiftLeft = (knob: HTMLElement, isMeta: boolean, isCtrl: boolean) => {
+  onShiftLeft = (knob: HTMLElement, isShift: boolean) => {
     const { scale, onChange } = this.props
-    const { min, max } = this.props.range
+    const { min, max, step = 1 } = this.props.range
 
-    const results = shiftLeftStop(scale, knob, isMeta, isCtrl, min, max)
+    const results = shiftLeftStop(scale, knob, isShift, min, max, step)
 
     onChange('SHIFTED', results)
 
@@ -517,10 +542,10 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
                     : 'auto',
               }}
               onShiftRight={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                this.onShiftRight(e.target as HTMLElement, e.metaKey, e.ctrlKey)
+                this.onShiftRight(e.target as HTMLElement, e.shiftKey)
               }}
               onShiftLeft={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                this.onShiftLeft(e.target as HTMLElement, e.metaKey, e.ctrlKey)
+                this.onShiftLeft(e.target as HTMLElement, e.shiftKey)
               }}
               onMouseDown={(e: React.MouseEvent<HTMLElement>) => {
                 this.onGrab(e)
@@ -587,10 +612,10 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
                     : 'auto',
               }}
               onShiftRight={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                this.onShiftRight(e.target as HTMLElement, e.metaKey, e.ctrlKey)
+                this.onShiftRight(e.target as HTMLElement, e.shiftKey)
               }}
               onShiftLeft={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                this.onShiftLeft(e.target as HTMLElement, e.metaKey, e.ctrlKey)
+                this.onShiftLeft(e.target as HTMLElement, e.shiftKey)
               }}
               onDelete={(e: React.KeyboardEvent<HTMLInputElement>) => {
                 if (stops.list.length > (stops.min ?? Infinity))
