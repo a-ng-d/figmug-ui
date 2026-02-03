@@ -1,8 +1,8 @@
 {
   "activity": {},
   "announcedBuild": {
-    "id": "698276d1a27200c5785ccedd",
-    "number": 529,
+    "id": "6982797c10d85f1d414ed356",
+    "number": 530,
     "status": "PUBLISHED",
     "autoAcceptChanges": false,
     "features": {
@@ -14,11 +14,11 @@
       "id": "663a220bcc5dda79791c430e",
       "turboSnapAvailability": "UNUSED"
     },
-    "storybookUrl": "https://663a220bcc5dda79791c430e-krrkucfvmk.chromatic.com/"
+    "storybookUrl": "https://663a220bcc5dda79791c430e-aldetqccdy.chromatic.com/"
   },
   "build": {
-    "id": "698276d1a27200c5785ccedd",
-    "number": 529,
+    "id": "6982797c10d85f1d414ed356",
+    "number": 530,
     "status": "PENDING",
     "autoAcceptChanges": false,
     "features": {
@@ -38,17 +38,17 @@
         "provider": "github"
       }
     },
-    "storybookUrl": "https://663a220bcc5dda79791c430e-krrkucfvmk.chromatic.com/",
+    "storybookUrl": "https://663a220bcc5dda79791c430e-aldetqccdy.chromatic.com/",
     "specCount": 111,
     "componentCount": 38,
     "testCount": 111,
-    "changeCount": 9,
+    "changeCount": 3,
     "errorCount": 0,
     "actualTestCount": 111,
     "actualCaptureCount": 222,
     "inheritedCaptureCount": 0,
     "interactionTestFailuresCount": 0,
-    "webUrl": "https://www.chromatic.com/build?appId=663a220bcc5dda79791c430e&number=529",
+    "webUrl": "https://www.chromatic.com/build?appId=663a220bcc5dda79791c430e&number=530",
     "browsers": [
       {
         "browser": "chrome"
@@ -1835,9 +1835,9 @@
       }
     ],
     "inProgressCount": 0,
-    "completedAt": 1770157902796
+    "completedAt": 1770158570845
   },
-  "buildCommand": "npm run build-storybook -- --output-dir=/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--86117-I72K7Hrs5UIa",
+  "buildCommand": "npm run build-storybook -- --output-dir=/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--86117-jLpLE46OgkMZ",
   "buildLogFile": "/Users/a_ng_d/DEV/figmug-ui/build-storybook.log",
   "configuration": {
     "configFile": "chromatic.config.json",
@@ -3852,7 +3852,7 @@
       "nunito-sans-bold.woff2": "0bd5b61b7fb7f7d5",
       "nunito-sans-italic.woff2": "b7807d9de055e9a0",
       "nunito-sans-regular.woff2": "6687b7be04c2debe",
-      "project.json": "c2f0dbb5c9da9ab8",
+      "project.json": "4a0447dd4ed5a4c1",
       "sb-addons/a11y-3/manager-bundle.js": "531b496368f66082",
       "sb-addons/chromatic-com-storybook-2/manager-bundle.js": "0ce72dd5fe4bc1bc",
       "sb-addons/chromatic-com-storybook-2/manager-bundle.js.LEGAL.txt": "285dd9e1dc6c7408",
@@ -3910,12 +3910,12 @@
   "git": {
     "version": "2.51.0",
     "gitUserEmail": "a.grimaud@involt.io",
-    "uncommittedHash": "039552c3192ddd4e586dd326ee6337f413da4ddd",
+    "uncommittedHash": "",
     "rootPath": "/Users/a_ng_d/DEV/figmug-ui",
-    "commit": "d3d8d26dd393628211aa1634fecb1d9d85696fc0",
-    "committedAt": 1770156467000,
+    "commit": "b70d8be60ad87dc7e0ade4e4cdf1afb2b58cf8fd",
+    "committedAt": 1770158387000,
     "committerEmail": "a.grimaud@involt.io",
-    "committerName": "Aurélien Grimaud",
+    "committerName": "@a-ng-d",
     "branch": "main",
     "slug": "a-ng-d/figmug-ui",
     "fromCI": false,
@@ -4076,12 +4076,12 @@
     "packageManagerVersion": "10.8.2"
   },
   "sentinelUrls": [
-    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-krrkucfvmk/.chromatic/files-copied.3289684228.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260203%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260203T223007Z&X-Amz-Expires=1800&X-Amz-Signature=e103365a8f322ab70aacc0d22e643752833acfd7f691961146bfcaa0df369bed&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
-    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-krrkucfvmk/.chromatic/zip-unpacked.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260203%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260203T223007Z&X-Amz-Expires=1980&X-Amz-Signature=75e2486c2acb2349bbaefcc50e0b28ae8c693588ce39eff7dd82157fca9abe41&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-aldetqccdy/.chromatic/files-copied.3289704532.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260203%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260203T224113Z&X-Amz-Expires=1800&X-Amz-Signature=a1bec34782e9178397f001430526fdaed824dab9d6bf6414a37da32259cb6b41&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-aldetqccdy/.chromatic/zip-unpacked.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260203%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260203T224113Z&X-Amz-Expires=1980&X-Amz-Signature=a3ea1acba81fc26fdf329f4e78b4d787542bb8ebd89c9a1bae1ddb3771745bcd&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
   ],
-  "sessionId": "bc2c3706-3cfb-4b96-a1c1-21bdfc6d4af1",
-  "sourceDir": "/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--86117-I72K7Hrs5UIa",
-  "startedAt": 1770157815585,
+  "sessionId": "86361570-b62e-4519-832d-6c564d362107",
+  "sourceDir": "/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--86117-jLpLE46OgkMZ",
+  "startedAt": 1770158483921,
   "storybook": {
     "version": "10.1.11",
     "builder": {
@@ -4090,9 +4090,9 @@
     },
     "baseDir": "."
   },
-  "storybookUrl": "https://663a220bcc5dda79791c430e-krrkucfvmk.chromatic.com/",
+  "storybookUrl": "https://663a220bcc5dda79791c430e-aldetqccdy.chromatic.com/",
   "task": "snapshot",
-  "uploadedBytes": 651,
+  "uploadedBytes": 652,
   "uploadedFiles": 1,
   "userError": false
 }

@@ -276,7 +276,7 @@ export default class Slider extends React.Component<SliderProps, SliderStates> {
     const steppedValue = Math.round(rawValue / step) * step
     const precision = step.toString().split('.')[1]?.length || 0
 
-    if (step > 1) {
+    if (step >= 1) {
       const currentValue = parseFloat(
         doMap(
           parseFloat(stop.style.left.replace('%', '')),
