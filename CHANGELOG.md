@@ -5,6 +5,47 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.20.3] - 2026-02-03
+
+### Fixed
+
+- **Button Status Rendering**: Improved conditional rendering logic for button status indicators
+  - Removed unnecessary type checks when displaying chips for blocked/new states
+  - Simplified Status component logic for better maintainability
+  - Status now properly renders regardless of button type
+
+- **Lock Icon Path**: Corrected lock-off icon SVG path for accurate visual representation
+  - Updated lock-off icon with corrected coordinates and dimensions
+  - Better visual consistency with lock-on icon
+
+### Enhanced
+
+- **Slider Components Snap Behavior**: Improved interaction feel for large step values
+  - Added intelligent snap behavior for steps > 1: knob stays fixed and jumps only when crossing step thresholds
+  - Smooth continuous movement preserved for steps ≤ 1
+  - Eliminated "stuck" feeling during drag operations with large steps
+  - Better visual feedback with snap-to-value behavior on large increments
+
+- **Slider Keyboard Navigation**: Fixed and improved keyboard step handling
+  - Step values now correctly applied when using arrow keys (was hardcoded to 1)
+  - Arrow keys: move by configured `step` value
+  - Shift + Arrow keys: move by `step × 10` for faster navigation
+  - Consistent keyboard behavior across SimpleSlider and MultipleSlider components
+
+- **MultipleSlider Keyboard Shortcuts**: Standardized keyboard modifier keys
+  - Changed from Cmd/Ctrl to Shift for accelerated movement (×10 multiplier)
+  - More intuitive keyboard shortcuts aligned with SimpleSlider behavior
+  - Better cross-platform consistency
+
+### Technical Details
+
+- Updated `onSlide` method in both slider components with conditional snap logic based on step value
+- Enhanced `shiftRightStop` and `shiftLeftStop` functions to accept and apply step parameter
+- Modified keyboard event handlers to pass step values to shift functions
+- Changed modifier key detection from `metaKey`/`ctrlKey` to `shiftKey` in MultipleSlider
+- Added value change detection in snap logic to prevent unnecessary updates
+- Improved step rounding on release for smooth snapping behavior
+
 ## [1.20.2] - 2026-02-02
 
 ### Fixed

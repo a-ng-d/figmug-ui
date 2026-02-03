@@ -1,13 +1,13 @@
 const shiftRightStop = (
   scale: Record<string, number>,
   selectedKnob: HTMLElement,
-  meta: boolean,
-  ctrl: boolean,
+  shift: boolean,
   minRange: number,
-  maxRange: number
+  maxRange: number,
+  step: number = 1
 ) => {
   const stopsList: Array<string> = []
-  const shiftValue = meta || ctrl ? 0.1 : 1
+  const shiftValue = shift ? step * 10 : step
 
   Object.entries(scale)
     .sort((a, b) => a[1] - b[1])
