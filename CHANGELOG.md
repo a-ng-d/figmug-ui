@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.20.5] - 2026-02-04
+
+### Enhanced
+
+- **Popin Component Layout**: Improved layout handling for better positioning control
+  - Added `position: relative` to `.popin__content` for better nested element positioning
+  - Enhanced layout stability for child components that require positioning context
+  - Better support for absolutely positioned elements within popin content
+
+### Technical Details
+
+- Updated popin SCSS with relative positioning on content container
+- Improved positioning context for nested components within popins
+- Enhanced layout predictability for complex popin content structures
+
 ## [1.20.4] - 2026-02-03
 
 ### Enhanced
