@@ -173,7 +173,7 @@ export default class SimpleSlider extends React.Component<
 
     const rawValue = doMap(offset, 0, rangeWidth, min, max)
 
-    if (step > 1) {
+    if (step >= 1) {
       const newValue = this.roundToStep(rawValue, step)
       const clampedValue = Math.max(min, Math.min(max, newValue))
 
