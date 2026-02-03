@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.20.4] - 2026-02-03
+
+### Enhanced
+
+- **Slider Components Snap Behavior**: Extended snap behavior to include step value of 1
+  - Changed snap threshold from `step > 1` to `step >= 1` in both SimpleSlider and MultipleSlider
+  - Step value of 1 now uses jump/snap behavior instead of continuous sliding
+  - Improved consistency: only steps < 1 (e.g., 0.1, 0.5) use smooth continuous movement
+  - Better tactile feedback for integer-based value selection
+
+### Technical Details
+
+- Updated conditional check in `onSlide` method from `if (step > 1)` to `if (step >= 1)`
+- Applied change consistently across SimpleSlider and MultipleSlider components
+- Snap behavior activates for all integer step values (1, 2, 5, 10, etc.)
+- Smooth sliding behavior preserved only for fractional steps (< 1)
+
 ## [1.20.3] - 2026-02-03
 
 ### Fixed
