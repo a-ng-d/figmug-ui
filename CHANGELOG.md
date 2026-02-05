@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.20.6] - 2026-02-05
+
+### Changed
+
+- **Layout Component Distributed Gap**: Adjusted distributed gap size for improved layout consistency
+  - Reduced `--layout-distributed-gap` from `small` to `xxsmall` for tighter, more consistent spacing
+  - Applied across all themes (Figma, Framer, Penpot, Sketch) for uniform distributed layout behavior
+  - Better visual balance in distributed layout mode with reduced spacing between elements
+
+### Technical Details
+
+- Updated layout token files for all platforms with new gap size value
+- Changed distributed gap from `var(--size-pos-small)` to `var(--size-pos-xxsmall)`
+- Regenerated SCSS files for all themes with updated spacing values
+- Improved layout density for better use of available space
+
 ## [1.20.5] - 2026-02-04
 
 ### Enhanced
