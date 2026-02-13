@@ -44,6 +44,12 @@
       "$value": "{border.radius.large}",
       "$type": "dimension"
     },
+    "background": {
+      "color": {
+        "$value": "{sketch.color.background.primary}",
+        "$type": "color"
+      }
+    },
     "border": {
       "color": {
         "$value": "{sketch.color.border.primary}",

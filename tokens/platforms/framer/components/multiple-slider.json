@@ -44,6 +44,12 @@
       "$value": "{border.radius.large}",
       "$type": "dimension"
     },
+    "background": {
+      "color": {
+        "$value": "{framer.color.bg.default}",
+        "$type": "color"
+      }
+    },
     "border": {
       "color": {
         "$value": "{framer.color.divider}",

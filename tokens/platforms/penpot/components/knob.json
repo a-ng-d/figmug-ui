@@ -65,6 +65,10 @@
             "$value": "{penpot.color.background.quaternary}",
             "$type": "color"
           },
+          "hover": {
+            "$value": "{penpot.color.background.quaternary}",
+            "$type": "color"
+          },
           "focus": {
             "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
@@ -88,6 +92,14 @@
       "text": {
         "color": {
           "default": {
+            "$value": "{penpot.color.foreground.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{penpot.color.foreground.primary}",
+            "$type": "color"
+          },
+          "focus": {
             "$value": "{penpot.color.foreground.primary}",
             "$type": "color"
           },

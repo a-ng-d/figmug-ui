@@ -65,6 +65,10 @@
             "$value": "{figma.color.border.disabled.strong}",
             "$type": "color"
           },
+          "hover": {
+            "$value": "{figma.color.border.disabled.strong}",
+            "$type": "color"
+          },
           "focus": {
             "$value": "{figma.color.border.selected.default}",
             "$type": "color"
@@ -88,6 +92,14 @@
       "text": {
         "color": {
           "default": {
+            "$value": "{figma.color.text.default}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{figma.color.text.default}",
+            "$type": "color"
+          },
+          "focus": {
             "$value": "{figma.color.text.default}",
             "$type": "color"
           },

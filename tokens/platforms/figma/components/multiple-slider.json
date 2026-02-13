@@ -44,6 +44,12 @@
       "$value": "{border.radius.small}",
       "$type": "dimension"
     },
+    "background": {
+      "color": {
+        "$value": "{figma.color.bg.default}",
+        "$type": "color"
+      }
+    },
     "border": {
       "color": {
         "$value": "{figma.color.border.disabled.strong}",

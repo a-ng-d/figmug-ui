@@ -65,6 +65,10 @@
             "$value": "{sketch.color.border.secondary}",
             "$type": "color"
           },
+          "hover": {
+            "$value": "{sketch.color.border.secondary}",
+            "$type": "color"
+          },
           "focus": {
             "$value": "{sketch.color.accent.primary}",
             "$type": "color"
@@ -88,6 +92,14 @@
       "text": {
         "color": {
           "default": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "focus": {
             "$value": "{sketch.color.foreground.primary}",
             "$type": "color"
           },

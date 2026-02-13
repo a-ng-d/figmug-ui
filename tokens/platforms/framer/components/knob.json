@@ -65,6 +65,10 @@
             "$value": "{framer.color.divider}",
             "$type": "color"
           },
+          "hover": {
+            "$value": "{framer.color.divider}",
+            "$type": "color"
+          },
           "focus": {
             "$value": "{framer.color.tint.default}",
             "$type": "color"
@@ -88,6 +92,14 @@
       "text": {
         "color": {
           "default": {
+            "$value": "{framer.color.text.default}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{framer.color.text.default}",
+            "$type": "color"
+          },
+          "focus": {
             "$value": "{framer.color.text.default}",
             "$type": "color"
           },

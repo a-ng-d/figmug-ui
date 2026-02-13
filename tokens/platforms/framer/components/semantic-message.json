@@ -4,6 +4,10 @@
       "$value": "{size.pos.xxxsmall}",
       "$type": "dimension"
     },
+    "maxWidth": {
+      "$value": "400px",
+      "$type": "dimension"
+    },
     "padding": {
       "default": {
         "top": {
@@ -22,10 +26,6 @@
           "$value": "{size.null}",
           "$type": "dimension"
         }
-      },
-      "maxWidth": {
-        "$value": "400px",
-        "$type": "dimension"
       },
       "anchored": {
         "top": {
