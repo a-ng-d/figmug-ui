@@ -1,0 +1,16 @@
+{
+  "information": {
+    "platform": {
+      "$type": "text",
+      "$value": "Sketch"
+    },
+    "isCapitalized": {
+      "$type": "boolean",
+      "$value": false
+    },
+    "isNotCapitalized": {
+      "$type": "boolean",
+      "$value": true
+    }
+  }
+}

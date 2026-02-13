@@ -25,7 +25,7 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -36,10 +36,7 @@
     },
     "label": {
       "width": {
-        "$value": {
-          "value": 96,
-          "unit": "px"
-        },
+        "$value": "{size.pos.huge}",
         "$type": "dimension"
       },
       "margin": {

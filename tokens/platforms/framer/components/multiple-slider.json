@@ -1,5 +1,5 @@
 {
-  "multiple-slider": {
+  "multipleSlider": {
     "margin": {
       "top": {
         "$value": "{size.pos.small}",
@@ -43,6 +43,12 @@
     "radius": {
       "$value": "{border.radius.large}",
       "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "$value": "{framer.color.bg.default}",
+        "$type": "color"
+      }
     },
     "border": {
       "color": {

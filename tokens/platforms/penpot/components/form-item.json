@@ -36,10 +36,7 @@
     },
     "label": {
       "width": {
-        "$value": {
-          "value": 112,
-          "unit": "px"
-        },
+        "$value": "112px",
         "$type": "dimension"
       },
       "margin": {

@@ -1,7 +1,11 @@
 {
-  "semantic-message": {
+  "semanticMessage": {
     "gap": {
       "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "maxWidth": {
+      "$value": "400px",
       "$type": "dimension"
     },
     "padding": {
@@ -22,13 +26,6 @@
           "$value": "{size.null}",
           "$type": "dimension"
         }
-      },
-      "maxWidth": {
-        "$value": {
-          "value": 400,
-          "unit": "px"
-        },
-        "$type": "dimension"
       },
       "anchored": {
         "top": {
@@ -66,7 +63,7 @@
           "$type": "dimension"
         }
       },
-      "anchored-vertical": {
+      "anchoredVertical": {
         "top": {
           "$value": "{size.pos.xsmall}",
           "$type": "dimension"

@@ -1,0 +1,16 @@
+{
+  "information": {
+    "platform": {
+      "$type": "text",
+      "$value": "Penpot"
+    },
+    "isCapitalized": {
+      "$type": "boolean",
+      "$value": true
+    },
+    "isNotCapitalized": {
+      "$type": "boolean",
+      "$value": false
+    }
+  }
+}

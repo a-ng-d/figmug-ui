@@ -23,31 +23,25 @@
       "$type": "dimension"
     },
     "minWidth": {
-      "$value": {
-        "value": 200,
-        "unit": "px"
-      },
+      "$value": "200px",
       "$type": "dimension"
     },
     "minHeight": {
-      "$value": {
-        "value": 200,
-        "unit": "px"
-      },
+      "$value": "200px",
       "$type": "dimension"
     },
     "border": {
       "color": {
         "default": {
-          "$value": "{figma.color.border}",
+          "$value": "{figma.color.border.default}",
           "$type": "color"
         },
         "over": {
-          "$value": "{figma.color.border.selected}",
+          "$value": "{figma.color.border.selected.default}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{figma.color.border.disabled}",
+          "$value": "{figma.color.border.disabled.default}",
           "$type": "color"
         }
       },
@@ -97,11 +91,11 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         },
         "over": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         },
         "disabled": {
