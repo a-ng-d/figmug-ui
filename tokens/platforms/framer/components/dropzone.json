@@ -36,7 +36,7 @@
           "$value": "{framer.color.divider}",
           "$type": "color"
         },
-        "over": {
+        "hover": {
           "$value": "{framer.color.tint.default}",
           "$type": "color"
         },
@@ -50,7 +50,7 @@
           "$value": "{size.pos.unit}",
           "$type": "dimension"
         },
-        "over": {
+        "hover": {
           "$value": "{size.pos.xunit}",
           "$type": "dimension"
         },
@@ -64,7 +64,7 @@
           "$value": "{size.neg.unit}",
           "$type": "dimension"
         },
-        "over": {
+        "hover": {
           "$value": "{size.neg.xunit}",
           "$type": "dimension"
         },
@@ -78,7 +78,7 @@
           "$value": "dashed",
           "$type": "string"
         },
-        "over": {
+        "hover": {
           "$value": "solid",
           "$type": "string"
         },
@@ -94,7 +94,7 @@
           "$value": "{framer.color.bg.default}",
           "$type": "color"
         },
-        "over": {
+        "hover": {
           "$value": "{framer.color.tint.dimmed}",
           "$type": "color"
         },
