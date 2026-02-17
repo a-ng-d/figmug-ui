@@ -47,6 +47,10 @@
         "disabled": {
           "$value": "{sketch.color.background.secondary}",
           "$type": "color"
+        },
+        "onSelected": {
+          "$value": "{sketch.color.accent.tertiary}",
+          "$type": "color"
         }
       }
     },
@@ -66,6 +70,10 @@
         },
         "disabled": {
           "$value": "{grey.transparent}",
+          "$type": "color"
+        },
+        "onSelected": {
+          "$value": "{sketch.color.accent.primary}",
           "$type": "color"
         }
       },
