@@ -90,7 +90,7 @@
           "secondary": {
             "default": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             },
             "focus": {
               "$value": "{sketch.color.accent.primary}",
