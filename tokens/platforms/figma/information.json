@@ -12,6 +12,10 @@
       "$type": "boolean",
       "$value": true
     },
+    "isFlex": {
+      "$type": "boolean",
+      "$value": false
+    },
     "backgroundColor": {
       "$type": "color",
       "$value": "{figma.color.bg.default}"
