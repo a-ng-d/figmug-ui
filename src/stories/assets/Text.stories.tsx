@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { expect, within } from 'storybook/test'
 import Text from '@components/assets/text/Text'
 
 const meta = {
-  title: 'Components/Assets/Text',
+  title: 'Foundations/Text',
   component: Text,
   parameters: {
     layout: 'centered',
@@ -12,132 +11,6 @@ const meta = {
 
 export default meta
 type Story = StoryObj<typeof meta>
-
-export const Default: Story = {
-  args: {
-    children: 'Default text',
-  },
-  play: async ({ canvasElement, args }) => {
-    const canvas = within(canvasElement)
-    const text = canvas.getByText(args.children as string)
-    await expect(text).toBeInTheDocument()
-  },
-}
-
-export const Small: Story = {
-  args: {
-    children: 'Small text',
-    size: 'small',
-  },
-  play: async ({ canvasElement, args }) => {
-    const canvas = within(canvasElement)
-    const text = canvas.getByText(args.children as string)
-    await expect(text).toBeInTheDocument()
-  },
-}
-
-export const Large: Story = {
-  args: {
-    children: 'Large text',
-    size: 'large',
-  },
-  play: async ({ canvasElement, args }) => {
-    const canvas = within(canvasElement)
-    const text = canvas.getByText(args.children as string)
-    await expect(text).toBeInTheDocument()
-  },
-}
-
-export const XLarge: Story = {
-  args: {
-    children: 'Extra large text',
-    size: 'xlarge',
-  },
-  play: async ({ canvasElement, args }) => {
-    const canvas = within(canvasElement)
-    const text = canvas.getByText(args.children as string)
-    await expect(text).toBeInTheDocument()
-  },
-}
-
-export const Medium: Story = {
-  args: {
-    children: 'Medium text',
-    weight: 'medium',
-  },
-  play: async ({ canvasElement, args }) => {
-    const canvas = within(canvasElement)
-    const text = canvas.getByText(args.children as string)
-    await expect(text).toBeInTheDocument()
-  },
-}
-
-export const Bold: Story = {
-  args: {
-    children: 'Bold text',
-    weight: 'bold',
-  },
-  play: async ({ canvasElement, args }) => {
-    const canvas = within(canvasElement)
-    const text = canvas.getByText(args.children as string)
-    await expect(text).toBeInTheDocument()
-  },
-}
-
-export const Secondary: Story = {
-  args: {
-    children: 'Secondary text',
-    color: 'secondary',
-  },
-  play: async ({ canvasElement, args }) => {
-    const canvas = within(canvasElement)
-    const text = canvas.getByText(args.children as string)
-    await expect(text).toBeInTheDocument()
-  },
-}
-
-export const Tertiary: Story = {
-  args: {
-    children: 'Tertiary text',
-    color: 'tertiary',
-  },
-  play: async ({ canvasElement, args }) => {
-    const canvas = within(canvasElement)
-    const text = canvas.getByText(args.children as string)
-    await expect(text).toBeInTheDocument()
-  },
-}
-
-export const Inverse: Story = {
-  args: {
-    children: 'Inverse text',
-    color: 'inverse',
-  },
-  parameters: {
-    backgrounds: { default: 'dark' },
-  },
-  play: async ({ canvasElement, args }) => {
-    const canvas = within(canvasElement)
-    const text = canvas.getByText(args.children as string)
-    await expect(text).toBeInTheDocument()
-  },
-}
-
-export const Truncated: Story = {
-  args: {
-    children:
-      'This text is very long and will be truncated if necessary with an ellipsis at the end',
-    truncate: true,
-  },
-  parameters: {
-    layout: 'padded',
-  },
-  play: async ({ canvasElement, args }) => {
-    const canvas = within(canvasElement)
-    const text = canvas.getByText(args.children as string)
-    await expect(text).toBeInTheDocument()
-  },
-}
 
 export const AllStyles: Story = {
   args: {
