@@ -801,7 +801,7 @@ async function copyPlatformTokens(themeName) {
 
 async function main() {
   try {
-    log.title('Welcome to the Figmug UI Theme Generator!')
+    log.title('Welcome to the Unoff UI Theme Generator!')
     log.info(
       'This script will create a new theme based on the existing structure.'
     )

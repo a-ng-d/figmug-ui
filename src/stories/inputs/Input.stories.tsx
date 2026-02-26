@@ -244,7 +244,7 @@ export const ShortText: Story = {
 
     await expect(input).toBeInTheDocument()
 
-    await userEvent.type(input, 'Hello Figmug UI!')
+    await userEvent.type(input, 'Hello Unoff UI!')
     await userEvent.tab()
 
     await expect(args.onBlur).toHaveBeenCalled()

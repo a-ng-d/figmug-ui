@@ -1,6 +1,6 @@
-# Terrazzo SCSS Building Guide for figmug-ui
+# Terrazzo SCSS Building Guide for unoff-ui
 
-This guide explains how to use the SCSS building scripts to generate CSS files from design tokens in the figmug-ui project.
+This guide explains how to use the SCSS building scripts to generate CSS files from design tokens in the unoff-ui project.
 
 ## What is Terrazzo?
 
@@ -8,7 +8,7 @@ Terrazzo is a tool that converts design tokens (stored in JSON files) into CSS v
 
 ## Terrazzo Files Structure
 
-In the figmug-ui project, Terrazzo files are organized as follows:
+In the unoff-ui project, Terrazzo files are organized as follows:
 
 ```
 terrazzo/
