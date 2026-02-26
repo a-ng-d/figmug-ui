@@ -51,7 +51,7 @@
     "figma:parse": "figma connect parse"
   },
   "dependencies": {
-    "@unoff/utils": "^0.8.0"
+    "@unoff/utils": "^0.8.1"
   },
   "peerDependencies": {
     "react": "^18.2.0",
