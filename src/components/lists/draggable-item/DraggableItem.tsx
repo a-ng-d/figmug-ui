@@ -1,7 +1,7 @@
 import React from 'react'
+import { doClassnames, doMap } from '@unoff/utils'
 import DraggableWindow from '@components/slots/draggable-window/DraggableWindow'
 import Button from '@components/actions/button/Button'
-import { doClassnames, doMap } from '@unoff/utils'
 import './draggable-item.scss'
 
 export interface DraggableItemProps {

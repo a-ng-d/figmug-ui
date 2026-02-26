@@ -1,6 +1,6 @@
 import React from 'react'
-import ActionsList from '@components/lists/actions-list/ActionsList'
 import { doClassnames } from '@unoff/utils'
+import ActionsList from '@components/lists/actions-list/ActionsList'
 import type { DropdownOption } from '@tps/list.types'
 import type { IconList } from '@tps/icon.types'
 import Button from '../button/Button'
