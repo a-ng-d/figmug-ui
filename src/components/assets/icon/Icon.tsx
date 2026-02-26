@@ -1,6 +1,6 @@
+import { doClassnames } from '@unoff/utils'
 import texts from '@styles/texts/texts.module.scss'
 import icons from '@styles/icons/icons.module.scss'
-import { doClassnames } from '@unoff/utils'
 import type { IconList } from '@tps/icon.types'
 import './icon.scss'
 

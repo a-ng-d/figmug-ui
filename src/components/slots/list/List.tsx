@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Icon from '@components/assets/icon/Icon'
 import { doClassnames } from '@unoff/utils'
+import Icon from '@components/assets/icon/Icon'
 import './list.scss'
 
 export interface ListProps {

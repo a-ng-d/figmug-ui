@@ -1,7 +1,7 @@
+import { doClassnames } from '@unoff/utils'
 import { IconList } from '@tps/icon.types'
 import Chip from '@components/tags/chip/Chip'
 import SectionTitle from '@components/assets/section-title/SectionTitle'
-import { doClassnames } from '@unoff/utils'
 import Button from '../button/Button'
 import './accordion.scss'
 

@@ -1,11 +1,11 @@
 import React from 'react'
+import { doClassnames } from '@unoff/utils'
 import texts from '@styles/texts/texts.module.scss'
 import layouts from '@styles/layouts.module.scss'
 import Bar from '@components/slots/bar/Bar'
 import Select from '@components/inputs/select/Select'
 import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import Button from '@components/actions/button/Button'
-import { doClassnames } from '@unoff/utils'
 import type { ConsentConfiguration } from '@tps/consent.types'
 import './consent.scss'
 

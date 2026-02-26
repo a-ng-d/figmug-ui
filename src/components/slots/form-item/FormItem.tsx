@@ -1,7 +1,7 @@
+import { doClassnames } from '@unoff/utils'
 import texts from '@styles/texts/texts.module.scss'
 import Chip from '@components/tags/chip/Chip'
 import Message from '@components/dialogs/message/Message'
-import { doClassnames } from '@unoff/utils'
 import './form-item.scss'
 
 export interface FormItemProps {

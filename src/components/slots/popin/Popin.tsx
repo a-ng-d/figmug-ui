@@ -1,9 +1,9 @@
+import { doClassnames } from '@unoff/utils'
 import texts from '@styles/texts/texts.module.scss'
 import Chip from '@components/tags/chip/Chip'
 import Select from '@components/inputs/select/Select'
 import Icon from '@components/assets/icon/Icon'
 import Button from '@components/actions/button/Button'
-import { doClassnames } from '@unoff/utils'
 import './popin.scss'
 
 export interface PopInProps {

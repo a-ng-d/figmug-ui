@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import texts from '@styles/texts/texts.module.scss'
 import { doClassnames } from '@unoff/utils'
+import texts from '@styles/texts/texts.module.scss'
 import './tooltip.scss'
 
 export interface TooltipProps {

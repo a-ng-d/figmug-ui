@@ -1,5 +1,5 @@
-import Button from '@components/actions/button/Button'
 import { doClassnames } from '@unoff/utils'
+import Button from '@components/actions/button/Button'
 import SemanticMessage from '../semantic-message/SemanticMessage'
 import './notification.scss'
 
