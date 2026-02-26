@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Icon from '@components/assets/icon/Icon'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import './list.scss'
 
 export interface ListProps {

@@ -1,6 +1,6 @@
 import texts from '@styles/texts/texts.module.scss'
 import IconChip from '@components/tags/icon-chip/IconChip'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import './section-title.scss'
 
 export type SectionTitleProps = {

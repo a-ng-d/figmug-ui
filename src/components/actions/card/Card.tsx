@@ -3,7 +3,7 @@ import texts from '@styles/texts/texts.module.scss'
 import Chip from '@components/tags/chip/Chip'
 import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import './card.scss'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 
 interface CardProps {
   /**

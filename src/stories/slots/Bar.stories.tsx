@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import texts from '@styles/texts/texts.module.scss'
 import Bar from '@components/slots/bar/Bar'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 
 const meta = {
   title: 'Patterns/Slots/Bar',

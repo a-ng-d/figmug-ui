@@ -2,7 +2,7 @@ import React from 'react'
 import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
 import Knob from '@components/actions/knob/Knob'
-import { doMap } from '@a_ng_d/figmug-utils'
+import { doMap } from '@unoff/utils'
 import './simple-slider.scss'
 
 export interface SimpleSliderProps {

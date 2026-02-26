@@ -1,7 +1,7 @@
 import React from 'react'
 import { IconList } from '@tps/icon.types'
 import Icon from '@components/assets/icon/Icon'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import Tooltip from '../tooltip/Tooltip'
 import './icon-chip.scss'
 
