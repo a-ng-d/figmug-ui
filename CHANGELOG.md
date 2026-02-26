@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.21.0] - 2026-02-26
+
+### Changed
+
+- **Package Renamed to Unoff UI**: Migrated package identity from Figmug UI to Unoff UI
+  - Renamed package from `figmug-ui` to `@unoff/ui` in `package.json`
+  - Updated npm registry scope from `@a_ng_d` to `@unoff`
+  - Updated all import paths from `figmug-utils` to `@unoff/utils` across components and stories
+  - Updated documentation and README to reflect the new Unoff UI branding
+
+### Technical Details
+
+- Updated `package.json` and `package-lock.json` with new package name and scope
+- Replaced all `doClassnames` imports from `figmug-utils` with `@unoff/utils` across all components
+- Updated theme generator documentation and code coverage reports
+- All internal references to Figmug UI replaced with Unoff UI
+
 ## [1.20.6] - 2026-02-05
 
 ### Changed
