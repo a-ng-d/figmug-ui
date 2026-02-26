@@ -1,5 +1,5 @@
 import texts from '@styles/texts/texts.module.scss'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import './avatar.scss'
 
 export interface AvatarProps {

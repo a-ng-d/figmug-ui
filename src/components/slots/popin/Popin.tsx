@@ -3,7 +3,7 @@ import Chip from '@components/tags/chip/Chip'
 import Select from '@components/inputs/select/Select'
 import Icon from '@components/assets/icon/Icon'
 import Button from '@components/actions/button/Button'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import './popin.scss'
 
 export interface PopInProps {

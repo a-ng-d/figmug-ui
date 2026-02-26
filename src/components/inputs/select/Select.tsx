@@ -3,7 +3,7 @@ import layouts from '@styles/layouts.module.scss'
 import Tooltip from '@components/tags/tooltip/Tooltip'
 import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import './select.scss'
 
 export interface SelectProps {

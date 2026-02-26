@@ -5,7 +5,7 @@ import Bar from '@components/slots/bar/Bar'
 import Select from '@components/inputs/select/Select'
 import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import Button from '@components/actions/button/Button'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import type { ConsentConfiguration } from '@tps/consent.types'
 import './consent.scss'
 

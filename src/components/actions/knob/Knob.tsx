@@ -2,7 +2,7 @@ import React from 'react'
 import texts from '@styles/texts/texts.module.scss'
 import Tooltip from '@components/tags/tooltip/Tooltip'
 import Input from '@components/inputs/input/Input'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import './knob.scss'
 
 export interface KnobProps {

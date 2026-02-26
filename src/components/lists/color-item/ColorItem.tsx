@@ -2,7 +2,7 @@ import { useState } from 'react'
 import texts from '@styles/texts/texts.module.scss'
 import ColorChip from '@components/tags/color-chip/ColorChip'
 import Button from '@components/actions/button/Button'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import './color-item.scss'
 
 export type ColorItemProps = {

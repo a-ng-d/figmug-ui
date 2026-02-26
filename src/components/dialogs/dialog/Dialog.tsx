@@ -1,7 +1,7 @@
 import { SyntheticEvent, useEffect } from 'react'
 import PopIn from '@components/slots/popin/Popin'
 import './dialog.scss'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 
 export interface DialogProps {
   /**

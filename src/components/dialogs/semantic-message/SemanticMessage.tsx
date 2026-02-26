@@ -1,7 +1,7 @@
 import React from 'react'
 import { IconList } from '@tps/icon.types'
 import layouts from '@styles/layouts.module.scss'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import Message from '../message/Message'
 import './semantic-message.scss'
 

@@ -2,7 +2,7 @@ import React from 'react'
 import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessage'
 import Icon from '@components/assets/icon/Icon'
 import Button from '@components/actions/button/Button'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import './dropzone.scss'
 
 interface FileContent {
