@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Unoff UI Theme Generator is a tool that allows you to easily create new themes for the Figmug design system. It automates the creation and configuration of all necessary files to define a new theme, based on the existing Figma theme structure.
+The Unoff UI Theme Generator is a tool that allows you to easily create new themes for the Unoff design system. It automates the creation and configuration of all necessary files to define a new theme, based on the existing Figma theme structure.
 
 ## Features
 
