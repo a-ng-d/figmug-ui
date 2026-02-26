@@ -1,0 +1,144 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { DocTabs, Tab } from '../_docs/DocTabs'
+
+<Meta title="Components/Actions/Documentation" />
+
+# Actions
+
+Components that trigger or structure user interactions: expandable regions, buttons, cards, sliders, and contextual menus.
+
+---
+
+## Accordion
+
+An expandable/collapsible section that groups related content behind a labelled header. Reduces visual clutter in dense interfaces where content is optional or contextual.
+
+<DocTabs>
+<Tab label="Usage">
+
+- Use `isExpanded` to control the open/closed state externally.
+- `indicator` shows a count next to the label (e.g. number of items inside).
+- `helper` adds an info tooltip on the section title for additional context.
+- Use `icon` to customise the add action icon (defaults to `plus`).
+- `isBlocked` disables all interactions and shows a **Pro** badge; `isNew` shows a **New** badge instead.
+- `helpers.add` / `helpers.empty` provide tooltip labels for the action buttons.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The content region uses `role="region"` and is conditionally rendered — ensure it is announced by screen readers when expanded (SC 4.1.2).
+- The add/remove buttons receive `aria-label` via their `helper` prop — always provide one (SC 1.3.1).
+- Keyboard: `Enter` / `Space` toggle the section; `Escape` blurs (SC 2.1.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Button
+
+The primary interactive element for triggering actions, navigating, or submitting. Supports six visual types and three sizes.
+
+<DocTabs>
+<Tab label="Usage">
+
+- **`primary`** — Main call to action — one per distinct task
+- **`secondary`** / **`tertiary`** — Supporting actions ranked by visual weight
+- **`destructive`** — Irreversible actions (delete, remove) — pair with a confirmation step
+- **`alternative`** — Out-of-hierarchy action that needs prominence without primary weight
+- **`icon`** — Compact toolbar action — always provide a `helper` label
+
+- Use `shouldReflow` to swap label for icon below 460 px for responsive layouts.
+- Use `isLoading` to indicate async processing and prevent double submission.
+- Use `isBlocked` for paywalled features with an optional `onUnblock` callback.
+- Use `url` + `isLink` to render as an external link styled as a button.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- All buttons expose `aria-label`, `aria-disabled`, and `aria-busy` (SC 1.3.1, 4.1.2).
+- Icon buttons use `helper` as `aria-label` — never omit it (SC 2.4.6).
+- `isLoading` sets `aria-busy="true"` to inform assistive technologies (SC 4.1.3).
+- `aria-pressed` is set on `icon` type when `state="selected"` (SC 4.1.2).
+- Keyboard: `Enter` / `Space` trigger the action; `Escape` blurs (SC 2.1.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Card
+
+A content container for presenting a named item with an optional thumbnail, tag, subtitle, and rich text body. Used in galleries, catalogues, or resource pickers.
+
+<DocTabs>
+<Tab label="Usage">
+
+- Use `src` to show a thumbnail preview; pair with `actions` for contextual hover actions (e.g. duplicate, delete).
+- `tag` places a `Chip` badge on the thumbnail — use for status, type, or category labels.
+- `title` + `subtitle` form the primary identity of the card; `richText` allows freeform content below.
+- `shouldFill` makes the card expand to fill its container — useful in grid layouts.
+- The entire card is interactive via `action`; avoid nesting other interactive elements unless they stop propagation.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The card uses `role="article"` and is keyboard-focusable with `tabIndex` set to `0` (SC 2.1.1).
+- The title receives `role="heading"` with `aria-level` set to `3` — adjust to match the actual heading hierarchy in context (SC 1.3.1).
+- Hover-only actions (`actions` slot) are also revealed on focus, satisfying pointer-independent access (SC 2.5.3).
+- Keyboard: `Escape` blurs the card to allow navigation to continue (SC 2.1.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Knob
+
+A draggable stop handle used inside gradient or range sliders. Allows precise positioning of a value along a linear track.
+
+<DocTabs>
+<Tab label="Usage">
+
+- Used internally by `SimpleSlider` and `MultipleSlider` — not typically used standalone.
+- `canBeTyped` enables direct value input by double-clicking or pressing `Enter`.
+- `isDisplayed` keeps the tooltip value permanently visible — useful for active/selected stops.
+- `helper` adds a contextual tooltip with additional info (e.g. keyboard shortcut hints).
+- `onShiftLeft` / `onShiftRight` handle nudge gestures; `onDelete` handles removal.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Implements `role="slider"` with `aria-valuemin`, `aria-valuemax`, `aria-valuenow`, and `aria-valuetext` (SC 1.3.1, 4.1.2).
+- Keyboard: `ArrowLeft` / `ArrowRight` shift the stop; `Enter` opens the text input; `Escape` blurs; `Backspace` deletes (SC 2.1.1).
+- `aria-disabled` and `aria-readonly` reflect the `isDisabled` / `isBlocked` states (SC 4.1.2).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Menu
+
+A trigger button (icon or labelled) that opens a floating list of actions. Used for overflow menus, contextual actions, and multi-step commands.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `type="ICON"` renders a compact icon trigger — use for toolbars and list item overflows.
+- `type="PRIMARY"` renders a labelled button with a caret — use for primary actions with multiple options.
+- `options` accepts a nested `DropdownOption` tree; groups, separators, icons, and blocked states are supported.
+- `selected` highlights the currently active option.
+- `alignment` controls where the floating list anchors relative to the trigger.
+- `containerId` constrains the menu's overflow to a specific scrollable container.
+- When only one active option is present, renders it directly as a `Button` without a dropdown.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The trigger exposes `aria-haspopup="true"`, `aria-expanded`, and `aria-controls` pointing to the menu element (SC 4.1.2).
+- Keyboard: `Enter` / `Space` opens the menu and focuses the first item; `Escape` closes it (SC 2.1.1).
+- Click-outside detection closes the menu, restoring focus flow (SC 2.1.1).
+
+</Tab>
+</DocTabs>

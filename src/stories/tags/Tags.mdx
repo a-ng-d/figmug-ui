@@ -1,0 +1,106 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { DocTabs, Tab } from '../_docs/DocTabs'
+
+<Meta title="Components/Tags/Documentation" />
+
+# Tags
+
+Small inline indicators, badges, and overlay elements: chips, color swatches, icon triggers, and tooltips.
+
+---
+
+## Chip
+
+A compact inline badge or tag. Used for status indicators, feature labels, category tags, and selectable filters.
+
+<DocTabs>
+<Tab label="Usage">
+
+- **`ACTIVE`** — Standard highlighted badge (brand color)
+- **`INACTIVE`** — Dimmed badge for de-emphasised or disabled states
+- **`ON_BACKGROUND`** — Neutral badge for use on colored surfaces
+
+- `isSolo` adds horizontal padding for standalone chips not embedded in a row.
+- `leftSlot` / `rightSlot` support icon or avatar decorations.
+- `action` makes the chip interactive — use for filter toggles or dismissible tags.
+- `preview` shows a rich tooltip with an image on hover.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Interactive chips must have an accessible label describing their purpose or value (SC 2.4.6).
+- `action` chips behave as buttons — ensure they are keyboard-focusable and respond to `Enter` / `Space` (SC 2.1.1).
+- State conveys meaning — do not rely on color alone; pair with visible text (SC 1.4.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Color Chip
+
+A small square swatch displaying a specific color. Used inside `ColorItem` and color pickers to provide immediate visual identification.
+
+<DocTabs>
+<Tab label="Usage">
+
+- Provide the `hex` value to render the swatch.
+- Always pair with a visible text label in the parent component — the swatch alone is insufficient for identification.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- A color swatch must never be the sole means of conveying information — always pair with a text label (SC 1.4.1).
+- The swatch carries `role="img"` — provide `aria-label` with the color name or hex value at the call site (SC 1.1.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Icon Chip
+
+An icon button that reveals a tooltip on hover/focus. Used for inline help, warning indicators, and info triggers embedded in labels and form rows.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `iconType="PICTO"` with `iconName` selects a pictogram; `"LETTER"` for text-based icons.
+- `text` is the tooltip content — supports rich React nodes for multi-line formatting.
+- `type="SINGLE_LINE"` for brief labels; `"MULTI_LINE"` for longer help text; `"WITH_IMAGE"` for image-rich tooltips.
+- `pin="TOP"` / `"BOTTOM"` controls the tooltip position relative to the trigger.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The icon trigger must have an `aria-label` describing what information it reveals (SC 2.4.6).
+- Tooltip content must be accessible on focus, not only on hover (SC 1.4.13).
+- Avoid placing actionable content inside the tooltip — it must be dismissible with `Escape` (SC 1.4.13).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Tooltip
+
+A text overlay appearing on hover or focus, providing supplementary information for an element. Used on interactive elements that lack a persistent visible label.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `pin="TOP"` / `"BOTTOM"` positions the tooltip relative to its trigger.
+- `type="SINGLE_LINE"` for labels; `"MULTI_LINE"` for descriptions; `"WITH_IMAGE"` for rich previews.
+- Rendered as a child of the trigger element — inherits positioning from its parent.
+- Do not use as the sole accessible name for an interactive element; prefer `aria-label` on the trigger.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Tooltips must appear on both hover and keyboard focus (SC 1.4.13).
+- Tooltip content must be dismissible with `Escape` without moving focus (SC 1.4.13).
+- Do not put interactive content (links, buttons) inside a tooltip (SC 1.4.13).
+- Tooltip text must meet minimum contrast requirements against its background (SC 1.4.3).
+
+</Tab>
+</DocTabs>

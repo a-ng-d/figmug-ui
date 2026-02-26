@@ -4,7 +4,7 @@ import Bar from '@components/slots/bar/Bar'
 import { doClassnames } from '@a_ng_d/figmug-utils'
 
 const meta = {
-  title: 'Patterns/Bar',
+  title: 'Patterns/Slots/Bar',
   component: Bar,
   parameters: {
     layout: 'fullscreen',
