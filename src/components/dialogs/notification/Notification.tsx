@@ -1,5 +1,5 @@
+import { doClassnames } from '@unoff/utils'
 import Button from '@components/actions/button/Button'
-import { doClassnames } from '@a_ng_d/figmug-utils'
 import SemanticMessage from '../semantic-message/SemanticMessage'
 import './notification.scss'
 

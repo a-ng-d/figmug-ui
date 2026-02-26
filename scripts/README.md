@@ -1,12 +1,12 @@
-# Figmug UI Scripts
+# Unoff UI Scripts
 
-This directory contains utility scripts for Figmug UI theme development and maintenance.
+This directory contains utility scripts for Unoff UI theme development and maintenance.
 
 ## Available Scripts
 
 ### Theme Generator (`create-theme.js`)
 
-Creates a complete new theme for Figmug UI based on the Figma theme.
+Creates a complete new theme for Unoff UI based on the Figma theme.
 
 **[📚 Detailed documentation available here](../docs/theme-generator.md)**
 

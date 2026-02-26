@@ -1,11 +1,11 @@
 {
-  "name": "@a_ng_d/figmug-ui",
-  "version": "1.20.6",
+  "name": "@unoff/ui",
+  "version": "1.21.0",
   "type": "module",
-  "description": "Figmug UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
+  "description": "Unoff UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/a-ng-d/figmug-ui.git"
+    "url": "git+https://github.com/a-ng-d/unoff-ui.git"
   },
   "keywords": [
     "library",
@@ -15,9 +15,9 @@
   "author": "Aurélien Grimaud",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/a-ng-d/figmug-ui/issues"
+    "url": "https://github.com/a-ng-d/unoff-ui/issues"
   },
-  "homepage": "https://github.com/a-ng-d/figmug-ui#readme",
+  "homepage": "https://github.com/a-ng-d/unoff-ui#readme",
   "overrides": {
     "storybook": "$storybook",
     "vite": "$vite"
@@ -51,7 +51,7 @@
     "figma:parse": "figma connect parse"
   },
   "dependencies": {
-    "@a_ng_d/figmug-utils": "^0.7.3"
+    "@unoff/utils": "^0.8.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",

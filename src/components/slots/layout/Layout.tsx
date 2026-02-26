@@ -1,4 +1,4 @@
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import Drawer, { DrawerProps } from '../drawer/Drawer'
 import './layout.scss'
 

@@ -1,4 +1,4 @@
-import { doMap } from '@a_ng_d/figmug-utils'
+import { doMap } from '@unoff/utils'
 
 const getNumberScale = (num: number): number => {
   const length = Math.floor(Math.abs(num)).toString().length

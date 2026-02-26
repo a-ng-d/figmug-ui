@@ -1,9 +1,9 @@
-![GitHub package.json version](https://img.shields.io/github/package-json/v/a-ng-d/figmug-ui?color=informational) ![GitHub last commit](https://img.shields.io/github/last-commit/a-ng-d/figmug-ui?color=informational) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/figmug-ui/npm.yml?label=npm) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/figmug-ui/chromatic.yml?label=Chromatic) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/figmug-ui/deploy.yml?label=Deployment)
-![GitHub](https://img.shields.io/github/license/a-ng-d/figmug-ui?color=informational)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/a-ng-d/unoff-ui?color=informational) ![GitHub last commit](https://img.shields.io/github/last-commit/a-ng-d/unoff-ui?color=informational) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/unoff-ui/npm.yml?label=npm) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/unoff-ui/chromatic.yml?label=Chromatic) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/unoff-ui/deploy.yml?label=Deployment)
+![GitHub](https://img.shields.io/github/license/a-ng-d/unoff-ui?color=informational)
 
-# Figmug UI
+# Unoff UI
 
-Figmug UI is a comprehensive library of UI components designed specifically for building Figma, Penpot, and Sketch plugins. It leverages modern tools and frameworks to ensure a seamless development experience.
+Unoff UI is a comprehensive library of UI components designed specifically for building Figma, Penpot, and Sketch plugins. It leverages modern tools and frameworks to ensure a seamless development experience.
 
 ## Features
 
@@ -18,17 +18,17 @@ Figmug UI is a comprehensive library of UI components designed specifically for 
 
 ## Installation
 
-To install Figmug UI, use npm or yarn:
+To install Unoff UI, use npm or yarn:
 
 ```bash
-npm install figmug-ui
+npm install @unoff/ui
 # or
-yarn add figmug-ui
+yarn add @unoff/ui
 ```
 
 ## Testing
 
-Figmug UI comes with comprehensive interaction tests for all components:
+Unoff UI comes with comprehensive interaction tests for all components:
 
 ```bash
 # Run only Storybook interaction tests
@@ -43,7 +43,7 @@ Tests can also be run directly in Storybook UI:
 
 ## Theme Development Tools
 
-Figmug UI provides powerful tools for creating and managing custom themes:
+Unoff UI provides powerful tools for creating and managing custom themes:
 
 ### Theme Generator
 
@@ -100,7 +100,7 @@ npm run scss:build theme=themeName color
 #### Bar
 
 ```tsx
-import { Bar } from 'figmug-ui'
+import { Bar } from '@unoff/ui'
 
 function App() {
   return (
@@ -117,8 +117,8 @@ function App() {
 #### Form Item
 
 ```tsx
-import { FormItem } from 'figmug-ui'
-import { Input } from 'figmug-ui'
+import { FormItem } from '@unoff/ui'
+import { Input } from '@unoff/ui'
 
 function App() {
   return (
@@ -146,7 +146,7 @@ function App() {
 #### Section
 
 ```tsx
-import { Section } from 'figmug-ui'
+import { Section } from '@unoff/ui'
 
 function App() {
   return (
@@ -164,7 +164,7 @@ function App() {
 #### Drawer
 
 ```tsx
-import { Drawer } from 'figmug-ui'
+import { Drawer } from '@unoff/ui'
 
 function App() {
   return (
@@ -184,7 +184,7 @@ function App() {
 #### Primary Button
 
 ```tsx
-import { Button } from 'figmug-ui'
+import { Button } from '@unoff/ui'
 
 function App() {
   return (
@@ -206,7 +206,7 @@ function App() {
 #### Secondary Button
 
 ```tsx
-import { Button } from 'figmug-ui'
+import { Button } from '@unoff/ui'
 
 function App() {
   return (
@@ -224,7 +224,7 @@ function App() {
 #### Tertiary Button
 
 ```tsx
-import { Button } from 'figmug-ui'
+import { Button } from '@unoff/ui'
 
 function App() {
   return (
@@ -243,7 +243,7 @@ function App() {
 #### Destructive Button
 
 ```tsx
-import { Button } from 'figmug-ui'
+import { Button } from '@unoff/ui'
 
 function App() {
   return (
@@ -261,7 +261,7 @@ function App() {
 #### Icon Button
 
 ```tsx
-import { Button } from 'figmug-ui'
+import { Button } from '@unoff/ui'
 
 function App() {
   return (
@@ -285,7 +285,7 @@ function App() {
 #### Short Text Input
 
 ```tsx
-import { Input } from 'figmug-ui'
+import { Input } from '@unoff/ui'
 
 function App() {
   return (
@@ -309,7 +309,7 @@ function App() {
 #### Long Text Input
 
 ```tsx
-import { Input } from 'figmug-ui'
+import { Input } from '@unoff/ui'
 
 function App() {
   return (
@@ -330,7 +330,7 @@ function App() {
 #### Color Picker
 
 ```tsx
-import { Input } from 'figmug-ui'
+import { Input } from '@unoff/ui'
 
 function App() {
   return (
@@ -348,7 +348,7 @@ function App() {
 #### Numeric Stepper
 
 ```tsx
-import { Input } from 'figmug-ui'
+import { Input } from '@unoff/ui'
 
 function App() {
   return (
@@ -375,7 +375,7 @@ function App() {
 #### Single Selection
 
 ```tsx
-import { Dropdown } from 'figmug-ui'
+import { Dropdown } from '@unoff/ui'
 
 function App() {
   return (
@@ -428,7 +428,7 @@ function App() {
 #### Multiple Selection
 
 ```tsx
-import { Dropdown } from 'figmug-ui'
+import { Dropdown } from '@unoff/ui'
 
 function App() {
   return (
@@ -464,7 +464,7 @@ function App() {
 #### Simple Slider
 
 ```tsx
-import { SimpleSlider } from 'figmug-ui'
+import { SimpleSlider } from '@unoff/ui'
 
 function App() {
   return (
@@ -488,7 +488,7 @@ function App() {
 #### Multiple Slider
 
 ```tsx
-import { MultipleSlider } from 'figmug-ui'
+import { MultipleSlider } from '@unoff/ui'
 
 function App() {
   return (
@@ -518,7 +518,7 @@ function App() {
 #### Simple Dialog
 
 ```tsx
-import { Dialog } from 'figmug-ui'
+import { Dialog } from '@unoff/ui'
 
 function App() {
   return (
@@ -548,9 +548,9 @@ function App() {
 #### Form Dialog
 
 ```tsx
-import { Dialog } from 'figmug-ui'
-import { Input } from 'figmug-ui'
-import { FormItem } from 'figmug-ui'
+import { Dialog } from '@unoff/ui'
+import { Input } from '@unoff/ui'
+import { FormItem } from '@unoff/ui'
 
 function App() {
   return (
@@ -605,7 +605,7 @@ function App() {
 #### Loading Dialog
 
 ```tsx
-import { Dialog } from 'figmug-ui'
+import { Dialog } from '@unoff/ui'
 
 function App() {
   return (
@@ -624,7 +624,7 @@ function App() {
 #### Simple List
 
 ```tsx
-import { ActionsList } from 'figmug-ui'
+import { ActionsList } from '@unoff/ui'
 
 function App() {
   return (
@@ -664,7 +664,7 @@ function App() {
 #### Grouped List
 
 ```tsx
-import { ActionsList } from 'figmug-ui'
+import { ActionsList } from '@unoff/ui'
 
 function App() {
   return (
@@ -714,7 +714,7 @@ function App() {
 #### Nested List
 
 ```tsx
-import { ActionsList } from 'figmug-ui'
+import { ActionsList } from '@unoff/ui'
 
 function App() {
   return (
@@ -769,7 +769,7 @@ function App() {
 #### Basic Chip
 
 ```tsx
-import { Chip } from 'figmug-ui'
+import { Chip } from '@unoff/ui'
 
 function App() {
   return <Chip state="ACTIVE">New</Chip>
@@ -779,7 +779,7 @@ function App() {
 #### Chip with Color Indicator
 
 ```tsx
-import { Chip, ColorChip } from 'figmug-ui'
+import { Chip, ColorChip } from '@unoff/ui'
 
 function App() {
   return (
@@ -806,7 +806,7 @@ function App() {
 #### Icon
 
 ```tsx
-import { Icon } from 'figmug-ui'
+import { Icon } from '@unoff/ui'
 
 function App() {
   return (
@@ -830,7 +830,7 @@ function App() {
 #### Avatar
 
 ```tsx
-import { Avatar } from 'figmug-ui'
+import { Avatar } from '@unoff/ui'
 
 function App() {
   return (
@@ -852,7 +852,7 @@ function App() {
 #### Thumbnail
 
 ```tsx
-import { Thumbnail } from 'figmug-ui'
+import { Thumbnail } from '@unoff/ui'
 
 function App() {
   return (

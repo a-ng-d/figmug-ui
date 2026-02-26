@@ -1,5 +1,5 @@
 import React from 'react'
-import { doClassnames } from '@a_ng_d/figmug-utils'
+import { doClassnames } from '@unoff/utils'
 import './bar.scss'
 
 export interface BarProps {

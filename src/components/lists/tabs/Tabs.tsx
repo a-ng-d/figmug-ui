@@ -1,11 +1,11 @@
 import './tabs.scss'
 import { useState, useRef, useEffect } from 'react'
+import { doClassnames } from '@unoff/utils'
 import { IconList } from '@tps/icon.types'
 import texts from '@styles/texts/texts.module.scss'
 import Chip from '@components/tags/chip/Chip'
 import Icon from '@components/assets/icon/Icon'
 import Menu from '@components/actions/menu/Menu'
-import { doClassnames } from '@a_ng_d/figmug-utils'
 
 export interface TabsProps {
   /**

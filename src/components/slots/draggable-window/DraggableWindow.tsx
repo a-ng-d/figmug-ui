@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { doClassnames } from '@unoff/utils'
 import SectionTitle from '@components/assets/section-title/SectionTitle'
 import Button from '@components/actions/button/Button'
-import { doClassnames } from '@a_ng_d/figmug-utils'
 import Bar from '../bar/Bar'
 
 import './draggable-window.scss'

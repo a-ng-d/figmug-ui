@@ -1,9 +1,9 @@
 import React from 'react'
+import { doClassnames } from '@unoff/utils'
 import { DropdownOption } from '@tps/list.types'
 import texts from '@styles/texts/texts.module.scss'
 import Chip from '@components/tags/chip/Chip'
 import Icon from '@components/assets/icon/Icon.tsx'
-import { doClassnames } from '@a_ng_d/figmug-utils'
 import './actions-list.scss'
 
 export interface ActionsListProps {
