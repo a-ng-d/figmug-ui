@@ -1,0 +1,86 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { DocTabs, Tab } from './DocTabs'
+
+<Meta title="Getting Started" />
+
+# Getting Started
+
+Figmug UI is a component library designed for building plugins and tools targeting Figma, Penpot, Sketch and Framer. It ships with full theming support, interaction-tested stories, and WCAG 2.2 accessibility guidelines.
+
+---
+
+<DocTabs>
+<Tab label="Developer">
+
+## Prerequisites
+
+Before installing, make sure your project meets the following requirements:
+
+- **Node.js** ≥ 18
+- **React** ^18.2.0 and **react-dom** ^18.2.0 (peer dependencies — must be installed separately)
+
+## Installation
+
+```bash
+npm install @a_ng_d/figmug-ui
+# or
+yarn add @a_ng_d/figmug-ui
+```
+
+## Basic usage
+
+Import the component and its styles from the package:
+
+```tsx
+import Button from '@a_ng_d/figmug-ui/components/actions/button/Button'
+```
+
+Apply a theme by setting `data-theme` and `data-mode` attributes on the root element:
+
+```tsx
+document.documentElement.setAttribute('data-theme', 'figma')
+document.documentElement.setAttribute('data-mode', 'figma-dark')
+```
+
+Available values:
+
+- **`data-theme`** — `figma` · `penpot` · `sketch` · `framer`
+- **`data-mode`** — `figma-light` · `figma-dark` · `figjam` · `penpot-light` · `penpot-dark` · `sketch-light` · `sketch-dark` · `framer-light` · `framer-dark`
+
+## What's in the docs
+
+The documentation is organized by component category. For each component you will find:
+
+- **Usage** — available props and when to use each variant
+- **Accessibility** — WCAG 2.2 guidance (roles, keyboard, ARIA attributes)
+- **Dos & Don'ts** _(coming soon)_ — illustrated good and bad practices with live component previews
+
+</Tab>
+<Tab label="Designer">
+
+## Figma library
+
+The Figmug UI Figma component library is **coming soon** — it will include all components with their variants, tokens, and annotations mapped to this documentation.
+
+Once available, you will be able to enable it directly in your Figma workspace under **Assets → Team libraries**.
+
+## What's in the docs
+
+Each component page includes two perspectives:
+
+- **Usage (Design)** — guidance on choosing variants, sizing, spacing, and composition rules
+- **Dos & Don'ts** _(coming soon)_ — side-by-side visual examples showing correct and incorrect usage patterns, built from the real Figma components
+
+## Themes
+
+The library supports four platforms, each with light and dark modes:
+
+- **Figma** — Figma UI (light + dark + FigJam)
+- **Penpot** — Penpot UI (light + dark)
+- **Sketch** — Sketch UI (light + dark)
+- **Framer** — Framer UI (light + dark)
+
+Use the **UI Theme** and **Color Mode** toolbar controls at the top of any story to preview components in the target environment.
+
+</Tab>
+</DocTabs>
