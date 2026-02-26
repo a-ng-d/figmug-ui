@@ -1,0 +1,205 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { DocTabs, Tab } from '../_docs/DocTabs'
+
+<Meta title="Patterns/Slots/Documentation" />
+
+# Slots
+
+Layout and structural composition components: bars, drawers, draggable windows, form wrappers, multi-column layouts, and row primitives.
+
+---
+
+## Bar
+
+A two-zone horizontal layout container (left + right, or a single centered zone) with optional borders and compact mode. Used as the structural backbone of rows, footers, and toolbar areas.
+
+<DocTabs>
+<Tab label="Usage">
+
+- Use `leftPartSlot` + `rightPartSlot` for paired content (label + control, title + actions).
+- Use `soloPartSlot` alone for full-width centered content.
+- `border` accepts `'TOP' | 'BOTTOM' | 'LEFT' | 'RIGHT'` for selective border rendering.
+- `isCompact` reduces vertical padding — use in dense list rows.
+- `isOnlyText` removes extra padding for text-only rows.
+- `padding` accepts any valid CSS value for custom spacing overrides.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- `Bar` is a layout primitive with no inherent semantics — ensure the parent provides the correct ARIA context (SC 4.1.2).
+- Avoid placing interactive elements without accessible labels inside bare `Bar` instances (SC 1.3.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Draggable Window
+
+A floating, draggable panel with a title bar. Used for floating inspectors, option panels, or detached utilities.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `title` labels the window — always provide a meaningful title.
+- `children` is the panel content.
+- Drag is initiated from the title bar; the window is free-floating within the viewport.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The window uses dialog semantics — ensure focus is trapable within it when open and restored on close (SC 2.4.3).
+- The title bar provides the accessible name — associate it with `aria-labelledby` at the call site (SC 4.1.2).
+- Dragging alone is not accessible — ensure window position can also be adjusted via keyboard (SC 2.1.1, 2.5.7).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Drawer
+
+A resizable panel anchored to one edge of the layout, collapsible by user drag. Used for inspector panels, sidebars, and bottom sheets.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `direction` and `pin` define the axis and anchor edge (`TOP`, `BOTTOM`, `LEFT`, `RIGHT`).
+- `defaultSize`, `minSize`, `maxSize` control the initial and boundary dimensions (in `PIXEL`, `PERCENT`, or `AUTO`).
+- `isScrolling` enables overflow scrolling within the drawer content.
+- `onCollapse` / `onExpand` react to resize events (e.g. persisting size, notifying the parent layout).
+- Embed via `Layout` with `typeModifier="DRAWER"` for integrated column layouts.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The resize handle must be keyboard-operable — implement keyboard nudge controls at the call site (SC 2.1.1, 2.5.7).
+- The drawer content area should be a landmark region (`role="complementary"` or `role="region"` with a label) (SC 1.3.6).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Form Item
+
+A wrapper that pairs a label, an input control, and an optional inline message. The standard building block for all form fields.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `label` renders a `<label>` associated with the `id` — always match `id` on `FormItem` with the child input's `id`.
+- `helper.type="INFO"` adds an informational message below the field; `"ERROR"` shows a validation error.
+- `shouldFill` (default `true`) makes the group fill its container width.
+- `isBaseline` aligns label and input on the baseline — use for inline label/input pairs.
+- `isMultiLine` adjusts layout for multi-line inputs (textareas).
+- `isBlocked` / `isNew` mirror the input's state for compound locked or new-feature fields.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Uses `<label>` with `htmlFor` bound to the input `id` for explicit label association (SC 1.3.1).
+- Error messages use `role="alert"` with `aria-live="polite"` (SC 3.3.1, 4.1.3).
+- `aria-describedby` links the input to the helper message when present (SC 1.3.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Layout
+
+A multi-column page layout with responsive collapse below 460 px. Used as the top-level structural shell of plugin panels, workspaces, and split views.
+
+<DocTabs>
+<Tab label="Usage">
+
+- **`LIST`** — Scrollable list column
+- **`DISTRIBUTED`** — Even distribution of content
+- **`CENTERED`** — Centered content column
+- **`BLANK`** — Empty spacer
+- **`DRAWER`** — Resizable drawer (integrates `Drawer`)
+- **`FIXED`** — Fixed-width column (requires `fixedWidth`)
+
+- `isFullWidth` / `isFullHeight` fill the available viewport space.
+- Below 460 px, columns automatically collapse to a vertical stack.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Each column should be a semantic landmark (`main`, `aside`, `nav`, `section`) — assign via the `node`'s root element (SC 1.3.6).
+- Ensure column order in the DOM matches reading order to avoid disorientation for keyboard users (SC 1.3.2).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Pop-in
+
+The inner content structure for dialogs and panels, providing a title bar, actions footer, and content area. Used internally by `Dialog`.
+
+<DocTabs>
+<Tab label="Usage">
+
+- Rarely used directly — prefer `Dialog`, which composes `PopIn` with full modal semantics.
+- `type="POPIN"` for centred modal content; `type="PANEL"` for side panels.
+- `actions` configures up to three buttons (primary, secondary, destructive).
+- `select` adds a checkbox below the footer actions.
+- `isMessage` removes the action bar for read-only panels.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- `role="dialog"` (POPIN) or `role="complementary"` (PANEL) with `aria-modal="true"` and `aria-labelledby` (SC 4.1.2).
+- Focus management is the responsibility of the parent `Dialog` component (SC 2.4.3).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Section
+
+A vertical container grouping a sticky title row with a body of spaced content blocks. Used to organise settings, property panels, and sidebar content into scannable groups.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `title` accepts any React node — typically a `SimpleItem` wrapping a `SectionTitle`.
+- `body` is an array of objects with `node` and `spacingModifier` fields; `spacingModifier` controls vertical spacing between items.
+- The title row is sticky — ideal for long scrollable panels where the heading must remain visible.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Wrap in a `<section>` or `role="region"` with `aria-labelledby` pointing to the title (SC 1.3.6).
+- Ensure the title has a stable `id` for the association (SC 1.3.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Simple Item
+
+A two-zone horizontal row (left + right) rendering as a `<li>` or a generic `<div>`. The atomic building block for all list and panel rows.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `leftPartSlot` holds the primary content (label, input, icon + text).
+- `rightPartSlot` holds secondary content (actions, controls, status).
+- `isInteractive` makes the row focusable and clickable — use for selectable or navigable rows.
+- `isTransparent` removes the background — use to embed within coloured containers.
+- `alignment`: `DEFAULT` (stretch) / `CENTER` / `BASELINE` controls vertical alignment.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- `tabIndex` set to `0` only when `isInteractive`, to avoid polluting the tab order (SC 2.4.3).
+- Non-interactive items are excluded from the tab order (`tabIndex` set to `-1`) (SC 2.1.1).
+- Keyboard: `Enter` / `Space` trigger the action; `Escape` blurs (SC 2.1.1).
+
+</Tab>
+</DocTabs>

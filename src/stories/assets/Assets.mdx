@@ -1,0 +1,128 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { DocTabs, Tab } from '../_docs/DocTabs'
+
+<Meta title="Components/Assets/Documentation" />
+
+# Assets
+
+Visual primitives used throughout the interface: avatars, icons, section titles, text, and thumbnails.
+
+---
+
+## Avatar
+
+Displays a user's profile picture alongside their name. Used in member lists, comments, presence indicators, and collaboration contexts.
+
+<DocTabs>
+<Tab label="Usage">
+
+- Provide `avatar` (image URL) and `fullName` for standard use.
+- `complementarySlot` allows adding a badge, role chip, or secondary info alongside the name.
+- `isAccented` renders the name in the accent text style — use to highlight the current user.
+- `isInverted` switches to the inverted color scheme for dark or colored backgrounds.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The avatar image uses `alt` set to `fullName` providing a meaningful text alternative (SC 1.1.1).
+- The name uses `role="text"` for assistive technology compatibility (SC 1.3.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Icon
+
+Renders a pictogram from the icon set or a letter-based icon. Used throughout the UI as decorative or meaningful visual indicators.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `type="PICTO"` renders a named icon from the icon library via `iconName`.
+- `type="LETTER"` renders a single character inside an icon box — useful for user initials or shorthand labels.
+- `customClassName` allows overriding the icon's size or color for specific contexts.
+- When used decoratively inside a button or label, no additional accessible name is needed as the parent provides context.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- All icons carry `role="img"` with `aria-label` set to the icon name or letter (SC 1.1.1).
+- When used decoratively (inside a button with a visible label), add `aria-hidden="true"` via `customClassName` or a wrapper at the call site (SC 1.3.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Section Title
+
+A labelled heading for a collapsible or grouped section. Combines a text label, an optional item count indicator, and an optional tooltip.
+
+<DocTabs>
+<Tab label="Usage">
+
+- Use as the header of an `Accordion`, `Section`, or `SimpleItem` left slot.
+- `indicator` displays a count — always use for lists to convey total items at a glance.
+- `helper` adds an info icon with a tooltip — use for non-obvious section purposes.
+- Pass an `id` to allow the section content to reference it via `aria-labelledby`.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The label may be visually truncated — ensure the full text is still readable by screen readers (SC 1.4.4).
+- When `id` is provided, the parent region should use `aria-labelledby` to associate it (SC 1.3.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Text
+
+A low-level typographic primitive for rendering inline or block text with size, weight, and semantic color variants.
+
+<DocTabs>
+<Tab label="Usage">
+
+- **`size`** — `default` (12px) / `small` / `large` / `xlarge` — match the typographic hierarchy
+- **`weight`** — `medium` (500) / `bold` (600) — emphasise labels, headings, or totals
+- **`color`** — `secondary` / `tertiary` — de-emphasised or supporting copy
+- **`color`** — `inverse` — text on dark or brand-color backgrounds
+- **`color`** — `success` / `warning` / `alert` — status or feedback copy
+
+- `truncate` adds ellipsis overflow — always ensure the full text is accessible via a tooltip or accessible name at the parent level.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Color alone must not convey meaning — always pair `success` / `warning` / `alert` colors with an icon or text label (SC 1.4.1).
+- Minimum contrast ratios must be respected for all color combinations (SC 1.4.3, 1.4.6).
+- Truncated text must remain accessible via `title`, `aria-label`, or a tooltip on the parent (SC 1.4.4).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Thumbnail
+
+Displays an image with loading and error states. Used inside cards, list items, and file pickers.
+
+<DocTabs>
+<Tab label="Usage">
+
+- Provide a meaningful `alt` description for every content image.
+- Set `width` / `height` to match the intended slot size precisely to avoid layout shift.
+- The component handles loading (spinner) and error (warning icon) states automatically.
+- Uses `loading="lazy"` — ensure the image is not above the fold in critical rendering paths.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- `alt` must describe the image content meaningfully — avoid "image" or "thumbnail" as the sole alt text (SC 1.1.1).
+- Loading state uses `aria-busy="true"`; the spinner is `aria-hidden` (SC 4.1.3).
+- Error state replaces the image with a warning icon — consider providing additional context in the parent (SC 1.1.1).
+
+</Tab>
+</DocTabs>

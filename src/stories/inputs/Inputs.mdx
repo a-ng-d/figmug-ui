@@ -1,0 +1,184 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { DocTabs, Tab } from '../_docs/DocTabs'
+
+<Meta title="Components/Inputs/Documentation" />
+
+# Inputs
+
+Data entry components for text, numbers, files, selections, and range values.
+
+---
+
+## Dropdown
+
+A compact selection control that opens a floating list. Used for choosing one option from a predefined set without consuming persistent space.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `alignment="FILL"` stretches to match the trigger width — use inside form layouts.
+- `alignment="LEFT"` / `"RIGHT"` for toolbar-style dropdowns without a fixed width.
+- `options` supports grouping, separators, nested submenus, icons, and blocked states.
+- `containerId` confines the floating list overflow to a scrollable container.
+- `isBlocked` locks the control and shows a Pro badge; pair with `onUnblock`.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The trigger exposes `aria-expanded` and `aria-controls` pointing to the list element (SC 4.1.2).
+- Selected option receives `aria-current="true"` (SC 1.3.1).
+- Keyboard: `Enter` / `Space` open; arrow keys navigate; `Escape` closes (SC 2.1.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Dropzone
+
+A file upload area accepting drag-and-drop or click-to-browse. Used for importing assets, data files, or images.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `acceptedMimeTypes` restricts accepted formats; always communicate supported types visually via `message`.
+- `isMultiple` allows uploading several files at once.
+- `warningMessage` surfaces when a rejected file type is dropped; `errorMessage` for upload failures.
+- `cta` labels the fallback "browse files" button.
+- `isLoading` shows a processing state and auto-clears after 2 minutes as a safety timeout.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The drop area must be keyboard-operable via the fallback `Button` (SC 2.1.1).
+- Status feedback (warning, error) uses `SemanticMessage` with `role="status"` (SC 4.1.3).
+- `message` and `cta` text must clearly describe supported formats and the action (SC 2.4.6).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Input
+
+A versatile text / number / color input field. The core data entry component across all forms and inspectors.
+
+<DocTabs>
+<Tab label="Usage">
+
+- **`TEXT`** — Single-line text: names, identifiers, short values
+- **`LONG_TEXT`** — Multi-line textarea: descriptions, notes
+- **`NUMBER`** — Numeric input with optional `min`, `max`, `step` constraints
+- **`COLOR`** — Hex color input with a color swatch preview
+
+- Pair with `FormItem` for labelled form layouts with validation messages.
+- `isFlex` makes the input expand to fill its container — use inside `InputsBar`.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Always associate inputs with a visible label via `FormItem` or `aria-label` (SC 1.3.1).
+- Error states should be communicated via `FormItem`'s `helper` prop with `role="alert"` (SC 3.3.1).
+- `aria-label` is required for standalone inputs without visible labels (SC 2.4.6).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Inputs Bar
+
+A grouped container for multiple inputs displayed side by side, with an optional shared label. Used for compound value entries like RGBA channels, dimensions, or coordinate pairs.
+
+<DocTabs>
+<Tab label="Usage">
+
+- Place `Input` components as `children`; use `isFlex` on each input to fill the bar evenly.
+- `label` adds a shared label above the group — use when the group has a single conceptual meaning.
+- `customClassName` allows width or layout overrides.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Group the entire bar with a `fieldset` + `legend` at the call site when the inputs represent a composite value (SC 1.3.1).
+- Each child input must still have an individual `aria-label` or visible label (SC 1.3.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Multiple Slider
+
+A gradient slider supporting multiple draggable stop points with adjustable values and easing distribution. Used for gradient color pickers, easing curves, and multi-stop value maps.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `type="EDIT"` — stops can be moved but not added or deleted.
+- `type="FULLY_EDIT"` — full CRUD: click the track to add a stop, drag off to delete.
+- `scale` maps stop positions (0–100) to actual values.
+- `distributionEasing` applies an easing function when distributing stops with `Shift`.
+- `colors.min` / `colors.max` define the gradient ends.
+- `range` constrains valid values; `stops.min` / `stops.max` restricts stop positions.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Each stop is a `Knob` with full `role="slider"` semantics (SC 4.1.2).
+- Keyboard: `ArrowRight` / `ArrowLeft` shift stops; `Enter` opens direct input; `Backspace` deletes (SC 2.1.1).
+- `aria-disabled` reflects `isBlocked` on all handles (SC 4.1.2).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Select
+
+A selection control for checkboxes, radio buttons, and toggle switches. Used for boolean and single-choice form fields.
+
+<DocTabs>
+<Tab label="Usage">
+
+- **`CHECK_BOX`** — Multi-selection — multiple options can be active simultaneously
+- **`RADIO_BUTTON`** — Single-choice — always group related radios by the same `name`
+- **`SWITCH_BUTTON`** — Binary on/off toggle — enabling or disabling features
+
+- Pair with `FormItem` for labelled and validated form layouts.
+- `helper` adds a tooltip for clarification; `warning` surfaces a cautionary notice.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Checkboxes and radios use native `<input>` elements with full browser accessibility (SC 1.3.1).
+- Switch button uses `role="switch"` with `aria-checked` (SC 4.1.2).
+- Always provide a visible label associated via `htmlFor` in `FormItem` (SC 1.3.1).
+- Group radio buttons with `fieldset` + `legend` at the call site (SC 1.3.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Simple Slider
+
+A single-handle gradient slider for selecting a value within a range. Used for opacity, angle, font size, or any continuous numeric property.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `min` / `max` / `step` constrain the value range.
+- `colors.min` / `colors.max` define the gradient track — always relate them to the controlled property (e.g. transparent → opaque for opacity).
+- The knob supports direct value typing on double-click or `Enter`.
+- `isBlocked` locks the slider and shows a Pro badge; `isDisabled` disables it silently.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The knob implements full `role="slider"` semantics via `Knob` (SC 4.1.2).
+- `aria-label` is derived from the slider `label` prop — ensure it is descriptive (SC 2.4.6).
+- Keyboard: `ArrowLeft` / `ArrowRight` nudge the value; `Enter` opens direct input; `Escape` blurs (SC 2.1.1).
+
+</Tab>
+</DocTabs>
