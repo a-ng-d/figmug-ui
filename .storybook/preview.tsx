@@ -72,6 +72,11 @@ const preview: Preview = {
     },
   },
   parameters: {
+    options: {
+      storySort: {
+        order: ['Foundations', 'Components', 'Patterns'],
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
