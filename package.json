@@ -51,7 +51,7 @@
     "figma:parse": "figma connect parse"
   },
   "dependencies": {
-    "@a_ng_d/figmug-utils": "^0.7.3"
+    "@unoff/utils": "^0.8.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
