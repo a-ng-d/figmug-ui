@@ -5,7 +5,7 @@ import Drawer from '@components/slots/drawer/Drawer'
 import Button from '@components/actions/button/Button'
 
 const meta = {
-  title: 'Patterns/Drawer',
+  title: 'Patterns/Slots/Drawer',
   component: Drawer,
   parameters: {
     layout: 'fullscreen',

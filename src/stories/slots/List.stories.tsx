@@ -6,7 +6,7 @@ import SemanticMessage from '@components/dialogs/semantic-message/SemanticMessag
 import Button from '@components/actions/button/Button'
 
 const meta = {
-  title: 'Patterns/List',
+  title: 'Patterns/Slots/List',
   component: List,
   decorators: [
     (Story) => (
