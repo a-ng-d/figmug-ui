@@ -1,0 +1,201 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { DocTabs, Tab } from '../_docs/DocTabs'
+
+<Meta title="Components/Lists/Documentation" />
+
+# Lists
+
+Components for presenting and managing collections: option lists, rich item rows, sortable items, tabs, and member stacks.
+
+---
+
+## Actions Item
+
+A rich list item displaying an image, title, description, a user attribution, contextual chips, and action buttons. Used in resource libraries, member management, and asset pickers.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `src` shows a thumbnail — use for visual identification of items.
+- `indicator` shows an `ACTIVE` / `INACTIVE` chip status badge.
+- `description` + `subdescription` provide a two-level text hierarchy.
+- `complementSlot` injects additional controls (dropdowns, inputs) inline.
+- `user` shows attribution alongside the item.
+- `actionsSlot` renders action buttons visible on hover or focus.
+- Set `isInteractive` to make the entire row clickable; omit for read-only display rows.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- `aria-label` set to `name` provides an accessible name for the list item (SC 1.3.1).
+- `tabIndex` set to `0` only when `isInteractive` — non-interactive items are excluded from the tab order (SC 2.1.1).
+- Keyboard: `Enter` / `Space` trigger the action; `Escape` blurs (SC 2.1.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Actions List
+
+A floating or inline list of menu options with support for groups, separators, submenus, icons, and selection state. Used internally by `Dropdown` and `Menu`.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `options` accepts a `DropdownOption` tree; groups are rendered with a group header, submenus expand on hover/focus.
+- `selected` highlights the currently active value.
+- `direction` controls which side submenus expand toward (`LEFT` / `RIGHT`).
+- `shouldScroll` enables overflow scrolling for long lists.
+- `preview` shows a tooltip with an image on hover for rich option previews.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Selected option uses `aria-current="true"` (SC 1.3.1).
+- Menu items are focusable with `tabIndex` set to `0` and support keyboard navigation (SC 2.1.1).
+- `focusFirstMenuItem()` is called on keyboard open for correct focus flow (SC 2.4.3).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Color Item
+
+A list item displaying a color swatch with its name and hex value, with an optional remove action. Used in color palette management.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `hex` drives the color swatch display.
+- `canBeRemoved` shows the remove button on hover — only enable in edit mode.
+- `onRemoveColor` receives the event for removing the item from the palette.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The remove button must have an `aria-label` describing what is being removed (SC 1.3.1).
+- Do not rely solely on the color swatch to identify the color — the `name` text provides the text alternative (SC 1.4.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Draggable Item
+
+A sortable list item with drag-and-drop reordering, a primary content slot, an expandable secondary detail slot, and a remove button.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `primarySlot` holds the main row content (commonly an `Input` or label).
+- `secondarySlot` provides an expandable panel for additional options.
+- `actionsSlot` adds action buttons to the right of the row.
+- `canBeRemoved` controls visibility of the remove button.
+- `guideAbove` / `guideBelow` visually indicate the drop position during drag.
+- Use inside `SortableList`, which manages the full drag lifecycle.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Drag-and-drop alone is not an accessible reorder mechanism — supplement with keyboard-based up/down controls in `actionsSlot` (SC 2.1.1, 2.5.7).
+- The remove button should carry a descriptive `aria-label` identifying the item being removed (SC 1.3.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Keyboard Shortcut Item
+
+A list item pairing a feature label with one or more keyboard shortcut combinations. Used in keyboard shortcut reference panels and help dialogs.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `shortcuts` is an array of arrays — each inner array is one chord (e.g. `[['Cmd', 'Z']]`); multiple inner arrays represent alternative shortcuts.
+- `separator` appears between alternative shortcut combinations (e.g. `"or"`).
+- Always use standard key names: `Cmd`, `Ctrl`, `Shift`, `Alt`, `Enter`…
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Shortcut keys should be rendered with `<kbd>` elements at the call site for semantic meaning (SC 1.3.1).
+- Do not assume users know shortcuts exist — supplement with visible documentation (SC 2.4.6).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Members List
+
+A stacked avatar cluster showing multiple collaborators with a tooltip listing all names. Used in collaborative tools, shared document headers, and presence indicators.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `members` is the full list of collaborators.
+- `numberOfAvatarsDisplayed` caps the visible avatars; the remainder shows as a count badge.
+- `isInverted` applies the inverted color scheme for dark or colored header backgrounds.
+- The full member list expands on hover/focus into a tooltip panel.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Each visible avatar has `alt` set to `fullName` for screen readers (SC 1.1.1).
+- The overflow count badge ("+N") should have an `aria-label` describing the total — verify at the call site (SC 1.3.1).
+- The expanded list is triggered on focus as well as hover (SC 2.1.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Sortable List
+
+A drag-and-drop list that manages ordering for a generic typed dataset. Composes `DraggableItem` for each row.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `data` is the typed dataset (must include `id`); `primarySlot` / `secondarySlot` / `actionsSlot` are parallel arrays mapped by index.
+- `emptySlot` renders when `data` is empty — always provide a meaningful empty state.
+- `isScrollable` enables overflow scrolling.
+- `helpers.remove` / `helpers.more` provide accessible labels for the built-in action buttons.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Same drag-and-drop caveat as `DraggableItem` — provide keyboard-based reorder alternatives (SC 2.1.1, 2.5.7).
+- `emptySlot` should convey why the list is empty and how to add items (SC 3.3.2).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Tabs
+
+A navigation component for switching between views or content sections within the same context.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `direction="HORIZONTAL"` for top-level view navigation; `"VERTICAL"` for sidebar or panel navigation.
+- `isFlex` makes tabs expand to fill the container — use in layout-constrained panels.
+- `maxVisibleTabs` collapses excess tabs into a `Menu` overflow — set according to available space.
+- `isUpdated` on a tab signals new/changed content to prompt the user's attention.
+- `isNew` shows a **New** badge on a tab for recently released features.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Provide `role="tablist"` on the parent and `role="tabpanel"` on the associated content region at the call site (SC 4.1.2).
+- The active tab should receive `aria-selected="true"` — apply by reading the `active` prop at the call site (SC 1.3.1).
+- Keyboard: `Enter` / `Space` select a tab; `Escape` blurs (SC 2.1.1).
+
+</Tab>
+</DocTabs>

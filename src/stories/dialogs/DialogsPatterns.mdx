@@ -1,0 +1,61 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { DocTabs, Tab } from '../_docs/DocTabs'
+
+<Meta title="Patterns/Dialogs/Documentation" />
+
+# Dialogs
+
+Overlay patterns for modal interruptions and consent flows.
+
+---
+
+## Consent
+
+A GDPR-compliant cookie consent banner with a two-step flow: a compact welcome banner and a detailed vendor management view.
+
+<DocTabs>
+<Tab label="Usage">
+
+- The banner state shows `welcomeMessage`, a privacy policy link, and accept/deny buttons.
+- Toggling "more details" switches to the detailed view where users can individually toggle vendors.
+- `validVendor` should be the always-on legitimate interest vendor (non-toggleable).
+- `canBeClosed` adds a close button for use cases where consent is optional.
+- `consentActions.consent` / `.deny` / `.save` receive the full consent array for submission.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Both views use `role="dialog"` with `aria-modal="true"` and `aria-label` (SC 4.1.2).
+- The detailed view uses `aria-live="polite"` to announce status changes (SC 4.1.3).
+- Toggle switches use `role="switch"` with `aria-checked` (SC 1.3.1, 4.1.2).
+- Vendor headings use `aria-level="2"` — adjust for the actual document hierarchy (SC 1.3.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Dialog
+
+A modal overlay for confirmations, settings panels, and focused tasks. Supports centered pop-in and side-panel layouts.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `pin="CENTER"` for interrupting flows (confirmations, destructive actions).
+- `pin="RIGHT"` for non-interrupting side panels (settings, inspectors).
+- `actions.primary` / `.secondary` / `.destructive` map to the three button roles — only include what the task requires.
+- `select` adds a checkbox below the actions — useful for "don't show again" or confirmation toggles.
+- `isMessage` removes the action bar for read-only informational dialogs.
+- Clicking the backdrop or pressing `Escape` calls `onClose`.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Uses `role="dialog"`, `aria-modal="true"`, and `aria-label` bound to the dialog title (SC 4.1.2).
+- Focus must be moved into the dialog on open and restored to the trigger on close — implement at the call site (SC 2.4.3).
+- Keyboard: `Escape` closes the dialog (SC 2.1.1).
+- Backdrop click closes the modal only when clicking directly on the overlay, not on content (SC 2.5.3).
+
+</Tab>
+</DocTabs>

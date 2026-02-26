@@ -1,0 +1,82 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { DocTabs, Tab } from '../_docs/DocTabs'
+
+<Meta title="Components/Dialogs/Documentation" />
+
+# Dialogs
+
+Inline feedback and status components: status bars, transient banners, and contextual messages.
+
+---
+
+## Message
+
+A status bar combining an icon with one or more rotating text messages. Used for tips, loading hints, or status updates.
+
+<DocTabs>
+<Tab label="Usage">
+
+- **Single message**: renders an icon + static text — suitable for persistent status.
+- **Multiple messages**: activates an animated ticker cycling through all messages — use for rotating tips during loading states.
+- `isBlocked` applies a visual dimming — use when the feature is paywalled.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Uses `role="status"` with `aria-live="polite"` so updates are announced without interrupting the user (SC 4.1.3).
+- The animated ticker duplicates content for visual looping — the duplicate is `aria-hidden="true"` to avoid repetition for screen readers (SC 1.3.1).
+- Avoid conveying critical information only through the ticker — supplement with static text for essential content (SC 1.4.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Notification
+
+A transient banner for system feedback (success, error, warning, info, neutral). Appears in response to user actions.
+
+<DocTabs>
+<Tab label="Usage">
+
+- **`SUCCESS`** — Completed actions (saved, published, copied…)
+- **`ERROR`** — Failures — omit `timer` to require explicit dismissal
+- **`WARNING`** — Caution — action succeeded but may have side effects
+- **`INFO`** — Neutral guidance or context
+- **`NEUTRAL`** — Generic status with no semantic tone
+
+- `timer` auto-dismisses after the specified duration (ms) — use 4000–6000 ms for most messages.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Uses `role="alert"` with `aria-live="polite"` so it is announced on appearance (SC 4.1.3).
+- `tabIndex` set to `-1` allows programmatic focus on the notification — implement focus management at the call site for critical errors (SC 2.4.3).
+- The close button must be keyboard-reachable (SC 2.1.1).
+
+</Tab>
+</DocTabs>
+
+---
+
+## Semantic Message
+
+An inline contextual message with an icon, text, and optional actions. The building block for `Notification` and standalone status banners.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `type` drives the color, icon, and semantic tone automatically.
+- `isAnchored` pins the message in flow — use for inline form-level feedback.
+- `orientation="VERTICAL"` stacks message and actions — automatically applied below 460 px.
+- `actionsSlot` accepts any number of action buttons (retry, dismiss, upgrade…).
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- Uses `role="status"` — appropriate for non-critical contextual feedback that does not interrupt (SC 4.1.3).
+- Color is not the only indicator of message type: an icon is always paired with the text (SC 1.4.1).
+- The action toolbar uses `role="toolbar"` (SC 4.1.2).
+
+</Tab>
+</DocTabs>
