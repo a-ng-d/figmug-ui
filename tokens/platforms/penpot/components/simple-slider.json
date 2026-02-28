@@ -2,7 +2,7 @@
   "simpleSlider": {
     "margin": {
       "top": {
-        "$value": "{size.pos.small}",
+        "$value": "{size.pos.large}",
         "$type": "dimension"
       },
       "right": {
