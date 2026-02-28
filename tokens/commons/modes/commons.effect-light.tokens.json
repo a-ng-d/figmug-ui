@@ -10,14 +10,14 @@
         {
           "x": "{size.null}",
           "y": "{size.pos.xxxsmall}",
-          "blur": "{size.xsmall}",
+          "blur": "{size.pos.xsmall}",
           "spread": "{size.null}",
           "color": "{shadow.color.black.alpha200}"
         },
         {
           "x": "{size.null}",
           "y": "{size.pos.xunit}",
-          "blur": "{size.xxsmall}",
+          "blur": "{size.pos.xxsmall}",
           "spread": "{size.null}",
           "color": "{shadow.color.black.alpha150}"
         }
@@ -27,7 +27,7 @@
       "$value": {
         "x": "{size.null}",
         "y": "{size.pos.xunit}",
-        "blur": "",
+        "blur": "14px",
         "spread": "{size.null}",
         "color": "{shadow.color.black.alpha150}"
       }
