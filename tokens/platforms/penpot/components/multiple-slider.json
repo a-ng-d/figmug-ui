@@ -1,8 +1,8 @@
 {
-  "multiple-slider": {
+  "multipleSlider": {
     "margin": {
       "top": {
-        "$value": "{size.pos.small}",
+        "$value": "{size.pos.large}",
         "$type": "dimension"
       },
       "right": {
@@ -10,7 +10,7 @@
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.null}",
+        "$value": "{size.pos.xxsmall}",
         "$type": "dimension"
       },
       "left": {
@@ -43,6 +43,12 @@
     "radius": {
       "$value": "{border.radius.large}",
       "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "$value": "{penpot.color.background.primary}",
+        "$type": "color"
+      }
     },
     "border": {
       "color": {

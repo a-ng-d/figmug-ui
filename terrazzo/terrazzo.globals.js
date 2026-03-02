@@ -4,11 +4,8 @@ import { defineConfig } from '@terrazzo/cli'
 export default defineConfig({
   name: 'global',
   tokens: [
-    './tokens/globals/color.json',
-    './tokens/globals/typography.json',
-    './tokens/globals/spacing.json',
-    './tokens/globals/effect.json',
-    './tokens/globals/radius.json',
+    './tokens/globals/globals.tokens.json',
+    './tokens/globals/globals.effect.tokens.json',
   ],
   outDir: './src/styles/tokens/',
   plugins: [

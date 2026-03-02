@@ -214,24 +214,24 @@
       "border": {
         "color": {
           "default": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "hover": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "focus": {
             "$value": "{sketch.color.accent.primary}",
             "$type": "color"
           },
           "active": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "alternativeHover": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "alternativeFocus": {
             "$value": "{sketch.color.accent.primary}",
@@ -339,35 +339,35 @@
         "weight": {
           "default": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "hover": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "focus": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "active": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "alternative": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "alternativeHover": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "alternativeFocus": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           },
           "alternativeActive": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "dimension"
           }
         },
         "transform": {
